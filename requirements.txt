@@ -1,0 +1,11 @@
+numpy==1.26.4
+torch==2.9.0
+transformers==4.57.1
+pandas==2.3.3
+openpyxl==3.1.5
+matplotlib==3.10.7
+gensim==4.4.0
+spacy==3.7.1
+nl-core-news-sm @ https://huggingface.co/spacy/nl_core_news_sm/resolve/main/nl_core_news_sm-any-py3-none-any.whl
+openai==2.11.0
+sentence-transformers==5.2.0
