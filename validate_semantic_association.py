@@ -22,9 +22,7 @@ class validation_federmeier_kutas:
         translated: bool = False,
     ):
         if embedding_model == "word_embedding":
-            self.model = WordEmbeddingModel(
-                Path("models", f"{model_name}.txt"), include_pos=include_pos
-            )
+            self.model = WordEmbeddingModel(Path("models", f"{model_name}.txt"))
         elif embedding_model == "sentence_embedding":
             self.model = SentenceEmbeddingModel(model_name)
         else:
@@ -47,14 +45,16 @@ class validation_federmeier_kutas:
             self.data = self.data.dropna()
 
     def update_include_pos(self, include_pos: list):
-        self.model.update_include_pos(include_pos)
         self.include_pos = include_pos
 
     def update_context_length(self, context_length: int):
         self.context_length = context_length
 
-    def segment_context(self, context):
-        """Segments context so only the n (= context_length) word are included"""
+    def prepare_context(self, context):
+        """Returns context, with only word with POS tags from include_pos and a length of context_length"""
+        if not self.include_pos and not self.context_length:
+            return context
+
         context_list = context.split(" ")
         if self.include_pos:
             context_list = [
@@ -62,8 +62,9 @@ class validation_federmeier_kutas:
                 for w in context_list
                 if get_pos(re.sub(r"\W+", "", w)) in self.include_pos
             ]
-        segmented_context = context_list[-self.context_length :]
-        return " ".join(segmented_context)
+        if self.context_length:
+            context_list = context_list[-self.context_length :]
+        return " ".join(context_list)
 
     def get_semantic_association(self, row):
         """
@@ -71,11 +72,8 @@ class validation_federmeier_kutas:
         """
         # get embedding for context
         context = row["context"]
-        if self.context_length:
-            seg_context = self.segment_context(context)
-            context_emb = self.model.get_embedding(seg_context)
-        else:
-            context_emb = self.model.get_embedding(context)
+        context = self.prepare_context(context)
+        context_emb = self.model.get_embedding(context)
 
         if (
             context_emb is np.nan
@@ -166,24 +164,28 @@ if __name__ == "__main__":
             "embedding_model": "word_embedding",
             "model_name": "enwiki_20180420_100d",
             "language": "en",
+            "include_pos": ["all", "content"],
             "context_lengths": [None, 4, 8],
         },
         {
             "embedding_model": "word_embedding",
             "model_name": "word2vec-google-news-300",
             "language": "en",
+            "include_pos": ["all", "content"],
             "context_lengths": [None, 4, 8],
         },
         {
             "embedding_model": "sentence_embedding",
             "model_name": "all-MiniLM-L6-v2",
             "language": "en",
+            "include_pos": ["all"],
             "context_lengths": [None, 4, 8],
         },
         {
             "embedding_model": "sentence_embedding",
             "model_name": "intfloat/multilingual-e5-large",
             "language": "en",
+            "include_pos": ["all"],
             "context_lengths": [None, 4, 8],
         },
         # {
@@ -202,26 +204,43 @@ if __name__ == "__main__":
         val_fk = validation_federmeier_kutas(
             embedding_model=config["embedding_model"],
             model_name=config["model_name"],
-            include_pos=["NOUN", "VERB", "ADJ", "ADV"],
             translated=translated,
         )
+        for pos in config["include_pos"]:
+            print(f">> validate include pos {pos}")
+            if config["embedding_model"] == "word_embedding":
+                if pos == "all":
+                    include_pos = []
+                elif pos == "content":
+                    include_pos = ["NOUN", "VERB", "ADJ", "ADV"]
+                val_fk.update_include_pos(include_pos)
+            if pos != "all" and config["embedding_model"] == "sentence_embedding":
+                raise ValueError(
+                    "It's not possible to include on some POS tags for sentence embedding models!"
+                )
 
-        for c_len in config["context_lengths"]:
-            print(f">> validate context length {c_len}")
+            for c_len in config["context_lengths"]:
+                print(f">> validate context length {c_len}")
 
-            val_fk.update_context_length(c_len)
+                val_fk.update_context_length(c_len)
 
-            validation_df = val_fk.validate()
+                validation_df = val_fk.validate()
 
-            if re.search("/", config["model_name"]):
-                model_name = re.split("/", config["model_name"])[-1]
-            else:
-                model_name = config["model_name"]
-            plot_validation(
-                validation_df,
-                title=f"Context length {c_len}",
-                save_path=Path(
-                    "_figs",
-                    f"{config["language"]}_context_{c_len}_{config["embedding_model"]}_{model_name}.png",
-                ),
-            )
+                # name the saved output
+                if re.search("/", config["model_name"]):
+                    model_name = re.split("/", config["model_name"])[-1]
+                else:
+                    model_name = config["model_name"]
+                base_name = f"{config["language"]}_context_{c_len}_pos_{pos}_{config["embedding_model"]}_{model_name}"
+
+                validation_df.to_csv(
+                    Path("results", "federmeier_kutas", f"{base_name}.csv")
+                )
+                plot_validation(
+                    validation_df,
+                    title=f"Context length = {c_len}, included words = {pos}",
+                    save_path=Path(
+                        "figs",
+                        f"{base_name}.png",
+                    ),
+                )

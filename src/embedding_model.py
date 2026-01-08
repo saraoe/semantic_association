@@ -52,14 +52,10 @@ class EmbeddingModel:
 
 
 class WordEmbeddingModel(EmbeddingModel):
-    def __init__(self, model_path: Path, include_pos: list = [], verbose=False):
+    def __init__(self, model_path: Path, verbose=False):
         super().__init__(verbose)
 
         self.model = KeyedVectors.load_word2vec_format(model_path)
-        self.include_pos = include_pos
-
-    def update_include_pos(self, include_pos: list):
-        self.include_pos = include_pos
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words."""
@@ -87,10 +83,6 @@ class WordEmbeddingModel(EmbeddingModel):
         Args:
             context (List[str]): words in the context
         """
-        if self.include_pos:
-            # if only certain pos tags should be included in the embedding
-            context = [w for w in context if get_pos(w) in self.include_pos]
-
         context_embeddings = [self.get_word_embedding(w) for w in context]
 
         # remove None values
