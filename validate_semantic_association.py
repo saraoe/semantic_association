@@ -17,8 +17,9 @@ class validation_federmeier_kutas:
         self,
         embedding_model: str,
         model_name: str,
+        context: str = "original",  # original or longer
         include_pos: list = [],
-        context_length: int = None,
+        context_window: int = None,
         translated: bool = False,
     ):
         if embedding_model == "word_embedding":
@@ -29,13 +30,14 @@ class validation_federmeier_kutas:
             raise ValueError(f"No model matching {embedding_model}!")
 
         self.include_pos = include_pos
-        self.context_length = context_length
+        self.context = context
+        self.context_window = context_window
         self.target_cols = ["expected", "within", "between", "unexpected"]
 
         self.read_data(translated=translated)
 
     def read_data(self, data_path: Path = Path("data"), translated: bool = False):
-        self.data = pd.read_excel(data_path / "federmeier_kutas_1999.xlsx")
+        self.data = pd.read_csv(data_path / "federmeier_kutas_1999.csv")
         if translated:
             en_cols = ["context"] + self.target_cols
             self.data = self.data.drop(columns=en_cols)
@@ -47,12 +49,15 @@ class validation_federmeier_kutas:
     def update_include_pos(self, include_pos: list):
         self.include_pos = include_pos
 
-    def update_context_length(self, context_length: int):
-        self.context_length = context_length
+    def update_context(self, context: str):
+        self.context = context
+
+    def update_context_window(self, context_window: int):
+        self.context_window = context_window
 
     def prepare_context(self, context):
-        """Returns context, with only word with POS tags from include_pos and a length of context_length"""
-        if not self.include_pos and not self.context_length:
+        """Returns context, with only word with POS tags from include_pos and a length of context_window"""
+        if not self.include_pos and not self.context_window:
             return context
 
         context_list = context.split(" ")
@@ -62,8 +67,8 @@ class validation_federmeier_kutas:
                 for w in context_list
                 if get_pos(re.sub(r"\W+", "", w)) in self.include_pos
             ]
-        if self.context_length:
-            context_list = context_list[-self.context_length :]
+        if self.context_window:
+            context_list = context_list[-self.context_window :]
         return " ".join(context_list)
 
     def get_semantic_association(self, row):
@@ -71,7 +76,10 @@ class validation_federmeier_kutas:
         Get semantic association for all three target words
         """
         # get embedding for context
-        context = row["context"]
+        if self.context == "original":
+            context = row["context"]
+        elif self.context == "long":
+            context = f"{row["longer_context"]} {row["context"]}"
         context = self.prepare_context(context)
         context_emb = self.model.get_embedding(context)
 
@@ -111,8 +119,8 @@ class validation_federmeier_kutas:
         validation = []
         for i in range(len(self.data.index)):
             row = self.data.iloc[i]
-            tmp = self.get_semantic_association(row)
-            validation.append(tmp)
+            validation_dict = self.get_semantic_association(row)
+            validation.append(validation_dict)
 
         validation_df = pd.DataFrame.from_dict(validation)
         return validation_df
@@ -158,6 +166,21 @@ def plot_validation(df: pd.DataFrame, title: str, save_path: Path = None):
         plt.show()
 
 
+def append_df_to_csv(
+    df: pd.DataFrame,
+    path: Path,
+    extra_cols: dict = {},
+):
+    for col_name, values in extra_cols.items():
+        df[col_name] = values
+    if path.exists():
+        print(f"creating df {path}")
+        df.to_csv(path)
+    else:
+        print(f"appending df to {path}")
+        df.to_csv(path, mode="a", header=False)
+
+
 if __name__ == "__main__":
     model_configs = [
         {
@@ -165,35 +188,67 @@ if __name__ == "__main__":
             "model_name": "enwiki_20180420_100d",
             "language": "en",
             "include_pos": ["all", "content"],
-            "context_lengths": [None, 4, 8],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
         },
         {
             "embedding_model": "word_embedding",
             "model_name": "word2vec-google-news-300",
             "language": "en",
             "include_pos": ["all", "content"],
-            "context_lengths": [None, 4, 8],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
         },
         {
             "embedding_model": "sentence_embedding",
             "model_name": "all-MiniLM-L6-v2",
             "language": "en",
             "include_pos": ["all"],
-            "context_lengths": [None, 4, 8],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
         },
         {
             "embedding_model": "sentence_embedding",
             "model_name": "intfloat/multilingual-e5-large",
             "language": "en",
             "include_pos": ["all"],
-            "context_lengths": [None, 4, 8],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
         },
-        # {
-        #     "embedding_model": "word_embedding",
-        #     "model_name": "nlwiki_20180420_100d",
-        #     "language": "nl",
-        #     "context_lengths": [None, 4, 8],
-        # },
+        {
+            "embedding_model": "sentence_embedding",
+            "model_name": "intfloat/multilingual-e5-large",
+            "language": "nl",
+            "include_pos": ["all"],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
+        },
+        {
+            "embedding_model": "word_embedding",
+            "model_name": "nlwiki_20180420_100d",
+            "language": "nl",
+            "include_pos": ["all", "content"],
+            "context": [
+                {"context": "original", "window": None},
+                {"context": "long", "window": None},
+                {"context": "long", "window": 30},
+            ],
+        },
     ]
 
     for config in model_configs:
@@ -219,10 +274,11 @@ if __name__ == "__main__":
                     "It's not possible to include on some POS tags for sentence embedding models!"
                 )
 
-            for c_len in config["context_lengths"]:
-                print(f">> validate context length {c_len}")
+            for context_dict in config["context"]:
+                print(f">> validate context {context_dict}")
 
-                val_fk.update_context_length(c_len)
+                val_fk.update_context(context_dict["context"])
+                val_fk.update_context_window(context_dict["window"])
 
                 validation_df = val_fk.validate()
 
@@ -231,16 +287,26 @@ if __name__ == "__main__":
                     model_name = re.split("/", config["model_name"])[-1]
                 else:
                     model_name = config["model_name"]
-                base_name = f"{config["language"]}_context_{c_len}_pos_{pos}_{config["embedding_model"]}_{model_name}"
+                base_name = f"{config["language"]}_context_{context_dict["context"]}_contextwindow_{context_dict["window"]}_pos_{pos}_{config["embedding_model"]}_{model_name}"
 
-                validation_df.to_csv(
-                    Path("results", "federmeier_kutas", f"{base_name}.csv")
-                )
                 plot_validation(
                     validation_df,
-                    title=f"Context length = {c_len}, included words = {pos}",
+                    title=f"Context = {context_dict}, included words = {pos}",
                     save_path=Path(
                         "figs",
                         f"{base_name}.png",
                     ),
+                )
+
+                append_df_to_csv(
+                    validation_df,
+                    extra_cols={
+                        "embedding_model": config["embedding_model"],
+                        "model_name": config["model_name"],
+                        "langauge": config["language"],
+                        "context": context_dict["context"],
+                        "context_window": context_dict["window"],
+                        "included_pos": pos,
+                    },
+                    path=Path("results", "federmeier_kutas_validation.csv"),
                 )
