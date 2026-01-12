@@ -1,0 +1,114 @@
+# Validation of semantic association using data from Federmeier & Kutas 1999
+Plotting and exploration of semantic association values of target words from Federmeier & Kutas (1999) extracted from different definitions of semantic assocition.
+
+```{r}
+library(tidytable)
+library(ggplot2)
+```
+
+```{r}
+df <- read.csv("results/federmeier_kutas_validation.csv")
+```
+
+```{r}
+df |>
+    group_by(
+        language,
+        embedding_model,
+        included_pos,
+        context_window,
+        context
+    ) |>
+    summarize(
+        "expected" = mean(expected),
+        "within" = mean(within),
+        "between" = mean(between),
+        "unexpected" = mean(unexpected)
+    )
+```
+
+## plots
+```{r}
+df_long <- df |>
+    mutate(
+        context_window = ifelse(
+            is.na(context_window),
+            "all", as.character(context_window)
+        ),
+        context_name = paste0(context, "_", context_window)
+    ) |>
+    pivot_longer(
+        cols = c(expected, within, between, unexpected),
+        names_to = "measure",
+        values_to = "value"
+    ) |>
+    group_by(model_name) |>
+    mutate(
+        value_centered = value - mean(value),
+        value_scaled = scale(value)
+    )
+```
+
+```{r}
+lan <- "en"
+
+df_long |>
+    filter(language == lan) |>
+    group_by(
+        model_name, included_pos, context_name, measure
+    ) |>
+    summarize(
+        mean = mean(value),
+        sd = sd(value),
+    ) |>
+    mutate(measure_f = factor(
+        measure,
+        levels = c("expected", "within", "between", "unexpected")
+    )) |>
+    ggplot(aes(x = context_name, color = measure_f, group = measure_f)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.5),
+        size = 4
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.5)
+    ) +
+    scale_colour_manual(
+        values = c(
+            expected = "blue",
+            within = "firebrick2",
+            between = "purple",
+            unexpected = "orange"
+        ),
+        breaks = c("expected", "within", "between", "unexpected")
+    ) +
+    facet_wrap(model_name ~ included_pos) +
+    theme_minimal()
+```
+```{r}
+lan <- "en"
+
+df_long |>
+    filter(language == lan) |>
+    mutate(measure_f = factor(
+        measure,
+        levels = c("expected", "within", "between", "unexpected")
+    )) |>
+    filter(context_name == "original_all") |>
+    ggplot(aes(color = measure_f)) +
+    geom_density(aes(x = value)) +
+    scale_colour_manual(
+        values = c(
+            expected = "blue",
+            within = "firebrick2",
+            between = "purple",
+            unexpected = "orange"
+        ),
+        breaks = c("expected", "within", "between", "unexpected")
+    ) +
+    facet_wrap(model_name ~ included_pos) +
+    theme_minimal()
+```
