@@ -173,7 +173,7 @@ def append_df_to_csv(
 ):
     for col_name, values in extra_cols.items():
         df[col_name] = values
-    if path.exists():
+    if not path.exists():
         print(f"creating df {path}")
         df.to_csv(path)
     else:
@@ -192,6 +192,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
         {
@@ -203,6 +204,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
         {
@@ -214,6 +216,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
         {
@@ -225,6 +228,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
         {
@@ -236,6 +240,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
         {
@@ -247,6 +252,7 @@ if __name__ == "__main__":
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
                 {"context": "long", "window": 30},
+                {"context": "long", "window": 50},
             ],
         },
     ]
@@ -303,7 +309,7 @@ if __name__ == "__main__":
                     extra_cols={
                         "embedding_model": config["embedding_model"],
                         "model_name": config["model_name"],
-                        "langauge": config["language"],
+                        "language": config["language"],
                         "context": context_dict["context"],
                         "context_window": context_dict["window"],
                         "included_pos": pos,
