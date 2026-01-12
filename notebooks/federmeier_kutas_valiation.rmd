@@ -44,7 +44,7 @@ df_long <- df |>
     ) |>
     group_by(model_name) |>
     mutate(
-        value_centered = value - mean(value),
+        value_centered = value - mean(value, na.rm = TRUE),
         value_scaled = scale(value)
     )
 ```
@@ -58,8 +58,8 @@ df_long |>
         model_name, included_pos, context_name, measure
     ) |>
     summarize(
-        mean = mean(value),
-        sd = sd(value),
+        mean = mean(value, na.rm = TRUE),
+        sd = sd(value, na.rm = TRUE),
     ) |>
     mutate(measure_f = factor(
         measure,

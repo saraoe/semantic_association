@@ -191,6 +191,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
@@ -203,6 +205,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
@@ -215,6 +219,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
@@ -227,6 +233,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
@@ -239,6 +247,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
@@ -251,6 +261,8 @@ if __name__ == "__main__":
             "context": [
                 {"context": "original", "window": None},
                 {"context": "long", "window": None},
+                {"context": "long", "window": 2},
+                {"context": "long", "window": 5},
                 {"context": "long", "window": 30},
                 {"context": "long", "window": 50},
             ],
