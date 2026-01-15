@@ -35,7 +35,7 @@ df_long <- df |>
             is.na(context_window),
             "all", as.character(context_window)
         ),
-        context_name = paste0(context, "_", context_window)
+        context_name = paste0(context, ":", context_window)
     ) |>
     pivot_longer(
         cols = c(expected, within, between, unexpected),
@@ -61,11 +61,20 @@ df_long |>
         mean = mean(value, na.rm = TRUE),
         sd = sd(value, na.rm = TRUE),
     ) |>
-    mutate(measure_f = factor(
-        measure,
-        levels = c("expected", "within", "between", "unexpected")
-    )) |>
-    ggplot(aes(x = context_name, color = measure_f, group = measure_f)) +
+    mutate(
+        target = factor(
+            measure,
+            levels = c("expected", "within", "between", "unexpected")
+        ),
+        context_name_f = factor(
+            context_name,
+            levels = c(
+                "original:all", "long:all", "long:50",
+                "long:30", "long:5", "long:2"
+            )
+        )
+    ) |>
+    ggplot(aes(x = context_name_f, color = target, group = target)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.5),
@@ -85,8 +94,11 @@ df_long |>
         ),
         breaks = c("expected", "within", "between", "unexpected")
     ) +
-    facet_wrap(model_name ~ included_pos) +
+    facet_wrap(model_name ~ included_pos, scale = "free") +
+    labs(x = "context") +
     theme_minimal()
+
+ggsave(file.path("figs", "sem_association_all.png"), height = 13, width = 13)
 ```
 ```{r}
 lan <- "en"
