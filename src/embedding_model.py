@@ -23,30 +23,33 @@ class EmbeddingModel:
     def __init__(self, verbose=False):
         self.verbose = verbose
 
-    def similarity(self, w1, w2, meassure):
+    def similarity(self, w1: np.ndarray, w2: np.ndarray, measure: str):
         """Similarity between embedding of w1 and w2"""
-        if meassure == "cosine":
+        if measure == "cosine":
             return np.dot(w1, w2) / (norm(w1) * norm(w2))
-        if meassure == "pearson":
+        if measure == "pearson":
             return np.corrcoef(w1, w2)
-        if meassure == "euclidian":
+        if measure == "euclidian":
             return 1 - norm(w1 - w2)
 
     def semantic_association_context(
-        self, word_emb, context_emb, similarity_meassure="cosine"
+        self,
+        word_emb: np.ndarray,
+        context_emb: np.ndarray,
+        similarity_measure: str = "cosine",
     ):
         """
         Calculates semantic association of a word to a context embedding
         Args:
-            word_emb (np.array): word embedding that the semantic association will be calculated for
-            context_emb (np.array): context embedding the word should be compared to
-            similarity_meassure (str): what meassure of similiarity is used
+            word_emb: word embedding that the semantic association will be calculated for
+            context_emb: context embedding the word should be compared to
+            similarity_meassure: what measure of similiarity is used
         """
         # make sure the word embedding and context embedding is of the same length
         assert len(word_emb) == len(context_emb)
 
         semantic_association = self.similarity(
-            context_emb, word_emb, meassure=similarity_meassure
+            context_emb, word_emb, measure=similarity_measure
         )
         return semantic_association
 
@@ -70,6 +73,7 @@ class WordEmbeddingModel(EmbeddingModel):
             return self.get_context_embedding(text_list)
 
     def get_word_embedding(self, word):
+        # self.model.get(word, np.nan) -> maybe move to function below
         try:
             return self.model[word]
         except KeyError:
@@ -77,11 +81,11 @@ class WordEmbeddingModel(EmbeddingModel):
                 print(f"{word} not in model!")
             return np.nan
 
-    def get_context_embedding(self, context: list):
+    def get_context_embedding(self, context: list[str]):
         """
         Calculates semantic association of a word to a context embedding
         Args:
-            context (List[str]): words in the context
+            context: words in the context
         """
         context_embeddings = [self.get_word_embedding(w) for w in context]
 

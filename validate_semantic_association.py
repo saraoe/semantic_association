@@ -1,5 +1,5 @@
 """
-Using the data from Federmeier & Kutas (1999) to validate meassures of semantic association
+Using the data from Federmeier & Kutas (1999) to validate measures of semantic association
 The code is imported from the error-analysis github repo
 """
 
