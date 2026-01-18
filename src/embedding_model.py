@@ -60,18 +60,6 @@ class WordEmbeddingModel(EmbeddingModel):
 
         self.model = KeyedVectors.load_word2vec_format(model_path)
 
-    def get_embedding(self, text: str):
-        """Get embedding for any amount of words."""
-        # split text on whitespace, make lower, and remove punctuation
-        text_list = text.lower().split(" ")
-        text_list = [re.sub(r"\W+", "", w) for w in text_list]
-
-        # get either word embedding (if text is a word) or context embedding (if text is multiple words)
-        if len(text_list) == 1:
-            return self.get_word_embedding(text_list[0])
-        else:
-            return self.get_context_embedding(text_list)
-
     def get_word_embedding(self, word):
         # self.model.get(word, np.nan) -> maybe move to function below
         try:
@@ -81,12 +69,12 @@ class WordEmbeddingModel(EmbeddingModel):
                 print(f"{word} not in model!")
             return np.nan
 
-    def get_context_embedding(self, context: list[str]):
-        """
-        Calculates semantic association of a word to a context embedding
-        Args:
-            context: words in the context
-        """
+    def get_embedding(self, text: str):
+        """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
+        # split text on whitespace, make lower, and remove punctuation
+        text_list = text.lower().split(" ")
+        text_list = [re.sub(r"\W+", "", w) for w in text_list]
+
         context_embeddings = [self.get_word_embedding(w) for w in context]
 
         # remove None values
