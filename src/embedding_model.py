@@ -20,7 +20,8 @@ def get_pos(word):
 
 
 class EmbeddingModel:
-    def __init__(self, verbose=False):
+    def __init__(self, n_sentences: int | None, verbose=False):
+        self.n_sentences = n_sentences + 1  # plus one as we also want the current
         self.verbose = verbose
 
     def similarity(self, w1: np.ndarray, w2: np.ndarray, measure: str):
@@ -31,6 +32,11 @@ class EmbeddingModel:
             return np.corrcoef(w1, w2)
         if measure == "euclidian":
             return 1 - norm(w1 - w2)
+
+    def get_n_sentences(self, text: str):
+        """Returns n_sentences from the text."""
+        sentences = text.split(".")
+        return ".".join(sentences[-(self.n_sentences) :]).lstrip(" ")
 
     def semantic_association_context(
         self,

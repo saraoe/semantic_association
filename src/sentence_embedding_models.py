@@ -9,13 +9,15 @@ from embedding_model import EmbeddingModel
 
 
 class SentenceEmbeddingModel(EmbeddingModel):
-    def __init__(self, model_name: str, verbose=False):
-        super().__init__(verbose)
+    def __init__(self, model_name: str, n_sentences: int | None = None, verbose=False):
+        super().__init__(n_sentences, verbose)
 
         self.model = SentenceTransformer(model_name)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words."""
+        if self.n_sentences:
+            text = self.get_n_sentences(text)
         return self.model.encode(text)
 
 

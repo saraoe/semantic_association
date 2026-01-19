@@ -19,13 +19,16 @@ def get_pos(text: str):
 
 
 class WordEmbeddingModel(EmbeddingModel):
-    def __init__(self, model_path: Path, verbose=False):
-        super().__init__(verbose)
+    def __init__(self, model_path: Path, n_sentences: int | None = None, verbose=False):
+        super().__init__(n_sentences, verbose)
 
         self.model = KeyedVectors.load_word2vec_format(model_path)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
+        if self.n_sentences:
+            text = self.get_n_sentences(text)
+
         # split text on whitespace, make lower, and remove punctuation
         text_list = text.lower().split(" ")
         text_list = [re.sub(r"\W+", "", w) for w in text_list]
