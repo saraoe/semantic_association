@@ -2,10 +2,6 @@
 Calculate semantic association using sentence embeddings
 """
 
-"""
-Calculate semantic association using embeddings
-"""
-
 import re
 from sentence_transformers import SentenceTransformer
 
