@@ -29,21 +29,15 @@ class WordEmbeddingModel(EmbeddingModel):
 
         self.model = KeyedVectors.load_word2vec_format(model_path)
 
-    def get_word_embedding(self, word):
-        try:
-            return self.model[word]
-        except KeyError:
-            if self.verbose:
-                print(f"{word} not in model!")
-            return np.nan
-
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
         # split text on whitespace, make lower, and remove punctuation
         text_list = text.lower().split(" ")
         text_list = [re.sub(r"\W+", "", w) for w in text_list]
 
-        context_embeddings = [self.get_word_embedding(w) for w in text_list]
+        context_embeddings = [
+            self.model[word] if word in self.model else np.nan for word in text_list
+        ]
 
         # remove None values
         context_embeddings = [emb for emb in context_embeddings if emb is not np.nan]
