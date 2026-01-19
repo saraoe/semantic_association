@@ -63,10 +63,10 @@ class validation_federmeier_kutas:
 
         context_list = context.split(" ")
         if self.include_pos:
+            # NB: temporary fix - should use the WordEmbeddingModelContentWord class!
+            pos_text = get_pos(context)
             context_list = [
-                w
-                for w in context_list
-                if get_pos(re.sub(r"\W+", "", w)) in self.include_pos
+                str(word) for (word, pos) in pos_text if pos in self.include_pos
             ]
         if self.context_window:
             context_list = context_list[-self.context_window :]

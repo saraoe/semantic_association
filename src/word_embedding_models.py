@@ -2,10 +2,6 @@
 Calculate semantic association using word embeddings
 """
 
-"""
-Calculate semantic association using embeddings
-"""
-
 from pathlib import Path
 import numpy as np
 import re
@@ -17,10 +13,9 @@ from embedding_model import EmbeddingModel
 nlp = spacy.load("nl_core_news_sm")
 
 
-def get_pos(word):
-    doc = nlp(word)
-    assert len([t for t in doc]) == 1  # check there is ony one token
-    return doc[0].pos_
+def get_pos(text: str):
+    doc = nlp(text)
+    return [(t, t.pos_) for t in doc]
 
 
 class WordEmbeddingModel(EmbeddingModel):
@@ -47,8 +42,35 @@ class WordEmbeddingModel(EmbeddingModel):
         return np.mean(context_embeddings, axis=0)
 
 
+class WordEmbeddingModelContentWord(WordEmbeddingModel):
+    def get_embedding(self, text: str):
+        """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
+        # include only content words
+        content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
+        pos_text = get_pos(text)
+        text_content = [word for (word, pos) in pos_text if pos in content_pos]
+
+        # make lower, and remove punctuation
+        text_list = [str(w).lower() for w in text_content]
+        text_list = [re.sub(r"\W+", "", w) for w in text_list]
+
+        context_embeddings = [
+            self.model[word] if word in self.model else np.nan for word in text_list
+        ]
+
+        # remove None values
+        context_embeddings = [emb for emb in context_embeddings if emb is not np.nan]
+        if len(context_embeddings) == 0:
+            return np.nan
+
+        return np.mean(context_embeddings, axis=0)
+
+
 if __name__ == "__main__":
-    model = WordEmbeddingModel(
+    # model = WordEmbeddingModel(
+    #     model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
+    # )
+    model = WordEmbeddingModelContentWord(
         model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
     )
 
