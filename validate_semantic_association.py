@@ -9,7 +9,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import re
 
-from src.embedding_model import WordEmbeddingModel, SentenceEmbeddingModel, get_pos
+from src.word_embedding_models import WordEmbeddingModel, get_pos
+from src.sentence_embedding_models import SentenceEmbeddingModel
 
 
 class validation_federmeier_kutas:
