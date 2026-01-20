@@ -7,9 +7,18 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import spacy
 import re
 
-from src.embedding_model import WordEmbeddingModel, SentenceEmbeddingModel, get_pos
+from src.word_embedding_models import WordEmbeddingModel
+from src.sentence_embedding_models import SentenceEmbeddingModel
+
+nlp = spacy.load("nl_core_news_sm")
+
+
+def get_pos(text: str):
+    doc = nlp(text)
+    return [(t, t.pos_) for t in doc]
 
 
 class validation_federmeier_kutas:
@@ -62,10 +71,10 @@ class validation_federmeier_kutas:
 
         context_list = context.split(" ")
         if self.include_pos:
+            # NB: temporary fix - should use the WordEmbeddingModelContentWord class!
+            pos_text = get_pos(context)
             context_list = [
-                w
-                for w in context_list
-                if get_pos(re.sub(r"\W+", "", w)) in self.include_pos
+                str(word) for (word, pos) in pos_text if pos in self.include_pos
             ]
         if self.context_window:
             context_list = context_list[-self.context_window :]
