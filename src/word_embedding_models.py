@@ -46,6 +46,11 @@ class WordEmbeddingModel(EmbeddingModel):
 
 
 class WordEmbeddingModelContentWord(WordEmbeddingModel):
+
+    def __init__(self, ..., spacy_model_name="nl_core_news_sm"):
+        super().__init__(...)
+
+        self.spacy_nlp =  spacy.load(spacy_model_name)
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
         # include only content words
