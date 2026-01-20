@@ -55,8 +55,7 @@ class WordEmbeddingModelContentWord(WordEmbeddingModel):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
         # include only content words
         content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
-        pos_text = get_pos(text)
-        text_content = [word for (word, pos) in pos_text if pos in content_pos]
+        text_content = [token.text for token in self.spacy_nlp(text) if token.pos_ in content_pos]
 
         # make lower, and remove punctuation
         text_list = [str(w).lower() for w in text_content]
