@@ -22,7 +22,7 @@ class WordEmbeddingModel(EmbeddingModel):
         self,
         model_path: Path,
         n_sentences: int | None = None,
-        verbose=False,
+        verbose: bool = False,
     ):
         super().__init__(n_sentences, verbose)
 
@@ -50,13 +50,12 @@ class WordEmbeddingModel(EmbeddingModel):
 
 
 class WordEmbeddingModelContentWord(WordEmbeddingModel):
-
     def __init__(
         self,
         model_path: Path,
         n_sentences: int | None = None,
         spacy_model_name: str = "nl_core_news_sm",
-        verbose=False,
+        verbose: bool = False,
     ):
         super().__init__(model_path, n_sentences, verbose)
 
@@ -91,12 +90,56 @@ class WordEmbeddingModelContentWord(WordEmbeddingModel):
         return np.mean(context_embeddings, axis=0)
 
 
+class WordEmbeddingModelWindowed(WordEmbeddingModelContentWord):
+    def __init__(
+        self,
+        model_path: Path,
+        n_words: int,
+        spacy_model_name: str = "nl_core_news_sm",
+        verbose: bool = False,
+    ):
+        n_sentences = None  # you cannot specify number of sentences with this model
+        super().__init__(model_path, n_sentences, spacy_model_name, verbose)
+
+        self.n_words = n_words
+
+    def get_embedding(self, text: str):
+        """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
+        # include only content words
+        text_content = [
+            token.text
+            for token in self.spacy_nlp(text)
+            if token.pos_ in self.content_pos
+        ]
+
+        # make lower, and remove punctuation
+        text_list = [str(w).lower() for w in text_content]
+        text_list = [re.sub(r"\W+", "", w) for w in text_list]
+
+        # include only n_words
+        text_list = text_list[-self.n_words :]
+
+        context_embeddings = [
+            self.model[word] if word in self.model else np.nan for word in text_list
+        ]
+
+        # remove None values
+        context_embeddings = [emb for emb in context_embeddings if emb is not np.nan]
+        if len(context_embeddings) == 0:
+            return np.nan
+
+        return np.mean(context_embeddings, axis=0)
+
+
 if __name__ == "__main__":
     # model = WordEmbeddingModel(
     #     model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
     # )
-    model = WordEmbeddingModelContentWord(
-        model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
+    # model = WordEmbeddingModelContentWord(
+    #     model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
+    # )
+    model = WordEmbeddingModelWindowed(
+        model_path=Path("models", "nlwiki_20180420_100d.txt"), n_words=2, verbose=True
     )
 
     # Context from Aurnhammer et al., 2023 (translated to Dutch)
