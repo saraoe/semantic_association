@@ -7,10 +7,18 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import spacy
 import re
 
-from src.word_embedding_models import WordEmbeddingModel, get_pos
+from src.word_embedding_models import WordEmbeddingModel
 from src.sentence_embedding_models import SentenceEmbeddingModel
+
+nlp = spacy.load("nl_core_news_sm")
+
+
+def get_pos(text: str):
+    doc = nlp(text)
+    return [(t, t.pos_) for t in doc]
 
 
 class validation_federmeier_kutas:

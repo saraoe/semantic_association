@@ -9,7 +9,12 @@ from embedding_model import EmbeddingModel
 
 
 class SentenceEmbeddingModel(EmbeddingModel):
-    def __init__(self, model_name: str, n_sentences: int | None = None, verbose=False):
+    def __init__(
+        self,
+        model_name: str,
+        n_sentences: int | None = None,
+        verbose=False,
+    ):
         super().__init__(n_sentences, verbose)
 
         self.model = SentenceTransformer(model_name)

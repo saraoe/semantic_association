@@ -10,16 +10,14 @@ import spacy
 
 from embedding_model import EmbeddingModel
 
-nlp = spacy.load("nl_core_news_sm")
-
-
-def get_pos(text: str):
-    doc = nlp(text)
-    return [(t, t.pos_) for t in doc]
-
 
 class WordEmbeddingModel(EmbeddingModel):
-    def __init__(self, model_path: Path, n_sentences: int | None = None, verbose=False):
+    def __init__(
+        self,
+        model_path: Path,
+        n_sentences: int | None = None,
+        verbose=False,
+    ):
         super().__init__(n_sentences, verbose)
 
         self.model = KeyedVectors.load_word2vec_format(model_path)
@@ -47,15 +45,29 @@ class WordEmbeddingModel(EmbeddingModel):
 
 class WordEmbeddingModelContentWord(WordEmbeddingModel):
 
-    def __init__(self, ..., spacy_model_name="nl_core_news_sm"):
-        super().__init__(...)
+    def __init__(
+        self,
+        model_path: Path,
+        n_sentences: int | None = None,
+        spacy_model_name: str = "nl_core_news_sm",
+        verbose=False,
+    ):
+        super().__init__(model_path, n_sentences, verbose)
 
-        self.spacy_nlp =  spacy.load(spacy_model_name)
+        self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
+        self.spacy_nlp = spacy.load("nl_core_news_sm")
+
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
+        if self.n_sentences:
+            text = self.get_n_sentences(text)
+
         # include only content words
-        content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
-        text_content = [token.text for token in self.spacy_nlp(text) if token.pos_ in content_pos]
+        text_content = [
+            token.text
+            for token in self.spacy_nlp(text)
+            if token.pos_ in self.content_pos
+        ]
 
         # make lower, and remove punctuation
         text_list = [str(w).lower() for w in text_content]

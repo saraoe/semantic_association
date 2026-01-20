@@ -2,26 +2,20 @@
 Calculate semantic association using embeddings
 """
 
-from pathlib import Path
 import numpy as np
 import re
 from numpy.linalg import norm
-from gensim.models import KeyedVectors
-from sentence_transformers import SentenceTransformer
-import spacy
-
-nlp = spacy.load("nl_core_news_sm")
-
-
-def get_pos(word):
-    doc = nlp(word)
-    assert len([t for t in doc]) == 1  # check there is ony one token
-    return doc[0].pos_
 
 
 class EmbeddingModel:
-    def __init__(self, n_sentences: int | None, verbose: bool=False):
-        self.n_sentences = n_sentences + 1  # plus one as we also want the current
+    def __init__(
+        self,
+        n_sentences: int | None,
+        verbose: bool = False,
+    ):
+        self.n_sentences = (
+            n_sentences + 1 if isinstance(n_sentences, int) else n_sentences
+        )  # plus one as we also want the current
         self.verbose = verbose
 
     def similarity(self, w1: np.ndarray, w2: np.ndarray, measure: str):
@@ -58,3 +52,16 @@ class EmbeddingModel:
             context_emb, word_emb, measure=similarity_measure
         )
         return semantic_association
+
+
+if __name__ == "__main__":
+    model = EmbeddingModel(n_sentences=2, verbose=True)
+
+    # Context from Aurnhammer et al., 2023 (translated to Dutch)
+    context = """Een toerist wilde zijn enorme koffer meenemen in het vliegtuig. 
+    De koffer was echter zo zwaar dat de vrouw bij de incheckbalie besloot de toerist een toeslag te vragen. 
+    Vervolgens opende de toerist zijn koffer en gooide er verschillende dingen uit. 
+    De koffer van de vindingrijke toerist woog nu minder dan de maximale 30 kilo. Toen afwijzen de vrouw de"""
+
+    context = re.sub("    ", "", context)
+    print(model.get_n_sentences(context))
