@@ -55,7 +55,7 @@ class WordEmbeddingModelContentWord(WordEmbeddingModel):
         super().__init__(model_path, n_sentences, verbose)
 
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
-        self.spacy_nlp = spacy.load("nl_core_news_sm")
+        self.spacy_nlp = spacy.load(spacy_model_name)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
