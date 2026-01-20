@@ -3,12 +3,18 @@ Calculate semantic association using word embeddings
 """
 
 from pathlib import Path
+from functools import cache
 import numpy as np
 import re
 from gensim.models import KeyedVectors
 import spacy
 
 from embedding_model import EmbeddingModel
+
+
+@cache
+def get_word_embedding_model(model_path: Path):
+    return KeyedVectors.load_word2vec_format(model_path)
 
 
 class WordEmbeddingModel(EmbeddingModel):
@@ -20,7 +26,7 @@ class WordEmbeddingModel(EmbeddingModel):
     ):
         super().__init__(n_sentences, verbose)
 
-        self.model = KeyedVectors.load_word2vec_format(model_path)
+        self.model = get_word_embedding_model(model_path)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
