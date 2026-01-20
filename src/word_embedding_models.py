@@ -49,7 +49,7 @@ class WordEmbeddingModel(EmbeddingModel):
         return np.mean(context_embeddings, axis=0)
 
 
-class WordEmbeddingModelContentWord(WordEmbeddingModel):
+class WordEmbeddingModelContentWord(EmbeddingModel):
     def __init__(
         self,
         model_path: Path,
@@ -57,8 +57,9 @@ class WordEmbeddingModelContentWord(WordEmbeddingModel):
         spacy_model_name: str = "nl_core_news_sm",
         verbose: bool = False,
     ):
-        super().__init__(model_path, n_sentences, verbose)
+        super().__init__(n_sentences, verbose)
 
+        self.model = get_word_embedding_model(model_path)
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
 
@@ -90,7 +91,7 @@ class WordEmbeddingModelContentWord(WordEmbeddingModel):
         return np.mean(context_embeddings, axis=0)
 
 
-class WordEmbeddingModelWindowed(WordEmbeddingModelContentWord):
+class WordEmbeddingModelWindowed(EmbeddingModel):
     def __init__(
         self,
         model_path: Path,
@@ -99,8 +100,11 @@ class WordEmbeddingModelWindowed(WordEmbeddingModelContentWord):
         verbose: bool = False,
     ):
         n_sentences = None  # you cannot specify number of sentences with this model
-        super().__init__(model_path, n_sentences, spacy_model_name, verbose)
+        super().__init__(n_sentences, verbose)
 
+        self.model = get_word_embedding_model(model_path)
+        self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
+        self.spacy_nlp = spacy.load(spacy_model_name)
         self.n_words = n_words
 
     def get_embedding(self, text: str):
@@ -131,16 +135,98 @@ class WordEmbeddingModelWindowed(WordEmbeddingModelContentWord):
         return np.mean(context_embeddings, axis=0)
 
 
+class WordEmbeddingModelWeighted(EmbeddingModel):
+    def __init__(self, model_path, n_sentences=None, verbose=False):
+        super().__init__(n_sentences, verbose)
+
+        self.model = get_word_embedding_model(model_path)
+        self.half_life = 4
+
+    def get_embedding(self, text: str):
+        """Get embedding for any amount of words. If there is more than one word, the function returns a list of embedding"""
+        if self.n_sentences:
+            text = self.get_n_sentences(text)
+
+        # split text on whitespace, make lower, and remove punctuation
+        text_list = text.lower().split(" ")
+        text_list = [re.sub(r"\W+", "", w) for w in text_list]
+
+        context_embeddings = [
+            self.model[word] if word in self.model else np.nan for word in text_list
+        ]
+
+        if len(context_embeddings) == 1:  # if its just the embedding of one word
+            return context_embeddings[0]
+        return context_embeddings
+
+    def weighted_association(
+        self,
+        weights: np.ndarray,
+        context_embeddings: list[np.ndarray],
+        word_emb: np.ndarray,
+        similarity_measure: str,
+    ):
+        for weight, context_emb in zip(weights, context_embeddings):
+            if context_emb is np.nan:
+                continue
+            yield weight * self.similarity(
+                word_emb, context_emb, measure=similarity_measure
+            )
+
+    def semantic_association_context(
+        self,
+        word: str,
+        context: str,
+        similarity_measure: str = "cosine",
+    ):
+        """
+        Calculates semantic association between a word and a context
+        Args:
+            word_emb: word embedding that the semantic association will be calculated for
+            context_emb: context embedding the word should be compared to
+            similarity_meassure: what measure of similiarity is used
+        """
+        word_emb = self.get_embedding(word)
+        if word_emb is np.nan:
+            return np.nan
+        context_embeddings = self.get_embedding(context)
+        assert all(
+            [len(word_emb) == len(context_emb) for context_emb in context_embeddings]
+        )
+
+        # calculate weights based on word distances
+        distances = np.arange(start=len(context_embeddings), stop=0, step=-1)
+        weights = 2 ** (-distances / self.half_life)
+
+        weighted_associations = list(
+            self.weighted_association(
+                weights, context_embeddings, word_emb, similarity_measure
+            )
+        )
+        if not weighted_associations:
+            return np.nan
+
+        return np.sum(weighted_associations, axis=0)
+
+
 if __name__ == "__main__":
-    # model = WordEmbeddingModel(
-    #     model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
-    # )
-    # model = WordEmbeddingModelContentWord(
-    #     model_path=Path("models", "nlwiki_20180420_100d.txt"), verbose=True
-    # )
-    model = WordEmbeddingModelWindowed(
-        model_path=Path("models", "nlwiki_20180420_100d.txt"), n_words=2, verbose=True
-    )
+    model_path = Path("models", "nlwiki_20180420_100d.txt")
+    models = [
+        ("word_embedding", WordEmbeddingModel(model_path=model_path, verbose=True)),
+        (
+            "content_words_only",
+            WordEmbeddingModelContentWord(model_path=model_path, verbose=True),
+        ),
+        (
+            "windowed",
+            WordEmbeddingModelWindowed(
+                model_path=model_path,
+                n_words=2,
+                verbose=True,
+            ),
+        ),
+        ("weighted", WordEmbeddingModelWeighted(model_path=model_path, verbose=True)),
+    ]
 
     # Context from Aurnhammer et al., 2023 (translated to Dutch)
     context = """Een toerist wilde zijn enorme koffer meenemen in het vliegtuig. 
@@ -150,10 +236,13 @@ if __name__ == "__main__":
     continuations = ["toerist", "koffer", "vogel", "brood"]
 
     context = re.sub("\n    ", "", context)
-    context_emb = model.get_embedding(context)
-    for continuation in continuations:
-        word_emb = model.get_embedding(continuation)
-        sem_association = model.semantic_association_context(
-            word_emb=word_emb, context_emb=context_emb
-        )
-        print(f"Semantic association of the word '{continuation}' is {sem_association}")
+    for name, model in models:
+        print(name)
+        for continuation in continuations:
+            word_emb = model.get_embedding(continuation)
+            sem_association = model.semantic_association_context(
+                word=continuation, context=context
+            )
+            print(
+                f"Semantic association of the word '{continuation}' is {sem_association}"
+            )

@@ -37,10 +37,9 @@ if __name__ == "__main__":
     continuations = ["toerist", "koffer", "vogel", "brood"]
 
     context = re.sub("\n    ", "", context)
-    context_emb = model.get_embedding(context)
     for continuation in continuations:
         word_emb = model.get_embedding(continuation)
         sem_association = model.semantic_association_context(
-            word_emb=word_emb, context_emb=context_emb
+            word=continuation, context=context
         )
         print(f"Semantic association of the word '{continuation}' is {sem_association}")
