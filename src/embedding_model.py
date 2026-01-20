@@ -52,6 +52,9 @@ class EmbeddingModel(ABC):
         """
         word_emb = self.get_embedding(word)
         context_emb = self.get_embedding(context)
+        if word_emb is np.nan or context_emb is np.nan:
+            return np.nan
+
         assert len(word_emb) == len(context_emb)
 
         semantic_association = self.similarity(
