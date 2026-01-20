@@ -20,7 +20,7 @@ def get_pos(word):
 
 
 class EmbeddingModel:
-    def __init__(self, n_sentences: int | None, verbose=False):
+    def __init__(self, n_sentences: int | None, verbose: bool=False):
         self.n_sentences = n_sentences + 1  # plus one as we also want the current
         self.verbose = verbose
 
