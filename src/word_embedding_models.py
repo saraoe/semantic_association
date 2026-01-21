@@ -173,7 +173,7 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
                 word_emb, context_emb, measure=similarity_measure
             )
 
-    def semantic_association_context(
+    def get_semantic_association(
         self,
         word: str,
         context: str,

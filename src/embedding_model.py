@@ -3,7 +3,6 @@ Calculate semantic association using embeddings
 """
 
 import numpy as np
-import re
 from numpy.linalg import norm
 from abc import ABC, abstractmethod
 
@@ -37,7 +36,7 @@ class EmbeddingModel(ABC):
     def get_embedding(self, text):
         pass
 
-    def semantic_association_context(
+    def get_semantic_association(
         self,
         word: str,
         context: str,
@@ -46,6 +45,7 @@ class EmbeddingModel(ABC):
         """
         Calculates semantic association between a word and a context
         Args:
+
             word_emb: word that the semantic association will be calculated for.
             context_emb: context the word should be compared to.
             similarity_meassure: what measure of similiarity is used.

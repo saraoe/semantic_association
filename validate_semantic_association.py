@@ -113,9 +113,7 @@ class validation_federmeier_kutas:
                 continue
 
             # calculate semantic association to context embedding
-            sem_association = self.model.semantic_association_context(
-                word_emb, context_emb
-            )
+            sem_association = self.model.get_semantic_association(word_emb, context_emb)
             sem_associations[target] = sem_association
 
         sem_associations["constraint"] = row["constraint"]
