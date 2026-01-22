@@ -5,7 +5,7 @@ Calculate semantic association using sentence embeddings
 import re
 from sentence_transformers import SentenceTransformer
 
-from embedding_model import EmbeddingModel
+from src.embedding_model import EmbeddingModel
 
 
 class SentenceEmbeddingModel(EmbeddingModel):

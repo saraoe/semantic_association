@@ -9,7 +9,7 @@ import re
 from gensim.models import KeyedVectors
 import spacy
 
-from embedding_model import EmbeddingModel
+from src.embedding_model import EmbeddingModel
 
 
 @cache
@@ -20,13 +20,14 @@ def get_word_embedding_model(model_path: Path):
 class WordEmbeddingModel(EmbeddingModel):
     def __init__(
         self,
-        model_path: Path,
+        model_name: str,
+        model_path: Path = Path("models"),
         n_sentences: int | None = None,
         verbose: bool = False,
     ):
         super().__init__(n_sentences, verbose)
 
-        self.model = get_word_embedding_model(model_path)
+        self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
@@ -52,14 +53,15 @@ class WordEmbeddingModel(EmbeddingModel):
 class WordEmbeddingModelContentWord(EmbeddingModel):
     def __init__(
         self,
-        model_path: Path,
+        model_name: str,
+        model_path: Path = Path("models"),
         n_sentences: int | None = None,
         spacy_model_name: str = "nl_core_news_sm",
         verbose: bool = False,
     ):
         super().__init__(n_sentences, verbose)
 
-        self.model = get_word_embedding_model(model_path)
+        self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
 
@@ -123,15 +125,16 @@ class WordEmbeddingModelContentWord(EmbeddingModel):
 class WordEmbeddingModelWindowed(EmbeddingModel):
     def __init__(
         self,
-        model_path: Path,
+        model_name: str,
         n_words: int,
+        model_path: Path = Path("models"),
         spacy_model_name: str = "nl_core_news_sm",
         verbose: bool = False,
     ):
         n_sentences = None  # you cannot specify number of sentences with this model
         super().__init__(n_sentences, verbose)
 
-        self.model = get_word_embedding_model(model_path)
+        self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
         self.n_words = n_words
@@ -165,10 +168,12 @@ class WordEmbeddingModelWindowed(EmbeddingModel):
 
 
 class WordEmbeddingModelWeighted(EmbeddingModel):
-    def __init__(self, model_path, n_sentences=None, verbose=False):
+    def __init__(
+        self, model_name, model_path=Path("models"), n_sentences=None, verbose=False
+    ):
         super().__init__(n_sentences, verbose)
 
-        self.model = get_word_embedding_model(model_path)
+        self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
         self.half_life = 4
 
     def get_embedding(self, text: str):
@@ -239,22 +244,22 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
 
 
 if __name__ == "__main__":
-    model_path = Path("models", "nlwiki_20180420_100d.txt")
+    model_name = "nlwiki_20180420_100d"
     models = [
-        ("word_embedding", WordEmbeddingModel(model_path=model_path, verbose=True)),
+        ("word_embedding", WordEmbeddingModel(model_name=model_name, verbose=True)),
         (
             "content_words_only",
-            WordEmbeddingModelContentWord(model_path=model_path, verbose=True),
+            WordEmbeddingModelContentWord(model_name=model_name, verbose=True),
         ),
         (
             "windowed",
             WordEmbeddingModelWindowed(
-                model_path=model_path,
+                model_name=model_name,
                 n_words=2,
                 verbose=True,
             ),
         ),
-        ("weighted", WordEmbeddingModelWeighted(model_path=model_path, verbose=True)),
+        ("weighted", WordEmbeddingModelWeighted(model_name=model_name, verbose=True)),
     ]
 
     # Context from Aurnhammer et al., 2023 (translated to Dutch)
