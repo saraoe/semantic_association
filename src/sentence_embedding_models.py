@@ -18,6 +18,7 @@ class SentenceEmbeddingModel(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = SentenceTransformer(model_name)
+        self.model_name = model_name
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words."""

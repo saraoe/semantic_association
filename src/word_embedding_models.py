@@ -28,6 +28,7 @@ class WordEmbeddingModel(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
+        self.model_name = model_name
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
@@ -62,6 +63,7 @@ class WordEmbeddingModelContentWord(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
+        self.model_name = model_name
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
 
@@ -135,6 +137,7 @@ class WordEmbeddingModelWindowed(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
+        self.model_name = model_name
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
         self.n_words = n_words
@@ -174,6 +177,7 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
+        self.model_name = model_name
         self.half_life = 4
 
     def get_embedding(self, text: str):
