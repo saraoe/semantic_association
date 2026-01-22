@@ -38,7 +38,6 @@ if __name__ == "__main__":
 
     context = re.sub("\n    ", "", context)
     for continuation in continuations:
-        word_emb = model.get_embedding(continuation)
         sem_association = model.get_semantic_association(
             word=continuation, context=context
         )
