@@ -229,7 +229,11 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
             return np.nan
         context_embeddings = self.get_embedding(context)
         assert all(
-            [len(word_emb) == len(context_emb) for context_emb in context_embeddings]
+            [
+                len(word_emb) == len(context_emb)
+                for context_emb in context_embeddings
+                if context_emb is not np.nan
+            ]
         )
 
         # calculate weights based on word distances
