@@ -73,7 +73,7 @@ df_long |>
             )
         )
     ) |>
-    filter(embedding_model != "WordEmbeddingWeighted") |>
+    filter(embedding_model != "WordEmbeddingWindowed") |>
     ggplot(aes(x = context_name_f, color = target, group = target)) +
     geom_point(
         aes(y = mean),
