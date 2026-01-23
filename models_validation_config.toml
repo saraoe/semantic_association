@@ -1,0 +1,99 @@
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "all-MiniLM-L6-v2"
+context = ["original", "long"]
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "intfloat/multilingual-e5-large"
+context = ["original", "long"]
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "all-MiniLM-L6-v2"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "intfloat/multilingual-e5-large"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "enwiki_20180420_100d"
+context = ["original", "long"]
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "word2vec-google-news-300"
+context = ["original", "long"]
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "enwiki_20180420_100d"
+context = ["original", "long"]
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "word2vec-google-news-300"
+context = ["original", "long"]
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "enwiki_20180420_100d"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "word2vec-google-news-300"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "enwiki_20180420_100d"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "word2vec-google-news-300"
+n_sentences = 5
+context = ["long"]
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "enwiki_20180420_100d"
+n_words = 1
+context = ["original"]
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "word2vec-google-news-300"
+n_words = 1
+context = ["original"]
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "enwiki_20180420_100d"
+n_words = 2
+context = ["original"]
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "word2vec-google-news-300"
+n_words = 2
+context = ["original"]
+
+[[models]]
+model_type = "WordEmbeddingWeighted"
+model_name = "enwiki_20180420_100d"
+context = ["original", "long"]
+
+[[models]]
+model_type = "WordEmbeddingWeighted"
+model_name = "word2vec-google-news-300"
+context = ["original", "long"]

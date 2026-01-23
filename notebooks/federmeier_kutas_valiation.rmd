@@ -15,9 +15,9 @@ df |>
     group_by(
         language,
         embedding_model,
-        included_pos,
-        context_window,
-        context
+        context,
+        n_sentences,
+        n_words
     ) |>
     summarize(
         "expected" = mean(expected),
@@ -31,21 +31,19 @@ df |>
 ```{r}
 df_long <- df |>
     mutate(
-        context_window = ifelse(
-            is.na(context_window),
-            "all", as.character(context_window)
+        context_name = context,
+        context_name = ifelse(
+            !is.na(n_words), paste0(n_words, " word(s)"), context_name
         ),
-        context_name = paste0(context, ":", context_window)
+        context_name = ifelse(
+            !is.na(n_sentences),
+            paste0(n_sentences, " sentences"), context_name
+        )
     ) |>
     pivot_longer(
         cols = c(expected, within, between, unexpected),
         names_to = "measure",
         values_to = "value"
-    ) |>
-    group_by(model_name) |>
-    mutate(
-        value_centered = value - mean(value, na.rm = TRUE),
-        value_scaled = scale(value)
     )
 ```
 
@@ -55,7 +53,7 @@ lan <- "en"
 df_long |>
     filter(language == lan) |>
     group_by(
-        model_name, included_pos, context_name, measure
+        model_name, embedding_model, context_name, measure
     ) |>
     summarize(
         mean = mean(value, na.rm = TRUE),
@@ -69,21 +67,23 @@ df_long |>
         context_name_f = factor(
             context_name,
             levels = c(
-                "original:all", "long:all", "long:50",
-                "long:30", "long:5", "long:2"
+                "original", "long",
+                "5 sentences",
+                "2 word(s)", "1 word(s)"
             )
         )
     ) |>
+    filter(embedding_model != "WordEmbeddingWeighted") |>
     ggplot(aes(x = context_name_f, color = target, group = target)) +
     geom_point(
         aes(y = mean),
-        position = position_dodge(width = 0.5),
-        size = 4
+        position = position_dodge(width = 0.3),
+        size = 2
     ) +
     geom_errorbar(
         aes(ymin = mean - sd, ymax = mean + sd),
         width = 0.15,
-        position = position_dodge(width = 0.5)
+        position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
         values = c(
@@ -94,11 +94,12 @@ df_long |>
         ),
         breaks = c("expected", "within", "between", "unexpected")
     ) +
-    facet_wrap(model_name ~ included_pos, scale = "free") +
+    facet_wrap(embedding_model ~ model_name, scale = "free", ncol = 2) +
     labs(x = "context") +
-    theme_minimal()
+    theme_minimal() +
+    theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "sem_association_all.png"), height = 13, width = 13)
+ggsave(file.path("figs", "sem_association_all.png"), height = 10, width = 7)
 ```
 ```{r}
 lan <- "en"
@@ -109,7 +110,7 @@ df_long |>
         measure,
         levels = c("expected", "within", "between", "unexpected")
     )) |>
-    filter(context_name == "original_all") |>
+    filter(context_name == "original") |>
     ggplot(aes(color = measure_f)) +
     geom_density(aes(x = value)) +
     scale_colour_manual(
@@ -121,6 +122,6 @@ df_long |>
         ),
         breaks = c("expected", "within", "between", "unexpected")
     ) +
-    facet_wrap(model_name ~ included_pos) +
+    facet_wrap(embedding_model ~ model_name, scale = "free") +
     theme_minimal()
 ```

@@ -3,11 +3,11 @@ Calculate semantic association using embeddings
 """
 
 import numpy as np
-import re
 from numpy.linalg import norm
+from abc import ABC, abstractmethod
 
 
-class EmbeddingModel:
+class EmbeddingModel(ABC):
     def __init__(
         self,
         n_sentences: int | None,
@@ -32,36 +32,32 @@ class EmbeddingModel:
         sentences = text.split(".")
         return ".".join(sentences[-(self.n_sentences) :]).lstrip(" ")
 
-    def semantic_association_context(
+    @abstractmethod
+    def get_embedding(self, text):
+        pass
+
+    def get_semantic_association(
         self,
-        word_emb: np.ndarray,
-        context_emb: np.ndarray,
+        word: str,
+        context: str,
         similarity_measure: str = "cosine",
     ):
         """
-        Calculates semantic association of a word to a context embedding
+        Calculates semantic association between a word and a context
         Args:
-            word_emb: word embedding that the semantic association will be calculated for
-            context_emb: context embedding the word should be compared to
-            similarity_meassure: what measure of similiarity is used
+
+            word_emb: word that the semantic association will be calculated for.
+            context_emb: context the word should be compared to.
+            similarity_meassure: what measure of similiarity is used.
         """
-        # make sure the word embedding and context embedding is of the same length
+        word_emb = self.get_embedding(word)
+        context_emb = self.get_embedding(context)
+        if word_emb is np.nan or context_emb is np.nan:
+            return np.nan
+
         assert len(word_emb) == len(context_emb)
 
         semantic_association = self.similarity(
             context_emb, word_emb, measure=similarity_measure
         )
         return semantic_association
-
-
-if __name__ == "__main__":
-    model = EmbeddingModel(n_sentences=2, verbose=True)
-
-    # Context from Aurnhammer et al., 2023 (translated to Dutch)
-    context = """Een toerist wilde zijn enorme koffer meenemen in het vliegtuig. 
-    De koffer was echter zo zwaar dat de vrouw bij de incheckbalie besloot de toerist een toeslag te vragen. 
-    Vervolgens opende de toerist zijn koffer en gooide er verschillende dingen uit. 
-    De koffer van de vindingrijke toerist woog nu minder dan de maximale 30 kilo. Toen afwijzen de vrouw de"""
-
-    context = re.sub("    ", "", context)
-    print(model.get_n_sentences(context))

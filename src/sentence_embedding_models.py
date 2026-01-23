@@ -5,7 +5,7 @@ Calculate semantic association using sentence embeddings
 import re
 from sentence_transformers import SentenceTransformer
 
-from embedding_model import EmbeddingModel
+from src.embedding_model import EmbeddingModel
 
 
 class SentenceEmbeddingModel(EmbeddingModel):
@@ -18,6 +18,7 @@ class SentenceEmbeddingModel(EmbeddingModel):
         super().__init__(n_sentences, verbose)
 
         self.model = SentenceTransformer(model_name)
+        self.model_name = model_name
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words."""
@@ -37,10 +38,8 @@ if __name__ == "__main__":
     continuations = ["toerist", "koffer", "vogel", "brood"]
 
     context = re.sub("\n    ", "", context)
-    context_emb = model.get_embedding(context)
     for continuation in continuations:
-        word_emb = model.get_embedding(continuation)
-        sem_association = model.semantic_association_context(
-            word_emb=word_emb, context_emb=context_emb
+        sem_association = model.get_semantic_association(
+            word=continuation, context=context
         )
         print(f"Semantic association of the word '{continuation}' is {sem_association}")
