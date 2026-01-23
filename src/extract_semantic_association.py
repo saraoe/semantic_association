@@ -22,8 +22,9 @@ from src.word_embedding_models import (
 
 
 def extract_semantic_association(
-    df: pd.DataFrame, model: EmbeddingModel, model_name: str
-):
+    df: pd.DataFrame, model: EmbeddingModel, implementation_name: str
+) -> pd.DataFrame:
+    """Extract semantic association scores for each word given its context."""
     id_cols = [
         "document_id",
         "paragraph_n",
@@ -32,34 +33,38 @@ def extract_semantic_association(
         "word",
         "story_name",
     ]
-    sem_col = f"semantic_association_{model_name}"
-    output_dict = {col: [] for col in id_cols + [sem_col]}
+    association_col = f"semantic_association_{implementation_name}"
+
+    results = []
+
     for doc_id, doc_df in df.groupby("document_id"):
-        print(f"Document_id {doc_id}")
+        print(f"Processing document_id {doc_id}")
+        doc_df = doc_df.sort_values(["paragraph_n", "word_n"])
 
         context = ""
-        paragraph_number = 0
-        for _, row in doc_df.groupby(id_cols):
-            assert len(row) == 1
+        current_paragraph = 0
 
-            word = row["word"].iloc[0]
-            if not context:
-                semantic_association = np.nan
-            else:
-                semantic_association = model.get_semantic_association(word, context)
+        for idx, row in doc_df.iterrows():
+            word = row["word"]
 
-            # save output
-            output_dict[sem_col].append(float(semantic_association))
-            for col in id_cols:
-                output_dict[col].append(row[col].iloc[0])
+            # Compute semantic association (NaN for first word)
+            semantic_association = (
+                model.get_semantic_association(word, context) if context else np.nan
+            )
 
-            # update context
-            if row["paragraph_n"].iloc[0] > paragraph_number:
+            # Store result
+            result = {col: row[col] for col in id_cols}
+            result[association_col] = float(semantic_association)
+            results.append(result)
+
+            # Update context
+            if row["paragraph_n"] > current_paragraph:
                 context += f"{word} \n"
-                paragraph_number = row["paragraph_n"].iloc[0]
+                current_paragraph = row["paragraph_n"]
             else:
                 context += f"{word} "
-    return pd.DataFrame.from_dict(output_dict)
+
+    return pd.DataFrame(results)
 
 
 if __name__ == "__main__":
@@ -70,7 +75,7 @@ if __name__ == "__main__":
     semantic_association_df = extract_semantic_association(
         df=df,
         model=SentenceEmbeddingModel("clips/e5-large-trm-nl"),
-        model_name="SentenceEmbedding",
+        implementation_name="SentenceEmbedding",
     )
 
     semantic_association_df.to_csv(
