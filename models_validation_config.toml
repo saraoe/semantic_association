@@ -2,98 +2,188 @@
 model_type = "SentenceEmbedding"
 model_name = "all-MiniLM-L6-v2"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "SentenceEmbedding"
 model_name = "intfloat/multilingual-e5-large"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "SentenceEmbedding"
 model_name = "all-MiniLM-L6-v2"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "SentenceEmbedding"
 model_name = "intfloat/multilingual-e5-large"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbedding"
 model_name = "enwiki_20180420_100d"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbedding"
 model_name = "word2vec-google-news-300"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
 model_name = "enwiki_20180420_100d"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
 model_name = "word2vec-google-news-300"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbedding"
 model_name = "enwiki_20180420_100d"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbedding"
 model_name = "word2vec-google-news-300"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
 model_name = "enwiki_20180420_100d"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
 model_name = "word2vec-google-news-300"
 n_sentences = 5
 context = ["long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
 model_name = "enwiki_20180420_100d"
 n_words = 1
 context = ["original"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
 model_name = "word2vec-google-news-300"
 n_words = 1
 context = ["original"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
 model_name = "enwiki_20180420_100d"
 n_words = 2
 context = ["original"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
 model_name = "word2vec-google-news-300"
 n_words = 2
 context = ["original"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWeighted"
 model_name = "enwiki_20180420_100d"
 context = ["original", "long"]
+language = "en"
 
 [[models]]
 model_type = "WordEmbeddingWeighted"
 model_name = "word2vec-google-news-300"
 context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "intfloat/multilingual-e5-large"
+context = ["original", "long"]
+language = "nl"
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "clips/e5-large-trm-nl"
+context = ["original", "long"]
+language = "nl"
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "intfloat/multilingual-e5-large"
+n_sentences = 5
+context = ["long"]
+language = "nl"
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "clips/e5-large-trm-nl"
+n_sentences = 5
+context = ["long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_100d"
+context = ["original", "long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_100d"
+context = ["original", "long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_100d"
+n_sentences = 5
+context = ["long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_100d"
+n_sentences = 5
+context = ["long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "nlwiki_20180420_100d"
+n_words = 1
+context = ["original"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "nlwiki_20180420_100d"
+n_words = 2
+context = ["original"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingWeighted"
+model_name = "nlwiki_20180420_100d"
+context = ["original", "long"]
+language = "nl"

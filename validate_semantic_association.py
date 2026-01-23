@@ -165,11 +165,10 @@ def append_df_to_csv(
 if __name__ == "__main__":
     results_path = Path("results", "federmeier_kutas_validation.csv")
     # remove file if exists
-    # if results_path.exists():
-    #     results_path.unlink()
+    if results_path.exists():
+        results_path.unlink()
 
-    # for config in stream_models("models_validation_config.toml"):
-    for config in stream_models("nl_models.toml"):
+    for config in stream_models("models_validation_config.toml"):
         print(f"Validating: {config}")
 
         language = config["language"]
