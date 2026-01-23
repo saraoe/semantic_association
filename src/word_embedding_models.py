@@ -2,12 +2,17 @@
 Calculate semantic association using word embeddings
 """
 
+import sys
 from pathlib import Path
 from functools import cache
 import numpy as np
 import re
 from gensim.models import KeyedVectors
 import spacy
+
+if __name__ == "__main__":
+    project_root = Path(__file__).parent.parent
+    sys.path.insert(0, str(project_root))
 
 from src.embedding_model import EmbeddingModel
 
