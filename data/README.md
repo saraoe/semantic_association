@@ -1,7 +1,7 @@
 # Data
 
 # Tilburg corpus of Natural Dutch Texts (TiNT)
-The data in the file ``tint.csv`` is from the Tilburg corpus of Natural Dutch Texts (TiNT). The code for data preprocessing is in the ``natural-stories-dutch`` repository. The data is read from the ``natural-stories-dutch`` repository in the file ``src/read_tint.r``.
+The data in the file ``tint.csv`` is from the Tilburg corpus of Natural Dutch Texts (TiNT). The code for data preprocessing is in the ``natural-stories-dutch`` repository. The data is read from the ``natural-stories-dutch`` repository in the file ``src/read_tint.r``. Additionally, there is the ``tint_stim.csv`` files that only contains the stimuli but not the participant information.
 
 Descriptions of variables:
 | Variable Name                 | Type  | Description                                                       |
