@@ -4,6 +4,7 @@ The code is imported from the error-analysis github repo
 """
 
 from pathlib import Path
+import tomllib
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -15,6 +16,36 @@ from src.word_embedding_models import (
     WordEmbeddingModelWindowed,
 )
 from src.sentence_embedding_models import SentenceEmbeddingModel
+
+
+MODEL_REGISTRY = {
+    "SentenceEmbedding": SentenceEmbeddingModel,
+    "WordEmbedding": WordEmbeddingModel,
+    "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
+    "WordEmbeddingWindowed": WordEmbeddingModelWindowed,
+    "WordEmbeddingWeighted": WordEmbeddingModelWeighted,
+}
+
+
+def stream_models(config_path):
+    with open(config_path, "rb") as f:
+        config = tomllib.load(f)
+
+    for model_config in config["models"]:
+        model_type = model_config.pop("model_type")
+        context = model_config.pop("context")
+
+        # All remaining keys in model_config get passed to the constructor
+        model_class = MODEL_REGISTRY[model_type]
+        model = model_class(**model_config)
+
+        # Rebuild the dict with all original config values
+        yield {
+            "model": model,
+            "embedding_model": model_type,
+            "context": context,
+            **model_config,  # Include any extra args like n_words
+        }
 
 
 class validation_federmeier_kutas:
@@ -130,115 +161,13 @@ def append_df_to_csv(
 
 
 if __name__ == "__main__":
-    model_configs = [
-        {
-            "model": SentenceEmbeddingModel("all-MiniLM-L6-v2"),
-            "embedding_model": "SentenceEmbedding",
-            "context": ["original", "long"],
-        },
-        {
-            "model": SentenceEmbeddingModel("intfloat/multilingual-e5-large"),
-            "embedding_model": "SentenceEmbedding",
-            "context": ["original", "long"],
-        },
-        {
-            "model": SentenceEmbeddingModel("all-MiniLM-L6-v2", n_sentences=5),
-            "embedding_model": "SentenceEmbedding",
-            "context": ["long"],
-        },
-        {
-            "model": SentenceEmbeddingModel(
-                "intfloat/multilingual-e5-large", n_sentences=5
-            ),
-            "embedding_model": "SentenceEmbedding",
-            "context": ["long"],
-        },
-        {
-            "model": WordEmbeddingModel("enwiki_20180420_100d"),
-            "embedding_model": "WordEmbedding",
-            "context": ["original", "long"],
-        },
-        {
-            "model": WordEmbeddingModel("word2vec-google-news-300"),
-            "embedding_model": "WordEmbedding",
-            "context": ["original", "long"],
-        },
-        {
-            "model": WordEmbeddingModelContentWord("enwiki_20180420_100d"),
-            "embedding_model": "WordEmbeddingContentWord",
-            "context": ["original", "long"],
-        },
-        {
-            "model": WordEmbeddingModelContentWord("word2vec-google-news-300"),
-            "embedding_model": "WordEmbeddingContentWord",
-            "context": ["original", "long"],
-        },
-        {
-            "model": WordEmbeddingModel("enwiki_20180420_100d", n_sentences=5),
-            "embedding_model": "WordEmbedding",
-            "context": ["long"],
-        },
-        {
-            "model": WordEmbeddingModel("word2vec-google-news-300", n_sentences=5),
-            "embedding_model": "WordEmbedding",
-            "context": ["long"],
-        },
-        {
-            "model": WordEmbeddingModelContentWord(
-                "enwiki_20180420_100d", n_sentences=5
-            ),
-            "embedding_model": "WordEmbeddingContentWord",
-            "context": ["long"],
-        },
-        {
-            "model": WordEmbeddingModelContentWord(
-                "word2vec-google-news-300", n_sentences=5
-            ),
-            "embedding_model": "WordEmbeddingContentWord",
-            "context": ["long"],
-        },
-        {
-            "model": WordEmbeddingModelWindowed("enwiki_20180420_100d", n_words=1),
-            "embedding_model": "WordEmbeddingContentWord",
-            "n_words": 1,
-            "context": ["original"],
-        },
-        {
-            "model": WordEmbeddingModelWindowed("word2vec-google-news-300", n_words=1),
-            "embedding_model": "WordEmbeddingContentWord",
-            "n_words": 1,
-            "context": ["original"],
-        },
-        {
-            "model": WordEmbeddingModelWindowed("enwiki_20180420_100d", n_words=2),
-            "embedding_model": "WordEmbeddingContentWord",
-            "n_words": 2,
-            "context": ["original"],
-        },
-        {
-            "model": WordEmbeddingModelWindowed("word2vec-google-news-300", n_words=1),
-            "embedding_model": "WordEmbeddingContentWord",
-            "n_words": 2,
-            "context": ["original"],
-        },
-        {
-            "model": WordEmbeddingModelWeighted("enwiki_20180420_100d"),
-            "embedding_model": "WordEmbeddingWeighted",
-            "context": ["original", "long"],
-        },
-        {
-            "model": WordEmbeddingModelWeighted("word2vec-google-news-300"),
-            "embedding_model": "WordEmbeddingWeighted",
-            "context": ["original", "long"],
-        },
-    ]
-
     results_path = Path("results", "federmeier_kutas_validation.csv")
     # remove file if exists
     if results_path.exists():
         results_path.unlink()
 
-    for config in model_configs:
+    # for config in stream_models("models_validation_config.toml"):
+    for config in stream_models("models_validation_config.toml"):
         print(f"Validating: {config}")
 
         translated = config.get("translated", False)

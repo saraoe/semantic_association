@@ -227,6 +227,9 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
         word_emb = self.get_embedding(word)
         if word_emb is np.nan:
             return np.nan
+        if isinstance(word_emb, list):
+            # if the word is seperated by whitespace - e.g., polar bear
+            word_emb = np.mean(word_emb, axis=0)
         context_embeddings = self.get_embedding(context)
         assert all(
             [
