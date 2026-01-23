@@ -34,6 +34,7 @@ def stream_models(config_path):
     for model_config in config["models"]:
         model_type = model_config.pop("model_type")
         context = model_config.pop("context")
+        language = model_config.pop("language")
 
         # All remaining keys in model_config get passed to the constructor
         model_class = MODEL_REGISTRY[model_type]
@@ -44,6 +45,7 @@ def stream_models(config_path):
             "model": model,
             "embedding_model": model_type,
             "context": context,
+            "language": language,
             **model_config,  # Include any extra args like n_words
         }
 
@@ -163,14 +165,16 @@ def append_df_to_csv(
 if __name__ == "__main__":
     results_path = Path("results", "federmeier_kutas_validation.csv")
     # remove file if exists
-    if results_path.exists():
-        results_path.unlink()
+    # if results_path.exists():
+    #     results_path.unlink()
 
     # for config in stream_models("models_validation_config.toml"):
-    for config in stream_models("models_validation_config.toml"):
+    for config in stream_models("nl_models.toml"):
         print(f"Validating: {config}")
 
-        translated = config.get("translated", False)
+        language = config["language"]
+        assert language in ["en", "nl"]
+        translated = False if language == "en" else True
 
         for context in config["context"]:
             model = config["model"]
@@ -187,7 +191,7 @@ if __name__ == "__main__":
                 extra_cols={
                     "embedding_model": config["embedding_model"],
                     "model_name": model.model_name,
-                    "language": "nl" if translated else "en",
+                    "language": language,
                     "context": context,
                     "n_sentences": model.n_sentences - 1 if model.n_sentences else None,
                     "n_words": config.get("n_words", None),
