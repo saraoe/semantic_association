@@ -16,6 +16,7 @@ from src.word_embedding_models import (
     WordEmbeddingModelWindowed,
 )
 from src.sentence_embedding_models import SentenceEmbeddingModel
+from src.util import append_df_to_csv
 
 
 MODEL_REGISTRY = {
@@ -145,21 +146,6 @@ def plot_validation(df: pd.DataFrame, title: str, save_path: Path = None):
         plt.savefig(save_path)
     else:
         plt.show()
-
-
-def append_df_to_csv(
-    df: pd.DataFrame,
-    path: Path,
-    extra_cols: dict = {},
-):
-    for col_name, values in extra_cols.items():
-        df[col_name] = values
-    if not path.exists():
-        print(f"creating df {path}")
-        df.to_csv(path)
-    else:
-        print(f"appending df to {path}")
-        df.to_csv(path, mode="a", header=False)
 
 
 if __name__ == "__main__":
