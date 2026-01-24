@@ -259,6 +259,109 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
         return np.sum(weighted_associations, axis=0)
 
 
+class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
+    def __init__(
+        self,
+        model_name,
+        model_path=Path("models"),
+        n_sentences=None,
+        spacy_model_name: str = "nl_core_news_sm",
+        verbose=False,
+    ):
+        super().__init__(n_sentences, verbose)
+
+        self.model = get_word_embedding_model(model_path / f"{model_name}.txt")
+        self.model_name = model_name
+        self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
+        self.spacy_nlp = spacy.load(spacy_model_name)
+        self.half_life = 4
+
+    def get_embedding(self, text: str):
+        """Get embedding for any amount of words. If there is more than one word, the function returns a list of embedding"""
+        if self.n_sentences:
+            text = self.get_n_sentences(text)
+
+        # split text on whitespace, make lower, and remove punctuation
+        text_list = text.lower().split(" ")
+        text_list = [re.sub(r"\W+", "", w) for w in text_list]
+
+        context_embeddings = [
+            self.model[word] if word in self.model else np.nan for word in text_list
+        ]
+
+        if len(context_embeddings) == 1:  # if its just the embedding of one word
+            return context_embeddings[0]
+        return context_embeddings
+
+    def weighted_association(
+        self,
+        weights: np.ndarray,
+        context_embeddings: list[np.ndarray],
+        word_emb: np.ndarray,
+        similarity_measure: str,
+    ):
+        for weight, context_emb in zip(weights, context_embeddings):
+            if context_emb is np.nan:
+                continue
+            yield weight * self.similarity(
+                word_emb, context_emb, measure=similarity_measure
+            )
+
+    def get_semantic_association(
+        self,
+        word: str,
+        context: str,
+        similarity_measure: str = "cosine",
+    ):
+        """
+        Calculates semantic association between a word and a context
+        Args:
+            word_emb: word embedding that the semantic association will be calculated for
+            context_emb: context embedding the word should be compared to
+            similarity_meassure: what measure of similiarity is used
+        """
+        word_emb = self.get_embedding(word)
+        if word_emb is np.nan:
+            return np.nan
+        if isinstance(word_emb, list):
+            # if the word is seperated by whitespace - e.g., polar bear
+            word_emb = np.mean(word_emb, axis=0)
+        context_embeddings = self.get_embedding(context)
+        assert all(
+            [
+                len(word_emb) == len(context_emb)
+                for context_emb in context_embeddings
+                if context_emb is not np.nan
+            ]
+        )
+
+        # calculate weights based on word distances
+        distances = np.arange(start=len(context_embeddings), stop=0, step=-1)
+        weights = 2 ** (-distances / self.half_life)
+
+        # include only content words
+        content_words_idx = [
+            token.pos_ in self.content_pos
+            for token in self.spacy_nlp(context)
+            if token.pos_ != "PUNCT"
+        ]
+        assert len(content_words_idx) == len(context_embeddings)
+        context_embeddings = [
+            emb for (idx, emb) in zip(content_words_idx, context_embeddings) if idx
+        ]
+        weights = weights[content_words_idx]
+
+        weighted_associations = list(
+            self.weighted_association(
+                weights, context_embeddings, word_emb, similarity_measure
+            )
+        )
+        if not weighted_associations:
+            return np.nan
+
+        return np.sum(weighted_associations, axis=0)
+
+
 if __name__ == "__main__":
     model_name = "nlwiki_20180420_100d"
     models = [
@@ -276,6 +379,10 @@ if __name__ == "__main__":
             ),
         ),
         ("weighted", WordEmbeddingModelWeighted(model_name=model_name, verbose=True)),
+        (
+            "content_words_weighted",
+            WordEmbeddingModelContentWordWeighted(model_name=model_name, verbose=True),
+        ),
     ]
 
     # Context from Aurnhammer et al., 2023 (translated to Dutch)
