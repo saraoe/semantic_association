@@ -1,4 +1,5 @@
 *.pyc
 openai_api_key.txt
 models/*
+analysis/brms_models/*
 _figs/*
