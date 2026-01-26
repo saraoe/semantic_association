@@ -14,6 +14,7 @@ from src.word_embedding_models import (
     WordEmbeddingModelContentWord,
     WordEmbeddingModelWeighted,
     WordEmbeddingModelWindowed,
+    WordEmbeddingModelContentWordWeighted,
 )
 from src.sentence_embedding_models import SentenceEmbeddingModel
 from src.util import append_df_to_csv
@@ -25,6 +26,7 @@ MODEL_REGISTRY = {
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "WordEmbeddingWindowed": WordEmbeddingModelWindowed,
     "WordEmbeddingWeighted": WordEmbeddingModelWeighted,
+    "WordEmbeddingContentWordWeighted": WordEmbeddingModelContentWordWeighted,
 }
 
 

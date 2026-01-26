@@ -19,6 +19,7 @@ from src.word_embedding_models import (
     WordEmbeddingModelContentWord,
     WordEmbeddingModelWindowed,
     WordEmbeddingModelWeighted,
+    WordEmbeddingModelContentWordWeighted,
 )
 
 MODEL_REGISTRY = {
@@ -27,6 +28,7 @@ MODEL_REGISTRY = {
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "WordEmbeddingWindowed": WordEmbeddingModelWindowed,
     "WordEmbeddingWeighted": WordEmbeddingModelWeighted,
+    "WordEmbeddingContentWordWeighted": WordEmbeddingModelContentWordWeighted,
 }
 
 

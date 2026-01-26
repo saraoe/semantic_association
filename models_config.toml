@@ -47,3 +47,8 @@ implementation_name = "WordEmbeddingWindowed2"
 model_type = "WordEmbeddingWeighted"
 model_name = "nlwiki_20180420_100d"
 implementation_name = "WordEmbeddingWeighted"
+
+[[models]]
+model_type = "WordEmbeddingContentWordWeighted"
+model_name = "nlwiki_20180420_100d"
+implementation_name = "WordEmbeddingContentWordWeighted"

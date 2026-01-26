@@ -198,8 +198,6 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
             self.model[word] if word in self.model else np.nan for word in text_list
         ]
 
-        if len(context_embeddings) == 1:  # if its just the embedding of one word
-            return context_embeddings[0]
         return context_embeddings
 
     def weighted_association(
@@ -230,11 +228,10 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
             similarity_meassure: what measure of similiarity is used
         """
         word_emb = self.get_embedding(word)
-        if word_emb is np.nan:
+        # get embedding returns a list
+        if any([emb is np.nan for emb in word_emb]):
             return np.nan
-        if isinstance(word_emb, list):
-            # if the word is seperated by whitespace - e.g., polar bear
-            word_emb = np.mean(word_emb, axis=0)
+        word_emb = np.mean(word_emb, axis=0)
         context_embeddings = self.get_embedding(context)
         assert all(
             [
@@ -281,16 +278,19 @@ class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
         if self.n_sentences:
             text = self.get_n_sentences(text)
 
-        # split text on whitespace, make lower, and remove punctuation
-        text_list = text.lower().split(" ")
+        # split text with spacy, make lower, and remove punctuation
+        text_content = [
+            token.text for token in self.spacy_nlp(text) if token.pos_ != "PUNCT"
+        ]
+
+        # make lower, and remove punctuation
+        text_list = [str(w).lower() for w in text_content]
         text_list = [re.sub(r"\W+", "", w) for w in text_list]
 
         context_embeddings = [
             self.model[word] if word in self.model else np.nan for word in text_list
         ]
 
-        if len(context_embeddings) == 1:  # if its just the embedding of one word
-            return context_embeddings[0]
         return context_embeddings
 
     def weighted_association(
@@ -321,11 +321,10 @@ class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
             similarity_meassure: what measure of similiarity is used
         """
         word_emb = self.get_embedding(word)
-        if word_emb is np.nan:
+        # get embedding returns a list
+        if any([emb is np.nan for emb in word_emb]):
             return np.nan
-        if isinstance(word_emb, list):
-            # if the word is seperated by whitespace - e.g., polar bear
-            word_emb = np.mean(word_emb, axis=0)
+        word_emb = np.mean(word_emb, axis=0)
         context_embeddings = self.get_embedding(context)
         assert all(
             [
