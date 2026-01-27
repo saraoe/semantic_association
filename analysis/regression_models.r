@@ -39,7 +39,11 @@ sem_df <- read.csv(
 tint_df <- read.csv(file.path("data", "tint.csv")) |>
     select(-X) |>
     left_join(sem_df) |>
-    filter(content_word) # model only content words
+    filter(content_word) |> # model only content words
+    mutate(across(
+        starts_with("semantic_association"),
+        ~ scale(.) # scale sem_vars
+    ))
 
 # model formulas
 baseline_formula <- bf(
