@@ -2,9 +2,28 @@
 
 library(tidytable)
 library(brms)
+library(argparse)
 
 options(mc.cores = parallel::detectCores())
 options(brms.backend = "cmdstan")
+
+## Specify dependent variables using argparse
+parser <- ArgumentParser(description = "Run brms models")
+parser$add_argument("--dep_vars",
+    type = "character",
+    nargs = "+",
+    default = c("rt", "n400", "p600"),
+    help = "Specify dependent variables (rt, n400, and p600)"
+)
+
+args <- parser$parse_args()
+dep_vars <- args$dep_vars
+
+print(paste(
+    "Running models for dependent variable: ",
+    dep_vars,
+    sep = ""
+))
 
 # create out folder
 out_folder <- file.path("analysis", "brms_models")
@@ -58,7 +77,7 @@ run_baseline_model <- function(dep_var) {
         rename("dep_var" = dep_var)
 
     if (dep_var %in% c("n400", "p600")) {
-        priors <- rt_priors
+        priors <- erp_priors
         family <- gaussian()
     } else if (dep_var == "rt") {
         priors <- rt_priors
@@ -85,7 +104,8 @@ run_sem_model <- function(dep_var, sem_var) {
         )
 
     if (dep_var %in% c("n400", "p600")) {
-        priors <- rt_priors
+        priors <- erp_priors
+        family <- gaussian()
     } else if (dep_var == "rt") {
         priors <- rt_priors
         family <- lognormal()
@@ -103,7 +123,6 @@ run_sem_model <- function(dep_var, sem_var) {
     return(m)
 }
 
-dep_vars <- c("rt", "n400", "p600")
 sem_vars <- tint_df |>
     select(all_of(starts_with("semantic_association"))) |>
     colnames()
