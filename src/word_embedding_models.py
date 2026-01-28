@@ -113,6 +113,9 @@ class WordEmbeddingModelContentWord(EmbeddingModel):
             context_emb: context the word should be compared to.
             similarity_meassure: what measure of similiarity is used.
         """
+        # make lower, and remove punctuation
+        word = word.lower()
+        word = re.sub(r"\W+", "", word)
         if word in self.model:
             word_emb = self.model[word]
         else:
