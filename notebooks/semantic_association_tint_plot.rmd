@@ -30,11 +30,42 @@ sem_df <- read.csv(
     left_join(tint_df)
 ```
 
+## Explore difference
+Words with largest difference in semantic asssociation across implementations
+```{r}
+sem_df |>
+    mutate(
+        diff = semantic_association_SentenceEmbedding - semantic_association_WordEmbedding
+    ) |>
+    mutate(s_diff = scale(diff)) |>
+    filter(s_diff > 2.5) |>
+    select(
+        word, number_word, sentence_number, document_id, content_word, s_diff
+    ) |>
+    print(n = 50)
+```
+
+Word with largest semantic association values
+```{r}
+sem_df |>
+    filter(content_word) |>
+    mutate(
+        s_se = scale(semantic_association_SentenceEmbedding),
+        s_we = scale(semantic_association_WordEmbedding)
+    ) |>
+    filter(s_we > 2) |>
+    select(
+        word, number_word, sentence_number, document_id, content_word, s_we
+    ) |>
+    print(n = 50)
+```
+
 ## visualization
+Choose sentences
 ```{r}
 df <- sem_df |>
     # filter(content_word) |>
-    filter(document_id == 6 & sentence_number %in% c(10:11))
+    filter(document_id == 2 & sentence_number %in% c(39:42))
 
 df_long <- df |>
     mutate(across(starts_with("semantic_association"), scale)) |>
@@ -50,7 +81,7 @@ df_long <- df |>
     )
 ```
 
-Print sentence
+Print sentences
 ```{r}
 df |>
     pull(word) |>
