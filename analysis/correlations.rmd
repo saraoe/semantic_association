@@ -1,0 +1,79 @@
+# Correlations between predictors (lp and sem)
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(reshape2)
+```
+
+## Load data
+```{r}
+sem_df <- read.csv(
+    file.path("results", "tint_semantic_association.csv")
+) |>
+    select(-X)
+tint_df <- read.csv(file.path("data", "tint.csv")) |>
+    select(-X) |>
+    left_join(sem_df)
+```
+
+## Correlations
+all words
+```{r}
+cor_matrix <- tint_df |>
+    select(lp, starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+only content words
+```{r}
+cor_matrix <- tint_df |>
+    filter(content_word) |>
+    select(lp, starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```

@@ -1,0 +1,132 @@
+# Plots of semantic association for the TiNT data
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+```
+
+## load data
+```{r}
+tint_df <- read.csv(file.path("data", "tint_stim.csv")) |>
+    select(-X) |>
+    filter(document_id < 10) |>
+    mutate(content_word = ifelse(
+        pos %in% c("NOUN", "VERB", "ADJ", "ADV"),
+        TRUE, FALSE
+    )) |>
+    # make sentence_number col
+    group_by(document_id) |>
+    mutate(
+        new_sentence_start = grepl("\\.$", lag(word)),
+        sentence_number = cumsum(new_sentence_start) + 1
+    ) |>
+    select(-new_sentence_start)
+
+sem_df <- read.csv(
+    file.path("results", "tint_semantic_association.csv")
+) |>
+    select(-X) |>
+    left_join(tint_df)
+```
+
+## visualization
+```{r}
+df <- sem_df |>
+    # filter(content_word) |>
+    filter(document_id == 6 & sentence_number %in% c(10:11))
+
+df_long <- df |>
+    mutate(across(starts_with("semantic_association"), scale)) |>
+    pivot_longer(
+        cols = starts_with("semantic_association"),
+        names_to = "implementation",
+        values_to = "value"
+    ) |>
+    mutate(
+        "implementation" = str_replace(
+            implementation, "semantic_association_", ""
+        )
+    )
+```
+
+Print sentence
+```{r}
+df |>
+    pull(word) |>
+    paste(collapse = " ")
+```
+Words and semantic values
+```{r}
+df |>
+    mutate(across(starts_with("semantic_association"), scale)) |>
+    select(word, starts_with("semantic_association")) |>
+    rename_with(~ str_remove(., "^semantic_association_")) |>
+    t() |>
+    as.data.frame()
+```
+
+Heatmap
+```{r}
+ggplot(df_long, aes(x = number_word, y = implementation, fill = value)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        midpoint = 0
+    ) +
+    scale_x_continuous(
+        breaks = df$number_word,
+        labels = df$word,
+    ) +
+    labs(
+        x = "",
+        y = ""
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    theme(aspect.ratio = .5)
+```
+
+Line plot
+```{r}
+ggplot(df_long, aes(x = number_word, y = value, color = implementation)) +
+    geom_line(linewidth = 1) +
+    geom_point(size = 2) +
+    scale_x_continuous(
+        breaks = df$number_word,
+        labels = df$word,
+    ) +
+    labs(
+        x = "Word",
+        y = "Semantic Association",
+        color = "Implementation"
+    ) +
+    theme_minimal() +
+    scale_color_manual(values = c(
+        "firebrick1", "firebrick4",
+        "steelblue1", "steelblue2", "steelblue3", "steelblue4",
+        "slateblue1", "slateblue2", "slateblue3", "slateblue4"
+    )) +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    )
+```
+
+```{r}
+# Faceted plot (separate panel for each semantic association implementation)
+ggplot(df_long, aes(x = number_word, y = value)) +
+    geom_line(linewidth = 1, color = "steelblue") +
+    geom_point(size = 2, color = "steelblue") +
+    facet_wrap(~implementation, ncol = 1, scales = "free_y") +
+    scale_x_continuous(
+        breaks = df$number_word,
+        labels = df$word
+    ) +
+    labs(
+        x = "Word",
+        y = "Value"
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
