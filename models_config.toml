@@ -1,0 +1,54 @@
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "clips/e5-large-trm-nl"
+implementation_name = "SentenceEmbedding"
+
+[[models]]
+model_type = "SentenceEmbedding"
+model_name = "clips/e5-large-trm-nl"
+n_sentences = 1
+implementation_name = "SentenceEmbedding_nSentences1"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_100d"
+implementation_name = "WordEmbedding"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_100d"
+implementation_name = "WordEmbeddingContentWord"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_100d"
+n_sentences = 1
+implementation_name = "WordEmbedding_nSentences1"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_100d"
+n_sentences = 1
+implementation_name = "WordEmbeddingContentWord_nSentences1"
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "nlwiki_20180420_100d"
+n_words = 1
+implementation_name = "WordEmbeddingWindowed1"
+
+[[models]]
+model_type = "WordEmbeddingWindowed"
+model_name = "nlwiki_20180420_100d"
+n_words = 2
+implementation_name = "WordEmbeddingWindowed2"
+
+[[models]]
+model_type = "WordEmbeddingWeighted"
+model_name = "nlwiki_20180420_100d"
+implementation_name = "WordEmbeddingWeighted"
+
+[[models]]
+model_type = "WordEmbeddingContentWordWeighted"
+model_name = "nlwiki_20180420_100d"
+implementation_name = "WordEmbeddingContentWordWeighted"

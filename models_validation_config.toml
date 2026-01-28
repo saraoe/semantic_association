@@ -117,6 +117,18 @@ context = ["original", "long"]
 language = "en"
 
 [[models]]
+model_type = "WordEmbeddingContentWordWeighted"
+model_name = "enwiki_20180420_100d"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "WordEmbeddingContentWordWeighted"
+model_name = "word2vec-google-news-300"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
 model_type = "SentenceEmbedding"
 model_name = "intfloat/multilingual-e5-large"
 context = ["original", "long"]
@@ -184,6 +196,12 @@ language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingWeighted"
+model_name = "nlwiki_20180420_100d"
+context = ["original", "long"]
+language = "nl"
+
+[[models]]
+model_type = "WordEmbeddingContentWordWeighted"
 model_name = "nlwiki_20180420_100d"
 context = ["original", "long"]
 language = "nl"
