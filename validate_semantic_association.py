@@ -17,7 +17,7 @@ from src.word_embedding_models import (
     WordEmbeddingModelContentWordWeighted,
 )
 from src.sentence_embedding_models import SentenceEmbeddingModel
-from src.append_to_df import append_df_to_csv
+from src.append_to_csv import append_df_to_csv
 
 
 MODEL_REGISTRY = {

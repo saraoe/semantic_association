@@ -1,0 +1,24 @@
+# temporary file for checking that the regression models are correct
+
+```{r}
+library(tidytable)
+library(brms)
+```
+
+```{r}
+dep_var <- "p600"
+models <- list.files(file.path("analysis", "brms_models"),
+    full.names = TRUE,
+    pattern = paste0(dep_var, "_.*\\.rds$")
+)
+model <- models[5]
+
+print(model)
+m <- readRDS(model)
+summary(m)
+```
+
+```{r}
+plot(m)
+plot(m, pars = "^b_")
+```
