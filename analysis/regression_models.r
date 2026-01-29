@@ -60,6 +60,13 @@ sem_formula <- bf(
         (s_lp + s_sem || word)
 )
 
+sem_only_formula <- bf(
+    dep_var ~ s_sem +
+        (s_sem || participant_number) +
+        (s_sem || document_id) +
+        (s_sem || word)
+)
+
 # priors
 rt_priors <- c(
     prior(normal(5.5, 1), class = Intercept),
@@ -127,6 +134,33 @@ run_sem_model <- function(dep_var, sem_var) {
     return(m)
 }
 
+run_sem_only_model <- function(dep_var, sem_var) {
+    data <- tint_df |>
+        rename(
+            "dep_var" = dep_var,
+            "s_sem" = sem_var
+        )
+
+    if (dep_var %in% c("n400", "p600")) {
+        priors <- erp_priors
+        family <- gaussian()
+    } else if (dep_var == "rt") {
+        priors <- rt_priors
+        family <- lognormal()
+    }
+
+    m <- brm(sem_only_formula,
+        family = family,
+        prior = priors,
+        data = data,
+        chains = 4,
+        control = list(adapt_delta = 0.9999),
+        seed = 246,
+        file = file.path(out_folder, paste0(dep_var, "_only_", sem_var))
+    )
+    return(m)
+}
+
 sem_vars <- tint_df |>
     select(all_of(starts_with("semantic_association"))) |>
     colnames()
@@ -138,5 +172,8 @@ for (dep_var in dep_vars) {
     for (sem_var in sem_vars) {
         print(paste("Running model with", sem_var))
         run_sem_model(dep_var, sem_var)
+
+        print(paste("Running model with only", sem_var))
+        run_sem_only_model(dep_var, sem_var)
     }
 }
