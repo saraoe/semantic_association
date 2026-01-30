@@ -13,8 +13,13 @@ sem_df <- read.csv(
     file.path("results", "tint_semantic_association.csv")
 ) |>
     select(-X)
-tint_df <- read.csv(file.path("data", "tint.csv")) |>
+
+tint_df <- read.csv(file.path("data", "tint_stim.csv")) |>
     select(-X) |>
+    mutate(content_word = ifelse(
+        pos %in% c("NOUN", "VERB", "ADJ", "ADV"),
+        TRUE, FALSE
+    )) |>
     left_join(sem_df)
 ```
 
@@ -22,7 +27,7 @@ tint_df <- read.csv(file.path("data", "tint.csv")) |>
 all words
 ```{r}
 cor_matrix <- tint_df |>
-    select(lp, starts_with("semantic_association")) |>
+    select(lp, zipf_freq, starts_with("semantic_association")) |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -52,7 +57,72 @@ only content words
 ```{r}
 cor_matrix <- tint_df |>
     filter(content_word) |>
-    select(lp, starts_with("semantic_association")) |>
+    select(lp, zipf_freq, starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+specific pos
+```{r}
+tint_df |>
+    pull(pos) |>
+    unique()
+
+cor_matrix <- tint_df |>
+    filter(pos == "NOUN") |>
+    select(lp, zipf_freq, starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+specific documents
+```{r}
+cor_matrix <- tint_df |>
+    filter(document_id == 1) |>
+    filter(content_word) |>
+    select(lp, zipf_freq, starts_with("semantic_association")) |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix

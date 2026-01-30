@@ -2,18 +2,19 @@
 
 ```{r}
 library(tidytable)
+library(ggplot2)
 library(brms)
 ```
 
 ```{r}
-dep_var <- "p600"
+dep_var <- "rt"
 model_names <- list.files(file.path("analysis", "brms_models"),
     full.names = FALSE,
     pattern = paste0(dep_var, "_.*\\.rds$")
 )
-model_name <- model_names[5]
+model_name <- model_names[3]
 
-print(model)
+print(model_name)
 m <- readRDS(file.path("analysis", "brms_models", model_name))
 summary(m)
 ```
