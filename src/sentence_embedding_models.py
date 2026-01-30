@@ -4,6 +4,7 @@ Calculate semantic association using sentence embeddings
 
 import sys
 from pathlib import Path
+from functools import cache
 import re
 import numpy as np
 import spacy
@@ -47,11 +48,10 @@ class SentenceEmbeddingModelSingleWord(EmbeddingModel):
         self.model = SentenceTransformer(model_name)
         self.model_name = model_name
 
-    def get_embedding(self, text: str):
-        """Get embedding for any amount of words."""
-        if self.n_sentences:
-            text = self.get_n_sentences(text)
-        return self.model.encode(text)
+    @cache
+    def get_word_embedding(self, word: str):
+        """Get embedding for one words."""
+        return self.model.encode(word)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
@@ -62,7 +62,7 @@ class SentenceEmbeddingModelSingleWord(EmbeddingModel):
         text_list = text.lower().split(" ")
         text_list = [re.sub(r"\W+", "", w) for w in text_list]
 
-        context_embeddings = [self.model.encode(word) for word in text_list]
+        context_embeddings = [self.get_word_embedding(word) for word in text_list]
 
         return np.mean(context_embeddings, axis=0)
 
@@ -82,11 +82,10 @@ class SentenceEmbeddingModelSingleWordContentWord(EmbeddingModel):
         self.content_pos = ["NOUN", "VERB", "ADJ", "ADV"]
         self.spacy_nlp = spacy.load(spacy_model_name)
 
-    def get_embedding(self, text: str):
-        """Get embedding for any amount of words."""
-        if self.n_sentences:
-            text = self.get_n_sentences(text)
-        return self.model.encode(text)
+    @cache
+    def get_word_embedding(self, word: str):
+        """Get embedding for one words."""
+        return self.model.encode(word)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
@@ -104,7 +103,7 @@ class SentenceEmbeddingModelSingleWordContentWord(EmbeddingModel):
         text_list = [str(w).lower() for w in text_content]
         text_list = [re.sub(r"\W+", "", w) for w in text_list]
 
-        context_embeddings = [self.model.encode(word) for word in text_list]
+        context_embeddings = [self.get_word_embedding(word) for word in text_list]
 
         return np.mean(context_embeddings, axis=0)
 
