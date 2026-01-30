@@ -98,6 +98,8 @@ class SentenceEmbeddingModelSingleWordContentWord(EmbeddingModel):
             for token in self.spacy_nlp(text)
             if token.pos_ in self.content_pos
         ]
+        if not text_content:
+            return np.nan
 
         # make lower, and remove punctuation
         text_list = [str(w).lower() for w in text_content]
@@ -126,6 +128,8 @@ class SentenceEmbeddingModelSingleWordContentWord(EmbeddingModel):
         word = re.sub(r"\W+", "", word)
         word_emb = self.model.encode(word)
         context_emb = self.get_embedding(context)
+        if word_emb is np.nan or context_emb is np.nan:
+            return np.nan
 
         assert len(word_emb) == len(context_emb)
 
