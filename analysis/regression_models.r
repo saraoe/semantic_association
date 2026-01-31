@@ -34,8 +34,7 @@ if (!dir.exists(out_folder)) {
 # load data
 sem_df <- read.csv(
     file.path("results", "tint_semantic_association.csv")
-) |>
-    select(-X)
+)
 tint_df <- read.csv(file.path("data", "tint.csv")) |>
     select(-X) |>
     left_join(sem_df) |>
