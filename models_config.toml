@@ -52,3 +52,47 @@ implementation_name = "WordEmbeddingWeighted"
 model_type = "WordEmbeddingContentWordWeighted"
 model_name = "nlwiki_20180420_100d"
 implementation_name = "WordEmbeddingContentWordWeighted"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_300d"
+implementation_name = "WordEmbedding300"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_300d"
+implementation_name = "WordEmbedding300ContentWord"
+
+[[models]]
+model_type = "WordEmbedding"
+model_name = "nlwiki_20180420_300d"
+n_sentences = 1
+implementation_name = "WordEmbedding300_nSentences1"
+
+[[models]]
+model_type = "WordEmbeddingContentWord"
+model_name = "nlwiki_20180420_300d"
+n_sentences = 1
+implementation_name = "WordEmbedding300ContentWord_nSentences1"
+
+[[models]]
+model_type = "SentenceEmbeddingModelSingleWord"
+model_name = "clips/e5-large-trm-nl"
+implementation_name = "SentenceEmbeddingSingleWord"
+
+[[models]]
+model_type = "SentenceEmbeddingModelSingleWordContentWord"
+model_name = "clips/e5-large-trm-nl"
+implementation_name = "SentenceEmbeddingModelSingleWordContentWord"
+
+[[models]]
+model_type = "SentenceEmbeddingModelSingleWord"
+model_name = "clips/e5-large-trm-nl"
+n_sentences = 1
+implementation_name = "SentenceEmbeddingModelSingleWord_nSentences1"
+
+[[models]]
+model_type = "SentenceEmbeddingModelSingleWordContentWord"
+model_name = "clips/e5-large-trm-nl"
+n_sentences = 1
+implementation_name = "SentenceEmbeddingModelSingleWordContentWord_nSentences1"

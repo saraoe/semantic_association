@@ -1,8 +1,8 @@
 from huggingface_hub import hf_hub_download
 
 hf_hub_download(
-    repo_id="Word2vec/wikipedia2vec_enwiki_20180420_100d",
-    filename="enwiki_20180420_100d.txt",
+    repo_id="Word2vec/wikipedia2vec_nlwiki_20180420_300d",
+    filename="nlwiki_20180420_300d.txt",
     local_dir="models",
 )
 

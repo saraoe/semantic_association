@@ -16,12 +16,18 @@ from src.word_embedding_models import (
     WordEmbeddingModelWindowed,
     WordEmbeddingModelContentWordWeighted,
 )
-from src.sentence_embedding_models import SentenceEmbeddingModel
+from src.sentence_embedding_models import (
+    SentenceEmbeddingModel,
+    SentenceEmbeddingModelSingleWord,
+    SentenceEmbeddingModelSingleWordContentWord,
+)
 from src.append_to_csv import append_df_to_csv
 
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
+    "SentenceEmbeddingSingleWord": SentenceEmbeddingModelSingleWord,
+    "SentenceEmbeddingSingleWordContentWord": SentenceEmbeddingModelSingleWordContentWord,
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "WordEmbeddingWindowed": WordEmbeddingModelWindowed,
@@ -153,10 +159,11 @@ def plot_validation(df: pd.DataFrame, title: str, save_path: Path = None):
 if __name__ == "__main__":
     results_path = Path("results", "federmeier_kutas_validation.csv")
     # remove file if exists
-    if results_path.exists():
-        results_path.unlink()
+    # if results_path.exists():
+    #     results_path.unlink()
 
-    for config in stream_models("models_validation_config.toml"):
+    # for config in stream_models("models_validation_config.toml"):
+    for config in stream_models("tmp.toml"):
         print(f"Validating: {config}")
 
         language = config["language"]

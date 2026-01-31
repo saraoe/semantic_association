@@ -13,7 +13,11 @@ if __name__ == "__main__":
     sys.path.insert(0, str(project_root))
 
 from src.embedding_model import EmbeddingModel
-from src.sentence_embedding_models import SentenceEmbeddingModel
+from src.sentence_embedding_models import (
+    SentenceEmbeddingModel,
+    SentenceEmbeddingModelSingleWord,
+    SentenceEmbeddingModelSingleWordContentWord,
+)
 from src.word_embedding_models import (
     WordEmbeddingModel,
     WordEmbeddingModelContentWord,
@@ -24,6 +28,8 @@ from src.word_embedding_models import (
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
+    "SentenceEmbeddingModelSingleWord": SentenceEmbeddingModelSingleWord,
+    "SentenceEmbeddingModelSingleWordContentWord": SentenceEmbeddingModelSingleWordContentWord,
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "WordEmbeddingWindowed": WordEmbeddingModelWindowed,
@@ -124,4 +130,4 @@ if __name__ == "__main__":
 
         result_df = result_df.merge(tmp_df, how="right", on=id_cols)
 
-    result_df.to_csv(results_path)
+    result_df.to_csv(results_path, index=False)

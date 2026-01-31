@@ -25,6 +25,58 @@ context = ["long"]
 language = "en"
 
 [[models]]
+model_type = "SentenceEmbeddingSingleWord"
+model_name = "all-MiniLM-L6-v2"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWord"
+model_name = "intfloat/multilingual-e5-large"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWord"
+model_name = "all-MiniLM-L6-v2"
+n_sentences = 5
+context = ["long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWord"
+model_name = "intfloat/multilingual-e5-large"
+n_sentences = 5
+context = ["long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWordContentWord"
+model_name = "all-MiniLM-L6-v2"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWordContentWord"
+model_name = "intfloat/multilingual-e5-large"
+context = ["original", "long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWordContentWord"
+model_name = "all-MiniLM-L6-v2"
+n_sentences = 5
+context = ["long"]
+language = "en"
+
+[[models]]
+model_type = "SentenceEmbeddingSingleWordContentWord"
+model_name = "intfloat/multilingual-e5-large"
+n_sentences = 5
+context = ["long"]
+language = "en"
+
+[[models]]
 model_type = "WordEmbedding"
 model_name = "enwiki_20180420_100d"
 context = ["original", "long"]
