@@ -11,8 +11,7 @@ library(reshape2)
 ```{r}
 sem_df <- read.csv(
     file.path("results", "tint_semantic_association.csv")
-) |>
-    select(-X)
+)
 
 tint_df <- read.csv(file.path("data", "tint_stim.csv")) |>
     select(-X) |>
