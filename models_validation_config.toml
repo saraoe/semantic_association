@@ -25,58 +25,6 @@ context = ["long"]
 language = "en"
 
 [[models]]
-model_type = "SentenceEmbeddingSingleWord"
-model_name = "all-MiniLM-L6-v2"
-context = ["original", "long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWord"
-model_name = "intfloat/multilingual-e5-large"
-context = ["original", "long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWord"
-model_name = "all-MiniLM-L6-v2"
-n_sentences = 5
-context = ["long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWord"
-model_name = "intfloat/multilingual-e5-large"
-n_sentences = 5
-context = ["long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWordContentWord"
-model_name = "all-MiniLM-L6-v2"
-context = ["original", "long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWordContentWord"
-model_name = "intfloat/multilingual-e5-large"
-context = ["original", "long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWordContentWord"
-model_name = "all-MiniLM-L6-v2"
-n_sentences = 5
-context = ["long"]
-language = "en"
-
-[[models]]
-model_type = "SentenceEmbeddingSingleWordContentWord"
-model_name = "intfloat/multilingual-e5-large"
-n_sentences = 5
-context = ["long"]
-language = "en"
-
-[[models]]
 model_type = "WordEmbedding"
 model_name = "enwiki_20180420_100d"
 context = ["original", "long"]
@@ -208,52 +156,52 @@ language = "nl"
 
 [[models]]
 model_type = "WordEmbedding"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 context = ["original", "long"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 context = ["original", "long"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbedding"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 n_sentences = 5
 context = ["long"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingContentWord"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 n_sentences = 5
 context = ["long"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 n_words = 1
 context = ["original"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingWindowed"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 n_words = 2
 context = ["original"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingWeighted"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 context = ["original", "long"]
 language = "nl"
 
 [[models]]
 model_type = "WordEmbeddingContentWordWeighted"
-model_name = "nlwiki_20180420_100d"
+model_name = "nlwiki_20180420_300d"
 context = ["original", "long"]
 language = "nl"

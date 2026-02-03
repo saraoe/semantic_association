@@ -118,9 +118,32 @@ if __name__ == "__main__":
         "word",
         "story_name",
     ]
-    result_df = pd.DataFrame(columns=id_cols)
+    # result_df = pd.DataFrame(columns=id_cols)
+    result_df = pd.read_csv(results_path)
 
-    for config in stream_models("models_config.toml"):
+    result_df = result_df.drop(
+        columns=[
+            "semantic_association_WordEmbedding",
+            "semantic_association_WordEmbedding_nSentences1",
+            "semantic_association_WordEmbeddingWindowed1",
+            "semantic_association_WordEmbeddingWindowed2",
+            "semantic_association_WordEmbeddingWeighted",
+            "semantic_association_WordEmbeddingContentWordWeighted",
+            "semantic_association_WordEmbeddingContentWord_nSentences1",
+            "semantic_association_WordEmbedding300",
+            "semantic_association_WordEmbedding300_nSentences1",
+            "semantic_association_WordEmbedding300ContentWord_nSentences1",
+            "semantic_association_SentenceEmbeddingSingleWord",
+            "semantic_association_SentenceEmbeddingModelSingleWordContentWord",
+            "semantic_association_SentenceEmbeddingModelSingleWord_nSentences1",
+            "semantic_association_SentenceEmbeddingModelSingleWordContentWord_nSentences1",
+            "semantic_association_WordEmbeddingContentWord",
+            "semantic_association_WordEmbedding300ContentWord",
+        ]
+    )
+
+    # for config in stream_models("models_config.toml"):
+    for config in stream_models("tmp.toml"):
         print(f"Extracting Semantic association with model: {config}")
         tmp_df = extract_semantic_association(
             df=df,
