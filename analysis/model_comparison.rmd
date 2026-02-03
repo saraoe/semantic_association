@@ -1,0 +1,29 @@
+# Model Comparision
+
+```{r}
+library(tidytable)
+library(brms)
+library(loo)
+library(ggplot2)
+
+options(mc.cores = parallel::detectCores())
+```
+
+```{r}
+dep_var <- "p600"
+model_names <- list.files(file.path("analysis", "brms_models"),
+    full.names = FALSE,
+    pattern = paste0(dep_var, "_.*\\.rds$")
+)
+
+m1_name <- model_names[2]
+m2_name <- model_names[3]
+
+print(paste("Comparison:", m1_name, "and", m2_name))
+m1 <- readRDS(file.path("analysis", "brms_models", m1_name))
+m2 <- readRDS(file.path("analysis", "brms_models", m2_name))
+
+loo_m1 <- loo(m1)
+loo_m2 <- loo(m2)
+loo_compare(loo_m1, loo_m2)
+```
