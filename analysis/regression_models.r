@@ -42,7 +42,14 @@ tint_df <- read.csv(file.path("data", "tint.csv")) |>
     mutate(across(
         starts_with("semantic_association"),
         ~ scale(.) # scale sem_vars
-    ))
+    )) |>
+    # include only complete cases
+    select(
+        starts_with("semantic_association"), s_lp,
+        participant_number, word, document_id,
+        n400, p600, rt
+    ) |>
+    drop_na()
 
 # model formulas
 baseline_formula <- bf(
