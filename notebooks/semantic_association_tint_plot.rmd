@@ -4,6 +4,8 @@
 library(tidytable)
 library(stringr)
 library(ggplot2)
+
+source(file.path("src", "rename_implementations.r"))
 ```
 
 ## load data
@@ -27,24 +29,6 @@ sem_df <- read.csv(
     file.path("results", "tint_semantic_association.csv")
 ) |>
     left_join(tint_df)
-```
-
-```{r}
-rename_implementations <- function(name) {
-    name <- str_replace(name, "semantic_association_", "")
-
-    name <- str_replace(name, "SentenceEmbedding", "SE, ")
-    name <- str_replace(name, "WordEmbeddingContentWord", "CWE, ")
-    name <- str_replace(name, "WordEmbedding", "WE, ")
-
-    name <- str_replace(name, "_nSentences", "Sentence")
-    name <- str_replace(name, "1", "(N=1)")
-    name <- str_replace(name, "2", "(N=2)")
-    name <- str_replace(name, "WE, Windowed", "CWE, Windowed")
-
-    name <- str_replace(name, ", $", ", All")
-    return(name)
-}
 ```
 
 ## Plot density
@@ -115,8 +99,11 @@ sem_df |>
 ## visualization
 Choose sentences
 ```{r}
+doc_id <- 1
+sentences <- c(5:6)
+
 df <- sem_df |>
-    filter(document_id == 6 & sentence_number %in% c(10:11))
+    filter(document_id == doc_id & sentence_number %in% sentences)
 
 df_long <- df |>
     mutate(across(starts_with("semantic_association"), scale)) |>
@@ -166,7 +153,9 @@ df |>
 
 Heatmap
 ```{r}
-df_long |>
+save_fig <- TRUE
+
+p <- df_long |>
     # mutate(value = ifelse(content_word, value, NA)) |>
     ggplot(aes(x = number_word, y = implementation, fill = value)) +
     geom_tile(color = "white") +
@@ -188,8 +177,19 @@ df_long |>
         axis.text.x = element_text(angle = 45, hjust = 1),
         axis.line = element_blank(),
         axis.ticks.y = element_blank()
-    ) +
-    theme(aspect.ratio = .5)
+    )
+
+if (save_fig) {
+    ggsave(
+        file.path(
+            "figs",
+            paste0("example_sentences", sentences[1], "-", sentences[2], "doc", doc_id, ".png")
+        ),
+        height = 4, width = 10
+    )
+} else {
+    p + theme(aspect.ratio = .5)
+}
 ```
 
 Line plot

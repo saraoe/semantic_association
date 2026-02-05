@@ -5,6 +5,8 @@ library(tidytable)
 library(stringr)
 library(ggplot2)
 library(reshape2)
+
+source(file.path("src", "rename_implementations.r"))
 ```
 
 ## Load data
@@ -33,6 +35,22 @@ cor_matrix <- tint_df |>
 prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+# rename implementations
+colnames(cor_matrix) <- rename_implementations(colnames(cor_matrix))
+rownames(cor_matrix) <- rename_implementations(rownames(cor_matrix))
+
+# rename freq and lp
+colnames(cor_matrix) <- case_when(
+    colnames(cor_matrix) == "zipf_freq" ~ "Zipf Frequency",
+    colnames(cor_matrix) == "lp" ~ "Log Probability",
+    .default = colnames(cor_matrix)
+)
+rownames(cor_matrix) <- case_when(
+    rownames(cor_matrix) == "zipf_freq" ~ "Zipf Frequency",
+    rownames(cor_matrix) == "lp" ~ "Log Probability",
+    .default = rownames(cor_matrix)
+)
 
 cor_matrix
 ```
@@ -64,6 +82,22 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+# rename implementations
+colnames(cor_matrix) <- rename_implementations(colnames(cor_matrix))
+rownames(cor_matrix) <- rename_implementations(rownames(cor_matrix))
+
+# rename freq and lp
+colnames(cor_matrix) <- case_when(
+    colnames(cor_matrix) == "zipf_freq" ~ "Zipf Frequency",
+    colnames(cor_matrix) == "lp" ~ "Log Probability",
+    .default = colnames(cor_matrix)
+)
+rownames(cor_matrix) <- case_when(
+    rownames(cor_matrix) == "zipf_freq" ~ "Zipf Frequency",
+    rownames(cor_matrix) == "lp" ~ "Log Probability",
+    .default = rownames(cor_matrix)
+)
+
 cor_matrix
 ```
 
@@ -77,9 +111,13 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
         midpoint = 0, limit = c(-1, 1)
     ) +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(x = "", y = "", fill = "Correlation") +
-    theme(aspect.ratio = 1)
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation")
+
+ggsave(file.path("figs", "correlations_CW.png"), height = 5.5, width = 5)
 ```
 
 specific pos
