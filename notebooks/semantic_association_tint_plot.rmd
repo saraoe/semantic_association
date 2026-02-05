@@ -29,6 +29,59 @@ sem_df <- read.csv(
     left_join(tint_df)
 ```
 
+```{r}
+rename_implementations <- function(name) {
+    name <- str_replace(name, "semantic_association_", "")
+
+    name <- str_replace(name, "SentenceEmbedding", "SE, ")
+    name <- str_replace(name, "WordEmbeddingContentWord", "CWE, ")
+    name <- str_replace(name, "WordEmbedding", "WE, ")
+
+    name <- str_replace(name, "_nSentences", "Sentence")
+    name <- str_replace(name, "1", "(N=1)")
+    name <- str_replace(name, "2", "(N=2)")
+    name <- str_replace(name, "WE, Windowed", "CWE, Windowed")
+
+    name <- str_replace(name, ", $", ", All")
+    return(name)
+}
+```
+
+## Plot density
+```{r}
+sem_df |>
+    mutate(across(starts_with("semantic_association"), scale)) |>
+    pivot_longer(
+        cols = c(starts_with("semantic_association")),
+        names_to = "implementation",
+        values_to = "value"
+    ) |>
+    mutate(
+        "implementation" = rename_implementations(implementation)
+    ) |>
+    mutate(
+        "implementation" = factor(
+            implementation,
+            levels = c(
+                "SE, All", "SE, Sentence(N=1)",
+                "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+                "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+                "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+            )
+        )
+    ) |>
+    ggplot() +
+    geom_density(aes(x = value, fill = implementation), alpha = .5) +
+    facet_wrap(. ~ implementation, ncol = 2) +
+    theme_minimal() +
+    scale_fill_manual(values = c(
+        "firebrick1", "firebrick4",
+        "steelblue1", "steelblue2", "steelblue3", "steelblue4",
+        "slateblue1", "slateblue2", "slateblue3", "slateblue4"
+    )) +
+    theme(legend.position = "bottom")
+```
+
 ## Explore difference
 Words with largest difference in semantic asssociation across implementations
 ```{r}
@@ -63,7 +116,6 @@ sem_df |>
 Choose sentences
 ```{r}
 df <- sem_df |>
-    # filter(content_word) |>
     filter(document_id == 6 & sentence_number %in% c(10:11))
 
 df_long <- df |>
@@ -74,8 +126,23 @@ df_long <- df |>
         values_to = "value"
     ) |>
     mutate(
-        "implementation" = str_replace(
-            implementation, "semantic_association_", ""
+        "implementation" = rename_implementations(implementation)
+    ) |>
+    mutate(implementation = case_when(
+        implementation == "s_freq" ~ "Zipf Frequency",
+        implementation == "s_lp" ~ "Log Probability",
+        .default = implementation
+    )) |>
+    mutate(
+        "implementation" = factor(
+            implementation,
+            levels = c(
+                "Log Probability", "Zipf Frequency",
+                "SE, All", "SE, Sentence(N=1)",
+                "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+                "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+                "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+            )
         )
     )
 ```
@@ -99,11 +166,14 @@ df |>
 
 Heatmap
 ```{r}
-ggplot(df_long, aes(x = number_word, y = implementation, fill = value)) +
+df_long |>
+    # mutate(value = ifelse(content_word, value, NA)) |>
+    ggplot(aes(x = number_word, y = implementation, fill = value)) +
     geom_tile(color = "white") +
     scale_fill_gradient2(
         low = "blue3", high = "red2", mid = "thistle1",
-        midpoint = 0
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
     ) +
     scale_x_continuous(
         breaks = df$number_word,
@@ -113,14 +183,19 @@ ggplot(df_long, aes(x = number_word, y = implementation, fill = value)) +
         x = "",
         y = ""
     ) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank()
+    ) +
     theme(aspect.ratio = .5)
 ```
 
 Line plot
 ```{r}
-ggplot(df_long, aes(x = number_word, y = value, color = implementation)) +
+df_long |>
+    ggplot(aes(x = number_word, y = value, color = implementation)) +
     geom_line(linewidth = 1) +
     geom_point(size = 2) +
     scale_x_continuous(
@@ -134,6 +209,7 @@ ggplot(df_long, aes(x = number_word, y = value, color = implementation)) +
     ) +
     theme_minimal() +
     scale_color_manual(values = c(
+        "grey50", "grey70",
         "firebrick1", "firebrick4",
         "steelblue1", "steelblue2", "steelblue3", "steelblue4",
         "slateblue1", "slateblue2", "slateblue3", "slateblue4"
