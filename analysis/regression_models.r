@@ -38,11 +38,18 @@ sem_df <- read.csv(
 tint_df <- read.csv(file.path("data", "tint.csv")) |>
     select(-X) |>
     left_join(sem_df) |>
-    filter(content_word) |> # model only content words
+    filter(pos %in% c("NOUN", "VERB", "ADJ", "ADV")) |> # model only content words
     mutate(across(
         starts_with("semantic_association"),
         ~ scale(.) # scale sem_vars
-    ))
+    )) |>
+    # include only complete cases
+    select(
+        starts_with("semantic_association"), s_lp,
+        participant_number, word, document_id,
+        n400, p600, rt
+    ) |>
+    drop_na()
 
 # model formulas
 baseline_formula <- bf(

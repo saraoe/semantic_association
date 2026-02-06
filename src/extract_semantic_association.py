@@ -28,8 +28,8 @@ from src.word_embedding_models import (
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
-    "SentenceEmbeddingModelSingleWord": SentenceEmbeddingModelSingleWord,
-    "SentenceEmbeddingModelSingleWordContentWord": SentenceEmbeddingModelSingleWordContentWord,
+    "SentenceEmbeddingSingleWord": SentenceEmbeddingModelSingleWord,
+    "SentenceEmbeddingSingleWordContentWord": SentenceEmbeddingModelSingleWordContentWord,
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "WordEmbeddingWindowed": WordEmbeddingModelWindowed,

@@ -177,6 +177,38 @@ class WordEmbeddingModelWindowed(EmbeddingModel):
 
         return np.mean(context_embeddings, axis=0)
 
+    def get_semantic_association(
+        self,
+        word: str,
+        context: str,
+        similarity_measure: str = "cosine",
+    ):
+        """
+        Calculates semantic association between a word and a context
+        Args:
+
+            word_emb: word that the semantic association will be calculated for.
+            context_emb: context the word should be compared to.
+            similarity_meassure: what measure of similiarity is used.
+        """
+        # make lower, and remove punctuation
+        word = word.lower()
+        word = re.sub(r"\W+", "", word)
+        if word in self.model:
+            word_emb = self.model[word]
+        else:
+            return np.nan
+        context_emb = self.get_embedding(context)
+        if word_emb is np.nan or context_emb is np.nan:
+            return np.nan
+
+        assert len(word_emb) == len(context_emb)
+
+        semantic_association = self.similarity(
+            context_emb, word_emb, measure=similarity_measure
+        )
+        return semantic_association
+
 
 class WordEmbeddingModelWeighted(EmbeddingModel):
     def __init__(
@@ -325,7 +357,9 @@ class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
         """
         word_emb = self.get_embedding(word)
         # get embedding returns a list
-        if any([emb is np.nan for emb in word_emb]):
+        # remove None values
+        word_emb = [emb for emb in word_emb if emb is not np.nan]
+        if len(word_emb) == 0:
             return np.nan
         word_emb = np.mean(word_emb, axis=0)
         context_embeddings = self.get_embedding(context)
