@@ -4,11 +4,12 @@
 library(tidytable)
 library(stringr)
 library(ggplot2)
+library(latex2exp)
 library(brms)
 
 source(file.path("src", "rename_implementations.r"))
 
-models_path <- file.path("analysis", "brms_models", "all_observations_old_pos")
+models_path <- file.path("analysis", "brms_models")
 ```
 
 ```{r}
@@ -38,8 +39,8 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
 ## Plot effect of all models
 ```{r}
 rm(fixef_df)
-dep_var <- "rt"
-model_formula <- "semantic_association"
+dep_var <- "n400"
+model_formula <- "only_semantic_association"
 
 model_names <- list.files(models_path,
     full.names = FALSE,
@@ -102,15 +103,26 @@ fixef_df |>
     )) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
     mutate(implementation = rename_implementations(implementation)) |>
-    mutate(model_type = factor(model_type, levels = c("SE", "WE", "CWE"))) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        implementation = factor(implementation,
+            levels = c(
+                "SE, All", "SE, Sentence(N=1)",
+                "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+                "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+                "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+            )
+        )
+    ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
     geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(values = c("firebrick", "steelblue", "slateblue", "violetred")) +
     labs(
-        x = "Estimate Semantic Assocation", y = "",
-        title = paste(toupper(dep_var), "~", predictors)
+        x = TeX("$\\beta_2$"), y = "",
+        color = "Embeddings",
+        subtitle = paste(toupper(dep_var), "~", predictors)
     ) +
     theme_minimal() +
     theme(legend.position = "bottom")
