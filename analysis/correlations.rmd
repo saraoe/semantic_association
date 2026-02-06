@@ -56,7 +56,24 @@ cor_matrix
 ```
 
 ```{r}
-melted <- melt(cor_matrix)
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        )),
+        Var2 = factor(Var2, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        ))
+    )
+
 ggplot(melted, aes(Var1, Var2, fill = value)) +
     geom_tile() +
     geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
@@ -102,7 +119,24 @@ cor_matrix
 ```
 
 ```{r}
-melted <- melt(cor_matrix)
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        )),
+        Var2 = factor(Var2, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        ))
+    )
+
 ggplot(melted, aes(Var1, Var2, fill = value)) +
     geom_tile() +
     geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
@@ -140,7 +174,24 @@ cor_matrix
 ```
 
 ```{r}
-melted <- melt(cor_matrix)
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        )),
+        Var2 = factor(Var2, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        ))
+    )
+
 ggplot(melted, aes(Var1, Var2, fill = value)) +
     geom_tile() +
     geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
@@ -171,7 +222,24 @@ cor_matrix
 ```
 
 ```{r}
-melted <- melt(cor_matrix)
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        )),
+        Var2 = factor(Var2, levels = c(
+            "Log Probability", "Zipf Frequency",
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        ))
+    )
+
 ggplot(melted, aes(Var1, Var2, fill = value)) +
     geom_tile() +
     geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
