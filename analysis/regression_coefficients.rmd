@@ -8,17 +8,18 @@ library(latex2exp)
 library(brms)
 
 source(file.path("src", "rename_implementations.r"))
+source(file.path("src", "model_diagnostics.r"))
 
 models_path <- file.path("analysis", "brms_models")
 ```
 
 ```{r}
-dep_var <- "p600"
+dep_var <- "rt"
 model_names <- list.files(models_path,
     full.names = FALSE,
     pattern = paste0(dep_var, "_.*\\.rds$")
 )
-model_name <- model_names[5]
+model_name <- model_names[24]
 
 print(model_name)
 m <- readRDS(file.path("analysis", "brms_models", model_name))
@@ -34,6 +35,71 @@ plot(m, variable = "^b_", regex = TRUE)
 mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
     labs(title = model_name) +
     theme(aspect.ratio = .6)
+```
+
+## Summarize diagnostics across all models
+```{r}
+rm(diagnostics_df)
+
+dep_vars <- c("rt", "n400")
+for (dep_var in dep_vars) {
+    print(dep_var)
+    fit <- readRDS(
+        file.path(models_path, paste0(dep_var, "_baseline.rds"))
+    )
+    if (number_divergent_transitions(fit) > 0) {
+        print("Divergent transistions! Number:")
+        print(paste(
+            "Divergent transistions! Number:",
+            number_divergent_transitions(fit)
+        ))
+    }
+    diag <- diagnostics_rhat_ess(fit) |>
+        mutate("dep_var" = dep_var, "model" = "baseline")
+
+    if (exists("diagnostics_df")) {
+        diagnostics_df <- rbind(diagnostics_df, diag)
+    } else {
+        diagnostics_df <- diag
+    }
+
+    model_names <- list.files(models_path,
+        full.names = FALSE,
+        pattern = paste0(dep_var, "_semantic_association_.*\\.rds$")
+    )
+    for (model in model_names) {
+        print(model)
+        fit <- readRDS(
+            file.path(models_path, model)
+        )
+        if (number_divergent_transitions(fit) > 0) {
+            print("Divergent transistions! Number:")
+            print(paste(
+                "Divergent transistions! Number:",
+                number_divergent_transitions(fit)
+            ))
+        }
+        diag <- diagnostics_rhat_ess(fit) |>
+            mutate("dep_var" = dep_var, "model" = model)
+
+        diagnostics_df <- rbind(diagnostics_df, diag)
+    }
+}
+```
+
+```{r}
+diagnostics_df |>
+    # group_by(dep_var) |>
+    summarize(
+        "max_rhat" = max(max_rhat),
+        "min_ess_bulk" = min(min_ess_bulk),
+        "min_ess_tail" = min(min_ess_tail),
+        "avg_ess" = mean(avg_ess)
+    )
+
+diagnostics_df |>
+    filter(min(min_ess_bulk) == min_ess_bulk) |>
+    select(model)
 ```
 
 ## Plot effect of all models
@@ -63,7 +129,6 @@ for (model_name in model_names) {
         as.data.frame()
     fe_df$coefficient <- rownames(fe_df)
     fe_df <- fe_df |>
-        filter(coefficient == "s_sem") |>
         mutate(
             "implementation" = str_replace(
                 model_name,
@@ -94,6 +159,7 @@ if (model_formula == "semantic_association") {
 }
 
 fixef_df |>
+    filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "WordEmbedding100") ~ "WordEmbedding100",
         str_detect(implementation, "SentenceEmbeddingSingleWord") ~ "SentenceEmbeddingModelSingleWord",
