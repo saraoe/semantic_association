@@ -9,14 +9,16 @@ library(ggplot2)
 
 options(mc.cores = parallel::detectCores())
 
-dep_vars <- c("rt", "n400", "p600")
-models_path = file.path("analysis", "brms_models", "old_pos_rm_NA")
+dep_vars <- c("rt", "n400")
+models_path = file.path("analysis", "brms_models")
 
 for (dep_var in dep_vars){
-    print(dep_var)
+    print(paste("Running baseline for", dep_var))
     # baseline model
     baseline_m <- readRDS(file.path(models_path, paste0(dep_var, "_baseline.rds")))
     loo_baseline <- loo(baseline_m)
+    print("Pareto k table:")
+    print(pareto_k_table(loo_baseline))
 
     # compare
     sem_model_names <- list.files(models_path,
@@ -25,11 +27,15 @@ for (dep_var in dep_vars){
     )
 
     for (model_name in sem_model_names){
-        print(model_name)
+        print(paste("Comparing baseline to", model_name))
         sem_m <- readRDS(file.path(models_path, model_name))
 
         loo_sem <- loo(sem_m)
+        print("Pareto k table (sem model):")
+        print(pareto_k_table(loo_sem))
+
         comparision <- loo_compare(loo_baseline, loo_sem)
+        print("comparison:")
         print(comparision)
 
         # save df
