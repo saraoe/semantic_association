@@ -39,8 +39,8 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
 ## Plot effect of all models
 ```{r}
 rm(fixef_df)
-dep_var <- "n400"
-model_formula <- "only_semantic_association"
+dep_var <- "rt"
+model_formula <- "semantic_association"
 
 model_names <- list.files(models_path,
     full.names = FALSE,
@@ -99,6 +99,7 @@ fixef_df |>
         str_detect(implementation, "SentenceEmbeddingSingleWord") ~ "SentenceEmbeddingModelSingleWord",
         str_detect(implementation, "SentenceEmbedding") ~ "SE",
         str_detect(implementation, "WordEmbeddingContent") ~ "CWE",
+        str_detect(implementation, "WordEmbeddingWindowed") ~ "CWE",
         str_detect(implementation, "WordEmbedding") ~ "WE"
     )) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
