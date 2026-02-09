@@ -5,14 +5,13 @@ library(tibble)
 library(stringr)
 library(brms)
 library(loo)
-library(ggplot2)
 
 options(mc.cores = parallel::detectCores())
 
 dep_vars <- c("rt", "n400")
-models_path = file.path("analysis", "brms_models")
+models_path <- file.path("analysis", "brms_models")
 
-for (dep_var in dep_vars){
+for (dep_var in dep_vars) {
     print(paste("Running baseline for", dep_var))
     # baseline model
     baseline_m <- readRDS(file.path(models_path, paste0(dep_var, "_baseline.rds")))
@@ -26,7 +25,7 @@ for (dep_var in dep_vars){
         pattern = paste0(dep_var, "_semantic_association_.*\\.rds$")
     )
 
-    for (model_name in sem_model_names){
+    for (model_name in sem_model_names) {
         print(paste("Comparing baseline to", model_name))
         sem_m <- readRDS(file.path(models_path, model_name))
 
@@ -46,7 +45,7 @@ for (dep_var in dep_vars){
                 "implementation" = str_extract(model_name, paste0("(?<=_semantic_association_).*(?=\\.rds)")),
                 "dep_var" = dep_var
             )
-        
+
         if (exists("out_df")) {
             out_df <- rbind(out_df, comp_df)
         } else {
@@ -56,4 +55,3 @@ for (dep_var in dep_vars){
 }
 
 write.csv(out_df, file.path("results", "model_comparison.csv"))
-
