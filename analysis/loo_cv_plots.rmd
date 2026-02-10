@@ -1,0 +1,58 @@
+# plotting PSIS-LOO-CV
+
+```{r}
+library(tidytable)
+library(stringr)
+library(brms)
+
+source(file.path("src", "rename_implementations.r"))
+```
+
+```{r}
+comparison_df <- read.csv(file.path("results", "loo_cv.csv")) |>
+    mutate("implementation" = rename_implementations(implementation)) |>
+    select(-X)
+```
+
+```{r}
+comparison_df |>
+    select(model, elpd_diff, se_diff, implementation, dep_var) |>
+    pivot_wider(
+        names_from = "model",
+        values_from = c("elpd_diff", "se_diff")
+    ) |>
+    mutate(
+        "elpd_diff" = ifelse(elpd_diff_sem_m == 0,
+            -elpd_diff_baseline_m, elpd_diff_sem_m
+        ),
+        "se_diff" = ifelse(se_diff_sem_m == 0,
+            se_diff_baseline_m, se_diff_sem_m
+        ),
+        "implementation" = factor(implementation, levels = c(
+            "SE, All", "SE, Sentence(N=1)",
+            "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+            "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+            "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+        ))
+    ) |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate("model_type" = factor(model_type, levels = c("SE", "WE", "CWE"))) |>
+    ggplot(aes(x = implementation, color = model_type)) +
+    geom_point(aes(y = elpd_diff)) +
+    geom_linerange(aes(ymin = elpd_diff - se_diff, ymax = elpd_diff + se_diff)) +
+    geom_hline(aes(yintercept = 0), linetype = "dashed") +
+    facet_wrap(. ~ toupper(dep_var), ncol = 1, scale = "free_y") +
+    theme_minimal() +
+    scale_color_manual(values = c("firebrick", "steelblue", "slateblue")) +
+    labs(x = "", color = "Embeddings") +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    )
+
+ggsave(file.path("figs", "loo_elpd_diff.png"), width = 7, height = 7)
+```
