@@ -2,6 +2,7 @@
 
 library(tidytable)
 library(brms)
+library(stringr)
 library(argparse)
 
 options(mc.cores = parallel::detectCores())
@@ -89,15 +90,13 @@ erp_priors <- c(
 )
 
 # run models
-run_baseline_model <- function(dep_var) {
+run_baseline_model <- function(dep_var, priors) {
     data <- tint_df |>
         rename("dep_var" = dep_var)
 
     if (dep_var %in% c("n400", "p600")) {
-        priors <- erp_priors
         family <- gaussian()
     } else if (dep_var == "rt") {
-        priors <- rt_priors
         family <- lognormal()
     }
 
@@ -113,7 +112,7 @@ run_baseline_model <- function(dep_var) {
     return(m)
 }
 
-run_sem_model <- function(dep_var, sem_var) {
+run_sem_model <- function(dep_var, sem_var, priors, suffix = "") {
     data <- tint_df |>
         rename(
             "dep_var" = dep_var,
@@ -121,10 +120,8 @@ run_sem_model <- function(dep_var, sem_var) {
         )
 
     if (dep_var %in% c("n400", "p600")) {
-        priors <- erp_priors
         family <- gaussian()
     } else if (dep_var == "rt") {
-        priors <- rt_priors
         family <- lognormal()
     }
 
@@ -135,12 +132,12 @@ run_sem_model <- function(dep_var, sem_var) {
         chains = 4,
         control = list(adapt_delta = 0.9999),
         seed = 246,
-        file = file.path(out_folder, paste0(dep_var, "_", sem_var))
+        file = file.path(out_folder, paste0(dep_var, "_", sem_var, suffix))
     )
     return(m)
 }
 
-run_sem_only_model <- function(dep_var, sem_var) {
+run_sem_only_model <- function(dep_var, sem_var, priors) {
     data <- tint_df |>
         rename(
             "dep_var" = dep_var,
@@ -148,10 +145,8 @@ run_sem_only_model <- function(dep_var, sem_var) {
         )
 
     if (dep_var %in% c("n400", "p600")) {
-        priors <- erp_priors
         family <- gaussian()
     } else if (dep_var == "rt") {
-        priors <- rt_priors
         family <- lognormal()
     }
 
@@ -172,14 +167,43 @@ sem_vars <- tint_df |>
     colnames()
 
 for (dep_var in dep_vars) {
+    if (dep_var %in% c("n400", "p600")) {
+        priors <- erp_priors
+    } else if (dep_var == "rt") {
+        priors <- rt_priors
+    }
     print(paste("Running baseline model with", dep_var))
-    run_baseline_model(dep_var)
+    run_baseline_model(dep_var, priors)
 
     for (sem_var in sem_vars) {
         print(paste("Running model with", sem_var))
-        run_sem_model(dep_var, sem_var)
+        run_sem_model(dep_var, sem_var, priors)
 
         print(paste("Running model with only", sem_var))
-        run_sem_only_model(dep_var, sem_var)
+        run_sem_only_model(dep_var, sem_var, priors)
+    }
+}
+
+# extra priors for Savage-Dickey BF
+prior_sem_sd <- list("rt" = c(.05), "n400" = c(1, 2))
+for (dep_var in dep_vars) {
+    print(paste("Running extra prior models for", dep_var))
+    for (sem_var in sem_vars) {
+        print(paste("Running model(s) with", sem_var))
+        for (prior_sd in prior_sem_sd[dep_var]) {
+            # define prior
+            prior_sem <- prior(normal(0, prior_sd), class = b, coef = s_sem)
+            if (dep_var == "rt") {
+                priors <- c(rt_priors, prior_sem)
+            } else if (dep_var %in% c("n400", "p600")) {
+                priors <- c(erp_priors, prior_sem)
+            }
+
+            # run model
+            run_sem_model(
+                dep_var, sem_var, priors,
+                suffix = paste0("_bsemprior", str_replace(as.character(prior_sd), "0.", ""))
+            )
+        }
     }
 }
