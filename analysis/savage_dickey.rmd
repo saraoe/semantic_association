@@ -1,0 +1,97 @@
+# Model comparison with the Savage-Dickey ratio
+
+```{r}
+library(tidytable)
+library(stringr)
+library(brms)
+library(polspline)
+
+options(mc.cores = parallel::detectCores())
+
+models_path <- file.path("analysis", "brms_models")
+```
+
+## calculate Savage-Dickey ratio of s_sem beta estimate
+```{r}
+rm(sd_df)
+
+dep_vars <- c("rt", "n400")
+for (dep_var in dep_vars) {
+  sem_model_names <- list.files(models_path,
+    full.names = FALSE,
+    pattern = paste0(dep_var, "_semantic_association_.*\\.rds$")
+  )
+
+  if (dep_var == "rt") {
+    prior_sd <- .1
+  } else if (dep_var %in% c("n400", "p600")) {
+    prior_sd <- 10
+  }
+
+  for (model_name in sem_model_names) {
+    sem_m <- readRDS(file.path(models_path, model_name))
+
+    # savage-dickey ratio
+    posterior_sem <- sem_m |>
+      as_draws_df() |>
+      pull(b_s_sem)
+    fit_posterior <- logspline(posterior_sem)
+    posterior <- dlogspline(0, fit_posterior) # Height of the posterior at 0
+    prior <- dnorm(0, mean = 0, sd = prior_sd) # Height of the prior at 0
+    BF01 <- posterior / prior
+
+
+    tmp_df <- data.frame(
+      "posterior" = posterior,
+      "prior" = prior,
+      "BF01" = BF01,
+      "dep_var" = dep_var,
+      "model_name" = model_name,
+      "implementation" = str_extract(model_name, paste0("(?<=_semantic_association_).*(?=\\.rds)"))
+    )
+
+    if (exists("sd_df")) {
+      sd_df <- rbind(tmp_df, sd_df)
+    } else {
+      sd_df <- tmp_df
+    }
+  }
+}
+```
+
+## plot
+```{r}
+library(ggplot2)
+source(file.path("src", "rename_implementations.r"))
+
+
+sd_df |>
+  mutate("implementation" = rename_implementations(implementation)) |>
+  mutate(
+    "implementation" = factor(implementation, levels = c(
+      "SE, All", "SE, Sentence(N=1)",
+      "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+      "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+      "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+    ))
+  ) |>
+  mutate(model_type = case_when(
+    str_detect(implementation, "SE") ~ "SE",
+    str_detect(implementation, "CWE") ~ "CWE",
+    str_detect(implementation, "WE") ~ "WE"
+  )) |>
+  mutate("model_type" = factor(model_type, levels = c("SE", "WE", "CWE"))) |>
+  ggplot(aes(x = implementation, color = model_type)) +
+  geom_point(aes(y = BF01), size = 2) +
+  geom_hline(aes(yintercept = 0), linetype = "dotted") +
+  facet_wrap(. ~ toupper(dep_var), ncol = 1, scale = "free_y") +
+  theme_minimal() +
+  scale_color_manual(values = c("firebrick", "steelblue", "slateblue")) +
+  labs(x = "", color = "Embeddings") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom"
+  )
+
+ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 7)
+```
