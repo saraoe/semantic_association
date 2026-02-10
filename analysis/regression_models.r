@@ -190,7 +190,7 @@ for (dep_var in dep_vars) {
     print(paste("Running extra prior models for", dep_var))
     for (sem_var in sem_vars) {
         print(paste("Running model(s) with", sem_var))
-        for (prior_sd in prior_sem_sd[dep_var]) {
+        for (prior_sd in prior_sem_sd[[dep_var]]) {
             # define prior
             prior_sem <- set_prior(sprintf("normal(0, %s)", prior_sd),
                 class = "b",
