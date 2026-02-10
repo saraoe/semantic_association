@@ -192,7 +192,10 @@ for (dep_var in dep_vars) {
         print(paste("Running model(s) with", sem_var))
         for (prior_sd in prior_sem_sd[dep_var]) {
             # define prior
-            prior_sem <- prior(normal(0, prior_sd), class = b, coef = s_sem)
+            prior_sem <- set_prior(sprintf("normal(0, %s)", prior_sd),
+                class = "b",
+                coef = "s_sem"
+            )
             if (dep_var == "rt") {
                 priors <- c(rt_priors, prior_sem)
             } else if (dep_var %in% c("n400", "p600")) {
