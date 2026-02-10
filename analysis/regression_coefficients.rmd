@@ -106,7 +106,7 @@ diagnostics_df |>
 ```{r}
 rm(fixef_df)
 dep_var <- "rt"
-model_formula <- "semantic_association"
+model_formula <- "only_semantic_association"
 
 model_names <- list.files(models_path,
     full.names = FALSE,
