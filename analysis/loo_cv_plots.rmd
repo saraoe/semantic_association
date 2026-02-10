@@ -1,4 +1,4 @@
-# plotting model comparsion
+# plotting PSIS-LOO-CV
 
 ```{r}
 library(tidytable)
@@ -9,7 +9,7 @@ source(file.path("src", "rename_implementations.r"))
 ```
 
 ```{r}
-comparison_df <- read.csv(file.path("results", "model_comparison.csv")) |>
+comparison_df <- read.csv(file.path("results", "loo_cv.csv")) |>
     mutate("implementation" = rename_implementations(implementation)) |>
     select(-X)
 ```
@@ -54,5 +54,5 @@ comparison_df |>
         legend.position = "bottom"
     )
 
-ggsave(file.path("figs", "model_comparision.png"), width = 7, height = 7)
+ggsave(file.path("figs", "loo_elpd_diff.png"), width = 7, height = 7)
 ```

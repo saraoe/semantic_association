@@ -1,4 +1,4 @@
-# Model Comparision
+# Model Comparision using PSIS-LOO-CV
 
 library(tidytable)
 library(tibble)
@@ -54,4 +54,4 @@ for (dep_var in dep_vars) {
     }
 }
 
-write.csv(out_df, file.path("results", "model_comparison.csv"))
+write.csv(out_df, file.path("results", "loo_cv.csv"))
