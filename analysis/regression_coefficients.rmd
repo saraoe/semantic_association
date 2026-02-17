@@ -29,6 +29,7 @@ summary(m)
 ```{r}
 plot(m)
 plot(m, variable = "^b_", regex = TRUE)
+plot(m, variable = "^sd_", regex = TRUE)
 ```
 
 ```{r}
@@ -99,8 +100,8 @@ diagnostics_df |>
     )
 
 diagnostics_df |>
-    filter(min(min_ess_bulk) == min_ess_bulk) |>
-    # filter(max(max_rhat) == max_rhat) |>
+    # filter(min(min_ess_bulk) == min_ess_bulk) |>
+    filter(max(max_rhat) == max_rhat) |>
     select(model)
 ```
 

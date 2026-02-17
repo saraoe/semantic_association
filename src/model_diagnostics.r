@@ -11,12 +11,21 @@ number_divergent_transitions <- function(fit) {
 }
 
 # max r_hat and min ESS (Bulk and tail)
+get_diagnostic_from_summary <- function(summary, diag) {
+    c(
+        summary$fixed[, diag],
+        summary$random$document_id[, diag],
+        summary$random$participant_number[, diag],
+        summary$random$word[, diag]
+    )
+}
+
 diagnostics_rhat_ess <- function(fit) {
     # Extract diagnostics from the summary
     model_summary <- summary(fit)
-    rhats <- model_summary$fixed[, "Rhat"] # for fixed effects
-    ess_bulk <- model_summary$fixed[, "Bulk_ESS"]
-    ess_tail <- model_summary$fixed[, "Tail_ESS"]
+    rhats <- get_diagnostic_from_summary(model_summary, "Rhat")
+    ess_bulk <- get_diagnostic_from_summary(model_summary, "Bulk_ESS")
+    ess_tail <- get_diagnostic_from_summary(model_summary, "Tail_ESS")
 
     return(data.frame(
         max_rhat = max(rhats),
