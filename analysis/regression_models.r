@@ -130,6 +130,8 @@ run_sem_model <- function(dep_var, sem_var, priors, suffix = "") {
         prior = priors,
         data = data,
         chains = 4,
+        threads = threading(2),
+        iter = 3000,
         control = list(adapt_delta = 0.9999),
         seed = 246,
         file = file.path(out_folder, paste0(dep_var, "_", sem_var, suffix))
@@ -212,36 +214,36 @@ for (dep_var in dep_vars) {
 }
 
 # run model with extra iterations!
-if ("rt" %in% dep_vars) {
-    dep_var <- "rt"
-    sem_var <- "semantic_association_WordEmbedding"
-    prior_sd <- 0.05
-    suffix <- "_bsemprior05_moreiterations"
+# if ("rt" %in% dep_vars) {
+#     dep_var <- "rt"
+#     sem_var <- "semantic_association_WordEmbedding"
+#     prior_sd <- 0.05
+#     suffix <- "_bsemprior05_moreiterations"
 
-    # define prior
-    prior_sem <- set_prior(sprintf("normal(0, %s)", prior_sd),
-        class = "b",
-        coef = "s_sem"
-    )
-    priors <- c(rt_priors, prior_sem)
-    family <- lognormal()
+#     # define prior
+#     prior_sem <- set_prior(sprintf("normal(0, %s)", prior_sd),
+#         class = "b",
+#         coef = "s_sem"
+#     )
+#     priors <- c(rt_priors, prior_sem)
+#     family <- lognormal()
 
-    # run model
-    data <- tint_df |>
-        rename(
-            "dep_var" = dep_var,
-            "s_sem" = sem_var
-        )
+#     # run model
+#     data <- tint_df |>
+#         rename(
+#             "dep_var" = dep_var,
+#             "s_sem" = sem_var
+#         )
 
-    m <- brm(sem_formula,
-        family = family,
-        prior = priors,
-        data = data,
-        chains = 4,
-        threads = threading(2),
-        iter = 3000,
-        control = list(adapt_delta = 0.9999),
-        seed = 246,
-        file = file.path(out_folder, paste0(dep_var, "_", sem_var, suffix))
-    )
-}
+#     m <- brm(sem_formula,
+#         family = family,
+#         prior = priors,
+#         data = data,
+#         chains = 4,
+#         threads = threading(2),
+#         iter = 3000,
+#         control = list(adapt_delta = 0.9999),
+#         seed = 246,
+#         file = file.path(out_folder, paste0(dep_var, "_", sem_var, suffix))
+#     )
+# }
