@@ -248,7 +248,8 @@ fixef_all |>
     geom_point(aes(x = Estimate)) +
     geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
-    scale_color_manual(values = c("firebrick", "steelblue", "slateblue")) +
+    scale_color_manual(values = c("firebrick", "steelblue2", "steelblue4")) +
+    # scale_color_manual(values = c("steelblue", "firebrick2", "firebrick4")) +
     labs(
         x = TeX("$\\beta_2$"), y = "",
         color = "Embeddings"
@@ -260,7 +261,7 @@ fixef_all |>
 ggsave(
     file.path(
         "figs",
-        "regression_coefficents_rt_n400_semantic_association.png"
+        "regression_coefficents_rt_n400_semantic_association.pdf"
     ),
     width = 5, height = 5
 )
