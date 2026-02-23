@@ -90,7 +90,7 @@ for (dep_var in dep_vars) {
 
 ```{r}
 diagnostics_df |>
-    group_by(dep_var) |>
+    # group_by(dep_var) |>
     # filter(!str_detect(model, "bsemprior")) |>
     summarize(
         "max_rhat" = max(max_rhat),
@@ -100,9 +100,13 @@ diagnostics_df |>
     )
 
 diagnostics_df |>
-    # filter(min(min_ess_bulk) == min_ess_bulk) |>
-    filter(max(max_rhat) == max_rhat) |>
+    filter(min(min_ess_bulk) == min_ess_bulk) |>
+    # filter(max(max_rhat) == max_rhat) |>
     select(model)
+
+diagnostics_df |>
+    filter(max_rhat >= 1.035) |>
+    select(model, max_rhat)
 ```
 
 ## Plot effect of all models
