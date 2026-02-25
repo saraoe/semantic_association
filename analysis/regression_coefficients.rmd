@@ -8,17 +8,18 @@ library(latex2exp)
 library(brms)
 
 source(file.path("src", "rename_implementations.r"))
+source(file.path("src", "model_diagnostics.r"))
 
 models_path <- file.path("analysis", "brms_models")
 ```
 
 ```{r}
-dep_var <- "p600"
+dep_var <- "rt"
 model_names <- list.files(models_path,
     full.names = FALSE,
     pattern = paste0(dep_var, "_.*\\.rds$")
 )
-model_name <- model_names[5]
+model_name <- model_names[23]
 
 print(model_name)
 m <- readRDS(file.path("analysis", "brms_models", model_name))
@@ -28,6 +29,7 @@ summary(m)
 ```{r}
 plot(m)
 plot(m, variable = "^b_", regex = TRUE)
+plot(m, variable = "^sd_", regex = TRUE)
 ```
 
 ```{r}
@@ -36,52 +38,117 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
     theme(aspect.ratio = .6)
 ```
 
-## Plot effect of all models
+## Summarize diagnostics across all models
 ```{r}
-rm(fixef_df)
-dep_var <- "n400"
-model_formula <- "only_semantic_association"
+rm(diagnostics_df)
 
-model_names <- list.files(models_path,
-    full.names = FALSE,
-    pattern = paste0(dep_var, "_", model_formula, "_.*\\.rds$")
-)
+dep_vars <- c("rt", "n400")
+for (dep_var in dep_vars) {
+    print(dep_var)
+    fit <- readRDS(
+        file.path(models_path, paste0(dep_var, "_baseline.rds"))
+    )
+    if (number_divergent_transitions(fit) > 0) {
+        print("Divergent transistions! Number:")
+        print(paste(
+            "Divergent transistions! Number:",
+            number_divergent_transitions(fit)
+        ))
+    }
+    diag <- diagnostics_rhat_ess(fit) |>
+        mutate("dep_var" = dep_var, "model" = "baseline")
 
-for (model_name in model_names) {
-    print(model_name)
-    m <- readRDS(file.path(models_path, model_name))
-
-    if (str_detect(model_name, "SentenceEmbeddingModelSingleWord")) {
-        model_name <- str_replace(
-            model_name,
-            "SentenceEmbeddingModelSingleWord",
-            "SentenceEmbeddingSingleWord"
-        )
+    if (exists("diagnostics_df")) {
+        diagnostics_df <- rbind(diagnostics_df, diag)
+    } else {
+        diagnostics_df <- diag
     }
 
-    fe_df <- fixef(m) |>
-        as.data.frame()
-    fe_df$coefficient <- rownames(fe_df)
-    fe_df <- fe_df |>
-        filter(coefficient == "s_sem") |>
-        mutate(
-            "implementation" = str_replace(
-                model_name,
-                paste0(dep_var, "_", model_formula, "_"), ""
-            )
-        ) |>
-        mutate(
-            "implementation" = str_replace(
-                implementation, ".rds", ""
-            )
+    model_names <- list.files(models_path,
+        full.names = FALSE,
+        pattern = paste0(dep_var, "_semantic_association_.*\\.rds$")
+    )
+    for (model in model_names) {
+        print(model)
+        fit <- readRDS(
+            file.path(models_path, model)
         )
+        if (number_divergent_transitions(fit) > 0) {
+            print("Divergent transistions! Number:")
+            print(paste(
+                "Divergent transistions! Number:",
+                number_divergent_transitions(fit)
+            ))
+        }
+        diag <- diagnostics_rhat_ess(fit) |>
+            mutate("dep_var" = dep_var, "model" = model)
 
-    if (exists("fixef_df")) {
-        fixef_df <- rbind(fixef_df, fe_df)
-    } else {
-        fixef_df <- fe_df
+        diagnostics_df <- rbind(diagnostics_df, diag)
     }
 }
+```
+
+```{r}
+diagnostics_df |>
+    # group_by(dep_var) |>
+    # filter(!str_detect(model, "bsemprior")) |>
+    summarize(
+        "max_rhat" = max(max_rhat),
+        "min_ess_bulk" = min(min_ess_bulk),
+        "min_ess_tail" = min(min_ess_tail),
+        "avg_ess" = mean(avg_ess)
+    )
+
+diagnostics_df |>
+    filter(min(min_ess_bulk) == min_ess_bulk) |>
+    # filter(max(max_rhat) == max_rhat) |>
+    select(model)
+
+diagnostics_df |>
+    filter(max_rhat >= 1.035) |>
+    select(model, max_rhat)
+```
+
+## Plot effect of all models
+```{r}
+get_fixef_models <- function(dep_var, model_formula) {
+    model_names <- list.files(models_path,
+        full.names = FALSE,
+        pattern = paste0(dep_var, "_", model_formula, "_.*\\.rds$")
+    )
+
+    for (model_name in model_names) {
+        if (str_detect(model_name, "bsemprior")) {
+            next
+        }
+
+        print(model_name)
+        m <- readRDS(file.path(models_path, model_name))
+
+        fe_df <- fixef(m) |>
+            as.data.frame()
+        fe_df$coefficient <- rownames(fe_df)
+        fe_df <- fe_df |>
+            mutate(
+                "implementation" = str_extract(model_name, paste0("(?<=_semantic_association_).*(?=\\.rds)"))
+            )
+
+        if (exists("fixef_df")) {
+            fixef_df <- rbind(fixef_df, fe_df)
+        } else {
+            fixef_df <- fe_df
+        }
+    }
+    return(fixef_df)
+}
+```
+
+```{r}
+rm(fixef_df)
+dep_var <- "rt"
+model_formula <- "semantic_association"
+
+fixef_df <- get_fixef_models(dep_var, model_formula)
 ```
 
 ```{r}
@@ -94,11 +161,13 @@ if (model_formula == "semantic_association") {
 }
 
 fixef_df |>
+    filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "WordEmbedding100") ~ "WordEmbedding100",
         str_detect(implementation, "SentenceEmbeddingSingleWord") ~ "SentenceEmbeddingModelSingleWord",
         str_detect(implementation, "SentenceEmbedding") ~ "SE",
         str_detect(implementation, "WordEmbeddingContent") ~ "CWE",
+        str_detect(implementation, "WordEmbeddingWindowed") ~ "CWE",
         str_detect(implementation, "WordEmbedding") ~ "WE"
     )) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
@@ -130,5 +199,70 @@ fixef_df |>
 ggsave(
     file.path("figs", paste0("coefficients_", dep_var, "_", model_formula, ".png")),
     height = 3, width = 5
+)
+```
+
+Plot for paper
+```{r}
+rm(fixef_all)
+for (dep_var in c("rt", "n400")) {
+    dep_var_name <- case_when(
+        dep_var == "rt" ~ "Reading Times",
+        dep_var == "n400" ~ "N400"
+    )
+    fixef_dep_var <- get_fixef_models(
+        dep_var,
+        model_formula = "semantic_association"
+    ) |>
+        mutate("dep_var" = dep_var_name)
+
+    if (exists("fixef_all")) {
+        fixef_all <- rbind(fixef_all, fixef_dep_var)
+    } else {
+        fixef_all <- fixef_dep_var
+    }
+}
+```
+
+```{r}
+fixef_all |>
+    filter(coefficient == "s_sem") |>
+    mutate(implementation = rename_implementations(implementation)) |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        implementation = factor(implementation,
+            levels = c(
+                "SE, All", "SE, Sentence(N=1)",
+                "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+                "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+                "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+            )
+        )
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(values = c("firebrick", "steelblue2", "steelblue4")) +
+    # scale_color_manual(values = c("steelblue", "firebrick2", "firebrick4")) +
+    labs(
+        x = TeX("$\\beta_2$"), y = "",
+        color = "Embeddings"
+    ) +
+    facet_wrap(. ~ dep_var, ncol = 1, scales = "free_x") +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path(
+        "figs",
+        "regression_coefficents_rt_n400_semantic_association.pdf"
+    ),
+    width = 5, height = 5
 )
 ```

@@ -4,6 +4,8 @@
 library(tidytable)
 library(stringr)
 library(ggplot2)
+library(patchwork)
+library(ggtext)
 
 source(file.path("src", "rename_implementations.r"))
 ```
@@ -153,7 +155,7 @@ df |>
 
 Heatmap
 ```{r}
-save_fig <- TRUE
+save_fig <- FALSE
 
 p <- df_long |>
     # mutate(value = ifelse(content_word, value, NA)) |>
@@ -236,4 +238,128 @@ ggplot(df_long, aes(x = number_word, y = value)) +
     ) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Heat map of sentence pairs for paper
+```{r}
+doc_id_a <- 1
+sentences_a <- c(5:6)
+doc_id_b <- 6
+sentences_b <- c(10:11)
+
+df <- sem_df |>
+    filter(
+        (document_id == doc_id_a & sentence_number %in% sentences_a) |
+            (document_id == doc_id_b & sentence_number %in% sentences_b)
+    ) |>
+    mutate(
+        "sentences_id" = case_when(
+            document_id == doc_id_a ~ "A",
+            document_id == doc_id_b ~ "B"
+        )
+    )
+
+df_long <- df |>
+    mutate(across(starts_with("semantic_association"), scale)) |>
+    pivot_longer(
+        cols = c(starts_with("semantic_association"), s_lp, s_freq),
+        names_to = "implementation",
+        values_to = "value"
+    ) |>
+    mutate(
+        "implementation" = rename_implementations(implementation)
+    ) |>
+    mutate(implementation = case_when(
+        implementation == "s_freq" ~ "Zipf Frequency",
+        implementation == "s_lp" ~ "Log Probability",
+        .default = implementation
+    )) |>
+    mutate(
+        "implementation" = factor(
+            implementation,
+            levels = c(
+                "Log Probability", "Zipf Frequency",
+                "SE, All", "SE, Sentence(N=1)",
+                "WE, All", "WE, Sentence(N=1)", "WE, Weighted",
+                "CWE, All", "CWE, Sentence(N=1)", "CWE, Weighted",
+                "CWE, Windowed(N=1)", "CWE, Windowed(N=2)"
+            )
+        )
+    )
+```
+
+```{r}
+save_fig <- TRUE
+
+sentences_a_en <- "English: He turned around and saw that, in the place of the **dragon**, a man was standing, bowing deeply to him with great<br>ceremony. It was a man of strange appearance, upon whose read hair a crown had been placed in the shape of a **dragon**."
+sentences_b_en <- "English: People began to domesticate animals and plants for food, and cities began to form. **Nomadism** generally exists in symbiosis with such<br>settled cultures, exchanging animal products such as meat, hides, wool, and cheese for artisanal goods that are not produced by the **nomadic** herders."
+
+which(levels(factor(df$word)) == "draak,")
+
+p1 <- df_long |>
+    filter(sentences_id == "A") |>
+    ggplot(aes(x = number_word, y = implementation, fill = value)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = df$number_word,
+        labels = df$word,
+    ) +
+    labs(
+        x = "", y = "", fill = "",
+        title = "A",
+        caption = sentences_a_en
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank(),
+        plot.caption = element_markdown(hjust = 0.5),
+        plot.caption.position = "plot"
+    )
+
+p2 <- df_long |>
+    filter(sentences_id == "B") |>
+    ggplot(aes(x = number_word, y = implementation, fill = value)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = df$number_word,
+        labels = df$word,
+    ) +
+    labs(
+        x = "", y = "", fill = "",
+        title = "B",
+        caption = sentences_b_en
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank(),
+        plot.caption = element_markdown(hjust = 0.5),
+        plot.caption.position = "plot"
+    )
+
+if (save_fig) {
+    p1 / p2 + plot_layout(guides = "collect")
+    ggsave(
+        file.path(
+            "figs",
+            paste0("example_sentences.png")
+        ),
+        height = 6.5, width = 9
+    )
+} else {
+    (p1 + theme(aspect.ratio = .5)) / (p2 + theme(aspect.ratio = .5))
+}
 ```
