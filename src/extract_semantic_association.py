@@ -120,7 +120,8 @@ if __name__ == "__main__":
     ]
     result_df = pd.DataFrame(columns=id_cols)
 
-    for config in stream_models("models_config.toml"):
+    config_path = Path("model_configs")
+    for config in stream_models(config_path / "models_config.toml"):
         print(f"Extracting Semantic association with model: {config}")
         tmp_df = extract_semantic_association(
             df=df,
