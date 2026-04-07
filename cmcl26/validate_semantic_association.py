@@ -4,9 +4,14 @@ The code is imported from the error-analysis github repo
 """
 
 from pathlib import Path
+import sys
 import tomllib
 import pandas as pd
 import matplotlib.pyplot as plt
+
+if __name__ == "__main__":
+    project_root = Path(__file__).parent.parent
+    sys.path.insert(0, str(project_root))
 
 from src.embedding_model import EmbeddingModel
 from src.word_embedding_models import (
@@ -21,7 +26,7 @@ from src.sentence_embedding_models import (
     SentenceEmbeddingModelSingleWord,
     SentenceEmbeddingModelSingleWordContentWord,
 )
-from cmcl26.src.append_to_csv import append_df_to_csv
+from src.append_to_csv import append_df_to_csv
 
 
 MODEL_REGISTRY = {
