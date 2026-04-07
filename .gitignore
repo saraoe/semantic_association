@@ -1,6 +1,8 @@
 *.pyc
 openai_api_key.txt
 models/*
-analysis/brms_models/*
-_figs/*
 slurm/*
+test*
+
+cmcl26/analysis/brms_models/*
+cmcl26/_figs/*

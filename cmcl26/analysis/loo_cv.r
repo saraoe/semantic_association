@@ -6,6 +6,8 @@ library(stringr)
 library(brms)
 library(loo)
 
+setwd("cmcl26")
+
 options(mc.cores = parallel::detectCores())
 
 dep_vars <- c("rt", "n400")

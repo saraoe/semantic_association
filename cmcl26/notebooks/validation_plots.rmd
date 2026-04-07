@@ -4,6 +4,8 @@ Plotting and exploration of semantic association values of target words from Fed
 ```{r}
 library(tidytable)
 library(ggplot2)
+
+setwd("cmcl26")
 ```
 
 ```{r}

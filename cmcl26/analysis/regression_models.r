@@ -5,6 +5,8 @@ library(brms)
 library(stringr)
 library(argparse)
 
+setwd("cmcl26")
+
 options(mc.cores = parallel::detectCores())
 options(brms.backend = "cmdstan")
 
@@ -213,7 +215,7 @@ for (dep_var in dep_vars) {
 
 # extra priors for Savage-Dickey BF
 prior_sem_sd <- list("rt" = c(.05, .5), "n400" = c(1, 2))
-more_iter<- c(
+more_iter <- c(
     "rt_semantic_association_WordEmbedding_bsemprior05",
     "rt_semantic_association_WordEmbedding_bsemprior5",
     "rt_semantic_association_WordEmbeddingContentWord_nSentences1_bsemprior05",

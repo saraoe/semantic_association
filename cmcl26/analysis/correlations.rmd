@@ -6,6 +6,8 @@ library(stringr)
 library(ggplot2)
 library(reshape2)
 
+setwd("cmcl26")
+
 source(file.path("src", "rename_implementations.r"))
 ```
 

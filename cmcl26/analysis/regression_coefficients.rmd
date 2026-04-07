@@ -7,6 +7,8 @@ library(ggplot2)
 library(latex2exp)
 library(brms)
 
+setwd("cmcl26")
+
 source(file.path("src", "rename_implementations.r"))
 source(file.path("src", "model_diagnostics.r"))
 

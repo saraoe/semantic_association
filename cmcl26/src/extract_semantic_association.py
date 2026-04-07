@@ -105,11 +105,11 @@ def extract_semantic_association(
 
 
 if __name__ == "__main__":
-    stim_path = Path("data", "tint_stim.csv")
+    stim_path = Path("cmcl26", "data", "tint_stim.csv")
     df = pd.read_csv(stim_path)
     df = df[df["document_id"] < 10]  # remove practice texts
 
-    results_path = Path("results", "tint_semantic_association.csv")
+    results_path = Path("cmcl26", "results", "tint_semantic_association.csv")
     id_cols = [
         "document_id",
         "paragraph_n",
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     ]
     result_df = pd.DataFrame(columns=id_cols)
 
-    config_path = Path("model_configs")
+    config_path = Path("cmcl26", "model_configs")
     for config in stream_models(config_path / "models_config.toml"):
         print(f"Extracting Semantic association with model: {config}")
         tmp_df = extract_semantic_association(

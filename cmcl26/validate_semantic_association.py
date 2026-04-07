@@ -21,7 +21,7 @@ from src.sentence_embedding_models import (
     SentenceEmbeddingModelSingleWord,
     SentenceEmbeddingModelSingleWordContentWord,
 )
-from src.append_to_csv import append_df_to_csv
+from cmcl26.src.append_to_csv import append_df_to_csv
 
 
 MODEL_REGISTRY = {
@@ -157,8 +157,8 @@ def plot_validation(df: pd.DataFrame, title: str, save_path: Path = None):
 
 
 if __name__ == "__main__":
-    results_path = Path("results", "federmeier_kutas_validation.csv")
-    config_path = Path("model_configs")
+    results_path = Path("cmcl26", "results", "federmeier_kutas_validation.csv")
+    config_path = Path("cmcl26", "model_configs")
     # remove file if exists
     if results_path.exists():
         results_path.unlink()

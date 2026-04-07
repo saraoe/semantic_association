@@ -7,6 +7,8 @@ library(brms)
 library(polspline)
 library(ggplot2)
 
+setwd("cmcl26")
+
 source(file.path("src", "rename_implementations.r"))
 
 options(mc.cores = parallel::detectCores())

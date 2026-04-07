@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 import spacy
 
-data_path = Path("data")
+data_path = Path("cmcl26", "data")
 tint_df = pd.read_csv(data_path / "tint.csv")
 tint_df = tint_df.drop(columns=["pos", "content_word"])
 tint_df_len = len(tint_df)

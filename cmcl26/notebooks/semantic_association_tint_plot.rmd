@@ -7,6 +7,8 @@ library(ggplot2)
 library(patchwork)
 library(ggtext)
 
+setwd("cmcl26")
+
 source(file.path("src", "rename_implementations.r"))
 ```
 

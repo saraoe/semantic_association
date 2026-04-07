@@ -5,6 +5,8 @@ library(tidytable)
 library(stringr)
 library(brms)
 
+setwd("cmcl26")
+
 source(file.path("src", "rename_implementations.r"))
 ```
 

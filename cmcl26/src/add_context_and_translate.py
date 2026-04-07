@@ -12,7 +12,7 @@ with open("openai_api_key.txt") as f:
 
 client = OpenAI(api_key=key)
 
-data_path = Path("data")
+data_path = Path("cmcl26", "data")
 df = pd.read_excel(data_path / "federmeier_kutas_1999.xlsx")
 
 
