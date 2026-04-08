@@ -6,3 +6,5 @@ test*
 
 cmcl26/analysis/brms_models/*
 cmcl26/_figs/*
+
+experiment1/data/Kuperberg/*
