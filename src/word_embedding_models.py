@@ -111,7 +111,7 @@ class WordEmbeddingModelContentWord(EmbeddingModel):
 
             word: word that the semantic association will be calculated for.
             context: context the word should be compared to.
-            similarity_meassure: what measure of similiarity is used.
+            similarity_measure: what measure of similarity is used.
         """
         # make lower, and remove punctuation
         word = word.lower()
@@ -189,7 +189,7 @@ class WordEmbeddingModelWindowed(EmbeddingModel):
 
             word: word that the semantic association will be calculated for.
             context: context the word should be compared to.
-            similarity_meassure: what measure of similiarity is used.
+            similarity_measure: what measure of similarity is used.
         """
         # make lower, and remove punctuation
         word = word.lower()
@@ -260,7 +260,7 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
         Args:
             word: word embedding that the semantic association will be calculated for
             context: context embedding the word should be compared to
-            similarity_meassure: what measure of similiarity is used
+            similarity_measure: what measure of similarity is used
         """
         word_emb = self.get_embedding(word)
         # get embedding returns a list
@@ -353,7 +353,7 @@ class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
         Args:
             word: word embedding that the semantic association will be calculated for
             context: context embedding the word should be compared to
-            similarity_meassure: what measure of similiarity is used
+            similarity_measure: what measure of similarity is used
         """
         word_emb = self.get_embedding(word)
         # get embedding returns a list

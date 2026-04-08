@@ -48,7 +48,7 @@ class EmbeddingModel(ABC):
 
             word: word that the semantic association will be calculated for.
             context: context the word should be compared to.
-            similarity_meassure: what measure of similiarity is used.
+            similarity_measure: what measure of similarity is used.
         """
         word_emb = self.get_embedding(word)
         context_emb = self.get_embedding(context)
