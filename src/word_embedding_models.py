@@ -109,8 +109,8 @@ class WordEmbeddingModelContentWord(EmbeddingModel):
         Calculates semantic association between a word and a context
         Args:
 
-            word_emb: word that the semantic association will be calculated for.
-            context_emb: context the word should be compared to.
+            word: word that the semantic association will be calculated for.
+            context: context the word should be compared to.
             similarity_meassure: what measure of similiarity is used.
         """
         # make lower, and remove punctuation
@@ -187,8 +187,8 @@ class WordEmbeddingModelWindowed(EmbeddingModel):
         Calculates semantic association between a word and a context
         Args:
 
-            word_emb: word that the semantic association will be calculated for.
-            context_emb: context the word should be compared to.
+            word: word that the semantic association will be calculated for.
+            context: context the word should be compared to.
             similarity_meassure: what measure of similiarity is used.
         """
         # make lower, and remove punctuation
@@ -258,8 +258,8 @@ class WordEmbeddingModelWeighted(EmbeddingModel):
         """
         Calculates semantic association between a word and a context
         Args:
-            word_emb: word embedding that the semantic association will be calculated for
-            context_emb: context embedding the word should be compared to
+            word: word embedding that the semantic association will be calculated for
+            context: context embedding the word should be compared to
             similarity_meassure: what measure of similiarity is used
         """
         word_emb = self.get_embedding(word)
@@ -351,8 +351,8 @@ class WordEmbeddingModelContentWordWeighted(EmbeddingModel):
         """
         Calculates semantic association between a word and a context
         Args:
-            word_emb: word embedding that the semantic association will be calculated for
-            context_emb: context embedding the word should be compared to
+            word: word embedding that the semantic association will be calculated for
+            context: context embedding the word should be compared to
             similarity_meassure: what measure of similiarity is used
         """
         word_emb = self.get_embedding(word)
