@@ -9,3 +9,7 @@ The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
 [1] Kuperberg GR, Sitnikova T, Caplan D, Holcomb PJ. Electrophysiological distinctions in processing conceptual relationships within simple sentences. Cogn Brain Res 2003; 217:117-29.
 
 [2] Kuperberg GR, Kreher DA, Sitnikova T, Caplan D, Holcomb PJ. The role of animacy and thematic relationships in processing active English sentences: Evidence from event-related potentials. Brain and Language 2007; 100: 223-238. 
+
+## SUBTLEX-US
+
+Downloaded from https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexus.
