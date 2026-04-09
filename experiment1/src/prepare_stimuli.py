@@ -7,7 +7,6 @@ Extract semantic association from linguistic data from Kuperberg et al. (2003)
 """
 
 from pathlib import Path
-import sys
 import pandas as pd
 import spacy
 
