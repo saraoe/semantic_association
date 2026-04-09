@@ -5,11 +5,11 @@ The folder ``Kuperberg`` contains linguistic stimuli from the two papers [1] and
 
 The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
 
+## SUBTLEX-US
+
+SUBTLEX-US was downloaded from https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexus on 08-04-2026. The downloaded file is the one under "Zipf values added to the SUBTLEX-US frequencies". When downloaded, the file is named "SUBTLEX-US frequency list with PoS and Zipf information.xlsx", but was manually renamed to "SUBTLEX-US.xlsx".
+
 ## References
 [1] Kuperberg GR, Sitnikova T, Caplan D, Holcomb PJ. Electrophysiological distinctions in processing conceptual relationships within simple sentences. Cogn Brain Res 2003; 217:117-29.
 
 [2] Kuperberg GR, Kreher DA, Sitnikova T, Caplan D, Holcomb PJ. The role of animacy and thematic relationships in processing active English sentences: Evidence from event-related potentials. Brain and Language 2007; 100: 223-238. 
-
-## SUBTLEX-US
-
-Downloaded from https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexus.
