@@ -53,13 +53,14 @@ stim |>
 Log-probability
 ```{r}
 # get lp
-causal_preload("gpt2")
+# causal_preload("gpt2")
+causal_preload("EleutherAI/pythia-70m-deduped")
 
 stim <- stim |>
-    mutate(lp = causal_targets_pred(
+    mutate("lp_pythia" = causal_targets_pred(
         contexts = context,
         targets = target,
-        model = "gpt2",
+        model = "EleutherAI/pythia-70m-deduped",
         batch_size = 10
     ))
 ```
@@ -67,14 +68,14 @@ stim <- stim |>
 ```{r}
 stim |>
     ggplot() +
-    geom_density(aes(x = lp), fill = "aliceblue", alpha = .5) +
+    geom_density(aes(x = lp_pythia), fill = "aliceblue", alpha = .5) +
     labs(title = "lp") +
     theme_minimal()
 
 stim |>
     mutate(cond = as.factor(cond)) |>
     ggplot() +
-    geom_density(aes(x = lp, fill = cond, group = cond), alpha = .5) +
+    geom_density(aes(x = lp_pythia, fill = cond, group = cond), alpha = .5) +
     labs(title = "lp") +
     theme_minimal()
 ```
@@ -83,8 +84,8 @@ stim |>
 stim |>
     group_by(cond) |>
     summarize(
-        mean_lp = mean(lp),
-        sd_lp = sd(lp)
+        mean_lp = mean(lp_pythia),
+        sd_lp = sd(lp_pythia)
     ) |>
     ggplot(aes(x = cond)) +
     geom_point(aes(y = mean_lp)) +
@@ -97,11 +98,15 @@ stim |>
     ) +
     theme_minimal()
 
-ggsave("figs/lp_kuperberg.png")
+ggsave("figs/lp_kuperberg_pythia.png")
 ```
 
 ```{r}
 stim |>
-    select(context, target, lp, cond) |>
+    select(context, target, lp, lp_pythia, cond) |>
     print(n = 8)
+```
+
+```{r}
+cor.test(stim$lp, stim$lp_pythia)
 ```
