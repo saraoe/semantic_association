@@ -25,6 +25,16 @@ stim <- read_excel(file.path("data", "Kuperberg", "sentences.xlsx")) |>
 ```
 
 ## Explore stimuli
+```{r}
+stim |>
+    group_by(scenario) |>
+    mutate(
+        "n_unique_sentences" = length(unique(sentences))
+    ) |>
+    filter(n_unique_sentences != 4) |>
+    select(sentences)
+```
+
 Word length
 ```{r}
 stim |>

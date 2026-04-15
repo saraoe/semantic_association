@@ -13,7 +13,10 @@ setwd("experiment1")
 ## Read data
 ```{r}
 sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
-    mutate("cond" = as.factor(cond))
+    mutate("cond" = as.factor(cond)) |>
+    filter(!scenario %in% c(37, 38, 84)) |> # scenarios with duplicate sentences
+    filter(!scenario == 152) |> # non-sensible scenario
+    filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
 ```
 
 ## Kuperberg
