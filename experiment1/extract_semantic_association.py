@@ -18,10 +18,25 @@ from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelCont
 from src.sentence_embedding_models import SentenceEmbeddingModel
 from src.append_to_csv import append_df_to_csv
 
+MODEL_REGISTRY = {
+    "SentenceEmbedding": SentenceEmbeddingModel,
+    "WordEmbedding": WordEmbeddingModel,
+    "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
+}
 
-def extract_semantic_association(
-    model: EmbeddingModel, df: pd.DataFrame, model_name: str = ""
-):
+
+def stream_models(config):
+    for model_config in config:
+        model_type = model_config.pop("model_type")
+        implementation = model_config.pop("implementation")
+
+        model_class = MODEL_REGISTRY[model_type]
+        model = model_class(**model_config)
+
+        yield (implementation, model)
+
+
+def extract_semantic_association(model: EmbeddingModel, df: pd.DataFrame):
     """
     Extracts semantic association for targets in df using the embedding model
 
@@ -34,7 +49,7 @@ def extract_semantic_association(
 
     df = df[df["target"].notna()]
 
-    df[f"semantic_association_{model_name}"] = df.apply(
+    df["semantic_association"] = df.apply(
         lambda row: model.get_semantic_association(
             word=row["target"], context=row["context"]
         ),
@@ -44,37 +59,36 @@ def extract_semantic_association(
 
 
 def plot_semantic_association(
-    df: pd.DataFrame, model_names: list, title: str = "", save_path: Path = None
+    df: pd.DataFrame, title: str = "", save_path: Path = None
 ):
     plt.figure(figsize=(7, 5))
     colors = ["blue", "purple", "red", "orange"]
 
+    # Dodge offset: spread conditions evenly around 0
     conds = sorted(df["cond"].unique())
     n_conds = len(conds)
-
-    # Dodge offset: spread conditions evenly around 0
+    implementations = df["implementation"].unique()
     dodge_range = 0.3
     offsets = np.linspace(-dodge_range / 2, dodge_range / 2, n_conds)
     dodge = {cond: offset for cond, offset in zip(conds, offsets)}
-    x_positions = {model: i for i, model in enumerate(model_names)}
+    x_positions = {model: i for i, model in enumerate(implementations)}
 
-    for model_name in model_names:
-        for cond, group in df.groupby("cond"):
-            x = x_positions[model_name] + dodge[cond]
-            sem_mean = group[f"semantic_association_{model_name}"].mean()
-            sem_std = group[f"semantic_association_{model_name}"].std()
-            color = colors[int(cond) - 1]
+    for (implementation, cond), group in df.groupby(["implementation", "cond"]):
+        x = x_positions[implementation] + dodge[cond]
+        sem_mean = group["semantic_association"].mean()
+        sem_std = group["semantic_association"].std()
+        color = colors[int(cond) - 1]
 
-            # standard deviation
-            plt.errorbar(x, sem_mean, yerr=sem_std, capsize=5, color=color)
-            # mean
-            if model_name == model_names[0]:  # avoiding duplicate labels
-                plt.plot(x, sem_mean, "o", color=color, label=int(cond))
-            else:
-                plt.plot(x, sem_mean, "o", color=color)
+        # standard deviation
+        plt.errorbar(x, sem_mean, yerr=sem_std, capsize=5, color=color)
+        # mean
+        if implementation == implementations[0]:  # avoiding duplicate labels
+            plt.plot(x, sem_mean, "o", color=color, label=int(cond))
+        else:
+            plt.plot(x, sem_mean, "o", color=color)
 
     # model names as ticks
-    plt.xticks(ticks=range(len(model_names)), labels=model_names)
+    plt.xticks(ticks=range(len(implementations)), labels=implementations)
 
     plt.legend()
     plt.title(title)
@@ -86,24 +100,79 @@ def plot_semantic_association(
 
 if __name__ == "__main__":
     data_path = Path("experiment1", "data", "Kuperberg", "sentences.xlsx")
+    out_path = Path("experiment1", "results", "kuperberg_semantic_association.csv")
     df = pd.read_excel(data_path)
 
-    print("Initializing model(s)")
-    models = {
-        "SE": SentenceEmbeddingModel("all-MiniLM-L6-v2"),
-        "WE": WordEmbeddingModel("enwiki_20180420_100d"),
-        "CWE": WordEmbeddingModelContentWord(
-            "enwiki_20180420_100d", spacy_model_name="en_core_web_sm"
-        ),
-    }
+    config = [
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "intfloat/multilingual-e5-large",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "BAAI/bge-m3",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/e5-large-v2",
+        },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "enwiki_20180420_100d",
+        # },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_300d",
+        },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "enwiki_20180420_100d",
+        #     "spacy_model_name": "en_core_web_sm",
+        # },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "enwiki_20180420_300d",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        #     {
+        #         "implementation": "BERTWE",
+        #         "model_type": "SentenceEmbedding",
+        #         "model_name": "FacebookAI/xlm-roberta-large",
+        #     },
+    ]
 
-    print("extracting semantic association")
-    for name, model in models.items():
-        df = extract_semantic_association(model, df, model_name=name)
+    print("Extracting semantic association")
+    for name, model in stream_models(config):
+        print(f"{name}: {model.model_name}")
+        df_sem = extract_semantic_association(model, df)
 
-    print("plotting semantic association")
+        # save output
+        append_df_to_csv(
+            df_sem,
+            path=out_path,
+            extra_cols={"implementation": name, "model": model.model_name},
+        )
+
+    print("Plotting semantic association")
+    df_results = pd.read_csv(out_path)
     plot_semantic_association(
-        df,
-        model_names=list(models.keys()),
+        df_results,
         save_path=Path("experiment1", "figs", "semantic_association_kuperberg.png"),
     )

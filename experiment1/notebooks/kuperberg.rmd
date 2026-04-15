@@ -9,6 +9,7 @@ library(pangoling)
 setwd("experiment1")
 ```
 
+## Read data
 ```{r}
 subtlex <- read_excel(file.path("data", "Subtlex-US.xlsx")) |>
     rename(
@@ -21,6 +22,8 @@ stim <- read_excel(file.path("data", "Kuperberg", "sentences.xlsx")) |>
     left_join(subtlex) |>
     mutate(wl = nchar(target)) |>
     filter(!is.na(target))
+
+sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv"))
 ```
 
 ## Inspect stimuli
@@ -109,4 +112,189 @@ stim |>
 
 ```{r}
 cor.test(stim$lp, stim$lp_pythia)
+```
+
+## semantic association
+By condition
+```{r}
+sem_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+sem_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    facet_wrap(. ~ implementation, ncol = 2, scales = "free") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+```
+
+```{r}
+sem_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(model, implementation, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    facet_wrap(implementation ~ model, ncol = 3, scales = "free") +
+    labs(x = "Condition") +
+    theme_minimal() +
+    theme(
+        legend.position = "none"
+    )
+```
+
+```{r}
+sem_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ggplot(aes(x = model, y = semantic_association, fill = cond)) +
+    # geom_violin() +
+    geom_boxplot() +
+    scale_fill_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    facet_wrap(. ~ implementation, ncol = 2, scales = "free") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+```
+
+Difference from baseline
+```{r}
+sem_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model, scenario) |>
+    mutate(
+        diff_from_baseline = `semantic_association` - `semantic_association`[cond == 1]
+    ) |>
+    ungroup() |>
+    filter(cond != 1) |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(diff_from_baseline, na.rm = TRUE),
+        "sd" = sd(diff_from_baseline, na.rm = TRUE),
+        "max" = max(diff_from_baseline, na.rm = TRUE),
+        "min" = min(diff_from_baseline, na.rm = TRUE)
+    )
+```
+
+
+```{r}
+sem_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model, scenario) |>
+    mutate(
+        diff_from_baseline = `semantic_association` - `semantic_association`[cond == 1]
+    ) |>
+    ungroup() |>
+    filter(cond != 1) |>
+    group_by(implementation, model) |>
+    mutate(diff_from_baseline = scale(diff_from_baseline)) |>
+    ggplot(aes(x = model, y = diff_from_baseline, fill = cond)) +
+    # geom_violin() +
+    geom_boxplot() +
+    scale_fill_manual(
+        values = c("firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    facet_wrap(. ~ implementation, scales = "free") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+```
+
+## 
+
+## Semantic association in specific scenarios
+```{r}
+sem_df |>
+    filter(scenario == 56) |>
+    select(target, model, implementation, semantic_association)
+```
+
+```{r}
+scenario_number <- 27
+
+sem_df |>
+    group_by(implementation, model) |>
+    mutate(
+        sem_s = scale(semantic_association),
+        implementation_model = paste(implementation, model, sep = " : "),
+        context_target = paste(context, target, sep = "..."),
+    ) |>
+    mutate(cond_sentence = paste(cond, context_target, sep = ": ")) |>
+    ungroup() |>
+    filter(scenario == scenario_number) |>
+    ggplot(aes(x = implementation_model, y = cond_sentence, fill = sem_s)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    labs(y = "", x = "", fill = "semantic association") +
+    theme_classic() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    ) +
+    theme(aspect.ratio = .5)
+
+sem_df |>
+    filter(scenario == scenario_number) |>
+    select(sentences, cond)
+pull(sentences) |>
+    unique()
 ```

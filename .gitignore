@@ -8,3 +8,4 @@ cmcl26/analysis/brms_models/*
 cmcl26/_figs/*
 
 experiment1/data/Kuperberg/*
+experiment1/results/kuperberg_semantic_association.csv
