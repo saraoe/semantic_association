@@ -1,0 +1,501 @@
+target,Condition,ContextCode,PlausibilityJudgement,Cloze,Sentence,context
+raise,BC,1,2.55,0.2258064516129032,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major raise","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major"
+couch,BC,8,1.21,0.1875,The cigar burned a hole in the couch,The cigar burned a hole in the
+try,BC,11,1.33,0.0344827586206896,"His first film was a failure, but he learned some techniques in that first try","His first film was a failure, but he learned some techniques in that first"
+look,BC,17,1.79,0.03125,He was hired for the job because of his fresh new look,He was hired for the job because of his fresh new
+print,BC,18,1.46,0.0689655172413793,The journal issue that has the new article about diseases of the eye is still in print,The journal issue that has the new article about diseases of the eye is still in
+ball,BC,22,1.33,0.03125,Every spring they held the annual ball,Every spring they held the annual
+wheels,BC,23,1.63,0.09375,"Penelope started to assemble her new bicycle, but was missing the wheels","Penelope started to assemble her new bicycle, but was missing the"
+management,BC,24,1.25,0.1875,The restaurant will reopen with new management,The restaurant will reopen with new
+bugs,BC,28,1.13,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of bugs,Jennifer disliked walking under the trees at the edge of the park because they were always full of
+pretty,BC,36,1.28,0.3125,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or pretty","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or"
+print,BC,37,1.73,0.0689655172413793,I don't know why people like to see their initials in print,I don't know why people like to see their initials in
+rare,BC,38,1.28,0.15625,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very rare,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very
+temple,BC,39,1.22,0.2903225806451613,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's temple,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's
+police,BC,40,1.39,0.2413793103448276,He took a job training dogs for the police,He took a job training dogs for the
+orchestra,BC,41,1.11,0.2666666666666666,The conductor gave detailed instructions to the orchestra,The conductor gave detailed instructions to the
+cards,BC,45,1.03,0.125,"Down in the basement, Steve and Robert were playing cards","Down in the basement, Steve and Robert were playing"
+company,BC,47,1.13,0.4137931034482758,"After the most recent price increase, the small business owner decided to order his office supplies from another company","After the most recent price increase, the small business owner decided to order his office supplies from another"
+dog,BC,48,1.07,0.21875,Sharon was sad that she had lost her dog,Sharon was sad that she had lost her
+combat,BC,50,2.21,0.4482758620689655,"All of armed services will admit women, but females are barred from combat","All of armed services will admit women, but females are barred from"
+cheap,BC,51,1.44,0.1724137931034483,"After the divorce, she had to move out of the expensive house to an apartment that was cheap","After the divorce, she had to move out of the expensive house to an apartment that was"
+morals,BC,52,1.13,0.4137931034482758,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his morals","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his"
+hilarious,BC,53,1.32,0.3571428571428571,"Some of his jokes were crummy, but those one-liners were hilarious","Some of his jokes were crummy, but those one-liners were"
+restaurant,BC,60,1.74,0.4827586206896552,The inspector from the health department found a roach in a very expensive restaurant,The inspector from the health department found a roach in a very expensive
+felon,BC,61,1.03,0.1428571428571428,The conductor had no idea that the train had been boarded by a known felon,The conductor had no idea that the train had been boarded by a known
+medicine,BC,64,1.22,0.28125,The nurse brought him a glass of juice and his medicine,The nurse brought him a glass of juice and his
+school,BC,65,1.21,0.2857142857142857,The teacher was not looking forward to another year of school,The teacher was not looking forward to another year of
+year,BC,67,1.31,0.2857142857142857,Steve skipped his annual checkup for another year,Steve skipped his annual checkup for another
+vague,BC,72,1.33,0.3103448275862069,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately vague","The candidate wanted to please everyone without making any commitments, so his speech was deliberately"
+plants,BC,74,1.29,0.1785714285714285,She poured water on the plants,She poured water on the
+modern,BC,81,1.3,0.5,"Mark liked the older houses, but Susan wanted to buy one that was new and modern","Mark liked the older houses, but Susan wanted to buy one that was new and"
+doctor,BC,82,1.06,0.1428571428571428,"In an old sitcom, he was the wise family doctor","In an old sitcom, he was the wise family"
+censored,BC,83,1.56,0.1875,"The government controlled the news media, so most of the reports from the war zone were censored","The government controlled the news media, so most of the reports from the war zone were"
+medal,BC,84,1.18,0.28125,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold medal","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold"
+pool,BC,85,1.18,0.25,"During the summer, the children hung out at the pool","During the summer, the children hung out at the"
+heroic,BC,86,1.7,0.0625,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be heroic","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be"
+diary,BC,88,1.33,0.5517241379310345,The little girl kept a lock on her diary,The little girl kept a lock on her
+plane,BC,89,2.0,0.2,"Flying low above her, Bernice could hear the plane","Flying low above her, Bernice could hear the"
+car,BC,97,1.54,0.3,Perry heard a grinding noise coming from his car,Perry heard a grinding noise coming from his
+complain,BC,98,1.7,0.53125,"If Jim's manager is incompetent, he has a legitimate right to complain","If Jim's manager is incompetent, he has a legitimate right to"
+villain,BC,101,1.82,0.6333333333333333,"In the best part of the movie, the hero has to impersonate the villain","In the best part of the movie, the hero has to impersonate the"
+crown,BC,103,1.38,0.46875,The princess wore a crown,The princess wore a
+drum,BC,106,1.34,0.25,Jason was disappointed when the other scouts scared off the elk by loudly beating the drum,Jason was disappointed when the other scouts scared off the elk by loudly beating the
+ruined,BC,107,1.17,0.09375,"After the flood, the house smelled of mildew and everything in it was ruined","After the flood, the house smelled of mildew and everything in it was"
+accident,BC,109,1.2,0.2413793103448276,Everyone on the scene gathered around to look at the accident,Everyone on the scene gathered around to look at the
+tied,BC,115,1.78,0.5357142857142857,The final score of the game was tied,The final score of the game was
+exhausted,BC,117,1.48,0.3333333333333333,"After swimming the English Channel, Bonita was cold and completely exhausted","After swimming the English Channel, Bonita was cold and completely"
+confidence,BC,120,1.48,0.46875,"She had the data to back up everything she said, so the hostile questions did not shake her confidence","She had the data to back up everything she said, so the hostile questions did not shake her"
+fabric,BC,125,1.64,0.2857142857142857,"The new dress was very pretty, but it was cut from an unusual fabric","The new dress was very pretty, but it was cut from an unusual"
+run,BC,128,1.24,0.2758620689655172,"When the little girl saw the big dog lumbering towards her, she began to run","When the little girl saw the big dog lumbering towards her, she began to"
+stadium,BC,132,1.3,0.4482758620689655,"From her house a half mile away, Diana could still hear the loud cheers coming from the stadium","From her house a half mile away, Diana could still hear the loud cheers coming from the"
+storm,BC,133,1.36,0.4333333333333333,Five ships did not survive the storm,Five ships did not survive the
+accident,BC,135,1.09,0.4642857142857143,The paramedics on the scene helped the passengers after the big car accident,The paramedics on the scene helped the passengers after the big car
+crash,BC,136,1.42,0.2333333333333333,The pilot spoke to an air traffic controller just before the crash,The pilot spoke to an air traffic controller just before the
+lunch,BC,140,1.38,0.2857142857142857,The boy scouts started a long hike through the forest after having a big lunch,The boy scouts started a long hike through the forest after having a big
+roads,BC,143,1.41,0.1785714285714285,"When traveling, Roger prefers to stick to major roads","When traveling, Roger prefers to stick to major"
+needle,BC,147,1.52,0.6785714285714286,"While hemming a pair of pants, Bridget accidentally dropped her needle","While hemming a pair of pants, Bridget accidentally dropped her"
+bear,BC,148,1.25,0.4137931034482758,The rangers say that somewhere in the state park is a bear,The rangers say that somewhere in the state park is a
+stress,BC,153,1.09,0.4642857142857143,The doctor told him his headaches were due to stress,The doctor told him his headaches were due to
+hands,BC,156,1.09,0.5333333333333333,"The groups in the parade walked by slowly, each waving their hands","The groups in the parade walked by slowly, each waving their"
+cure,BC,158,1.63,0.5,"The little girl was very sick, but unfortunately there was no cure","The little girl was very sick, but unfortunately there was no"
+view,BC,161,1.18,0.5666666666666667,"The meteor shower should have been spectacular, but the city lights blocked the view","The meteor shower should have been spectacular, but the city lights blocked the"
+end,BC,162,1.21,0.6206896551724138,She was unsure how the book would end,She was unsure how the book would
+sales,BC,166,1.59,0.5333333333333333,"He was desperate for a job, so finally took something doing door to door sales","He was desperate for a job, so finally took something doing door to door"
+terms,BC,168,1.89,0.6785714285714286,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical terms,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical
+young,BC,169,1.7,0.8275862068965517,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were young","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were"
+business,BC,172,1.25,0.625,"In the window, they posted the hours they were open for business","In the window, they posted the hours they were open for"
+contagious,BC,173,1.61,0.5517241379310345,They sent the kids with measles home from school because they were contagious,They sent the kids with measles home from school because they were
+water,BC,174,1.5,0.6896551724137931,"Outside, Cora could hear the running water","Outside, Cora could hear the running"
+walk,BC,177,1.64,0.4642857142857143,At night they often took a short walk,At night they often took a short
+published,BC,182,1.36,0.5483870967741935,The wealthy author always points out that she wrote four novels before one was published,The wealthy author always points out that she wrote four novels before one was
+mouse,BC,185,1.48,0.9285714285714286,The kitten waited patiently because behind the refrigerator was a mouse,The kitten waited patiently because behind the refrigerator was a
+cold,BC,187,1.33,0.7931034482758621,Norton hates getting up on winter mornings because it is always cold,Norton hates getting up on winter mornings because it is always
+soil,BC,190,1.09,0.8620689655172413,The fertilizer enriched the soil,The fertilizer enriched the
+note,BC,193,1.09,0.6333333333333333,The young girl passed her friend a note,The young girl passed her friend a
+perfect,BC,196,1.3,0.4827586206896552,He tinkered with the engine every weekend until it was absolutely perfect,He tinkered with the engine every weekend until it was absolutely
+shore,BC,197,1.36,0.5625,"When Diane heard the shark warning, she swam as fast as she could for shore","When Diane heard the shark warning, she swam as fast as she could for"
+church,BC,198,1.42,0.7241379310344828,Michael could hear the bells ringing in the tower of the church,Michael could hear the bells ringing in the tower of the
+dirty,BC,200,1.12,0.875,"When he got home from work on the construction site, his clothes were always dirty","When he got home from work on the construction site, his clothes were always"
+sun,BC,201,1.68,0.7666666666666667,Kevin propped his head up with a pillow as he basked in the hot sun,Kevin propped his head up with a pillow as he basked in the hot
+price,BC,203,1.38,0.5357142857142857,He bought it without even asking the price,He bought it without even asking the
+ready,BC,204,1.3,0.6206896551724138,"Barry has considered proposing to his girlfriend, but he wants to wait until he is ready","Barry has considered proposing to his girlfriend, but he wants to wait until he is"
+car,BC,205,1.26,0.71875,John was disappointed to discover a scratch on his new car,John was disappointed to discover a scratch on his new
+brain,BC,206,1.31,0.6666666666666666,He was afraid that doing drugs would damage his brain,He was afraid that doing drugs would damage his
+married,BC,207,1.53,0.3448275862068966,"They've been living together for a long time, but don't think they're actually married","They've been living together for a long time, but don't think they're actually"
+trouble,BC,208,1.32,0.65625,Dennis the Menance was known for making trouble,Dennis the Menance was known for making
+cover,BC,211,1.03,0.65625,When the shooting started they ran for cover,When the shooting started they ran for
+real,BC,212,1.59,0.4482758620689655,The federal agents examined the hundred dollar bill with a microscope to see if it was real,The federal agents examined the hundred dollar bill with a microscope to see if it was
+simmer,BC,213,1.33,0.6551724137931034,Eva turned down the heat and left the sauce on the stove to simmer,Eva turned down the heat and left the sauce on the stove to
+shadow,BC,215,1.31,0.8214285714285714,"Alone in the canyon, he was so spooked he was scared by his own shadow","Alone in the canyon, he was so spooked he was scared by his own"
+lie,BC,220,2.03,0.8571428571428571,Betsy could never tell a lie,Betsy could never tell a
+room,BC,221,1.27,0.84375,The bad boy was sent to his room,The bad boy was sent to his
+scars,BC,223,1.39,0.7241379310344828,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his scars","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his"
+fear,BC,226,1.33,0.65625,"Trying to evade their captors, the escaped prisoners of war lived in constant fear","Trying to evade their captors, the escaped prisoners of war lived in constant"
+sharp,BC,228,1.11,0.6551724137931034,The tip of the knife was sharp,The tip of the knife was
+stretch,BC,230,1.25,0.5,The little girl pulled on the rubber band to see how far it would stretch,The little girl pulled on the rubber band to see how far it would
+enemy,BC,232,1.24,0.34375,The soldiers had special night vision goggles so they could see the enemy,The soldiers had special night vision goggles so they could see the
+poor,BC,233,1.09,0.9,George was born into a wealthy family and has no idea what it's like to be poor,George was born into a wealthy family and has no idea what it's like to be
+cave,BC,237,1.71,0.7586206896551724,"Looking for bats, Karen descended into the depths of the cave","Looking for bats, Karen descended into the depths of the"
+antenna,BC,239,1.44,0.6071428571428571,We finally got a decent picture on the TV after an hour of adjusting the antenna,We finally got a decent picture on the TV after an hour of adjusting the
+stock,BC,240,1.12,0.7241379310344828,It took a week to get his car fixed because the parts were out of stock,It took a week to get his car fixed because the parts were out of
+party,BC,242,1.16,0.875,The dispute was settled by a third party,The dispute was settled by a third
+soon,BC,244,1.24,0.8333333333333334,Our guests should be arriving soon,Our guests should be arriving
+oven,BC,245,1.3,0.896551724137931,The dough was put in the hot oven,The dough was put in the hot
+short,BC,250,1.03,0.5625,Andrew was glad that the meeting was very short,Andrew was glad that the meeting was very
+bus,BC,252,2.07,0.9,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour bus","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour"
+shore,BC,254,1.78,0.9,Most shark attacks occur very close to shore,Most shark attacks occur very close to
+deal,BC,255,1.3,0.8620689655172413,He didn't have to spend much money on the car because he found an incredible deal,He didn't have to spend much money on the car because he found an incredible
+school,BC,256,1.0,0.875,The wealthy child went to a private school,The wealthy child went to a private
+lights,BC,260,1.0,0.65625,"When you go to bed, turn off the lights","When you go to bed, turn off the"
+leash,BC,261,1.18,0.90625,George must keep his pet on a leash,George must keep his pet on a
+piles,BC,263,1.36,0.7241379310344828,"He didn't have time to file everything on his desk, so he organized it into two piles","He didn't have time to file everything on his desk, so he organized it into two"
+speak,BC,265,1.25,0.8571428571428571,The whole town came to hear their mayor speak,The whole town came to hear their mayor
+arm,BC,273,1.16,0.9642857142857144,Josie found she could not bend the elbow of her broken arm,Josie found she could not bend the elbow of her broken
+wrong,BC,275,1.18,0.6428571428571429,It's hard to admit when one is wrong,It's hard to admit when one is
+said,BC,276,1.36,0.8666666666666667,Vic asked her to repeat what she had said,Vic asked her to repeat what she had
+palace,BC,281,1.39,0.8275862068965517,When they were in London they visited Buckingham palace,When they were in London they visited Buckingham
+mission,BC,282,1.54,0.8620689655172413,The agent was sent to South America on a secret mission,The agent was sent to South America on a secret
+air,BC,283,1.55,0.9310344827586208,Sam knew that rain was coming because he could smell it in the air,Sam knew that rain was coming because he could smell it in the
+raise,BC,286,1.03,0.9333333333333332,His boss refused to give him a raise,His boss refused to give him a
+sleep,BC,287,1.07,0.9642857142857144,She flew in late last night and really didn't get much sleep,She flew in late last night and really didn't get much
+search,BC,288,1.41,0.8620689655172413,"After a week, they gave up on the missing hikers and called off the search","After a week, they gave up on the missing hikers and called off the"
+bonus,Rel,1,2.78,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major bonus","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major"
+sofa,Rel,8,1.25,0.03125,The cigar burned a hole in the sofa,The cigar burned a hole in the
+effort,Rel,11,1.39,0.0,"His first film was a failure, but he learned some techniques in that first effort","His first film was a failure, but he learned some techniques in that first"
+image,Rel,17,1.71,0.0,He was hired for the job because of his fresh new image,He was hired for the job because of his fresh new
+press,Rel,18,2.04,0.0344827586206896,The journal issue that has the new article about diseases of the eye is still in press,The journal issue that has the new article about diseases of the eye is still in
+dance,Rel,22,1.0,0.0,Every spring they held the annual dance,Every spring they held the annual
+tires,Rel,23,1.96,0.0625,"Penelope started to assemble her new bicycle, but was missing the tires","Penelope started to assemble her new bicycle, but was missing the"
+ownership,Rel,24,1.15,0.0,The restaurant will reopen with new ownership,The restaurant will reopen with new
+insects,Rel,28,1.39,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of insects,Jennifer disliked walking under the trees at the edge of the park because they were always full of
+attractive,Rel,36,1.48,0.0,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or attractive","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or"
+ink,Rel,37,1.79,0.0344827586206896,I don't know why people like to see their initials in ink,I don't know why people like to see their initials in
+unique,Rel,38,1.63,0.0,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very unique,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very
+shrine,Rel,39,1.79,0.0,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's shrine,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's
+military,Rel,40,1.52,0.0,He took a job training dogs for the military,He took a job training dogs for the
+choir,Rel,41,1.32,0.0,The conductor gave detailed instructions to the choir,The conductor gave detailed instructions to the
+poker,Rel,45,1.3,0.09375,"Down in the basement, Steve and Robert were playing poker","Down in the basement, Steve and Robert were playing"
+business,Rel,47,1.15,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another business","After the most recent price increase, the small business owner decided to order his office supplies from another"
+puppy,Rel,48,1.06,0.09375,Sharon was sad that she had lost her puppy,Sharon was sad that she had lost her
+fighting,Rel,50,2.81,0.0689655172413793,"All of armed services will admit women, but females are barred from fighting","All of armed services will admit women, but females are barred from"
+affordable,Rel,51,1.19,0.1034482758620689,"After the divorce, she had to move out of the expensive house to an apartment that was affordable","After the divorce, she had to move out of the expensive house to an apartment that was"
+values,Rel,52,1.75,0.0689655172413793,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his values","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his"
+humorous,Rel,53,1.25,0.0,"Some of his jokes were crummy, but those one-liners were humorous","Some of his jokes were crummy, but those one-liners were"
+cafe,Rel,60,1.47,0.0,The inspector from the health department found a roach in a very expensive cafe,The inspector from the health department found a roach in a very expensive
+convict,Rel,61,1.3,0.0357142857142857,The conductor had no idea that the train had been boarded by a known convict,The conductor had no idea that the train had been boarded by a known
+pills,Rel,64,1.52,0.0625,The nurse brought him a glass of juice and his pills,The nurse brought him a glass of juice and his
+classes,Rel,65,1.5,0.0,The teacher was not looking forward to another year of classes,The teacher was not looking forward to another year of
+month,Rel,67,2.46,0.0,Steve skipped his annual checkup for another month,Steve skipped his annual checkup for another
+ambiguous,Rel,72,1.3,0.0689655172413793,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately ambiguous","The candidate wanted to please everyone without making any commitments, so his speech was deliberately"
+roses,Rel,74,1.24,0.0,She poured water on the roses,She poured water on the
+contemporary,Rel,81,1.06,0.0333333333333333,"Mark liked the older houses, but Susan wanted to buy one that was new and contemporary","Mark liked the older houses, but Susan wanted to buy one that was new and"
+physician,Rel,82,1.64,0.0,"In an old sitcom, he was the wise family physician","In an old sitcom, he was the wise family"
+screened,Rel,83,1.43,0.0,"The government controlled the news media, so most of the reports from the war zone were screened","The government controlled the news media, so most of the reports from the war zone were"
+trophy,Rel,84,1.35,0.03125,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold trophy","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold"
+lake,Rel,85,1.15,0.0,"During the summer, the children hung out at the lake","During the summer, the children hung out at the"
+courageous,Rel,86,1.93,0.0,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be courageous","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be"
+journal,Rel,88,1.5,0.0,The little girl kept a lock on her journal,The little girl kept a lock on her
+jet,Rel,89,2.41,0.0333333333333333,"Flying low above her, Bernice could hear the jet","Flying low above her, Bernice could hear the"
+engine,Rel,97,1.23,0.1,Perry heard a grinding noise coming from his engine,Perry heard a grinding noise coming from his
+argue,Rel,98,2.58,0.0,"If Jim's manager is incompetent, he has a legitimate right to argue","If Jim's manager is incompetent, he has a legitimate right to"
+criminal,Rel,101,1.67,0.0666666666666666,"In the best part of the movie, the hero has to impersonate the criminal","In the best part of the movie, the hero has to impersonate the"
+hat,Rel,103,1.5,0.0,The princess wore a hat,The princess wore a
+pans,Rel,106,1.55,0.0,Jason was disappointed when the other scouts scared off the elk by loudly beating the pans,Jason was disappointed when the other scouts scared off the elk by loudly beating the
+destroyed,Rel,107,1.3,0.03125,"After the flood, the house smelled of mildew and everything in it was destroyed","After the flood, the house smelled of mildew and everything in it was"
+crash,Rel,109,1.18,0.0,Everyone on the scene gathered around to look at the crash,Everyone on the scene gathered around to look at the
+even,Rel,115,2.22,0.0,The final score of the game was even,The final score of the game was
+beat,Rel,117,1.08,0.0,"After swimming the English Channel, Bonita was cold and completely beat","After swimming the English Channel, Bonita was cold and completely"
+composure,Rel,120,1.13,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her composure","She had the data to back up everything she said, so the hostile questions did not shake her"
+material,Rel,125,1.44,0.1071428571428571,"The new dress was very pretty, but it was cut from an unusual material","The new dress was very pretty, but it was cut from an unusual"
+flee,Rel,128,1.3,0.0,"When the little girl saw the big dog lumbering towards her, she began to flee","When the little girl saw the big dog lumbering towards her, she began to"
+stands,Rel,132,1.39,0.0344827586206896,"From her house a half mile away, Diana could still hear the loud cheers coming from the stands","From her house a half mile away, Diana could still hear the loud cheers coming from the"
+tsunami,Rel,133,1.3,0.0666666666666666,Five ships did not survive the tsunami,Five ships did not survive the
+wreck,Rel,135,1.09,0.0357142857142857,The paramedics on the scene helped the passengers after the big car wreck,The paramedics on the scene helped the passengers after the big car
+collision,Rel,136,1.22,0.0,The pilot spoke to an air traffic controller just before the collision,The pilot spoke to an air traffic controller just before the
+dinner,Rel,140,1.71,0.0,The boy scouts started a long hike through the forest after having a big dinner,The boy scouts started a long hike through the forest after having a big
+streets,Rel,143,1.18,0.0,"When traveling, Roger prefers to stick to major streets","When traveling, Roger prefers to stick to major"
+pin,Rel,147,1.24,0.0357142857142857,"While hemming a pair of pants, Bridget accidentally dropped her pin","While hemming a pair of pants, Bridget accidentally dropped her"
+cub,Rel,148,1.48,0.0,The rangers say that somewhere in the state park is a cub,The rangers say that somewhere in the state park is a
+tension,Rel,153,1.41,0.0,The doctor told him his headaches were due to tension,The doctor told him his headaches were due to
+arms,Rel,156,1.39,0.0,"The groups in the parade walked by slowly, each waving their arms","The groups in the parade walked by slowly, each waving their"
+remedy,Rel,158,1.78,0.0625,"The little girl was very sick, but unfortunately there was no remedy","The little girl was very sick, but unfortunately there was no"
+sight,Rel,161,1.5,0.0,"The meteor shower should have been spectacular, but the city lights blocked the sight","The meteor shower should have been spectacular, but the city lights blocked the"
+conclude,Rel,162,1.3,0.0,She was unsure how the book would conclude,She was unsure how the book would
+solicitation,Rel,166,1.88,0.0,"He was desperate for a job, so finally took something doing door to door solicitation","He was desperate for a job, so finally took something doing door to door"
+words,Rel,168,1.59,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical words,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical
+older,Rel,169,1.72,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were older","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were"
+service,Rel,172,1.03,0.03125,"In the window, they posted the hours they were open for service","In the window, they posted the hours they were open for"
+infectious,Rel,173,1.24,0.0,They sent the kids with measles home from school because they were infectious,They sent the kids with measles home from school because they were
+river,Rel,174,1.32,0.0,"Outside, Cora could hear the running river","Outside, Cora could hear the running"
+stroll,Rel,177,1.3,0.1071428571428571,At night they often took a short stroll,At night they often took a short
+printed,Rel,182,1.4,0.0,The wealthy author always points out that she wrote four novels before one was printed,The wealthy author always points out that she wrote four novels before one was
+rat,Rel,185,1.85,0.0,The kitten waited patiently because behind the refrigerator was a rat,The kitten waited patiently because behind the refrigerator was a
+chilly,Rel,187,1.21,0.0344827586206896,Norton hates getting up on winter mornings because it is always chilly,Norton hates getting up on winter mornings because it is always
+dirt,Rel,190,1.11,0.0,The fertilizer enriched the dirt,The fertilizer enriched the
+letter,Rel,193,1.03,0.0,The young girl passed her friend a letter,The young girl passed her friend a
+correct,Rel,196,2.29,0.0,He tinkered with the engine every weekend until it was absolutely correct,He tinkered with the engine every weekend until it was absolutely
+land,Rel,197,1.11,0.09375,"When Diane heard the shark warning, she swam as fast as she could for land","When Diane heard the shark warning, she swam as fast as she could for"
+cathedral,Rel,198,1.12,0.1034482758620689,Michael could hear the bells ringing in the tower of the cathedral,Michael could hear the bells ringing in the tower of the
+filthy,Rel,200,1.29,0.03125,"When he got home from work on the construction site, his clothes were always filthy","When he got home from work on the construction site, his clothes were always"
+lamp,Rel,201,2.86,0.0,Kevin propped his head up with a pillow as he basked in the hot lamp,Kevin propped his head up with a pillow as he basked in the hot
+cost,Rel,203,1.65,0.0,He bought it without even asking the cost,He bought it without even asking the
+prepared,Rel,204,1.15,0.0,"Barry has considered proposing to his girlfriend, but he wants to wait until he is prepared","Barry has considered proposing to his girlfriend, but he wants to wait until he is"
+truck,Rel,205,1.0,0.0,John was disappointed to discover a scratch on his new truck,John was disappointed to discover a scratch on his new
+mind,Rel,206,1.03,0.0,He was afraid that doing drugs would damage his mind,He was afraid that doing drugs would damage his
+engaged,Rel,207,1.89,0.0,"They've been living together for a long time, but don't think they're actually engaged","They've been living together for a long time, but don't think they're actually"
+mischief,Rel,208,1.54,0.0625,Dennis the Menance was known for making mischief,Dennis the Menance was known for making
+shelter,Rel,211,1.67,0.0,When the shooting started they ran for shelter,When the shooting started they ran for
+genuine,Rel,212,1.76,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was genuine,The federal agents examined the hundred dollar bill with a microscope to see if it was
+cook,Rel,213,1.26,0.1034482758620689,Eva turned down the heat and left the sauce on the stove to cook,Eva turned down the heat and left the sauce on the stove to
+reflection,Rel,215,1.78,0.0,"Alone in the canyon, he was so spooked he was scared by his own reflection","Alone in the canyon, he was so spooked he was scared by his own"
+fib,Rel,220,1.61,0.0,Betsy could never tell a fib,Betsy could never tell a
+bedroom,Rel,221,1.26,0.0,The bad boy was sent to his bedroom,The bad boy was sent to his
+wounds,Rel,223,1.74,0.0689655172413793,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his wounds","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his"
+terror,Rel,226,1.09,0.03125,"Trying to evade their captors, the escaped prisoners of war lived in constant terror","Trying to evade their captors, the escaped prisoners of war lived in constant"
+pointed,Rel,228,1.27,0.0344827586206896,The tip of the knife was pointed,The tip of the knife was
+extend,Rel,230,1.09,0.0,The little girl pulled on the rubber band to see how far it would extend,The little girl pulled on the rubber band to see how far it would
+invaders,Rel,232,1.33,0.0,The soldiers had special night vision goggles so they could see the invaders,The soldiers had special night vision goggles so they could see the
+needy,Rel,233,1.47,0.0,George was born into a wealthy family and has no idea what it's like to be needy,George was born into a wealthy family and has no idea what it's like to be
+cavern,Rel,237,1.5,0.1034482758620689,"Looking for bats, Karen descended into the depths of the cavern","Looking for bats, Karen descended into the depths of the"
+wires,Rel,239,1.39,0.0,We finally got a decent picture on the TV after an hour of adjusting the wires,We finally got a decent picture on the TV after an hour of adjusting the
+supply,Rel,240,1.93,0.0,It took a week to get his car fixed because the parts were out of supply,It took a week to get his car fixed because the parts were out of
+person,Rel,242,1.19,0.03125,The dispute was settled by a third person,The dispute was settled by a third
+shortly,Rel,244,1.26,0.0666666666666666,Our guests should be arriving shortly,Our guests should be arriving
+stove,Rel,245,1.89,0.0,The dough was put in the hot stove,The dough was put in the hot
+brief,Rel,250,1.29,0.09375,Andrew was glad that the meeting was very brief,Andrew was glad that the meeting was very
+van,Rel,252,1.84,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour van","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour"
+land,Rel,254,1.53,0.0666666666666666,Most shark attacks occur very close to land,Most shark attacks occur very close to
+bargain,Rel,255,1.47,0.0,He didn't have to spend much money on the car because he found an incredible bargain,He didn't have to spend much money on the car because he found an incredible
+college,Rel,256,1.22,0.0,The wealthy child went to a private college,The wealthy child went to a private
+lamp,Rel,260,1.37,0.0,"When you go to bed, turn off the lamp","When you go to bed, turn off the"
+chain,Rel,261,1.38,0.0,George must keep his pet on a chain,George must keep his pet on a
+stacks,Rel,263,1.5,0.0344827586206896,"He didn't have time to file everything on his desk, so he organized it into two stacks","He didn't have time to file everything on his desk, so he organized it into two"
+talk,Rel,265,1.57,0.0357142857142857,The whole town came to hear their mayor talk,The whole town came to hear their mayor
+limb,Rel,273,1.57,0.0,Josie found she could not bend the elbow of her broken limb,Josie found she could not bend the elbow of her broken
+incorrect,Rel,275,1.19,0.0,It's hard to admit when one is incorrect,It's hard to admit when one is
+uttered,Rel,276,1.26,0.0,Vic asked her to repeat what she had uttered,Vic asked her to repeat what she had
+castle,Rel,281,1.59,0.0,When they were in London they visited Buckingham castle,When they were in London they visited Buckingham
+assignment,Rel,282,1.13,0.0,The agent was sent to South America on a secret assignment,The agent was sent to South America on a secret
+wind,Rel,283,2.07,0.0,Sam knew that rain was coming because he could smell it in the wind,Sam knew that rain was coming because he could smell it in the
+bonus,Rel,286,1.41,0.0,His boss refused to give him a bonus,His boss refused to give him a
+rest,Rel,287,1.17,0.0357142857142857,She flew in late last night and really didn't get much rest,She flew in late last night and really didn't get much
+hunt,Rel,288,2.0,0.0344827586206896,"After a week, they gave up on the missing hikers and called off the hunt","After a week, they gave up on the missing hikers and called off the"
+project,Unrel,1,1.75,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major project","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major"
+jacket,Unrel,8,1.5,0.03125,The cigar burned a hole in the jacket,The cigar burned a hole in the
+role,Unrel,11,1.44,0.0,"His first film was a failure, but he learned some techniques in that first role","His first film was a failure, but he learned some techniques in that first"
+ideas,Unrel,17,1.09,0.15625,He was hired for the job because of his fresh new ideas,He was hired for the job because of his fresh new
+stores,Unrel,18,1.89,0.0344827586206896,The journal issue that has the new article about diseases of the eye is still in stores,The journal issue that has the new article about diseases of the eye is still in
+meeting,Unrel,22,1.21,0.0,Every spring they held the annual meeting,Every spring they held the annual
+instructions,Unrel,23,1.36,0.0,"Penelope started to assemble her new bicycle, but was missing the instructions","Penelope started to assemble her new bicycle, but was missing the"
+menus,Unrel,24,1.06,0.15625,The restaurant will reopen with new menus,The restaurant will reopen with new
+sap,Unrel,28,1.57,0.0333333333333333,Jennifer disliked walking under the trees at the edge of the park because they were always full of sap,Jennifer disliked walking under the trees at the edge of the park because they were always full of
+abstract,Unrel,36,1.63,0.03125,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or abstract","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or"
+cement,Unrel,37,1.85,0.0344827586206896,I don't know why people like to see their initials in cement,I don't know why people like to see their initials in
+fragile,Unrel,38,1.46,0.125,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very fragile,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very
+statue,Unrel,39,1.24,0.064516129032258,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's statue,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's
+disabled,Unrel,40,1.31,0.0,He took a job training dogs for the disabled,He took a job training dogs for the
+engineer,Unrel,41,1.4,0.0,The conductor gave detailed instructions to the engineer,The conductor gave detailed instructions to the
+music,Unrel,45,1.22,0.0,"Down in the basement, Steve and Robert were playing music","Down in the basement, Steve and Robert were playing"
+country,Unrel,47,1.28,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another country","After the most recent price increase, the small business owner decided to order his office supplies from another"
+keys,Unrel,48,1.41,0.03125,Sharon was sad that she had lost her keys,Sharon was sad that she had lost her
+ships,Unrel,50,2.83,0.0,"All of armed services will admit women, but females are barred from ships","All of armed services will admit women, but females are barred from"
+ugly,Unrel,51,1.42,0.0,"After the divorce, she had to move out of the expensive house to an apartment that was ugly","After the divorce, she had to move out of the expensive house to an apartment that was"
+marriage,Unrel,52,1.54,0.0344827586206896,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his marriage","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his"
+terrible,Unrel,53,1.52,0.0,"Some of his jokes were crummy, but those one-liners were terrible","Some of his jokes were crummy, but those one-liners were"
+meal,Unrel,60,1.79,0.0344827586206896,The inspector from the health department found a roach in a very expensive meal,The inspector from the health department found a roach in a very expensive
+politician,Unrel,61,1.63,0.0,The conductor had no idea that the train had been boarded by a known politician,The conductor had no idea that the train had been boarded by a known
+pillow,Unrel,64,1.06,0.03125,The nurse brought him a glass of juice and his pillow,The nurse brought him a glass of juice and his
+chaos,Unrel,65,1.19,0.0,The teacher was not looking forward to another year of chaos,The teacher was not looking forward to another year of
+event,Unrel,67,1.36,0.0,Steve skipped his annual checkup for another event,Steve skipped his annual checkup for another
+short,Unrel,72,1.55,0.1034482758620689,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately short","The candidate wanted to please everyone without making any commitments, so his speech was deliberately"
+dishes,Unrel,74,1.13,0.0,She poured water on the dishes,She poured water on the
+expensive,Unrel,81,1.38,0.0333333333333333,"Mark liked the older houses, but Susan wanted to buy one that was new and expensive","Mark liked the older houses, but Susan wanted to buy one that was new and"
+neighbor,Unrel,82,1.63,0.0,"In an old sitcom, he was the wise family neighbor","In an old sitcom, he was the wise family"
+wrong,Unrel,83,1.64,0.0,"The government controlled the news media, so most of the reports from the war zone were wrong","The government controlled the news media, so most of the reports from the war zone were"
+tooth,Unrel,84,1.67,0.09375,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold tooth","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold"
+theatre,Unrel,85,1.09,0.0,"During the summer, the children hung out at the theatre","During the summer, the children hung out at the"
+king,Unrel,86,1.54,0.03125,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be king","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be"
+bicycle,Unrel,88,1.09,0.0,The little girl kept a lock on her bicycle,The little girl kept a lock on her
+bees,Unrel,89,2.83,0.0333333333333333,"Flying low above her, Bernice could hear the bees","Flying low above her, Bernice could hear the"
+jaw,Unrel,97,1.63,0.0,Perry heard a grinding noise coming from his jaw,Perry heard a grinding noise coming from his
+leave,Unrel,98,1.96,0.0,"If Jim's manager is incompetent, he has a legitimate right to leave","If Jim's manager is incompetent, he has a legitimate right to"
+princess,Unrel,101,1.63,0.0,"In the best part of the movie, the hero has to impersonate the princess","In the best part of the movie, the hero has to impersonate the"
+gown,Unrel,103,1.12,0.03125,The princess wore a gown,The princess wore a
+bushes,Unrel,106,1.59,0.0357142857142857,Jason was disappointed when the other scouts scared off the elk by loudly beating the bushes,Jason was disappointed when the other scouts scared off the elk by loudly beating the
+damp,Unrel,107,1.3,0.03125,"After the flood, the house smelled of mildew and everything in it was damp","After the flood, the house smelled of mildew and everything in it was"
+celebrity,Unrel,109,1.36,0.0,Everyone on the scene gathered around to look at the celebrity,Everyone on the scene gathered around to look at the
+posted,Unrel,115,1.06,0.0,The final score of the game was posted,The final score of the game was
+blue,Unrel,117,1.41,0.0,"After swimming the English Channel, Bonita was cold and completely blue","After swimming the English Channel, Bonita was cold and completely"
+opinion,Unrel,120,1.56,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her opinion","She had the data to back up everything she said, so the hostile questions did not shake her"
+pattern,Unrel,125,1.51,0.0357142857142857,"The new dress was very pretty, but it was cut from an unusual pattern","The new dress was very pretty, but it was cut from an unusual"
+smile,Unrel,128,1.81,0.0344827586206896,"When the little girl saw the big dog lumbering towards her, she began to smile","When the little girl saw the big dog lumbering towards her, she began to"
+parade,Unrel,132,1.24,0.0689655172413793,"From her house a half mile away, Diana could still hear the loud cheers coming from the parade","From her house a half mile away, Diana could still hear the loud cheers coming from the"
+battle,Unrel,133,1.33,0.1,Five ships did not survive the battle,Five ships did not survive the
+exploded,Unrel,135,1.61,0.0,The paramedics on the scene helped the passengers after the big car exploded,The paramedics on the scene helped the passengers after the big car
+takeoff,Unrel,136,1.13,0.0666666666666666,The pilot spoke to an air traffic controller just before the takeoff,The pilot spoke to an air traffic controller just before the
+meeting,Unrel,140,1.19,0.1428571428571428,The boy scouts started a long hike through the forest after having a big meeting,The boy scouts started a long hike through the forest after having a big
+airlines,Unrel,143,1.19,0.0714285714285714,"When traveling, Roger prefers to stick to major airlines","When traveling, Roger prefers to stick to major"
+glasses,Unrel,147,1.61,0.0357142857142857,"While hemming a pair of pants, Bridget accidentally dropped her glasses","While hemming a pair of pants, Bridget accidentally dropped her"
+mine,Unrel,148,1.67,0.0,The rangers say that somewhere in the state park is a mine,The rangers say that somewhere in the state park is a
+tumors,Unrel,153,1.5,0.0,The doctor told him his headaches were due to tumors,The doctor told him his headaches were due to
+banners,Unrel,156,1.32,0.0,"The groups in the parade walked by slowly, each waving their banners","The groups in the parade walked by slowly, each waving their"
+hospital,Unrel,158,1.59,0.0,"The little girl was very sick, but unfortunately there was no hospital","The little girl was very sick, but unfortunately there was no"
+sky,Unrel,161,1.67,0.1,"The meteor shower should have been spectacular, but the city lights blocked the sky","The meteor shower should have been spectacular, but the city lights blocked the"
+sell,Unrel,162,1.0,0.0344827586206896,She was unsure how the book would sell,She was unsure how the book would
+delivery,Unrel,166,1.61,0.0,"He was desperate for a job, so finally took something doing door to door delivery","He was desperate for a job, so finally took something doing door to door"
+procedures,Unrel,168,1.5,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical procedures,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical
+female,Unrel,169,1.35,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were female","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were"
+today,Unrel,172,1.27,0.0625,"In the window, they posted the hours they were open for today","In the window, they posted the hours they were open for"
+scratching,Unrel,173,1.79,0.0,They sent the kids with measles home from school because they were scratching,They sent the kids with measles home from school because they were
+horses,Unrel,174,1.19,0.0344827586206896,"Outside, Cora could hear the running horses","Outside, Cora could hear the running"
+swim,Unrel,177,1.25,0.0,At night they often took a short swim,At night they often took a short
+banned,Unrel,182,1.93,0.0,The wealthy author always points out that she wrote four novels before one was banned,The wealthy author always points out that she wrote four novels before one was
+ball,Unrel,185,2.15,0.0,The kitten waited patiently because behind the refrigerator was a ball,The kitten waited patiently because behind the refrigerator was a
+dark,Unrel,187,1.13,0.0344827586206896,Norton hates getting up on winter mornings because it is always dark,Norton hates getting up on winter mornings because it is always
+plants,Unrel,190,1.15,0.0,The fertilizer enriched the plants,The fertilizer enriched the
+doll,Unrel,193,1.5,0.0,The young girl passed her friend a doll,The young girl passed her friend a
+ruined,Unrel,196,2.43,0.0,He tinkered with the engine every weekend until it was absolutely ruined,He tinkered with the engine every weekend until it was absolutely
+safety,Unrel,197,1.16,0.1875,"When Diane heard the shark warning, she swam as fast as she could for safety","When Diane heard the shark warning, she swam as fast as she could for"
+castle,Unrel,198,1.15,0.0,Michael could hear the bells ringing in the tower of the castle,Michael could hear the bells ringing in the tower of the
+torn,Unrel,200,1.34,0.0,"When he got home from work on the construction site, his clothes were always torn","When he got home from work on the construction site, his clothes were always"
+tub,Unrel,201,2.19,0.0,Kevin propped his head up with a pillow as he basked in the hot tub,Kevin propped his head up with a pillow as he basked in the hot
+boss,Unrel,203,1.7,0.0,He bought it without even asking the boss,He bought it without even asking the
+older,Unrel,204,1.48,0.0344827586206896,"Barry has considered proposing to his girlfriend, but he wants to wait until he is older","Barry has considered proposing to his girlfriend, but he wants to wait until he is"
+watch,Unrel,205,1.0,0.0,John was disappointed to discover a scratch on his new watch,John was disappointed to discover a scratch on his new
+reputation,Unrel,206,1.19,0.0,He was afraid that doing drugs would damage his reputation,He was afraid that doing drugs would damage his
+happy,Unrel,207,1.65,0.0689655172413793,"They've been living together for a long time, but don't think they're actually happy","They've been living together for a long time, but don't think they're actually"
+jokes,Unrel,208,1.44,0.0,Dennis the Menance was known for making jokes,Dennis the Menance was known for making
+help,Unrel,211,1.21,0.03125,When the shooting started they ran for help,When the shooting started they ran for
+contaminated,Unrel,212,2.16,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was contaminated,The federal agents examined the hundred dollar bill with a microscope to see if it was
+cool,Unrel,213,1.71,0.1034482758620689,Eva turned down the heat and left the sauce on the stove to cool,Eva turned down the heat and left the sauce on the stove to
+horse,Unrel,215,1.75,0.0,"Alone in the canyon, he was so spooked he was scared by his own horse","Alone in the canyon, he was so spooked he was scared by his own"
+joke,Unrel,220,1.37,0.0357142857142857,Betsy could never tell a joke,Betsy could never tell a
+principal,Unrel,221,1.06,0.03125,The bad boy was sent to his principal,The bad boy was sent to his
+tattoos,Unrel,223,2.09,0.0344827586206896,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his tattoos","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his"
+hiding,Unrel,226,1.21,0.03125,"Trying to evade their captors, the escaped prisoners of war lived in constant hiding","Trying to evade their captors, the escaped prisoners of war lived in constant"
+broken,Unrel,228,1.13,0.0,The tip of the knife was broken,The tip of the knife was
+fly,Unrel,230,1.3,0.125,The little girl pulled on the rubber band to see how far it would fly,The little girl pulled on the rubber band to see how far it would
+camp,Unrel,232,1.13,0.0,The soldiers had special night vision goggles so they could see the camp,The soldiers had special night vision goggles so they could see the
+hungry,Unrel,233,1.85,0.0,George was born into a wealthy family and has no idea what it's like to be hungry,George was born into a wealthy family and has no idea what it's like to be
+castle,Unrel,237,1.71,0.0,"Looking for bats, Karen descended into the depths of the castle","Looking for bats, Karen descended into the depths of the"
+contrast,Unrel,239,1.44,0.0,We finally got a decent picture on the TV after an hour of adjusting the contrast,We finally got a decent picture on the TV after an hour of adjusting the
+state,Unrel,240,2.21,0.0,It took a week to get his car fixed because the parts were out of state,It took a week to get his car fixed because the parts were out of
+vote,Unrel,242,1.12,0.0,The dispute was settled by a third vote,The dispute was settled by a third
+separately,Unrel,244,1.46,0.0,Our guests should be arriving separately,Our guests should be arriving
+grease,Unrel,245,1.66,0.0,The dough was put in the hot grease,The dough was put in the hot
+productive,Unrel,250,1.19,0.03125,Andrew was glad that the meeting was very productive,Andrew was glad that the meeting was very
+group,Unrel,252,1.48,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour group","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour"
+dusk,Unrel,254,2.11,0.0,Most shark attacks occur very close to dusk,Most shark attacks occur very close to
+mechanic,Unrel,255,1.61,0.0344827586206896,He didn't have to spend much money on the car because he found an incredible mechanic,He didn't have to spend much money on the car because he found an incredible
+hospital,Unrel,256,1.18,0.0,The wealthy child went to a private hospital,The wealthy child went to a private
+stereo,Unrel,260,1.5,0.0,"When you go to bed, turn off the stereo","When you go to bed, turn off the"
+diet,Unrel,261,1.78,0.0,George must keep his pet on a diet,George must keep his pet on a
+boxes,Unrel,263,1.09,0.0,"He didn't have time to file everything on his desk, so he organized it into two boxes","He didn't have time to file everything on his desk, so he organized it into two"
+resign,Unrel,265,1.41,0.0,The whole town came to hear their mayor resign,The whole town came to hear their mayor
+doll,Unrel,273,1.63,0.0,Josie found she could not bend the elbow of her broken doll,Josie found she could not bend the elbow of her broken
+lonely,Unrel,275,1.33,0.0,It's hard to admit when one is lonely,It's hard to admit when one is
+heard,Unrel,276,1.54,0.0333333333333333,Vic asked her to repeat what she had heard,Vic asked her to repeat what she had
+twice,Unrel,281,1.32,0.0,When they were in London they visited Buckingham twice,When they were in London they visited Buckingham
+jet,Unrel,282,1.33,0.0,The agent was sent to South America on a secret jet,The agent was sent to South America on a secret
+morning,Unrel,283,1.91,0.0,Sam knew that rain was coming because he could smell it in the morning,Sam knew that rain was coming because he could smell it in the
+vacation,Unrel,286,1.59,0.0,His boss refused to give him a vacation,His boss refused to give him a
+dinner,Unrel,287,1.42,0.0,She flew in late last night and really didn't get much dinner,She flew in late last night and really didn't get much
+helicopters,Unrel,288,1.37,0.0,"After a week, they gave up on the missing hikers and called off the helicopters","After a week, they gave up on the missing hikers and called off the"
+pillow,Implaus,1,4.39,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major pillow","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major"
+chaos,Implaus,8,4.18,0.0,The cigar burned a hole in the chaos,The cigar burned a hole in the
+umbrella,Implaus,11,4.5,0.0,"His first film was a failure, but he learned some techniques in that first umbrella","His first film was a failure, but he learned some techniques in that first"
+autumn,Implaus,17,4.66,0.0,He was hired for the job because of his fresh new autumn,He was hired for the job because of his fresh new
+treason,Implaus,18,4.55,0.0,The journal issue that has the new article about diseases of the eye is still in treason,The journal issue that has the new article about diseases of the eye is still in
+disorder,Implaus,22,4.37,0.0,Every spring they held the annual disorder,Every spring they held the annual
+king,Implaus,23,4.46,0.0,"Penelope started to assemble her new bicycle, but was missing the king","Penelope started to assemble her new bicycle, but was missing the"
+treason,Implaus,24,4.63,0.0,The restaurant will reopen with new treason,The restaurant will reopen with new
+weekends,Implaus,28,4.82,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of weekends,Jennifer disliked walking under the trees at the edge of the park because they were always full of
+allergic,Implaus,36,4.21,0.0,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or allergic","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or"
+dusk,Implaus,37,4.11,0.0,I don't know why people like to see their initials in dusk,I don't know why people like to see their initials in
+disqualified,Implaus,38,3.94,0.0,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very disqualified,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very
+bicycle,Implaus,39,4.04,0.0,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's bicycle,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's
+blankets,Implaus,40,4.26,0.0,He took a job training dogs for the blankets,He took a job training dogs for the
+dishes,Implaus,41,4.91,0.0,The conductor gave detailed instructions to the dishes,The conductor gave detailed instructions to the
+banners,Implaus,45,3.91,0.0,"Down in the basement, Steve and Robert were playing banners","Down in the basement, Steve and Robert were playing"
+gown,Implaus,47,4.29,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another gown","After the most recent price increase, the small business owner decided to order his office supplies from another"
+takeoff,Implaus,48,4.53,0.0,Sharon was sad that she had lost her takeoff,Sharon was sad that she had lost her
+metal,Implaus,50,4.3,0.0,"All of armed services will admit women, but females are barred from metal","All of armed services will admit women, but females are barred from"
+fired,Implaus,51,4.63,0.0,"After the divorce, she had to move out of the expensive house to an apartment that was fired","After the divorce, she had to move out of the expensive house to an apartment that was"
+ditch,Implaus,52,4.67,0.0,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his ditch","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his"
+torn,Implaus,53,4.21,0.0,"Some of his jokes were crummy, but those one-liners were torn","Some of his jokes were crummy, but those one-liners were"
+speech,Implaus,60,4.64,0.0,The inspector from the health department found a roach in a very expensive speech,The inspector from the health department found a roach in a very expensive
+bottle,Implaus,61,4.5,0.0,The conductor had no idea that the train had been boarded by a known bottle,The conductor had no idea that the train had been boarded by a known
+taxis,Implaus,64,4.55,0.0,The nurse brought him a glass of juice and his taxis,The nurse brought him a glass of juice and his
+cargo,Implaus,65,3.97,0.0,The teacher was not looking forward to another year of cargo,The teacher was not looking forward to another year of
+forest,Implaus,67,4.33,0.0,Steve skipped his annual checkup for another forest,Steve skipped his annual checkup for another
+endangered,Implaus,72,4.13,0.0,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately endangered","The candidate wanted to please everyone without making any commitments, so his speech was deliberately"
+takeoff,Implaus,74,3.74,0.0,She poured water on the takeoff,She poured water on the
+embarrassed,Implaus,81,4.54,0.0,"Mark liked the older houses, but Susan wanted to buy one that was new and embarrassed","Mark liked the older houses, but Susan wanted to buy one that was new and"
+highway,Implaus,82,4.65,0.0,"In an old sitcom, he was the wise family highway","In an old sitcom, he was the wise family"
+hungry,Implaus,83,4.58,0.0,"The government controlled the news media, so most of the reports from the war zone were hungry","The government controlled the news media, so most of the reports from the war zone were"
+pedestrians,Implaus,84,4.63,0.0,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold pedestrians","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold"
+gown,Implaus,85,4.79,0.0,"During the summer, the children hung out at the gown","During the summer, the children hung out at the"
+chilly,Implaus,86,4.74,0.0,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be chilly","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be"
+cement,Implaus,88,4.44,0.0,The little girl kept a lock on her cement,The little girl kept a lock on her
+arena,Implaus,89,3.91,0.0,"Flying low above her, Bernice could hear the arena","Flying low above her, Bernice could hear the"
+cure,Implaus,97,4.66,0.0,Perry heard a grinding noise coming from his cure,Perry heard a grinding noise coming from his
+water,Implaus,98,4.5,0.0,"If Jim's manager is incompetent, he has a legitimate right to water","If Jim's manager is incompetent, he has a legitimate right to"
+business,Implaus,101,3.77,0.0,"In the best part of the movie, the hero has to impersonate the business","In the best part of the movie, the hero has to impersonate the"
+sound,Implaus,103,4.63,0.0,The princess wore a sound,The princess wore a
+diamond,Implaus,106,4.5,0.0,Jason was disappointed when the other scouts scared off the elk by loudly beating the diamond,Jason was disappointed when the other scouts scared off the elk by loudly beating the
+young,Implaus,107,4.27,0.0,"After the flood, the house smelled of mildew and everything in it was young","After the flood, the house smelled of mildew and everything in it was"
+temper,Implaus,109,3.17,0.0,Everyone on the scene gathered around to look at the temper,Everyone on the scene gathered around to look at the
+bugs,Implaus,115,4.85,0.0,The final score of the game was bugs,The final score of the game was
+affordable,Implaus,117,4.58,0.0,"After swimming the English Channel, Bonita was cold and completely affordable","After swimming the English Channel, Bonita was cold and completely"
+music,Implaus,120,4.45,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her music","She had the data to back up everything she said, so the hostile questions did not shake her"
+porch,Implaus,125,4.52,0.0,"The new dress was very pretty, but it was cut from an unusual porch","The new dress was very pretty, but it was cut from an unusual"
+attend,Implaus,128,4.18,0.0,"When the little girl saw the big dog lumbering towards her, she began to attend","When the little girl saw the big dog lumbering towards her, she began to"
+mistakes,Implaus,132,4.5,0.0,"From her house a half mile away, Diana could still hear the loud cheers coming from the mistakes","From her house a half mile away, Diana could still hear the loud cheers coming from the"
+eyes,Implaus,133,4.47,0.0,Five ships did not survive the eyes,Five ships did not survive the
+rest,Implaus,135,3.86,0.0,The paramedics on the scene helped the passengers after the big car rest,The paramedics on the scene helped the passengers after the big car
+fortune,Implaus,136,4.36,0.0,The pilot spoke to an air traffic controller just before the fortune,The pilot spoke to an air traffic controller just before the
+end,Implaus,140,4.07,0.0,The boy scouts started a long hike through the forest after having a big end,The boy scouts started a long hike through the forest after having a big
+plants,Implaus,143,4.13,0.0,"When traveling, Roger prefers to stick to major plants","When traveling, Roger prefers to stick to major"
+horse,Implaus,147,4.54,0.0,"While hemming a pair of pants, Bridget accidentally dropped her horse","While hemming a pair of pants, Bridget accidentally dropped her"
+contrast,Implaus,148,3.96,0.0,The rangers say that somewhere in the state park is a contrast,The rangers say that somewhere in the state park is a
+safety,Implaus,153,4.44,0.0,The doctor told him his headaches were due to safety,The doctor told him his headaches were due to
+jokes,Implaus,156,3.78,0.0,"The groups in the parade walked by slowly, each waving their jokes","The groups in the parade walked by slowly, each waving their"
+joke,Implaus,158,3.59,0.0,"The little girl was very sick, but unfortunately there was no joke","The little girl was very sick, but unfortunately there was no"
+doll,Implaus,161,4.63,0.0,"The meteor shower should have been spectacular, but the city lights blocked the doll","The meteor shower should have been spectacular, but the city lights blocked the"
+camp,Implaus,162,4.79,0.0,She was unsure how the book would camp,She was unsure how the book would
+hiding,Implaus,166,4.25,0.0,"He was desperate for a job, so finally took something doing door to door hiding","He was desperate for a job, so finally took something doing door to door"
+pedestrians,Implaus,168,3.29,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical pedestrians,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical
+bullets,Implaus,169,4.64,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were bullets","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were"
+texture,Implaus,172,3.37,0.0,"In the window, they posted the hours they were open for texture","In the window, they posted the hours they were open for"
+hard,Implaus,173,4.53,0.0,They sent the kids with measles home from school because they were hard,They sent the kids with measles home from school because they were
+chapel,Implaus,174,3.88,0.0,"Outside, Cora could hear the running chapel","Outside, Cora could hear the running"
+reputation,Implaus,177,4.07,0.0,At night they often took a short reputation,At night they often took a short
+hungry,Implaus,182,4.18,0.0,The wealthy author always points out that she wrote four novels before one was hungry,The wealthy author always points out that she wrote four novels before one was
+savior,Implaus,185,4.09,0.0,The kitten waited patiently because behind the refrigerator was a savior,The kitten waited patiently because behind the refrigerator was a
+broken,Implaus,187,4.44,0.0,Norton hates getting up on winter mornings because it is always broken,Norton hates getting up on winter mornings because it is always
+legs,Implaus,190,4.61,0.0,The fertilizer enriched the legs,The fertilizer enriched the
+mechanic,Implaus,193,4.04,0.0,The young girl passed her friend a mechanic,The young girl passed her friend a
+forgiven,Implaus,196,4.69,0.0,He tinkered with the engine every weekend until it was absolutely forgiven,He tinkered with the engine every weekend until it was absolutely
+relaxing,Implaus,197,4.46,0.0,"When Diane heard the shark warning, she swam as fast as she could for relaxing","When Diane heard the shark warning, she swam as fast as she could for"
+deer,Implaus,198,4.33,0.0,Michael could hear the bells ringing in the tower of the deer,Michael could hear the bells ringing in the tower of the
+sick,Implaus,200,4.48,0.0,"When he got home from work on the construction site, his clothes were always sick","When he got home from work on the construction site, his clothes were always"
+size,Implaus,201,4.76,0.0,Kevin propped his head up with a pillow as he basked in the hot size,Kevin propped his head up with a pillow as he basked in the hot
+helicopters,Implaus,203,4.75,0.0,He bought it without even asking the helicopters,He bought it without even asking the
+flooded,Implaus,204,4.31,0.0,"Barry has considered proposing to his girlfriend, but he wants to wait until he is flooded","Barry has considered proposing to his girlfriend, but he wants to wait until he is"
+taxes,Implaus,205,3.96,0.0,John was disappointed to discover a scratch on his new taxes,John was disappointed to discover a scratch on his new
+fever,Implaus,206,3.64,0.0,He was afraid that doing drugs would damage his fever,He was afraid that doing drugs would damage his
+people,Implaus,207,4.26,0.0,"They've been living together for a long time, but don't think they're actually people","They've been living together for a long time, but don't think they're actually"
+apples,Implaus,208,3.97,0.0,Dennis the Menance was known for making apples,Dennis the Menance was known for making
+convenience,Implaus,211,3.93,0.0,When the shooting started they ran for convenience,When the shooting started they ran for
+quiet,Implaus,212,4.33,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was quiet,The federal agents examined the hundred dollar bill with a microscope to see if it was
+state,Implaus,213,4.32,0.0,Eva turned down the heat and left the sauce on the stove to state,Eva turned down the heat and left the sauce on the stove to
+hospital,Implaus,215,4.76,0.0,"Alone in the canyon, he was so spooked he was scared by his own hospital","Alone in the canyon, he was so spooked he was scared by his own"
+ditch,Implaus,220,4.19,0.0,Betsy could never tell a ditch,Betsy could never tell a
+dusk,Implaus,221,4.73,0.0,The bad boy was sent to his dusk,The bad boy was sent to his
+boxes,Implaus,223,4.25,0.0,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his boxes","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his"
+size,Implaus,226,4.33,0.0,"Trying to evade their captors, the escaped prisoners of war lived in constant size","Trying to evade their captors, the escaped prisoners of war lived in constant"
+chatting,Implaus,228,4.68,0.0,The tip of the knife was chatting,The tip of the knife was
+yell,Implaus,230,4.43,0.0,The little girl pulled on the rubber band to see how far it would yell,The little girl pulled on the rubber band to see how far it would
+temper,Implaus,232,4.22,0.0,The soldiers had special night vision goggles so they could see the temper,The soldiers had special night vision goggles so they could see the
+pointed,Implaus,233,4.15,0.0,George was born into a wealthy family and has no idea what it's like to be pointed,George was born into a wealthy family and has no idea what it's like to be
+doll,Implaus,237,4.32,0.0,"Looking for bats, Karen descended into the depths of the doll","Looking for bats, Karen descended into the depths of the"
+ceremonies,Implaus,239,4.34,0.0,We finally got a decent picture on the TV after an hour of adjusting the ceremonies,We finally got a decent picture on the TV after an hour of adjusting the
+bread,Implaus,240,4.86,0.0,It took a week to get his car fixed because the parts were out of bread,It took a week to get his car fixed because the parts were out of
+lifestyle,Implaus,242,4.07,0.0,The dispute was settled by a third lifestyle,The dispute was settled by a third
+disabled,Implaus,244,3.89,0.0,Our guests should be arriving disabled,Our guests should be arriving
+project,Implaus,245,4.21,0.0,The dough was put in the hot project,The dough was put in the hot
+pale,Implaus,250,4.48,0.0,Andrew was glad that the meeting was very pale,Andrew was glad that the meeting was very
+puppy,Implaus,252,4.8,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour puppy","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour"
+ideas,Implaus,254,4.94,0.0,Most shark attacks occur very close to ideas,Most shark attacks occur very close to
+stream,Implaus,255,4.41,0.0,He didn't have to spend much money on the car because he found an incredible stream,He didn't have to spend much money on the car because he found an incredible
+material,Implaus,256,4.52,0.0,The wealthy child went to a private material,The wealthy child went to a private
+stores,Implaus,260,4.7,0.0,"When you go to bed, turn off the stores","When you go to bed, turn off the"
+meeting,Implaus,261,4.56,0.0,George must keep his pet on a meeting,George must keep his pet on a
+cartoons,Implaus,263,3.85,0.0,"He didn't have time to file everything on his desk, so he organized it into two cartoons","He didn't have time to file everything on his desk, so he organized it into two"
+scratch,Implaus,265,4.29,0.0,The whole town came to hear their mayor scratch,The whole town came to hear their mayor
+absence,Implaus,273,4.68,0.0,Josie found she could not bend the elbow of her broken absence,Josie found she could not bend the elbow of her broken
+screened,Implaus,275,3.52,0.0,It's hard to admit when one is screened,It's hard to admit when one is
+vanished,Implaus,276,4.47,0.0,Vic asked her to repeat what she had vanished,Vic asked her to repeat what she had
+bait,Implaus,281,3.63,0.0,When they were in London they visited Buckingham bait,When they were in London they visited Buckingham
+cow,Implaus,282,4.42,0.0,The agent was sent to South America on a secret cow,The agent was sent to South America on a secret
+robbery,Implaus,283,4.35,0.0,Sam knew that rain was coming because he could smell it in the robbery,Sam knew that rain was coming because he could smell it in the
+cliff,Implaus,286,4.32,0.0,His boss refused to give him a cliff,His boss refused to give him a
+music,Implaus,287,4.0,0.0,She flew in late last night and really didn't get much music,She flew in late last night and really didn't get much
+boss,Implaus,288,3.97,0.0,"After a week, they gave up on the missing hikers and called off the boss","After a week, they gave up on the missing hikers and called off the"
+stupid,Rel,3,1.74,0.0714285714285714,The salesman made the mistake of talking down to Jane because he thought she was stupid,The salesman made the mistake of talking down to Jane because he thought she was
+ceiling,Rel,10,1.52,0.0625,Water was leaking out from the hole in the ceiling,Water was leaking out from the hole in the
+coat,Rel,29,1.06,0.0666666666666666,"Rushing out, he forgot to take his coat","Rushing out, he forgot to take his"
+shack,Rel,70,1.78,0.0344827586206896,"At that time, the boys lived down by the river in a shack","At that time, the boys lived down by the river in a"
+dumb,BC,3,1.61,0.1785714285714285,The salesman made the mistake of talking down to Jane because he thought she was dumb,The salesman made the mistake of talking down to Jane because he thought she was
+roof,BC,10,1.96,0.15625,Water was leaking out from the hole in the roof,Water was leaking out from the hole in the
+jacket,BC,29,1.19,0.1,"Rushing out, he forgot to take his jacket","Rushing out, he forgot to take his"
+hut,BC,70,1.7,0.1379310344827586,"At that time, the boys lived down by the river in a hut","At that time, the boys lived down by the river in a"
+poor,Unrel,3,1.5,0.0357142857142857,The salesman made the mistake of talking down to Jane because he thought she was poor,The salesman made the mistake of talking down to Jane because he thought she was
+balloon,Unrel,10,1.45,0.0,Water was leaking out from the hole in the balloon,Water was leaking out from the hole in the
+umbrella,Unrel,29,1.21,0.0,"Rushing out, he forgot to take his umbrella","Rushing out, he forgot to take his"
+van,Unrel,70,1.63,0.1034482758620689,"At that time, the boys lived down by the river in a van","At that time, the boys lived down by the river in a"
+abstract,Implaus,3,3.34,0.0,The salesman made the mistake of talking down to Jane because he thought she was abstract,The salesman made the mistake of talking down to Jane because he thought she was
+reward,Implaus,10,4.61,0.0,Water was leaking out from the hole in the reward,Water was leaking out from the hole in the
+country,Implaus,29,4.64,0.0,"Rushing out, he forgot to take his country","Rushing out, he forgot to take his"
+letter,Implaus,70,4.74,0.0,"At that time, the boys lived down by the river in a letter","At that time, the boys lived down by the river in a"

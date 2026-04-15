@@ -1,0 +1,69 @@
+# Exploration of Michaelov (2024)
+
+```{r}
+library(tidytable)
+library(readxl)
+library(ggplot2)
+library(pangoling)
+
+setwd("experiment1")
+```
+
+## Read data
+```{r}
+subtlex <- read_excel(file.path("data", "Subtlex-US.xlsx")) |>
+    rename(
+        "target" = "Word",
+        "zipf_freq" = "Zipf-value"
+    ) |>
+    select(target, zipf_freq)
+
+df <- read.csv(file.path("data", "michaelov_2024.csv")) |>
+    rename("target" = "TargetWord") |>
+    left_join(subtlex) |>
+    mutate(wl = nchar(target)) |>
+    filter(!is.na(target))
+
+stim <- df |>
+    select(-c(Subject, N400, Electrode)) |>
+    distinct()
+```
+
+## Explore stimuli
+```{r}
+stim |>
+    group_by(ContextCode) |>
+    summarize(
+        "n_unique_sentences" = length(unique(Sentence))
+    )
+
+stim |>
+    filter(ContextCode == 1) |>
+    select(Condition, Sentence, target)
+```
+
+Word length
+```{r}
+stim |>
+    select(wl) |>
+    summary()
+
+stim |>
+    ggplot() +
+    geom_density(aes(x = wl), fill = "aliceblue", alpha = .5) +
+    labs(title = "Word length") +
+    theme_minimal()
+```
+
+Word frequency
+```{r}
+stim |>
+    select(zipf_freq) |>
+    summary()
+
+stim |>
+    ggplot() +
+    geom_density(aes(x = zipf_freq), fill = "aliceblue", alpha = .5) +
+    labs(title = "Zipf frequency") +
+    theme_minimal()
+```
