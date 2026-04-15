@@ -104,11 +104,11 @@ if __name__ == "__main__":
     df = pd.read_excel(data_path)
 
     config = [
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/multilingual-e5-large",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/multilingual-e5-large",
+        },
         # {
         #     "implementation": "SE",
         #     "model_type": "SentenceEmbedding",
@@ -129,33 +129,44 @@ if __name__ == "__main__":
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/e5-large-v2",
         },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_100d",
-        # },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_100d",
+        },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
         },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "enwiki_20180420_100d",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "word2vec-google-news-300",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "enwiki_20180420_100d",
+            "spacy_model_name": "en_core_web_sm",
+        },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
             "model_name": "enwiki_20180420_300d",
             "spacy_model_name": "en_core_web_sm",
         },
-        #     {
-        #         "implementation": "BERTWE",
-        #         "model_type": "SentenceEmbedding",
-        #         "model_name": "FacebookAI/xlm-roberta-large",
-        #     },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "word2vec-google-news-300",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "BERTWE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "FacebookAI/xlm-roberta-large",
+        },
     ]
 
     print("Extracting semantic association")
@@ -170,9 +181,9 @@ if __name__ == "__main__":
             extra_cols={"implementation": name, "model": model.model_name},
         )
 
-    print("Plotting semantic association")
-    df_results = pd.read_csv(out_path)
-    plot_semantic_association(
-        df_results,
-        save_path=Path("experiment1", "figs", "semantic_association_kuperberg.png"),
-    )
+    # print("Plotting semantic association")
+    # df_results = pd.read_csv(out_path)
+    # plot_semantic_association(
+    #     df_results,
+    #     save_path=Path("experiment1", "figs", "semantic_association_kuperberg.png"),
+    # )

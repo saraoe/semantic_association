@@ -1,120 +1,24 @@
-# Kuperberg, 2003 and 2007
+# Semantic association of semantic illusions
 
 ```{r}
 library(tidytable)
-library(readxl)
 library(ggplot2)
-library(pangoling)
+library(lmerTest)
+library(stringr)
+library(reshape2)
 
 setwd("experiment1")
 ```
 
 ## Read data
 ```{r}
-subtlex <- read_excel(file.path("data", "Subtlex-US.xlsx")) |>
-    rename(
-        "target" = "Word",
-        "zipf_freq" = "Zipf-value"
-    ) |>
-    select(target, zipf_freq)
-
-stim <- read_excel(file.path("data", "Kuperberg", "sentences.xlsx")) |>
-    left_join(subtlex) |>
-    mutate(wl = nchar(target)) |>
-    filter(!is.na(target))
-
-sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv"))
+sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
+    mutate("cond" = as.factor(cond))
 ```
 
-## Inspect stimuli
-Word length
-```{r}
-stim |>
-    select(wl) |>
-    summary()
+## Kuperberg
 
-stim |>
-    ggplot() +
-    geom_density(aes(x = wl), fill = "aliceblue", alpha = .5) +
-    labs(title = "Word length") +
-    theme_minimal()
-```
-
-Word frequency
-```{r}
-stim |>
-    select(zipf_freq) |>
-    summary()
-
-stim |>
-    ggplot() +
-    geom_density(aes(x = zipf_freq), fill = "aliceblue", alpha = .5) +
-    labs(title = "Zipf frequency") +
-    theme_minimal()
-```
-
-Log-probability
-```{r}
-# get lp
-# causal_preload("gpt2")
-causal_preload("EleutherAI/pythia-70m-deduped")
-
-stim <- stim |>
-    mutate("lp_pythia" = causal_targets_pred(
-        contexts = context,
-        targets = target,
-        model = "EleutherAI/pythia-70m-deduped",
-        batch_size = 10
-    ))
-```
-
-```{r}
-stim |>
-    ggplot() +
-    geom_density(aes(x = lp_pythia), fill = "aliceblue", alpha = .5) +
-    labs(title = "lp") +
-    theme_minimal()
-
-stim |>
-    mutate(cond = as.factor(cond)) |>
-    ggplot() +
-    geom_density(aes(x = lp_pythia, fill = cond, group = cond), alpha = .5) +
-    labs(title = "lp") +
-    theme_minimal()
-```
-
-```{r}
-stim |>
-    group_by(cond) |>
-    summarize(
-        mean_lp = mean(lp_pythia),
-        sd_lp = sd(lp_pythia)
-    ) |>
-    ggplot(aes(x = cond)) +
-    geom_point(aes(y = mean_lp)) +
-    geom_errorbar(
-        aes(
-            ymin = (mean_lp - sd_lp),
-            ymax = (mean_lp + sd_lp)
-        ),
-        width = 0.2
-    ) +
-    theme_minimal()
-
-ggsave("figs/lp_kuperberg_pythia.png")
-```
-
-```{r}
-stim |>
-    select(context, target, lp, lp_pythia, cond) |>
-    print(n = 8)
-```
-
-```{r}
-cor.test(stim$lp, stim$lp_pythia)
-```
-
-## semantic association
+### Initial exploration
 By condition
 ```{r}
 sem_df |>
@@ -157,6 +61,8 @@ sem_df |>
         legend.position = "bottom",
         axis.text.x = element_text(angle = 45, hjust = 1)
     )
+
+ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 7, height = 10)
 ```
 
 ```{r}
@@ -255,9 +161,86 @@ sem_df |>
     )
 ```
 
-## 
+### Correlations in estimates between models
+```{r}
+cor_matrix <- sem_df |>
+    mutate(name = paste("sem", implementation, model, sep = "_")) |>
+    select(name, semantic_association, cond, scenario) |>
+    pivot_wider(names_from = name, values_from = semantic_association) |>
+    select(starts_with("sem_")) |>
+    cor(use = "pairwise.complete.obs")
 
-## Semantic association in specific scenarios
+# Remove prefix
+prefix <- "^sem_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+```
+
+```{r}
+prefix_order <- c("BERTWE", "WE", "CWE", "SE")
+
+level_order <- colnames(cor_matrix)[
+    order(match(str_extract(colnames(cor_matrix), "^[^_]+"), prefix_order))
+]
+
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = level_order),
+        Var2 = factor(Var2, levels = level_order)
+    )
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+```{r}
+data_one_implementation <- sem_df |>
+    filter(
+        implementation == "SE"
+    )
+
+model_diff_fit <- lmer(
+    sem_s ~ model + (1 | scenario),
+    data = data_one_implementation |>
+        group_by(model) |>
+        mutate(sem_s = scale(semantic_association))
+)
+summary(model_diff_fit)
+```
+
+### Modeling Difference in conditions
+```{r}
+data_one_model <- sem_df |>
+    filter(
+        model == "enwiki_20180420_100d" &
+            implementation == "WE"
+    )
+```
+
+```{r}
+naive_fit <- lm(semantic_association ~ cond, data = data_one_model)
+summary(naive_fit)
+```
+
+```{r}
+group_level_fit <- lmer(
+    semantic_association ~ cond + (1 | scenario),
+    data = data_one_model
+)
+summary(group_level_fit)
+```
+
+
+### Semantic association in specific scenarios
 ```{r}
 sem_df |>
     filter(scenario == 56) |>
