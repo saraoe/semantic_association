@@ -58,6 +58,22 @@ def extract_semantic_association(model: EmbeddingModel, df: pd.DataFrame):
     return df
 
 
+def extract_for_corpus(df: pd.DataFrame, model: EmbeddingModel, out_path: Path):
+    """
+    extracts semantic association for data in corpus
+    """
+    assert [col in df.columns for col in ["target", "context"]]
+
+    df_sem = extract_semantic_association(model, df)
+
+    # save output
+    append_df_to_csv(
+        df_sem,
+        path=out_path,
+        extra_cols={"implementation": name, "model": model.model_name},
+    )
+
+
 def plot_semantic_association(
     df: pd.DataFrame, title: str = "", save_path: Path = None
 ):
@@ -99,46 +115,59 @@ def plot_semantic_association(
 
 
 if __name__ == "__main__":
-    data_path = Path("experiment1", "data", "Kuperberg", "sentences.xlsx")
-    out_path = Path("experiment1", "results", "kuperberg_semantic_association.csv")
-    df = pd.read_excel(data_path)
+    corpora = [
+        # {
+        #     "df": pd.read_excel(
+        #         Path("experiment1", "data", "Kuperberg", "sentences.xlsx")
+        #     ),
+        #     "out_path": Path(
+        #         "experiment1", "results", "kuperberg_semantic_association.csv"
+        #     ),
+        # },
+        {
+            "df": pd.read_csv(Path("experiment1", "data", "michaelov_2024_stim.csv")),
+            "out_path": Path(
+                "experiment1", "results", "michaelov_semantic_association.csv"
+            ),
+        },
+    ]
 
     config = [
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/multilingual-e5-large",
-        },
         # {
         #     "implementation": "SE",
         #     "model_type": "SentenceEmbedding",
-        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        #     "model_name": "intfloat/multilingual-e5-large",
         # },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "BAAI/bge-m3",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/e5-large-v2",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "enwiki_20180420_100d",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "enwiki_20180420_300d",
-        },
+        # # {
+        # #     "implementation": "SE",
+        # #     "model_type": "SentenceEmbedding",
+        # #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        # # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "BAAI/bge-m3",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "intfloat/e5-large-v2",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "enwiki_20180420_100d",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "enwiki_20180420_300d",
+        # },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
@@ -172,18 +201,7 @@ if __name__ == "__main__":
     print("Extracting semantic association")
     for name, model in stream_models(config):
         print(f"{name}: {model.model_name}")
-        df_sem = extract_semantic_association(model, df)
-
-        # save output
-        append_df_to_csv(
-            df_sem,
-            path=out_path,
-            extra_cols={"implementation": name, "model": model.model_name},
-        )
-
-    # print("Plotting semantic association")
-    # df_results = pd.read_csv(out_path)
-    # plot_semantic_association(
-    #     df_results,
-    #     save_path=Path("experiment1", "figs", "semantic_association_kuperberg.png"),
-    # )
+        for corpus in corpora:
+            extract_for_corpus(
+                df=corpus["df"], model=model, out_path=corpus["out_path"]
+            )

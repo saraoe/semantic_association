@@ -12,11 +12,16 @@ setwd("experiment1")
 
 ## Read data
 ```{r}
-sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
+kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
     mutate("cond" = as.factor(cond)) |>
     filter(!scenario %in% c(37, 38, 84)) |> # scenarios with duplicate sentences
     filter(!scenario == 152) |> # non-sensible scenario
     filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
+
+michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("BC", "Rel", "Unrel", "Implaus")
+    ))
 ```
 
 ## Kuperberg
@@ -24,7 +29,7 @@ sem_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |
 ### Initial exploration
 By condition
 ```{r}
-sem_df |>
+kuperberg_df |>
     group_by(cond) |>
     summarize(
         "mean" = mean(semantic_association, na.rm = TRUE),
@@ -36,7 +41,7 @@ sem_df |>
 ```
 
 ```{r}
-sem_df |>
+kuperberg_df |>
     mutate("cond" = as.factor(cond)) |>
     group_by(implementation, model, cond) |>
     summarize(
@@ -69,7 +74,7 @@ ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 7, heigh
 ```
 
 ```{r}
-sem_df |>
+kuperberg_df |>
     mutate("cond" = as.factor(cond)) |>
     group_by(model, implementation, cond) |>
     summarize(
@@ -99,7 +104,7 @@ sem_df |>
 ```
 
 ```{r}
-sem_df |>
+kuperberg_df |>
     mutate("cond" = as.factor(cond)) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
@@ -120,7 +125,7 @@ sem_df |>
 
 Difference from baseline
 ```{r}
-sem_df |>
+kuperberg_df |>
     mutate("cond" = as.factor(cond)) |>
     group_by(implementation, model, scenario) |>
     mutate(
@@ -139,7 +144,7 @@ sem_df |>
 
 
 ```{r}
-sem_df |>
+kuperberg_df |>
     mutate("cond" = as.factor(cond)) |>
     group_by(implementation, model, scenario) |>
     mutate(
@@ -166,7 +171,7 @@ sem_df |>
 
 ### Correlations in estimates between models
 ```{r}
-cor_matrix <- sem_df |>
+cor_matrix <- kuperberg_df |>
     mutate(name = paste("sem", implementation, model, sep = "_")) |>
     select(name, semantic_association, cond, scenario) |>
     pivot_wider(names_from = name, values_from = semantic_association) |>
@@ -206,7 +211,7 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 ```
 
 ```{r}
-data_one_implementation <- sem_df |>
+data_one_implementation <- kuperberg_df |>
     filter(
         implementation == "SE"
     )
@@ -222,7 +227,7 @@ summary(model_diff_fit)
 
 ### Modeling Difference in conditions
 ```{r}
-data_one_model <- sem_df |>
+data_one_model <- kuperberg_df |>
     filter(
         model == "enwiki_20180420_100d" &
             implementation == "WE"
@@ -245,7 +250,7 @@ summary(group_level_fit)
 
 ### Semantic association in specific scenarios
 ```{r}
-sem_df |>
+kuperberg_df |>
     filter(scenario == 56) |>
     select(target, model, implementation, semantic_association)
 ```
@@ -253,7 +258,7 @@ sem_df |>
 ```{r}
 scenario_number <- 27
 
-sem_df |>
+kuperberg_df |>
     group_by(implementation, model) |>
     mutate(
         sem_s = scale(semantic_association),
@@ -278,9 +283,191 @@ sem_df |>
     ) +
     theme(aspect.ratio = .5)
 
-sem_df |>
+kuperberg_df |>
     filter(scenario == scenario_number) |>
     select(sentences, cond)
 pull(sentences) |>
+    unique()
+```
+
+## Michaelov
+
+### Initial exploration
+By condition
+```{r}
+michaelov_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+michaelov_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    facet_wrap(. ~ implementation, ncol = 2, scales = "free") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_michaelov.png"), width = 7, height = 10)
+```
+
+```{r}
+michaelov_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(model, implementation, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    facet_wrap(implementation ~ model, ncol = 3, scales = "free") +
+    labs(x = "Condition") +
+    theme_minimal() +
+    theme(
+        legend.position = "none"
+    )
+```
+
+```{r}
+michaelov_df |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ggplot(aes(x = model, y = semantic_association, fill = cond)) +
+    # geom_violin() +
+    geom_boxplot() +
+    scale_fill_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    facet_wrap(. ~ implementation, ncol = 2, scales = "free") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+```
+
+### Correlations in estimates between models
+```{r}
+cor_matrix <- michaelov_df |>
+    mutate(name = paste("sem", implementation, model, sep = "_")) |>
+    select(name, semantic_association, cond, ContextCode) |>
+    pivot_wider(names_from = name, values_from = semantic_association) |>
+    select(starts_with("sem_")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^sem_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+```
+
+```{r}
+prefix_order <- c("BERTWE", "WE", "CWE", "SE")
+
+level_order <- colnames(cor_matrix)[
+    order(match(str_extract(colnames(cor_matrix), "^[^_]+"), prefix_order))
+]
+
+melted <- melt(cor_matrix) |>
+    mutate(
+        Var1 = factor(Var1, levels = level_order),
+        Var2 = factor(Var2, levels = level_order)
+    )
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+### Semantic association in specific contexts
+```{r}
+michaelov_df |>
+    filter(ContextCode == 1) |>
+    select(target, model, implementation, semantic_association)
+```
+
+```{r}
+context_number <- 1
+
+michaelov_df |>
+    group_by(implementation, model) |>
+    mutate(
+        sem_s = scale(semantic_association),
+        implementation_model = paste(implementation, model, sep = " : "),
+        context_target = paste(context, target, sep = "..."),
+    ) |>
+    mutate(cond_sentence = paste(cond, context_target, sep = ": ")) |>
+    ungroup() |>
+    filter(ContextCode == context_number) |>
+    ggplot(aes(x = implementation_model, y = cond_sentence, fill = sem_s)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    labs(y = "", x = "", fill = "semantic association") +
+    theme_classic() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    ) +
+    theme(aspect.ratio = .5)
+
+michaelov_df |>
+    filter(ContextCode == context_number) |>
+    # select(Sentence, cond)
+    pull(Sentence) |>
     unique()
 ```
