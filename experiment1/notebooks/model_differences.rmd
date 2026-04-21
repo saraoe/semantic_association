@@ -86,7 +86,7 @@ eff <- ggpredict(diff_models_fit, terms = c("cond", "full_implementation"))
 plot(eff, colors = c(
     "black",
     "firebrick1", "firebrick3", "firebrick4",
-    "steelblue1", "steelblue4", "blue1", "blue4",
+    "steelblue1", "steelblue4", "blue1", "blue4", "slateblue1",
     "orchid1", "orchid3", "orchid4"
 )) +
     theme(legend.position = "bottom")
@@ -114,4 +114,34 @@ group_level_fit <- lmer(
     data = data_one_model
 )
 summary(group_level_fit)
+```
+
+### Difference between models
+```{r}
+data <- michaelov_df |>
+    group_by(implementation, model) |>
+    mutate(
+        "s_sem" = scale(semantic_association),
+        "full_implementation" = paste(implementation, model, sep = "_")
+    )
+```
+
+```{r}
+diff_models_fit <- lmer(
+    s_sem ~ -1 + full_implementation + cond:full_implementation + (1 | ContextCode),
+    data = data
+)
+summary(diff_models_fit)
+```
+
+```{r}
+# Get marginal effects for each predictor
+eff <- ggpredict(diff_models_fit, terms = c("cond", "full_implementation"))
+plot(eff, colors = c(
+    "black",
+    "firebrick1", "firebrick3", "firebrick4",
+    "steelblue1", "steelblue4", "blue1", "blue4", "slateblue1",
+    "orchid1", "orchid3", "orchid4"
+)) +
+    theme(legend.position = "bottom")
 ```

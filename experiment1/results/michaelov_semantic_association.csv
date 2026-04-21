@@ -5499,3 +5499,503 @@
 497,reward,Implaus,10,4.61,0.0,Water was leaking out from the hole in the reward,Water was leaking out from the hole in the,0.9856586,BERTWE,FacebookAI/xlm-roberta-large
 498,country,Implaus,29,4.64,0.0,"Rushing out, he forgot to take his country","Rushing out, he forgot to take his",0.98410785,BERTWE,FacebookAI/xlm-roberta-large
 499,letter,Implaus,70,4.74,0.0,"At that time, the boys lived down by the river in a letter","At that time, the boys lived down by the river in a",0.990654,BERTWE,FacebookAI/xlm-roberta-large
+0,raise,BC,1,2.55,0.2258064516129032,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major raise","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",0.33877093,SE,whaleloops/phrase-bert
+1,couch,BC,8,1.21,0.1875,The cigar burned a hole in the couch,The cigar burned a hole in the,0.46743265,SE,whaleloops/phrase-bert
+2,try,BC,11,1.33,0.0344827586206896,"His first film was a failure, but he learned some techniques in that first try","His first film was a failure, but he learned some techniques in that first",0.3809623,SE,whaleloops/phrase-bert
+3,look,BC,17,1.79,0.03125,He was hired for the job because of his fresh new look,He was hired for the job because of his fresh new,0.2547859,SE,whaleloops/phrase-bert
+4,print,BC,18,1.46,0.0689655172413793,The journal issue that has the new article about diseases of the eye is still in print,The journal issue that has the new article about diseases of the eye is still in,0.39567327,SE,whaleloops/phrase-bert
+5,ball,BC,22,1.33,0.03125,Every spring they held the annual ball,Every spring they held the annual,0.19691712,SE,whaleloops/phrase-bert
+6,wheels,BC,23,1.63,0.09375,"Penelope started to assemble her new bicycle, but was missing the wheels","Penelope started to assemble her new bicycle, but was missing the",0.48179823,SE,whaleloops/phrase-bert
+7,management,BC,24,1.25,0.1875,The restaurant will reopen with new management,The restaurant will reopen with new,0.32154992,SE,whaleloops/phrase-bert
+8,bugs,BC,28,1.13,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of bugs,Jennifer disliked walking under the trees at the edge of the park because they were always full of,0.48852703,SE,whaleloops/phrase-bert
+9,pretty,BC,36,1.28,0.3125,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or pretty","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",0.5120138,SE,whaleloops/phrase-bert
+10,print,BC,37,1.73,0.0689655172413793,I don't know why people like to see their initials in print,I don't know why people like to see their initials in,0.4988613,SE,whaleloops/phrase-bert
+11,rare,BC,38,1.28,0.15625,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very rare,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,0.5101286,SE,whaleloops/phrase-bert
+12,temple,BC,39,1.22,0.2903225806451613,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's temple,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,0.5045315,SE,whaleloops/phrase-bert
+13,police,BC,40,1.39,0.2413793103448276,He took a job training dogs for the police,He took a job training dogs for the,0.31560048,SE,whaleloops/phrase-bert
+14,orchestra,BC,41,1.11,0.2666666666666666,The conductor gave detailed instructions to the orchestra,The conductor gave detailed instructions to the,0.4625715,SE,whaleloops/phrase-bert
+15,cards,BC,45,1.03,0.125,"Down in the basement, Steve and Robert were playing cards","Down in the basement, Steve and Robert were playing",0.426306,SE,whaleloops/phrase-bert
+16,company,BC,47,1.13,0.4137931034482758,"After the most recent price increase, the small business owner decided to order his office supplies from another company","After the most recent price increase, the small business owner decided to order his office supplies from another",0.43237063,SE,whaleloops/phrase-bert
+17,dog,BC,48,1.07,0.21875,Sharon was sad that she had lost her dog,Sharon was sad that she had lost her,0.32922226,SE,whaleloops/phrase-bert
+18,combat,BC,50,2.21,0.4482758620689655,"All of armed services will admit women, but females are barred from combat","All of armed services will admit women, but females are barred from",0.4414809,SE,whaleloops/phrase-bert
+19,cheap,BC,51,1.44,0.1724137931034483,"After the divorce, she had to move out of the expensive house to an apartment that was cheap","After the divorce, she had to move out of the expensive house to an apartment that was",0.39145702,SE,whaleloops/phrase-bert
+20,morals,BC,52,1.13,0.4137931034482758,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his morals","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",0.50328135,SE,whaleloops/phrase-bert
+21,hilarious,BC,53,1.32,0.3571428571428571,"Some of his jokes were crummy, but those one-liners were hilarious","Some of his jokes were crummy, but those one-liners were",0.71764904,SE,whaleloops/phrase-bert
+22,restaurant,BC,60,1.74,0.4827586206896552,The inspector from the health department found a roach in a very expensive restaurant,The inspector from the health department found a roach in a very expensive,0.51569134,SE,whaleloops/phrase-bert
+23,felon,BC,61,1.03,0.1428571428571428,The conductor had no idea that the train had been boarded by a known felon,The conductor had no idea that the train had been boarded by a known,0.40495062,SE,whaleloops/phrase-bert
+24,medicine,BC,64,1.22,0.28125,The nurse brought him a glass of juice and his medicine,The nurse brought him a glass of juice and his,0.484709,SE,whaleloops/phrase-bert
+25,school,BC,65,1.21,0.2857142857142857,The teacher was not looking forward to another year of school,The teacher was not looking forward to another year of,0.60770094,SE,whaleloops/phrase-bert
+26,year,BC,67,1.31,0.2857142857142857,Steve skipped his annual checkup for another year,Steve skipped his annual checkup for another,0.39693332,SE,whaleloops/phrase-bert
+27,vague,BC,72,1.33,0.3103448275862069,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately vague","The candidate wanted to please everyone without making any commitments, so his speech was deliberately",0.502794,SE,whaleloops/phrase-bert
+28,plants,BC,74,1.29,0.1785714285714285,She poured water on the plants,She poured water on the,0.39971864,SE,whaleloops/phrase-bert
+29,modern,BC,81,1.3,0.5,"Mark liked the older houses, but Susan wanted to buy one that was new and modern","Mark liked the older houses, but Susan wanted to buy one that was new and",0.36057124,SE,whaleloops/phrase-bert
+30,doctor,BC,82,1.06,0.1428571428571428,"In an old sitcom, he was the wise family doctor","In an old sitcom, he was the wise family",0.29167354,SE,whaleloops/phrase-bert
+31,censored,BC,83,1.56,0.1875,"The government controlled the news media, so most of the reports from the war zone were censored","The government controlled the news media, so most of the reports from the war zone were",0.5162841,SE,whaleloops/phrase-bert
+32,medal,BC,84,1.18,0.28125,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold medal","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",0.41745925,SE,whaleloops/phrase-bert
+33,pool,BC,85,1.18,0.25,"During the summer, the children hung out at the pool","During the summer, the children hung out at the",0.5209191,SE,whaleloops/phrase-bert
+34,heroic,BC,86,1.7,0.0625,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be heroic","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",0.5505074,SE,whaleloops/phrase-bert
+35,diary,BC,88,1.33,0.5517241379310345,The little girl kept a lock on her diary,The little girl kept a lock on her,0.51271546,SE,whaleloops/phrase-bert
+36,plane,BC,89,2.0,0.2,"Flying low above her, Bernice could hear the plane","Flying low above her, Bernice could hear the",0.4478331,SE,whaleloops/phrase-bert
+37,car,BC,97,1.54,0.3,Perry heard a grinding noise coming from his car,Perry heard a grinding noise coming from his,0.32272995,SE,whaleloops/phrase-bert
+38,complain,BC,98,1.7,0.53125,"If Jim's manager is incompetent, he has a legitimate right to complain","If Jim's manager is incompetent, he has a legitimate right to",0.3989239,SE,whaleloops/phrase-bert
+39,villain,BC,101,1.82,0.6333333333333333,"In the best part of the movie, the hero has to impersonate the villain","In the best part of the movie, the hero has to impersonate the",0.5974962,SE,whaleloops/phrase-bert
+40,crown,BC,103,1.38,0.46875,The princess wore a crown,The princess wore a,0.6203831,SE,whaleloops/phrase-bert
+41,drum,BC,106,1.34,0.25,Jason was disappointed when the other scouts scared off the elk by loudly beating the drum,Jason was disappointed when the other scouts scared off the elk by loudly beating the,0.43101633,SE,whaleloops/phrase-bert
+42,ruined,BC,107,1.17,0.09375,"After the flood, the house smelled of mildew and everything in it was ruined","After the flood, the house smelled of mildew and everything in it was",0.55892205,SE,whaleloops/phrase-bert
+43,accident,BC,109,1.2,0.2413793103448276,Everyone on the scene gathered around to look at the accident,Everyone on the scene gathered around to look at the,0.39240614,SE,whaleloops/phrase-bert
+44,tied,BC,115,1.78,0.5357142857142857,The final score of the game was tied,The final score of the game was,0.4956618,SE,whaleloops/phrase-bert
+45,exhausted,BC,117,1.48,0.3333333333333333,"After swimming the English Channel, Bonita was cold and completely exhausted","After swimming the English Channel, Bonita was cold and completely",0.45974264,SE,whaleloops/phrase-bert
+46,confidence,BC,120,1.48,0.46875,"She had the data to back up everything she said, so the hostile questions did not shake her confidence","She had the data to back up everything she said, so the hostile questions did not shake her",0.4517943,SE,whaleloops/phrase-bert
+47,fabric,BC,125,1.64,0.2857142857142857,"The new dress was very pretty, but it was cut from an unusual fabric","The new dress was very pretty, but it was cut from an unusual",0.6057043,SE,whaleloops/phrase-bert
+48,run,BC,128,1.24,0.2758620689655172,"When the little girl saw the big dog lumbering towards her, she began to run","When the little girl saw the big dog lumbering towards her, she began to",0.5248858,SE,whaleloops/phrase-bert
+49,stadium,BC,132,1.3,0.4482758620689655,"From her house a half mile away, Diana could still hear the loud cheers coming from the stadium","From her house a half mile away, Diana could still hear the loud cheers coming from the",0.37109557,SE,whaleloops/phrase-bert
+50,storm,BC,133,1.36,0.4333333333333333,Five ships did not survive the storm,Five ships did not survive the,0.3816542,SE,whaleloops/phrase-bert
+51,accident,BC,135,1.09,0.4642857142857143,The paramedics on the scene helped the passengers after the big car accident,The paramedics on the scene helped the passengers after the big car,0.49837443,SE,whaleloops/phrase-bert
+52,crash,BC,136,1.42,0.2333333333333333,The pilot spoke to an air traffic controller just before the crash,The pilot spoke to an air traffic controller just before the,0.4089107,SE,whaleloops/phrase-bert
+53,lunch,BC,140,1.38,0.2857142857142857,The boy scouts started a long hike through the forest after having a big lunch,The boy scouts started a long hike through the forest after having a big,0.4355493,SE,whaleloops/phrase-bert
+54,roads,BC,143,1.41,0.1785714285714285,"When traveling, Roger prefers to stick to major roads","When traveling, Roger prefers to stick to major",0.45448524,SE,whaleloops/phrase-bert
+55,needle,BC,147,1.52,0.6785714285714286,"While hemming a pair of pants, Bridget accidentally dropped her needle","While hemming a pair of pants, Bridget accidentally dropped her",0.489551,SE,whaleloops/phrase-bert
+56,bear,BC,148,1.25,0.4137931034482758,The rangers say that somewhere in the state park is a bear,The rangers say that somewhere in the state park is a,0.42245212,SE,whaleloops/phrase-bert
+57,stress,BC,153,1.09,0.4642857142857143,The doctor told him his headaches were due to stress,The doctor told him his headaches were due to,0.5020242,SE,whaleloops/phrase-bert
+58,hands,BC,156,1.09,0.5333333333333333,"The groups in the parade walked by slowly, each waving their hands","The groups in the parade walked by slowly, each waving their",0.40272593,SE,whaleloops/phrase-bert
+59,cure,BC,158,1.63,0.5,"The little girl was very sick, but unfortunately there was no cure","The little girl was very sick, but unfortunately there was no",0.5323493,SE,whaleloops/phrase-bert
+60,view,BC,161,1.18,0.5666666666666667,"The meteor shower should have been spectacular, but the city lights blocked the view","The meteor shower should have been spectacular, but the city lights blocked the",0.33392,SE,whaleloops/phrase-bert
+61,end,BC,162,1.21,0.6206896551724138,She was unsure how the book would end,She was unsure how the book would,0.23006542,SE,whaleloops/phrase-bert
+62,sales,BC,166,1.59,0.5333333333333333,"He was desperate for a job, so finally took something doing door to door sales","He was desperate for a job, so finally took something doing door to door",0.33359507,SE,whaleloops/phrase-bert
+63,terms,BC,168,1.89,0.6785714285714286,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical terms,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,0.35190463,SE,whaleloops/phrase-bert
+64,young,BC,169,1.7,0.8275862068965517,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were young","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",0.45297408,SE,whaleloops/phrase-bert
+65,business,BC,172,1.25,0.625,"In the window, they posted the hours they were open for business","In the window, they posted the hours they were open for",0.31402472,SE,whaleloops/phrase-bert
+66,contagious,BC,173,1.61,0.5517241379310345,They sent the kids with measles home from school because they were contagious,They sent the kids with measles home from school because they were,0.42629188,SE,whaleloops/phrase-bert
+67,water,BC,174,1.5,0.6896551724137931,"Outside, Cora could hear the running water","Outside, Cora could hear the running",0.49911767,SE,whaleloops/phrase-bert
+68,walk,BC,177,1.64,0.4642857142857143,At night they often took a short walk,At night they often took a short,0.43760258,SE,whaleloops/phrase-bert
+69,published,BC,182,1.36,0.5483870967741935,The wealthy author always points out that she wrote four novels before one was published,The wealthy author always points out that she wrote four novels before one was,0.4745515,SE,whaleloops/phrase-bert
+70,mouse,BC,185,1.48,0.9285714285714286,The kitten waited patiently because behind the refrigerator was a mouse,The kitten waited patiently because behind the refrigerator was a,0.5813912,SE,whaleloops/phrase-bert
+71,cold,BC,187,1.33,0.7931034482758621,Norton hates getting up on winter mornings because it is always cold,Norton hates getting up on winter mornings because it is always,0.55483705,SE,whaleloops/phrase-bert
+72,soil,BC,190,1.09,0.8620689655172413,The fertilizer enriched the soil,The fertilizer enriched the,0.56540227,SE,whaleloops/phrase-bert
+73,note,BC,193,1.09,0.6333333333333333,The young girl passed her friend a note,The young girl passed her friend a,0.45154577,SE,whaleloops/phrase-bert
+74,perfect,BC,196,1.3,0.4827586206896552,He tinkered with the engine every weekend until it was absolutely perfect,He tinkered with the engine every weekend until it was absolutely,0.32625863,SE,whaleloops/phrase-bert
+75,shore,BC,197,1.36,0.5625,"When Diane heard the shark warning, she swam as fast as she could for shore","When Diane heard the shark warning, she swam as fast as she could for",0.42347643,SE,whaleloops/phrase-bert
+76,church,BC,198,1.42,0.7241379310344828,Michael could hear the bells ringing in the tower of the church,Michael could hear the bells ringing in the tower of the,0.49829572,SE,whaleloops/phrase-bert
+77,dirty,BC,200,1.12,0.875,"When he got home from work on the construction site, his clothes were always dirty","When he got home from work on the construction site, his clothes were always",0.512118,SE,whaleloops/phrase-bert
+78,sun,BC,201,1.68,0.7666666666666667,Kevin propped his head up with a pillow as he basked in the hot sun,Kevin propped his head up with a pillow as he basked in the hot,0.5256851,SE,whaleloops/phrase-bert
+79,price,BC,203,1.38,0.5357142857142857,He bought it without even asking the price,He bought it without even asking the,0.49609432,SE,whaleloops/phrase-bert
+80,ready,BC,204,1.3,0.6206896551724138,"Barry has considered proposing to his girlfriend, but he wants to wait until he is ready","Barry has considered proposing to his girlfriend, but he wants to wait until he is",0.3492525,SE,whaleloops/phrase-bert
+81,car,BC,205,1.26,0.71875,John was disappointed to discover a scratch on his new car,John was disappointed to discover a scratch on his new,0.2662906,SE,whaleloops/phrase-bert
+82,brain,BC,206,1.31,0.6666666666666666,He was afraid that doing drugs would damage his brain,He was afraid that doing drugs would damage his,0.41105834,SE,whaleloops/phrase-bert
+83,married,BC,207,1.53,0.3448275862068966,"They've been living together for a long time, but don't think they're actually married","They've been living together for a long time, but don't think they're actually",0.5348924,SE,whaleloops/phrase-bert
+84,trouble,BC,208,1.32,0.65625,Dennis the Menance was known for making trouble,Dennis the Menance was known for making,0.39238966,SE,whaleloops/phrase-bert
+85,cover,BC,211,1.03,0.65625,When the shooting started they ran for cover,When the shooting started they ran for,0.4186778,SE,whaleloops/phrase-bert
+86,real,BC,212,1.59,0.4482758620689655,The federal agents examined the hundred dollar bill with a microscope to see if it was real,The federal agents examined the hundred dollar bill with a microscope to see if it was,0.3537645,SE,whaleloops/phrase-bert
+87,simmer,BC,213,1.33,0.6551724137931034,Eva turned down the heat and left the sauce on the stove to simmer,Eva turned down the heat and left the sauce on the stove to,0.51841843,SE,whaleloops/phrase-bert
+88,shadow,BC,215,1.31,0.8214285714285714,"Alone in the canyon, he was so spooked he was scared by his own shadow","Alone in the canyon, he was so spooked he was scared by his own",0.48160648,SE,whaleloops/phrase-bert
+89,lie,BC,220,2.03,0.8571428571428571,Betsy could never tell a lie,Betsy could never tell a,0.47920692,SE,whaleloops/phrase-bert
+90,room,BC,221,1.27,0.84375,The bad boy was sent to his room,The bad boy was sent to his,0.35018772,SE,whaleloops/phrase-bert
+91,scars,BC,223,1.39,0.7241379310344828,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his scars","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",0.49193037,SE,whaleloops/phrase-bert
+92,fear,BC,226,1.33,0.65625,"Trying to evade their captors, the escaped prisoners of war lived in constant fear","Trying to evade their captors, the escaped prisoners of war lived in constant",0.5248251,SE,whaleloops/phrase-bert
+93,sharp,BC,228,1.11,0.6551724137931034,The tip of the knife was sharp,The tip of the knife was,0.6173244,SE,whaleloops/phrase-bert
+94,stretch,BC,230,1.25,0.5,The little girl pulled on the rubber band to see how far it would stretch,The little girl pulled on the rubber band to see how far it would,0.54366374,SE,whaleloops/phrase-bert
+95,enemy,BC,232,1.24,0.34375,The soldiers had special night vision goggles so they could see the enemy,The soldiers had special night vision goggles so they could see the,0.40219733,SE,whaleloops/phrase-bert
+96,poor,BC,233,1.09,0.9,George was born into a wealthy family and has no idea what it's like to be poor,George was born into a wealthy family and has no idea what it's like to be,0.54334867,SE,whaleloops/phrase-bert
+97,cave,BC,237,1.71,0.7586206896551724,"Looking for bats, Karen descended into the depths of the cave","Looking for bats, Karen descended into the depths of the",0.56774825,SE,whaleloops/phrase-bert
+98,antenna,BC,239,1.44,0.6071428571428571,We finally got a decent picture on the TV after an hour of adjusting the antenna,We finally got a decent picture on the TV after an hour of adjusting the,0.43762225,SE,whaleloops/phrase-bert
+99,stock,BC,240,1.12,0.7241379310344828,It took a week to get his car fixed because the parts were out of stock,It took a week to get his car fixed because the parts were out of,0.36953294,SE,whaleloops/phrase-bert
+100,party,BC,242,1.16,0.875,The dispute was settled by a third party,The dispute was settled by a third,0.33310813,SE,whaleloops/phrase-bert
+101,soon,BC,244,1.24,0.8333333333333334,Our guests should be arriving soon,Our guests should be arriving,0.5259238,SE,whaleloops/phrase-bert
+102,oven,BC,245,1.3,0.896551724137931,The dough was put in the hot oven,The dough was put in the hot,0.707322,SE,whaleloops/phrase-bert
+103,short,BC,250,1.03,0.5625,Andrew was glad that the meeting was very short,Andrew was glad that the meeting was very,0.38773307,SE,whaleloops/phrase-bert
+104,bus,BC,252,2.07,0.9,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour bus","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",0.43094245,SE,whaleloops/phrase-bert
+105,shore,BC,254,1.78,0.9,Most shark attacks occur very close to shore,Most shark attacks occur very close to,0.29499096,SE,whaleloops/phrase-bert
+106,deal,BC,255,1.3,0.8620689655172413,He didn't have to spend much money on the car because he found an incredible deal,He didn't have to spend much money on the car because he found an incredible,0.3885564,SE,whaleloops/phrase-bert
+107,school,BC,256,1.0,0.875,The wealthy child went to a private school,The wealthy child went to a private,0.5252318,SE,whaleloops/phrase-bert
+108,lights,BC,260,1.0,0.65625,"When you go to bed, turn off the lights","When you go to bed, turn off the",0.5659842,SE,whaleloops/phrase-bert
+109,leash,BC,261,1.18,0.90625,George must keep his pet on a leash,George must keep his pet on a,0.43391076,SE,whaleloops/phrase-bert
+110,piles,BC,263,1.36,0.7241379310344828,"He didn't have time to file everything on his desk, so he organized it into two piles","He didn't have time to file everything on his desk, so he organized it into two",0.48509455,SE,whaleloops/phrase-bert
+111,speak,BC,265,1.25,0.8571428571428571,The whole town came to hear their mayor speak,The whole town came to hear their mayor,0.38352972,SE,whaleloops/phrase-bert
+112,arm,BC,273,1.16,0.9642857142857144,Josie found she could not bend the elbow of her broken arm,Josie found she could not bend the elbow of her broken,0.49874648,SE,whaleloops/phrase-bert
+113,wrong,BC,275,1.18,0.6428571428571429,It's hard to admit when one is wrong,It's hard to admit when one is,0.5694772,SE,whaleloops/phrase-bert
+114,said,BC,276,1.36,0.8666666666666667,Vic asked her to repeat what she had said,Vic asked her to repeat what she had,0.6249764,SE,whaleloops/phrase-bert
+115,palace,BC,281,1.39,0.8275862068965517,When they were in London they visited Buckingham palace,When they were in London they visited Buckingham,0.30549386,SE,whaleloops/phrase-bert
+116,mission,BC,282,1.54,0.8620689655172413,The agent was sent to South America on a secret mission,The agent was sent to South America on a secret,0.4576383,SE,whaleloops/phrase-bert
+117,air,BC,283,1.55,0.9310344827586208,Sam knew that rain was coming because he could smell it in the air,Sam knew that rain was coming because he could smell it in the,0.5078924,SE,whaleloops/phrase-bert
+118,raise,BC,286,1.03,0.9333333333333332,His boss refused to give him a raise,His boss refused to give him a,0.31370485,SE,whaleloops/phrase-bert
+119,sleep,BC,287,1.07,0.9642857142857144,She flew in late last night and really didn't get much sleep,She flew in late last night and really didn't get much,0.3979789,SE,whaleloops/phrase-bert
+120,search,BC,288,1.41,0.8620689655172413,"After a week, they gave up on the missing hikers and called off the search","After a week, they gave up on the missing hikers and called off the",0.40548146,SE,whaleloops/phrase-bert
+121,bonus,Rel,1,2.78,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major bonus","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",0.42398506,SE,whaleloops/phrase-bert
+122,sofa,Rel,8,1.25,0.03125,The cigar burned a hole in the sofa,The cigar burned a hole in the,0.45509857,SE,whaleloops/phrase-bert
+123,effort,Rel,11,1.39,0.0,"His first film was a failure, but he learned some techniques in that first effort","His first film was a failure, but he learned some techniques in that first",0.39622587,SE,whaleloops/phrase-bert
+124,image,Rel,17,1.71,0.0,He was hired for the job because of his fresh new image,He was hired for the job because of his fresh new,0.21633632,SE,whaleloops/phrase-bert
+125,press,Rel,18,2.04,0.0344827586206896,The journal issue that has the new article about diseases of the eye is still in press,The journal issue that has the new article about diseases of the eye is still in,0.35335255,SE,whaleloops/phrase-bert
+126,dance,Rel,22,1.0,0.0,Every spring they held the annual dance,Every spring they held the annual,0.3068307,SE,whaleloops/phrase-bert
+127,tires,Rel,23,1.96,0.0625,"Penelope started to assemble her new bicycle, but was missing the tires","Penelope started to assemble her new bicycle, but was missing the",0.46069092,SE,whaleloops/phrase-bert
+128,ownership,Rel,24,1.15,0.0,The restaurant will reopen with new ownership,The restaurant will reopen with new,0.2153344,SE,whaleloops/phrase-bert
+129,insects,Rel,28,1.39,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of insects,Jennifer disliked walking under the trees at the edge of the park because they were always full of,0.45822418,SE,whaleloops/phrase-bert
+130,attractive,Rel,36,1.48,0.0,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or attractive","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",0.49556953,SE,whaleloops/phrase-bert
+131,ink,Rel,37,1.79,0.0344827586206896,I don't know why people like to see their initials in ink,I don't know why people like to see their initials in,0.54185534,SE,whaleloops/phrase-bert
+132,unique,Rel,38,1.63,0.0,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very unique,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,0.42095622,SE,whaleloops/phrase-bert
+133,shrine,Rel,39,1.79,0.0,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's shrine,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,0.46477443,SE,whaleloops/phrase-bert
+134,military,Rel,40,1.52,0.0,He took a job training dogs for the military,He took a job training dogs for the,0.28299162,SE,whaleloops/phrase-bert
+135,choir,Rel,41,1.32,0.0,The conductor gave detailed instructions to the choir,The conductor gave detailed instructions to the,0.39550957,SE,whaleloops/phrase-bert
+136,poker,Rel,45,1.3,0.09375,"Down in the basement, Steve and Robert were playing poker","Down in the basement, Steve and Robert were playing",0.4783085,SE,whaleloops/phrase-bert
+137,business,Rel,47,1.15,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another business","After the most recent price increase, the small business owner decided to order his office supplies from another",0.48964578,SE,whaleloops/phrase-bert
+138,puppy,Rel,48,1.06,0.09375,Sharon was sad that she had lost her puppy,Sharon was sad that she had lost her,0.39591256,SE,whaleloops/phrase-bert
+139,fighting,Rel,50,2.81,0.0689655172413793,"All of armed services will admit women, but females are barred from fighting","All of armed services will admit women, but females are barred from",0.37768212,SE,whaleloops/phrase-bert
+140,affordable,Rel,51,1.19,0.1034482758620689,"After the divorce, she had to move out of the expensive house to an apartment that was affordable","After the divorce, she had to move out of the expensive house to an apartment that was",0.42272475,SE,whaleloops/phrase-bert
+141,values,Rel,52,1.75,0.0689655172413793,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his values","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",0.50437,SE,whaleloops/phrase-bert
+142,humorous,Rel,53,1.25,0.0,"Some of his jokes were crummy, but those one-liners were humorous","Some of his jokes were crummy, but those one-liners were",0.7042053,SE,whaleloops/phrase-bert
+143,cafe,Rel,60,1.47,0.0,The inspector from the health department found a roach in a very expensive cafe,The inspector from the health department found a roach in a very expensive,0.46872765,SE,whaleloops/phrase-bert
+144,convict,Rel,61,1.3,0.0357142857142857,The conductor had no idea that the train had been boarded by a known convict,The conductor had no idea that the train had been boarded by a known,0.38149497,SE,whaleloops/phrase-bert
+145,pills,Rel,64,1.52,0.0625,The nurse brought him a glass of juice and his pills,The nurse brought him a glass of juice and his,0.6221205,SE,whaleloops/phrase-bert
+146,classes,Rel,65,1.5,0.0,The teacher was not looking forward to another year of classes,The teacher was not looking forward to another year of,0.44533882,SE,whaleloops/phrase-bert
+147,month,Rel,67,2.46,0.0,Steve skipped his annual checkup for another month,Steve skipped his annual checkup for another,0.5820001,SE,whaleloops/phrase-bert
+148,ambiguous,Rel,72,1.3,0.0689655172413793,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately ambiguous","The candidate wanted to please everyone without making any commitments, so his speech was deliberately",0.50338686,SE,whaleloops/phrase-bert
+149,roses,Rel,74,1.24,0.0,She poured water on the roses,She poured water on the,0.5371331,SE,whaleloops/phrase-bert
+150,contemporary,Rel,81,1.06,0.0333333333333333,"Mark liked the older houses, but Susan wanted to buy one that was new and contemporary","Mark liked the older houses, but Susan wanted to buy one that was new and",0.3662143,SE,whaleloops/phrase-bert
+151,physician,Rel,82,1.64,0.0,"In an old sitcom, he was the wise family physician","In an old sitcom, he was the wise family",0.26108694,SE,whaleloops/phrase-bert
+152,screened,Rel,83,1.43,0.0,"The government controlled the news media, so most of the reports from the war zone were screened","The government controlled the news media, so most of the reports from the war zone were",0.4245488,SE,whaleloops/phrase-bert
+153,trophy,Rel,84,1.35,0.03125,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold trophy","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",0.39582542,SE,whaleloops/phrase-bert
+154,lake,Rel,85,1.15,0.0,"During the summer, the children hung out at the lake","During the summer, the children hung out at the",0.39911816,SE,whaleloops/phrase-bert
+155,courageous,Rel,86,1.93,0.0,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be courageous","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",0.57068646,SE,whaleloops/phrase-bert
+156,journal,Rel,88,1.5,0.0,The little girl kept a lock on her journal,The little girl kept a lock on her,0.334978,SE,whaleloops/phrase-bert
+157,jet,Rel,89,2.41,0.0333333333333333,"Flying low above her, Bernice could hear the jet","Flying low above her, Bernice could hear the",0.474663,SE,whaleloops/phrase-bert
+158,engine,Rel,97,1.23,0.1,Perry heard a grinding noise coming from his engine,Perry heard a grinding noise coming from his,0.3402223,SE,whaleloops/phrase-bert
+159,argue,Rel,98,2.58,0.0,"If Jim's manager is incompetent, he has a legitimate right to argue","If Jim's manager is incompetent, he has a legitimate right to",0.37399393,SE,whaleloops/phrase-bert
+160,criminal,Rel,101,1.67,0.0666666666666666,"In the best part of the movie, the hero has to impersonate the criminal","In the best part of the movie, the hero has to impersonate the",0.40100837,SE,whaleloops/phrase-bert
+161,hat,Rel,103,1.5,0.0,The princess wore a hat,The princess wore a,0.56163657,SE,whaleloops/phrase-bert
+162,pans,Rel,106,1.55,0.0,Jason was disappointed when the other scouts scared off the elk by loudly beating the pans,Jason was disappointed when the other scouts scared off the elk by loudly beating the,0.2992434,SE,whaleloops/phrase-bert
+163,destroyed,Rel,107,1.3,0.03125,"After the flood, the house smelled of mildew and everything in it was destroyed","After the flood, the house smelled of mildew and everything in it was",0.47158757,SE,whaleloops/phrase-bert
+164,crash,Rel,109,1.18,0.0,Everyone on the scene gathered around to look at the crash,Everyone on the scene gathered around to look at the,0.39470088,SE,whaleloops/phrase-bert
+165,even,Rel,115,2.22,0.0,The final score of the game was even,The final score of the game was,0.3914137,SE,whaleloops/phrase-bert
+166,beat,Rel,117,1.08,0.0,"After swimming the English Channel, Bonita was cold and completely beat","After swimming the English Channel, Bonita was cold and completely",0.33503342,SE,whaleloops/phrase-bert
+167,composure,Rel,120,1.13,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her composure","She had the data to back up everything she said, so the hostile questions did not shake her",0.4428673,SE,whaleloops/phrase-bert
+168,material,Rel,125,1.44,0.1071428571428571,"The new dress was very pretty, but it was cut from an unusual material","The new dress was very pretty, but it was cut from an unusual",0.4635264,SE,whaleloops/phrase-bert
+169,flee,Rel,128,1.3,0.0,"When the little girl saw the big dog lumbering towards her, she began to flee","When the little girl saw the big dog lumbering towards her, she began to",0.4122562,SE,whaleloops/phrase-bert
+170,stands,Rel,132,1.39,0.0344827586206896,"From her house a half mile away, Diana could still hear the loud cheers coming from the stands","From her house a half mile away, Diana could still hear the loud cheers coming from the",0.4000486,SE,whaleloops/phrase-bert
+171,tsunami,Rel,133,1.3,0.0666666666666666,Five ships did not survive the tsunami,Five ships did not survive the,0.4532555,SE,whaleloops/phrase-bert
+172,wreck,Rel,135,1.09,0.0357142857142857,The paramedics on the scene helped the passengers after the big car wreck,The paramedics on the scene helped the passengers after the big car,0.5419166,SE,whaleloops/phrase-bert
+173,collision,Rel,136,1.22,0.0,The pilot spoke to an air traffic controller just before the collision,The pilot spoke to an air traffic controller just before the,0.42636997,SE,whaleloops/phrase-bert
+174,dinner,Rel,140,1.71,0.0,The boy scouts started a long hike through the forest after having a big dinner,The boy scouts started a long hike through the forest after having a big,0.38968086,SE,whaleloops/phrase-bert
+175,streets,Rel,143,1.18,0.0,"When traveling, Roger prefers to stick to major streets","When traveling, Roger prefers to stick to major",0.34633434,SE,whaleloops/phrase-bert
+176,pin,Rel,147,1.24,0.0357142857142857,"While hemming a pair of pants, Bridget accidentally dropped her pin","While hemming a pair of pants, Bridget accidentally dropped her",0.49331272,SE,whaleloops/phrase-bert
+177,cub,Rel,148,1.48,0.0,The rangers say that somewhere in the state park is a cub,The rangers say that somewhere in the state park is a,0.3720608,SE,whaleloops/phrase-bert
+178,tension,Rel,153,1.41,0.0,The doctor told him his headaches were due to tension,The doctor told him his headaches were due to,0.4167447,SE,whaleloops/phrase-bert
+179,arms,Rel,156,1.39,0.0,"The groups in the parade walked by slowly, each waving their arms","The groups in the parade walked by slowly, each waving their",0.3748808,SE,whaleloops/phrase-bert
+180,remedy,Rel,158,1.78,0.0625,"The little girl was very sick, but unfortunately there was no remedy","The little girl was very sick, but unfortunately there was no",0.47203252,SE,whaleloops/phrase-bert
+181,sight,Rel,161,1.5,0.0,"The meteor shower should have been spectacular, but the city lights blocked the sight","The meteor shower should have been spectacular, but the city lights blocked the",0.40955395,SE,whaleloops/phrase-bert
+182,conclude,Rel,162,1.3,0.0,She was unsure how the book would conclude,She was unsure how the book would,0.2698308,SE,whaleloops/phrase-bert
+183,solicitation,Rel,166,1.88,0.0,"He was desperate for a job, so finally took something doing door to door solicitation","He was desperate for a job, so finally took something doing door to door",0.43987003,SE,whaleloops/phrase-bert
+184,words,Rel,168,1.59,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical words,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,0.38896024,SE,whaleloops/phrase-bert
+185,older,Rel,169,1.72,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were older","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",0.49048367,SE,whaleloops/phrase-bert
+186,service,Rel,172,1.03,0.03125,"In the window, they posted the hours they were open for service","In the window, they posted the hours they were open for",0.37068504,SE,whaleloops/phrase-bert
+187,infectious,Rel,173,1.24,0.0,They sent the kids with measles home from school because they were infectious,They sent the kids with measles home from school because they were,0.4433867,SE,whaleloops/phrase-bert
+188,river,Rel,174,1.32,0.0,"Outside, Cora could hear the running river","Outside, Cora could hear the running",0.5316722,SE,whaleloops/phrase-bert
+189,stroll,Rel,177,1.3,0.1071428571428571,At night they often took a short stroll,At night they often took a short,0.48567975,SE,whaleloops/phrase-bert
+190,printed,Rel,182,1.4,0.0,The wealthy author always points out that she wrote four novels before one was printed,The wealthy author always points out that she wrote four novels before one was,0.3566979,SE,whaleloops/phrase-bert
+191,rat,Rel,185,1.85,0.0,The kitten waited patiently because behind the refrigerator was a rat,The kitten waited patiently because behind the refrigerator was a,0.55488944,SE,whaleloops/phrase-bert
+192,chilly,Rel,187,1.21,0.0344827586206896,Norton hates getting up on winter mornings because it is always chilly,Norton hates getting up on winter mornings because it is always,0.5436623,SE,whaleloops/phrase-bert
+193,dirt,Rel,190,1.11,0.0,The fertilizer enriched the dirt,The fertilizer enriched the,0.39862147,SE,whaleloops/phrase-bert
+194,letter,Rel,193,1.03,0.0,The young girl passed her friend a letter,The young girl passed her friend a,0.40626925,SE,whaleloops/phrase-bert
+195,correct,Rel,196,2.29,0.0,He tinkered with the engine every weekend until it was absolutely correct,He tinkered with the engine every weekend until it was absolutely,0.27224326,SE,whaleloops/phrase-bert
+196,land,Rel,197,1.11,0.09375,"When Diane heard the shark warning, she swam as fast as she could for land","When Diane heard the shark warning, she swam as fast as she could for",0.23585126,SE,whaleloops/phrase-bert
+197,cathedral,Rel,198,1.12,0.1034482758620689,Michael could hear the bells ringing in the tower of the cathedral,Michael could hear the bells ringing in the tower of the,0.5634655,SE,whaleloops/phrase-bert
+198,filthy,Rel,200,1.29,0.03125,"When he got home from work on the construction site, his clothes were always filthy","When he got home from work on the construction site, his clothes were always",0.48950347,SE,whaleloops/phrase-bert
+199,lamp,Rel,201,2.86,0.0,Kevin propped his head up with a pillow as he basked in the hot lamp,Kevin propped his head up with a pillow as he basked in the hot,0.5041848,SE,whaleloops/phrase-bert
+200,cost,Rel,203,1.65,0.0,He bought it without even asking the cost,He bought it without even asking the,0.43201488,SE,whaleloops/phrase-bert
+201,prepared,Rel,204,1.15,0.0,"Barry has considered proposing to his girlfriend, but he wants to wait until he is prepared","Barry has considered proposing to his girlfriend, but he wants to wait until he is",0.30572626,SE,whaleloops/phrase-bert
+202,truck,Rel,205,1.0,0.0,John was disappointed to discover a scratch on his new truck,John was disappointed to discover a scratch on his new,0.30975637,SE,whaleloops/phrase-bert
+203,mind,Rel,206,1.03,0.0,He was afraid that doing drugs would damage his mind,He was afraid that doing drugs would damage his,0.40992954,SE,whaleloops/phrase-bert
+204,engaged,Rel,207,1.89,0.0,"They've been living together for a long time, but don't think they're actually engaged","They've been living together for a long time, but don't think they're actually",0.36134696,SE,whaleloops/phrase-bert
+205,mischief,Rel,208,1.54,0.0625,Dennis the Menance was known for making mischief,Dennis the Menance was known for making,0.49079788,SE,whaleloops/phrase-bert
+206,shelter,Rel,211,1.67,0.0,When the shooting started they ran for shelter,When the shooting started they ran for,0.3646974,SE,whaleloops/phrase-bert
+207,genuine,Rel,212,1.76,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was genuine,The federal agents examined the hundred dollar bill with a microscope to see if it was,0.43457785,SE,whaleloops/phrase-bert
+208,cook,Rel,213,1.26,0.1034482758620689,Eva turned down the heat and left the sauce on the stove to cook,Eva turned down the heat and left the sauce on the stove to,0.6136309,SE,whaleloops/phrase-bert
+209,reflection,Rel,215,1.78,0.0,"Alone in the canyon, he was so spooked he was scared by his own reflection","Alone in the canyon, he was so spooked he was scared by his own",0.3485623,SE,whaleloops/phrase-bert
+210,fib,Rel,220,1.61,0.0,Betsy could never tell a fib,Betsy could never tell a,0.46237668,SE,whaleloops/phrase-bert
+211,bedroom,Rel,221,1.26,0.0,The bad boy was sent to his bedroom,The bad boy was sent to his,0.4140164,SE,whaleloops/phrase-bert
+212,wounds,Rel,223,1.74,0.0689655172413793,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his wounds","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",0.50972235,SE,whaleloops/phrase-bert
+213,terror,Rel,226,1.09,0.03125,"Trying to evade their captors, the escaped prisoners of war lived in constant terror","Trying to evade their captors, the escaped prisoners of war lived in constant",0.5003721,SE,whaleloops/phrase-bert
+214,pointed,Rel,228,1.27,0.0344827586206896,The tip of the knife was pointed,The tip of the knife was,0.64278966,SE,whaleloops/phrase-bert
+215,extend,Rel,230,1.09,0.0,The little girl pulled on the rubber band to see how far it would extend,The little girl pulled on the rubber band to see how far it would,0.32846767,SE,whaleloops/phrase-bert
+216,invaders,Rel,232,1.33,0.0,The soldiers had special night vision goggles so they could see the invaders,The soldiers had special night vision goggles so they could see the,0.4722405,SE,whaleloops/phrase-bert
+217,needy,Rel,233,1.47,0.0,George was born into a wealthy family and has no idea what it's like to be needy,George was born into a wealthy family and has no idea what it's like to be,0.53339463,SE,whaleloops/phrase-bert
+218,cavern,Rel,237,1.5,0.1034482758620689,"Looking for bats, Karen descended into the depths of the cavern","Looking for bats, Karen descended into the depths of the",0.54857886,SE,whaleloops/phrase-bert
+219,wires,Rel,239,1.39,0.0,We finally got a decent picture on the TV after an hour of adjusting the wires,We finally got a decent picture on the TV after an hour of adjusting the,0.3577906,SE,whaleloops/phrase-bert
+220,supply,Rel,240,1.93,0.0,It took a week to get his car fixed because the parts were out of supply,It took a week to get his car fixed because the parts were out of,0.4180386,SE,whaleloops/phrase-bert
+221,person,Rel,242,1.19,0.03125,The dispute was settled by a third person,The dispute was settled by a third,0.22955479,SE,whaleloops/phrase-bert
+222,shortly,Rel,244,1.26,0.0666666666666666,Our guests should be arriving shortly,Our guests should be arriving,0.5528798,SE,whaleloops/phrase-bert
+223,stove,Rel,245,1.89,0.0,The dough was put in the hot stove,The dough was put in the hot,0.71213686,SE,whaleloops/phrase-bert
+224,brief,Rel,250,1.29,0.09375,Andrew was glad that the meeting was very brief,Andrew was glad that the meeting was very,0.40648776,SE,whaleloops/phrase-bert
+225,van,Rel,252,1.84,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour van","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",0.4019518,SE,whaleloops/phrase-bert
+226,land,Rel,254,1.53,0.0666666666666666,Most shark attacks occur very close to land,Most shark attacks occur very close to,0.21303837,SE,whaleloops/phrase-bert
+227,bargain,Rel,255,1.47,0.0,He didn't have to spend much money on the car because he found an incredible bargain,He didn't have to spend much money on the car because he found an incredible,0.39459974,SE,whaleloops/phrase-bert
+228,college,Rel,256,1.22,0.0,The wealthy child went to a private college,The wealthy child went to a private,0.472205,SE,whaleloops/phrase-bert
+229,lamp,Rel,260,1.37,0.0,"When you go to bed, turn off the lamp","When you go to bed, turn off the",0.5567694,SE,whaleloops/phrase-bert
+230,chain,Rel,261,1.38,0.0,George must keep his pet on a chain,George must keep his pet on a,0.42740476,SE,whaleloops/phrase-bert
+231,stacks,Rel,263,1.5,0.0344827586206896,"He didn't have time to file everything on his desk, so he organized it into two stacks","He didn't have time to file everything on his desk, so he organized it into two",0.4870962,SE,whaleloops/phrase-bert
+232,talk,Rel,265,1.57,0.0357142857142857,The whole town came to hear their mayor talk,The whole town came to hear their mayor,0.4615756,SE,whaleloops/phrase-bert
+233,limb,Rel,273,1.57,0.0,Josie found she could not bend the elbow of her broken limb,Josie found she could not bend the elbow of her broken,0.5100217,SE,whaleloops/phrase-bert
+234,incorrect,Rel,275,1.19,0.0,It's hard to admit when one is incorrect,It's hard to admit when one is,0.5666996,SE,whaleloops/phrase-bert
+235,uttered,Rel,276,1.26,0.0,Vic asked her to repeat what she had uttered,Vic asked her to repeat what she had,0.48747504,SE,whaleloops/phrase-bert
+236,castle,Rel,281,1.59,0.0,When they were in London they visited Buckingham castle,When they were in London they visited Buckingham,0.2345074,SE,whaleloops/phrase-bert
+237,assignment,Rel,282,1.13,0.0,The agent was sent to South America on a secret assignment,The agent was sent to South America on a secret,0.40197018,SE,whaleloops/phrase-bert
+238,wind,Rel,283,2.07,0.0,Sam knew that rain was coming because he could smell it in the wind,Sam knew that rain was coming because he could smell it in the,0.54580885,SE,whaleloops/phrase-bert
+239,bonus,Rel,286,1.41,0.0,His boss refused to give him a bonus,His boss refused to give him a,0.4023238,SE,whaleloops/phrase-bert
+240,rest,Rel,287,1.17,0.0357142857142857,She flew in late last night and really didn't get much rest,She flew in late last night and really didn't get much,0.37202305,SE,whaleloops/phrase-bert
+241,hunt,Rel,288,2.0,0.0344827586206896,"After a week, they gave up on the missing hikers and called off the hunt","After a week, they gave up on the missing hikers and called off the",0.44759482,SE,whaleloops/phrase-bert
+242,project,Unrel,1,1.75,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major project","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",0.35887578,SE,whaleloops/phrase-bert
+243,jacket,Unrel,8,1.5,0.03125,The cigar burned a hole in the jacket,The cigar burned a hole in the,0.6227629,SE,whaleloops/phrase-bert
+244,role,Unrel,11,1.44,0.0,"His first film was a failure, but he learned some techniques in that first role","His first film was a failure, but he learned some techniques in that first",0.35523322,SE,whaleloops/phrase-bert
+245,ideas,Unrel,17,1.09,0.15625,He was hired for the job because of his fresh new ideas,He was hired for the job because of his fresh new,0.34606686,SE,whaleloops/phrase-bert
+246,stores,Unrel,18,1.89,0.0344827586206896,The journal issue that has the new article about diseases of the eye is still in stores,The journal issue that has the new article about diseases of the eye is still in,0.38193977,SE,whaleloops/phrase-bert
+247,meeting,Unrel,22,1.21,0.0,Every spring they held the annual meeting,Every spring they held the annual,0.334493,SE,whaleloops/phrase-bert
+248,instructions,Unrel,23,1.36,0.0,"Penelope started to assemble her new bicycle, but was missing the instructions","Penelope started to assemble her new bicycle, but was missing the",0.36986658,SE,whaleloops/phrase-bert
+249,menus,Unrel,24,1.06,0.15625,The restaurant will reopen with new menus,The restaurant will reopen with new,0.45767018,SE,whaleloops/phrase-bert
+250,sap,Unrel,28,1.57,0.0333333333333333,Jennifer disliked walking under the trees at the edge of the park because they were always full of sap,Jennifer disliked walking under the trees at the edge of the park because they were always full of,0.46131593,SE,whaleloops/phrase-bert
+251,abstract,Unrel,36,1.63,0.03125,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or abstract","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",0.41329658,SE,whaleloops/phrase-bert
+252,cement,Unrel,37,1.85,0.0344827586206896,I don't know why people like to see their initials in cement,I don't know why people like to see their initials in,0.39856485,SE,whaleloops/phrase-bert
+253,fragile,Unrel,38,1.46,0.125,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very fragile,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,0.48204848,SE,whaleloops/phrase-bert
+254,statue,Unrel,39,1.24,0.064516129032258,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's statue,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,0.44399878,SE,whaleloops/phrase-bert
+255,disabled,Unrel,40,1.31,0.0,He took a job training dogs for the disabled,He took a job training dogs for the,0.36291248,SE,whaleloops/phrase-bert
+256,engineer,Unrel,41,1.4,0.0,The conductor gave detailed instructions to the engineer,The conductor gave detailed instructions to the,0.5011472,SE,whaleloops/phrase-bert
+257,music,Unrel,45,1.22,0.0,"Down in the basement, Steve and Robert were playing music","Down in the basement, Steve and Robert were playing",0.41483438,SE,whaleloops/phrase-bert
+258,country,Unrel,47,1.28,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another country","After the most recent price increase, the small business owner decided to order his office supplies from another",0.21556811,SE,whaleloops/phrase-bert
+259,keys,Unrel,48,1.41,0.03125,Sharon was sad that she had lost her keys,Sharon was sad that she had lost her,0.21377593,SE,whaleloops/phrase-bert
+260,ships,Unrel,50,2.83,0.0,"All of armed services will admit women, but females are barred from ships","All of armed services will admit women, but females are barred from",0.3929682,SE,whaleloops/phrase-bert
+261,ugly,Unrel,51,1.42,0.0,"After the divorce, she had to move out of the expensive house to an apartment that was ugly","After the divorce, she had to move out of the expensive house to an apartment that was",0.39213634,SE,whaleloops/phrase-bert
+262,marriage,Unrel,52,1.54,0.0344827586206896,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his marriage","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",0.31773454,SE,whaleloops/phrase-bert
+263,terrible,Unrel,53,1.52,0.0,"Some of his jokes were crummy, but those one-liners were terrible","Some of his jokes were crummy, but those one-liners were",0.4575374,SE,whaleloops/phrase-bert
+264,meal,Unrel,60,1.79,0.0344827586206896,The inspector from the health department found a roach in a very expensive meal,The inspector from the health department found a roach in a very expensive,0.5058218,SE,whaleloops/phrase-bert
+265,politician,Unrel,61,1.63,0.0,The conductor had no idea that the train had been boarded by a known politician,The conductor had no idea that the train had been boarded by a known,0.33945832,SE,whaleloops/phrase-bert
+266,pillow,Unrel,64,1.06,0.03125,The nurse brought him a glass of juice and his pillow,The nurse brought him a glass of juice and his,0.5312969,SE,whaleloops/phrase-bert
+267,chaos,Unrel,65,1.19,0.0,The teacher was not looking forward to another year of chaos,The teacher was not looking forward to another year of,0.3660187,SE,whaleloops/phrase-bert
+268,event,Unrel,67,1.36,0.0,Steve skipped his annual checkup for another event,Steve skipped his annual checkup for another,0.31202668,SE,whaleloops/phrase-bert
+269,short,Unrel,72,1.55,0.1034482758620689,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately short","The candidate wanted to please everyone without making any commitments, so his speech was deliberately",0.44894677,SE,whaleloops/phrase-bert
+270,dishes,Unrel,74,1.13,0.0,She poured water on the dishes,She poured water on the,0.65912485,SE,whaleloops/phrase-bert
+271,expensive,Unrel,81,1.38,0.0333333333333333,"Mark liked the older houses, but Susan wanted to buy one that was new and expensive","Mark liked the older houses, but Susan wanted to buy one that was new and",0.44155222,SE,whaleloops/phrase-bert
+272,neighbor,Unrel,82,1.63,0.0,"In an old sitcom, he was the wise family neighbor","In an old sitcom, he was the wise family",0.45395353,SE,whaleloops/phrase-bert
+273,wrong,Unrel,83,1.64,0.0,"The government controlled the news media, so most of the reports from the war zone were wrong","The government controlled the news media, so most of the reports from the war zone were",0.2558504,SE,whaleloops/phrase-bert
+274,tooth,Unrel,84,1.67,0.09375,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold tooth","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",0.3537866,SE,whaleloops/phrase-bert
+275,theatre,Unrel,85,1.09,0.0,"During the summer, the children hung out at the theatre","During the summer, the children hung out at the",0.40152794,SE,whaleloops/phrase-bert
+276,king,Unrel,86,1.54,0.03125,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be king","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",0.50632095,SE,whaleloops/phrase-bert
+277,bicycle,Unrel,88,1.09,0.0,The little girl kept a lock on her bicycle,The little girl kept a lock on her,0.40571257,SE,whaleloops/phrase-bert
+278,bees,Unrel,89,2.83,0.0333333333333333,"Flying low above her, Bernice could hear the bees","Flying low above her, Bernice could hear the",0.4537882,SE,whaleloops/phrase-bert
+279,jaw,Unrel,97,1.63,0.0,Perry heard a grinding noise coming from his jaw,Perry heard a grinding noise coming from his,0.47786504,SE,whaleloops/phrase-bert
+280,leave,Unrel,98,1.96,0.0,"If Jim's manager is incompetent, he has a legitimate right to leave","If Jim's manager is incompetent, he has a legitimate right to",0.3134335,SE,whaleloops/phrase-bert
+281,princess,Unrel,101,1.63,0.0,"In the best part of the movie, the hero has to impersonate the princess","In the best part of the movie, the hero has to impersonate the",0.41723192,SE,whaleloops/phrase-bert
+282,gown,Unrel,103,1.12,0.03125,The princess wore a gown,The princess wore a,0.69731975,SE,whaleloops/phrase-bert
+283,bushes,Unrel,106,1.59,0.0357142857142857,Jason was disappointed when the other scouts scared off the elk by loudly beating the bushes,Jason was disappointed when the other scouts scared off the elk by loudly beating the,0.31403562,SE,whaleloops/phrase-bert
+284,damp,Unrel,107,1.3,0.03125,"After the flood, the house smelled of mildew and everything in it was damp","After the flood, the house smelled of mildew and everything in it was",0.6424855,SE,whaleloops/phrase-bert
+285,celebrity,Unrel,109,1.36,0.0,Everyone on the scene gathered around to look at the celebrity,Everyone on the scene gathered around to look at the,0.35993326,SE,whaleloops/phrase-bert
+286,posted,Unrel,115,1.06,0.0,The final score of the game was posted,The final score of the game was,0.314266,SE,whaleloops/phrase-bert
+287,blue,Unrel,117,1.41,0.0,"After swimming the English Channel, Bonita was cold and completely blue","After swimming the English Channel, Bonita was cold and completely",0.36998284,SE,whaleloops/phrase-bert
+288,opinion,Unrel,120,1.56,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her opinion","She had the data to back up everything she said, so the hostile questions did not shake her",0.39670402,SE,whaleloops/phrase-bert
+289,pattern,Unrel,125,1.51,0.0357142857142857,"The new dress was very pretty, but it was cut from an unusual pattern","The new dress was very pretty, but it was cut from an unusual",0.4762151,SE,whaleloops/phrase-bert
+290,smile,Unrel,128,1.81,0.0344827586206896,"When the little girl saw the big dog lumbering towards her, she began to smile","When the little girl saw the big dog lumbering towards her, she began to",0.50279135,SE,whaleloops/phrase-bert
+291,parade,Unrel,132,1.24,0.0689655172413793,"From her house a half mile away, Diana could still hear the loud cheers coming from the parade","From her house a half mile away, Diana could still hear the loud cheers coming from the",0.46234664,SE,whaleloops/phrase-bert
+292,battle,Unrel,133,1.33,0.1,Five ships did not survive the battle,Five ships did not survive the,0.31585842,SE,whaleloops/phrase-bert
+293,exploded,Unrel,135,1.61,0.0,The paramedics on the scene helped the passengers after the big car exploded,The paramedics on the scene helped the passengers after the big car,0.5091999,SE,whaleloops/phrase-bert
+294,takeoff,Unrel,136,1.13,0.0666666666666666,The pilot spoke to an air traffic controller just before the takeoff,The pilot spoke to an air traffic controller just before the,0.59224457,SE,whaleloops/phrase-bert
+295,meeting,Unrel,140,1.19,0.1428571428571428,The boy scouts started a long hike through the forest after having a big meeting,The boy scouts started a long hike through the forest after having a big,0.29442132,SE,whaleloops/phrase-bert
+296,airlines,Unrel,143,1.19,0.0714285714285714,"When traveling, Roger prefers to stick to major airlines","When traveling, Roger prefers to stick to major",0.3057865,SE,whaleloops/phrase-bert
+297,glasses,Unrel,147,1.61,0.0357142857142857,"While hemming a pair of pants, Bridget accidentally dropped her glasses","While hemming a pair of pants, Bridget accidentally dropped her",0.50071114,SE,whaleloops/phrase-bert
+298,mine,Unrel,148,1.67,0.0,The rangers say that somewhere in the state park is a mine,The rangers say that somewhere in the state park is a,0.35187724,SE,whaleloops/phrase-bert
+299,tumors,Unrel,153,1.5,0.0,The doctor told him his headaches were due to tumors,The doctor told him his headaches were due to,0.51083124,SE,whaleloops/phrase-bert
+300,banners,Unrel,156,1.32,0.0,"The groups in the parade walked by slowly, each waving their banners","The groups in the parade walked by slowly, each waving their",0.55149376,SE,whaleloops/phrase-bert
+301,hospital,Unrel,158,1.59,0.0,"The little girl was very sick, but unfortunately there was no hospital","The little girl was very sick, but unfortunately there was no",0.5296334,SE,whaleloops/phrase-bert
+302,sky,Unrel,161,1.67,0.1,"The meteor shower should have been spectacular, but the city lights blocked the sky","The meteor shower should have been spectacular, but the city lights blocked the",0.5451521,SE,whaleloops/phrase-bert
+303,sell,Unrel,162,1.0,0.0344827586206896,She was unsure how the book would sell,She was unsure how the book would,0.28118452,SE,whaleloops/phrase-bert
+304,delivery,Unrel,166,1.61,0.0,"He was desperate for a job, so finally took something doing door to door delivery","He was desperate for a job, so finally took something doing door to door",0.38848057,SE,whaleloops/phrase-bert
+305,procedures,Unrel,168,1.5,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical procedures,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,0.41303077,SE,whaleloops/phrase-bert
+306,female,Unrel,169,1.35,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were female","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",0.47303092,SE,whaleloops/phrase-bert
+307,today,Unrel,172,1.27,0.0625,"In the window, they posted the hours they were open for today","In the window, they posted the hours they were open for",0.48097175,SE,whaleloops/phrase-bert
+308,scratching,Unrel,173,1.79,0.0,They sent the kids with measles home from school because they were scratching,They sent the kids with measles home from school because they were,0.35285228,SE,whaleloops/phrase-bert
+309,horses,Unrel,174,1.19,0.0344827586206896,"Outside, Cora could hear the running horses","Outside, Cora could hear the running",0.47887784,SE,whaleloops/phrase-bert
+310,swim,Unrel,177,1.25,0.0,At night they often took a short swim,At night they often took a short,0.36457464,SE,whaleloops/phrase-bert
+311,banned,Unrel,182,1.93,0.0,The wealthy author always points out that she wrote four novels before one was banned,The wealthy author always points out that she wrote four novels before one was,0.22854976,SE,whaleloops/phrase-bert
+312,ball,Unrel,185,2.15,0.0,The kitten waited patiently because behind the refrigerator was a ball,The kitten waited patiently because behind the refrigerator was a,0.36031088,SE,whaleloops/phrase-bert
+313,dark,Unrel,187,1.13,0.0344827586206896,Norton hates getting up on winter mornings because it is always dark,Norton hates getting up on winter mornings because it is always,0.43658096,SE,whaleloops/phrase-bert
+314,plants,Unrel,190,1.15,0.0,The fertilizer enriched the plants,The fertilizer enriched the,0.5813807,SE,whaleloops/phrase-bert
+315,doll,Unrel,193,1.5,0.0,The young girl passed her friend a doll,The young girl passed her friend a,0.52229893,SE,whaleloops/phrase-bert
+316,ruined,Unrel,196,2.43,0.0,He tinkered with the engine every weekend until it was absolutely ruined,He tinkered with the engine every weekend until it was absolutely,0.4008228,SE,whaleloops/phrase-bert
+317,safety,Unrel,197,1.16,0.1875,"When Diane heard the shark warning, she swam as fast as she could for safety","When Diane heard the shark warning, she swam as fast as she could for",0.33705842,SE,whaleloops/phrase-bert
+318,castle,Unrel,198,1.15,0.0,Michael could hear the bells ringing in the tower of the castle,Michael could hear the bells ringing in the tower of the,0.4907495,SE,whaleloops/phrase-bert
+319,torn,Unrel,200,1.34,0.0,"When he got home from work on the construction site, his clothes were always torn","When he got home from work on the construction site, his clothes were always",0.42879683,SE,whaleloops/phrase-bert
+320,tub,Unrel,201,2.19,0.0,Kevin propped his head up with a pillow as he basked in the hot tub,Kevin propped his head up with a pillow as he basked in the hot,0.6053935,SE,whaleloops/phrase-bert
+321,boss,Unrel,203,1.7,0.0,He bought it without even asking the boss,He bought it without even asking the,0.473256,SE,whaleloops/phrase-bert
+322,older,Unrel,204,1.48,0.0344827586206896,"Barry has considered proposing to his girlfriend, but he wants to wait until he is older","Barry has considered proposing to his girlfriend, but he wants to wait until he is",0.32479018,SE,whaleloops/phrase-bert
+323,watch,Unrel,205,1.0,0.0,John was disappointed to discover a scratch on his new watch,John was disappointed to discover a scratch on his new,0.22668077,SE,whaleloops/phrase-bert
+324,reputation,Unrel,206,1.19,0.0,He was afraid that doing drugs would damage his reputation,He was afraid that doing drugs would damage his,0.36191183,SE,whaleloops/phrase-bert
+325,happy,Unrel,207,1.65,0.0689655172413793,"They've been living together for a long time, but don't think they're actually happy","They've been living together for a long time, but don't think they're actually",0.42463726,SE,whaleloops/phrase-bert
+326,jokes,Unrel,208,1.44,0.0,Dennis the Menance was known for making jokes,Dennis the Menance was known for making,0.43372124,SE,whaleloops/phrase-bert
+327,help,Unrel,211,1.21,0.03125,When the shooting started they ran for help,When the shooting started they ran for,0.37721902,SE,whaleloops/phrase-bert
+328,contaminated,Unrel,212,2.16,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was contaminated,The federal agents examined the hundred dollar bill with a microscope to see if it was,0.42748848,SE,whaleloops/phrase-bert
+329,cool,Unrel,213,1.71,0.1034482758620689,Eva turned down the heat and left the sauce on the stove to cool,Eva turned down the heat and left the sauce on the stove to,0.5620157,SE,whaleloops/phrase-bert
+330,horse,Unrel,215,1.75,0.0,"Alone in the canyon, he was so spooked he was scared by his own horse","Alone in the canyon, he was so spooked he was scared by his own",0.46866438,SE,whaleloops/phrase-bert
+331,joke,Unrel,220,1.37,0.0357142857142857,Betsy could never tell a joke,Betsy could never tell a,0.39211005,SE,whaleloops/phrase-bert
+332,principal,Unrel,221,1.06,0.03125,The bad boy was sent to his principal,The bad boy was sent to his,0.47085464,SE,whaleloops/phrase-bert
+333,tattoos,Unrel,223,2.09,0.0344827586206896,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his tattoos","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",0.50579387,SE,whaleloops/phrase-bert
+334,hiding,Unrel,226,1.21,0.03125,"Trying to evade their captors, the escaped prisoners of war lived in constant hiding","Trying to evade their captors, the escaped prisoners of war lived in constant",0.5011123,SE,whaleloops/phrase-bert
+335,broken,Unrel,228,1.13,0.0,The tip of the knife was broken,The tip of the knife was,0.47594243,SE,whaleloops/phrase-bert
+336,fly,Unrel,230,1.3,0.125,The little girl pulled on the rubber band to see how far it would fly,The little girl pulled on the rubber band to see how far it would,0.27117705,SE,whaleloops/phrase-bert
+337,camp,Unrel,232,1.13,0.0,The soldiers had special night vision goggles so they could see the camp,The soldiers had special night vision goggles so they could see the,0.4052183,SE,whaleloops/phrase-bert
+338,hungry,Unrel,233,1.85,0.0,George was born into a wealthy family and has no idea what it's like to be hungry,George was born into a wealthy family and has no idea what it's like to be,0.44543174,SE,whaleloops/phrase-bert
+339,castle,Unrel,237,1.71,0.0,"Looking for bats, Karen descended into the depths of the castle","Looking for bats, Karen descended into the depths of the",0.35739207,SE,whaleloops/phrase-bert
+340,contrast,Unrel,239,1.44,0.0,We finally got a decent picture on the TV after an hour of adjusting the contrast,We finally got a decent picture on the TV after an hour of adjusting the,0.26381356,SE,whaleloops/phrase-bert
+341,state,Unrel,240,2.21,0.0,It took a week to get his car fixed because the parts were out of state,It took a week to get his car fixed because the parts were out of,0.29298526,SE,whaleloops/phrase-bert
+342,vote,Unrel,242,1.12,0.0,The dispute was settled by a third vote,The dispute was settled by a third,0.5226453,SE,whaleloops/phrase-bert
+343,separately,Unrel,244,1.46,0.0,Our guests should be arriving separately,Our guests should be arriving,0.3875824,SE,whaleloops/phrase-bert
+344,grease,Unrel,245,1.66,0.0,The dough was put in the hot grease,The dough was put in the hot,0.68813133,SE,whaleloops/phrase-bert
+345,productive,Unrel,250,1.19,0.03125,Andrew was glad that the meeting was very productive,Andrew was glad that the meeting was very,0.3495514,SE,whaleloops/phrase-bert
+346,group,Unrel,252,1.48,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour group","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",0.19032244,SE,whaleloops/phrase-bert
+347,dusk,Unrel,254,2.11,0.0,Most shark attacks occur very close to dusk,Most shark attacks occur very close to,0.2657526,SE,whaleloops/phrase-bert
+348,mechanic,Unrel,255,1.61,0.0344827586206896,He didn't have to spend much money on the car because he found an incredible mechanic,He didn't have to spend much money on the car because he found an incredible,0.47090787,SE,whaleloops/phrase-bert
+349,hospital,Unrel,256,1.18,0.0,The wealthy child went to a private hospital,The wealthy child went to a private,0.40095276,SE,whaleloops/phrase-bert
+350,stereo,Unrel,260,1.5,0.0,"When you go to bed, turn off the stereo","When you go to bed, turn off the",0.47536594,SE,whaleloops/phrase-bert
+351,diet,Unrel,261,1.78,0.0,George must keep his pet on a diet,George must keep his pet on a,0.36397746,SE,whaleloops/phrase-bert
+352,boxes,Unrel,263,1.09,0.0,"He didn't have time to file everything on his desk, so he organized it into two boxes","He didn't have time to file everything on his desk, so he organized it into two",0.48918614,SE,whaleloops/phrase-bert
+353,resign,Unrel,265,1.41,0.0,The whole town came to hear their mayor resign,The whole town came to hear their mayor,0.42752996,SE,whaleloops/phrase-bert
+354,doll,Unrel,273,1.63,0.0,Josie found she could not bend the elbow of her broken doll,Josie found she could not bend the elbow of her broken,0.5102857,SE,whaleloops/phrase-bert
+355,lonely,Unrel,275,1.33,0.0,It's hard to admit when one is lonely,It's hard to admit when one is,0.4705035,SE,whaleloops/phrase-bert
+356,heard,Unrel,276,1.54,0.0333333333333333,Vic asked her to repeat what she had heard,Vic asked her to repeat what she had,0.51370585,SE,whaleloops/phrase-bert
+357,twice,Unrel,281,1.32,0.0,When they were in London they visited Buckingham twice,When they were in London they visited Buckingham,0.22185677,SE,whaleloops/phrase-bert
+358,jet,Unrel,282,1.33,0.0,The agent was sent to South America on a secret jet,The agent was sent to South America on a secret,0.26942176,SE,whaleloops/phrase-bert
+359,morning,Unrel,283,1.91,0.0,Sam knew that rain was coming because he could smell it in the morning,Sam knew that rain was coming because he could smell it in the,0.50765306,SE,whaleloops/phrase-bert
+360,vacation,Unrel,286,1.59,0.0,His boss refused to give him a vacation,His boss refused to give him a,0.3809216,SE,whaleloops/phrase-bert
+361,dinner,Unrel,287,1.42,0.0,She flew in late last night and really didn't get much dinner,She flew in late last night and really didn't get much,0.4588556,SE,whaleloops/phrase-bert
+362,helicopters,Unrel,288,1.37,0.0,"After a week, they gave up on the missing hikers and called off the helicopters","After a week, they gave up on the missing hikers and called off the",0.2800488,SE,whaleloops/phrase-bert
+363,pillow,Implaus,1,4.39,0.0,"Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major pillow","Henry was surprised to find he wouldn't be promoted for his day to day performance, but needed a major",0.16271308,SE,whaleloops/phrase-bert
+364,chaos,Implaus,8,4.18,0.0,The cigar burned a hole in the chaos,The cigar burned a hole in the,0.46628156,SE,whaleloops/phrase-bert
+365,umbrella,Implaus,11,4.5,0.0,"His first film was a failure, but he learned some techniques in that first umbrella","His first film was a failure, but he learned some techniques in that first",0.22158457,SE,whaleloops/phrase-bert
+366,autumn,Implaus,17,4.66,0.0,He was hired for the job because of his fresh new autumn,He was hired for the job because of his fresh new,0.30905446,SE,whaleloops/phrase-bert
+367,treason,Implaus,18,4.55,0.0,The journal issue that has the new article about diseases of the eye is still in treason,The journal issue that has the new article about diseases of the eye is still in,0.30616328,SE,whaleloops/phrase-bert
+368,disorder,Implaus,22,4.37,0.0,Every spring they held the annual disorder,Every spring they held the annual,0.22669418,SE,whaleloops/phrase-bert
+369,king,Implaus,23,4.46,0.0,"Penelope started to assemble her new bicycle, but was missing the king","Penelope started to assemble her new bicycle, but was missing the",0.2242871,SE,whaleloops/phrase-bert
+370,treason,Implaus,24,4.63,0.0,The restaurant will reopen with new treason,The restaurant will reopen with new,0.2138766,SE,whaleloops/phrase-bert
+371,weekends,Implaus,28,4.82,0.0,Jennifer disliked walking under the trees at the edge of the park because they were always full of weekends,Jennifer disliked walking under the trees at the edge of the park because they were always full of,0.46881637,SE,whaleloops/phrase-bert
+372,allergic,Implaus,36,4.21,0.0,"The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or allergic","The painting had a strong impact on everyone, but they couldn't agree on whether it was ugly or",0.4571005,SE,whaleloops/phrase-bert
+373,dusk,Implaus,37,4.11,0.0,I don't know why people like to see their initials in dusk,I don't know why people like to see their initials in,0.31909764,SE,whaleloops/phrase-bert
+374,disqualified,Implaus,38,3.94,0.0,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very disqualified,The gem cutter examined the ruby very closely before cutting because he knew that one this large was very,0.33929744,SE,whaleloops/phrase-bert
+375,bicycle,Implaus,39,4.04,0.0,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's bicycle,They couldn't decide whether to visit the Roman fort or the ruins of Aphrodite's,0.2695938,SE,whaleloops/phrase-bert
+376,blankets,Implaus,40,4.26,0.0,He took a job training dogs for the blankets,He took a job training dogs for the,0.16168542,SE,whaleloops/phrase-bert
+377,dishes,Implaus,41,4.91,0.0,The conductor gave detailed instructions to the dishes,The conductor gave detailed instructions to the,0.23500466,SE,whaleloops/phrase-bert
+378,banners,Implaus,45,3.91,0.0,"Down in the basement, Steve and Robert were playing banners","Down in the basement, Steve and Robert were playing",0.28992748,SE,whaleloops/phrase-bert
+379,gown,Implaus,47,4.29,0.0,"After the most recent price increase, the small business owner decided to order his office supplies from another gown","After the most recent price increase, the small business owner decided to order his office supplies from another",0.26427028,SE,whaleloops/phrase-bert
+380,takeoff,Implaus,48,4.53,0.0,Sharon was sad that she had lost her takeoff,Sharon was sad that she had lost her,0.12746891,SE,whaleloops/phrase-bert
+381,metal,Implaus,50,4.3,0.0,"All of armed services will admit women, but females are barred from metal","All of armed services will admit women, but females are barred from",0.31216174,SE,whaleloops/phrase-bert
+382,fired,Implaus,51,4.63,0.0,"After the divorce, she had to move out of the expensive house to an apartment that was fired","After the divorce, she had to move out of the expensive house to an apartment that was",0.43344817,SE,whaleloops/phrase-bert
+383,ditch,Implaus,52,4.67,0.0,"His tactics usually turned out to be beneficial for the business, but they often came in conflict with his ditch","His tactics usually turned out to be beneficial for the business, but they often came in conflict with his",0.26489767,SE,whaleloops/phrase-bert
+384,torn,Implaus,53,4.21,0.0,"Some of his jokes were crummy, but those one-liners were torn","Some of his jokes were crummy, but those one-liners were",0.36973104,SE,whaleloops/phrase-bert
+385,speech,Implaus,60,4.64,0.0,The inspector from the health department found a roach in a very expensive speech,The inspector from the health department found a roach in a very expensive,0.305353,SE,whaleloops/phrase-bert
+386,bottle,Implaus,61,4.5,0.0,The conductor had no idea that the train had been boarded by a known bottle,The conductor had no idea that the train had been boarded by a known,0.267482,SE,whaleloops/phrase-bert
+387,taxis,Implaus,64,4.55,0.0,The nurse brought him a glass of juice and his taxis,The nurse brought him a glass of juice and his,0.41106552,SE,whaleloops/phrase-bert
+388,cargo,Implaus,65,3.97,0.0,The teacher was not looking forward to another year of cargo,The teacher was not looking forward to another year of,0.2957411,SE,whaleloops/phrase-bert
+389,forest,Implaus,67,4.33,0.0,Steve skipped his annual checkup for another forest,Steve skipped his annual checkup for another,0.14900668,SE,whaleloops/phrase-bert
+390,endangered,Implaus,72,4.13,0.0,"The candidate wanted to please everyone without making any commitments, so his speech was deliberately endangered","The candidate wanted to please everyone without making any commitments, so his speech was deliberately",0.2680204,SE,whaleloops/phrase-bert
+391,takeoff,Implaus,74,3.74,0.0,She poured water on the takeoff,She poured water on the,0.23797621,SE,whaleloops/phrase-bert
+392,embarrassed,Implaus,81,4.54,0.0,"Mark liked the older houses, but Susan wanted to buy one that was new and embarrassed","Mark liked the older houses, but Susan wanted to buy one that was new and",0.40778318,SE,whaleloops/phrase-bert
+393,highway,Implaus,82,4.65,0.0,"In an old sitcom, he was the wise family highway","In an old sitcom, he was the wise family",0.19807942,SE,whaleloops/phrase-bert
+394,hungry,Implaus,83,4.58,0.0,"The government controlled the news media, so most of the reports from the war zone were hungry","The government controlled the news media, so most of the reports from the war zone were",0.23412336,SE,whaleloops/phrase-bert
+395,pedestrians,Implaus,84,4.63,0.0,"Grinning wherever he went, it was easy to tell that Carl was proud of his new gold pedestrians","Grinning wherever he went, it was easy to tell that Carl was proud of his new gold",0.39583597,SE,whaleloops/phrase-bert
+396,gown,Implaus,85,4.79,0.0,"During the summer, the children hung out at the gown","During the summer, the children hung out at the",0.3160162,SE,whaleloops/phrase-bert
+397,chilly,Implaus,86,4.74,0.0,"The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be chilly","The handsome knight charged into the dark forest after the kidnapped princess, determined to prove that he could be",0.39105865,SE,whaleloops/phrase-bert
+398,cement,Implaus,88,4.44,0.0,The little girl kept a lock on her cement,The little girl kept a lock on her,0.4050261,SE,whaleloops/phrase-bert
+399,arena,Implaus,89,3.91,0.0,"Flying low above her, Bernice could hear the arena","Flying low above her, Bernice could hear the",0.25353113,SE,whaleloops/phrase-bert
+400,cure,Implaus,97,4.66,0.0,Perry heard a grinding noise coming from his cure,Perry heard a grinding noise coming from his,0.29335916,SE,whaleloops/phrase-bert
+401,water,Implaus,98,4.5,0.0,"If Jim's manager is incompetent, he has a legitimate right to water","If Jim's manager is incompetent, he has a legitimate right to",0.28895375,SE,whaleloops/phrase-bert
+402,business,Implaus,101,3.77,0.0,"In the best part of the movie, the hero has to impersonate the business","In the best part of the movie, the hero has to impersonate the",0.3725745,SE,whaleloops/phrase-bert
+403,sound,Implaus,103,4.63,0.0,The princess wore a sound,The princess wore a,0.31409034,SE,whaleloops/phrase-bert
+404,diamond,Implaus,106,4.5,0.0,Jason was disappointed when the other scouts scared off the elk by loudly beating the diamond,Jason was disappointed when the other scouts scared off the elk by loudly beating the,0.34503078,SE,whaleloops/phrase-bert
+405,young,Implaus,107,4.27,0.0,"After the flood, the house smelled of mildew and everything in it was young","After the flood, the house smelled of mildew and everything in it was",0.36540934,SE,whaleloops/phrase-bert
+406,temper,Implaus,109,3.17,0.0,Everyone on the scene gathered around to look at the temper,Everyone on the scene gathered around to look at the,0.3927047,SE,whaleloops/phrase-bert
+407,bugs,Implaus,115,4.85,0.0,The final score of the game was bugs,The final score of the game was,0.27385807,SE,whaleloops/phrase-bert
+408,affordable,Implaus,117,4.58,0.0,"After swimming the English Channel, Bonita was cold and completely affordable","After swimming the English Channel, Bonita was cold and completely",0.26174614,SE,whaleloops/phrase-bert
+409,music,Implaus,120,4.45,0.0,"She had the data to back up everything she said, so the hostile questions did not shake her music","She had the data to back up everything she said, so the hostile questions did not shake her",0.34215698,SE,whaleloops/phrase-bert
+410,porch,Implaus,125,4.52,0.0,"The new dress was very pretty, but it was cut from an unusual porch","The new dress was very pretty, but it was cut from an unusual",0.4002567,SE,whaleloops/phrase-bert
+411,attend,Implaus,128,4.18,0.0,"When the little girl saw the big dog lumbering towards her, she began to attend","When the little girl saw the big dog lumbering towards her, she began to",0.3553216,SE,whaleloops/phrase-bert
+412,mistakes,Implaus,132,4.5,0.0,"From her house a half mile away, Diana could still hear the loud cheers coming from the mistakes","From her house a half mile away, Diana could still hear the loud cheers coming from the",0.19690268,SE,whaleloops/phrase-bert
+413,eyes,Implaus,133,4.47,0.0,Five ships did not survive the eyes,Five ships did not survive the,0.22288384,SE,whaleloops/phrase-bert
+414,rest,Implaus,135,3.86,0.0,The paramedics on the scene helped the passengers after the big car rest,The paramedics on the scene helped the passengers after the big car,0.414039,SE,whaleloops/phrase-bert
+415,fortune,Implaus,136,4.36,0.0,The pilot spoke to an air traffic controller just before the fortune,The pilot spoke to an air traffic controller just before the,0.26344958,SE,whaleloops/phrase-bert
+416,end,Implaus,140,4.07,0.0,The boy scouts started a long hike through the forest after having a big end,The boy scouts started a long hike through the forest after having a big,0.2849004,SE,whaleloops/phrase-bert
+417,plants,Implaus,143,4.13,0.0,"When traveling, Roger prefers to stick to major plants","When traveling, Roger prefers to stick to major",0.28107077,SE,whaleloops/phrase-bert
+418,horse,Implaus,147,4.54,0.0,"While hemming a pair of pants, Bridget accidentally dropped her horse","While hemming a pair of pants, Bridget accidentally dropped her",0.43798104,SE,whaleloops/phrase-bert
+419,contrast,Implaus,148,3.96,0.0,The rangers say that somewhere in the state park is a contrast,The rangers say that somewhere in the state park is a,0.25336784,SE,whaleloops/phrase-bert
+420,safety,Implaus,153,4.44,0.0,The doctor told him his headaches were due to safety,The doctor told him his headaches were due to,0.33623964,SE,whaleloops/phrase-bert
+421,jokes,Implaus,156,3.78,0.0,"The groups in the parade walked by slowly, each waving their jokes","The groups in the parade walked by slowly, each waving their",0.41006836,SE,whaleloops/phrase-bert
+422,joke,Implaus,158,3.59,0.0,"The little girl was very sick, but unfortunately there was no joke","The little girl was very sick, but unfortunately there was no",0.47288048,SE,whaleloops/phrase-bert
+423,doll,Implaus,161,4.63,0.0,"The meteor shower should have been spectacular, but the city lights blocked the doll","The meteor shower should have been spectacular, but the city lights blocked the",0.33090258,SE,whaleloops/phrase-bert
+424,camp,Implaus,162,4.79,0.0,She was unsure how the book would camp,She was unsure how the book would,0.22342575,SE,whaleloops/phrase-bert
+425,hiding,Implaus,166,4.25,0.0,"He was desperate for a job, so finally took something doing door to door hiding","He was desperate for a job, so finally took something doing door to door",0.48713288,SE,whaleloops/phrase-bert
+426,pedestrians,Implaus,168,3.29,0.0,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical pedestrians,The young doctor wanted to work in the barrio so she set to work learning the Spanish translations of common medical,0.32473287,SE,whaleloops/phrase-bert
+427,bullets,Implaus,169,4.64,0.0,"Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were bullets","Even though she was blindfolded, Jessie could tell from their voices that one of the kidnapers was old and two were",0.43141213,SE,whaleloops/phrase-bert
+428,texture,Implaus,172,3.37,0.0,"In the window, they posted the hours they were open for texture","In the window, they posted the hours they were open for",0.14021751,SE,whaleloops/phrase-bert
+429,hard,Implaus,173,4.53,0.0,They sent the kids with measles home from school because they were hard,They sent the kids with measles home from school because they were,0.30706987,SE,whaleloops/phrase-bert
+430,chapel,Implaus,174,3.88,0.0,"Outside, Cora could hear the running chapel","Outside, Cora could hear the running",0.38215733,SE,whaleloops/phrase-bert
+431,reputation,Implaus,177,4.07,0.0,At night they often took a short reputation,At night they often took a short,0.20439915,SE,whaleloops/phrase-bert
+432,hungry,Implaus,182,4.18,0.0,The wealthy author always points out that she wrote four novels before one was hungry,The wealthy author always points out that she wrote four novels before one was,0.28358063,SE,whaleloops/phrase-bert
+433,savior,Implaus,185,4.09,0.0,The kitten waited patiently because behind the refrigerator was a savior,The kitten waited patiently because behind the refrigerator was a,0.4246045,SE,whaleloops/phrase-bert
+434,broken,Implaus,187,4.44,0.0,Norton hates getting up on winter mornings because it is always broken,Norton hates getting up on winter mornings because it is always,0.40423036,SE,whaleloops/phrase-bert
+435,legs,Implaus,190,4.61,0.0,The fertilizer enriched the legs,The fertilizer enriched the,0.33055425,SE,whaleloops/phrase-bert
+436,mechanic,Implaus,193,4.04,0.0,The young girl passed her friend a mechanic,The young girl passed her friend a,0.38931727,SE,whaleloops/phrase-bert
+437,forgiven,Implaus,196,4.69,0.0,He tinkered with the engine every weekend until it was absolutely forgiven,He tinkered with the engine every weekend until it was absolutely,0.3048596,SE,whaleloops/phrase-bert
+438,relaxing,Implaus,197,4.46,0.0,"When Diane heard the shark warning, she swam as fast as she could for relaxing","When Diane heard the shark warning, she swam as fast as she could for",0.29928064,SE,whaleloops/phrase-bert
+439,deer,Implaus,198,4.33,0.0,Michael could hear the bells ringing in the tower of the deer,Michael could hear the bells ringing in the tower of the,0.33529937,SE,whaleloops/phrase-bert
+440,sick,Implaus,200,4.48,0.0,"When he got home from work on the construction site, his clothes were always sick","When he got home from work on the construction site, his clothes were always",0.39880183,SE,whaleloops/phrase-bert
+441,size,Implaus,201,4.76,0.0,Kevin propped his head up with a pillow as he basked in the hot size,Kevin propped his head up with a pillow as he basked in the hot,0.27822128,SE,whaleloops/phrase-bert
+442,helicopters,Implaus,203,4.75,0.0,He bought it without even asking the helicopters,He bought it without even asking the,0.23155533,SE,whaleloops/phrase-bert
+443,flooded,Implaus,204,4.31,0.0,"Barry has considered proposing to his girlfriend, but he wants to wait until he is flooded","Barry has considered proposing to his girlfriend, but he wants to wait until he is",0.23661433,SE,whaleloops/phrase-bert
+444,taxes,Implaus,205,3.96,0.0,John was disappointed to discover a scratch on his new taxes,John was disappointed to discover a scratch on his new,0.21586482,SE,whaleloops/phrase-bert
+445,fever,Implaus,206,3.64,0.0,He was afraid that doing drugs would damage his fever,He was afraid that doing drugs would damage his,0.4957088,SE,whaleloops/phrase-bert
+446,people,Implaus,207,4.26,0.0,"They've been living together for a long time, but don't think they're actually people","They've been living together for a long time, but don't think they're actually",0.56624055,SE,whaleloops/phrase-bert
+447,apples,Implaus,208,3.97,0.0,Dennis the Menance was known for making apples,Dennis the Menance was known for making,0.3839399,SE,whaleloops/phrase-bert
+448,convenience,Implaus,211,3.93,0.0,When the shooting started they ran for convenience,When the shooting started they ran for,0.27187866,SE,whaleloops/phrase-bert
+449,quiet,Implaus,212,4.33,0.0,The federal agents examined the hundred dollar bill with a microscope to see if it was quiet,The federal agents examined the hundred dollar bill with a microscope to see if it was,0.28264788,SE,whaleloops/phrase-bert
+450,state,Implaus,213,4.32,0.0,Eva turned down the heat and left the sauce on the stove to state,Eva turned down the heat and left the sauce on the stove to,0.2806422,SE,whaleloops/phrase-bert
+451,hospital,Implaus,215,4.76,0.0,"Alone in the canyon, he was so spooked he was scared by his own hospital","Alone in the canyon, he was so spooked he was scared by his own",0.34377208,SE,whaleloops/phrase-bert
+452,ditch,Implaus,220,4.19,0.0,Betsy could never tell a ditch,Betsy could never tell a,0.3654572,SE,whaleloops/phrase-bert
+453,dusk,Implaus,221,4.73,0.0,The bad boy was sent to his dusk,The bad boy was sent to his,0.41233253,SE,whaleloops/phrase-bert
+454,boxes,Implaus,223,4.25,0.0,"The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his boxes","The Vietnam vet had received the Purple Heart, and when he took off his shirt you could see all of his",0.33613166,SE,whaleloops/phrase-bert
+455,size,Implaus,226,4.33,0.0,"Trying to evade their captors, the escaped prisoners of war lived in constant size","Trying to evade their captors, the escaped prisoners of war lived in constant",0.1930232,SE,whaleloops/phrase-bert
+456,chatting,Implaus,228,4.68,0.0,The tip of the knife was chatting,The tip of the knife was,0.39048487,SE,whaleloops/phrase-bert
+457,yell,Implaus,230,4.43,0.0,The little girl pulled on the rubber band to see how far it would yell,The little girl pulled on the rubber band to see how far it would,0.39666566,SE,whaleloops/phrase-bert
+458,temper,Implaus,232,4.22,0.0,The soldiers had special night vision goggles so they could see the temper,The soldiers had special night vision goggles so they could see the,0.324402,SE,whaleloops/phrase-bert
+459,pointed,Implaus,233,4.15,0.0,George was born into a wealthy family and has no idea what it's like to be pointed,George was born into a wealthy family and has no idea what it's like to be,0.2221653,SE,whaleloops/phrase-bert
+460,doll,Implaus,237,4.32,0.0,"Looking for bats, Karen descended into the depths of the doll","Looking for bats, Karen descended into the depths of the",0.47179368,SE,whaleloops/phrase-bert
+461,ceremonies,Implaus,239,4.34,0.0,We finally got a decent picture on the TV after an hour of adjusting the ceremonies,We finally got a decent picture on the TV after an hour of adjusting the,0.33128032,SE,whaleloops/phrase-bert
+462,bread,Implaus,240,4.86,0.0,It took a week to get his car fixed because the parts were out of bread,It took a week to get his car fixed because the parts were out of,0.42012435,SE,whaleloops/phrase-bert
+463,lifestyle,Implaus,242,4.07,0.0,The dispute was settled by a third lifestyle,The dispute was settled by a third,0.17820746,SE,whaleloops/phrase-bert
+464,disabled,Implaus,244,3.89,0.0,Our guests should be arriving disabled,Our guests should be arriving,0.3260303,SE,whaleloops/phrase-bert
+465,project,Implaus,245,4.21,0.0,The dough was put in the hot project,The dough was put in the hot,0.31497872,SE,whaleloops/phrase-bert
+466,pale,Implaus,250,4.48,0.0,Andrew was glad that the meeting was very pale,Andrew was glad that the meeting was very,0.3595093,SE,whaleloops/phrase-bert
+467,puppy,Implaus,252,4.8,0.0,"When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour puppy","When they came to Florida, Arthur couldn't see the swamp from the back of the crowded tour",0.238278,SE,whaleloops/phrase-bert
+468,ideas,Implaus,254,4.94,0.0,Most shark attacks occur very close to ideas,Most shark attacks occur very close to,0.22286938,SE,whaleloops/phrase-bert
+469,stream,Implaus,255,4.41,0.0,He didn't have to spend much money on the car because he found an incredible stream,He didn't have to spend much money on the car because he found an incredible,0.24854596,SE,whaleloops/phrase-bert
+470,material,Implaus,256,4.52,0.0,The wealthy child went to a private material,The wealthy child went to a private,0.3635508,SE,whaleloops/phrase-bert
+471,stores,Implaus,260,4.7,0.0,"When you go to bed, turn off the stores","When you go to bed, turn off the",0.42904916,SE,whaleloops/phrase-bert
+472,meeting,Implaus,261,4.56,0.0,George must keep his pet on a meeting,George must keep his pet on a,0.28959218,SE,whaleloops/phrase-bert
+473,cartoons,Implaus,263,3.85,0.0,"He didn't have time to file everything on his desk, so he organized it into two cartoons","He didn't have time to file everything on his desk, so he organized it into two",0.2858582,SE,whaleloops/phrase-bert
+474,scratch,Implaus,265,4.29,0.0,The whole town came to hear their mayor scratch,The whole town came to hear their mayor,0.25384971,SE,whaleloops/phrase-bert
+475,absence,Implaus,273,4.68,0.0,Josie found she could not bend the elbow of her broken absence,Josie found she could not bend the elbow of her broken,0.3562504,SE,whaleloops/phrase-bert
+476,screened,Implaus,275,3.52,0.0,It's hard to admit when one is screened,It's hard to admit when one is,0.3211374,SE,whaleloops/phrase-bert
+477,vanished,Implaus,276,4.47,0.0,Vic asked her to repeat what she had vanished,Vic asked her to repeat what she had,0.40968063,SE,whaleloops/phrase-bert
+478,bait,Implaus,281,3.63,0.0,When they were in London they visited Buckingham bait,When they were in London they visited Buckingham,0.009614958,SE,whaleloops/phrase-bert
+479,cow,Implaus,282,4.42,0.0,The agent was sent to South America on a secret cow,The agent was sent to South America on a secret,0.20116396,SE,whaleloops/phrase-bert
+480,robbery,Implaus,283,4.35,0.0,Sam knew that rain was coming because he could smell it in the robbery,Sam knew that rain was coming because he could smell it in the,0.33658326,SE,whaleloops/phrase-bert
+481,cliff,Implaus,286,4.32,0.0,His boss refused to give him a cliff,His boss refused to give him a,0.24022862,SE,whaleloops/phrase-bert
+482,music,Implaus,287,4.0,0.0,She flew in late last night and really didn't get much music,She flew in late last night and really didn't get much,0.26946887,SE,whaleloops/phrase-bert
+483,boss,Implaus,288,3.97,0.0,"After a week, they gave up on the missing hikers and called off the boss","After a week, they gave up on the missing hikers and called off the",0.30995017,SE,whaleloops/phrase-bert
+484,stupid,Rel,3,1.74,0.0714285714285714,The salesman made the mistake of talking down to Jane because he thought she was stupid,The salesman made the mistake of talking down to Jane because he thought she was,0.5773394,SE,whaleloops/phrase-bert
+485,ceiling,Rel,10,1.52,0.0625,Water was leaking out from the hole in the ceiling,Water was leaking out from the hole in the,0.5502269,SE,whaleloops/phrase-bert
+486,coat,Rel,29,1.06,0.0666666666666666,"Rushing out, he forgot to take his coat","Rushing out, he forgot to take his",0.54638594,SE,whaleloops/phrase-bert
+487,shack,Rel,70,1.78,0.0344827586206896,"At that time, the boys lived down by the river in a shack","At that time, the boys lived down by the river in a",0.46648708,SE,whaleloops/phrase-bert
+488,dumb,BC,3,1.61,0.1785714285714285,The salesman made the mistake of talking down to Jane because he thought she was dumb,The salesman made the mistake of talking down to Jane because he thought she was,0.5650801,SE,whaleloops/phrase-bert
+489,roof,BC,10,1.96,0.15625,Water was leaking out from the hole in the roof,Water was leaking out from the hole in the,0.6127617,SE,whaleloops/phrase-bert
+490,jacket,BC,29,1.19,0.1,"Rushing out, he forgot to take his jacket","Rushing out, he forgot to take his",0.5143382,SE,whaleloops/phrase-bert
+491,hut,BC,70,1.7,0.1379310344827586,"At that time, the boys lived down by the river in a hut","At that time, the boys lived down by the river in a",0.4835773,SE,whaleloops/phrase-bert
+492,poor,Unrel,3,1.5,0.0357142857142857,The salesman made the mistake of talking down to Jane because he thought she was poor,The salesman made the mistake of talking down to Jane because he thought she was,0.48113456,SE,whaleloops/phrase-bert
+493,balloon,Unrel,10,1.45,0.0,Water was leaking out from the hole in the balloon,Water was leaking out from the hole in the,0.5214765,SE,whaleloops/phrase-bert
+494,umbrella,Unrel,29,1.21,0.0,"Rushing out, he forgot to take his umbrella","Rushing out, he forgot to take his",0.55925685,SE,whaleloops/phrase-bert
+495,van,Unrel,70,1.63,0.1034482758620689,"At that time, the boys lived down by the river in a van","At that time, the boys lived down by the river in a",0.38336444,SE,whaleloops/phrase-bert
+496,abstract,Implaus,3,3.34,0.0,The salesman made the mistake of talking down to Jane because he thought she was abstract,The salesman made the mistake of talking down to Jane because he thought she was,0.37908003,SE,whaleloops/phrase-bert
+497,reward,Implaus,10,4.61,0.0,Water was leaking out from the hole in the reward,Water was leaking out from the hole in the,0.29308987,SE,whaleloops/phrase-bert
+498,country,Implaus,29,4.64,0.0,"Rushing out, he forgot to take his country","Rushing out, he forgot to take his",0.21959104,SE,whaleloops/phrase-bert
+499,letter,Implaus,70,4.74,0.0,"At that time, the boys lived down by the river in a letter","At that time, the boys lived down by the river in a",0.2511118,SE,whaleloops/phrase-bert

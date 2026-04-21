@@ -116,14 +116,14 @@ def plot_semantic_association(
 
 if __name__ == "__main__":
     corpora = [
-        # {
-        #     "df": pd.read_excel(
-        #         Path("experiment1", "data", "Kuperberg", "sentences.xlsx")
-        #     ),
-        #     "out_path": Path(
-        #         "experiment1", "results", "kuperberg_semantic_association.csv"
-        #     ),
-        # },
+        {
+            "df": pd.read_excel(
+                Path("experiment1", "data", "Kuperberg", "sentences.xlsx")
+            ),
+            "out_path": Path(
+                "experiment1", "results", "kuperberg_semantic_association.csv"
+            ),
+        },
         {
             "df": pd.read_csv(Path("experiment1", "data", "michaelov_2024_stim.csv")),
             "out_path": Path(
@@ -133,41 +133,46 @@ if __name__ == "__main__":
     ]
 
     config = [
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/multilingual-e5-large",
+        },
         # {
         #     "implementation": "SE",
         #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/multilingual-e5-large",
+        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
         # },
-        # # {
-        # #     "implementation": "SE",
-        # #     "model_type": "SentenceEmbedding",
-        # #     "model_name": "jinaai/jina-embeddings-v5-text-small",
-        # # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "BAAI/bge-m3",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/e5-large-v2",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_100d",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_300d",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "BAAI/bge-m3",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/e5-large-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "whaleloops/phrase-bert",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_100d",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_300d",
+        },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
