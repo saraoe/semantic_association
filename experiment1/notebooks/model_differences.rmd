@@ -1,0 +1,117 @@
+# Is there a difference in semantic association estimated across embedding models?
+
+```{r}
+library(tidytable)
+library(lmerTest)
+library(ggeffects)
+library(ggplot2)
+
+setwd("experiment1")
+```
+
+## Read data
+```{r}
+kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
+    mutate("cond" = as.factor(cond)) |>
+    filter(!scenario %in% c(37, 38, 84)) |> # scenarios with duplicate sentences
+    filter(!scenario == 152) |> # non-sensible scenario
+    filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
+
+michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("BC", "Rel", "Unrel", "Implaus")
+    ))
+```
+
+## Kuperberg (2003, 2007)
+### Difference in embedding model for one imlementation
+```{r}
+data_one_implementation <- kuperberg_df |>
+    filter(
+        implementation == "SE"
+    )
+
+model_diff_fit <- lmer(
+    sem_s ~ model + (1 | scenario),
+    data = data_one_implementation |>
+        group_by(model) |>
+        mutate(sem_s = scale(semantic_association))
+)
+summary(model_diff_fit)
+```
+
+### Modeling Difference in conditions
+```{r}
+data_one_model <- kuperberg_df |>
+    filter(
+        model == "enwiki_20180420_100d" &
+            implementation == "WE"
+    )
+```
+
+```{r}
+naive_fit <- lm(semantic_association ~ cond, data = data_one_model)
+summary(naive_fit)
+```
+
+```{r}
+group_level_fit <- lmer(
+    semantic_association ~ cond + (1 | scenario),
+    data = data_one_model
+)
+summary(group_level_fit)
+```
+
+### Difference between models
+```{r}
+data <- kuperberg_df |>
+    group_by(implementation, model) |>
+    mutate(
+        "s_sem" = scale(semantic_association),
+        "full_implementation" = paste(implementation, model, sep = "_")
+    )
+```
+
+```{r}
+diff_models_fit <- lmer(
+    s_sem ~ -1 + full_implementation + cond:full_implementation + (1 | scenario),
+    data = data
+)
+summary(diff_models_fit)
+```
+
+```{r}
+# Get marginal effects for each predictor
+eff <- ggpredict(diff_models_fit, terms = c("cond", "full_implementation"))
+plot(eff, colors = c(
+    "black",
+    "firebrick1", "firebrick3", "firebrick4",
+    "steelblue1", "steelblue4", "blue1", "blue4",
+    "orchid1", "orchid3", "orchid4"
+)) +
+    theme(legend.position = "bottom")
+```
+
+## Michaelov (2024)
+
+### Modeling Difference in conditions
+```{r}
+data_one_model <- michaelov_df |>
+    filter(
+        model == "enwiki_20180420_100d" &
+            implementation == "WE"
+    )
+```
+
+```{r}
+naive_fit <- lm(semantic_association ~ cond, data = data_one_model)
+summary(naive_fit)
+```
+
+```{r}
+group_level_fit <- lmer(
+    semantic_association ~ cond + (1 | ContextCode),
+    data = data_one_model
+)
+summary(group_level_fit)
+```
