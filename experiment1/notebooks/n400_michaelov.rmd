@@ -1,0 +1,83 @@
+# Modeling the N400 from Michaelov (2024)
+
+```{r}
+library(tidytable)
+library(lmerTest)
+library(ggplot2)
+library(dplyr)
+
+setwd("experiment1")
+```
+
+## Read data
+```{r}
+sem_assoc <- read.csv(file.path("results", "michaelov_semantic_association.csv")) |>
+    select(-X) |>
+    mutate(
+        full_implementation = paste(implementation, model, sep = "_")
+    )
+
+n400_df <- read.csv(file.path("data", "michaelov_2024.csv")) |>
+    group_by(across(c(-Electrode, -N400))) |>
+    summarize(
+        "n400" = mean(N400)
+    ) |>
+    ungroup() |>
+    mutate(
+        "cond" = factor(Condition,
+            levels = c("BC", "Rel", "Unrel", "Implaus")
+        )
+    )
+``` 
+
+## Regression models
+
+```{r}
+rm(preds_all)
+
+all_implementations <- sem_assoc |>
+    pull(full_implementation) |>
+    unique()
+
+for (impl in all_implementations) {
+    print(impl)
+    sem_assoc_one_model <- sem_assoc |>
+        filter(
+            full_implementation == impl
+        ) |>
+        mutate(
+            s_sem = scale(semantic_association)
+        )
+
+    fit <- lmer(
+        n400 ~ s_sem + (1 | ContextCode),
+        data = n400_df |>
+            left_join(sem_assoc_one_model)
+    )
+
+    tmp_df <- data.frame(
+        "sem_estimate" = coef(summary(fit))[2, 1],
+        "std.error" = coef(summary(fit))[2, 2],
+        "full_implementation" = impl,
+        "implementation" = sem_assoc_one_model |> pull(implementation) |> unique()
+    )
+
+    if (exists("preds_all")) {
+        preds_all <- rbind(preds_all, tmp_df)
+    } else {
+        preds_all <- tmp_df
+    }
+}
+```
+
+```{r}
+preds_all |>
+    ggplot(aes(y = full_implementation, color = implementation)) +
+    geom_point(aes(x = sem_estimate)) +
+    geom_errorbar(
+        aes(xmin = sem_estimate - std.error, xmax = sem_estimate + std.error),
+        width = 0.25
+    ) +
+    geom_vline(aes(xintercept = 0), linetype = "dotted") +
+    theme_minimal()
+```
