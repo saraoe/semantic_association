@@ -1,0 +1,22 @@
+# Exploration of data from Tanner (2018)
+
+```{r}
+library(tidytable)
+library(ggplot2)
+
+setwd("experiment2")
+```
+
+## Read data
+```{r}
+rsvp <- read.csv(file.path("data", "Tanner", "RSVP_300-500.csv"))
+spr <- read.csv(file.path("data", "Tanner", "SPR_300-500.csv"))
+```
+
+```{r}
+rsvp |>
+    filter(Subject == 101) |>
+    filter(chindex == 1)
+
+# The N400 is averaged over all words in one trial
+```
