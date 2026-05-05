@@ -5,6 +5,8 @@ Extract semantic association from linguistic data
 from pathlib import Path
 import sys
 import pandas as pd
+import numpy as np
+from functools import cache
 
 if __name__ == "__main__":
     project_root = Path(__file__).parent.parent
@@ -34,42 +36,49 @@ def stream_models(config):
         yield (implementation, model)
 
 
-def extract_semantic_association(model: EmbeddingModel, df: pd.DataFrame):
+def extract_semantic_association(
+    model: EmbeddingModel, df: pd.DataFrame, out_path: Path, batch_size: int = None
+):
     """
     Extracts semantic association for targets in df using the embedding model
 
     Args:
-        model: Embedding model used to extract semantic association
-        df: dataframe with targets and contexts (as two columns by that name in the df)
-        model_name: name of the embedding model. Used as subfix in naming the column.
+        model: Embedding model used to extract semantic association.
+        df: dataframe with targets and contexts (as two columns by that name in the df).
+        out_path: path for where to save df.
+        batch_size: optional argument to set batch size for processing df.
     """
     assert all([(col in df.columns) for col in ["target", "context"]])
 
-    def get_association(row):
-        if pd.isna(row["context"]):
+    @cache
+    def get_association(context, target):
+        if pd.isna(context):
             return None
-        return model.get_semantic_association(
-            word=row["target"], context=row["context"]
+        return model.get_semantic_association(word=target, context=context)
+
+    if batch_size:
+        n_batches = len(df) // batch_size
+        for i, batch_df in df.groupby(np.arange(len(df)) // batch_size):
+            print(f"Batch {i}/{n_batches}")
+            batch_df["semantic_association"] = batch_df.apply(
+                lambda row: get_association(row["context"], row["target"]), axis=1
+            )
+            # save output
+            append_df_to_csv(
+                batch_df,
+                path=out_path,
+                extra_cols={"implementation": name, "model": model.model_name},
+            )
+    else:
+        df["semantic_association"] = df.apply(
+            lambda row: get_association(row["context"], row["target"]), axis=1
         )
-
-    df["semantic_association"] = df.apply(get_association, axis=1)
-    return df
-
-
-def extract_for_corpus(df: pd.DataFrame, model: EmbeddingModel, out_path: Path):
-    """
-    extracts semantic association for data in corpus
-    """
-    assert [col in df.columns for col in ["target", "context"]]
-
-    df_sem = extract_semantic_association(model, df)
-
-    # save output
-    append_df_to_csv(
-        df_sem,
-        path=out_path,
-        extra_cols={"implementation": name, "model": model.model_name},
-    )
+        # save output
+        append_df_to_csv(
+            df,
+            path=out_path,
+            extra_cols={"implementation": name, "model": model.model_name},
+        )
 
 
 if __name__ == "__main__":
@@ -128,6 +137,9 @@ if __name__ == "__main__":
     for name, model in stream_models(config):
         print(f"{name}: {model.model_name}")
         for corpus in corpora:
-            extract_for_corpus(
-                df=corpus["df"], model=model, out_path=corpus["out_path"]
+            extract_semantic_association(
+                df=corpus["df"],
+                model=model,
+                out_path=corpus["out_path"],
+                batch_size=100,
             )
