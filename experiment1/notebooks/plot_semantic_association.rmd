@@ -9,6 +9,40 @@ library(reshape2)
 setwd("experiment1")
 ```
 
+```{r}
+test <- read.csv(file.path("results", "test_BERT.csv"))
+```
+
+```{r}
+test |>
+    mutate("cond" = as.factor(cond)) |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = implementation, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "") +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    )
+```
+
 ## Read data
 ```{r}
 kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
