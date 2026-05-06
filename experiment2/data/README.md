@@ -2,7 +2,7 @@
 
 ## Tanner
 
-The data in the folder ``Tanner`` is from the paper "Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach" [1-2] and can be downloaded [here](https://dataverse.harvard.edu/dataverse/AgreementIndiff). In the folder are two csv-files, ``RSVP_300-500.csv`` and ``SPR_300-500.csv``, which contains the averaged EEG amplitude between 300 and 500 ms after word onset in RSVP and SPR reading paradigms respectively. Finally there is a filed ``Stimuli.xlsx`` which contains information on the stimuli.
+The data in the folder ``Tanner`` is from the paper "Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach" [1-2] and can be downloaded [here](https://dataverse.harvard.edu/dataverse/AgreementIndiff). The two subfolders, ``behavioral`` and ``eeg``, contains the behavioral results for all participants and the EEG signal only in the SPR condition respectively. The file ``Stimuli.xlsx`` is from the public data repository and contains information on the stimuli. The file ``stim.csv`` is created from the behavioral signal (see ``src/prepare_stimuli_tanner.r``) and contains all stimuli from the SPR condition.
 
 ## ZuCo
 
