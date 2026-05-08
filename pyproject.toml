@@ -3,7 +3,7 @@ name = "semantic-association"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = "==3.12"
 dependencies = [
     "gensim==4.4.0",
     "matplotlib==3.10.7",
@@ -15,4 +15,5 @@ dependencies = [
     "spacy==3.7.5",
     "torch==2.9.0",
     "transformers==4.57.1",
+    "mne==1.12.1"
 ]

@@ -4,9 +4,9 @@
 
 The data in the folder ``Tanner`` is from the paper "Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach" [1] and can be downloaded [here](https://dataverse.harvard.edu/dataverse/AgreementIndiff). The two subfolders, ``behavioral`` [2] and ``eeg`` [3], contains the behavioral results for all participants and the EEG signal only in the SPR condition respectively. The file ``Stimuli.xlsx`` [4] is from the public data repository and contains information on the stimuli. The file ``stim.csv`` is created from the behavioral signal (see ``src/prepare_stimuli_tanner.r``) and contains all stimuli from the SPR condition.
 
-## ZuCo
+## DERCo
 
-The data in the folder ``ZuCo`` is from the Zurich Cognitive Language Processing Corpus 2.0 [5], which can be downloaded [here](https://osf.io/2urht/overview).
+The data in the folder ``DERCo`` is from the Dublin EEG-based Reading Experiment Corpus (DERCo) [5], which can be downloaded [here](https://doi.org/10.17605/OSF.IO/RKQBU) [6]. The files are the preprocessed EEG files, ordered in the folder structure ``[subject]/article_[x]/preprocessed_epoch.fif``, where the article is the five fairytales that the participants in the corpus have read.
 
 ## References
 
@@ -18,4 +18,7 @@ The data in the folder ``ZuCo`` is from the Zurich Cognitive Language Processing
 
 [4] Tanner, Darren, 2018, "General files for "Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach"", https://doi.org/10.7910/DVN/DKEKBH, Harvard Dataverse, V2, UNF:6:kR65EZcASvphkjPneR7xqA== [fileUNF]
 
-[5] Hollenstein, N., Troendle, M., Zhang, C., & Langer, N. (2020). ZuCo 2.0: A Dataset of Physiological Recordings During Natural Reading and Annotation. In N. Calzolari, F. Béchet, P. Blache, K. Choukri, C. Cieri, T. Declerck, S. Goggi, H. Isahara, B. Maegaard, J. Mariani, H. Mazo, A. Moreno, J. Odijk, & S. Piperidis (Eds.), Proceedings of the Twelfth Language Resources and Evaluation Conference (pp. 138–146). European Language Resources Association. https://aclanthology.org/2020.lrec-1.18
+[5] Quach, B. M., Gurrin, C., & Healy, G. (2024). DERCo: A Dataset for Human Behaviour in Reading Comprehension Using EEG. Scientific Data, 11(1), 1104. https://doi.org/10.1038/s41597-024-03915-8
+
+[6] Quach, B. M. (2024). DERCo: A Dataset for Human Behaviour in Reading Comprehension Using EEG. OSF https://doi.org/10.17605/OSF.IO/RKQBU
+

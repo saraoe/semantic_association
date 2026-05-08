@@ -1,0 +1,113 @@
+# Exploration of data from DERCo
+
+```{r}
+library(tidytable)
+library(ggplot2)
+library(lmerTest)
+
+setwd("experiment2")
+```
+
+## Read data
+```{r}
+data_path <- file.path("data", "DERCo")
+mean_amplitude <- read.csv(file.path(data_path, "mean_amplitude.csv"))
+```
+
+## Check ERPs on Cloze
+```{r}
+mean_amplitude |>
+    filter(!level == "") |>
+    mutate(level = factor(level, levels = c("low", "medium", "high"))) |>
+    group_by(level) |>
+    summarize(
+        "n400" = mean(n400),
+        "p600" = mean(p600)
+    )
+```
+
+```{r}
+n400_fit <- lmer(
+    (n400 ~ p_cloze +
+        (1 + p_cloze | subject) +
+        (1 + p_cloze | article)),
+    data = mean_amplitude
+)
+
+summary(n400_fit)
+```
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: (n400 ~ p_cloze + (1 + p_cloze | subject) + (1 + p_cloze | article))
+   Data: mean_amplitude
+
+REML criterion at convergence: 235957.9
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.5890 -0.6456  0.0004  0.6351  5.0707 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev.  Corr  
+ subject  (Intercept) 7.175e-03 8.471e-02       
+          p_cloze     6.965e-03 8.346e-02 -0.11 
+ article  (Intercept) 0.000e+00 0.000e+00       
+          p_cloze     4.417e-09 6.646e-05  NaN  
+ Residual             5.085e+00 2.255e+00       
+Number of obs: 52844, groups:  subject, 22; article, 5
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(>|t|)    
+(Intercept) -0.03842    0.02289 21.18768  -1.679    0.108    
+p_cloze      0.33055    0.03376 19.64307   9.791 5.36e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+        (Intr)
+p_cloze -0.421
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see help('isSingular')
+
+```{r}
+p600_fit <- lmer(
+    (p600 ~ p_cloze +
+        (1 + p_cloze | subject) +
+        (1 + p_cloze | article)),
+    data = mean_amplitude
+)
+
+summary(p600_fit)
+```
+Linear mixed model fit by REML. t-tests use Satterthwaite's method [
+lmerModLmerTest]
+Formula: (p600 ~ p_cloze + (1 + p_cloze | subject) + (1 + p_cloze | article))
+   Data: mean_amplitude
+
+REML criterion at convergence: 224938.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.7660 -0.6446 -0.0071  0.6475  5.6886 
+
+Random effects:
+ Groups   Name        Variance  Std.Dev. Corr  
+ subject  (Intercept) 0.0717262 0.26782        
+          p_cloze     0.0037228 0.06102  0.20  
+ article  (Intercept) 0.0002637 0.01624        
+          p_cloze     0.0001652 0.01285  -1.00 
+ Residual             4.1245289 2.03089        
+Number of obs: 52844, groups:  subject, 22; article, 5
+
+Fixed effects:
+            Estimate Std. Error       df t value Pr(>|t|)   
+(Intercept) -0.03674    0.05895 21.29422  -0.623  0.53972   
+p_cloze      0.10658    0.02954 14.36979   3.609  0.00274 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+        (Intr)
+p_cloze -0.075
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see help('isSingular')
