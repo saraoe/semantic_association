@@ -1,12 +1,33 @@
 # Data for experiment 2
 
+```
+├── README.md   
+├── Tanner
+│   ├── behavioral
+|   │   └── ...             <- behavioral results
+│   ├── eeg
+|   │   └── ...             <- raw EEG (only SPR)
+│   ├── mean_amplitude      <- ERPs extracted from epochs
+│   └── stim.csv            <- stimuli (target words and context)
+├── DERCo
+│   ├── preprocessed_eeg
+|   │   └── ...             <- Preprocessed EEG from OSF data repo
+│   ├── articles
+|   │   └── ...             <- Raw articles
+│   ├── mean_amplitude      <- ERPs extracted from epochs
+|   └── stim.csv            <- stimuli (target words and context)
+
+```
+
 ## Tanner
 
 The data in the folder ``Tanner`` is from the paper "Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach" [1] and can be downloaded [here](https://dataverse.harvard.edu/dataverse/AgreementIndiff). The two subfolders, ``behavioral`` [2] and ``eeg`` [3], contains the behavioral results for all participants and the EEG signal only in the SPR condition respectively. The file ``Stimuli.xlsx`` [4] is from the public data repository and contains information on the stimuli. The file ``stim.csv`` is created from the behavioral signal (see ``src/prepare_stimuli_tanner.r``) and contains all stimuli from the SPR condition.
 
 ## DERCo
 
-The data in the folder ``DERCo`` is from the Dublin EEG-based Reading Experiment Corpus (DERCo) [5], which can be downloaded [here](https://doi.org/10.17605/OSF.IO/RKQBU) [6]. The files are the preprocessed EEG files, ordered in the folder structure ``[subject]/article_[x]/preprocessed_epoch.fif``, where the article is the five fairytales that the participants in the corpus have read.
+The data in the folder ``DERCo`` is from the Dublin EEG-based Reading Experiment Corpus (DERCo) [5], which can be downloaded [here](https://doi.org/10.17605/OSF.IO/RKQBU) [6]. The files are the preprocessed EEG files, ordered in the folder structure ``preprocessed_eeg/[subject]/article_[x]/preprocessed_epoch.fif``, where the article is the five fairytales that the participants in the corpus have read.
+
+To obtain capitalization and punctuation of the articles (as the words in the meta data did not include this), the five fairytales were downloaded from the supplementary materials [5] and put in txt-files in the ``articles/`` folder.
 
 ## References
 

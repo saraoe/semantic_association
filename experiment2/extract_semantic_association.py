@@ -83,12 +83,20 @@ def extract_semantic_association(
 
 if __name__ == "__main__":
     corpora = [
+        # {
+        #     "df": pd.read_csv(
+        #         Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+        #     ),
+        #     "out_path": Path(
+        #         "experiment2", "results", "tanner_semantic_association.csv"
+        #     ),
+        # },
         {
             "df": pd.read_csv(
-                Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+                Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
             ),
             "out_path": Path(
-                "experiment2", "results", "tanner_semantic_association.csv"
+                "experiment2", "results", "derco_semantic_association.csv"
             ),
         },
     ]
