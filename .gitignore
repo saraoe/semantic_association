@@ -15,3 +15,4 @@ experiment2/data/Tanner/*
 experiment2/data/DERCo/*
 experiment2/results/*
 experiment2/figs/preprocessing/*
+experiment2/analysis/brms_models/*
