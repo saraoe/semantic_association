@@ -117,6 +117,7 @@ if ("derco" %in% dataset) {
         pull(implementation_id) |>
         unique()
     for (imp_id in implementations) {
+        print(paste("Running implementation", imp_id))
         data <- derco_df |>
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
