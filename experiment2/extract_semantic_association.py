@@ -37,13 +37,14 @@ def stream_models(config):
 
 
 def extract_semantic_association(
-    model: EmbeddingModel, df: pd.DataFrame, out_path: Path, batch_size: int = None
+    model: EmbeddingModel, implementation_name: str, df: pd.DataFrame, out_path: Path, batch_size: int = None
 ):
     """
     Extracts semantic association for targets in df using the embedding model
 
     Args:
         model: Embedding model used to extract semantic association.
+        implementation_name: Name of the implementation (e.g., SE or WE)
         df: dataframe with targets and contexts (as two columns by that name in the df).
         out_path: path for where to save df.
         batch_size: optional argument to set batch size for processing df.
@@ -67,7 +68,7 @@ def extract_semantic_association(
             append_df_to_csv(
                 batch_df,
                 path=out_path,
-                extra_cols={"implementation": name, "model": model.model_name},
+                extra_cols={"implementation": implementation_name, "model": model.model_name},
             )
     else:
         df["semantic_association"] = df.apply(
@@ -77,7 +78,7 @@ def extract_semantic_association(
         append_df_to_csv(
             df,
             path=out_path,
-            extra_cols={"implementation": name, "model": model.model_name},
+            extra_cols={"implementation": implementation_name, "model": model.model_name},
         )
 
 
@@ -118,6 +119,16 @@ if __name__ == "__main__":
             "model_name": "whaleloops/phrase-bert",
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "BAAI/bge-m3",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
@@ -147,6 +158,7 @@ if __name__ == "__main__":
         for corpus in corpora:
             extract_semantic_association(
                 df=corpus["df"],
+                implementation_name=name,
                 model=model,
                 out_path=corpus["out_path"],
                 batch_size=100,
