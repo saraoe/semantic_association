@@ -37,7 +37,11 @@ def stream_models(config):
 
 
 def extract_semantic_association(
-    model: EmbeddingModel, implementation_name: str, df: pd.DataFrame, out_path: Path, batch_size: int = None
+    model: EmbeddingModel,
+    implementation_name: str,
+    df: pd.DataFrame,
+    out_path: Path,
+    batch_size: int = None,
 ):
     """
     Extracts semantic association for targets in df using the embedding model
@@ -68,7 +72,10 @@ def extract_semantic_association(
             append_df_to_csv(
                 batch_df,
                 path=out_path,
-                extra_cols={"implementation": implementation_name, "model": model.model_name},
+                extra_cols={
+                    "implementation": implementation_name,
+                    "model": model.model_name,
+                },
             )
     else:
         df["semantic_association"] = df.apply(
@@ -78,13 +85,17 @@ def extract_semantic_association(
         append_df_to_csv(
             df,
             path=out_path,
-            extra_cols={"implementation": implementation_name, "model": model.model_name},
+            extra_cols={
+                "implementation": implementation_name,
+                "model": model.model_name,
+            },
         )
 
 
 if __name__ == "__main__":
     corpora = [
         {
+            "name": "tanner",
             "df": pd.read_csv(
                 Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
             ),
@@ -93,6 +104,7 @@ if __name__ == "__main__":
             ),
         },
         {
+            "name": "derco",
             "df": pd.read_csv(
                 Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
             ),
@@ -151,11 +163,23 @@ if __name__ == "__main__":
             "spacy_model_name": "en_core_web_sm",
         },
     ]
+    # add Sentence(N=1)
+    config = config + [
+        {
+            **entry,
+            "implementation": entry["implementation"] + "_sentences1",
+            "n_sentences": 1,
+        }
+        for entry in config
+    ]
 
     print("Extracting semantic association")
     for name, model in stream_models(config):
         print(f"{name}: {model.model_name}")
         for corpus in corpora:
+            # only do Sentence(N=1) for DERCo
+            if model.n_sentences and corpus["name"] == "tanner":
+                continue
             extract_semantic_association(
                 df=corpus["df"],
                 implementation_name=name,
