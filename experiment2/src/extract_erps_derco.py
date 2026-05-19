@@ -57,7 +57,8 @@ def extract_erps(data_folder: Path):
     ]
 
     # calculate ERPs
-    for subject_folder in data_folder.iterdir():
+    eeg_folder = data_folder / "preprocessed_eeg"
+    for subject_folder in eeg_folder.iterdir():
         subject = subject_folder.parts[-1]
         print("Subject:", subject)
         for article_folder in subject_folder.iterdir():
