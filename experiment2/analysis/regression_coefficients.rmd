@@ -96,6 +96,7 @@ get_modelname <- function(text) {
     text <- str_remove(text, "CWE_")
     text <- str_remove(text, "WE_")
     text <- str_remove(text, "SE_")
+    text <- str_remove(text, "sentences1_")
     return(text)
 }
 
@@ -123,7 +124,10 @@ get_fixef_models <- function(datasets) {
                 mutate(
                     "implementation" = implementation,
                     "dataset" = dataset,
-                    "model" = get_modelname(implementation)
+                    "model" = get_modelname(implementation),
+                    "context" = ifelse(
+                        str_detect(implementation, "sentences1"), "Sentence(N=1)", "All"
+                    )
                 )
 
             if (exists("fixef_df")) {
@@ -145,6 +149,7 @@ fixef_df <- get_fixef_models(c("tanner", "derco"))
 
 ```{r}
 fixef_df |>
+    filter(context == "All") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -186,6 +191,7 @@ ggsave(file.path("figs", "regression_coefficients.png"), height = 5, width = 7)
 ```{r}
 for (d in c("tanner", "derco")) {
     fixef_df |>
+        filter(context == "All") |>
         filter(dataset == d) |>
         filter(coefficient == "s_sem") |>
         mutate(model_type = case_when(
@@ -220,4 +226,49 @@ for (d in c("tanner", "derco")) {
         height = 3, width = 7
     )
 }
+```
+
+```{r}
+fixef_df |>
+    filter(context == "Sentence(N=1)") |>
+    filter(dataset == "derco") |>
+    filter(coefficient == "s_sem") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        dataset = case_when(
+            dataset == "tanner" ~ "Tanner (2019)",
+            dataset == "derco" ~ "DERCo"
+        )
+    ) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    labs(
+        x = TeX("$\\beta_2$"), y = "",
+        color = "Embeddings",
+        caption = "Sentence(N=1)"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path("figs", "regression_coefficients_derco_sentences1.png"),
+    height = 3, width = 7
+)
 ```
