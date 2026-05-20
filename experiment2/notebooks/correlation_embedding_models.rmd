@@ -1,0 +1,183 @@
+# Correlation in the estimated values of semantic association accross embedding models
+
+# Correlations between predictors (lp and sem)
+
+```{r}
+library(tidytable)
+library(dplyr)
+library(stringr)
+library(ggplot2)
+library(reshape2)
+
+setwd("experiment2")
+```
+
+## Load data
+```{r}
+tanner_df <- read.csv(file.path("results", "tanner_semantic_association.csv")) |>
+    select(-X) |>
+    filter(Acceptability == "Gram") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
+
+derco_df <- read.csv(file.path("results", "derco_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
+
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+## Correlations: Tanner
+all words
+```{r}
+cor_matrix <- tanner_df |>
+    select(id, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+only content words
+```{r}
+cor_matrix <- tanner_df |>
+    filter(pos %in% content_pos) |>
+    select(id, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+## Correlations: DERCo
+all words
+```{r}
+cor_matrix <- derco_df |>
+    filter(!str_detect(implementation, "sentences1")) |>
+    select(article_n, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+only content words
+```{r}
+cor_matrix <- derco_df |>
+    filter(!str_detect(implementation, "sentences1")) |>
+    filter(pos %in% content_pos) |>
+    select(article_n, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+cor_matrix
+```
+
+```{r}
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
