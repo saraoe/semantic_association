@@ -42,6 +42,9 @@ erp_priors <- c(
     prior(normal(0, 10), class = sd)
 )
 
+# content words pos tags
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+
 if ("tanner" %in% dataset) {
     print("Dataset: Tanner")
     # load data
@@ -56,7 +59,8 @@ if ("tanner" %in% dataset) {
     tanner_df <- read.csv(file.path("data", "Tanner", "mean_amplitude.csv")) |>
         mutate(context = ifelse(is.na(context), "", context)) |>
         left_join(tanner_sem) |>
-        filter(Acceptability == "Gram")
+        filter(Acceptability == "Gram") |>
+        filter(pos %in% content_pos)
 
     # model formula
     sem_formula <- bf(
@@ -102,7 +106,8 @@ if ("derco" %in% dataset) {
     derco_df <- read.csv(
         file.path("data", "DERCo", "mean_amplitude.csv")
     ) |>
-        left_join(derco_sem)
+        left_join(derco_sem) |>
+        filter(pos %in% content_pos)
 
     # model formula
     sem_formula <- bf(
