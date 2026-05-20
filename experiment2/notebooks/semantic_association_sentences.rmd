@@ -1,0 +1,163 @@
+# Qualitative inspection of semantic association in specific sentences
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(patchwork)
+
+setwd("experiment2")
+```
+
+## load data
+```{r}
+tanner_df <- read.csv(file.path("results", "tanner_semantic_association.csv")) |>
+    filter(Acceptability == "Gram") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
+
+derco_df <- read.csv(file.path("results", "derco_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        sentence_n = cumsum(
+            lag(str_detect(target, "\\.$"), default = FALSE)
+        )
+    ) |>
+    ungroup()
+```
+
+## visualization: Tanner
+Choose sentence
+```{r}
+sentence_ids <- tanner_df |>
+    pull(id) |>
+    unique()
+sentence_id <- sentence_ids[2]
+
+df <- tanner_df |>
+    filter(id == sentence_id) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+```
+
+Print sentences
+```{r}
+df |>
+    pull(word) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+```{r}
+words_df <- df |>
+    group_by(word_n) |>
+    summarize("word" = unique(word))
+```
+
+Heatmap
+```{r}
+save_fig <- TRUE
+
+p <- df |>
+    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = words_df$word_n,
+        labels = words_df$word,
+    ) +
+    labs(
+        x = "",
+        y = ""
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank()
+    )
+
+if (save_fig) {
+    ggsave(
+        file.path(
+            "figs",
+            paste0("tanner_example_sentence", sentence_id, ".png")
+        ),
+        height = 4, width = 10
+    )
+} else {
+    p + theme(aspect.ratio = .5)
+}
+```
+
+## visualization: DERCo
+Choose sentence
+```{r}
+article_id <- 4
+sentence_id <- 11
+
+df <- derco_df |>
+    filter(article_n == article_id) |>
+    filter(sentence_n == sentence_id) |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+```
+
+Print sentences
+```{r}
+df |>
+    pull(target) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- TRUE
+
+words_df <- df |>
+    group_by(word_n) |>
+    summarize("word" = unique(target))
+
+p <- df |>
+    filter(!str_detect(implementation, "sentences1")) |>
+    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = words_df$word_n,
+        labels = words_df$word,
+    ) +
+    labs(
+        x = "",
+        y = ""
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank()
+    )
+
+if (save_fig) {
+    ggsave(
+        file.path(
+            "figs",
+            paste0("derco_example_sentence", sentence_id, "_article", article_id, ".png")
+        ),
+        height = 4, width = 10
+    )
+} else {
+    p + theme(aspect.ratio = .5)
+}
+```
