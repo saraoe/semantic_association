@@ -82,6 +82,7 @@ diagnostics_df |>
 
 diagnostics_df |>
     # filter(min(min_ess_bulk) == min_ess_bulk) |>
+    # filter(min(min_ess_tail) == min_ess_tail) |>
     filter(max(max_rhat) == max_rhat) |>
     select(model)
 
@@ -111,6 +112,7 @@ get_fixef_models <- function(datasets) {
             print(model_name)
             m <- readRDS(file.path(models_path, model_name))
             if (number_divergent_transitions(m) > 0) {
+                print("Divergent transitions - skips this model")
                 next
             }
 
