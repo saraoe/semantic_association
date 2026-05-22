@@ -13,7 +13,10 @@ setwd("experiment2")
 ```{r}
 tanner_df <- read.csv(file.path("results", "tanner_semantic_association.csv")) |>
     filter(Acceptability == "Gram") |>
-    mutate(full_implementation = paste(implementation, model, sep = "_"))
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
 
 derco_df <- read.csv(file.path("results", "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
@@ -23,10 +26,67 @@ derco_df <- read.csv(file.path("results", "derco_semantic_association.csv")) |>
             lag(str_detect(target, "\\.$"), default = FALSE)
         )
     ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
     ungroup()
 ```
 
-## visualization: Tanner
+## Tanner
+### sentences with highest/lowest semantic association
+```{r}
+print_sentences_tanner <- function(df) {
+    for (i in seq_len(nrow(df))) {
+        imp <- df[i, ]$full_implementation
+        sentence_id <- df[i, ]$sentence_id
+        word <- df[i, ]$word
+
+        sentence <- tanner_df |>
+            filter(id == sentence_id) |>
+            pull(word) |>
+            unique() |>
+            paste(collapse = " ")
+
+        print(
+            paste0(
+                "Implementation: ", imp,
+                ", id ", sentence_id,
+                ", Word number: ", word
+            )
+        )
+        print(sentence)
+        print("---")
+    }
+}
+```
+
+```{r}
+low_sem <- tanner_df |>
+    filter(!is.na(semantic_association)) |>
+    group_by(full_implementation) |>
+    filter(semantic_association == min(semantic_association)) |>
+    summarize(
+        "sentence_id" = id,
+        "word" = word_n
+    )
+
+print_sentences(low_sem)
+```
+
+```{r}
+high_sem <- tanner_df |>
+    filter(!is.na(semantic_association)) |>
+    group_by(full_implementation) |>
+    filter(semantic_association == max(semantic_association)) |>
+    summarize(
+        "sentence_id" = id,
+        "word" = word_n
+    )
+
+print_sentences(high_sem)
+```
+
+### visualization
 Choose sentence
 ```{r}
 sentence_ids <- tanner_df |>
@@ -34,11 +94,10 @@ sentence_ids <- tanner_df |>
     unique()
 sentence_id <- sentence_ids[2]
 
+# sentence_id <- 5762
+
 df <- tanner_df |>
-    filter(id == sentence_id) |>
-    group_by(implementation, model) |>
-    mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    filter(id == sentence_id)
 ```
 
 Print sentences
@@ -49,15 +108,13 @@ df |>
     paste(collapse = " ")
 ```
 
+Heatmap
 ```{r}
+save_fig <- FALSE
+
 words_df <- df |>
     group_by(word_n) |>
     summarize("word" = unique(word))
-```
-
-Heatmap
-```{r}
-save_fig <- TRUE
 
 p <- df |>
     ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
@@ -85,7 +142,7 @@ p <- df |>
 if (save_fig) {
     ggsave(
         file.path(
-            "figs",
+            "figs", "example_sentences",
             paste0("tanner_example_sentence", sentence_id, ".png")
         ),
         height = 4, width = 10
@@ -95,18 +152,76 @@ if (save_fig) {
 }
 ```
 
-## visualization: DERCo
+## DERCo
+### sentences with highest/lowest semantic association
+```{r}
+print_sentences_derco <- function(df) {
+    for (i in seq_len(nrow(df))) {
+        imp <- df[i, ]$full_implementation
+        article_id <- df[i, ]$article_id
+        sentence_id <- df[i, ]$sentence_id
+        word <- df[i, ]$word
+
+        sentence <- derco_df |>
+            filter(article_n == article_id) |>
+            filter(sentence_n == sentence_id) |>
+            pull(target) |>
+            unique() |>
+            paste(collapse = " ")
+
+        print(
+            paste0(
+                "Implementation: ", imp,
+                ", article ", article_id,
+                ", sentence ", sentence_id,
+                ", Word number: ", word
+            )
+        )
+        print(sentence)
+        print("---")
+    }
+}
+```
+
+```{r}
+low_sem <- derco_df |>
+    filter(!str_detect(full_implementation, "sentences1")) |>
+    filter(!is.na(semantic_association)) |>
+    group_by(full_implementation) |>
+    filter(semantic_association == min(semantic_association)) |>
+    summarize(
+        "article_id" = article_n,
+        "sentence_id" = sentence_n,
+        "word" = word_n
+    )
+
+print_sentences_derco(low_sem)
+```
+
+```{r}
+high_sem <- derco_df |>
+    filter(!str_detect(full_implementation, "sentences1")) |>
+    filter(!is.na(semantic_association)) |>
+    group_by(full_implementation) |>
+    filter(semantic_association == max(semantic_association)) |>
+    summarize(
+        "article_id" = article_n,
+        "sentence_id" = sentence_n,
+        "word" = word_n
+    )
+
+print_sentences_derco(high_sem)
+```
+
+### visualization
 Choose sentence
 ```{r}
-article_id <- 4
-sentence_id <- 11
+article_id <- 3
+sentence_id <- 14
 
 df <- derco_df |>
     filter(article_n == article_id) |>
-    filter(sentence_n == sentence_id) |>
-    group_by(full_implementation) |>
-    mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    filter(sentence_n == sentence_id)
 ```
 
 Print sentences
@@ -119,7 +234,7 @@ df |>
 
 Heatmap
 ```{r}
-save_fig <- TRUE
+save_fig <- FALSE
 
 words_df <- df |>
     group_by(word_n) |>
@@ -152,8 +267,11 @@ p <- df |>
 if (save_fig) {
     ggsave(
         file.path(
-            "figs",
-            paste0("derco_example_sentence", sentence_id, "_article", article_id, ".png")
+            "figs", "example_sentences",
+            paste0(
+                "derco_example_sentence", sentence_id,
+                "_article", article_id, ".png"
+            )
         ),
         height = 4, width = 10
     )
