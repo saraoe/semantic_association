@@ -181,7 +181,7 @@ fixef_df |>
     ) +
     facet_wrap(. ~ dataset, nrow = 2) +
     labs(
-        x = TeX("$\\beta_2$"), y = "",
+        x = TeX("$\\beta$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
@@ -217,7 +217,7 @@ for (d in c("tanner", "derco")) {
             )
         ) +
         labs(
-            x = TeX("$\\beta_2$"), y = "",
+            x = TeX("$\\beta$"), y = "",
             color = "Embeddings"
         ) +
         theme_minimal() +
@@ -262,7 +262,7 @@ fixef_df |>
         )
     ) +
     labs(
-        x = TeX("$\\beta_2$"), y = "",
+        x = TeX("$\\beta$"), y = "",
         color = "Embeddings",
         caption = "Sentence(N=1)"
     ) +
