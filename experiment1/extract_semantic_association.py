@@ -16,12 +16,14 @@ if __name__ == "__main__":
 from src.embedding_model import EmbeddingModel
 from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelContentWord
 from src.sentence_embedding_models import SentenceEmbeddingModel
+from src.mamba_embedding_models import MambaEmbeddingModel
 from src.append_to_csv import append_df_to_csv
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
+    "MambaEmbedding": MambaEmbeddingModel,
 }
 
 
@@ -58,7 +60,9 @@ def extract_semantic_association(model: EmbeddingModel, df: pd.DataFrame):
     return df
 
 
-def extract_for_corpus(df: pd.DataFrame, model: EmbeddingModel, out_path: Path):
+def extract_for_corpus(
+    df: pd.DataFrame, model: EmbeddingModel, implementation_name: str, out_path: Path
+):
     """
     extracts semantic association for data in corpus
     """
@@ -70,7 +74,7 @@ def extract_for_corpus(df: pd.DataFrame, model: EmbeddingModel, out_path: Path):
     append_df_to_csv(
         df_sem,
         path=out_path,
-        extra_cols={"implementation": name, "model": model.model_name},
+        extra_cols={"implementation": implementation_name, "model": model.model_name},
     )
 
 
@@ -133,73 +137,78 @@ if __name__ == "__main__":
     ]
 
     config = [
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/multilingual-e5-large",
-        },
         # {
         #     "implementation": "SE",
         #     "model_type": "SentenceEmbedding",
-        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        #     "model_name": "intfloat/multilingual-e5-large",
+        # },
+        # # {
+        # #     "implementation": "SE",
+        # #     "model_type": "SentenceEmbedding",
+        # #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        # # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "BAAI/bge-m3",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "intfloat/e5-large-v2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "whaleloops/phrase-bert",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "enwiki_20180420_100d",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "enwiki_20180420_300d",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "word2vec-google-news-300",
+        # },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "enwiki_20180420_100d",
+        #     "spacy_model_name": "en_core_web_sm",
+        # },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "enwiki_20180420_300d",
+        #     "spacy_model_name": "en_core_web_sm",
+        # },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "word2vec-google-news-300",
+        #     "spacy_model_name": "en_core_web_sm",
+        # },
+        # {
+        #     "implementation": "BERTWE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "FacebookAI/xlm-roberta-large",
         # },
         {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "BAAI/bge-m3",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/e5-large-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "whaleloops/phrase-bert",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "enwiki_20180420_100d",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "enwiki_20180420_300d",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "word2vec-google-news-300",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "enwiki_20180420_100d",
-            "spacy_model_name": "en_core_web_sm",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "enwiki_20180420_300d",
-            "spacy_model_name": "en_core_web_sm",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "word2vec-google-news-300",
-            "spacy_model_name": "en_core_web_sm",
-        },
-        {
-            "implementation": "BERTWE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "FacebookAI/xlm-roberta-large",
+            "implementation": "Mamba",
+            "model_type": "MambaEmbedding",
+            "model_name": "state-spaces/mamba-130m-hf",
         },
     ]
 
@@ -208,5 +217,8 @@ if __name__ == "__main__":
         print(f"{name}: {model.model_name}")
         for corpus in corpora:
             extract_for_corpus(
-                df=corpus["df"], model=model, out_path=corpus["out_path"]
+                df=corpus["df"],
+                model=model,
+                implementation_name=name,
+                out_path=corpus["out_path"],
             )
