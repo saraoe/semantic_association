@@ -137,74 +137,84 @@ if __name__ == "__main__":
     ]
 
     config = [
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/multilingual-e5-large",
+        },
         # {
         #     "implementation": "SE",
         #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/multilingual-e5-large",
+        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
         # },
-        # # {
-        # #     "implementation": "SE",
-        # #     "model_type": "SentenceEmbedding",
-        # #     "model_name": "jinaai/jina-embeddings-v5-text-small",
-        # # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "BAAI/bge-m3",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/e5-large-v2",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "whaleloops/phrase-bert",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_100d",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_300d",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "word2vec-google-news-300",
-        # },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "enwiki_20180420_100d",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "enwiki_20180420_300d",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "word2vec-google-news-300",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
-        # {
-        #     "implementation": "BERTWE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "FacebookAI/xlm-roberta-large",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "BAAI/bge-m3",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/e5-large-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "whaleloops/phrase-bert",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-8B",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_100d",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_300d",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "word2vec-google-news-300",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "enwiki_20180420_100d",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "enwiki_20180420_300d",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "word2vec-google-news-300",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "BERTWE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "FacebookAI/xlm-roberta-large",
+        },
         {
             "implementation": "Mamba",
             "model_type": "MambaEmbedding",
