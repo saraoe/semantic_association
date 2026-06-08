@@ -1,7 +1,7 @@
 *.pyc
 openai_api_key.txt
 install_spacy_models.md
-models/*
+models/*.txt
 slurm/*
 test*
 
