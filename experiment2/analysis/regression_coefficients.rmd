@@ -179,7 +179,7 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, nrow = 2) +
+    facet_wrap(. ~ dataset, nrow = 2, scale = "free_x") +
     labs(
         x = TeX("$\\beta$"), y = "",
         color = "Embeddings"
