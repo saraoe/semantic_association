@@ -68,6 +68,12 @@ Log-probability
 causal_preload("EleutherAI/pythia-70m-deduped")
 
 stim <- stim |>
+    # mutate("lp_gpt2" = causal_targets_pred(
+    #     contexts = context,
+    #     targets = target,
+    #     model = "gpt2",
+    #     batch_size = 10
+    # ))
     mutate("lp_pythia" = causal_targets_pred(
         contexts = context,
         targets = target,
@@ -114,7 +120,7 @@ ggsave("figs/lp_kuperberg_pythia.png")
 
 ```{r}
 stim |>
-    select(context, target, lp, lp_pythia, cond) |>
+    select(context, target, lp_gpt2, lp_pythia, cond) |>
     print(n = 8)
 ```
 
