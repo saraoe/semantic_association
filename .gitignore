@@ -9,8 +9,9 @@ cmcl26/analysis/brms_models/*
 cmcl26/_figs/*
 
 experiment1/data/Kuperberg/*
-experiment1/data/Delogu/stim_man.xlsx
 experiment1/results/kuperberg_semantic_association.csv
+experiment1/data/Delogu/*
+experiment1/data/Hoeks/*
 
 experiment2/data/Tanner/*
 experiment2/data/DERCo/*

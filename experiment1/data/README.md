@@ -8,8 +8,11 @@ The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
 ## Delogu (2019)
 The file ``delogu_2019_stim.csv`` is the stimuli from the study "Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension" by Delogu et al. [3]. The file contains linguistic stimuli (90 sentence frames with each three conditions, i.e., 270 unique sentences). The stimuli was obtained from the appendix of the paper.
 
+## Hoeks
+The folder ``Hoeks`` contains the linguistic stimuli from the paper [4]. The file ``sentences.csv`` contains on row for each sentence frame. This is preprocessed in the script ``src/prepare_hoeks_stim.py``, where the file ``stim.csv`` is created, which contains on row for each condition in each sentence frame together with the target and context.
+
 ## Michaelov (2024)
-The file ``michaelov_2024.csv`` is from the study "Strong Prediction: Language Model Surprisal  Explains Multiple N400 Effects" by Michaelov et al. [4]. The file contains linguistic stimuli (125 sentence frames with each four conditions, i.e., 500 unique sentences) along with the N400 (in different channels) for 50 participants. The file was downloaded from the [OSF repository](https://osf.io/pysbc/files/osfstorage) on 15-04-2026 and was called ``data/N400_data.csv``.
+The file ``michaelov_2024.csv`` is from the study "Strong Prediction: Language Model Surprisal  Explains Multiple N400 Effects" by Michaelov et al. [5]. The file contains linguistic stimuli (125 sentence frames with each four conditions, i.e., 500 unique sentences) along with the N400 (in different channels) for 50 participants. The file was downloaded from the [OSF repository](https://osf.io/pysbc/files/osfstorage) on 15-04-2026 and was called ``data/N400_data.csv``.
 
 ## SUBTLEX-US
 
@@ -22,4 +25,6 @@ SUBTLEX-US was downloaded from https://www.ugent.be/pp/experimentele-psychologie
 
 [3] Delogu, F., Brouwer, H., & Crocker, M. W. (2019). Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension. Brain and Cognition, 135, 103569. https://doi.org/10.1016/j.bandc.2019.05.007
 
-[4] Michaelov, J. A., Bardolph, M. D., Van Petten, C. K., Bergen, B. K., & Coulson, S. (2024). Strong Prediction: Language Model Surprisal Explains Multiple N400 Effects. Neurobiology of Language, 5(1), 107–135. https://doi.org/10.1162/nol_a_00105
+[4] Hoeks, J. C. J., Stowe, L. A., & Doedens, G. (2004). Seeing words in context: The interaction of lexical and sentence level information during reading. Cognitive Brain Research, 19(1), 59–73. https://doi.org/10.1016/j.cogbrainres.2003.10.022
+
+[5] Michaelov, J. A., Bardolph, M. D., Van Petten, C. K., Bergen, B. K., & Coulson, S. (2024). Strong Prediction: Language Model Surprisal Explains Multiple N400 Effects. Neurobiology of Language, 5(1), 107–135. https://doi.org/10.1162/nol_a_00105
