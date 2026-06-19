@@ -240,3 +240,4 @@ if __name__ == "__main__":
                 implementation_name=name,
                 out_path=corpus["out_path"],
             )
+            del(model)  # unload model
