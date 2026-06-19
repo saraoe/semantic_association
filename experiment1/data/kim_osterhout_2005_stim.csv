@@ -109,12 +109,12 @@ item,sentence,condition,e1,e2,context,target
 27,The sleek new building was discarding wastefully.,No-Attraction Violation,0,1,The sleek new building was,discarding
 28,Thirty pounds of potatoes had been peeling by the cooks.,Attraction Violation,1,1,Thirty pounds of potatoes had been,peeling
 28,Thirty pounds of potatoes had been peeled carefully.,Passive Control,1,1,Thirty pounds of potatoes had been,peeled
-28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored,looking
+28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored looking cooks had been,peeling
 28,The club's rules had been peeling the sticker off the box.,No-Attraction Violation,0,1,The club's rules had been,peeling
 29,The grimy pots and pans had been scrubbing the dishwashers.,Attraction Violation,1,1,The grimy pots and pans had been,scrubbing
 29,The grimy pots and pans had been scrubbed by the dishwashers.,Passive Control,1,1,The grimy pots and pans had been,scrubbed
 29,The guys in the kitchen had been scrubbing the pots and pans.,Active Control,1,0,The guys in the kitchen had been,scrubbing
-29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The,stolen
+29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The stolen artwork had been,scrubbing
 30,The roast lamb had been carving by a servant.,Attraction Violation,1,1,The roast lamb had been,carving
 30,The roast lamb had been carved by a servant.,Passive Control,1,1,The roast lamb had been,carved
 30,The butcher had been carving the meat.,Active Control,1,0,The butcher had been,carving
@@ -139,8 +139,8 @@ item,sentence,condition,e1,e2,context,target
 35,The elevator button had been pressed by the attendant.,Passive Control,1,1,The elevator button had been,pressed
 35,The attendant had been pressing the buttons.,Active Control,1,0,The attendant had been,pressing
 35,The wheat crops had been pressing slowly.,No-Attraction Violation,0,1,The wheat crops had been,pressing
-36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The,winning
-36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The,winning
+36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The winning lottery numbers had been,announcing
+36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The winning lottery numbers had been,announced
 36,The flight attendant had been announcing the reason for the delay.,Active Control,1,0,The flight attendant had been,announcing
 36,The tarnished silverware was announcing on the television.,No-Attraction Violation,0,1,The tarnished silverware was,announcing
 37,The victim's body had been identifying at the morgue.,Attraction Violation,1,1,The victim's body had been,identifying
@@ -250,7 +250,7 @@ item,sentence,condition,e1,e2,context,target
 63,The tarnished silverware was polishing by the butler.,Attraction Violation,1,1,The tarnished silverware was,polishing
 63,The tarnished silverware was polished by the butler.,Passive Control,1,1,The tarnished silverware was,polished
 63,The thorough butler was polishing the doorknobs.,Active Control,1,0,The thorough butler was,polishing
-63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The,winning
+63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The winning lottery numbers had been,polishing
 64,Poisonous fumes had been inhaling the firefighters.,Attraction Violation,1,1,Poisonous fumes had been,inhaling
 64,Poisonous fumes had been inhaled by the firefighters.,Passive Control,1,1,Poisonous fumes had been,inhaled
 64,The firefighters had been inhaling the smoke.,Active Control,1,0,The firefighters had been,inhaling
@@ -273,7 +273,7 @@ item,sentence,condition,e1,e2,context,target
 68,The victim's body had been directing the police.,No-Attraction Violation,0,1,The victim's body had been,directing
 69,Theresa's birthday gift had been wrapping yesterday.,Attraction Violation,1,1,Theresa's birthday gift had been,wrapping
 69,Theresa's birthday gift had been wrapped yesterday.,Passive Control,1,1,Theresa's birthday gift had been,wrapped
-69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's,loving
+69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's loving grandmother had been,wrapping
 69,The embarrassing allegations had been wrapping yesterday.,No-Attraction Violation,0,1,The embarrassing allegations had been,wrapping
 70,The popular amusement park is visiting by millions of tourists eh year.,Attraction Violation,1,1,The popular amusement park is,visiting
 70,The popular amusement park is visited daily.,Passive Control,1,1,The popular amusement park is,visited
@@ -299,8 +299,8 @@ item,sentence,condition,e1,e2,context,target
 75,The tragic mistake was regretted years later.,Passive Control,1,1,The tragic mistake was,regretted
 75,Erika was regretting the mistake.,Active Control,1,0,Erika was,regretting
 75,The library books had been regretting their behavior.,No-Attraction Violation,0,1,The library books had been,regretting
-76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The,stolen
-76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The,stolen
+76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The stolen artwork had been,seizing
+76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The stolen artwork had been,seized
 76,The police had been seizing shipments of drugs at the border.,Active Control,1,0,The police had been,seizing
 76,The grimy pots and pans had been seizing without warning.,No-Attraction Violation,0,1,The grimy pots and pans had been,seizing
 77,The value of the jewels was estimating the dealer.,Attraction Violation,1,1,The value of the jewels was,estimating
@@ -369,7 +369,7 @@ item,sentence,condition,e1,e2,context,target
 92,The homicide case had been removing at the hospital.,No-Attraction Violation,0,1,The homicide case had been,removing
 93,Mother Theresa's death was mourning millions of people.,Attraction Violation,1,1,Mother Theresa's death was,mourning
 93,Mother Theresa's death was mourned by millions of people.,Passive Control,1,1,Mother Theresa's death was,mourned
-93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-,clad
+93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-clad women were,mourning
 93,Lisa's phone had been mourning the loss of a loved one.,No-Attraction Violation,0,1,Lisa's phone had been,mourning
 94,The bathroom floor had been mopping by a janitor.,Attraction Violation,1,1,The bathroom floor had been,mopping
 94,The bathroom floor had been mopped in the past.,Passive Control,1,1,The bathroom floor had been,mopped
