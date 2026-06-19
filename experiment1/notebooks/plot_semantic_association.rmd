@@ -333,8 +333,9 @@ kim_osterhout_df |>
 # what are the sentence with NAs?
 kim_osterhout_df |>
     filter(is.na(semantic_association)) |>
-    select(condition, context, target, sentence) |>
-    pull(sentence)
+    select(condition, context, target, implementation)
+
+# only active control for CWE!
 ```
 
 ```{r}
@@ -368,7 +369,7 @@ kim_osterhout_df |>
     ) +
     labs(x = "", color = "Condition") +
     facet_wrap(. ~ implementation_f,
-        ncol = 3,
+        nrow = 3,
         scales = "free_x", space = "free_x"
     ) +
     theme_bw() +
