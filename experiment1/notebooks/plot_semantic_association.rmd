@@ -23,6 +23,16 @@ kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.cs
     filter(!scenario == 152) |> # non-sensible scenario
     filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
 
+kim_osterhout_df <- read.csv(file.path("results", "kim_osterhout_semantic_association.csv")) |>
+    mutate("cond" = factor(condition,
+        levels = c(
+            "Attraction Violation",
+            "Passive Control",
+            "Active Control",
+            "No-Attraction Violation"
+        )
+    ))
+
 michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.csv")) |>
     mutate("cond" = factor(Condition,
         levels = c("BC", "Rel", "Unrel", "Implaus")
@@ -301,6 +311,73 @@ kuperberg_df |>
     select(sentences, cond)
 pull(sentences) |>
     unique()
+```
+
+## Kim and Osterhout
+
+### Initial exploration
+By condition
+```{r}
+kim_osterhout_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+# what are the sentence with NAs?
+kim_osterhout_df |>
+    filter(is.na(semantic_association)) |>
+    select(condition, context, target, sentence) |>
+    pull(sentence)
+```
+
+```{r}
+kim_osterhout_df |>
+    filter(!implementation %in% exclude_imp) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ungroup() |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    mutate("implementation_f" = factor(
+        implementation,
+        levels = c("WE", "CWE", "SE")
+    )) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    facet_wrap(. ~ implementation_f,
+        ncol = 3,
+        scales = "free_x", space = "free_x"
+    ) +
+    theme_bw() +
+    theme(
+        legend.position = "right",
+        axis.text.x = element_text(angle = 90, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_kim_osterhout.png"), width = 8, height = 6)
 ```
 
 ## Michaelov

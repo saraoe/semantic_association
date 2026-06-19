@@ -17,6 +17,10 @@ def get_context_and_target(sentence: str):
         return None, None
     target_idx = verb_idxs[0]
 
+    # fix that the adjective is occasionally recognized as a verb
+    if target_idx <= 3 and (len(verb_idxs)) > 1:
+        target_idx = verb_idxs[1]
+
     context = doc[:target_idx].text
     target = doc[target_idx].text
     return context, target
