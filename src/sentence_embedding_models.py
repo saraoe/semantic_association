@@ -85,7 +85,7 @@ class SentenceEmbeddingModelSingleWordContentWord(EmbeddingModel):
     @cache
     def get_word_embedding(self, word: str):
         """Get embedding for one words."""
-        return self.model.encode(word, convert_to_numpy=True)
+        return self.model.encode(word)
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words. If there is more than one word, the function returns the average"""
