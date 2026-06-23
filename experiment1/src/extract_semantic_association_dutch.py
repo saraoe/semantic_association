@@ -20,7 +20,7 @@ from experiment1.src.extract_semantic_association import (
 if __name__ == "__main__":
     corpora = [
         {
-            "df": pd.read_excel(Path("experiment1", "data", "Hoeks", "stim.csv")),
+            "df": pd.read_csv(Path("experiment1", "data", "Hoeks", "stim.csv")),
             "out_path": Path(
                 "experiment1", "results", "hoeks_semantic_association.csv"
             ),

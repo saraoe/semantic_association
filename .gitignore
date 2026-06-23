@@ -12,6 +12,7 @@ experiment1/data/Kuperberg/*
 experiment1/results/kuperberg_semantic_association.csv
 experiment1/data/Delogu/*
 experiment1/data/Hoeks/*
+experiment1/results/hoeks_semantic_association.csv
 
 experiment2/data/Tanner/*
 experiment2/data/DERCo/*
