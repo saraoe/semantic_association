@@ -6,6 +6,7 @@ library(tidyr)
 library(stringr)
 library(readr)
 library(purrr)
+library(pangoling)
 
 setwd("experiment2")
 
@@ -85,5 +86,20 @@ stim <- stim |>
     mutate(context = accumulate(target, ~ paste(.x, .y))) |>
     mutate(context = lag(context)) |>
     ungroup()
+
+# extract lp from gpt2
+causal_preload("gpt2")
+
+stim_lp <- stim |>
+    filter(context != "") |>
+    mutate("lp_gpt2" = causal_targets_pred(
+        contexts = context,
+        targets = target,
+        model = "gpt2",
+        batch_size = 10
+    ))
+
+stim <- stim |>
+    left_join(stim_lp)
 
 write.csv(stim, file.path(data_folder, "stim.csv"))

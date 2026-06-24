@@ -2,9 +2,13 @@
 
 library(tidytable)
 library(purrr)
+library(pangoling)
+
 setwd("experiment2")
+
 data_folder <- file.path("data", "Tanner")
 
+# read stimuli from RT csvs
 rt_df <- csvs <- list.files(file.path(data_folder, "behavioral"), pattern = "csv$", full.names = TRUE) |>
     lapply(fread) |>
     bind_rows() |>
@@ -79,6 +83,8 @@ stim <- rt_df |>
             as.numeric()
     )
 
+
+# create context and target columns
 stim <- stim |>
     group_by(id) |>
     mutate(context = accumulate(word, ~ paste(.x, .y))) |>
@@ -86,4 +92,21 @@ stim <- stim |>
     ungroup() |>
     mutate(target = word)
 
+
+# extract lp from gpt2
+causal_preload("gpt2")
+
+stim_lp <- stim |>
+    filter(context != "") |>
+    mutate("lp_gpt2" = causal_targets_pred(
+        contexts = context,
+        targets = target,
+        model = "gpt2",
+        batch_size = 10
+    ))
+
+stim <- stim |>
+    left_join(stim_lp)
+
+# write csv
 write.csv(stim, file.path(data_folder, "stim.csv"))
