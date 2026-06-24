@@ -38,6 +38,14 @@ michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.cs
         levels = c("BC", "Rel", "Unrel", "Implaus")
     ))
 
+delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    ))
+
+hoeks_df <- read.csv(file.path("results", "hoeks_semantic_association.csv")) |>
+    mutate("cond" = condition)
+
 exclude_imp <- c("BERTWE", "Mamba") # implementations excluded from plots
 ```
 
@@ -568,6 +576,124 @@ michaelov_df |>
     # select(Sentence, cond)
     pull(Sentence) |>
     unique()
+```
+
+## Delogu
+
+### Initial exploration
+By condition
+```{r}
+delogu_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+delogu_df |>
+    filter(!implementation %in% exclude_imp) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ungroup() |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    mutate("implementation_f" = factor(
+        implementation,
+        levels = c("WE", "CWE", "SE")
+    )) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    facet_wrap(. ~ implementation_f,
+        nrow = 3,
+        scales = "free_x", space = "free_x"
+    ) +
+    theme_bw() +
+    theme(
+        legend.position = "right",
+        axis.text.x = element_text(angle = 90, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_delogu.png"), width = 8, height = 6)
+```
+
+## Hoeks
+
+### Initial exploration
+By condition
+```{r}
+hoeks_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+hoeks_df |>
+    filter(!implementation %in% exclude_imp) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ungroup() |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    mutate("implementation_f" = factor(
+        implementation,
+        levels = c("WE", "CWE", "SE")
+    )) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    facet_wrap(. ~ implementation_f,
+        nrow = 3,
+        scales = "free_x", space = "free_x"
+    ) +
+    theme_bw() +
+    theme(
+        legend.position = "right",
+        axis.text.x = element_text(angle = 90, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_hoeks.png"), width = 8, height = 6)
 ```
 
 ## Test BERT
