@@ -2,6 +2,9 @@
 
 library(tidytable)
 library(purrr)
+# library(reticulate)
+# use_condaenv("/home/ostergaa/.conda/envs/r-pangoling", required = TRUE)
+# reticulate::py_config()
 library(pangoling)
 
 setwd("experiment2")
@@ -91,7 +94,6 @@ stim <- stim |>
     mutate(context = lag(context)) |>
     ungroup() |>
     mutate(target = word)
-
 
 # extract lp from gpt2
 causal_preload("gpt2")

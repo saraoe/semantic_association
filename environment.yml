@@ -13,6 +13,11 @@ dependencies:
   - r-ggplot2=3.5.1
   - r-devtools=2.4.5
   - r-argparse=2.2.5
+  - r-png=0.1
+  - r-reticulate=1.46.0
 
   # ---- Toolchain (REQUIRED for CmdStan) ----
   - make=4.4.1
+
+  # --- Python (for pangoling) ---
+  - python=3.11.0
