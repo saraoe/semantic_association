@@ -101,11 +101,17 @@ get_modelname <- function(text) {
     return(text)
 }
 
-get_fixef_models <- function(datasets) {
+get_fixef_models <- function(datasets, include_lp = FALSE) {
     for (dataset in datasets) {
+        if (include_lp) {
+            prefix <- paste0(dataset, "_lp")
+        } else {
+            prefix <- dataset
+        }
+
         model_names <- list.files(models_path,
             full.names = FALSE,
-            pattern = paste0(dataset, "_.*\\.rds$")
+            pattern = paste0(prefix, "_.*\\.rds$")
         )
 
         for (model_name in model_names) {
@@ -116,7 +122,7 @@ get_fixef_models <- function(datasets) {
                 next
             }
 
-            implementation <- str_remove(model_name, paste0(dataset, "_"))
+            implementation <- str_remove(model_name, paste0(prefix, "_"))
             implementation <- str_remove(implementation, ".rds")
 
             fe_df <- fixef(m) |>
@@ -146,7 +152,7 @@ get_fixef_models <- function(datasets) {
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("tanner", "derco"))
+fixef_df <- get_fixef_models(c("tanner", "derco"), include_lp = FALSE)
 ```
 
 ```{r}
