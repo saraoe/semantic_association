@@ -40,7 +40,7 @@ def extract_stim(row):
         },
         {
             "item": row["item"],
-            "condition": "badFit_strongConstraint",
+            "condition": "goodFit_weakConstraint",
             "sentence": f"{np1} {active} {np2} {goodverb}.",
             "target": goodverb,
             "context": f"{np1} {active} {np2}",
@@ -48,7 +48,7 @@ def extract_stim(row):
         },
         {
             "item": row["item"],
-            "condition": "goodFit_weakConstraint",
+            "condition": "badFit_strongConstraint",
             "sentence": f"{np1} {passive} {np2} {poorverb}.",
             "target": poorverb,
             "context": f"{np1} {passive} {np2}",

@@ -1,0 +1,32 @@
+# Exploration of Hoeks et al (2004)
+
+```{r}
+library(tidytable)
+library(ggplot2)
+
+setwd("experiment1")
+```
+
+## Read data
+```{r}
+stim <- read.csv(file.path("data", "Hoeks", "stim.csv")) |>
+    mutate(wl = nchar(target))
+```
+
+## Exploration
+```{r}
+stim |> head()
+```
+
+Word length
+```{r}
+stim |>
+    select(wl) |>
+    summary()
+
+stim |>
+    ggplot() +
+    geom_density(aes(x = wl), fill = "aliceblue", alpha = .5) +
+    labs(title = "Word length") +
+    theme_minimal()
+```
