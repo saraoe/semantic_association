@@ -6,7 +6,9 @@ The folder ``Kuperberg`` contains linguistic stimuli from the two papers [1] and
 The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
 
 ## Delogu (2019)
-The file ``delogu_2019_stim.csv`` is the stimuli from the study "Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension" by Delogu et al. [3]. The file contains linguistic stimuli (90 sentence frames with each three conditions, i.e., 270 unique sentences). The stimuli was obtained from the appendix of the paper.
+The file ``delogu_2019_stim.xlsx`` is the stimuli from the study "Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension" by Delogu et al. [3]. The file contains linguistic stimuli (90 sentence frames with each three conditions, i.e., 270 unique sentences). The stimuli was obtained from the appendix of the paper.
+
+The file ``delogu_2019_stim_nl.csv`` is a Dutch translation of the stimuli from Delogu et al. [3]. The translation was done by Claude 4.8 (on the 29.06.2026).
 
 ## Hoeks
 The folder ``Hoeks`` contains the linguistic stimuli from the paper [4]. The file ``sentences.csv`` contains on row for each sentence frame. This is preprocessed in the script ``src/prepare_hoeks_stim.py``, where the file ``stim.csv`` is created, which contains on row for each condition in each sentence frame together with the target and context.
