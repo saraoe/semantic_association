@@ -70,6 +70,13 @@ if ("tanner" %in% dataset) {
             (s_sem || word)
     )
 
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || id) +
+            (s_sem + s_lp || word)
+    )
+
     # run models
     implementations <- tanner_df |>
         pull(implementation_id) |>
@@ -80,7 +87,7 @@ if ("tanner" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        m <- brm(sem_formula,
+        m_sem <- brm(sem_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
@@ -88,6 +95,16 @@ if ("tanner" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("tanner_", imp_id))
+        )
+
+        m_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("tanner_lp_", imp_id))
         )
     }
 }
@@ -117,6 +134,13 @@ if ("derco" %in% dataset) {
             (s_sem || word)
     )
 
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || article_n) +
+            (s_sem + s_lp || word)
+    )
+
     # run models
     implementations <- derco_df |>
         pull(implementation_id) |>
@@ -127,7 +151,7 @@ if ("derco" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        m <- brm(sem_formula,
+        m_sem <- brm(sem_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
@@ -135,6 +159,16 @@ if ("derco" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("derco_", imp_id))
+        )
+
+        m_sem_lp <- brm(sem_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("derco_lp_", imp_id))
         )
     }
 }
