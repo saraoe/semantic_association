@@ -36,6 +36,11 @@ if __name__ == "__main__":
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
+            "model_name": "aari1995/German_Semantic_STS_V2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
         },
         {
@@ -47,6 +52,11 @@ if __name__ == "__main__":
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "Qwen/Qwen3-Embedding-8B",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-0.6B",
         },
         {
             "implementation": "WE",
@@ -82,4 +92,4 @@ if __name__ == "__main__":
                 implementation_name=name,
                 out_path=corpus["out_path"],
             )
-            del model  # unload model
+        del model  # unload model

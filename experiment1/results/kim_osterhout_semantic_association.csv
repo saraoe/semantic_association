@@ -5759,3 +5759,387 @@
 381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.7095666,Mamba,state-spaces/mamba-130m-hf
 382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.77939856,Mamba,state-spaces/mamba-130m-hf
 383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.7188345,Mamba,state-spaces/mamba-130m-hf
+0,1,The murder had been witnessing by the three bystanders,Attraction Violation,1,1,The murder had been,witnessing,0.5149639,SE,Qwen/Qwen3-Embedding-0.6B
+1,1,The murder had been witnessed in the dark.,Passive Control,1,1,The murder had been,witnessed,0.5806915,SE,Qwen/Qwen3-Embedding-0.6B
+2,1,The bystanders had been witnessing the crime.,Active Control,1,0,The bystanders had been,witnessing,0.53705233,SE,Qwen/Qwen3-Embedding-0.6B
+3,1,The unpleasant cough syrup was witnessing in the dark.,No-Attraction Violation,0,1,The unpleasant cough syrup was,witnessing,0.35942206,SE,Qwen/Qwen3-Embedding-0.6B
+4,2,Patty's overgrown lawn was mowing the boy next door.,Attraction Violation,1,1,Patty's overgrown lawn was,mowing,0.48271734,SE,Qwen/Qwen3-Embedding-0.6B
+5,2,Patty's overgrown lawn was mowed only last week.,Passive Control,1,1,Patty's overgrown lawn was,mowed,0.52595407,SE,Qwen/Qwen3-Embedding-0.6B
+6,2,Patty's teenage son was mowing the lawn.,Active Control,1,0,Patty's teenage son was,mowing,0.2809037,SE,Qwen/Qwen3-Embedding-0.6B
+7,2,All of her money had been mowing the grass.,No-Attraction Violation,0,1,All of her money had been,mowing,0.32766113,SE,Qwen/Qwen3-Embedding-0.6B
+8,3,Three more martinis were ordering by Laurie's sister.,Attraction Violation,1,1,Three more martinis were,ordering,0.44800848,SE,Qwen/Qwen3-Embedding-0.6B
+9,3,Three more martinis were ordered repeatedly.,Passive Control,1,1,Three more martinis were,ordered,0.45666587,SE,Qwen/Qwen3-Embedding-0.6B
+10,3,"The regular customers were ordering quiche, as usual.",Active Control,1,0,The regular customers were,ordering,0.44248775,SE,Qwen/Qwen3-Embedding-0.6B
+11,3,The rough part of the wood was ordering late.,No-Attraction Violation,0,1,The rough part of the wood was,ordering,0.38216382,SE,Qwen/Qwen3-Embedding-0.6B
+12,4,The quality of Karla's work was evaluating frequently.,Attraction Violation,1,1,The quality of Karla's work was,evaluating,0.46088693,SE,Qwen/Qwen3-Embedding-0.6B
+13,4,The quality of Karla's work was evaluated frequently.,Passive Control,1,1,The quality of Karla's work was,evaluated,0.46635744,SE,Qwen/Qwen3-Embedding-0.6B
+14,4,The engineers were evaluating the success of the new device.,Active Control,1,0,The engineers were,evaluating,0.3833012,SE,Qwen/Qwen3-Embedding-0.6B
+15,4,The old lady's purse had been evaluating Nelson's idea.,No-Attraction Violation,0,1,The old lady's purse had been,evaluating,0.30485266,SE,Qwen/Qwen3-Embedding-0.6B
+16,5,The legal contract had been signing falsely.,Attraction Violation,1,1,The legal contract had been,signing,0.5202275,SE,Qwen/Qwen3-Embedding-0.6B
+17,5,The legal contract had been signed by the family.,Passive Control,1,1,The legal contract had been,signed,0.52157193,SE,Qwen/Qwen3-Embedding-0.6B
+18,5,The state's governor had been signing new legislation.,Active Control,1,0,The state's governor had been,signing,0.2591109,SE,Qwen/Qwen3-Embedding-0.6B
+19,5,An appointment was signing falsely.,No-Attraction Violation,0,1,An appointment was,signing,0.55436665,SE,Qwen/Qwen3-Embedding-0.6B
+20,6,The vocabulary list was memorizing well.,Attraction Violation,1,1,The vocabulary list was,memorizing,0.48221374,SE,Qwen/Qwen3-Embedding-0.6B
+21,6,The vocabulary list was memorized well.,Passive Control,1,1,The vocabulary list was,memorized,0.49902624,SE,Qwen/Qwen3-Embedding-0.6B
+22,6,The medical students were memorizing sample exam questions all night.,Active Control,1,0,The medical students were,memorizing,0.3330156,SE,Qwen/Qwen3-Embedding-0.6B
+23,6,The simple coffin was memorizing the lines of the poem.,No-Attraction Violation,0,1,The simple coffin was,memorizing,0.37404528,SE,Qwen/Qwen3-Embedding-0.6B
+24,7,The firewood had been chopping poorly.,Attraction Violation,1,1,The firewood had been,chopping,0.4764497,SE,Qwen/Qwen3-Embedding-0.6B
+25,7,The firewood had been chopped by Jen's grandfather.,Passive Control,1,1,The firewood had been,chopped,0.48686567,SE,Qwen/Qwen3-Embedding-0.6B
+26,7,Jen's grandfather had been chopping the firewood.,Active Control,1,0,Jen's grandfather had been,chopping,0.2146588,SE,Qwen/Qwen3-Embedding-0.6B
+27,7,Mark's wrinkly shirts were chopping vegetables.,No-Attraction Violation,0,1,Mark's wrinkly shirts were,chopping,0.3658663,SE,Qwen/Qwen3-Embedding-0.6B
+28,8,Lisa's phone had been disconnecting last month.,Attraction Violation,1,1,Lisa's phone had been,disconnecting,0.3474929,SE,Qwen/Qwen3-Embedding-0.6B
+29,8,Lisa's phone had been disconnected last month.,Passive Control,1,1,Lisa's phone had been,disconnected,0.45814836,SE,Qwen/Qwen3-Embedding-0.6B
+30,8,The electrician had been disconnecting the machine's power source.,Active Control,1,0,The electrician had been,disconnecting,0.35722277,SE,Qwen/Qwen3-Embedding-0.6B
+31,8,Mother Theresa's death was disconnecting the two cables.,No-Attraction Violation,0,1,Mother Theresa's death was,disconnecting,0.34593382,SE,Qwen/Qwen3-Embedding-0.6B
+32,9,Wendy's muddy car was washing the boys.,Attraction Violation,1,1,Wendy's muddy car was,washing,0.43011305,SE,Qwen/Qwen3-Embedding-0.6B
+33,9,Wendy's muddy car was washed wearily.,Passive Control,1,1,Wendy's muddy car was,washed,0.49470085,SE,Qwen/Qwen3-Embedding-0.6B
+34,9,Wendy and Harriet were washing the muddy car.,Active Control,1,0,Wendy and Harriet were,washing,0.37916067,SE,Qwen/Qwen3-Embedding-0.6B
+35,9,Frank's loan application had been washing the used pencil.,No-Attraction Violation,0,1,Frank's loan application had been,washing,0.3619874,SE,Qwen/Qwen3-Embedding-0.6B
+36,10,The library books had been borrowing the graduate student.,Attraction Violation,1,1,The library books had been,borrowing,0.48356968,SE,Qwen/Qwen3-Embedding-0.6B
+37,10,The library books had been borrowed by the graduate student.,Passive Control,1,1,The library books had been,borrowed,0.538447,SE,Qwen/Qwen3-Embedding-0.6B
+38,10,Katie and Lara had been borrowing dozens of books about botany from the library.,Active Control,1,0,Katie and Lara had been,borrowing,0.33580893,SE,Qwen/Qwen3-Embedding-0.6B
+39,10,The tragic mistake was borrowing in a hurry.,No-Attraction Violation,0,1,The tragic mistake was,borrowing,0.46125832,SE,Qwen/Qwen3-Embedding-0.6B
+40,11,"The dark, underwater cave was exploring by the divers.",Attraction Violation,1,1,"The dark, underwater cave was",exploring,0.3841207,SE,Qwen/Qwen3-Embedding-0.6B
+41,11,"The dark, underwater cave was explored by the divers.",Passive Control,1,1,"The dark, underwater cave was",explored,0.43473235,SE,Qwen/Qwen3-Embedding-0.6B
+42,11,The cautious scuba divers were exploring the underwater cave.,Active Control,1,0,The cautious scuba divers were,exploring,0.3874988,SE,Qwen/Qwen3-Embedding-0.6B
+43,11,The phone bill had been exploring at the zoo.,No-Attraction Violation,0,1,The phone bill had been,exploring,0.42718625,SE,Qwen/Qwen3-Embedding-0.6B
+44,12,The unpleasant cough syrup was swallowing the boy.,Attraction Violation,1,1,The unpleasant cough syrup was,swallowing,0.44750285,SE,Qwen/Qwen3-Embedding-0.6B
+45,12,The unpleasant cough syrup was swallowed by the boy.,Passive Control,1,1,The unpleasant cough syrup was,swallowed,0.49536258,SE,Qwen/Qwen3-Embedding-0.6B
+46,12,The huge adult alligator had been swallowing fish by the bucket.,Active Control,1,0,The huge adult alligator had been,swallowing,0.4755215,SE,Qwen/Qwen3-Embedding-0.6B
+47,12,The murder had been swallowing with disgust.,No-Attraction Violation,0,1,The murder had been,swallowing,0.5183831,SE,Qwen/Qwen3-Embedding-0.6B
+48,13,The pizza had been delivering once more.,Attraction Violation,1,1,The pizza had been,delivering,0.48930836,SE,Qwen/Qwen3-Embedding-0.6B
+49,13,The pizza had been delivered by Antonio himself.,Passive Control,1,1,The pizza had been,delivered,0.51815283,SE,Qwen/Qwen3-Embedding-0.6B
+50,13,The exhausted messenger had been delivering packages all over town.,Active Control,1,0,The exhausted messenger had been,delivering,0.47245616,SE,Qwen/Qwen3-Embedding-0.6B
+51,13,A genetic mutation was delivering once more.,No-Attraction Violation,0,1,A genetic mutation was,delivering,0.41491035,SE,Qwen/Qwen3-Embedding-0.6B
+52,14,Frank's loan application had been approving by the bank.,Attraction Violation,1,1,Frank's loan application had been,approving,0.4437632,SE,Qwen/Qwen3-Embedding-0.6B
+53,14,Frank's loan application had been approved anyways.,Passive Control,1,1,Frank's loan application had been,approved,0.44027445,SE,Qwen/Qwen3-Embedding-0.6B
+54,14,The board of directors had been approving too many expensive projects.,Active Control,1,0,The board of directors had been,approving,0.30513078,SE,Qwen/Qwen3-Embedding-0.6B
+55,14,Wendy's muddy car was approving the boy's request.,No-Attraction Violation,0,1,Wendy's muddy car was,approving,0.2972203,SE,Qwen/Qwen3-Embedding-0.6B
+56,15,The cheap products had been manufacturing a Belgian firm.,Attraction Violation,1,1,The cheap products had been,manufacturing,0.46329135,SE,Qwen/Qwen3-Embedding-0.6B
+57,15,The cheap products had been manufactured by a Belgian firm.,Passive Control,1,1,The cheap products had been,manufactured,0.5013619,SE,Qwen/Qwen3-Embedding-0.6B
+58,15,The auto company had been manufacturing parts in China.,Active Control,1,0,The auto company had been,manufacturing,0.5250764,SE,Qwen/Qwen3-Embedding-0.6B
+59,15,A drawing of the house had been manufacturing at a factory.,No-Attraction Violation,0,1,A drawing of the house had been,manufacturing,0.35823467,SE,Qwen/Qwen3-Embedding-0.6B
+60,16,Their secret conversation had been overhearing by a surprised neighbor.,Attraction Violation,1,1,Their secret conversation had been,overhearing,0.5652343,SE,Qwen/Qwen3-Embedding-0.6B
+61,16,Their secret conversation had been overheard by a surprised neighbor.,Passive Control,1,1,Their secret conversation had been,overheard,0.6101979,SE,Qwen/Qwen3-Embedding-0.6B
+62,16,The annoyed resident had been overhearing his neighbor's phone conversations through the wall.,Active Control,1,0,The annoyed resident had been,overhearing,0.41608298,SE,Qwen/Qwen3-Embedding-0.6B
+63,16,A wet snowball had been overhearing despite the precautions.,No-Attraction Violation,0,1,A wet snowball had been,overhearing,0.42098793,SE,Qwen/Qwen3-Embedding-0.6B
+64,17,The rough part of the wood was sanding to perfection.,Attraction Violation,1,1,The rough part of the wood was,sanding,0.5149454,SE,Qwen/Qwen3-Embedding-0.6B
+65,17,The rough part of the wood was sanded by the carpenter.,Passive Control,1,1,The rough part of the wood was,sanded,0.54163015,SE,Qwen/Qwen3-Embedding-0.6B
+66,17,The skillful carpenter was sanding the rough edge of the wood.,Active Control,1,0,The skillful carpenter was,sanding,0.5135746,SE,Qwen/Qwen3-Embedding-0.6B
+67,17,Three more martinis were sanding the chair.,No-Attraction Violation,0,1,Three more martinis were,sanding,0.43520805,SE,Qwen/Qwen3-Embedding-0.6B
+68,18,A package had been receiving by the secretary in the office.,Attraction Violation,1,1,A package had been,receiving,0.58993953,SE,Qwen/Qwen3-Embedding-0.6B
+69,18,A package had been received by the secretary in the office.,Passive Control,1,1,A package had been,received,0.63947886,SE,Qwen/Qwen3-Embedding-0.6B
+70,18,The secretary had been receiving flowers all day.,Active Control,1,0,The secretary had been,receiving,0.39399004,SE,Qwen/Qwen3-Embedding-0.6B
+71,18,The noises in the attic had been receiving assistance from the government.,No-Attraction Violation,0,1,The noises in the attic had been,receiving,0.3461422,SE,Qwen/Qwen3-Embedding-0.6B
+72,19,The club's rules had been violating Richard.,Attraction Violation,1,1,The club's rules had been,violating,0.42548987,SE,Qwen/Qwen3-Embedding-0.6B
+73,19,The club's rules had been violated only twice.,Passive Control,1,1,The club's rules had been,violated,0.46652445,SE,Qwen/Qwen3-Embedding-0.6B
+74,19,The rebel had been violating the rules.,Active Control,1,0,The rebel had been,violating,0.46863422,SE,Qwen/Qwen3-Embedding-0.6B
+75,19,Thirty pounds of potatoes had been violating only twice.,No-Attraction Violation,0,1,Thirty pounds of potatoes had been,violating,0.21496102,SE,Qwen/Qwen3-Embedding-0.6B
+76,20,A new medication had been prescribing the physician.,Attraction Violation,1,1,A new medication had been,prescribing,0.6610313,SE,Qwen/Qwen3-Embedding-0.6B
+77,20,A new medication had been prescribed by the physician.,Passive Control,1,1,A new medication had been,prescribed,0.6473703,SE,Qwen/Qwen3-Embedding-0.6B
+78,20,The new doctor had been prescribing powerful painkillers for Jelena's sore knee.,Active Control,1,0,The new doctor had been,prescribing,0.50382215,SE,Qwen/Qwen3-Embedding-0.6B
+79,20,The portrait of Napoleon had been prescribing with caution.,No-Attraction Violation,0,1,The portrait of Napoleon had been,prescribing,0.28199238,SE,Qwen/Qwen3-Embedding-0.6B
+80,21,The wheat crops had been harvesting by the local farmers.,Attraction Violation,1,1,The wheat crops had been,harvesting,0.5305703,SE,Qwen/Qwen3-Embedding-0.6B
+81,21,The wheat crops had been harvested after the rain.,Passive Control,1,1,The wheat crops had been,harvested,0.5692747,SE,Qwen/Qwen3-Embedding-0.6B
+82,21,The local farmers had been harvesting the corn all week.,Active Control,1,0,The local farmers had been,harvesting,0.41863242,SE,Qwen/Qwen3-Embedding-0.6B
+83,21,The elevator button had been harvesting after the rain.,No-Attraction Violation,0,1,The elevator button had been,harvesting,0.40185764,SE,Qwen/Qwen3-Embedding-0.6B
+84,22,The musical piece was composing by Beethoven in 1799.,Attraction Violation,1,1,The musical piece was,composing,0.44312,SE,Qwen/Qwen3-Embedding-0.6B
+85,22,The musical piece was composed in a dream.,Passive Control,1,1,The musical piece was,composed,0.56136215,SE,Qwen/Qwen3-Embedding-0.6B
+86,22,Ludwig von Beethoven was composing symphonies as a teenager.,Active Control,1,0,Ludwig von Beethoven was,composing,0.4103527,SE,Qwen/Qwen3-Embedding-0.6B
+87,22,The bank had been composing in a dream.,No-Attraction Violation,0,1,The bank had been,composing,0.3731098,SE,Qwen/Qwen3-Embedding-0.6B
+88,23,The old lady's purse had been snatching a kid.,Attraction Violation,1,1,The old lady's purse had been,snatching,0.38731763,SE,Qwen/Qwen3-Embedding-0.6B
+89,23,The old lady's purse had been snatched with speed.,Passive Control,1,1,The old lady's purse had been,snatched,0.3874203,SE,Qwen/Qwen3-Embedding-0.6B
+90,23,The clever dog had been snatching cookies from the table.,Active Control,1,0,The clever dog had been,snatching,0.46369103,SE,Qwen/Qwen3-Embedding-0.6B
+91,23,The quality of Karla's work was snatching victory from the jaws of defeat.,No-Attraction Violation,0,1,The quality of Karla's work was,snatching,0.40239358,SE,Qwen/Qwen3-Embedding-0.6B
+92,24,Olson's bulging suitcase had been packing his assistant.,Attraction Violation,1,1,Olson's bulging suitcase had been,packing,0.41412213,SE,Qwen/Qwen3-Embedding-0.6B
+93,24,Olson's bulging suitcase had been packed for the trip.,Passive Control,1,1,Olson's bulging suitcase had been,packed,0.44391692,SE,Qwen/Qwen3-Embedding-0.6B
+94,24,The excited vacationers had been packing their suitcases when the hurricane hit.,Active Control,1,0,The excited vacationers had been,packing,0.30135655,SE,Qwen/Qwen3-Embedding-0.6B
+95,24,Stormy weather had been packing for the trip.,No-Attraction Violation,0,1,Stormy weather had been,packing,0.41914248,SE,Qwen/Qwen3-Embedding-0.6B
+96,25,Several spelling errors were noticing the careful editor.,Attraction Violation,1,1,Several spelling errors were,noticing,0.4738405,SE,Qwen/Qwen3-Embedding-0.6B
+97,25,Several spelling errors were noticed by the careful editor.,Passive Control,1,1,Several spelling errors were,noticed,0.5002146,SE,Qwen/Qwen3-Embedding-0.6B
+98,25,Brittany's close friends were noticing changes in her personality.,Active Control,1,0,Brittany's close friends were,noticing,0.27089483,SE,Qwen/Qwen3-Embedding-0.6B
+99,25,The final destination had been noticing too late.,No-Attraction Violation,0,1,The final destination had been,noticing,0.45809785,SE,Qwen/Qwen3-Embedding-0.6B
+100,26,An illegal weapon had been smuggling only once.,Attraction Violation,1,1,An illegal weapon had been,smuggling,0.57505053,SE,Qwen/Qwen3-Embedding-0.6B
+101,26,An illegal weapon had been smuggled only once.,Passive Control,1,1,An illegal weapon had been,smuggled,0.5867522,SE,Qwen/Qwen3-Embedding-0.6B
+102,26,The drug dealer had been smuggling heroin into Canada.,Active Control,1,0,The drug dealer had been,smuggling,0.521527,SE,Qwen/Qwen3-Embedding-0.6B
+103,26,Cleopatra's beauty was smuggling only once.,No-Attraction Violation,0,1,Cleopatra's beauty was,smuggling,0.39814734,SE,Qwen/Qwen3-Embedding-0.6B
+104,27,The leftover food was discarding wastefully.,Attraction Violation,1,1,The leftover food was,discarding,0.49526307,SE,Qwen/Qwen3-Embedding-0.6B
+105,27,The leftover food was discarded wastefully.,Passive Control,1,1,The leftover food was,discarded,0.5611326,SE,Qwen/Qwen3-Embedding-0.6B
+106,27,The campers were discarding the leftover food.,Active Control,1,0,The campers were,discarding,0.34949455,SE,Qwen/Qwen3-Embedding-0.6B
+107,27,The sleek new building was discarding wastefully.,No-Attraction Violation,0,1,The sleek new building was,discarding,0.29836005,SE,Qwen/Qwen3-Embedding-0.6B
+108,28,Thirty pounds of potatoes had been peeling by the cooks.,Attraction Violation,1,1,Thirty pounds of potatoes had been,peeling,0.20857477,SE,Qwen/Qwen3-Embedding-0.6B
+109,28,Thirty pounds of potatoes had been peeled carefully.,Passive Control,1,1,Thirty pounds of potatoes had been,peeled,0.2523151,SE,Qwen/Qwen3-Embedding-0.6B
+110,28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored looking cooks had been,peeling,0.34456727,SE,Qwen/Qwen3-Embedding-0.6B
+111,28,The club's rules had been peeling the sticker off the box.,No-Attraction Violation,0,1,The club's rules had been,peeling,0.3290907,SE,Qwen/Qwen3-Embedding-0.6B
+112,29,The grimy pots and pans had been scrubbing the dishwashers.,Attraction Violation,1,1,The grimy pots and pans had been,scrubbing,0.4630962,SE,Qwen/Qwen3-Embedding-0.6B
+113,29,The grimy pots and pans had been scrubbed by the dishwashers.,Passive Control,1,1,The grimy pots and pans had been,scrubbed,0.47787708,SE,Qwen/Qwen3-Embedding-0.6B
+114,29,The guys in the kitchen had been scrubbing the pots and pans.,Active Control,1,0,The guys in the kitchen had been,scrubbing,0.3166951,SE,Qwen/Qwen3-Embedding-0.6B
+115,29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The stolen artwork had been,scrubbing,0.41973913,SE,Qwen/Qwen3-Embedding-0.6B
+116,30,The roast lamb had been carving by a servant.,Attraction Violation,1,1,The roast lamb had been,carving,0.3632651,SE,Qwen/Qwen3-Embedding-0.6B
+117,30,The roast lamb had been carved by a servant.,Passive Control,1,1,The roast lamb had been,carved,0.3769361,SE,Qwen/Qwen3-Embedding-0.6B
+118,30,The butcher had been carving the meat.,Active Control,1,0,The butcher had been,carving,0.5018256,SE,Qwen/Qwen3-Embedding-0.6B
+119,30,Janet's houseplants were carving before dinner.,No-Attraction Violation,0,1,Janet's houseplants were,carving,0.2925785,SE,Qwen/Qwen3-Embedding-0.6B
+120,31,Cleopatra's beauty was admiring many people.,Attraction Violation,1,1,Cleopatra's beauty was,admiring,0.5540157,SE,Qwen/Qwen3-Embedding-0.6B
+121,31,Cleopatra's beauty was admired always.,Passive Control,1,1,Cleopatra's beauty was,admired,0.48000428,SE,Qwen/Qwen3-Embedding-0.6B
+122,31,The men were admiring the beautiful woman from a distance.,Active Control,1,0,The men were,admiring,0.278086,SE,Qwen/Qwen3-Embedding-0.6B
+123,31,An illegal weapon had been admiring always.,No-Attraction Violation,0,1,An illegal weapon had been,admiring,0.34851927,SE,Qwen/Qwen3-Embedding-0.6B
+124,32,A wet snowball had been tossing by the girls through the window.,Attraction Violation,1,1,A wet snowball had been,tossing,0.5016506,SE,Qwen/Qwen3-Embedding-0.6B
+125,32,A wet snowball had been tossed in anger.,Passive Control,1,1,A wet snowball had been,tossed,0.54593915,SE,Qwen/Qwen3-Embedding-0.6B
+126,32,The baseball players had been tossing the ball around the infield.,Active Control,1,0,The baseball players had been,tossing,0.36425456,SE,Qwen/Qwen3-Embedding-0.6B
+127,32,Their secret conversation had been tossing a steak on the grill.,No-Attraction Violation,0,1,Their secret conversation had been,tossing,0.41104114,SE,Qwen/Qwen3-Embedding-0.6B
+128,33,The sealed envelope was opening the judge.,Attraction Violation,1,1,The sealed envelope was,opening,0.50966173,SE,Qwen/Qwen3-Embedding-0.6B
+129,33,The sealed envelope was opened without permission.,Passive Control,1,1,The sealed envelope was,opened,0.5327499,SE,Qwen/Qwen3-Embedding-0.6B
+130,33,Tuxedoed waiters were opening bottles of champagne for the toast.,Active Control,1,0,Tuxedoed waiters were,opening,0.44654998,SE,Qwen/Qwen3-Embedding-0.6B
+131,33,The men's faces had been opening without permission.,No-Attraction Violation,0,1,The men's faces had been,opening,0.31076175,SE,Qwen/Qwen3-Embedding-0.6B
+132,34,The man's beard had been shaving twice a day.,Attraction Violation,1,1,The man's beard had been,shaving,0.51022243,SE,Qwen/Qwen3-Embedding-0.6B
+133,34,The man's beard had been shaved twice a day.,Passive Control,1,1,The man's beard had been,shaved,0.48381934,SE,Qwen/Qwen3-Embedding-0.6B
+134,34,His uncle Ralph had been shaving his beard off.,Active Control,1,0,His uncle Ralph had been,shaving,0.2906992,SE,Qwen/Qwen3-Embedding-0.6B
+135,34,The popular amusement park is shaving twice a day.,No-Attraction Violation,0,1,The popular amusement park is,shaving,0.39289638,SE,Qwen/Qwen3-Embedding-0.6B
+136,35,The elevator button had been pressing slowly.,Attraction Violation,1,1,The elevator button had been,pressing,0.519386,SE,Qwen/Qwen3-Embedding-0.6B
+137,35,The elevator button had been pressed by the attendant.,Passive Control,1,1,The elevator button had been,pressed,0.48468196,SE,Qwen/Qwen3-Embedding-0.6B
+138,35,The attendant had been pressing the buttons.,Active Control,1,0,The attendant had been,pressing,0.39198887,SE,Qwen/Qwen3-Embedding-0.6B
+139,35,The wheat crops had been pressing slowly.,No-Attraction Violation,0,1,The wheat crops had been,pressing,0.40243274,SE,Qwen/Qwen3-Embedding-0.6B
+140,36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The winning lottery numbers had been,announcing,0.40844026,SE,Qwen/Qwen3-Embedding-0.6B
+141,36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The winning lottery numbers had been,announced,0.4405932,SE,Qwen/Qwen3-Embedding-0.6B
+142,36,The flight attendant had been announcing the reason for the delay.,Active Control,1,0,The flight attendant had been,announcing,0.38239032,SE,Qwen/Qwen3-Embedding-0.6B
+143,36,The tarnished silverware was announcing on the television.,No-Attraction Violation,0,1,The tarnished silverware was,announcing,0.33688575,SE,Qwen/Qwen3-Embedding-0.6B
+144,37,The victim's body had been identifying at the morgue.,Attraction Violation,1,1,The victim's body had been,identifying,0.2872868,SE,Qwen/Qwen3-Embedding-0.6B
+145,37,The victim's body had been identified by the family members.,Passive Control,1,1,The victim's body had been,identified,0.29929242,SE,Qwen/Qwen3-Embedding-0.6B
+146,37,The laboratory technicians had been identifying the chemical.,Active Control,1,0,The laboratory technicians had been,identifying,0.28681758,SE,Qwen/Qwen3-Embedding-0.6B
+147,37,The movie was identifying rare fish for the divers.,No-Attraction Violation,0,1,The movie was,identifying,0.5191023,SE,Qwen/Qwen3-Embedding-0.6B
+148,38,The hearty meal was devouring by the kids.,Attraction Violation,1,1,The hearty meal was,devouring,0.45190015,SE,Qwen/Qwen3-Embedding-0.6B
+149,38,The hearty meal was devoured with gusto.,Passive Control,1,1,The hearty meal was,devoured,0.5137618,SE,Qwen/Qwen3-Embedding-0.6B
+150,38,The hungry boys were devouring the plate of cookies when Jack arrived.,Active Control,1,0,The hungry boys were,devouring,0.5054312,SE,Qwen/Qwen3-Embedding-0.6B
+151,38,The dusty tabletops were devouring with gusto.,No-Attraction Violation,0,1,The dusty tabletops were,devouring,0.35092595,SE,Qwen/Qwen3-Embedding-0.6B
+152,39,The overgrown shrubs were trimming regularly.,Attraction Violation,1,1,The overgrown shrubs were,trimming,0.37804693,SE,Qwen/Qwen3-Embedding-0.6B
+153,39,The overgrown shrubs were trimmed by a gardener.,Passive Control,1,1,The overgrown shrubs were,trimmed,0.4069634,SE,Qwen/Qwen3-Embedding-0.6B
+154,39,A gardener was trimming the overgrown shrubbery.,Active Control,1,0,A gardener was,trimming,0.35426897,SE,Qwen/Qwen3-Embedding-0.6B
+155,39,The alarm clock had been trimming regularly.,No-Attraction Violation,0,1,The alarm clock had been,trimming,0.38276777,SE,Qwen/Qwen3-Embedding-0.6B
+156,40,Wilson's unreasonable proposal was rejecting by the boss.,Attraction Violation,1,1,Wilson's unreasonable proposal was,rejecting,0.47830296,SE,Qwen/Qwen3-Embedding-0.6B
+157,40,Wilson's unreasonable proposal was rejected at the hospital.,Passive Control,1,1,Wilson's unreasonable proposal was,rejected,0.43276966,SE,Qwen/Qwen3-Embedding-0.6B
+158,40,The admissions committee was rejecting nearly every application.,Active Control,1,0,The admissions committee was,rejecting,0.4804048,SE,Qwen/Qwen3-Embedding-0.6B
+159,40,The rare bird's behavior was rejecting all offers.,No-Attraction Violation,0,1,The rare bird's behavior was,rejecting,0.34199968,SE,Qwen/Qwen3-Embedding-0.6B
+160,41,Hathaway's gigantic fortune had been inheriting by his daughters.,Attraction Violation,1,1,Hathaway's gigantic fortune had been,inheriting,0.40058857,SE,Qwen/Qwen3-Embedding-0.6B
+161,41,Hathaway's gigantic fortune had been inherited by his daughters.,Passive Control,1,1,Hathaway's gigantic fortune had been,inherited,0.372707,SE,Qwen/Qwen3-Embedding-0.6B
+162,41,Generations of aristocratic Englishmen have been inheriting their fortunes.,Active Control,1,0,Generations of aristocratic Englishmen have been,inheriting,0.34198052,SE,Qwen/Qwen3-Embedding-0.6B
+163,41,The strange mystery had been inheriting the estate from her grandmother.,No-Attraction Violation,0,1,The strange mystery had been,inheriting,0.43013206,SE,Qwen/Qwen3-Embedding-0.6B
+164,42,All of her money had been spending before the wedding.,Attraction Violation,1,1,All of her money had been,spending,0.4976057,SE,Qwen/Qwen3-Embedding-0.6B
+165,42,All of her money had been spent before the wedding.,Passive Control,1,1,All of her money had been,spent,0.45695475,SE,Qwen/Qwen3-Embedding-0.6B
+166,42,The shopping fanatic had been spending all her money in Bloomingdales.,Active Control,1,0,The shopping fanatic had been,spending,0.43089166,SE,Qwen/Qwen3-Embedding-0.6B
+167,42,Patty's overgrown lawn was spending its time on the beach.,No-Attraction Violation,0,1,Patty's overgrown lawn was,spending,0.28919095,SE,Qwen/Qwen3-Embedding-0.6B
+168,43,An appointment was scheduling by the secretary.,Attraction Violation,1,1,An appointment was,scheduling,0.7044398,SE,Qwen/Qwen3-Embedding-0.6B
+169,43,An appointment was scheduled by the secretary.,Passive Control,1,1,An appointment was,scheduled,0.6631902,SE,Qwen/Qwen3-Embedding-0.6B
+170,43,The secretary was scheduling new appointments for the afternoon.,Active Control,1,0,The secretary was,scheduling,0.43555394,SE,Qwen/Qwen3-Embedding-0.6B
+171,43,The legal contract had been scheduling for next week.,No-Attraction Violation,0,1,The legal contract had been,scheduling,0.41939685,SE,Qwen/Qwen3-Embedding-0.6B
+172,44,The men's faces had been photographing by a security camera.,Attraction Violation,1,1,The men's faces had been,photographing,0.31977308,SE,Qwen/Qwen3-Embedding-0.6B
+173,44,The men's faces had been photographed by a security camera.,Passive Control,1,1,The men's faces had been,photographed,0.38394368,SE,Qwen/Qwen3-Embedding-0.6B
+174,44,The intrusive reporter had been photographing the celebrities at the party.,Active Control,1,0,The intrusive reporter had been,photographing,0.37557486,SE,Qwen/Qwen3-Embedding-0.6B
+175,44,The sealed envelope was photographing at the party.,No-Attraction Violation,0,1,The sealed envelope was,photographing,0.35793096,SE,Qwen/Qwen3-Embedding-0.6B
+176,45,The broken television had been repairing the technician.,Attraction Violation,1,1,The broken television had been,repairing,0.51376736,SE,Qwen/Qwen3-Embedding-0.6B
+177,45,The broken television had been repaired by the technician.,Passive Control,1,1,The broken television had been,repaired,0.55687124,SE,Qwen/Qwen3-Embedding-0.6B
+178,45,The competent technician had been repairing the television.,Active Control,1,0,The competent technician had been,repairing,0.48069745,SE,Qwen/Qwen3-Embedding-0.6B
+179,45,Larry's note had been repairing the computer's hard drive.,No-Attraction Violation,0,1,Larry's note had been,repairing,0.344981,SE,Qwen/Qwen3-Embedding-0.6B
+180,46,The alarm clock had been unplugging accidentally.,Attraction Violation,1,1,The alarm clock had been,unplugging,0.47880223,SE,Qwen/Qwen3-Embedding-0.6B
+181,46,The alarm clock had been unplugged late.,Passive Control,1,1,The alarm clock had been,unplugged,0.5116506,SE,Qwen/Qwen3-Embedding-0.6B
+182,46,The frantic woman had been unplugging every electrical device in the house.,Active Control,1,0,The frantic woman had been,unplugging,0.343322,SE,Qwen/Qwen3-Embedding-0.6B
+183,46,The overgrown shrubs were unplugging accidentally.,No-Attraction Violation,0,1,The overgrown shrubs were,unplugging,0.40492558,SE,Qwen/Qwen3-Embedding-0.6B
+184,47,The car door had been unlocking late at night.,Attraction Violation,1,1,The car door had been,unlocking,0.5101625,SE,Qwen/Qwen3-Embedding-0.6B
+185,47,The car door had been unlocked by the child.,Passive Control,1,1,The car door had been,unlocked,0.5043165,SE,Qwen/Qwen3-Embedding-0.6B
+186,47,The babysitter had been unlocking the back door.,Active Control,1,0,The babysitter had been,unlocking,0.3675746,SE,Qwen/Qwen3-Embedding-0.6B
+187,47,The Queen's 80th birthday was unlocking late at night.,No-Attraction Violation,0,1,The Queen's 80th birthday was,unlocking,0.2539607,SE,Qwen/Qwen3-Embedding-0.6B
+188,48,The portrait of Napoleon had been painting by a Dutch artist.,Attraction Violation,1,1,The portrait of Napoleon had been,painting,0.4461362,SE,Qwen/Qwen3-Embedding-0.6B
+189,48,The portrait of Napoleon had been painted by a Dutch artist.,Passive Control,1,1,The portrait of Napoleon had been,painted,0.47319186,SE,Qwen/Qwen3-Embedding-0.6B
+190,48,The French Impressionist artists had been painting with a focus on light and color.,Active Control,1,0,The French Impressionist artists had been,painting,0.43148473,SE,Qwen/Qwen3-Embedding-0.6B
+191,48,A new medication had been painting on Tuesday.,No-Attraction Violation,0,1,A new medication had been,painting,0.43348345,SE,Qwen/Qwen3-Embedding-0.6B
+192,49,The embarrassing allegations had been denying by the mayor.,Attraction Violation,1,1,The embarrassing allegations had been,denying,0.44809484,SE,Qwen/Qwen3-Embedding-0.6B
+193,49,The embarrassing allegations had been denied by the mayor.,Passive Control,1,1,The embarrassing allegations had been,denied,0.43124557,SE,Qwen/Qwen3-Embedding-0.6B
+194,49,The embarassed mayor had been denying allegations of corruption.,Active Control,1,0,The embarassed mayor had been,denying,0.36921504,SE,Qwen/Qwen3-Embedding-0.6B
+195,49,Tamara's birthday gift had been denying the rumor.,No-Attraction Violation,0,1,Tamara's birthday gift had been,denying,0.21666996,SE,Qwen/Qwen3-Embedding-0.6B
+196,50,The noises in the attic had been hearing nightly.,Attraction Violation,1,1,The noises in the attic had been,hearing,0.4782302,SE,Qwen/Qwen3-Embedding-0.6B
+197,50,The noises in the attic had been heard by the boys.,Passive Control,1,1,The noises in the attic had been,heard,0.48555,SE,Qwen/Qwen3-Embedding-0.6B
+198,50,The frightened campers had been hearing noises in the woods.,Active Control,1,0,The frightened campers had been,hearing,0.2927329,SE,Qwen/Qwen3-Embedding-0.6B
+199,50,A package had been hearing nightly.,No-Attraction Violation,0,1,A package had been,hearing,0.5036133,SE,Qwen/Qwen3-Embedding-0.6B
+200,51,The appetizers had been serving before the meal.,Attraction Violation,1,1,The appetizers had been,serving,0.4060328,SE,Qwen/Qwen3-Embedding-0.6B
+201,51,The appetizers had been served before the meal.,Passive Control,1,1,The appetizers had been,served,0.4385367,SE,Qwen/Qwen3-Embedding-0.6B
+202,51,The waiters had been serving the meal.,Active Control,1,0,The waiters had been,serving,0.5010378,SE,Qwen/Qwen3-Embedding-0.6B
+203,51,The final exams had been serving before the meal.,No-Attraction Violation,0,1,The final exams had been,serving,0.42281204,SE,Qwen/Qwen3-Embedding-0.6B
+204,52,Billy's unruly hair was combing his mother to one side.,Attraction Violation,1,1,Billy's unruly hair was,combing,0.42713004,SE,Qwen/Qwen3-Embedding-0.6B
+205,52,Billy's unruly hair was combed by his mother to one side.,Passive Control,1,1,Billy's unruly hair was,combed,0.45686072,SE,Qwen/Qwen3-Embedding-0.6B
+206,52,The patient barber was combing the boy's hair to one side.,Active Control,1,0,The patient barber was,combing,0.48521867,SE,Qwen/Qwen3-Embedding-0.6B
+207,52,The girl's disease was combing the area for escaped prisoners.,No-Attraction Violation,0,1,The girl's disease was,combing,0.42724314,SE,Qwen/Qwen3-Embedding-0.6B
+208,53,A drawing of the house had been sketching again.,Attraction Violation,1,1,A drawing of the house had been,sketching,0.5531576,SE,Qwen/Qwen3-Embedding-0.6B
+209,53,A drawing of the house had been sketched again.,Passive Control,1,1,A drawing of the house had been,sketched,0.55655724,SE,Qwen/Qwen3-Embedding-0.6B
+210,53,An artist in the studio had been sketching the house.,Active Control,1,0,An artist in the studio had been,sketching,0.45622504,SE,Qwen/Qwen3-Embedding-0.6B
+211,53,The cheap products had been sketching again.,No-Attraction Violation,0,1,The cheap products had been,sketching,0.34204516,SE,Qwen/Qwen3-Embedding-0.6B
+212,54,The simple coffin was burying the villagers.,Attraction Violation,1,1,The simple coffin was,burying,0.5143834,SE,Qwen/Qwen3-Embedding-0.6B
+213,54,The simple coffin was buried at the church.,Passive Control,1,1,The simple coffin was,buried,0.496346,SE,Qwen/Qwen3-Embedding-0.6B
+214,54,The tribal people were burying their dead.,Active Control,1,0,The tribal people were,burying,0.3811778,SE,Qwen/Qwen3-Embedding-0.6B
+215,54,The vocabulary list was burying at the church.,No-Attraction Violation,0,1,The vocabulary list was,burying,0.4331627,SE,Qwen/Qwen3-Embedding-0.6B
+216,55,The homicide case had been investigating diligently.,Attraction Violation,1,1,The homicide case had been,investigating,0.44582197,SE,Qwen/Qwen3-Embedding-0.6B
+217,55,The homicide case had been investigated by the FBI.,Passive Control,1,1,The homicide case had been,investigated,0.46880668,SE,Qwen/Qwen3-Embedding-0.6B
+218,55,The FBI agents had been investigating the homicide case for weeks.,Active Control,1,0,The FBI agents had been,investigating,0.33092684,SE,Qwen/Qwen3-Embedding-0.6B
+219,55,Martin's tonsils had been investigating the problem.,No-Attraction Violation,0,1,Martin's tonsils had been,investigating,0.37226766,SE,Qwen/Qwen3-Embedding-0.6B
+220,56,Mark's wrinkly shirts were ironing by his mother.,Attraction Violation,1,1,Mark's wrinkly shirts were,ironing,0.3775437,SE,Qwen/Qwen3-Embedding-0.6B
+221,56,Mark's wrinkly shirts were ironed by his mother.,Passive Control,1,1,Mark's wrinkly shirts were,ironed,0.35270202,SE,Qwen/Qwen3-Embedding-0.6B
+222,56,Mark's doting mother was ironing his shirts while he slept.,Active Control,1,0,Mark's doting mother was,ironing,0.33963692,SE,Qwen/Qwen3-Embedding-0.6B
+223,56,The firewood had been ironing her dress.,No-Attraction Violation,0,1,The firewood had been,ironing,0.43431377,SE,Qwen/Qwen3-Embedding-0.6B
+224,57,An important lesson had been learning in space.,Attraction Violation,1,1,An important lesson had been,learning,0.56648284,SE,Qwen/Qwen3-Embedding-0.6B
+225,57,An important lesson had been learned in space.,Passive Control,1,1,An important lesson had been,learned,0.61979985,SE,Qwen/Qwen3-Embedding-0.6B
+226,57,The children had been learning Spanish.,Active Control,1,0,The children had been,learning,0.41853344,SE,Qwen/Qwen3-Embedding-0.6B
+227,57,The bathroom floor had been learning in space.,No-Attraction Violation,0,1,The bathroom floor had been,learning,0.34353435,SE,Qwen/Qwen3-Embedding-0.6B
+228,58,The height of the bookcase was measuring by a carpenter.,Attraction Violation,1,1,The height of the bookcase was,measuring,0.4359165,SE,Qwen/Qwen3-Embedding-0.6B
+229,58,The height of the bookcase was measured incorrectly.,Passive Control,1,1,The height of the bookcase was,measured,0.44874817,SE,Qwen/Qwen3-Embedding-0.6B
+230,58,The carpenter was measuring the height of the bookcase.,Active Control,1,0,The carpenter was,measuring,0.3898171,SE,Qwen/Qwen3-Embedding-0.6B
+231,58,An urgent message had been measuring her heart rate.,No-Attraction Violation,0,1,An urgent message had been,measuring,0.4415093,SE,Qwen/Qwen3-Embedding-0.6B
+232,59,Several important topics were discussing despite the weather.,Attraction Violation,1,1,Several important topics were,discussing,0.48621947,SE,Qwen/Qwen3-Embedding-0.6B
+233,59,Several important topics were discussed by the board of trustees.,Passive Control,1,1,Several important topics were,discussed,0.55139446,SE,Qwen/Qwen3-Embedding-0.6B
+234,59,The board members were discussing several important topics.,Active Control,1,0,The board members were,discussing,0.35861972,SE,Qwen/Qwen3-Embedding-0.6B
+235,59,"The fresh, warm bread was discussing despite the weather.",No-Attraction Violation,0,1,"The fresh, warm bread was",discussing,0.3673737,SE,Qwen/Qwen3-Embedding-0.6B
+236,60,The dusty tabletops were wiping thoroughly.,Attraction Violation,1,1,The dusty tabletops were,wiping,0.4126295,SE,Qwen/Qwen3-Embedding-0.6B
+237,60,The dusty tabletops were wiped thoroughly.,Passive Control,1,1,The dusty tabletops were,wiped,0.46430176,SE,Qwen/Qwen3-Embedding-0.6B
+238,60,The tired busboy was wiping for hours.,Active Control,1,0,The tired busboy was,wiping,0.47223702,SE,Qwen/Qwen3-Embedding-0.6B
+239,60,The hearty meal was wiping thoroughly.,No-Attraction Violation,0,1,The hearty meal was,wiping,0.3188828,SE,Qwen/Qwen3-Embedding-0.6B
+240,61,A tiny spy camera was concealing by the agent inside a flowerpot.,Attraction Violation,1,1,A tiny spy camera was,concealing,0.5164467,SE,Qwen/Qwen3-Embedding-0.6B
+241,61,A tiny spy camera was concealed by the agent inside a flowerpot.,Passive Control,1,1,A tiny spy camera was,concealed,0.56835526,SE,Qwen/Qwen3-Embedding-0.6B
+242,61,The sneaky lawyer was concealing the truth.,Active Control,1,0,The sneaky lawyer was,concealing,0.4769464,SE,Qwen/Qwen3-Embedding-0.6B
+243,61,A faint light was concealing their identity.,No-Attraction Violation,0,1,A faint light was,concealing,0.50200355,SE,Qwen/Qwen3-Embedding-0.6B
+244,62,"The fresh, warm bread was slicing by the baker into halves.",Attraction Violation,1,1,"The fresh, warm bread was",slicing,0.4005243,SE,Qwen/Qwen3-Embedding-0.6B
+245,62,"The fresh, warm bread was sliced with love.",Passive Control,1,1,"The fresh, warm bread was",sliced,0.47543055,SE,Qwen/Qwen3-Embedding-0.6B
+246,62,The chef's assistants were slicing the mushrooms for a pie.,Active Control,1,0,The chef's assistants were,slicing,0.26985362,SE,Qwen/Qwen3-Embedding-0.6B
+247,62,Several important topics were slicing with love.,No-Attraction Violation,0,1,Several important topics were,slicing,0.3756283,SE,Qwen/Qwen3-Embedding-0.6B
+248,63,The tarnished silverware was polishing by the butler.,Attraction Violation,1,1,The tarnished silverware was,polishing,0.49474686,SE,Qwen/Qwen3-Embedding-0.6B
+249,63,The tarnished silverware was polished by the butler.,Passive Control,1,1,The tarnished silverware was,polished,0.51962095,SE,Qwen/Qwen3-Embedding-0.6B
+250,63,The thorough butler was polishing the doorknobs.,Active Control,1,0,The thorough butler was,polishing,0.45255983,SE,Qwen/Qwen3-Embedding-0.6B
+251,63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The winning lottery numbers had been,polishing,0.31992358,SE,Qwen/Qwen3-Embedding-0.6B
+252,64,Poisonous fumes had been inhaling the firefighters.,Attraction Violation,1,1,Poisonous fumes had been,inhaling,0.49187133,SE,Qwen/Qwen3-Embedding-0.6B
+253,64,Poisonous fumes had been inhaled by the firefighters.,Passive Control,1,1,Poisonous fumes had been,inhaled,0.5376516,SE,Qwen/Qwen3-Embedding-0.6B
+254,64,The firefighters had been inhaling the smoke.,Active Control,1,0,The firefighters had been,inhaling,0.29420397,SE,Qwen/Qwen3-Embedding-0.6B
+255,64,The man's signature was inhaling during the fire.,No-Attraction Violation,0,1,The man's signature was,inhaling,0.34137255,SE,Qwen/Qwen3-Embedding-0.6B
+256,65,A genetic mutation was discovering the scientists.,Attraction Violation,1,1,A genetic mutation was,discovering,0.4635365,SE,Qwen/Qwen3-Embedding-0.6B
+257,65,A genetic mutation was discovered suddenly.,Passive Control,1,1,A genetic mutation was,discovered,0.5357304,SE,Qwen/Qwen3-Embedding-0.6B
+258,65,The excited explorers were discovering ancient artifacts everywhere they looked.,Active Control,1,0,The excited explorers were,discovering,0.50473845,SE,Qwen/Qwen3-Embedding-0.6B
+259,65,The pizza had been discovering new methods for making dough.,No-Attraction Violation,0,1,The pizza had been,discovering,0.46750093,SE,Qwen/Qwen3-Embedding-0.6B
+260,66,The Queen's 80th birthday was celebrating expensively.,Attraction Violation,1,1,The Queen's 80th birthday was,celebrating,0.33577433,SE,Qwen/Qwen3-Embedding-0.6B
+261,66,The Queen's 80th birthday was celebrated by thousands of people in the streets.,Passive Control,1,1,The Queen's 80th birthday was,celebrated,0.34722883,SE,Qwen/Qwen3-Embedding-0.6B
+262,66,Thousands of excited fans were celebrating the Superbowl victory in the streets.,Active Control,1,0,Thousands of excited fans were,celebrating,0.4102413,SE,Qwen/Qwen3-Embedding-0.6B
+263,66,The car door had been celebrating her promotion.,No-Attraction Violation,0,1,The car door had been,celebrating,0.36192513,SE,Qwen/Qwen3-Embedding-0.6B
+264,67,The diagram on the chalkboard had been erasing Mrs. Larson.,Attraction Violation,1,1,The diagram on the chalkboard had been,erasing,0.4388849,SE,Qwen/Qwen3-Embedding-0.6B
+265,67,The diagram on the chalkboard had been erased by Mrs. Larson.,Passive Control,1,1,The diagram on the chalkboard had been,erased,0.4749666,SE,Qwen/Qwen3-Embedding-0.6B
+266,67,Mrs. Larson had been erasing the chalkboard.,Active Control,1,0,Mrs. Larson had been,erasing,0.35816398,SE,Qwen/Qwen3-Embedding-0.6B
+267,67,Food for the homeless had been erasing over and over.,No-Attraction Violation,0,1,Food for the homeless had been,erasing,0.32642105,SE,Qwen/Qwen3-Embedding-0.6B
+268,68,The movie was directing Steven Spielberg.,Attraction Violation,1,1,The movie was,directing,0.56802773,SE,Qwen/Qwen3-Embedding-0.6B
+269,68,The movie was directed professionally.,Passive Control,1,1,The movie was,directed,0.5600703,SE,Qwen/Qwen3-Embedding-0.6B
+270,68,Steven Spielberg was directing another blockbuster.,Active Control,1,0,Steven Spielberg was,directing,0.5315677,SE,Qwen/Qwen3-Embedding-0.6B
+271,68,The victim's body had been directing the police.,No-Attraction Violation,0,1,The victim's body had been,directing,0.23601586,SE,Qwen/Qwen3-Embedding-0.6B
+272,69,Theresa's birthday gift had been wrapping yesterday.,Attraction Violation,1,1,Theresa's birthday gift had been,wrapping,0.26148108,SE,Qwen/Qwen3-Embedding-0.6B
+273,69,Theresa's birthday gift had been wrapped yesterday.,Passive Control,1,1,Theresa's birthday gift had been,wrapped,0.28498912,SE,Qwen/Qwen3-Embedding-0.6B
+274,69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's loving grandmother had been,wrapping,0.18565573,SE,Qwen/Qwen3-Embedding-0.6B
+275,69,The embarrassing allegations had been wrapping yesterday.,No-Attraction Violation,0,1,The embarrassing allegations had been,wrapping,0.3727834,SE,Qwen/Qwen3-Embedding-0.6B
+276,70,The popular amusement park is visiting by millions of tourists eh year.,Attraction Violation,1,1,The popular amusement park is,visiting,0.521686,SE,Qwen/Qwen3-Embedding-0.6B
+277,70,The popular amusement park is visited daily.,Passive Control,1,1,The popular amusement park is,visited,0.4853018,SE,Qwen/Qwen3-Embedding-0.6B
+278,70,The tourists had been visiting the amusement park in the morning.,Active Control,1,0,The tourists had been,visiting,0.58721685,SE,Qwen/Qwen3-Embedding-0.6B
+279,70,The man's beard had been visiting a friend in the hospital.,No-Attraction Violation,0,1,The man's beard had been,visiting,0.25171223,SE,Qwen/Qwen3-Embedding-0.6B
+280,71,Ten new trees had been planting on dry land.,Attraction Violation,1,1,Ten new trees had been,planting,0.62741894,SE,Qwen/Qwen3-Embedding-0.6B
+281,71,Ten new trees had been planted by the Forestry Service.,Passive Control,1,1,Ten new trees had been,planted,0.61244696,SE,Qwen/Qwen3-Embedding-0.6B
+282,71,The forestry workers had been planting cedar saplings on the hillside.,Active Control,1,0,The forestry workers had been,planting,0.39100793,SE,Qwen/Qwen3-Embedding-0.6B
+283,71,The sin had been planting doubt in her mind.,No-Attraction Violation,0,1,The sin had been,planting,0.47570488,SE,Qwen/Qwen3-Embedding-0.6B
+284,72,Food for the homeless had been donating neighborhood residents.,Attraction Violation,1,1,Food for the homeless had been,donating,0.4757655,SE,Qwen/Qwen3-Embedding-0.6B
+285,72,Food for the homeless had been donated many times.,Passive Control,1,1,Food for the homeless had been,donated,0.48923296,SE,Qwen/Qwen3-Embedding-0.6B
+286,72,The wealthy American philanthropist had been donating money to Romanian orphanages.,Active Control,1,0,The wealthy American philanthropist had been,donating,0.49038333,SE,Qwen/Qwen3-Embedding-0.6B
+287,72,The diagram on the chalkboard had been donating blood.,No-Attraction Violation,0,1,The diagram on the chalkboard had been,donating,0.30727684,SE,Qwen/Qwen3-Embedding-0.6B
+288,73,The rare bird's behavior was observing by the biologists.,Attraction Violation,1,1,The rare bird's behavior was,observing,0.40471727,SE,Qwen/Qwen3-Embedding-0.6B
+289,73,The rare bird's behavior was observed by the biologists.,Passive Control,1,1,The rare bird's behavior was,observed,0.41893527,SE,Qwen/Qwen3-Embedding-0.6B
+290,73,The excited bird watchers were observing the rare eagle.,Active Control,1,0,The excited bird watchers were,observing,0.49509573,SE,Qwen/Qwen3-Embedding-0.6B
+291,73,Wilson's unreasonable proposal was observing the stars.,No-Attraction Violation,0,1,Wilson's unreasonable proposal was,observing,0.36108124,SE,Qwen/Qwen3-Embedding-0.6B
+292,74,Stormy weather had been forecasting by the weatherman.,Attraction Violation,1,1,Stormy weather had been,forecasting,0.491537,SE,Qwen/Qwen3-Embedding-0.6B
+293,74,Stormy weather had been forecasted by the weatherman.,Passive Control,1,1,Stormy weather had been,forecasted,0.5098563,SE,Qwen/Qwen3-Embedding-0.6B
+294,74,The weather service had been forecasting snow for the mountain areas.,Active Control,1,0,The weather service had been,forecasting,0.56066126,SE,Qwen/Qwen3-Embedding-0.6B
+295,74,Olson's bulging suitcase had been forecasting correctly.,No-Attraction Violation,0,1,Olson's bulging suitcase had been,forecasting,0.29303944,SE,Qwen/Qwen3-Embedding-0.6B
+296,75,The tragic mistake was regretting by Erika for many years.,Attraction Violation,1,1,The tragic mistake was,regretting,0.541522,SE,Qwen/Qwen3-Embedding-0.6B
+297,75,The tragic mistake was regretted years later.,Passive Control,1,1,The tragic mistake was,regretted,0.5637618,SE,Qwen/Qwen3-Embedding-0.6B
+298,75,Erika was regretting the mistake.,Active Control,1,0,Erika was,regretting,0.4731353,SE,Qwen/Qwen3-Embedding-0.6B
+299,75,The library books had been regretting their behavior.,No-Attraction Violation,0,1,The library books had been,regretting,0.37991092,SE,Qwen/Qwen3-Embedding-0.6B
+300,76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The stolen artwork had been,seizing,0.4807016,SE,Qwen/Qwen3-Embedding-0.6B
+301,76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The stolen artwork had been,seized,0.4974851,SE,Qwen/Qwen3-Embedding-0.6B
+302,76,The police had been seizing shipments of drugs at the border.,Active Control,1,0,The police had been,seizing,0.4787404,SE,Qwen/Qwen3-Embedding-0.6B
+303,76,The grimy pots and pans had been seizing without warning.,No-Attraction Violation,0,1,The grimy pots and pans had been,seizing,0.34290406,SE,Qwen/Qwen3-Embedding-0.6B
+304,77,The value of the jewels was estimating the dealer.,Attraction Violation,1,1,The value of the jewels was,estimating,0.42911145,SE,Qwen/Qwen3-Embedding-0.6B
+305,77,The value of the jewels was estimated by the dealer.,Passive Control,1,1,The value of the jewels was,estimated,0.4706491,SE,Qwen/Qwen3-Embedding-0.6B
+306,77,The jewel expert was estimating the value of the diamond.,Active Control,1,0,The jewel expert was,estimating,0.3891527,SE,Qwen/Qwen3-Embedding-0.6B
+307,77,The useful new gadget had been estimating professionally.,No-Attraction Violation,0,1,The useful new gadget had been,estimating,0.40102664,SE,Qwen/Qwen3-Embedding-0.6B
+308,78,Larry's note had been scribbling his wife.,Attraction Violation,1,1,Larry's note had been,scribbling,0.48563233,SE,Qwen/Qwen3-Embedding-0.6B
+309,78,Larry's note had been scribbled with haste.,Passive Control,1,1,Larry's note had been,scribbled,0.49197072,SE,Qwen/Qwen3-Embedding-0.6B
+310,78,Larry's wife had been scribbling a note to him about dinner plans.,Active Control,1,0,Larry's wife had been,scribbling,0.31036648,SE,Qwen/Qwen3-Embedding-0.6B
+311,78,The broken television had been scribbling his thoughts on a napkin.,No-Attraction Violation,0,1,The broken television had been,scribbling,0.4154047,SE,Qwen/Qwen3-Embedding-0.6B
+312,79,Carrie's morning meeting was canceling as expected.,Attraction Violation,1,1,Carrie's morning meeting was,canceling,0.35787112,SE,Qwen/Qwen3-Embedding-0.6B
+313,79,Carrie's morning meeting was canceled by the boss.,Passive Control,1,1,Carrie's morning meeting was,canceled,0.3938039,SE,Qwen/Qwen3-Embedding-0.6B
+314,79,Carrie had been canceling all of her meetings.,Active Control,1,0,Carrie had been,canceling,0.34314442,SE,Qwen/Qwen3-Embedding-0.6B
+315,79,The bubblegum had been canceling as expected.,No-Attraction Violation,0,1,The bubblegum had been,canceling,0.4039839,SE,Qwen/Qwen3-Embedding-0.6B
+316,80,The girl's disease was curing a simple treatment.,Attraction Violation,1,1,The girl's disease was,curing,0.42316443,SE,Qwen/Qwen3-Embedding-0.6B
+317,80,The girl's disease was cured by a simple treatment.,Passive Control,1,1,The girl's disease was,cured,0.41754472,SE,Qwen/Qwen3-Embedding-0.6B
+318,80,The foreign doctors were curing hundreds of villagers of malaria.,Active Control,1,0,The foreign doctors were,curing,0.3970538,SE,Qwen/Qwen3-Embedding-0.6B
+319,80,Billy's unruly hair was curing his cold.,No-Attraction Violation,0,1,Billy's unruly hair was,curing,0.38257855,SE,Qwen/Qwen3-Embedding-0.6B
+320,81,Janet's houseplants were watering too much.,Attraction Violation,1,1,Janet's houseplants were,watering,0.4156782,SE,Qwen/Qwen3-Embedding-0.6B
+321,81,Janet's houseplants were watered by her neighbor.,Passive Control,1,1,Janet's houseplants were,watered,0.41758245,SE,Qwen/Qwen3-Embedding-0.6B
+322,81,The gardener was watering the plants.,Active Control,1,0,The gardener was,watering,0.51422435,SE,Qwen/Qwen3-Embedding-0.6B
+323,81,The roast lamb had been watering too much.,No-Attraction Violation,0,1,The roast lamb had been,watering,0.3104908,SE,Qwen/Qwen3-Embedding-0.6B
+324,82,The useful new gadget had been inventing by a bored waiter.,Attraction Violation,1,1,The useful new gadget had been,inventing,0.52303064,SE,Qwen/Qwen3-Embedding-0.6B
+325,82,The useful new gadget had been invented by a bored waiter.,Passive Control,1,1,The useful new gadget had been,invented,0.58760345,SE,Qwen/Qwen3-Embedding-0.6B
+326,82,The resourceful engineers had been inventing tiny new devices.,Active Control,1,0,The resourceful engineers had been,inventing,0.4059211,SE,Qwen/Qwen3-Embedding-0.6B
+327,82,The value of the jewels was inventing the digital computer.,No-Attraction Violation,0,1,The value of the jewels was,inventing,0.3556943,SE,Qwen/Qwen3-Embedding-0.6B
+328,83,The phone bill had been paying his roommate.,Attraction Violation,1,1,The phone bill had been,paying,0.61100894,SE,Qwen/Qwen3-Embedding-0.6B
+329,83,The phone bill had been paid quickly.,Passive Control,1,1,The phone bill had been,paid,0.5398373,SE,Qwen/Qwen3-Embedding-0.6B
+330,83,Juan and Perry had been paying too much for their apartment.,Active Control,1,0,Juan and Perry had been,paying,0.28783834,SE,Qwen/Qwen3-Embedding-0.6B
+331,83,"The dark, underwater cave was paying attention to the divers.",No-Attraction Violation,0,1,"The dark, underwater cave was",paying,0.2701675,SE,Qwen/Qwen3-Embedding-0.6B
+332,84,The man's signature was forging the lawyers.,Attraction Violation,1,1,The man's signature was,forging,0.42278817,SE,Qwen/Qwen3-Embedding-0.6B
+333,84,The man's signature was forged by the lawyers.,Passive Control,1,1,The man's signature was,forged,0.4598121,SE,Qwen/Qwen3-Embedding-0.6B
+334,84,The con artists were forging the signatures on checks.,Active Control,1,0,The con artists were,forging,0.4951607,SE,Qwen/Qwen3-Embedding-0.6B
+335,84,Poisonous fumes had been forging very well.,No-Attraction Violation,0,1,Poisonous fumes had been,forging,0.44855925,SE,Qwen/Qwen3-Embedding-0.6B
+336,85,The bank had been robbing two masked men.,Attraction Violation,1,1,The bank had been,robbing,0.51370704,SE,Qwen/Qwen3-Embedding-0.6B
+337,85,The bank had been robbed repeatedly.,Passive Control,1,1,The bank had been,robbed,0.52544457,SE,Qwen/Qwen3-Embedding-0.6B
+338,85,The clever burglars had been robbing houses in broad daylight.,Active Control,1,0,The clever burglars had been,robbing,0.58888483,SE,Qwen/Qwen3-Embedding-0.6B
+339,85,The musical piece was robbing repeatedly.,No-Attraction Violation,0,1,The musical piece was,robbing,0.3590613,SE,Qwen/Qwen3-Embedding-0.6B
+340,86,An urgent message had been sending by the ambassador to the President.,Attraction Violation,1,1,An urgent message had been,sending,0.6533543,SE,Qwen/Qwen3-Embedding-0.6B
+341,86,An urgent message had been sent again.,Passive Control,1,1,An urgent message had been,sent,0.63486445,SE,Qwen/Qwen3-Embedding-0.6B
+342,86,The Prime Minister had been sending urgent messages to her Ambassador.,Active Control,1,0,The Prime Minister had been,sending,0.31713068,SE,Qwen/Qwen3-Embedding-0.6B
+343,86,The height of the bookcase was sending mixed signals to the carpenter.,No-Attraction Violation,0,1,The height of the bookcase was,sending,0.34964934,SE,Qwen/Qwen3-Embedding-0.6B
+344,87,The sleek new building was designing a team of German architects.,Attraction Violation,1,1,The sleek new building was,designing,0.39016387,SE,Qwen/Qwen3-Embedding-0.6B
+345,87,The sleek new building was designed by a team of German architects.,Passive Control,1,1,The sleek new building was,designed,0.41877708,SE,Qwen/Qwen3-Embedding-0.6B
+346,87,A team of architects had been designing the new building.,Active Control,1,0,A team of architects had been,designing,0.4506189,SE,Qwen/Qwen3-Embedding-0.6B
+347,87,The leftover food was designing with flair.,No-Attraction Violation,0,1,The leftover food was,designing,0.3741368,SE,Qwen/Qwen3-Embedding-0.6B
+348,88,The final exams had been grading in school.,Attraction Violation,1,1,The final exams had been,grading,0.5398717,SE,Qwen/Qwen3-Embedding-0.6B
+349,88,The final exams had been graded in school.,Passive Control,1,1,The final exams had been,graded,0.48720026,SE,Qwen/Qwen3-Embedding-0.6B
+350,88,The professor had been grading the final exams until 4 AM.,Active Control,1,0,The professor had been,grading,0.4735701,SE,Qwen/Qwen3-Embedding-0.6B
+351,88,The appetizers had been grading Iverson's students.,No-Attraction Violation,0,1,The appetizers had been,grading,0.29492956,SE,Qwen/Qwen3-Embedding-0.6B
+352,89,The final destination had been reaching too late.,Attraction Violation,1,1,The final destination had been,reaching,0.58366865,SE,Qwen/Qwen3-Embedding-0.6B
+353,89,The final destination had been reached too late.,Passive Control,1,1,The final destination had been,reached,0.64950544,SE,Qwen/Qwen3-Embedding-0.6B
+354,89,The curious child had been reaching for the cup on the table.,Active Control,1,0,The curious child had been,reaching,0.37284356,SE,Qwen/Qwen3-Embedding-0.6B
+355,89,Several spelling errors were reaching too late.,No-Attraction Violation,0,1,Several spelling errors were,reaching,0.4406504,SE,Qwen/Qwen3-Embedding-0.6B
+356,90,A faint light was perceiving by the rescue workers.,Attraction Violation,1,1,A faint light was,perceiving,0.43616375,SE,Qwen/Qwen3-Embedding-0.6B
+357,90,A faint light was perceived underwater.,Passive Control,1,1,A faint light was,perceived,0.41147697,SE,Qwen/Qwen3-Embedding-0.6B
+358,90,The worried pilot was perceiving a rattling sound in the jet's engine.,Active Control,1,0,The worried pilot was,perceiving,0.321266,SE,Qwen/Qwen3-Embedding-0.6B
+359,90,A tiny spy camera was perceiving underwater.,No-Attraction Violation,0,1,A tiny spy camera was,perceiving,0.46917227,SE,Qwen/Qwen3-Embedding-0.6B
+360,91,The bubblegum had been chewing by the boy.,Attraction Violation,1,1,The bubblegum had been,chewing,0.47769713,SE,Qwen/Qwen3-Embedding-0.6B
+361,91,The bubblegum had been chewed by the boy.,Passive Control,1,1,The bubblegum had been,chewed,0.48387465,SE,Qwen/Qwen3-Embedding-0.6B
+362,91,The hungry dog had been chewing a bone.,Active Control,1,0,The hungry dog had been,chewing,0.46460646,SE,Qwen/Qwen3-Embedding-0.6B
+363,91,Carrie's morning meeting was chewing for a long time.,No-Attraction Violation,0,1,Carrie's morning meeting was,chewing,0.37991735,SE,Qwen/Qwen3-Embedding-0.6B
+364,92,Martin's tonsils had been removing at the hospital.,Attraction Violation,1,1,Martin's tonsils had been,removing,0.4024574,SE,Qwen/Qwen3-Embedding-0.6B
+365,92,Martin's tonsils had been removed at the hospital.,Passive Control,1,1,Martin's tonsils had been,removed,0.4288359,SE,Qwen/Qwen3-Embedding-0.6B
+366,92,The surgeon had been removing the cancerous growth.,Active Control,1,0,The surgeon had been,removing,0.40500933,SE,Qwen/Qwen3-Embedding-0.6B
+367,92,The homicide case had been removing at the hospital.,No-Attraction Violation,0,1,The homicide case had been,removing,0.43807012,SE,Qwen/Qwen3-Embedding-0.6B
+368,93,Mother Theresa's death was mourning millions of people.,Attraction Violation,1,1,Mother Theresa's death was,mourning,0.498791,SE,Qwen/Qwen3-Embedding-0.6B
+369,93,Mother Theresa's death was mourned by millions of people.,Passive Control,1,1,Mother Theresa's death was,mourned,0.48848167,SE,Qwen/Qwen3-Embedding-0.6B
+370,93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-clad women were,mourning,0.31316596,SE,Qwen/Qwen3-Embedding-0.6B
+371,93,Lisa's phone had been mourning the loss of a loved one.,No-Attraction Violation,0,1,Lisa's phone had been,mourning,0.32793278,SE,Qwen/Qwen3-Embedding-0.6B
+372,94,The bathroom floor had been mopping by a janitor.,Attraction Violation,1,1,The bathroom floor had been,mopping,0.5627987,SE,Qwen/Qwen3-Embedding-0.6B
+373,94,The bathroom floor had been mopped in the past.,Passive Control,1,1,The bathroom floor had been,mopped,0.5528626,SE,Qwen/Qwen3-Embedding-0.6B
+374,94,The school janitor had been mopping the bathroom.,Active Control,1,0,The school janitor had been,mopping,0.53727734,SE,Qwen/Qwen3-Embedding-0.6B
+375,94,An important lesson had been mopping in the past.,No-Attraction Violation,0,1,An important lesson had been,mopping,0.39285627,SE,Qwen/Qwen3-Embedding-0.6B
+376,95,The sin had been confessing by the repentant Catholic.,Attraction Violation,1,1,The sin had been,confessing,0.62159395,SE,Qwen/Qwen3-Embedding-0.6B
+377,95,The sin had been confessed on Sunday.,Passive Control,1,1,The sin had been,confessed,0.6489853,SE,Qwen/Qwen3-Embedding-0.6B
+378,95,The repentant Catholic had been confessing his sins.,Active Control,1,0,The repentant Catholic had been,confessing,0.44089,SE,Qwen/Qwen3-Embedding-0.6B
+379,95,Ten new trees had been confessing on Sunday.,No-Attraction Violation,0,1,Ten new trees had been,confessing,0.38212395,SE,Qwen/Qwen3-Embedding-0.6B
+380,96,The strange mystery had been solving the detectives.,Attraction Violation,1,1,The strange mystery had been,solving,0.49188367,SE,Qwen/Qwen3-Embedding-0.6B
+381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.48596117,SE,Qwen/Qwen3-Embedding-0.6B
+382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.42875293,SE,Qwen/Qwen3-Embedding-0.6B
+383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.32965448,SE,Qwen/Qwen3-Embedding-0.6B

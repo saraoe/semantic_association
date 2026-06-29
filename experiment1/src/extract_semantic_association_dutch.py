@@ -49,6 +49,11 @@ if __name__ == "__main__":
             "model_name": "Qwen/Qwen3-Embedding-8B",
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-0.6B",
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "nlwiki_20180420_100d",
@@ -82,4 +87,4 @@ if __name__ == "__main__":
                 implementation_name=name,
                 out_path=corpus["out_path"],
             )
-            del model  # unload model
+        del model  # unload model
