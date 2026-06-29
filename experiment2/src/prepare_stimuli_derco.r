@@ -100,6 +100,7 @@ stim_lp <- stim |>
     ))
 
 stim <- stim |>
-    left_join(stim_lp)
+    left_join(stim_lp) |>
+    muate("s_lp" = scale(lp_gpt2))
 
 write.csv(stim, file.path(data_folder, "stim.csv"))
