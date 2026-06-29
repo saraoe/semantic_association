@@ -1,0 +1,271 @@
+ItemNum;Condition;context;target;continuation
+1;control;Johan betrad het restaurant. Even later opende hij de;menukaart;en verschafte zich een overzicht.
+1;script-related;Johan verliet het restaurant. Even later opende hij de;menukaart;en verschafte zich een overzicht.
+1;script-unrelated;Johan betrad het appartement. Even later opende hij de;menukaart;en verschafte zich een overzicht.
+2;control;Sabine betrad de bioscoop. Snel liep ze naar de;kassa;en kocht een kaartje.
+2;script-related;Sabine verliet de bioscoop. Snel liep ze naar de;kassa;en kocht een kaartje.
+2;script-unrelated;Sabine betrad de school. Snel liep ze naar de;kassa;en kocht een kaartje.
+3;control;Kevin betrad de boerderij. Zonder te aarzelen pakte hij een;mestvork;en begon te scheppen.
+3;script-related;Kevin verliet de boerderij. Zonder te aarzelen pakte hij een;mestvork;en begon te scheppen.
+3;script-unrelated;Kevin betrad de kerk. Zonder te aarzelen pakte hij een;mestvork;en begon te scheppen.
+4;control;Susi betrad de huisartsenpraktijk. Vriendelijk sprak ze met de;doktersassistente;over de problematiek.
+4;script-related;Susi verliet de huisartsenpraktijk. Vriendelijk sprak ze met de;doktersassistente;over de problematiek.
+4;script-unrelated;Susi betrad het verblijf. Vriendelijk sprak ze met de;doktersassistente;over de problematiek.
+5;control;Roman betrad de bibliotheek. Kort daarna liep hij naar het;rek;en zocht een detective.
+5;script-related;Roman verliet de bibliotheek. Kort daarna liep hij naar het;rek;en zocht een detective.
+5;script-unrelated;Roman betrad de kroeg. Kort daarna liep hij naar het;rek;en zocht een detective.
+6;control;Lea begon spaghetti te koken. Voorzichtig opende ze het;pastapak;met een handgreep.
+6;script-related;Lea was klaar met spaghetti koken. Voorzichtig opende ze het;pastapak;met een handgreep.
+6;script-unrelated;Lea begon de muren te verven. Voorzichtig opende ze het;pastapak;met een handgreep.
+7;control;Peter bereikte het theater. Even later liep hij naar de;loge;en ging zitten.
+7;script-related;Peter verliet het theater. Even later liep hij naar de;loge;en ging zitten.
+7;script-unrelated;Peter bereikte de supermarkt. Even later liep hij naar de;loge;en ging zitten.
+8;control;Lisa betrad het station. Even later was ze op het;perron;en wachtte op de trein.
+8;script-related;Lisa verliet het station. Even later was ze op het;perron;en wachtte op de trein.
+8;script-unrelated;Lisa betrad het huis. Even later was ze op het;perron;en wachtte op de trein.
+9;control;Tim begon in de sportschool te trainen. Meteen was hij op de;loopband;en rende als een gek.
+9;script-related;Tim stopte in de sportschool te trainen. Meteen was hij op de;loopband;en rende als een gek.
+9;script-unrelated;Tim begon zijn rijles. Meteen was hij op de;loopband;en rende als een gek.
+10;control;Maria bereikte het vliegveld. Direct liep ze naar de;check-in;om de koffer af te geven.
+10;script-related;Maria verliet het vliegveld. Direct liep ze naar de;check-in;om de koffer af te geven.
+10;script-unrelated;Maria bereikte het winkelcentrum. Direct liep ze naar de;check-in;om de koffer af te geven.
+11;control;Lukas kwam op het verjaardagsfeest. Na een tijdje overhandigde hij de;taart;en feliciteerde.
+11;script-related;Lukas verliet het verjaardagsfeest. Na een tijdje overhandigde hij de;taart;en feliciteerde.
+11;script-unrelated;Lukas kwam op de les. Na een tijdje overhandigde hij de;taart;en feliciteerde.
+12;control;Marie ging naar de kapper. Na een kort moment vroeg ze de;styliste;om een nieuwe coupe.
+12;script-related;Marie verliet de kapper. Na een kort moment vroeg ze de;styliste;om een nieuwe coupe.
+12;script-unrelated;Marie ging naar de uni. Na een kort moment vroeg ze de;styliste;om een nieuwe coupe.
+13;control;Thorsten begon te douchen. Als eerste gebruikte hij de;shampoo;en daarna de douchegel.
+13;script-related;Thorsten stopte met douchen. Als eerste gebruikte hij de;shampoo;en daarna de douchegel.
+13;script-unrelated;Thorsten begon te barbecueën. Als eerste gebruikte hij de;shampoo;en daarna de douchegel.
+14;control;Claudia betrad de bloemenwinkel. Snel vroeg ze om een;roos;voor een vriendin.
+14;script-related;Claudia verliet de bloemenwinkel. Snel vroeg ze om een;roos;voor een vriendin.
+14;script-unrelated;Claudia betrad de dierenwinkel. Snel vroeg ze om een;roos;voor een vriendin.
+15;control;Jonathan ging naar de begraafplaats. Peinzend bekeek hij de;grafsteen;en sprak een gebed.
+15;script-related;Jonathan verliet de begraafplaats. Peinzend bekeek hij de;grafsteen;en sprak een gebed.
+15;script-unrelated;Jonathan ging naar de keuken. Peinzend bekeek hij de;grafsteen;en sprak een gebed.
+16;control;Lara ging de tuin in. Precies onderzocht ze de;aarde;en goot toen de bloemen.
+16;script-related;Lara verliet de tuin. Precies onderzocht ze de;aarde;en goot toen de bloemen.
+16;script-unrelated;Lara ging naar het fornuis. Precies onderzocht ze de;aarde;en goot toen de bloemen.
+17;control;Roman ging naar het museum. Nauwgezet bekeek hij de;sculpturen;en was verrukt.
+17;script-related;Roman verliet het museum. Nauwgezet bekeek hij de;sculpturen;en was verrukt.
+17;script-unrelated;Roman ging naar de boekhandel. Nauwgezet bekeek hij de;sculpturen;en was verrukt.
+18;control;Annika ging naar de banketbakker. Snel vroeg ze om een;taart;en betaalde meteen.
+18;script-related;Annika verliet de banketbakker. Snel vroeg ze om een;taart;en betaalde meteen.
+18;script-unrelated;Annika ging naar de boetiek. Snel vroeg ze om een;taart;en betaalde meteen.
+19;control;Emil betrad de spa. Na een tijdje kreeg hij een;massage;en genoot ervan.
+19;script-related;Emil verliet de spa. Na een tijdje kreeg hij een;massage;en genoot ervan.
+19;script-unrelated;Emil betrad de apotheek. Na een tijdje kreeg hij een;massage;en genoot ervan.
+20;control;Susanne betrad de manege. Snel legde ze het;zadel;op en reed weg.
+20;script-related;Susanne verliet de manege. Snel legde ze het;zadel;op en reed weg.
+20;script-unrelated;Susanne betrad de badkamer. Snel legde ze het;zadel;op en reed weg.
+21;control;Martin kwam bij de veiligheidscontrole. Vlot opende hij de;koffer;en werd doorgewuifd.
+21;script-related;Martin verliet de veiligheidscontrole. Vlot opende hij de;koffer;en werd doorgewuifd.
+21;script-unrelated;Martin kwam bij de garage. Vlot opende hij de;koffer;en werd doorgewuifd.
+22;control;Jutta ging naar de hotelreceptie. Direct kreeg ze een;kamer;en bedankte vriendelijk.
+22;script-related;Jutta verliet de hotelreceptie. Direct kreeg ze een;kamer;en bedankte vriendelijk.
+22;script-unrelated;Jutta ging naar het postkantoor. Direct kreeg ze een;kamer;en bedankte vriendelijk.
+23;control;Jens ging naar de tandarts. Angstig liep hij naar de;röntgen;en liet zich behandelen.
+23;script-related;Jens verliet de tandarts. Angstig liep hij naar de;röntgen;en liet zich behandelen.
+23;script-unrelated;Jens ging naar de douane. Angstig liep hij naar de;röntgen;en liet zich behandelen.
+24;control;Elena begon te pokeren. Snel zette ze haar;geld;in en won.
+24;script-related;Elena stopte met pokeren. Snel zette ze haar;geld;in en won.
+24;script-unrelated;Elena begon te tekenen. Snel zette ze haar;geld;in en won.
+25;control;Bruno begon zijn vakantie. Eindelijk kwam hij bij de;zee;aan en genoot van het weer.
+25;script-related;Bruno beëindigde zijn vakantie. Eindelijk kwam hij bij de;zee;aan en genoot van het weer.
+25;script-unrelated;Bruno begon zijn filmavond. Eindelijk kwam hij bij de;zee;aan en genoot van het weer.
+26;control;Jana betrad het gemeentehuis. Meteen toonde ze haar;visum;en diende een aanvraag in.
+26;script-related;Jana verliet het gemeentehuis. Meteen toonde ze haar;visum;en diende een aanvraag in.
+26;script-unrelated;Jana betrad het tuincentrum. Meteen toonde ze haar;visum;en diende een aanvraag in.
+27;control;Nico ging naar de kermis. Direct liep hij naar de;botsauto's;en reed een rondje.
+27;script-related;Nico verliet de kermis. Direct liep hij naar de;botsauto's;en reed een rondje.
+27;script-unrelated;Nico ging naar de pizzeria. Direct liep hij naar de;botsauto's;en reed een rondje.
+28;control;Beate ging wandelen. Na een tijdje zag ze een;edelweiss;dat ze meteen meenam.
+28;script-related;Beate kwam terug van het wandelen. Na een tijdje zag ze een;edelweiss;dat ze meteen meenam.
+28;script-unrelated;Beate ging zwemmen. Na een tijdje zag ze een;edelweiss;dat ze meteen meenam.
+29;control;Hubert nam een taxi. Vriendelijk begroette hij de;chauffeur;en noemde zijn bestemming.
+29;script-related;Hubert verliet de taxi. Vriendelijk begroette hij de;chauffeur;en noemde zijn bestemming.
+29;script-unrelated;Hubert nam een vliegtuig. Vriendelijk begroette hij de;chauffeur;en noemde zijn bestemming.
+30;control;Jenni begon te baden. Direct verdeelde ze het;schuim;over haar lichaam.
+30;script-related;Jenni stopte met baden. Direct verdeelde ze het;schuim;over haar lichaam.
+30;script-unrelated;Jenni begon de hoorcollege. Direct verdeelde ze het;schuim;over haar lichaam.
+31;control;Hans betrad de ijshal. Vlot snoerde hij zijn;schaatsen;en ging de baan op.
+31;script-related;Hans verliet de ijshal. Vlot snoerde hij zijn;schaatsen;en ging de baan op.
+31;script-unrelated;Hans betrad de klimhal. Vlot snoerde hij zijn;schaatsen;en ging de baan op.
+32;control;Clara begon te bowlen. Vakkundig behaalde ze een;strike;en won het spel.
+32;script-related;Clara stopte met bowlen. Vakkundig behaalde ze een;strike;en won het spel.
+32;script-unrelated;Clara ging naar de schietbaan. Vakkundig behaalde ze een;strike;en won het spel.
+33;control;Georg nam deel aan een brandweerinzet. Direct gebruikte hij de;slang;en bluste het vuur.
+33;script-related;Georg beëindigde een brandweerinzet. Direct gebruikte hij de;slang;en bluste het vuur.
+33;script-unrelated;Georg nam deel aan yoga. Direct gebruikte hij de;slang;en bluste het vuur.
+34;control;Johanna begon de voetbalwedstrijd. Na korte tijd maakte ze een;doelpunt;en juichte luid.
+34;script-related;Johanna beëindigde de voetbalwedstrijd. Na korte tijd maakte ze een;doelpunt;en juichte luid.
+34;script-unrelated;Johanna begon de jacht. Na korte tijd maakte ze een;doelpunt;en juichte luid.
+35;control;Jürgen betrad de slagerij. Direct vroeg hij om een;steak;en betaalde.
+35;script-related;Jürgen verliet de slagerij. Direct vroeg hij om een;steak;en betaalde.
+35;script-unrelated;Jürgen betrad de bakkerij. Direct vroeg hij om een;steak;en betaalde.
+36;control;Frauke betrad de dierentuin. Even later fotografeerde ze een;zebra;tijdens het drinken.
+36;script-related;Frauke verliet de dierentuin. Even later fotografeerde ze een;zebra;tijdens het drinken.
+36;script-unrelated;Frauke ging naar het stadion. Even later fotografeerde ze een;zebra;tijdens het drinken.
+37;control;Bernd betrad de wasserette. Snel koos hij het;wasprogramma;en liet het lopen.
+37;script-related;Bernd verliet de wasserette. Snel koos hij het;wasprogramma;en liet het lopen.
+37;script-unrelated;Bernd betrad de kiosk. Snel koos hij het;wasprogramma;en liet het lopen.
+38;control;Nicole ging naar het circus. Al snel ging ze op de;tribune;zitten en bekeek het spektakel.
+38;script-related;Nicole verliet het circus. Al snel ging ze op de;tribune;zitten en bekeek het spektakel.
+38;script-unrelated;Nicole ging naar het kantoor. Al snel ging ze op de;tribune;zitten en bekeek het spektakel.
+39;control;Viktor ging naar de sauna. Na een tijdje maakte hij een;opgieting;en ging liggen.
+39;script-related;Viktor verliet de sauna. Na een tijdje maakte hij een;opgieting;en ging liggen.
+39;script-unrelated;Viktor ging naar het lab. Na een tijdje maakte hij een;opgieting;en ging liggen.
+40;control;Gabi ging naar de dierenarts. Een moment later vroeg ze de;assistente;om medicijnen.
+40;script-related;Gabi verliet de dierenarts. Een moment later vroeg ze de;assistente;om medicijnen.
+40;script-unrelated;Gabi ging naar de kleedkamer. Een moment later vroeg ze de;assistente;om medicijnen.
+41;control;Jakob betrad de plaats delict. Kort daarop fotografeerde hij de;bloedspatten;en was verbaasd.
+41;script-related;Jakob verliet de plaats delict. Kort daarop fotografeerde hij de;bloedspatten;en was verbaasd.
+41;script-unrelated;Jakob betrad het tankstation. Kort daarop fotografeerde hij de;bloedspatten;en was verbaasd.
+42;control;Peter begon bomen te kappen. Na een tijdje gebruikte ze de;bijl;en raakte gericht de stam.
+42;script-related;Peter stopte met bomen kappen. Na een tijdje gebruikte ze de;bijl;en raakte gericht de stam.
+42;script-unrelated;Peter begon de koets te rijden. Na een tijdje gebruikte ze de;bijl;en raakte gericht de stam.
+43;control;Tom begon een kampvuur. Direct stapelde hij het;hout;en stak het aan.
+43;script-related;Tom beëindigde het kampvuur. Direct stapelde hij het;hout;en stak het aan.
+43;script-unrelated;Tom begon ontbijt te maken. Direct stapelde hij het;hout;en stak het aan.
+44;control;Kim ging naar de kerstmarkt. Kort daarop bereikte hij de;kerstkraampjes;en snuffelde naar cadeaus.
+44;script-related;Kim verliet de kerstmarkt. Kort daarop bereikte hij de;kerstkraampjes;en snuffelde naar cadeaus.
+44;script-unrelated;Kim ging naar het ziekenhuis. Kort daarop bereikte hij de;kerstkraampjes;en snuffelde naar cadeaus.
+45;control;Michael begon zijn lunch te koken. Snel sneed hij de;groente;en gooide het in de pot.
+45;script-related;Michael was klaar met zijn lunch koken. Snel sneed hij de;groente;en gooide het in de pot.
+45;script-unrelated;Michael begon een taart te bakken. Snel sneed hij de;groente;en gooide het in de pot.
+46;control;Johan betrad het appartement. Direct ging hij op het;bed;zitten en dacht na over de dag.
+46;script-related;Johan verliet het appartement. Direct ging hij op het;bed;zitten en dacht na over de dag.
+46;script-unrelated;Johan betrad de bioscoop. Direct ging hij op het;bed;zitten en dacht na over de dag.
+47;control;Sabine betrad de school. Snel liep ze naar het;klaslokaal;en groette de leerlingen.
+47;script-related;Sabine verliet de school. Snel liep ze naar het;klaslokaal;en groette de leerlingen.
+47;script-unrelated;Sabine betrad de boerderij. Snel liep ze naar het;klaslokaal;en groette de leerlingen.
+48;control;Kevin betrad de kerk. Voorzichtig pakte hij een;kaars;en stak hem aan.
+48;script-related;Kevin verliet de kerk. Voorzichtig pakte hij een;kaars;en stak hem aan.
+48;script-unrelated;Kevin betrad de huisartsenpraktijk. Voorzichtig pakte hij een;kaars;en stak hem aan.
+49;control;Susi betrad het verblijf. Nauwkeurig beoordeelde ze het;kalf;en maakte aantekeningen.
+49;script-related;Susi verliet het verblijf. Nauwkeurig beoordeelde ze het;kalf;en maakte aantekeningen.
+49;script-unrelated;Susi betrad de bibliotheek. Nauwkeurig beoordeelde ze het;kalf;en maakte aantekeningen.
+50;control;Thomas betrad de kroeg. Haastig riep hij de;ober;en bestelde een bier.
+50;script-related;Thomas verliet de kroeg. Haastig riep hij de;ober;en bestelde een bier.
+50;script-unrelated;Thomas begon spaghetti te koken. Haastig riep hij de;ober;en bestelde een bier.
+51;control;Lea begon de muren te verven. Snel koos ze een;kwast;en begon te verven.
+51;script-related;Lea was klaar met de muren verven. Snel koos ze een;kwast;en begon te verven.
+51;script-unrelated;Lea bereikte het theater. Snel koos ze een;kwast;en begon te verven.
+52;control;Peter bereikte de supermarkt. Snel kocht hij wat;groente;om 's avonds te koken.
+52;script-related;Peter verliet de supermarkt. Snel kocht hij wat;groente;om 's avonds te koken.
+52;script-unrelated;Peter bereikte het station. Snel kocht hij wat;groente;om 's avonds te koken.
+53;control;Lisa betrad het huis. Kort daarna checkte ze de;koelkast;en zocht iets te eten.
+53;script-related;Lisa verliet het huis. Kort daarna checkte ze de;koelkast;en zocht iets te eten.
+53;script-unrelated;Lisa begon in de sportschool te trainen. Kort daarna checkte ze de;koelkast;en zocht iets te eten.
+54;control;Tim begon zijn rijles. Hectisch drukte hij op het;gaspedaal;en reed weg.
+54;script-related;Tim beëindigde zijn rijles. Hectisch drukte hij op het;gaspedaal;en reed weg.
+54;script-unrelated;Tim ging naar het vliegveld. Hectisch drukte hij op het;gaspedaal;en reed weg.
+55;control;Maria bereikte het winkelcentrum. Direct begroette ze de;verkoopster;en koos iets uit.
+55;script-related;Maria verliet het winkelcentrum. Direct begroette ze de;verkoopster;en koos iets uit.
+55;script-unrelated;Maria bereikte het verjaardagsfeest. Direct begroette ze de;verkoopster;en koos iets uit.
+56;control;Lukas begon het college. Haastig begroette hij zijn;studenten;en begon.
+56;script-related;Lukas beëindigde het college. Haastig begroette hij zijn;studenten;en begon.
+56;script-unrelated;Lukas ging naar de kapper. Haastig begroette hij zijn;studenten;en begon.
+57;control;Marie ging naar de uni. Haastig betrad ze de;collegezaal;en opende haar boek.
+57;script-related;Marie verliet de uni. Haastig betrad ze de;collegezaal;en opende haar boek.
+57;script-unrelated;Marie ging douchen. Haastig betrad ze de;collegezaal;en opende haar boek.
+58;control;Thorsten begon te barbecueën. Behoedzaam plaatste hij de;aanmaakblokjes;en zocht de tang.
+58;script-related;Thorsten stopte met barbecueën. Behoedzaam plaatste hij de;aanmaakblokjes;en zocht de tang.
+58;script-unrelated;Thorsten betrad de bloemenwinkel. Behoedzaam plaatste hij de;aanmaakblokjes;en zocht de tang.
+59;control;Claudia betrad de dierenwinkel. Een tijdje stond ze bij de;kooi;en dacht na over de koop.
+59;script-related;Claudia verliet de dierenwinkel. Een tijdje stond ze bij de;kooi;en dacht na over de koop.
+59;script-unrelated;Claudia betrad de begraafplaats. Een tijdje stond ze bij de;kooi;en dacht na over de koop.
+60;control;Jonathan ging naar de keuken. Een tijdje reinigde hij de;oven;en daarna de koelkast.
+60;script-related;Jonathan verliet de keuken. Een tijdje reinigde hij de;oven;en daarna de koelkast.
+60;script-unrelated;Jonathan ging de tuin in. Een tijdje reinigde hij de;oven;en daarna de koelkast.
+61;control;Lara ging naar het fornuis. Snel reinigde ze de;kookplaat;en daarna de afzuigkap.
+61;script-related;Lara ging weg van het fornuis. Snel reinigde ze de;kookplaat;en daarna de afzuigkap.
+61;script-unrelated;Lara ging naar het museum. Snel reinigde ze de;kookplaat;en daarna de afzuigkap.
+62;control;Roman ging naar de boekhandel. Snel zocht hij een;roman;voor zijn vrouw.
+62;script-related;Roman verliet de boekhandel. Snel zocht hij een;roman;voor zijn vrouw.
+62;script-unrelated;Roman ging naar de banketbakker. Snel zocht hij een;roman;voor zijn vrouw.
+63;control;Annika ging naar de boetiek. Een tijdje zocht ze naar;laarzen;en kocht ze toen.
+63;script-related;Annika verliet de boetiek. Een tijdje zocht ze naar;laarzen;en kocht ze toen.
+63;script-unrelated;Annika ging naar de spa. Een tijdje zocht ze naar;laarzen;en kocht ze toen.
+64;control;Emil betrad de apotheek. Snel kocht hij het;medicijn;en ging toen naar huis.
+64;script-related;Emil verliet de apotheek. Snel kocht hij het;medicijn;en ging toen naar huis.
+64;script-unrelated;Emil betrad de manege. Snel kocht hij het;medicijn;en ging toen naar huis.
+65;control;Susanne betrad de badkamer. Direct verwijderde ze haar;make-up;en poetste haar tanden.
+65;script-related;Susanne verliet de badkamer. Direct verwijderde ze haar;make-up;en poetste haar tanden.
+65;script-unrelated;Susanne ging naar de veiligheidscontrole. Direct verwijderde ze haar;make-up;en poetste haar tanden.
+66;control;Martin kwam bij de garage. Meteen vroeg hij naar de;banden;voor de winter.
+66;script-related;Martin verliet de garage. Meteen vroeg hij naar de;banden;voor de winter.
+66;script-unrelated;Martin kwam bij de hotelreceptie. Meteen vroeg hij naar de;banden;voor de winter.
+67;control;Jutta ging naar het postkantoor. Meteen kreeg ze het;pakket;waarop ze had gewacht.
+67;script-related;Jutta verliet het postkantoor. Meteen kreeg ze het;pakket;waarop ze had gewacht.
+67;script-unrelated;Jutta ging naar de tandarts. Meteen kreeg ze het;pakket;waarop ze had gewacht.
+68;control;Jens ging naar de douane. Snel toonde hij zijn;formulier;en keek de beambte aan.
+68;script-related;Jens verliet de douane. Snel toonde hij zijn;formulier;en keek de beambte aan.
+68;script-unrelated;Jens begon te pokeren. Snel toonde hij zijn;formulier;en keek de beambte aan.
+69;control;Elena begon te tekenen. Meteen pakte ze het;potlood;en tekende een bloem.
+69;script-related;Elena stopte met tekenen. Meteen pakte ze het;potlood;en tekende een bloem.
+69;script-unrelated;Elena begon de vakantie. Meteen pakte ze het;potlood;en tekende een bloem.
+70;control;Bruno begon zijn filmavond. Snel haalde hij de;popcorn;uit de keuken.
+70;script-related;Bruno beëindigde zijn filmavond. Snel haalde hij de;popcorn;uit de keuken.
+70;script-unrelated;Bruno betrad het gemeentehuis. Snel haalde hij de;popcorn;uit de keuken.
+71;control;Jana betrad het tuincentrum. Na een tijdje vroeg ze om een;palm;voor het balkon.
+71;script-related;Jana verliet het tuincentrum. Na een tijdje vroeg ze om een;palm;voor het balkon.
+71;script-unrelated;Jana ging naar de kermis. Na een tijdje vroeg ze om een;palm;voor het balkon.
+72;control;Nico ging naar de pizzeria. Direct greep hij de;menukaart;en bestelde een margherita.
+72;script-related;Nico verliet de pizzeria. Direct greep hij de;menukaart;en bestelde een margherita.
+72;script-unrelated;Nico ging wandelen. Direct greep hij de;menukaart;en bestelde een margherita.
+73;control;Beate ging zwemmen. Snel controleerde ze het;bassin;en zwom weg.
+73;script-related;Beate kwam terug van het zwemmen. Snel controleerde ze het;bassin;en zwom weg.
+73;script-unrelated;Beate ging met de taxi. Snel controleerde ze het;bassin;en zwom weg.
+74;control;Hubert nam een vliegtuig. Vol enthousiasme genoot hij van de;hoogte;want hij hield van vliegen.
+74;script-related;Hubert verliet het vliegtuig. Vol enthousiasme genoot hij van de;hoogte;want hij hield van vliegen.
+74;script-unrelated;Hubert begon te baden. Vol enthousiasme genoot hij van de;hoogte;want hij hield van vliegen.
+75;control;Jenni begon het onderwijs. Direct opende ze het;schoolbord;en begon te schrijven.
+75;script-related;Jenni stopte met het onderwijs. Direct opende ze het;schoolbord;en begon te schrijven.
+75;script-unrelated;Jenni betrad de ijshal. Direct opende ze het;schoolbord;en begon te schrijven.
+76;control;Hans betrad de klimhal. Even later greep hij het;touw;en spande het in.
+76;script-related;Hans verliet de klimhal. Even later greep hij het;touw;en spande het in.
+76;script-unrelated;Hans begon te bowlen. Even later greep hij het;touw;en spande het in.
+77;control;Clara ging naar de schietbaan. Direct kreeg ze een;revolver;en begon op het doel te schieten.
+77;script-related;Clara verliet de schietbaan. Direct kreeg ze een;revolver;en begon op het doel te schieten.
+77;script-unrelated;Clara ging op een brandweerinzet. Direct kreeg ze een;revolver;en begon op het doel te schieten.
+78;control;Georg nam deel aan yoga. Na een tijdje ging hij op zijn;yogamat;zitten en deed een oefening.
+78;script-related;Georg kwam terug van yoga. Na een tijdje ging hij op zijn;yogamat;zitten en deed een oefening.
+78;script-unrelated;Georg nam deel aan de voetbalwedstrijd. Na een tijdje ging hij op zijn;yogamat;zitten en deed een oefening.
+79;control;Johanna begon de jacht. Na een tijdje zag ze de;hoogzit;en liep erop af.
+79;script-related;Johanna kwam terug van de jacht. Na een tijdje zag ze de;hoogzit;en liep erop af.
+79;script-unrelated;Johanna betrad de slagerij. Na een tijdje zag ze de;hoogzit;en liep erop af.
+80;control;Jürgen betrad de bakkerij. Even later wees hij naar de;croissant;en koos uit.
+80;script-related;Jürgen verliet de bakkerij. Even later wees hij naar de;croissant;en koos uit.
+80;script-unrelated;Jürgen betrad de dierentuin. Even later wees hij naar de;croissant;en koos uit.
+81;control;Frauke ging naar het stadion. Snel koos ze een;tribune;en ging zitten.
+81;script-related;Frauke verliet het stadion. Snel koos ze een;tribune;en ging zitten.
+81;script-unrelated;Frauke ging naar de wasserette. Snel koos ze een;tribune;en ging zitten.
+82;control;Bernd betrad de kiosk. Direct kocht hij een;krant;en ging weer naar huis.
+82;script-related;Bernd verliet de kiosk. Direct kocht hij een;krant;en ging weer naar huis.
+82;script-unrelated;Bernd betrad het circus. Direct kocht hij een;krant;en ging weer naar huis.
+83;control;Nicole betrad het kantoor. Eerst liep ze naar het;bureau;en zette toen de computer aan.
+83;script-related;Nicole verliet het kantoor. Eerst liep ze naar het;bureau;en zette toen de computer aan.
+83;script-unrelated;Nicole betrad de sauna. Eerst liep ze naar het;bureau;en zette toen de computer aan.
+84;control;Viktor ging naar het lab. Snel begon hij het;experiment;en maakte aantekeningen.
+84;script-related;Viktor verliet het lab. Snel begon hij het;experiment;en maakte aantekeningen.
+84;script-unrelated;Viktor ging naar de dierenarts. Snel begon hij het;experiment;en maakte aantekeningen.
+85;control;Gabi ging naar de kleedkamer. Snel paste ze de;kleding;en ging naar de kassa.
+85;script-related;Gabi verliet de kleedkamer. Snel paste ze de;kleding;en ging naar de kassa.
+85;script-unrelated;Gabi betrad de plaats delict. Snel paste ze de;kleding;en ging naar de kassa.
+86;control;Jakob betrad het tankstation. Direct zei hij zijn;nummer;en betaalde.
+86;script-related;Jakob verliet het tankstation. Direct zei hij zijn;nummer;en betaalde.
+86;script-unrelated;Jakob begon bomen te kappen. Direct zei hij zijn;nummer;en betaalde.
+87;control;Hilde begon de koets te rijden. Snel besteeg ze de;bok;en daar ging het.
+87;script-related;Hilde was klaar met de koets rijden. Snel besteeg ze de;bok;en daar ging het.
+87;script-unrelated;Hilde begon een kampvuur. Snel besteeg ze de;bok;en daar ging het.
+88;control;Tom begon ontbijt te maken. Direct opende hij de;boter;en maakte een boterham.
+88;script-related;Tom stopte met ontbijt maken. Direct opende hij de;boter;en maakte een boterham.
+88;script-unrelated;Tom ging naar de kerstmarkt. Direct opende hij de;boter;en maakte een boterham.
+89;control;Kim ging naar het ziekenhuis. Meteen liep ze naar de;receptie;en vroeg naar de weg.
+89;script-related;Kim verliet het ziekenhuis. Meteen liep ze naar de;receptie;en vroeg naar de weg.
+89;script-unrelated;Kim begon zijn lunch te koken. Meteen liep ze naar de;receptie;en vroeg naar de weg.
+90;control;Michael begon een taart te bakken. Als eerste pakte hij een;garde;en klopte eiwit stijf.
+90;script-related;Michael was klaar met een taart bakken. Als eerste pakte hij een;garde;en klopte eiwit stijf.
+90;script-unrelated;Michael betrad het restaurant. Als eerste pakte hij een;garde;en klopte eiwit stijf.

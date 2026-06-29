@@ -12,11 +12,15 @@ setwd("experiment1")
 ```{r}
 stim <- read_excel(file.path("data", "delogu_2019_stim.xlsx")) |>
     mutate(wl = nchar(target))
+
+stim_nl <- read.csv(file.path("data", "delogu_2019_stim_nl.csv"), sep = ";") |>
+    mutate(wl = nchar(target))
 ```
 
 ## Exploration
 ```{r}
 stim |> head()
+stim_nl |> head()
 ```
 
 Word length
@@ -26,6 +30,18 @@ stim |>
     summary()
 
 stim |>
+    ggplot() +
+    geom_density(aes(x = wl), fill = "aliceblue", alpha = .5) +
+    labs(title = "Word length") +
+    theme_minimal()
+```
+
+```{r}
+stim_nl |>
+    select(wl) |>
+    summary()
+
+stim_nl |>
     ggplot() +
     geom_density(aes(x = wl), fill = "aliceblue", alpha = .5) +
     labs(title = "Word length") +
