@@ -47,3 +47,29 @@ stim_nl |>
     labs(title = "Word length") +
     theme_minimal()
 ```
+
+## Compare original and Dutch translations
+```{r}
+md_text <- c()
+
+for (i in 1:90) {
+    for (c in c("control", "script-related", "script-unrelated")) {
+        sent_nl <- stim_nl |>
+            filter(ItemNum == i & Condition == c)
+        sent <- stim |>
+            filter(ItemNum == i & Condition == c)
+
+        md_text <- c(
+            md_text,
+            paste0(i, ". ", sent_nl$context, " **", sent_nl$target, "** ", sent_nl$continuation)
+        )
+        md_text <- c(
+            md_text,
+            paste0("*", sent$context, " ", sent$target, " ", sent$continuation, "*")
+        )
+    }
+    md_text <- c(md_text, " ")
+}
+
+writeLines(md_text, file.path("data", "delogu", "delogu_translated_sentences.md"))
+```
