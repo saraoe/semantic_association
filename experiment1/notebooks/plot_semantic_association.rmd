@@ -12,13 +12,27 @@ setwd("experiment1")
 ## Read data
 ```{r}
 kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
+    # mutate(cond = case_when(
+    #     cond == 1 ~ "a",
+    #     cond == 2 ~ "b",
+    #     cond == 3 ~ "c",
+    #     cond == 4 ~ "d"
+    # )) |>
     mutate(cond = case_when(
-        cond == 1 ~ "a",
-        cond == 2 ~ "b",
-        cond == 3 ~ "c",
-        cond == 4 ~ "d"
+        cond == 1 ~ "No violation",
+        cond == 2 ~ "Pragmatic non-thematic role violation",
+        cond == 3 ~ "Related animacy thematic role violation",
+        cond == 4 ~ "Unrelated animacy thematic role violation"
     )) |>
-    mutate("cond" = as.factor(cond)) |>
+    mutate("cond" = factor(
+        cond,
+        levels = c(
+            "No violation",
+            "Pragmatic non-thematic role violation",
+            "Related animacy thematic role violation",
+            "Unrelated animacy thematic role violation"
+        )
+    )) |>
     filter(!scenario %in% c(37, 38, 84)) |> # scenarios with duplicate sentences
     filter(!scenario == 152) |> # non-sensible scenario
     filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
@@ -43,10 +57,19 @@ delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |
         levels = c("control", "script-related", "script-unrelated")
     ))
 
+delogu_nl_df <- read.csv(file.path("results", "delogu_nl_semantic_association.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    ))
+
 hoeks_df <- read.csv(file.path("results", "hoeks_semantic_association.csv")) |>
     mutate("cond" = condition)
 
 exclude_imp <- c("BERTWE", "Mamba") # implementations excluded from plots
+exclude_models <- c( # models excluded from plots
+    "Gameselo/STS-multilingual-mpnet-base-v2",
+    "bigscience/sgpt-bloom-7b1-msmarco"
+)
 ```
 
 ## Kuperberg
@@ -68,6 +91,7 @@ kuperberg_df |>
 ```{r}
 kuperberg_df |>
     filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
     ungroup() |>
@@ -101,11 +125,12 @@ kuperberg_df |>
     ) +
     theme_bw() +
     theme(
-        legend.position = "right",
-        axis.text.x = element_text(angle = 90, hjust = 1)
-    )
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
+    ) +
+    guides(color = guide_legend(nrow = 2))
 
-ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 8, height = 6)
+ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 7, height = 5)
 ```
 
 ```{r}
@@ -349,6 +374,7 @@ kim_osterhout_df |>
 ```{r}
 kim_osterhout_df |>
     filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
     ungroup() |>
@@ -382,11 +408,11 @@ kim_osterhout_df |>
     ) +
     theme_bw() +
     theme(
-        legend.position = "right",
-        axis.text.x = element_text(angle = 90, hjust = 1)
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
     )
 
-ggsave(file.path("figs", "semantic_association_kim_osterhout.png"), width = 8, height = 6)
+ggsave(file.path("figs", "semantic_association_kim_osterhout.png"), width = 7, height = 5)
 ```
 
 ## Michaelov
@@ -408,6 +434,7 @@ michaelov_df |>
 ```{r}
 michaelov_df |>
     filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
     ungroup() |>
@@ -597,6 +624,7 @@ delogu_df |>
 ```{r}
 delogu_df |>
     filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
     ungroup() |>
@@ -630,11 +658,71 @@ delogu_df |>
     ) +
     theme_bw() +
     theme(
-        legend.position = "right",
-        axis.text.x = element_text(angle = 90, hjust = 1)
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
     )
 
-ggsave(file.path("figs", "semantic_association_delogu.png"), width = 8, height = 6)
+ggsave(file.path("figs", "semantic_association_delogu.png"), width = 7, height = 5)
+```
+
+## Delogu (NL translation)
+
+### Initial exploration
+By condition
+```{r}
+delogu_nl_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+delogu_nl_df |>
+    filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ungroup() |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    mutate("implementation_f" = factor(
+        implementation,
+        levels = c("WE", "CWE", "SE")
+    )) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    facet_wrap(. ~ implementation_f,
+        nrow = 3,
+        scales = "free_x", space = "free_x"
+    ) +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_delogu_nl.png"), width = 7, height = 5)
 ```
 
 ## Hoeks
@@ -656,6 +744,7 @@ hoeks_df |>
 ```{r}
 hoeks_df |>
     filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
     group_by(implementation, model) |>
     mutate(semantic_association = scale(semantic_association)) |>
     ungroup() |>
