@@ -13,7 +13,7 @@ setwd("experiment1")
 stim <- read_excel(file.path("data", "delogu_2019_stim.xlsx")) |>
     mutate(wl = nchar(target))
 
-stim_nl <- read.csv(file.path("data", "delogu_2019_stim_nl.csv"), sep = ";") |>
+stim_nl <- read.csv(file.path("data", "delogu_2019_stim_nl.csv")) |>
     mutate(wl = nchar(target))
 ```
 
