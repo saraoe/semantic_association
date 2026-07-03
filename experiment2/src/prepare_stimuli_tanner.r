@@ -2,9 +2,6 @@
 
 library(tidytable)
 library(purrr)
-# library(reticulate)
-# use_condaenv("/home/ostergaa/.conda/envs/r-pangoling", required = TRUE)
-# reticulate::py_config()
 library(pangoling)
 
 setwd("experiment2")
@@ -87,7 +84,7 @@ stim <- rt_df |>
     )
 
 
-# create context and target columns
+create context and target columns
 stim <- stim |>
     group_by(id) |>
     mutate(context = accumulate(word, ~ paste(.x, .y))) |>
@@ -97,18 +94,19 @@ stim <- stim |>
 
 # extract lp from gpt2
 causal_preload("gpt2")
-
-stim_lp <- stim |>
-    filter(context != "") |>
-    mutate("lp_gpt2" = causal_targets_pred(
-        contexts = context,
-        targets = target,
-        model = "gpt2",
-        batch_size = 10
-    ))
+causal_preload("EleutherAI/pythia-70m-deduped")
 
 stim <- stim |>
-    left_join(stim_lp) |>
+    mutate("lp_gpt2" =  causal_words_pred(target,
+        by = id,
+        model = "gpt2",
+        batch_size = 10
+    )) |>
+    mutate("lp_pythia" =  causal_words_pred(target,
+        by = id,
+        model = "EleutherAI/pythia-70m-deduped",
+        batch_size = 10
+    )) |>
     mutate("s_lp" = scale(lp_gpt2))
 
 # write csv

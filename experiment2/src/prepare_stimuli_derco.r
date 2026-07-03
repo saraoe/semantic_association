@@ -87,20 +87,19 @@ stim <- stim |>
     mutate(context = lag(context)) |>
     ungroup()
 
-# extract lp from gpt2
-causal_preload("gpt2")
 
-stim_lp <- stim |>
-    filter(context != "") |>
-    mutate("lp_gpt2" = causal_targets_pred(
-        contexts = context,
-        targets = target,
-        model = "gpt2",
-        batch_size = 10
-    ))
+# extract lp from LLMs
+# causal_preload("gpt2")
+causal_preload("EleutherAI/pythia-70m-deduped")
+
 
 stim <- stim |>
-    left_join(stim_lp) |>
-    muate("s_lp" = scale(lp_gpt2))
+    mutate("lp_pythia" =  causal_words_pred(target,
+        by = article_n,
+        model = "EleutherAI/pythia-70m-deduped",
+        config_tokenizer = "EleutherAI/pythia-70m-deduped",
+        batch_size = 10
+    )) |>
+    mutate("s_lp" = scale(lp_pythia))
 
 write.csv(stim, file.path(data_folder, "stim.csv"))
