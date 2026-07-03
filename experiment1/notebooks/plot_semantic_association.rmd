@@ -68,7 +68,8 @@ hoeks_df <- read.csv(file.path("results", "hoeks_semantic_association.csv")) |>
 exclude_imp <- c("BERTWE", "Mamba") # implementations excluded from plots
 exclude_models <- c( # models excluded from plots
     "Gameselo/STS-multilingual-mpnet-base-v2",
-    "bigscience/sgpt-bloom-7b1-msmarco"
+    "bigscience/sgpt-bloom-7b1-msmarco",
+    "jinaai/jina-embeddings-v2-base-de"
 )
 ```
 
