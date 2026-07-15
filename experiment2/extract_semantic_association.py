@@ -204,3 +204,4 @@ if __name__ == "__main__":
                 out_path=corpus["out_path"],
                 batch_size=100,
             )
+        del model  # unload model
