@@ -176,7 +176,7 @@ if ("derco" %in% dataset) {
         )
 
         # n400 ~ sem + lp
-        m_sem_lp <- brm(sem_formula,
+        m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
