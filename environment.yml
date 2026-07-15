@@ -15,6 +15,7 @@ dependencies:
   - r-argparse=2.2.5
   - r-png=0.1
   - r-reticulate=1.46.0
+  - r-R.matlab=3.7.0
 
   # ---- Toolchain (REQUIRED for CmdStan) ----
   - make=4.4.1
