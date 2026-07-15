@@ -101,7 +101,11 @@ get_modelname <- function(text) {
     return(text)
 }
 
-get_fixef_models <- function(datasets, include_lp = FALSE) {
+get_fixef_models <- function(
+  datasets,
+  include_lp = FALSE,
+  only_target = FALSE
+) {
     for (dataset in datasets) {
         if (include_lp) {
             prefix <- paste0(dataset, "_lp")
@@ -115,6 +119,10 @@ get_fixef_models <- function(datasets, include_lp = FALSE) {
         )
 
         for (model_name in model_names) {
+            if (!include_lp & str_detect(model_name, "lp")) {
+                next
+            }
+
             print(model_name)
             m <- readRDS(file.path(models_path, model_name))
             if (number_divergent_transitions(m) > 0) {
@@ -322,4 +330,79 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 7)
+```
+
+### coefficient only including target word from Tanner 
+```{r}
+rm(fixef_target_df)
+
+fixef_target_df <- get_fixef_models(c("tanner_target"), include_lp = FALSE)
+```
+
+```{r}
+fixef_target_df |>
+    filter(context == "All") |>
+    filter(coefficient == "s_sem") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "tanner_target_regression_coefficients_sem.png"), height = 3, width = 7)
+```
+
+```{r}
+fixef_target_df |>
+    filter(context == "All") |>
+    filter(coefficient == "s_lp") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "tanner_target_regression_coefficients_lp.png"), height = 3, width = 7)
 ```
