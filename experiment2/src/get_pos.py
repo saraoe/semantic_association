@@ -12,14 +12,28 @@ def get_pos(token):
 
 
 def add_pos_to_stim(stim_path, id_cols, spacy_model="en_core_web_sm"):
-    stim_df = pd.read_csv(stim_path)
+    stim_df = pd.read_csv(stim_path, keep_default_na=False, na_values=["", "NA", "NaN"])
     stim_df_len = len(stim_df)
     # sort by id and word_n
     stim_df.sort_values(by=id_cols + ["word_n"])
 
     nlp = spacy.load(spacy_model)
-    # manually add tokens with "-"
-    special_cases = ["cross-country", "gray-haired", "ill-natured", "by-ways"]
+    # manually add tokens that is one word
+    special_cases = [
+        # DERCo
+        "cross-country",
+        "gray-haired",
+        "ill-natured",
+        "by-ways",
+        # UCL
+        "cannot",
+        "You'll",
+        "you'll",
+        "I'll",
+        "They're",
+        "You're",
+        "No-one",
+    ]
     for word in special_cases:
         nlp.tokenizer.add_special_case(word, [{ORTH: word}])
 
@@ -47,10 +61,7 @@ def add_pos_to_stim(stim_path, id_cols, spacy_model="en_core_web_sm"):
 if __name__ == "__main__":
     data_path = Path("experiment2", "data")
 
-    datasets = [
-        # ("Tanner", ["id"]),
-        ("DERCo", ["article_n"])
-    ]
+    datasets = [("Tanner", ["id"]), ("DERCo", ["article_n"]), ("UCL", ["id"])]
 
     for dataset_folder, ids in datasets:
         add_pos_to_stim(stim_path=data_path / dataset_folder / "stim.csv", id_cols=ids)
