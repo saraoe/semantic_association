@@ -94,24 +94,31 @@ def extract_semantic_association(
 
 if __name__ == "__main__":
     corpora = [
+        # {
+        #     "name": "tanner",
+        #     "df": pd.read_csv(
+        #         Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+        #     ),
+        #     "out_path": Path(
+        #         "experiment2", "results", "tanner_semantic_association.csv"
+        #     ),
+        # },
         {
-            "name": "tanner",
+            "name": "ucl",
             "df": pd.read_csv(
-                Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+                Path("experiment2", "data", "UCL", "stim.csv"), index_col=0
             ),
-            "out_path": Path(
-                "experiment2", "results", "tanner_semantic_association.csv"
-            ),
+            "out_path": Path("experiment2", "results", "ucl_semantic_association.csv"),
         },
-        {
-            "name": "derco",
-            "df": pd.read_csv(
-                Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
-            ),
-            "out_path": Path(
-                "experiment2", "results", "derco_semantic_association.csv"
-            ),
-        },
+        # {
+        #     "name": "derco",
+        #     "df": pd.read_csv(
+        #         Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
+        #     ),
+        #     "out_path": Path(
+        #         "experiment2", "results", "derco_semantic_association.csv"
+        #     ),
+        # },
     ]
 
     config = [
@@ -188,7 +195,7 @@ if __name__ == "__main__":
         print(f"{name}: {model.model_name}")
         for corpus in corpora:
             # only do Sentence(N=1) for DERCo
-            if model.n_sentences and corpus["name"] == "tanner":
+            if model.n_sentences and corpus["name"] != "derco":
                 continue
             extract_semantic_association(
                 df=corpus["df"],
