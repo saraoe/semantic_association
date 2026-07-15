@@ -84,7 +84,7 @@ stim <- rt_df |>
     )
 
 
-create context and target columns
+# create context and target columns
 stim <- stim |>
     group_by(id) |>
     mutate(context = accumulate(word, ~ paste(.x, .y))) |>
@@ -97,12 +97,12 @@ causal_preload("gpt2")
 causal_preload("EleutherAI/pythia-70m-deduped")
 
 stim <- stim |>
-    mutate("lp_gpt2" =  causal_words_pred(target,
+    mutate("lp_gpt2" = causal_words_pred(target,
         by = id,
         model = "gpt2",
         batch_size = 10
     )) |>
-    mutate("lp_pythia" =  causal_words_pred(target,
+    mutate("lp_pythia" = causal_words_pred(target,
         by = id,
         model = "EleutherAI/pythia-70m-deduped",
         batch_size = 10
