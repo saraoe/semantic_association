@@ -31,7 +31,7 @@ summary(m)
 ```{r}
 plot(m)
 plot(m, variable = "^b_", regex = TRUE)
-plot(m, variable = "^sd_", regex = TRUE)
+plot(m, variable = "^sd", regex = TRUE)
 ```
 
 ```{r}
@@ -44,7 +44,7 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
 ```{r}
 diagnostics_df <- data.frame()
 
-for (dataset in c("tanner", "derco")) {
+for (dataset in c("tanner", "ucl", "derco")) {
     print(dataset)
     model_names <- list.files(models_path,
         full.names = FALSE,
@@ -146,26 +146,27 @@ get_fixef_models <- function(
                     )
                 )
 
-            if (exists("fixef_df")) {
-                fixef_df <- rbind(fixef_df, fe_df)
+            if (exists("fixef_df_")) {
+                fixef_df_ <- rbind(fixef_df_, fe_df)
             } else {
-                fixef_df <- fe_df
+                fixef_df_ <- fe_df
             }
         }
     }
-    return(fixef_df)
+    return(fixef_df_)
 }
 ```
 
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("tanner", "derco"), include_lp = TRUE)
+fixef_df <- get_fixef_models(c("tanner", "ucl", "derco"), include_lp = TRUE)
 ```
 
 ### coefficient for semantic association
 ```{r}
 fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
     filter(context == "All") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
@@ -176,6 +177,7 @@ fixef_df |>
     mutate(
         dataset = case_when(
             dataset == "tanner" ~ "Tanner (2019)",
+            dataset == "ucl" ~ "UCL",
             dataset == "derco" ~ "DERCo"
         )
     ) |>
@@ -194,20 +196,21 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, nrow = 2, scale = "free_x") +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
     labs(
-        x = TeX("$\\beta$"), y = "",
+        x = TeX("$\\beta_2$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width = 7)
+ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 7, width = 7)
 ```
 
 ```{r}
-for (d in c("tanner", "derco")) {
+for (d in c("tanner", "ucl", "derco")) {
     fixef_df |>
+        filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
         filter(context == "All") |>
         filter(dataset == d) |>
         filter(coefficient == "s_sem") |>
@@ -232,7 +235,7 @@ for (d in c("tanner", "derco")) {
             )
         ) +
         labs(
-            x = TeX("$\\beta$"), y = "",
+            x = TeX("$\\beta_2$"), y = "",
             color = "Embeddings"
         ) +
         theme_minimal() +
@@ -247,6 +250,7 @@ for (d in c("tanner", "derco")) {
 
 ```{r}
 fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
     filter(context == "Sentence(N=1)") |>
     filter(dataset == "derco") |>
     filter(coefficient == "s_sem") |>
@@ -277,7 +281,7 @@ fixef_df |>
         )
     ) +
     labs(
-        x = TeX("$\\beta$"), y = "",
+        x = TeX("$\\beta_2$"), y = "",
         color = "Embeddings",
         caption = "Sentence(N=1)"
     ) +
@@ -293,6 +297,7 @@ ggsave(
 ### coefficient for lp
 ```{r}
 fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
     filter(context == "All") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
@@ -303,6 +308,7 @@ fixef_df |>
     mutate(
         dataset = case_when(
             dataset == "tanner" ~ "Tanner (2019)",
+            dataset == "ucl" ~ "UCL",
             dataset == "derco" ~ "DERCo"
         )
     ) |>
@@ -321,9 +327,9 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, nrow = 2, scale = "free_x") +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
     labs(
-        x = TeX("$\\beta$"), y = "",
+        x = TeX("$\\beta_1$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
@@ -336,11 +342,12 @@ ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 
 ```{r}
 rm(fixef_target_df)
 
-fixef_target_df <- get_fixef_models(c("tanner_target"), include_lp = FALSE)
+fixef_target_df <- get_fixef_models(c("tanner_target"))
 ```
 
 ```{r}
 fixef_target_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
     filter(context == "All") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
@@ -364,7 +371,7 @@ fixef_target_df |>
         )
     ) +
     labs(
-        x = TeX("$\\beta$"), y = "",
+        x = TeX("$\\beta_2$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
@@ -398,7 +405,7 @@ fixef_target_df |>
         )
     ) +
     labs(
-        x = TeX("$\\beta$"), y = "",
+        x = TeX("$\\beta_1$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
