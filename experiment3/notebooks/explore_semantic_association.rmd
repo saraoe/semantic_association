@@ -130,6 +130,89 @@ derco_df |>
     theme(legend.position = "bottom")
 ```
 
+## Scatterplot: WE vs SE
+Tanner
+```{r}
+tanner_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n, pos, implementation) |>
+    summarize(
+        avg_sem = mean(s_sem, na.rm = TRUE)
+    ) |>
+    pivot_wider(
+        names_from = "implementation",
+        values_from = "avg_sem"
+    ) |>
+    ggplot(aes(x = WE, y = SE, color = word_n)) +
+    geom_point(size = 2) +
+    facet_wrap(~pos) +
+    geom_abline(
+        intercept = 0,
+        slope = 1,
+        linetype = "dashed"
+    ) +
+    labs(
+        x = "WE semantic association",
+        y = "SE semantic association",
+    ) +
+    theme_bw()
+```
+
+UCL
+```{r}
+ucl_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n, pos, implementation) |>
+    summarize(
+        avg_sem = mean(s_sem, na.rm = TRUE)
+    ) |>
+    pivot_wider(
+        names_from = "implementation",
+        values_from = "avg_sem"
+    ) |>
+    ggplot(aes(x = WE, y = SE, color = word_n)) +
+    geom_point(size = 2) +
+    facet_wrap(~pos) +
+    geom_abline(
+        intercept = 0,
+        slope = 1,
+        linetype = "dashed"
+    ) +
+    labs(
+        x = "WE semantic association",
+        y = "SE semantic association",
+    ) +
+    theme_bw()
+```
+
+DERCo
+```{r}
+derco_df |>
+    filter(pos %in% content_pos) |>
+    group_by(article_n, word_n, pos, implementation) |>
+    summarize(
+        avg_sem = mean(s_sem, na.rm = TRUE)
+    ) |>
+    pivot_wider(
+        names_from = "implementation",
+        values_from = "avg_sem"
+    ) |>
+    ggplot(aes(x = WE, y = SE, color = word_n)) +
+    # geom_hex(bins = 30) +
+    geom_point(size = 2) +
+    facet_wrap(~pos) +
+    geom_abline(
+        intercept = 0,
+        slope = 1,
+        linetype = "dashed"
+    ) +
+    labs(
+        x = "WE semantic association",
+        y = "SE semantic association",
+    ) +
+    theme_bw()
+```
+
 
 ## Print sentences
 ### Tanner
