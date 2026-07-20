@@ -1,0 +1,98 @@
+# Implementation disagreement
+Modeling the disagreement between the implementations of semantic association.
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(lmerTest)
+
+setwd("experiment3")
+```
+
+## Read data
+```{r}
+data_path <- file.path("..", "experiment2", "results")
+
+tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+    filter(Acceptability == "Gram") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "All")
+    ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+# content words pos tags
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+## Modeling variance
+Tanner
+```{r}
+data <- tanner_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n, pos, s_lp) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    )
+
+fit <- lmer(variance ~ word_n + pos + s_lp + (1 | id), data = data)
+summary(fit)
+```
+
+UCL
+```{r}
+data <- ucl_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n, pos, s_lp) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    )
+
+fit <- lmer(variance ~ word_n + pos + s_lp + (1 | id), data = data)
+summary(fit)
+```
+
+DERCo: All
+```{r}
+data <- derco_df |>
+    filter(context_length == "All") |>
+    filter(pos %in% content_pos) |>
+    group_by(article_n, word_n, pos, s_lp) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    )
+
+fit <- lmer(variance ~ word_n + pos + s_lp + (1 | article_n), data = data)
+summary(fit)
+```
+
+DERCo: Sentence(N=1)
+```{r}
+data <- derco_df |>
+    filter(context_length == "Sentence(N=1)") |>
+    filter(pos %in% content_pos) |>
+    group_by(article_n, word_n, pos, s_lp) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    )
+
+fit <- lmer(variance ~ word_n + pos + s_lp + (1 | article_n), data = data)
+summary(fit)
+```

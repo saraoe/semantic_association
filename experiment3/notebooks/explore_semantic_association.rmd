@@ -35,11 +35,15 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     group_by(full_implementation) |>
     mutate(s_sem = scale(semantic_association)) |>
     ungroup()
+
+# content words pos tags
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 ```
 
-## Plots
+## Plot values over word_n
 ```{r}
 tanner_df |>
+    filter(pos %in% content_pos) |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
     ) +
@@ -52,6 +56,7 @@ tanner_df |>
 
 ```{r}
 ucl_df |>
+    filter(pos %in% content_pos) |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
     ) +
@@ -64,6 +69,7 @@ ucl_df |>
 
 ```{r}
 derco_df |>
+    filter(pos %in% content_pos) |>
     filter(context_length == "All") |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
@@ -73,4 +79,209 @@ derco_df |>
     facet_wrap(. ~ implementation) +
     theme_bw() +
     theme(legend.position = "bottom")
+```
+
+## Plot variance over word_n
+```{r}
+tanner_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ggplot(
+        aes(x = word_n, y = variance)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+```{r}
+ucl_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ggplot(
+        aes(x = word_n, y = variance)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+```{r}
+derco_df |>
+    filter(pos %in% content_pos) |>
+    group_by(article_n, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ggplot(
+        aes(x = word_n, y = variance)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+
+## Print sentences
+### Tanner
+Choose sentence
+```{r}
+# manually choose
+sentence_ids <- tanner_df |>
+    pull(id) |>
+    unique()
+sentence_id <- sentence_ids[2]
+
+# highest variance
+sentence_id <- tanner_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ungroup() |>
+    filter(!is.na(variance)) |>
+    filter(variance == max(variance)) |>
+    pull(id)
+```
+
+```{r}
+df <- tanner_df |>
+    filter(id == sentence_id)
+
+# print sentence
+df |>
+    pull(word) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- FALSE
+
+words_df <- df |>
+    group_by(word_n) |>
+    summarize("word" = unique(word))
+
+p <- df |>
+    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = words_df$word_n,
+        labels = words_df$word,
+    ) +
+    labs(
+        x = "",
+        y = ""
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank()
+    )
+
+if (save_fig) {
+    ggsave(
+        file.path(
+            "figs", "example_sentences",
+            paste0("tanner_example_sentence", sentence_id, ".png")
+        ),
+        height = 4, width = 10
+    )
+} else {
+    p + theme(aspect.ratio = .5)
+}
+```
+
+### UCL
+Choose sentence
+```{r}
+# manually choose
+sentence_ids <- ucl_df |>
+    pull(id) |>
+    unique()
+sentence_id <- sentence_ids[2]
+
+# highest variance
+sentence_id <- ucl_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ungroup() |>
+    filter(!is.na(variance)) |>
+    filter(variance == max(variance)) |>
+    pull(id)
+```
+
+```{r}
+df <- ucl_df |>
+    filter(id == sentence_id)
+
+# print sentence
+df |>
+    pull(word) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- FALSE
+
+words_df <- df |>
+    group_by(word_n) |>
+    summarize("word" = unique(word))
+
+p <- df |>
+    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
+    geom_tile(color = "white") +
+    scale_fill_gradient2(
+        low = "blue3", high = "red2", mid = "thistle1",
+        na.value = "grey95",
+        midpoint = 0, , limit = c(-5, 5)
+    ) +
+    scale_x_continuous(
+        breaks = words_df$word_n,
+        labels = words_df$word,
+    ) +
+    labs(
+        x = "",
+        y = ""
+    ) +
+    theme_classic() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.line = element_blank(),
+        axis.ticks.y = element_blank()
+    )
+
+if (save_fig) {
+    ggsave(
+        file.path(
+            "figs", "example_sentences",
+            paste0("ucl_example_sentence", sentence_id, ".png")
+        ),
+        height = 4, width = 10
+    )
+} else {
+    p + theme(aspect.ratio = .5)
+}
 ```
