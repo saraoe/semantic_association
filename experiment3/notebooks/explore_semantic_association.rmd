@@ -1,0 +1,76 @@
+# Exploring the values of semantic association
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+
+setwd("experiment3")
+```
+
+## Read data
+```{r}
+data_path <- file.path("..", "experiment2", "results")
+
+tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+    filter(Acceptability == "Gram") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "All")
+    ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+```
+
+## Plots
+```{r}
+tanner_df |>
+    ggplot(
+        aes(x = word_n, y = s_sem, color = model)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+```{r}
+ucl_df |>
+    ggplot(
+        aes(x = word_n, y = s_sem, color = model)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+```{r}
+derco_df |>
+    filter(context_length == "All") |>
+    ggplot(
+        aes(x = word_n, y = s_sem, color = model)
+    ) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
