@@ -9,28 +9,38 @@ library(stringr)
 library(ggplot2)
 library(reshape2)
 
-setwd("experiment2")
+setwd("experiment3")
 ```
 
-## Load data
+## Read data
 ```{r}
-tanner_df <- read.csv(file.path("results", "tanner_semantic_association.csv")) |>
-    select(-X) |>
-    filter(Acceptability == "Gram") |>
-    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
-    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
+data_path <- file.path("..", "experiment2", "results")
 
-ucl_df <- read.csv(file.path("results", "ucl_semantic_association.csv")) |>
+tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+    filter(Acceptability == "Gram") |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup() |>
-    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
+    ungroup()
 
-derco_df <- read.csv(file.path("results", "derco_semantic_association.csv")) |>
+ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
-    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
 
+derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "All")
+    ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+# content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 ```
 
@@ -111,6 +121,45 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
     theme(aspect.ratio = 1)
 ```
 
+by POS tag (only content words)
+```{r}
+n <- 1
+
+cor_matrix <- tanner_df |>
+    filter(pos == content_pos[n]) |>
+    select(id, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
+    theme(aspect.ratio = 1)
+```
+
 ## Correlations: UCL
 all words
 ```{r}
@@ -188,11 +237,50 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
     theme(aspect.ratio = 1)
 ```
 
+by POS tag (only content words)
+```{r}
+n <- 1
+
+cor_matrix <- ucl_df |>
+    filter(pos == content_pos[n]) |>
+    select(id, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
+    theme(aspect.ratio = 1)
+```
+
 ## Correlations: DERCo
 all words
 ```{r}
 cor_matrix <- derco_df |>
-    filter(!str_detect(implementation, "sentences1")) |>
+    filter(context_length == "All") |>
     select(article_n, word_n, semantic_association, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
@@ -229,7 +317,7 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 only content words
 ```{r}
 cor_matrix <- derco_df |>
-    filter(!str_detect(implementation, "sentences1")) |>
+    filter(context_length == "All") |>
     filter(pos %in% content_pos) |>
     select(article_n, word_n, semantic_association, full_implementation) |>
     pivot_wider(
@@ -264,6 +352,46 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
         legend.position = "bottom"
     ) +
     labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+by POS tag (only content words)
+```{r}
+n <- 1
+
+cor_matrix <- derco_df |>
+    filter(context_length == "All") |>
+    filter(pos == content_pos[n]) |>
+    select(article_n, word_n, semantic_association, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association")) |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "bottom"
+    ) +
+    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
     theme(aspect.ratio = 1)
 ```
 
