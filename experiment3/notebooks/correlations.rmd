@@ -8,6 +8,7 @@ library(dplyr)
 library(stringr)
 library(ggplot2)
 library(reshape2)
+library(patchwork)
 
 setwd("experiment3")
 ```
@@ -21,13 +22,15 @@ tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
@@ -38,10 +41,32 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     ungroup() |>
     group_by(full_implementation) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+```{r}
+order_implementations <- function(implementations) {
+    levels <- implementations |>
+        unique() |>
+        (\(x) x[
+            order(case_when(
+                str_detect(x, "^WE") ~ 1,
+                str_detect(x, "^CWE") ~ 2,
+                str_detect(x, "^SE") ~ 3,
+                TRUE ~ 4
+            ))
+        ])()
+
+    return(factor(implementations, levels = levels))
+}
+```
+
+```{r}
+tanner_df$full_implementation <- order_implementations(tanner_df$full_implementation)
 ```
 
 ## Correlations: Tanner
@@ -62,6 +87,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -99,6 +136,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -123,41 +172,70 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 
 by POS tag (only content words)
 ```{r}
-n <- 1
+for (n in 1:4) {
+    cor_matrix <- tanner_df |>
+        filter(pos == content_pos[n]) |>
+        select(id, word_n, semantic_association, full_implementation) |>
+        pivot_wider(
+            names_from = full_implementation,
+            values_from = semantic_association,
+            names_prefix = "semantic_association_"
+        ) |>
+        select(starts_with("semantic_association")) |>
+        cor(use = "pairwise.complete.obs")
 
-cor_matrix <- tanner_df |>
-    filter(pos == content_pos[n]) |>
-    select(id, word_n, semantic_association, full_implementation) |>
-    pivot_wider(
-        names_from = full_implementation,
-        values_from = semantic_association,
-        names_prefix = "semantic_association_"
-    ) |>
-    select(starts_with("semantic_association")) |>
-    cor(use = "pairwise.complete.obs")
+    # Remove prefix
+    prefix <- "^semantic_association_"
+    colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+    rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
-# Remove prefix
-prefix <- "^semantic_association_"
-colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
-rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+    matrix_names <- colnames(cor_matrix)
+    name_order <- order(
+        case_when(
+            str_starts(matrix_names, "WE") ~ 1L,
+            str_starts(matrix_names, "CWE") ~ 2L,
+            str_starts(matrix_names, "SE") ~ 3L,
+            TRUE ~ 4L
+        ),
+        matrix_names
+    )
+
+    cor_matrix <- cor_matrix[name_order, name_order]
 
 
-melted <- melt(cor_matrix)
+    melted <- melt(cor_matrix)
 
-ggplot(melted, aes(Var1, Var2, fill = value)) +
-    geom_tile() +
-    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
-    scale_fill_gradient2(
-        low = "blue", high = "red", mid = "white",
-        midpoint = 0, limit = c(-1, 1)
-    ) +
-    theme_minimal() +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        legend.position = "bottom"
-    ) +
-    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
-    theme(aspect.ratio = 1)
+    p <- ggplot(melted, aes(Var1, Var2, fill = value)) +
+        geom_tile() +
+        geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+        scale_fill_gradient2(
+            low = "blue", high = "red", mid = "white",
+            midpoint = 0, limit = c(-1, 1)
+        ) +
+        theme_minimal() +
+        theme(
+            axis.text.x = element_text(angle = 45, hjust = 1),
+            legend.position = "bottom"
+        ) +
+        labs(x = "", y = "", fill = "Correlation", title = content_pos[n])
+
+    if (n == 1) {
+        p1 <- p
+    } else if (n == 2) {
+        p2 <- p
+    } else if (n == 3) {
+        p3 <- p
+    } else if (n == 4) {
+        p4 <- p
+    }
+}
+
+(p1 + p2) / (p3 + p4) +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom") &
+    plot_annotation(title = "Tanner (2019)")
+
+ggsave(file.path("figs", "tanner_correlations_pos.png"), width = 15, height = 15)
 ```
 
 ## Correlations: UCL
@@ -178,6 +256,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -215,6 +305,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -239,41 +341,70 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 
 by POS tag (only content words)
 ```{r}
-n <- 1
+for (n in 1:4) {
+    cor_matrix <- ucl_df |>
+        filter(pos == content_pos[n]) |>
+        select(id, word_n, semantic_association, full_implementation) |>
+        pivot_wider(
+            names_from = full_implementation,
+            values_from = semantic_association,
+            names_prefix = "semantic_association_"
+        ) |>
+        select(starts_with("semantic_association")) |>
+        cor(use = "pairwise.complete.obs")
 
-cor_matrix <- ucl_df |>
-    filter(pos == content_pos[n]) |>
-    select(id, word_n, semantic_association, full_implementation) |>
-    pivot_wider(
-        names_from = full_implementation,
-        values_from = semantic_association,
-        names_prefix = "semantic_association_"
-    ) |>
-    select(starts_with("semantic_association")) |>
-    cor(use = "pairwise.complete.obs")
+    # Remove prefix
+    prefix <- "^semantic_association_"
+    colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+    rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
-# Remove prefix
-prefix <- "^semantic_association_"
-colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
-rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+    matrix_names <- colnames(cor_matrix)
+    name_order <- order(
+        case_when(
+            str_starts(matrix_names, "WE") ~ 1L,
+            str_starts(matrix_names, "CWE") ~ 2L,
+            str_starts(matrix_names, "SE") ~ 3L,
+            TRUE ~ 4L
+        ),
+        matrix_names
+    )
+
+    cor_matrix <- cor_matrix[name_order, name_order]
 
 
-melted <- melt(cor_matrix)
+    melted <- melt(cor_matrix)
 
-ggplot(melted, aes(Var1, Var2, fill = value)) +
-    geom_tile() +
-    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
-    scale_fill_gradient2(
-        low = "blue", high = "red", mid = "white",
-        midpoint = 0, limit = c(-1, 1)
-    ) +
-    theme_minimal() +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        legend.position = "bottom"
-    ) +
-    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
-    theme(aspect.ratio = 1)
+    p <- ggplot(melted, aes(Var1, Var2, fill = value)) +
+        geom_tile() +
+        geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+        scale_fill_gradient2(
+            low = "blue", high = "red", mid = "white",
+            midpoint = 0, limit = c(-1, 1)
+        ) +
+        theme_minimal() +
+        theme(
+            axis.text.x = element_text(angle = 45, hjust = 1),
+            legend.position = "bottom"
+        ) +
+        labs(x = "", y = "", fill = "Correlation", title = content_pos[n])
+
+    if (n == 1) {
+        p1 <- p
+    } else if (n == 2) {
+        p2 <- p
+    } else if (n == 3) {
+        p3 <- p
+    } else if (n == 4) {
+        p4 <- p
+    }
+}
+
+(p1 + p2) / (p3 + p4) +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom") &
+    plot_annotation(title = "UCL")
+
+ggsave(file.path("figs", "ucl_correlations_pos.png"), width = 15, height = 15)
 ```
 
 ## Correlations: DERCo
@@ -295,6 +426,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -333,6 +476,18 @@ prefix <- "^semantic_association_"
 colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
 rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
 cor_matrix
 ```
 
@@ -357,41 +512,70 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 
 by POS tag (only content words)
 ```{r}
-n <- 1
+for (n in 1:4) {
+    cor_matrix <- derco_df |>
+        filter(context_length == "All") |>
+        filter(pos == content_pos[n]) |>
+        select(article_n, word_n, semantic_association, full_implementation) |>
+        pivot_wider(
+            names_from = full_implementation,
+            values_from = semantic_association,
+            names_prefix = "semantic_association_"
+        ) |>
+        select(starts_with("semantic_association")) |>
+        cor(use = "pairwise.complete.obs")
 
-cor_matrix <- derco_df |>
-    filter(context_length == "All") |>
-    filter(pos == content_pos[n]) |>
-    select(article_n, word_n, semantic_association, full_implementation) |>
-    pivot_wider(
-        names_from = full_implementation,
-        values_from = semantic_association,
-        names_prefix = "semantic_association_"
-    ) |>
-    select(starts_with("semantic_association")) |>
-    cor(use = "pairwise.complete.obs")
+    # Remove prefix
+    prefix <- "^semantic_association_"
+    colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+    rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
 
-# Remove prefix
-prefix <- "^semantic_association_"
-colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
-rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+    matrix_names <- colnames(cor_matrix)
+    name_order <- order(
+        case_when(
+            str_starts(matrix_names, "WE") ~ 1L,
+            str_starts(matrix_names, "CWE") ~ 2L,
+            str_starts(matrix_names, "SE") ~ 3L,
+            TRUE ~ 4L
+        ),
+        matrix_names
+    )
+
+    cor_matrix <- cor_matrix[name_order, name_order]
 
 
-melted <- melt(cor_matrix)
+    melted <- melt(cor_matrix)
 
-ggplot(melted, aes(Var1, Var2, fill = value)) +
-    geom_tile() +
-    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
-    scale_fill_gradient2(
-        low = "blue", high = "red", mid = "white",
-        midpoint = 0, limit = c(-1, 1)
-    ) +
-    theme_minimal() +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        legend.position = "bottom"
-    ) +
-    labs(x = "", y = "", fill = "Correlation", title = content_pos[n]) +
-    theme(aspect.ratio = 1)
+    p <- ggplot(melted, aes(Var1, Var2, fill = value)) +
+        geom_tile() +
+        geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+        scale_fill_gradient2(
+            low = "blue", high = "red", mid = "white",
+            midpoint = 0, limit = c(-1, 1)
+        ) +
+        theme_minimal() +
+        theme(
+            axis.text.x = element_text(angle = 45, hjust = 1),
+            legend.position = "bottom"
+        ) +
+        labs(x = "", y = "", fill = "Correlation", title = content_pos[n])
+
+    if (n == 1) {
+        p1 <- p
+    } else if (n == 2) {
+        p2 <- p
+    } else if (n == 3) {
+        p3 <- p
+    } else if (n == 4) {
+        p4 <- p
+    }
+}
+
+(p1 + p2) / (p3 + p4) +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom") &
+    plot_annotation(title = "DERCo")
+
+ggsave(file.path("figs", "derco_correlations_pos.png"), width = 15, height = 15)
 ```
 

@@ -1,0 +1,306 @@
+# Plot individual sentences
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+
+setwd("experiment3")
+```
+
+```{r}
+plot_sentence_heatmap <- function(df, save_fig = FALSE, save_path = FALSE) {
+    words_df <- df |>
+        group_by(word_n) |>
+        summarize("word" = unique(target))
+
+    p <- df |>
+        ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
+        geom_tile(color = "white") +
+        scale_fill_gradient2(
+            low = "blue3", high = "red2", mid = "thistle1",
+            na.value = "grey95",
+            midpoint = 0, , limit = c(-5, 5)
+        ) +
+        scale_x_continuous(
+            breaks = words_df$word_n,
+            labels = words_df$word,
+        ) +
+        labs(
+            x = "",
+            y = ""
+        ) +
+        theme_classic() +
+        theme(
+            axis.text.x = element_text(angle = 45, hjust = 1),
+            axis.line = element_blank(),
+            axis.ticks.y = element_blank()
+        )
+
+    if (save_fig) {
+        ggsave(save_path, height = 4, width = 10)
+    } else {
+        p + theme(aspect.ratio = .5)
+    }
+}
+```
+
+## Read data
+```{r}
+data_path <- file.path("..", "experiment2", "results")
+
+tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
+    filter(Acceptability == "Gram") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(implementation, model) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup()
+
+derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "All")
+    ) |>
+    arrange(full_implementation, article_n, word_n) |>
+    mutate(
+        # end_sentence = str_detect(target, "\\.")
+        sentence_n = cumsum(
+            lag(str_detect(target, "\\."), default = FALSE)
+        )
+    ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
+
+derco_all_df <- derco_df |>
+    filter(context_length == "All")
+
+derco_sentence_df <- derco_df |>
+    filter(context_length == "Sentence(N=1)")
+
+# content words pos tags
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+## Tanner
+Choose sentence
+```{r}
+# manually choose
+sentence_ids <- tanner_df |>
+    pull(id) |>
+    unique()
+sentence_id <- sentence_ids[2]
+
+# highest variance
+max_var <- tanner_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ungroup() |>
+    filter(!is.na(variance)) |>
+    filter(variance == max(variance))
+
+sentence_id <- max_var$id[1]
+
+# high sem but low lp
+high_sem_low_lp <- tanner_df |>
+    filter(pos %in% content_pos) |>
+    filter(!is.na(s_sem)) |>
+    filter(!is.na(s_lp)) |>
+    mutate(
+        diff = s_sem - s_lp
+    ) |>
+    filter(diff == max(diff)) |>
+    select(id, word_n, diff, s_sem, s_lp, model, implementation)
+
+sentence_id <- high_sem_low_lp$id[1]
+```
+
+```{r}
+df <- tanner_df |>
+    filter(id == sentence_id)
+
+# print sentence
+df |>
+    pull(target) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- FALSE
+save_path <- file.path(
+    "figs", "example_sentences",
+    paste0("tanner_example_sentence", sentence_id, ".png")
+)
+
+plot_sentence_heatmap(df, save_fig, save_path)
+```
+
+## UCL
+Choose sentence
+```{r}
+# manually choose
+sentence_ids <- ucl_df |>
+    pull(id) |>
+    unique()
+sentence_id <- sentence_ids[2]
+
+# highest variance
+max_var <- ucl_df |>
+    filter(pos %in% content_pos) |>
+    group_by(id, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ungroup() |>
+    filter(!is.na(variance)) |>
+    filter(variance == max(variance))
+
+sentence_id <- max_var$id[1]
+
+# high sem but low lp
+high_sem_low_lp <- ucl_df |>
+    filter(pos %in% content_pos) |>
+    filter(!is.na(s_sem)) |>
+    filter(!is.na(s_lp)) |>
+    mutate(
+        diff = s_sem - s_lp
+    ) |>
+    filter(diff == max(diff)) |>
+    select(id, target, word_n, diff, s_sem, s_lp, model, implementation)
+
+sentence_id <- high_sem_low_lp$id[1]
+```
+
+```{r}
+df <- ucl_df |>
+    filter(id == sentence_id)
+
+# print sentence
+df |>
+    pull(target) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- FALSE
+save_path <- file.path(
+    "figs", "example_sentences",
+    paste0("ucl_example_sentence", sentence_id, ".png")
+)
+
+plot_sentence_heatmap(df, save_fig, save_path)
+```
+
+## DERCo
+Choose sentence
+```{r}
+# manually choose
+sentence_ids <- derco_all_df |>
+    pull(sentence_n) |>
+    unique()
+article_ids <- derco_all_df |>
+    pull(article_n) |>
+    unique()
+
+sentence_id <- sentence_ids[2]
+article_id <- article_ids[1]
+
+# sentence_id <- 23
+# article_id <- 4
+
+# highest variance
+max_var <- derco_all_df |>
+    filter(pos %in% content_pos) |>
+    group_by(article_n, sentence_n, word_n) |>
+    summarize(
+        variance = var(s_sem, na.rm = TRUE)
+    ) |>
+    ungroup() |>
+    filter(!is.na(variance)) |>
+    filter(variance == max(variance))
+
+sentence_id <- max_var$sentence_n[1]
+article_id <- max_var$article_n[1]
+
+# high sem but low lp
+high_sem_low_lp <- derco_all_df |>
+    filter(model != "bigscience/sgpt-bloom-7b1-msmarco") |>
+    filter(sentence_n > 4) |>
+    filter(pos %in% content_pos) |>
+    filter(!is.na(s_sem)) |>
+    filter(!is.na(s_lp)) |>
+    mutate(
+        diff = s_sem - s_lp
+    ) |>
+    filter(diff == max(diff)) |>
+    select(article_n, sentence_n, target, word_n, diff, s_sem, s_lp, model, implementation)
+
+sentence_id <- high_sem_low_lp$sentence_n[1]
+article_id <- high_sem_low_lp$article_n[1]
+```
+
+```{r}
+df <- derco_all_df |>
+    filter(article_n == article_id) |>
+    filter(sentence_n == sentence_id)
+
+# print sentence
+df |>
+    pull(target) |>
+    unique() |>
+    paste(collapse = " ")
+```
+
+Heatmap
+```{r}
+save_fig <- TRUE
+save_path <- file.path(
+    "figs", "example_sentences",
+    paste0("derco_example_article_", article_id, "sentence", sentence_id, ".png")
+)
+
+plot_sentence_heatmap(df, save_fig, save_path)
+```
+
+Go through all sentence in one document
+```{r}
+article_id <- 4
+n <- 17
+
+sentence_ids <- derco_all_df |>
+    filter(article_n == article_id) |>
+    pull(sentence_n) |>
+    unique()
+sentence_id <- sentence_ids[n]
+
+df <- derco_all_df |>
+    filter(article_n == article_id) |>
+    filter(sentence_n == sentence_id)
+
+# print sentence
+df |>
+    pull(target) |>
+    unique() |>
+    paste(collapse = " ")
+
+plot_sentence_heatmap(df, save_fig, save_path)
+```

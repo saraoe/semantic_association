@@ -44,41 +44,74 @@ content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 ```{r}
 tanner_df |>
     filter(pos %in% content_pos) |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
     ) +
     geom_point() +
     geom_smooth() +
     facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "firebrick2", "firebrick4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
     theme_bw() +
+    labs(x = "Word number", y = "Scaled semantic association", title = "Tanner (2019)") +
     theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "tanner_word_n_sem.png"), height = 7, width = 10)
 ```
 
 ```{r}
 ucl_df |>
     filter(pos %in% content_pos) |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
     ) +
     geom_point() +
     geom_smooth() +
     facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "firebrick2", "firebrick4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "steelblue4"
+        )
+    ) +
     theme_bw() +
+    labs(x = "Word number", y = "Scaled semantic association", title = "UCL") +
     theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "ucl_word_n_sem.png"), height = 7, width = 10)
 ```
 
 ```{r}
 derco_df |>
     filter(pos %in% content_pos) |>
     filter(context_length == "All") |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2") |>
     ggplot(
         aes(x = word_n, y = s_sem, color = model)
     ) +
     geom_point() +
     geom_smooth() +
     facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "firebrick2", "firebrick4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
     theme_bw() +
+    labs(x = "Word number", y = "Scaled semantic association", title = "DERRCo") +
     theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "derco_all_word_n_sem.png"), height = 7, width = 10)
 ```
 
 ## Plot variance over word_n
@@ -213,158 +246,77 @@ derco_df |>
     theme_bw()
 ```
 
-
-## Print sentences
-### Tanner
-Choose sentence
+## Difference between implementations over time
+Tanner
 ```{r}
-# manually choose
-sentence_ids <- tanner_df |>
-    pull(id) |>
-    unique()
-sentence_id <- sentence_ids[2]
+wide_df <- tanner_df |>
+    filter(implementation == "SE") |>
+    group_by(word_n, full_implementation) |>
+    summarise(
+        s_sem = mean(s_sem, na.rm = TRUE),
+        .groups = "drop"
+    ) %>%
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = s_sem
+    )
 
-# highest variance
-sentence_id <- tanner_df |>
-    filter(pos %in% content_pos) |>
-    group_by(id, word_n) |>
-    summarize(
-        variance = var(s_sem, na.rm = TRUE)
-    ) |>
-    ungroup() |>
-    filter(!is.na(variance)) |>
-    filter(variance == max(variance)) |>
-    pull(id)
-```
+# all unique pairs of implementations
+implementation_pairs <- combn(
+    setdiff(names(wide_df), "word_n"),
+    2,
+    simplify = FALSE
+)
 
-```{r}
-df <- tanner_df |>
-    filter(id == sentence_id)
+# pairwise differences
+diff_df <- map_dfr(implementation_pairs, \(pair) {
+    wide_df %>%
+        transmute(
+            word_n,
+            comparison = paste(pair[1], "−", pair[2]),
+            difference = .data[[pair[1]]] - .data[[pair[2]]]
+        )
+})
 
-# print sentence
-df |>
-    pull(word) |>
-    unique() |>
-    paste(collapse = " ")
-```
-
-Heatmap
-```{r}
-save_fig <- FALSE
-
-words_df <- df |>
-    group_by(word_n) |>
-    summarize("word" = unique(word))
-
-p <- df |>
-    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
-    geom_tile(color = "white") +
-    scale_fill_gradient2(
-        low = "blue3", high = "red2", mid = "thistle1",
-        na.value = "grey95",
-        midpoint = 0, , limit = c(-5, 5)
+# Plot all pairwise differences
+ggplot(
+    diff_df,
+    aes(
+        x = word_n,
+        y = difference,
+        color = comparison,
+        group = comparison
+    )
+) +
+    geom_hline(
+        yintercept = 0,
+        linetype = "dashed",
+        color = "grey50"
     ) +
-    scale_x_continuous(
-        breaks = words_df$word_n,
-        labels = words_df$word,
-    ) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 1.8) +
+    scale_x_continuous(breaks = scales::breaks_pretty()) +
     labs(
-        x = "",
-        y = ""
+        x = "Word position",
+        y = "Difference in s_lp",
+        color = "Implementations"
     ) +
-    theme_classic() +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        axis.line = element_blank(),
-        axis.ticks.y = element_blank()
-    )
-
-if (save_fig) {
-    ggsave(
-        file.path(
-            "figs", "example_sentences",
-            paste0("tanner_example_sentence", sentence_id, ".png")
-        ),
-        height = 4, width = 10
-    )
-} else {
-    p + theme(aspect.ratio = .5)
-}
-```
-
-### UCL
-Choose sentence
-```{r}
-# manually choose
-sentence_ids <- ucl_df |>
-    pull(id) |>
-    unique()
-sentence_id <- sentence_ids[2]
-
-# highest variance
-sentence_id <- ucl_df |>
-    filter(pos %in% content_pos) |>
-    group_by(id, word_n) |>
-    summarize(
-        variance = var(s_sem, na.rm = TRUE)
-    ) |>
-    ungroup() |>
-    filter(!is.na(variance)) |>
-    filter(variance == max(variance)) |>
-    pull(id)
+    theme_minimal()
 ```
 
 ```{r}
-df <- ucl_df |>
-    filter(id == sentence_id)
-
-# print sentence
-df |>
-    pull(word) |>
-    unique() |>
-    paste(collapse = " ")
-```
-
-Heatmap
-```{r}
-save_fig <- FALSE
-
-words_df <- df |>
-    group_by(word_n) |>
-    summarize("word" = unique(word))
-
-p <- df |>
-    ggplot(aes(x = word_n, y = full_implementation, fill = s_sem)) +
-    geom_tile(color = "white") +
-    scale_fill_gradient2(
-        low = "blue3", high = "red2", mid = "thistle1",
-        na.value = "grey95",
-        midpoint = 0, , limit = c(-5, 5)
+ggplot(diff_df, aes(x = word_n, y = difference)) +
+    geom_hline(
+        yintercept = 0,
+        linetype = "dashed",
+        color = "grey50"
     ) +
-    scale_x_continuous(
-        breaks = words_df$word_n,
-        labels = words_df$word,
-    ) +
+    geom_line(linewidth = 0.9) +
+    geom_point(size = 1.8) +
+    facet_wrap(~comparison) +
     labs(
-        x = "",
-        y = ""
+        x = "Word position",
+        y = "Difference in s_lp"
     ) +
-    theme_classic() +
-    theme(
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        axis.line = element_blank(),
-        axis.ticks.y = element_blank()
-    )
-
-if (save_fig) {
-    ggsave(
-        file.path(
-            "figs", "example_sentences",
-            paste0("ucl_example_sentence", sentence_id, ".png")
-        ),
-        height = 4, width = 10
-    )
-} else {
-    p + theme(aspect.ratio = .5)
-}
+    theme_minimal()
 ```

@@ -19,13 +19,15 @@ tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
@@ -36,7 +38,8 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     ungroup() |>
     group_by(full_implementation) |>
     mutate(s_sem = scale(semantic_association)) |>
-    ungroup()
+    ungroup() |>
+    filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
