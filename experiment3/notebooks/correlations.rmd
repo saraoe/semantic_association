@@ -48,27 +48,6 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 ```
 
-```{r}
-order_implementations <- function(implementations) {
-    levels <- implementations |>
-        unique() |>
-        (\(x) x[
-            order(case_when(
-                str_detect(x, "^WE") ~ 1,
-                str_detect(x, "^CWE") ~ 2,
-                str_detect(x, "^SE") ~ 3,
-                TRUE ~ 4
-            ))
-        ])()
-
-    return(factor(implementations, levels = levels))
-}
-```
-
-```{r}
-tanner_df$full_implementation <- order_implementations(tanner_df$full_implementation)
-```
-
 ## Correlations: Tanner
 all words
 ```{r}
