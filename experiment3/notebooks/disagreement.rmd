@@ -115,6 +115,49 @@ fit <- lmer(
 summary(fit)
 ```
 
+```{r}
+data <- tanner_df |>
+    filter(pos %in% content_pos)
+
+quantiles <- quantile(data$s_lp, na.rm = TRUE)
+
+data <- data |>
+    mutate(
+        q_lp = factor(case_when(
+            s_lp <= quantiles[2] ~ "Q25",
+            s_lp > quantiles[2] & s_lp <= quantiles[3] ~ "Q50",
+            s_lp > quantiles[3] & s_lp <= quantiles[4] ~ "Q75",
+            s_lp > quantiles[4] ~ "Q100",
+        ), levels = c("Q25", "Q50", "Q75", "Q100"))
+    )
+
+fit <- lmer(
+    s_sem ~ 0 + implementation + implementation:q_lp +
+        (0 + implementation | id) +
+        (0 + implementation | model),
+    data = data
+)
+summary(fit)
+```
+
+```{r}
+data |>
+    ggplot(aes(x = s_lp, y = s_sem, color = model)) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "orange2", "orange4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
+    theme_bw() +
+    labs(x = "Scaled log-probability", y = "Scaled semantic association", title = "Tanner") +
+    theme(legend.position = "bottom")
+```
+
 UCL
 ```{r}
 data <- ucl_df |>
@@ -127,6 +170,49 @@ fit <- lmer(
     data = data
 )
 summary(fit)
+```
+
+```{r}
+data <- ucl_df |>
+    filter(pos %in% content_pos)
+
+quantiles <- quantile(data$s_lp, na.rm = TRUE)
+
+data <- data |>
+    mutate(
+        q_lp = factor(case_when(
+            s_lp <= quantiles[2] ~ "Q25",
+            s_lp > quantiles[2] & s_lp <= quantiles[3] ~ "Q50",
+            s_lp > quantiles[3] & s_lp <= quantiles[4] ~ "Q75",
+            s_lp > quantiles[4] ~ "Q100",
+        ), levels = c("Q25", "Q50", "Q75", "Q100"))
+    )
+
+fit <- lmer(
+    s_sem ~ 0 + implementation + implementation:q_lp +
+        (0 + implementation | id) +
+        (0 + implementation | model),
+    data = data
+)
+summary(fit)
+```
+
+```{r}
+data |>
+    ggplot(aes(x = s_lp, y = s_sem, color = model)) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "orange2", "orange4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
+    theme_bw() +
+    labs(x = "Scaled log-probability", y = "Scaled semantic association", title = "UCL") +
+    theme(legend.position = "bottom")
 ```
 
 DERCo: All
@@ -144,6 +230,50 @@ fit <- lmer(
 summary(fit)
 ```
 
+```{r}
+data <- derco_df |>
+    filter(context_length == "All") |>
+    filter(pos %in% content_pos)
+
+quantiles <- quantile(data$s_lp, na.rm = TRUE)
+
+data <- data |>
+    mutate(
+        q_lp = factor(case_when(
+            s_lp <= quantiles[2] ~ "Q25",
+            s_lp > quantiles[2] & s_lp <= quantiles[3] ~ "Q50",
+            s_lp > quantiles[3] & s_lp <= quantiles[4] ~ "Q75",
+            s_lp > quantiles[4] ~ "Q100",
+        ), levels = c("Q25", "Q50", "Q75", "Q100"))
+    )
+
+fit <- lmer(
+    s_sem ~ 0 + implementation + implementation:q_lp +
+        (0 + implementation | article_n) +
+        (0 + implementation | model),
+    data = data
+)
+summary(fit)
+```
+
+```{r}
+data |>
+    ggplot(aes(x = s_lp, y = s_sem, color = model)) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "orange2", "orange4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
+    theme_bw() +
+    labs(x = "Scaled log-probability", y = "Scaled semantic association", title = "DERCo") +
+    theme(legend.position = "bottom")
+```
+
 DERCo: Sentence(N=1)
 ```{r}
 data <- derco_df |>
@@ -157,4 +287,51 @@ fit <- lmer(
     data = data
 )
 summary(fit)
+```
+
+```{r}
+data <- derco_df |>
+    filter(context_length == "Sentence(N=1)") |>
+    filter(pos %in% content_pos)
+
+quantiles <- quantile(data$s_lp, na.rm = TRUE)
+
+data <- data |>
+    mutate(
+        q_lp = factor(case_when(
+            s_lp <= quantiles[2] ~ "Q25",
+            s_lp > quantiles[2] & s_lp <= quantiles[3] ~ "Q50",
+            s_lp > quantiles[3] & s_lp <= quantiles[4] ~ "Q75",
+            s_lp > quantiles[4] ~ "Q100",
+        ), levels = c("Q25", "Q50", "Q75", "Q100"))
+    )
+
+fit <- lmer(
+    s_sem ~ 0 + implementation + implementation:q_lp +
+        (0 + implementation | article_n) +
+        (0 + implementation | model),
+    data = data
+)
+summary(fit)
+```
+
+```{r}
+data |>
+    ggplot(aes(x = s_lp, y = s_sem, color = model)) +
+    geom_point() +
+    geom_smooth() +
+    facet_wrap(. ~ implementation) +
+    scale_color_manual(
+        values = c(
+            "orange2", "orange4", "steelblue2",
+            "seagreen2", "seagreen4", "orchid2",
+            "orchid4", "steelblue4"
+        )
+    ) +
+    theme_bw() +
+    labs(
+        x = "Scaled log-probability", y = "Scaled semantic association",
+        title = "DERCo", subtitle = "Sentence(N=1)"
+    ) +
+    theme(legend.position = "bottom")
 ```
