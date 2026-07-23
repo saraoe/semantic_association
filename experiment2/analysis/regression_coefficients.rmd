@@ -335,7 +335,7 @@ fixef_df |>
     theme_minimal() +
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 7)
+ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 7, width = 7)
 ```
 
 ### coefficient only including target word from Tanner 
