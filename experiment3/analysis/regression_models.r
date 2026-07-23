@@ -5,7 +5,7 @@ library(brms)
 library(stringr)
 library(argparse)
 
-setwd("experiment2")
+setwd("experiment3")
 
 options(mc.cores = parallel::detectCores())
 options(brms.backend = "cmdstan")
@@ -28,11 +28,12 @@ print(paste(
     sep = ""
 ))
 
-# create out folder
+# folders
 out_folder <- file.path("analysis", "brms_models")
 if (!dir.exists(out_folder)) {
     dir.create(out_folder)
 }
+exp2_folder <- file.path("..", "experiment2")
 
 # function for cleaning word
 clean_word <- function(word) {
@@ -48,6 +49,7 @@ erp_priors <- c(
     prior(normal(0, 10), class = sigma),
     prior(normal(0, 10), class = sd)
 )
+erp_priors_no_intercept <- erp_priors[2:4, ]
 
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
@@ -56,14 +58,14 @@ if ("tanner" %in% dataset) {
     print("Dataset: Tanner")
     # load data
     tanner_sem <- read.csv(
-        file.path("results", "tanner_semantic_association.csv")
+        file.path(exp2_folder, "results", "tanner_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
             implementation_id = paste(implementation, model, sep = "_")
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
-    tanner_df <- read.csv(file.path("data", "Tanner", "mean_amplitude.csv")) |>
+    tanner_df <- read.csv(file.path(exp2_folder, "data", "Tanner", "mean_amplitude.csv")) |>
         mutate(context = ifelse(is.na(context), "", context)) |>
         left_join(tanner_sem) |>
         filter(Acceptability == "Gram") |>
@@ -108,7 +110,7 @@ if ("tanner" %in% dataset) {
         # n400 ~ pos:s_sem + pos:s_lp
         m_sem <- brm(pos_formula,
             family = gaussian(),
-            prior = erp_priors,
+            prior = erp_priors_no_intercept,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
@@ -122,14 +124,14 @@ if ("ucl" %in% dataset) {
     print("Dataset: UCL")
     # load data
     ucl_sem <- read.csv(
-        file.path("results", "ucl_semantic_association.csv")
+        file.path(exp2_folder, "results", "ucl_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
             implementation_id = paste(implementation, model, sep = "_")
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
-    ucl_df <- read.csv(file.path("data", "UCL", "mean_amplitude.csv")) |>
+    ucl_df <- read.csv(file.path(exp2_folder, "data", "UCL", "mean_amplitude.csv")) |>
         left_join(ucl_sem) |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
@@ -173,7 +175,7 @@ if ("ucl" %in% dataset) {
         # n400 ~ pos:s_sem + pos:s_lp
         m_sem <- brm(pos_formula,
             family = gaussian(),
-            prior = erp_priors,
+            prior = erp_priors_no_intercept,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
@@ -187,7 +189,7 @@ if ("ucl" %in% dataset) {
 if ("derco" %in% dataset) {
     # load data
     derco_sem <- read.csv(
-        file.path("results", "derco_semantic_association.csv")
+        file.path(exp2_folder, "results", "derco_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
@@ -195,7 +197,7 @@ if ("derco" %in% dataset) {
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     derco_df <- read.csv(
-        file.path("data", "DERCo", "mean_amplitude.csv")
+        file.path(exp2_folder, "data", "DERCo", "mean_amplitude.csv")
     ) |>
         left_join(derco_sem) |>
         filter(pos %in% content_pos) |>
@@ -239,7 +241,7 @@ if ("derco" %in% dataset) {
         # n400 ~ pos:s_sem + pos:s_lp
         m_sem <- brm(pos_formula,
             family = gaussian(),
-            prior = erp_priors,
+            prior = erp_priors_no_intercept,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
