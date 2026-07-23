@@ -20,3 +20,5 @@ experiment2/data/UCL/*
 experiment2/results/*
 experiment2/figs/preprocessing/*
 experiment2/analysis/brms_models/*
+
+experiment3/analysis/brms_models/*
