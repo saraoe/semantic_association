@@ -52,13 +52,13 @@ content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 all words
 ```{r}
 cor_matrix <- tanner_df |>
-    select(id, word_n, semantic_association, full_implementation) |>
+    select(id, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -101,13 +101,13 @@ only content words
 ```{r}
 cor_matrix <- tanner_df |>
     filter(pos %in% content_pos) |>
-    select(id, word_n, semantic_association, full_implementation) |>
+    select(id, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -154,13 +154,13 @@ by POS tag (only content words)
 for (n in 1:4) {
     cor_matrix <- tanner_df |>
         filter(pos == content_pos[n]) |>
-        select(id, word_n, semantic_association, full_implementation) |>
+        select(id, word_n, semantic_association, s_lp, full_implementation) |>
         pivot_wider(
             names_from = full_implementation,
             values_from = semantic_association,
             names_prefix = "semantic_association_"
         ) |>
-        select(starts_with("semantic_association")) |>
+        select(starts_with("semantic_association"), "s_lp") |>
         cor(use = "pairwise.complete.obs")
 
     # Remove prefix
@@ -221,13 +221,13 @@ ggsave(file.path("figs", "tanner_correlations_pos.png"), width = 15, height = 15
 all words
 ```{r}
 cor_matrix <- ucl_df |>
-    select(id, word_n, semantic_association, full_implementation) |>
+    select(id, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -270,13 +270,13 @@ only content words
 ```{r}
 cor_matrix <- ucl_df |>
     filter(pos %in% content_pos) |>
-    select(id, word_n, semantic_association, full_implementation) |>
+    select(id, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -323,13 +323,13 @@ by POS tag (only content words)
 for (n in 1:4) {
     cor_matrix <- ucl_df |>
         filter(pos == content_pos[n]) |>
-        select(id, word_n, semantic_association, full_implementation) |>
+        select(id, word_n, semantic_association, s_lp, full_implementation) |>
         pivot_wider(
             names_from = full_implementation,
             values_from = semantic_association,
             names_prefix = "semantic_association_"
         ) |>
-        select(starts_with("semantic_association")) |>
+        select(starts_with("semantic_association"), "s_lp") |>
         cor(use = "pairwise.complete.obs")
 
     # Remove prefix
@@ -391,13 +391,13 @@ all words
 ```{r}
 cor_matrix <- derco_df |>
     filter(context_length == "All") |>
-    select(article_n, word_n, semantic_association, full_implementation) |>
+    select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -441,13 +441,13 @@ only content words
 cor_matrix <- derco_df |>
     filter(context_length == "All") |>
     filter(pos %in% content_pos) |>
-    select(article_n, word_n, semantic_association, full_implementation) |>
+    select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association")) |>
+    select(starts_with("semantic_association"), "s_lp") |>
     cor(use = "pairwise.complete.obs")
 
 # Remove prefix
@@ -495,13 +495,13 @@ for (n in 1:4) {
     cor_matrix <- derco_df |>
         filter(context_length == "All") |>
         filter(pos == content_pos[n]) |>
-        select(article_n, word_n, semantic_association, full_implementation) |>
+        select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
         pivot_wider(
             names_from = full_implementation,
             values_from = semantic_association,
             names_prefix = "semantic_association_"
         ) |>
-        select(starts_with("semantic_association")) |>
+        select(starts_with("semantic_association"), "s_lp") |>
         cor(use = "pairwise.complete.obs")
 
     # Remove prefix
