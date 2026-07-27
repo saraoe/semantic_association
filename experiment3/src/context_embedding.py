@@ -93,6 +93,7 @@ def extract_words_similar_to_context_embeddings(
     corpus_df: pd.DataFrame,
     out_path: Path,
     word_list: list[str] = None,
+    overwrite: bool = False,
 ):
     """
     Inspects context embeddings of a corpus by finding words that have highest and lowest similarity.
@@ -104,9 +105,6 @@ def extract_words_similar_to_context_embeddings(
     )
     assert all([isinstance(word, str) for word in word_list])
 
-    out_folder = out_path.parent
-    out_folder.mkdir(parents=True, exist_ok=True)
-
     print(">> Getting word embeddings")
     if not word_list:
         corpus_df_cw = corpus_df[corpus_df["pos"] in ["NOUN", "VERB", "ADJ", "ADV"]]
@@ -116,6 +114,7 @@ def extract_words_similar_to_context_embeddings(
     ]
 
     print(">> Calculating similarities")
+    results = []
     for row in df.itertuples(index=False):
         # get context embedding
         context = row.context
@@ -135,11 +134,12 @@ def extract_words_similar_to_context_embeddings(
         similarity_words["id"] = row.id
         similarity_words["word_n"] = row.word_n
         similarity_words["target"] = row.target
+        results.append(similarity_words)
 
     model_results = {
         "model": model.model_name,
         "implementation": implementation_name,
-        "similarity_words": similarity_words,
+        "similarity_words": results,
     }
 
     with open(out_path, "a") as f:
@@ -147,11 +147,19 @@ def extract_words_similar_to_context_embeddings(
 
 
 if __name__ == "__main__":
-    # context = "A wolf and a fox once lived together. The fox, who was the weaker of the two, had to do all the hard work, which made him anxious to leave his companion."
-    context = "One time the little hen and the little rooster went to Nut Mountain, and they agreed that whoever would find a nut would share it with the other one. Now the little hen found a large, large nut, but said nothing about it intending to eat the kernel herself. However, the kernel was so thick that she could not swallow it down."
+    # whether to overwrite the output file (if false, it appends to the file)
+    overwrite = True
+
+    context1 = "A wolf and a fox once lived together. The fox, who was the weaker of the two, had to do all the hard work, which made him anxious to leave his companion."
+    context2 = "One time the little hen and the little rooster went to Nut Mountain, and they agreed that whoever would find a nut would share it with the other one. Now the little hen found a large, large nut, but said nothing about it intending to eat the kernel herself. However, the kernel was so thick that she could not swallow it down."
 
     df = pd.DataFrame(
-        {"context": [context], "target": ["a word"], "id": ["test"], "word_n": [1]}
+        {
+            "context": [context1, context2],
+            "target": ["a word", "an other word"],
+            "id": ["test", "test"],
+            "word_n": [1, 2],
+        }
     )
 
     config = [
@@ -241,6 +249,16 @@ if __name__ == "__main__":
         if not isinstance(word, str):
             raise ValueError
 
+    # creating out path
+    out_path = Path(
+        "experiment3", "results", "word_similarity_context_embeddings.ndjson"
+    )
+    out_folder = out_path.parent
+    out_folder.mkdir(parents=True, exist_ok=True)
+
+    if overwrite:
+        out_path.unlink(missing_ok=True)  # delete out_path if exists
+
     print("Extracting words similar to contexts")
     for name, model in stream_models(config):
         print(f"{name}: {model.model_name}")
@@ -248,8 +266,7 @@ if __name__ == "__main__":
             model=model,
             implementation_name=name,
             corpus_df=df,
-            out_path=Path(
-                "experiment3", "results", "word_similarity_context_embeddings.ndjson"
-            ),
+            out_path=out_path,
             word_list=words,
+            overwrite=True,
         )
