@@ -74,16 +74,16 @@ if ("tanner" %in% dataset) {
 
     # model formula
     word_position_formula <- bf(
-        n400 ~ s_sem + s_lp +word_n +
-            (s_sem + s_lp +word_n || subject) +
-            (s_sem + s_lp +word_n || id) +
-            (s_sem + s_lp +word_n || word)
+        n400 ~ s_sem + s_lp + word_n +
+            (s_sem + s_lp + word_n || subject) +
+            (s_sem + s_lp + word_n || id) +
+            (s_sem + s_lp + word_n || word)
     )
     pos_formula <- bf(
-        n400 ~ -1 + pos:s_sem + pos:s_lp +
-            (pos:s_sem + pos:s_lp || subject) +
-            (pos:s_sem + pos:s_lp || id) +
-            (pos:s_sem + pos:s_lp || word)
+        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
+            (pos + pos:s_sem + pos:s_lp || subject) +
+            (pos + pos:s_sem + pos:s_lp || id) +
+            (pos + pos:s_sem + pos:s_lp || word)
     )
 
     # run models
@@ -145,10 +145,10 @@ if ("ucl" %in% dataset) {
             (s_sem + s_lp + word_n || word)
     )
     pos_formula <- bf(
-        n400 ~ -1 + pos:s_sem + pos:s_lp +
-            (pos:s_sem + pos:s_lp || subject) +
-            (pos:s_sem + pos:s_lp || id) +
-            (pos:s_sem + pos:s_lp || word)
+        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
+            (pos + pos:s_sem + pos:s_lp || subject) +
+            (pos + pos:s_sem + pos:s_lp || id) +
+            (pos + pos:s_sem + pos:s_lp || word)
     )
 
     # run models
@@ -211,10 +211,10 @@ if ("derco" %in% dataset) {
             (s_sem + s_lp + word_n || word)
     )
     pos_formula <- bf(
-        n400 ~ -1 + pos:s_sem + pos:s_lp +
-            (pos:s_sem + pos:s_lp || subject) +
-            (pos:s_sem + pos:s_lp || article_n) +
-            (pos:s_sem + pos:s_lp || word)
+        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
+            (pos + pos:s_sem + pos:s_lp || subject) +
+            (pos + pos:s_sem + pos:s_lp || article_n) +
+            (pos + pos:s_sem + pos:s_lp || word)
     )
 
     # run models
