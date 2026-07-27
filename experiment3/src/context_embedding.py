@@ -49,7 +49,7 @@ def high_low_similarity_words(
     """
     if n < 1:
         raise ValueError("n must be positive")
-    if n > len(words):
+    if n > len(word_embeddings):
         raise ValueError("N larger than number of words!")
 
     similarities = [
@@ -92,30 +92,29 @@ def extract_words_similar_to_context_embeddings(
     implementation_name: str,
     corpus_df: pd.DataFrame,
     out_path: Path,
-    word_list: list[str] = None,
-    overwrite: bool = False,
+    word_list: list[str] | None = None,
 ):
     """
     Inspects context embeddings of a corpus by finding words that have highest and lowest similarity.
     Writes results to ndjson-file (out_path).
-    A specific list of words can be given (word_list). If not, the content words in the corpus_df (target) will be used.
+    A specific list of words can be given (word_list). If not, the content words in the corpus_df (word_clean) will be used.
     """
     assert all(
         [col in corpus_df.columns for col in ["context", "id", "target", "word_n"]]
     )
-    assert all([isinstance(word, str) for word in word_list])
 
     print(">> Getting word embeddings")
     if not word_list:
-        corpus_df_cw = corpus_df[corpus_df["pos"] in ["NOUN", "VERB", "ADJ", "ADV"]]
-        word_list = corpus_df_cw["target"]
+        corpus_df_cw = corpus_df[corpus_df["pos"].isin(["NOUN", "VERB", "ADJ", "ADV"])]
+        word_list = corpus_df_cw["word_clean"].drop_duplicates().tolist()
+    assert all([isinstance(word, str) for word in word_list])
     word_embeddings = [
         (word, np.asarray(model.get_embedding(word))) for word in word_list
     ]
 
     print(">> Calculating similarities")
     results = []
-    for row in df.itertuples(index=False):
+    for row in corpus_df.itertuples(index=False):
         # get context embedding
         context = row.context
         context_embedding = model.get_embedding(context)
@@ -150,17 +149,10 @@ if __name__ == "__main__":
     # whether to overwrite the output file (if false, it appends to the file)
     overwrite = True
 
-    context1 = "A wolf and a fox once lived together. The fox, who was the weaker of the two, had to do all the hard work, which made him anxious to leave his companion."
-    context2 = "One time the little hen and the little rooster went to Nut Mountain, and they agreed that whoever would find a nut would share it with the other one. Now the little hen found a large, large nut, but said nothing about it intending to eat the kernel herself. However, the kernel was so thick that she could not swallow it down."
-
-    df = pd.DataFrame(
-        {
-            "context": [context1, context2],
-            "target": ["a word", "an other word"],
-            "id": ["test", "test"],
-            "word_n": [1, 2],
-        }
-    )
+    # read df
+    derco_df = pd.read_csv(Path("experiment2", "data", "DERCo", "stim.csv"))
+    derco_df = derco_df.rename(columns={"article_n": "id"})
+    derco_df = derco_df.dropna(subset=["context"])
 
     config = [
         # {
@@ -222,33 +214,6 @@ if __name__ == "__main__":
         # },
     ]
 
-    print("Extracting word list")
-    # words = load_subtlex_vocab(Path("experiment1", "data", "SUBTLEX-US.xlsx"))
-    # words = load_word2vec_vocab(Path("models", "enwiki_20180420_300d.txt"))
-    words = [
-        "fox",
-        "wolf",
-        "pancake",
-        "eat",
-        "sheep",
-        "whale",
-        "door",
-        "book",
-        "run",
-        "drive",
-        "tree",
-        "house",
-        "computer",
-        "tall",
-        "fluffy",
-        "red",
-        "blue",
-    ]
-
-    for word in words:
-        if not isinstance(word, str):
-            raise ValueError
-
     # creating out path
     out_path = Path(
         "experiment3", "results", "word_similarity_context_embeddings.ndjson"
@@ -265,8 +230,8 @@ if __name__ == "__main__":
         extract_words_similar_to_context_embeddings(
             model=model,
             implementation_name=name,
-            corpus_df=df,
+            corpus_df=derco_df,
             out_path=out_path,
-            word_list=words,
-            overwrite=True,
+            # word_list=words,
         )
+        del model  # unload model
