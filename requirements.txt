@@ -12,3 +12,4 @@ de-core-news-sm @ https://huggingface.co/spacy/de_core_news_sm/resolve/main/de_c
 openai==2.11.0
 sentence-transformers==5.2.0
 mne==1.12.1
+ndjson==0.3.1
