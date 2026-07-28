@@ -23,3 +23,4 @@ experiment2/figs/preprocessing/*
 experiment2/analysis/brms_models/*
 
 experiment3/analysis/brms_models/*
+experiment3/results/*

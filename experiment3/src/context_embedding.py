@@ -18,7 +18,6 @@ from src.embedding_model import EmbeddingModel
 
 from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelContentWord
 from src.sentence_embedding_models import SentenceEmbeddingModel
-from src.append_to_csv import append_df_to_csv
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
@@ -111,6 +110,8 @@ def extract_words_similar_to_context_embeddings(
     word_embeddings = [
         (word, np.asarray(model.get_embedding(word))) for word in word_list
     ]
+    # removing elements that does not have an embedding (important for WE models)
+    word_embeddings = [embedding for embedding in word_embeddings if not np.isnan(embedding[1]).any()]
 
     print(">> Calculating similarities")
     results = []
@@ -119,13 +120,15 @@ def extract_words_similar_to_context_embeddings(
         context = row.context
         context_embedding = model.get_embedding(context)
         context_embedding = np.asarray(context_embedding)
+        if np.isnan(context_embedding).any():
+            continue
 
         # calculate similarities
         similarity_words = high_low_similarity_words(
             model=model,
             context_embedding=context_embedding,
             word_embeddings=word_embeddings,
-            n=10,
+            n=100,
         )
 
         # add extra columns
@@ -147,7 +150,7 @@ def extract_words_similar_to_context_embeddings(
 
 if __name__ == "__main__":
     # whether to overwrite the output file (if false, it appends to the file)
-    overwrite = True
+    overwrite = False
 
     # read df
     derco_df = pd.read_csv(Path("experiment2", "data", "DERCo", "stim.csv"))
@@ -155,11 +158,11 @@ if __name__ == "__main__":
     derco_df = derco_df.dropna(subset=["context"])
 
     config = [
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "intfloat/multilingual-e5-large",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "intfloat/multilingual-e5-large",
+        },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
@@ -175,43 +178,43 @@ if __name__ == "__main__":
             "model_type": "SentenceEmbedding",
             "model_name": "BAAI/bge-m3",
         },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
-        # },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "Qwen/Qwen3-Embedding-8B",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "enwiki_20180420_300d",
-        # },
-        # {
-        #     "implementation": "WE",
-        #     "model_type": "WordEmbedding",
-        #     "model_name": "word2vec-google-news-300",
-        # },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "enwiki_20180420_300d",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
-        # {
-        #     "implementation": "CWE",
-        #     "model_type": "WordEmbeddingContentWord",
-        #     "model_name": "word2vec-google-news-300",
-        #     "spacy_model_name": "en_core_web_sm",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-8B",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "enwiki_20180420_300d",
+        },
+        {
+            "implementation": "WE",
+            "model_type": "WordEmbedding",
+            "model_name": "word2vec-google-news-300",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "enwiki_20180420_300d",
+            "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "CWE",
+            "model_type": "WordEmbeddingContentWord",
+            "model_name": "word2vec-google-news-300",
+            "spacy_model_name": "en_core_web_sm",
+        },
     ]
 
     # creating out path
@@ -222,9 +225,11 @@ if __name__ == "__main__":
     out_folder.mkdir(parents=True, exist_ok=True)
 
     if overwrite:
+        print(f"Deleting and overwriting {out_path}")
         out_path.unlink(missing_ok=True)  # delete out_path if exists
+    else:
+        print(f"Appending to {out_path}")
 
-    print("Extracting words similar to contexts")
     for name, model in stream_models(config):
         print(f"{name}: {model.model_name}")
         extract_words_similar_to_context_embeddings(
@@ -232,6 +237,5 @@ if __name__ == "__main__":
             implementation_name=name,
             corpus_df=derco_df,
             out_path=out_path,
-            # word_list=words,
         )
         del model  # unload model
