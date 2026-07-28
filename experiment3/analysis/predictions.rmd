@@ -38,16 +38,16 @@ derco_sem <- read.csv(
     file.path("..", "experiment2", "results", "derco_semantic_association.csv")
 ) |>
     select(-X) |>
-    mutate(
+    tidytable::mutate(
         implementation_id = paste(implementation, model, sep = "_")
     ) |>
-    mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+    tidytable::mutate(implementation_id = str_replace(implementation_id, "/", "_"))
 derco_df <- read.csv(
     file.path("..", "experiment2", "data", "DERCo", "mean_amplitude.csv")
 ) |>
-    left_join(derco_sem) |>
-    filter(pos %in% content_pos) |>
-    mutate(word = clean_word(target))
+    tidytable::left_join(derco_sem) |>
+    tidytable::filter(pos %in% content_pos) |>
+    tidytable::mutate(word = clean_word(target))
 ```
 
 ## load model
