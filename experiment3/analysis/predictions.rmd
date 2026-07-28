@@ -1,0 +1,115 @@
+# Predictions of regression models from experiment 2
+
+```{r}
+library(tidytable)
+library(dplyr)
+library(brms)
+library(stringr)
+library(ggplot2)
+
+setwd("experiment3")
+
+models_path <- file.path("..", "experiment2", "analysis", "brms_models")
+
+# content words pos tags
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+```{r}
+# function for cleaning word
+clean_word <- function(word) {
+    word |>
+        tolower() |>
+        gsub("[[:punct:]]", "", x = _)
+}
+
+# function for getting the implementation_id from the model filename
+get_implementation_id <- function(filename, dataset) {
+    imp_id <- str_remove(filename, paste0(dataset, "_"))
+    imp_id <- str_remove(imp_id, "lp_")
+    imp_id <- str_remove(imp_id, ".rds")
+    return(imp_id)
+}
+```
+
+## read data
+```{r}
+derco_sem <- read.csv(
+    file.path("..", "experiment2", "results", "derco_semantic_association.csv")
+) |>
+    select(-X) |>
+    mutate(
+        implementation_id = paste(implementation, model, sep = "_")
+    ) |>
+    mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+derco_df <- read.csv(
+    file.path("..", "experiment2", "data", "DERCo", "mean_amplitude.csv")
+) |>
+    left_join(derco_sem) |>
+    filter(pos %in% content_pos) |>
+    mutate(word = clean_word(target))
+```
+
+## load model
+```{r}
+dataset <- "derco"
+
+model_names <- list.files(models_path,
+    full.names = FALSE,
+    pattern = paste0(dataset, "_lp*_.*\\.rds$")
+)
+model_name <- model_names[10]
+
+print(model_name)
+fit <- readRDS(file.path(models_path, model_name))
+summary(fit)
+```
+
+## residuals
+```{r}
+# data for one model
+vars <- c(
+    "n400",
+    "s_sem",
+    "s_lp",
+    "subject",
+    "article_n",
+    "word"
+)
+data <- derco_df |>
+    filter(implementation_id == get_implementation_id(model_name, dataset)) |>
+    tidytable::mutate(
+        "s_sem" = scale(semantic_association)
+    ) |>
+    filter(if_all(all_of(vars), ~ !is.na(.)))
+```
+
+```{r}
+preds <- fitted(fit)[, "Estimate"]
+data$pred <- preds
+data$resid <- data$n400 - data$pred
+```
+
+```{r}
+var_name <- "word_n"
+
+tmp_data <- data |>
+    rename("var" = var_name)
+
+tmp_data |>
+    ggplot(aes(var, resid)) +
+    geom_point(alpha = .05) +
+    geom_smooth() +
+    theme_minimal() +
+    labs(x = var_name)
+
+tmp_data |>
+    mutate(bin = ntile(var, 10)) |>
+    group_by(bin) |>
+    summarize(
+        max_var = max(var),
+        rmse = sqrt(mean((resid)^2)),
+        mae = mean(abs(resid)),
+        bias = mean(resid)
+    )
+```
