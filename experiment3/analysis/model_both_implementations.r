@@ -64,7 +64,8 @@ data <- derco_df |>
         names_from = implementation,
         values_from = semantic_association
     ) |>
-    mutate(across(all_of(c("WE", "SE")), ~ as.numeric(scale(.))))
+    mutate(across(all_of(c("WE", "SE")), ~ as.numeric(scale(.)))) |>
+    arrange(subject, article_n, word_n)
 
 
 # model formula

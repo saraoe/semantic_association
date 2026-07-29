@@ -1,0 +1,94 @@
+# Model comparison using PSIS-LOO
+
+```{r}
+library(tidytable)
+library(stringr)
+library(brms)
+library(loo)
+library(ggplot2)
+
+setwd("experiment3")
+
+source(file.path("..", "src", "model_diagnostics.r"))
+
+exp2_models_path <- file.path("..", "experiment2", "analysis", "brms_models")
+exp3_models_path <- file.path("analysis", "brms_models")
+```
+
+## joint model
+### Read models
+```{r}
+# read joint model
+joint_prefix <- "derco_both_"
+
+joint_model_name <- list.files(exp3_models_path,
+    full.names = FALSE,
+    pattern = paste0(joint_prefix, ".*\\.rds$")
+)[1]
+
+print(joint_model_name)
+joint_fit <- readRDS(file.path(exp3_models_path, joint_model_name))
+
+# read individual SE and WE models
+individual_model_names <- str_remove(joint_model_name, joint_prefix)
+individual_model_names <- str_remove(individual_model_names, ".rds")
+
+se_model_name <- str_extract(individual_model_names, "^SE_.+?(?=_WE_)")
+we_model_name <- str_extract(individual_model_names, "WE_.+$")
+
+individual_prefix <- "derco_lp_"
+
+print(se_model_name)
+se_fit <- readRDS(
+    file.path(
+        exp2_models_path,
+        paste0(individual_prefix, se_model_name, ".rds")
+    )
+)
+
+print(we_model_name)
+we_fit <- readRDS(
+    file.path(
+        exp2_models_path,
+        paste0(individual_prefix, we_model_name, ".rds")
+    )
+)
+```
+
+### Summarize diagnostics across models
+```{r}
+fit <- joint_fit
+
+if (number_divergent_transitions(fit) > 0) {
+    print(paste(
+        "Divergent transistions! Number:",
+        number_divergent_transitions(fit)
+    ))
+}
+diagnostics_rhat_ess(fit)
+```
+
+### model comparison
+```{r}
+loo_joint <- loo(joint_fit)
+loo_se <- loo(se_fit)
+loo_we <- loo(we_fit)
+```
+
+```{r}
+# psis diagnostics
+loo_joint
+plot(loo_joint)
+
+loo_se
+plot(loo_se)
+
+loo_we
+plot(loo_we)
+```
+
+```{r}
+comparison <- loo_compare(loo_joint, loo_se, loo_we)
+print(comparison, digits = 2)
+```
+
