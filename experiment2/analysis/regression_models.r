@@ -68,7 +68,12 @@ if ("tanner" %in% dataset) {
         left_join(tanner_sem) |>
         filter(Acceptability == "Gram") |>
         filter(pos %in% content_pos) |>
-        mutate(word = clean_word(word))
+        mutate(word = clean_word(word)) |>
+        # only use complete cases across implementations of sem
+        group_by(id, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(subject, id, word_n)
 
     # model formula
     sem_formula <- bf(
@@ -145,7 +150,12 @@ if ("ucl" %in% dataset) {
         left_join(ucl_sem) |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
-        rename("n400" = "N400")
+        rename("n400" = "N400") |>
+        # only use complete cases across implementations of sem
+        group_by(id, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(subject, id, word_n)
 
     # model formula
     sem_formula <- bf(
@@ -212,7 +222,12 @@ if ("derco" %in% dataset) {
     ) |>
         left_join(derco_sem) |>
         filter(pos %in% content_pos) |>
-        mutate(word = clean_word(target))
+        mutate(word = clean_word(target)) |>
+        # only use complete cases across implementations of sem
+        group_by(article_n, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(subject, article_n, word_n)
 
     # model formula
     sem_formula <- bf(
