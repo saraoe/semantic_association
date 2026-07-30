@@ -82,7 +82,7 @@ m <- brm(model_formula,
     data = data,
     chains = 4,
     control = list(adapt_delta = 0.9999),
-    seed = 246,
+    seed = 123,
     file = file.path(
         out_folder,
         paste0("derco_both_", model_ids[1], "_", model_ids[2], ".rds")
