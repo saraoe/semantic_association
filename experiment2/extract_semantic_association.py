@@ -132,26 +132,26 @@ if __name__ == "__main__":
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/e5-large-v2",
         },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "whaleloops/phrase-bert",
-        },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "whaleloops/phrase-bert",
+        # },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "BAAI/bge-m3",
         },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
-        },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
+        # },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
