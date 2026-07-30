@@ -94,15 +94,15 @@ def extract_semantic_association(
 
 if __name__ == "__main__":
     corpora = [
-        # {
-        #     "name": "tanner",
-        #     "df": pd.read_csv(
-        #         Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
-        #     ),
-        #     "out_path": Path(
-        #         "experiment2", "results", "tanner_semantic_association.csv"
-        #     ),
-        # },
+        {
+            "name": "tanner",
+            "df": pd.read_csv(
+                Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+            ),
+            "out_path": Path(
+                "experiment2", "results", "tanner_semantic_association.csv"
+            ),
+        },
         {
             "name": "ucl",
             "df": pd.read_csv(
@@ -110,15 +110,15 @@ if __name__ == "__main__":
             ),
             "out_path": Path("experiment2", "results", "ucl_semantic_association.csv"),
         },
-        # {
-        #     "name": "derco",
-        #     "df": pd.read_csv(
-        #         Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
-        #     ),
-        #     "out_path": Path(
-        #         "experiment2", "results", "derco_semantic_association.csv"
-        #     ),
-        # },
+        {
+            "name": "derco",
+            "df": pd.read_csv(
+                Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
+            ),
+            "out_path": Path(
+                "experiment2", "results", "derco_semantic_association.csv"
+            ),
+        },
     ]
 
     config = [
@@ -180,15 +180,26 @@ if __name__ == "__main__":
             "spacy_model_name": "en_core_web_sm",
         },
     ]
-    # add Sentence(N=1)
-    config = config + [
-        {
-            **entry,
-            "implementation": entry["implementation"] + "_sentences1",
-            "n_sentences": 1,
-        }
-        for entry in config
-    ]
+    # add Sentence(N=10) and Sentence(N=1)
+    config = (
+        config
+        + [
+            {
+                **entry,
+                "implementation": entry["implementation"],
+                "n_sentences": 10,
+            }
+            for entry in config
+        ]
+        + [
+            {
+                **entry,
+                "implementation": entry["implementation"] + "_sentences1",
+                "n_sentences": 1,
+            }
+            for entry in config
+        ]
+    )
 
     print("Extracting semantic association")
     for name, model in stream_models(config):
@@ -196,6 +207,9 @@ if __name__ == "__main__":
         for corpus in corpora:
             # only do Sentence(N=1) for DERCo
             if model.n_sentences and corpus["name"] != "derco":
+                continue
+            # don't do full context for DERCo
+            if corpus["name"] == "derco" and not model.n_sentences:
                 continue
             extract_semantic_association(
                 df=corpus["df"],
