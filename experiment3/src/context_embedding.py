@@ -97,11 +97,13 @@ def extract_words_similar_to_context_embeddings(
     corpus_df: pd.DataFrame,
     out_path: Path,
     word_list: list[str] | None = None,
+    add_words: list[str] = [],
 ):
     """
     Inspects context embeddings of a corpus by finding words that have highest and lowest similarity.
     Writes results to ndjson-file (out_path).
     A specific list of words can be given (word_list). If not, the content words in the corpus_df (word_clean) will be used.
+    With the argument add_words, you can add specific words to the word list.
     """
     assert all(
         [col in corpus_df.columns for col in ["context", "id", "target", "word_n"]]
@@ -111,12 +113,15 @@ def extract_words_similar_to_context_embeddings(
     if not word_list:
         corpus_df_cw = corpus_df[corpus_df["pos"].isin(["NOUN", "VERB", "ADJ", "ADV"])]
         word_list = corpus_df_cw["word_clean"].drop_duplicates().tolist()
+    word_list += add_words
     assert all([isinstance(word, str) for word in word_list])
     word_embeddings = [
         (word, np.asarray(model.get_embedding(word))) for word in word_list
     ]
     # removing elements that does not have an embedding (important for WE models)
-    word_embeddings = [embedding for embedding in word_embeddings if not np.isnan(embedding[1]).any()]
+    word_embeddings = [
+        embedding for embedding in word_embeddings if not np.isnan(embedding[1]).any()
+    ]
 
     print(">> Calculating similarities")
     results = []
@@ -155,7 +160,16 @@ def extract_words_similar_to_context_embeddings(
 
 if __name__ == "__main__":
     # whether to overwrite the output file (if false, it appends to the file)
-    overwrite = True
+    overwrite = False
+
+    extra_words = [
+        "shepherd",
+        "wool",
+        "waffle",
+        "bakery",
+        "butcher",
+        "steak",
+    ]
 
     # read df
     derco_df = pd.read_csv(Path("experiment2", "data", "DERCo", "stim.csv"))
@@ -234,5 +248,6 @@ if __name__ == "__main__":
             implementation_name=name,
             corpus_df=derco_df,
             out_path=out_path,
+            add_words=extra_words,
         )
         del model  # unload model

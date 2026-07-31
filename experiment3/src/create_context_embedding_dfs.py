@@ -89,10 +89,10 @@ def create_word_similarity_df(words_path: Path, out_path: Path):
         1: [],
         2: [],
         3: [],
-        4: [  # Nouns
+        4: [  # words related to story
             "wolf",
             "fox",
-            "lamb",
+            "lambs",
             "sheep",
             "farmer",
             "pancakes",
@@ -105,40 +105,21 @@ def create_word_similarity_df(words_path: Path, out_path: Path):
             "greed",
             "food",
             "danger",
-            # Verbs
+            "eat",
+            "hungry",
+            "kill",
+            "greedy",
             "threaten",
             "fetch",
             "steal",
-            "devour",
-            "eat",
-            "escape",
-            "beat",
-            "discover",
-            "deceive",
-            "swallow",
             "attack",
-            "kill",
-            "rejoice",
-            # Adjectives
-            "greedy",
-            "cunning",
-            "weak",
-            "young",
-            "awkward",
-            "hungry",
-            "salted",
-            "foolish",
-            "clever",
-            "safe",
-            # Adverbs
-            "greedily",
-            "quietly",
-            "quickly",
-            "horribly",
-            "sharply",
-            "occasionally",
-            "severely",
-            "wisely",
+            # word related to the three food topics (lamb, pancakes, meat)
+            "shepherd",
+            "wool",
+            "waffle",
+            "bakery",
+            "butcher",
+            "steak",
         ],
     }
     cols = [
@@ -185,7 +166,7 @@ if __name__ == "__main__":
         "experiment3", "results", "word_similarity_context_embeddings.ndjson"
     )
     out_path = Path("experiment3", "results", "word_similarity_context_embeddings.csv")
-    print_similar_words(words_path, n=5)
+    # print_similar_words(words_path, n=5)
     create_top_n_df(
         words_path=words_path,
         n=5,

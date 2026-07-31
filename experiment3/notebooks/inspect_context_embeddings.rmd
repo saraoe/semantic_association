@@ -226,9 +226,15 @@ line plot all models specific words one article (w. annotations)
 ```{r}
 words <- c(
     "pancakes",
-    "lamb",
+    "lambs",
     "sheep",
-    "meat"
+    "meat",
+    "shepherd",
+    "wool",
+    "waffle",
+    "bakery",
+    "butcher",
+    "steak"
 )
 
 # annotations
@@ -255,9 +261,9 @@ df |>
             group = word
         )
     ) +
-    # geom_line() +
-    geom_point(alpha = .1) +
-    geom_smooth() +
+    geom_line() +
+    # geom_point(alpha = .1) +
+    # geom_smooth() +
     geom_vline(
         data = annotations_df,
         aes(xintercept = word_n),
@@ -274,7 +280,7 @@ df |>
         hjust = 1,
         inherit.aes = FALSE
     ) +
-    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 3) +
     # scale_color_manual(values = ltc("hat")) +
     theme_bw() +
     theme(legend.position = "bottom")
