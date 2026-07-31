@@ -92,3 +92,48 @@ comparison <- loo_compare(loo_joint, loo_se, loo_we)
 print(comparison, digits = 2)
 ```
 
+## word position models
+### read models
+```{r}
+# read models
+dataset <- "ucl"
+
+model1_name <- "SE_Qwen_Qwen3-Embedding-8B"
+model2_name <- "WE_enwiki_20180420_300d"
+
+print(model1_name)
+model1_fit <- readRDS(
+    file.path(
+        exp3_models_path,
+        paste0(dataset, "_wordn_", model1_name, ".rds")
+    )
+)
+
+print(model2_name)
+model2_fit <- readRDS(
+    file.path(
+        exp3_models_path,
+        paste0(dataset, "_wordn_", model2_name, ".rds")
+    )
+)
+```
+
+### model comparison
+```{r}
+loo1 <- loo(model1_fit)
+loo2 <- loo(model2_fit)
+```
+
+```{r}
+# psis diagnostics
+loo1
+plot(loo1)
+
+loo2
+plot(loo2)
+```
+
+```{r}
+comparison <- loo_compare(loo1, loo2)
+print(comparison, digits = 2)
+```
