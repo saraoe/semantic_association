@@ -48,7 +48,7 @@ for (dataset in c("tanner", "ucl", "derco")) {
     print(dataset)
     model_names <- list.files(models_path,
         full.names = FALSE,
-        pattern = paste0(dataset, "_.*\\.rds$")
+        pattern = paste0(dataset, "_lp_.*\\.rds$")
     )
     for (model in model_names) {
         print(model)
@@ -141,8 +141,10 @@ get_fixef_models <- function(
                     "implementation" = implementation,
                     "dataset" = dataset,
                     "model" = get_modelname(implementation),
-                    "context" = ifelse(
-                        str_detect(implementation, "sentences1"), "Sentence(N=1)", "All"
+                    "context" = case_when(
+                        str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
+                        dataset == "derco" ~ "Sentence(N=10)",
+                        .default = "All"
                     )
                 )
 
@@ -167,7 +169,7 @@ fixef_df <- get_fixef_models(c("tanner", "ucl", "derco"), include_lp = TRUE)
 ```{r}
 fixef_df |>
     filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context == "All") |>
+    filter(context != "Sentence(N=1)") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -179,7 +181,8 @@ fixef_df |>
             dataset == "tanner" ~ "Tanner (2019)",
             dataset == "ucl" ~ "UCL",
             dataset == "derco" ~ "DERCo"
-        )
+        ),
+        implementation = paste(model_type, model, sep = ":")
     ) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
     mutate(
@@ -211,7 +214,7 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 7, width =
 for (d in c("tanner", "ucl", "derco")) {
     fixef_df |>
         filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-        filter(context == "All") |>
+        filter(context != "Sentence(N=1)") |>
         filter(dataset == d) |>
         filter(coefficient == "s_sem") |>
         mutate(model_type = case_when(
@@ -298,7 +301,7 @@ ggsave(
 ```{r}
 fixef_df |>
     filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context == "All") |>
+    filter(context != "Sentence(N=1)") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
