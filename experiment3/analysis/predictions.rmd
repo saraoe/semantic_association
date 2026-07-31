@@ -47,7 +47,12 @@ derco_df <- read.csv(
 ) |>
     tidytable::left_join(derco_sem) |>
     tidytable::filter(pos %in% content_pos) |>
-    tidytable::mutate(word = clean_word(target))
+    tidytable::mutate(word = clean_word(target)) |>
+    # only use complete cases across implementations of sem
+    tidytable::group_by(article_n, word_n) |>
+    tidytable::filter(all(!is.na(semantic_association))) |>
+    tidytable::ungroup() |>
+    arrange(subject, article_n, word_n)
 ```
 
 ## load model
@@ -58,7 +63,7 @@ model_names <- list.files(models_path,
     full.names = FALSE,
     pattern = paste0(dataset, "_lp*_.*\\.rds$")
 )
-model_name <- model_names[10]
+model_name <- model_names[6]
 
 print(model_name)
 fit <- readRDS(file.path(models_path, model_name))
@@ -97,11 +102,16 @@ tmp_data <- data |>
     rename("var" = var_name)
 
 tmp_data |>
-    ggplot(aes(var, resid)) +
-    geom_point(alpha = .05) +
-    geom_smooth() +
+    ggplot(aes(x = var)) +
+    geom_point(aes(y = n400)) +
+    geom_point(aes(y = pred), color = "steelblue") +
     theme_minimal() +
-    labs(x = var_name)
+    labs(
+        x = var_name,
+        title = model_name,
+        caption = "Blue is predictions, black is observed N400"
+    ) +
+    theme(aspect.ratio = 0.7)
 
 tmp_data |>
     mutate(bin = ntile(var, 10)) |>
