@@ -1,7 +1,5 @@
 # Correlation in the estimated values of semantic association accross embedding models
 
-# Correlations between predictors (lp and sem)
-
 ```{r}
 library(tidytable)
 library(dplyr)
@@ -36,7 +34,7 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(article_n, full_implementation) |>
     mutate(
-        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "All")
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "Sentence(N=10)")
     ) |>
     ungroup() |>
     group_by(full_implementation) |>
@@ -390,7 +388,7 @@ ggsave(file.path("figs", "ucl_correlations_pos.png"), width = 15, height = 15)
 all words
 ```{r}
 cor_matrix <- derco_df |>
-    filter(context_length == "All") |>
+    filter(context_length == "Sentence(N=10)") |>
     select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
         names_from = full_implementation,
@@ -439,7 +437,7 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
 only content words
 ```{r}
 cor_matrix <- derco_df |>
-    filter(context_length == "All") |>
+    filter(context_length == "Sentence(N=10)") |>
     filter(pos %in% content_pos) |>
     select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
     pivot_wider(
@@ -493,7 +491,7 @@ by POS tag (only content words)
 ```{r}
 for (n in 1:4) {
     cor_matrix <- derco_df |>
-        filter(context_length == "All") |>
+        filter(context_length == "Sentence(N=10)") |>
         filter(pos == content_pos[n]) |>
         select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
         pivot_wider(
