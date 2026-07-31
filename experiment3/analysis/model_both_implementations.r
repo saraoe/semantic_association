@@ -55,7 +55,11 @@ derco_df <- read.csv(
 ) |>
     left_join(derco_sem) |>
     filter(pos %in% content_pos) |>
-    mutate(word = clean_word(target))
+    mutate(word = clean_word(target)) |>
+    # only use complete cases across implementations of sem
+    group_by(article_n, word_n) |>
+    filter(all(!is.na(semantic_association))) |>
+    ungroup() 
 
 data <- derco_df |>
     filter(implementation_id %in% model_ids) |>
@@ -82,7 +86,7 @@ m <- brm(model_formula,
     data = data,
     chains = 4,
     control = list(adapt_delta = 0.9999),
-    seed = 123,
+    seed = 246,
     file = file.path(
         out_folder,
         paste0("derco_both_", model_ids[1], "_", model_ids[2], ".rds")
