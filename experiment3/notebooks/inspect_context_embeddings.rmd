@@ -1,0 +1,281 @@
+# Inspect context embeddings by looking at similar words
+# NB: You must run src/context_embedding.py and src/create_context_plotting_df.py first!
+
+```{r}
+library(tidytable)
+library(ggplot2)
+library(ltc)
+
+setwd("experiment3")
+```
+
+## plot top five
+Read data
+```{r}
+df <- read.csv(file.path("results", "top_n_context_embedding_similarities.csv")) |>
+    group_by(model, implementation, id, word_n) |>
+    mutate(
+        "similarity_rank" = factor(min_rank(desc(cosine_similarity)))
+    )
+```
+
+```{r}
+models <- df |>
+    pull(model) |>
+    unique()
+```
+
+bar plot
+```{r}
+dodge <- position_dodge(width = 0.8)
+
+df |>
+    filter(model == "enwiki_20180420_300d") |>
+    filter(implementation == "WE") |>
+    filter(similarity_level == "high") |>
+    filter(word_n %% 100 == 0) |>
+    ggplot(aes(x = as.factor(word_n), y = cosine_similarity, fill = similarity_rank)) +
+    geom_col(position = dodge) +
+    facet_wrap(. ~ id, scales = "free_x", ncol = 1) +
+    geom_text(
+        aes(label = word),
+        position = dodge,
+        # vjust = -0.3,
+        angle = 45
+    ) +
+    scale_fill_manual(values = ltc("olga")) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+line plot for one model colored by rank
+```{r}
+df |>
+    filter(model == "BAAI/bge-m3") |>
+    # filter(model == "enwiki_20180420_300d") |>
+    # filter(implementation == "WE") |>
+    filter(similarity_level == "high") |>
+    filter(word_n %% 50 == 0) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = word,
+            color = similarity_rank,
+            group = similarity_rank
+        )
+    ) +
+    geom_point(size = 4) +
+    geom_line() +
+    facet_wrap(. ~ id, scales = "free", ncol = 1) +
+    scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+line plot for one model colored by word
+```{r}
+library(ggrepel)
+
+df |>
+    # filter(model == "Qwen/Qwen3-Embedding-8B") |>
+    filter(model == "enwiki_20180420_300d") |>
+    filter(implementation == "WE") |>
+    filter(similarity_level == "high") |>
+    filter(word_n %% 10 == 0) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = similarity_rank,
+            color = word,
+            group = word
+        )
+    ) +
+    geom_point(size = 4) +
+    geom_line() +
+    geom_text_repel(
+        data = \(x) x |>
+            group_by(id, word) |>
+            slice_max(word_n, n = 1),
+        aes(label = word),
+        direction = "y",
+        hjust = 0,
+        show.legend = FALSE
+    ) +
+    facet_wrap(~id, scales = "free", ncol = 1) +
+    theme_bw() +
+    theme(legend.position = "none")
+```
+
+line plot all models for one similarity rank
+```{r}
+df |>
+    filter(similarity_rank == 1) |>
+    filter(similarity_level == "high") |>
+    filter(implementation != "CWE") |>
+    filter(word_n %% 100 == 0) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = word,
+            color = model,
+            group = model
+        )
+    ) +
+    geom_point(size = 4) +
+    geom_line(size = 1, alpha = .2) +
+    facet_wrap(. ~ id, scales = "free", ncol = 1) +
+    scale_color_manual(values = ltc("hat")) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+line plot all models but one article id colored by rank
+```{r}
+df |>
+    filter(similarity_level == "high") |>
+    filter(id == 4) |>
+    filter(word_n %% 100 == 0) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = word,
+            color = similarity_rank,
+            group = similarity_rank
+        )
+    ) +
+    geom_point(size = 4) +
+    geom_line() +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+line plot all models but one article id colored by rank (specified where in the text)
+```{r}
+df |>
+    filter(similarity_level == "high") |>
+    filter(id == 4) |>
+    filter(word_n > 20) |>
+    filter(word_n < 31) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = word,
+            color = similarity_rank,
+            group = similarity_rank
+        )
+    ) +
+    geom_point(size = 4) +
+    geom_line() +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+## plot specific words
+read data
+```{r}
+df <- read.csv(file.path("results", "words_context_embedding_similarities.csv"))
+```
+
+```{r}
+models <- df |>
+    pull(model) |>
+    unique()
+```
+
+line plot all models specific words one article
+```{r}
+words <- c(
+    "wolf",
+    "fox",
+    "farmer",
+    "threaten",
+    "fetch",
+    "steal",
+    "devour",
+    "greedy",
+    "attack",
+    "kill",
+    "hungry"
+)
+
+df |>
+    filter(id == 4) |>
+    filter(word %in% words) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = cosine_similarity,
+            color = word,
+            group = word
+        )
+    ) +
+    geom_line() +
+    # geom_point(alpha = .1) +
+    # geom_smooth() +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    scale_color_manual(values = ltc("hat")) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
+
+line plot all models specific words one article (w. annotations)
+```{r}
+words <- c(
+    "pancakes",
+    "lamb",
+    "sheep",
+    "meat"
+)
+
+# annotations
+annotations <- list(
+    "Eating lamb" = 54,
+    "Eating pancakes" = 234,
+    "Eating meat" = 477
+)
+
+annotations_df <- data.frame(
+    label = names(annotations),
+    word_n = unlist(annotations),
+    row.names = NULL
+)
+
+df |>
+    filter(id == 4) |>
+    filter(word %in% words) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = cosine_similarity,
+            color = word,
+            group = word
+        )
+    ) +
+    # geom_line() +
+    geom_point(alpha = .1) +
+    geom_smooth() +
+    geom_vline(
+        data = annotations_df,
+        aes(xintercept = word_n),
+        linetype = "dashed",
+        linewidth = 0.5,
+        color = "black",
+        inherit.aes = FALSE
+    ) +
+    geom_text(
+        data = annotations_df,
+        aes(x = word_n, y = Inf, label = label),
+        angle = 90,
+        vjust = 1.2,
+        hjust = 1,
+        inherit.aes = FALSE
+    ) +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    # scale_color_manual(values = ltc("hat")) +
+    theme_bw() +
+    theme(legend.position = "bottom")
+```
