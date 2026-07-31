@@ -37,19 +37,21 @@ def stream_models(config):
         yield (implementation, model)
 
 
-def high_low_similarity_words(
+def get_word_similarity(
     model: EmbeddingModel,
     context_embedding: np.ndarray,
     word_embeddings: list[tuple],
-    n: int,
+    n: int | None = None,
 ):
     """
-    Get N highest and N lowest similarity words
+    Get similarity between word embeddings and context embedding.
+    If n, get n highest and n lowest similarity words
     """
-    if n < 1:
-        raise ValueError("n must be positive")
-    if n > len(word_embeddings):
-        raise ValueError("N larger than number of words!")
+    if isinstance(n, int):
+        if n < 1:
+            raise ValueError("n must be positive")
+        if n > len(word_embeddings):
+            raise ValueError("N larger than number of words!")
 
     similarities = [
         (
@@ -61,10 +63,13 @@ def high_low_similarity_words(
         for word, word_embedding in word_embeddings
     ]
 
-    return {
-        "high": nlargest(n, similarities, lambda x: x[1]),
-        "low": nsmallest(n, similarities, lambda x: x[1]),
-    }
+    if n:
+        return {
+            "high": nlargest(n, similarities, lambda x: x[1]),
+            "low": nsmallest(n, similarities, lambda x: x[1]),
+        }
+    else:
+        return {"all": similarities}
 
 
 def load_subtlex_vocab(path: Path):
@@ -124,11 +129,11 @@ def extract_words_similar_to_context_embeddings(
             continue
 
         # calculate similarities
-        similarity_words = high_low_similarity_words(
+        similarity_words = get_word_similarity(
             model=model,
             context_embedding=context_embedding,
             word_embeddings=word_embeddings,
-            n=100,
+            # n=100,
         )
 
         # add extra columns
@@ -150,7 +155,7 @@ def extract_words_similar_to_context_embeddings(
 
 if __name__ == "__main__":
     # whether to overwrite the output file (if false, it appends to the file)
-    overwrite = False
+    overwrite = True
 
     # read df
     derco_df = pd.read_csv(Path("experiment2", "data", "DERCo", "stim.csv"))
@@ -162,16 +167,13 @@ if __name__ == "__main__":
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
+            "n_sentences": 10,
         },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/e5-large-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "whaleloops/phrase-bert",
+            "n_sentences": 10,
         },
         {
             "implementation": "SE",
@@ -181,39 +183,34 @@ if __name__ == "__main__":
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
-            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "bigscience/sgpt-bloom-7b1-msmarco",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
             "model_name": "Qwen/Qwen3-Embedding-8B",
+            "n_sentences": 10,
         },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
+            "n_sentences": 10,
         },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "word2vec-google-news-300",
+            "n_sentences": 10,
         },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
             "model_name": "enwiki_20180420_300d",
             "spacy_model_name": "en_core_web_sm",
+            "n_sentences": 10,
         },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
             "model_name": "word2vec-google-news-300",
             "spacy_model_name": "en_core_web_sm",
+            "n_sentences": 10,
         },
     ]
 
