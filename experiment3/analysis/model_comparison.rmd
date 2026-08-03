@@ -91,6 +91,10 @@ plot(loo_we)
 comparison <- loo_compare(loo_joint, loo_se, loo_we)
 print(comparison, digits = 2)
 ```
+          elpd_diff se_diff
+joint_fit  0.00      0.00  
+se_fit    -4.65      4.69  
+we_fit    -5.24      4.27 
 
 ## word position models
 ### read models
