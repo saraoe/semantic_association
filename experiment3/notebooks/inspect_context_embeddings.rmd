@@ -7,6 +7,15 @@ library(ggplot2)
 library(ltc)
 
 setwd("experiment3")
+
+models_order <- c(
+    "intfloat/e5-large-v2",
+    "intfloat/multilingual-e5-large",
+    "BAAI/bge-m3",
+    "Qwen/Qwen3-Embedding-8B",
+    "enwiki_20180420_300d",
+    "word2vec-google-news-300"
+)
 ```
 
 ## plot top five
@@ -16,7 +25,12 @@ df <- read.csv(file.path("results", "top_n_context_embedding_similarities.csv"))
     group_by(model, implementation, id, word_n) |>
     mutate(
         "similarity_rank" = factor(min_rank(desc(cosine_similarity)))
-    )
+    ) |>
+    ungroup() |>
+    group_by(implementation, model) |>
+    mutate(s_sim = scale(cosine_similarity)) |>
+    ungroup() |>
+    mutate(model = factor(model, levels = models_order))
 ```
 
 ```{r}
@@ -145,10 +159,12 @@ df |>
     ) +
     geom_point(size = 4) +
     geom_line() +
-    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 3) +
     scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
     theme_bw() +
-    theme(legend.position = "bottom")
+    theme(legend.position = "right")
+
+ggsave(file.path("figs", "context_embedding_top5_words_article4.png"), height = 9, width = 12)
 ```
 
 line plot all models but one article id colored by rank (specified where in the text)
@@ -177,7 +193,11 @@ df |>
 ## plot specific words
 read data
 ```{r}
-df <- read.csv(file.path("results", "words_context_embedding_similarities.csv"))
+df <- read.csv(file.path("results", "words_context_embedding_similarities.csv")) |>
+    group_by(implementation, model) |>
+    mutate(s_sim = scale(cosine_similarity)) |>
+    ungroup() |>
+    mutate(model = factor(model, levels = models_order))
 ```
 
 ```{r}
@@ -225,14 +245,14 @@ df |>
 line plot all models specific words one article (w. annotations)
 ```{r}
 words <- c(
-    "pancakes",
     "lambs",
     "sheep",
-    "meat",
-    "shepherd",
     "wool",
+    "shepherd",
+    "pancakes",
     "waffle",
     "bakery",
+    "meat",
     "butcher",
     "steak"
 )
@@ -253,10 +273,12 @@ annotations_df <- data.frame(
 df |>
     filter(id == 4) |>
     filter(word %in% words) |>
+    # filter(word_n > 20) |>
+    mutate(word = factor(word, levels = words)) |>
     ggplot(
         aes(
             x = word_n,
-            y = cosine_similarity,
+            y = s_sim,
             color = word,
             group = word
         )
@@ -281,7 +303,14 @@ df |>
         inherit.aes = FALSE
     ) +
     facet_wrap(model ~ implementation, scales = "free", ncol = 3) +
-    # scale_color_manual(values = ltc("hat")) +
+    scale_color_manual(values = c(
+        "steelblue1", "steelblue2", "steelblue3", "steelblue4",
+        "orchid1", "orchid3", "orchid4",
+        "firebrick1", "firebrick3", "firebrick4"
+    )) +
     theme_bw() +
-    theme(legend.position = "bottom")
+    labs(y = "scaled cosine similarity") +
+    theme(legend.position = "right")
+
+# ggsave(file.path("figs", "context_embedding_selected_words_article4.png"), height = 9, width = 12)
 ```
