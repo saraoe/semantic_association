@@ -6,6 +6,7 @@ library(dplyr)
 library(brms)
 library(stringr)
 library(ggplot2)
+library(ltc)
 
 setwd("experiment3")
 
@@ -63,7 +64,7 @@ model_names <- list.files(models_path,
     full.names = FALSE,
     pattern = paste0(dataset, "_lp*_.*\\.rds$")
 )
-model_name <- model_names[6]
+model_name <- model_names[13]
 
 print(model_name)
 fit <- readRDS(file.path(models_path, model_name))
@@ -90,19 +91,23 @@ data <- derco_df |>
 ```
 
 ```{r}
-preds <- fitted(fit)[, "Estimate"]
-data$pred <- preds
+# preds <- fitted(fit)
+preds <- predict(fit)
+data$pred <- preds[, "Estimate"]
+data$pred_Q2.5 <- preds[, "Q2.5"]
+data$pred_Q97.5 <- preds[, "Q97.5"]
 data$resid <- data$n400 - data$pred
 ```
 
 ```{r}
-var_name <- "word_n"
+var_name <- "s_sem"
 
 tmp_data <- data |>
     rename("var" = var_name)
 
 tmp_data |>
     ggplot(aes(x = var)) +
+    geom_errorbar(aes(ymin = pred_Q2.5, ymax = pred_Q97.5), color = "steelblue") +
     geom_point(aes(y = n400)) +
     geom_point(aes(y = pred), color = "steelblue") +
     theme_minimal() +
@@ -122,4 +127,17 @@ tmp_data |>
         mae = mean(abs(resid)),
         bias = mean(resid)
     )
+```
+
+```{r}
+data |>
+    ggplot(aes(x = s_lp, y = s_sem)) +
+    geom_point(aes(color = resid)) +
+    theme_minimal() +
+    scale_color_gradient2(low = "blue3", high = "red2", mid = "thistle1") +
+    labs(
+        title = model_name,
+        color = "Residuals"
+    ) +
+    theme(aspect.ratio = 0.7)
 ```
