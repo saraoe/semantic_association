@@ -1,0 +1,262 @@
+# Regression coefficients
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(latex2exp)
+library(brms)
+
+setwd("experiment3")
+
+source(file.path("..", "src", "model_diagnostics.r"))
+
+models_path <- file.path("analysis", "brms_models")
+```
+
+```{r}
+prefix <- "derco_both"
+
+model_names <- list.files(models_path,
+    full.names = FALSE,
+    pattern = paste0(prefix, "_.*\\.rds$")
+)
+model_name <- model_names[1]
+
+print(model_name)
+m <- readRDS(file.path(models_path, model_name))
+summary(m)
+```
+
+```{r}
+plot(m)
+plot(m, variable = "^b_", regex = TRUE)
+plot(m, variable = "^sd", regex = TRUE)
+```
+
+```{r}
+mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
+    labs(title = model_name) +
+    theme(aspect.ratio = .6)
+
+mcmc_plot(m, variable = "^b_", regex = TRUE) +
+    labs(title = model_name) +
+    theme(aspect.ratio = .6)
+```
+
+## Summarize diagnostics across models
+```{r}
+diagnostics_df <- data.frame()
+
+for (dataset in c("tanner", "ucl", "derco")) {
+    print(dataset)
+    model_names <- list.files(models_path,
+        full.names = FALSE,
+        pattern = paste0(dataset, "_.*\\.rds$")
+    )
+    for (model in model_names) {
+        print(model)
+        fit <- readRDS(
+            file.path(models_path, model)
+        )
+        if (number_divergent_transitions(fit) > 0) {
+            print(paste(
+                "Divergent transistions! Number:",
+                number_divergent_transitions(fit)
+            ))
+        }
+        diag <- diagnostics_rhat_ess(fit) |>
+            mutate("dataset" = dataset, "model" = model)
+
+        diagnostics_df <- rbind(diagnostics_df, diag)
+    }
+}
+```
+
+```{r}
+diagnostics_df |>
+    # group_by(dataset) |>
+    # filter(!str_detect(model, "bsemprior")) |>
+    summarize(
+        "max_rhat" = max(max_rhat),
+        "min_ess_bulk" = min(min_ess_bulk),
+        "min_ess_tail" = min(min_ess_tail),
+        "avg_ess" = mean(avg_ess)
+    )
+
+diagnostics_df |>
+    # filter(min(min_ess_bulk) == min_ess_bulk) |>
+    # filter(min(min_ess_tail) == min_ess_tail) |>
+    filter(max(max_rhat) == max_rhat) |>
+    select(model)
+
+diagnostics_df |>
+    filter(max_rhat >= 1.035) |>
+    select(model, max_rhat)
+```
+
+## Plot effect of all models
+```{r}
+get_modelname <- function(text) {
+    text <- str_remove(text, "CWE_")
+    text <- str_remove(text, "WE_")
+    text <- str_remove(text, "SE_")
+    text <- str_remove(text, "sentences1_")
+    return(text)
+}
+
+get_fixef_models <- function(
+  datasets,
+  model_type
+) {
+    for (dataset in datasets) {
+        prefix <- paste(dataset, model_type, sep = "_")
+        model_names <- list.files(models_path,
+            full.names = FALSE,
+            pattern = paste0(prefix, "_.*\\.rds$")
+        )
+
+        for (model_name in model_names) {
+            print(model_name)
+            m <- readRDS(file.path(models_path, model_name))
+            if (number_divergent_transitions(m) > 0) {
+                print("Divergent transitions - skips this model")
+                next
+            }
+
+            implementation <- str_remove(model_name, paste0(prefix, "_"))
+            implementation <- str_remove(implementation, ".rds")
+
+            fe_df <- fixef(m) |>
+                as.data.frame()
+            fe_df$coefficient <- rownames(fe_df)
+            fe_df <- fe_df |>
+                mutate(
+                    "implementation" = implementation,
+                    "dataset" = dataset,
+                    "model" = get_modelname(implementation),
+                    "context" = ifelse(
+                        str_detect(implementation, "sentences1"), "Sentence(N=1)", "All"
+                    )
+                )
+
+            if (exists("fixef_df_")) {
+                fixef_df_ <- rbind(fixef_df_, fe_df)
+            } else {
+                fixef_df_ <- fe_df
+            }
+        }
+    }
+    return(fixef_df_)
+}
+```
+
+## wordn
+
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("tanner", "ucl", "derco"), model_type = "wordn")
+```
+
+### coefficients
+```{r}
+coef <- "s_sem" # s_sem, s_lp, word_n
+
+fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(context == "All") |>
+    filter(coefficient == coef) |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        dataset = case_when(
+            dataset == "tanner" ~ "Tanner (2019)",
+            dataset == "ucl" ~ "UCL",
+            dataset == "derco" ~ "DERCo"
+        )
+    ) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta_2$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", paste0("wordn_regression_coefficients_", coef, ".png")), height = 7, width = 7)
+```
+
+## pos
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("tanner", "ucl", "derco"), model_type = "pos")
+```
+
+### coefficients
+```{r}
+coef <- "s_sem" # s_sem or s_lp
+
+pd <- position_dodge(width = 0.6)
+
+fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(context == "All") |>
+    filter(str_detect(coefficient, coef)) |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        dataset = case_when(
+            dataset == "tanner" ~ "Tanner (2019)",
+            dataset == "ucl" ~ "UCL",
+            dataset == "derco" ~ "DERCo"
+        )
+    ) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type, shape = coefficient)) +
+    geom_point(aes(x = Estimate), position = pd) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta_2$"), y = "",
+        shape = "Coefficients",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom", legend.box = "vertical")
+
+ggsave(file.path("figs", paste0("pos_regression_coefficients_", coef, ".png")), height = 13, width = 9)
+```
