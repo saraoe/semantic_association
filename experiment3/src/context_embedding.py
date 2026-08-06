@@ -236,8 +236,8 @@ if __name__ == "__main__":
         ] + [
             {
                 **entry,
-                "implementation": entry["implementation"] + "_sentences0",
-                "n_sentences": 0,
+                "implementation": entry["implementation"] + "_sentences1",
+                "n_sentences": 1,
             }
             for entry in config
         ] 
