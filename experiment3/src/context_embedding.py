@@ -181,13 +181,11 @@ if __name__ == "__main__":
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
-            "n_sentences": 10,
         },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/e5-large-v2",
-            "n_sentences": 10,
         },
         {
             "implementation": "SE",
@@ -198,41 +196,51 @@ if __name__ == "__main__":
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "Qwen/Qwen3-Embedding-8B",
-            "n_sentences": 10,
         },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
             "model_name": "Qwen/Qwen3-Embedding-0.6B",
-            "n_sentences": 10,
         },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
-            "n_sentences": 10,
         },
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "word2vec-google-news-300",
-            "n_sentences": 10,
         },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
             "model_name": "enwiki_20180420_300d",
             "spacy_model_name": "en_core_web_sm",
-            "n_sentences": 10,
         },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
             "model_name": "word2vec-google-news-300",
             "spacy_model_name": "en_core_web_sm",
-            "n_sentences": 10,
         },
     ]
+
+    config = [
+            {
+                **entry,
+                "implementation": entry["implementation"],
+                "n_sentences": 10,
+            }
+            for entry in config
+        ] + [
+            {
+                **entry,
+                "implementation": entry["implementation"] + "_sentences0",
+                "n_sentences": 0,
+            }
+            for entry in config
+        ] 
 
     # creating out path
     out_path = Path(
