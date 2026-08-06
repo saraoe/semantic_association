@@ -31,10 +31,10 @@ if __name__ == "__main__":
         {
             "name": "derco",
             "df": pd.read_csv(
-                Path("experiment2", "data", "DERCo", "stim.csv"), index_col=0
+                Path("experiment3", "data", "DERCo", "stim.csv"), index_col=0
             ),
             "out_path": Path(
-                "experiment2", "results", "derco_semantic_association.csv"
+                "experiment3", "results", "derco_semantic_association.csv"
             ),
         },
     ]
@@ -88,7 +88,7 @@ if __name__ == "__main__":
             "spacy_model_name": "en_core_web_sm",
         },
     ]
-    # add Sentence(N=10) and Sentence(N=1)
+    # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models
     config = [
         {
             **entry,
@@ -103,6 +103,17 @@ if __name__ == "__main__":
             "n_sentences": 1,
         }
         for entry in config
+    ] + [
+        {
+            "implementation": "SE_all",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-8B",
+        },
+        {
+            "implementation": "SE_all",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-0.6B",
+        }
     ]
 
     print("Extracting semantic association")
