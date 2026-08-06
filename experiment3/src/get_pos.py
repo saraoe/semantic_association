@@ -13,7 +13,7 @@ from experiment2.src.get_pos import add_pos_to_stim
 
 
 if __name__ == "__main__":
-    data_path = Path("experiment2", "data")
+    data_path = Path("experiment3", "data")
 
     datasets = [("DERCo", ["article_n"])]
 

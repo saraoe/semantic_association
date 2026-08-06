@@ -172,7 +172,7 @@ if __name__ == "__main__":
     ]
 
     # read df
-    derco_df = pd.read_csv(Path("experiment2", "data", "DERCo", "stim.csv"))
+    derco_df = pd.read_csv(Path("experiment3", "data", "DERCo", "stim.csv"))
     derco_df = derco_df.rename(columns={"article_n": "id"})
     derco_df = derco_df.dropna(subset=["context"])
 
