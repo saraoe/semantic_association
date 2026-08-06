@@ -3,6 +3,7 @@
 
 ```{r}
 library(tidytable)
+library(stringr)
 library(ggplot2)
 library(ltc)
 
@@ -31,7 +32,14 @@ df <- read.csv(file.path("results", "top_n_context_embedding_similarities.csv"))
     group_by(implementation, model) |>
     mutate(s_sim = scale(cosine_similarity)) |>
     ungroup() |>
-    mutate(model = factor(model, levels = models_order))
+    mutate(
+        model = factor(model, levels = models_order),
+        context = case_when(
+            str_detect(implementation, "sentences0") ~ "Sentence(N=0)",
+            str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
+            .default = "Sentence(N=10)"
+        )
+    )
 ```
 
 ```{r}
@@ -147,6 +155,7 @@ df |>
 line plot all models but one article id colored by rank
 ```{r}
 df |>
+    filter(context == "Sentence(N=0)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
     filter(word_n %% 100 == 0) |>
@@ -160,12 +169,12 @@ df |>
     ) +
     geom_point(size = 4) +
     geom_line() +
-    facet_wrap(model ~ implementation, scales = "free", ncol = 3) +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
     scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
     theme_bw() +
-    theme(legend.position = "right")
+    theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "context_embedding_top5_words_article4.png"), height = 9, width = 12)
+# ggsave(file.path("figs", "context_embedding_top5_words_article4.png"), height = 9, width = 12)
 ```
 
 line plot all models but one article id colored by rank (specified where in the text)
@@ -198,7 +207,14 @@ df <- read.csv(file.path("results", "words_context_embedding_similarities.csv"))
     group_by(implementation, model) |>
     mutate(s_sim = scale(cosine_similarity)) |>
     ungroup() |>
-    mutate(model = factor(model, levels = models_order))
+    mutate(
+        model = factor(model, levels = models_order),
+        context = case_when(
+            str_detect(implementation, "sentences0") ~ "Sentence(N=0)",
+            str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
+            .default = "Sentence(N=10)"
+        )
+    )
 ```
 
 ```{r}
@@ -224,6 +240,7 @@ words <- c(
 )
 
 df |>
+    filter(context == "Sentence(N=10)") |>
     filter(id == 4) |>
     filter(word %in% words) |>
     ggplot(
@@ -272,6 +289,7 @@ annotations_df <- data.frame(
 )
 
 df |>
+    filter(context == "Sentence(N=10)") |>
     filter(id == 4) |>
     filter(word %in% words) |>
     # filter(word_n > 20) |>
