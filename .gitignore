@@ -16,12 +16,12 @@ experiment1/data/Hoeks/*
 experiment1/results/hoeks_semantic_association.csv
 
 experiment2/data/Tanner/*
-experiment2/data/DERCo/*
 experiment2/data/UCL/*
 experiment2/results/*
 experiment2/figs/preprocessing/*
 experiment2/analysis/brms_models/*
 
+experiment3/data/DERCo/*
 experiment3/analysis/brms_models/*
 experiment3/results/*
 

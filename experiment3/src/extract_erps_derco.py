@@ -81,5 +81,5 @@ def extract_erps(data_folder: Path):
 
 
 if __name__ == "__main__":
-    data_folder = Path("experiment2", "data", "DERCo")
+    data_folder = Path("experiment3", "data", "DERCo")
     extract_erps(data_folder)

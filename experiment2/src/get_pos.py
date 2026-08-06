@@ -61,7 +61,7 @@ def add_pos_to_stim(stim_path, id_cols, spacy_model="en_core_web_sm"):
 if __name__ == "__main__":
     data_path = Path("experiment2", "data")
 
-    datasets = [("Tanner", ["id"]), ("DERCo", ["article_n"]), ("UCL", ["id"])]
+    datasets = [("Tanner", ["id"]), ("UCL", ["id"])]
 
     for dataset_folder, ids in datasets:
         add_pos_to_stim(stim_path=data_path / dataset_folder / "stim.csv", id_cols=ids)

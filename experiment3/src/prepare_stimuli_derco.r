@@ -8,7 +8,7 @@ library(readr)
 library(purrr)
 library(pangoling)
 
-setwd("experiment2")
+setwd("experiment3")
 
 data_folder <- file.path("data", "DERCo")
 mean_amplitude <- read.csv(file.path(data_folder, "mean_amplitude.csv"))
@@ -94,7 +94,7 @@ causal_preload("EleutherAI/pythia-70m-deduped")
 
 
 stim <- stim |>
-    mutate("lp_pythia" =  causal_words_pred(target,
+    mutate("lp_pythia" = causal_words_pred(target,
         by = article_n,
         model = "EleutherAI/pythia-70m-deduped",
         config_tokenizer = "EleutherAI/pythia-70m-deduped",
