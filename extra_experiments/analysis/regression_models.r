@@ -5,7 +5,7 @@ library(brms)
 library(stringr)
 library(argparse)
 
-setwd("experiment3")
+setwd("extra_experiments")
 
 options(mc.cores = parallel::detectCores())
 options(brms.backend = "cmdstan")

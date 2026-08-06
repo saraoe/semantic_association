@@ -5,7 +5,7 @@ library(tidytable)
 library(brms)
 library(stringr)
 
-setwd("experiment3")
+setwd("extra_experiments")
 
 options(mc.cores = parallel::detectCores())
 options(brms.backend = "cmdstan")
@@ -59,7 +59,7 @@ derco_df <- read.csv(
     # only use complete cases across implementations of sem
     group_by(article_n, word_n) |>
     filter(all(!is.na(semantic_association))) |>
-    ungroup() 
+    ungroup()
 
 data <- derco_df |>
     filter(implementation_id %in% model_ids) |>

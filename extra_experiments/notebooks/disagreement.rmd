@@ -7,7 +7,7 @@ library(stringr)
 library(ggplot2)
 library(lmerTest)
 
-setwd("experiment3")
+setwd("extra_experiments")
 ```
 
 ## Read data

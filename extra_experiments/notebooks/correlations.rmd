@@ -8,7 +8,7 @@ library(ggplot2)
 library(reshape2)
 library(patchwork)
 
-setwd("experiment3")
+setwd("extra_experiments")
 ```
 
 ## Read data

@@ -8,7 +8,7 @@ library(stringr)
 library(ggplot2)
 library(ltc)
 
-setwd("experiment3")
+setwd("extra_experiments")
 
 models_path <- file.path("..", "experiment2", "analysis", "brms_models")
 

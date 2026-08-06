@@ -5,7 +5,7 @@ library(tidytable)
 library(stringr)
 library(ggplot2)
 
-setwd("experiment3")
+setwd("extra_experiments")
 ```
 
 ## Read data

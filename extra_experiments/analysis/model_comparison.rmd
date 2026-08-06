@@ -7,12 +7,12 @@ library(brms)
 library(loo)
 library(ggplot2)
 
-setwd("experiment3")
+setwd("extra_experiments")
 
 source(file.path("..", "src", "model_diagnostics.r"))
 
 exp2_models_path <- file.path("..", "experiment2", "analysis", "brms_models")
-exp3_models_path <- file.path("analysis", "brms_models")
+extra_experiments_models_path <- file.path("analysis", "brms_models")
 ```
 
 ## joint model
@@ -21,13 +21,13 @@ exp3_models_path <- file.path("analysis", "brms_models")
 # read joint model
 joint_prefix <- "derco_both_"
 
-joint_model_name <- list.files(exp3_models_path,
+joint_model_name <- list.files(extra_experiments_models_path,
     full.names = FALSE,
     pattern = paste0(joint_prefix, ".*\\.rds$")
 )[1]
 
 print(joint_model_name)
-joint_fit <- readRDS(file.path(exp3_models_path, joint_model_name))
+joint_fit <- readRDS(file.path(extra_experiments_models_path, joint_model_name))
 
 # read individual SE and WE models
 individual_model_names <- str_remove(joint_model_name, joint_prefix)
@@ -108,7 +108,7 @@ model2_name <- "WE_enwiki_20180420_300d"
 print(model1_name)
 model1_fit <- readRDS(
     file.path(
-        exp3_models_path,
+        extra_experiments_models_path,
         paste0(dataset, "_wordn_", model1_name, ".rds")
     )
 )
@@ -116,7 +116,7 @@ model1_fit <- readRDS(
 print(model2_name)
 model2_fit <- readRDS(
     file.path(
-        exp3_models_path,
+        extra_experiments_models_path,
         paste0(dataset, "_wordn_", model2_name, ".rds")
     )
 )

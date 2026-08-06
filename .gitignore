@@ -24,3 +24,5 @@ experiment2/analysis/brms_models/*
 
 experiment3/analysis/brms_models/*
 experiment3/results/*
+
+extra_experiments/analysis/brms_models/*

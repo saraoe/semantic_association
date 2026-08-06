@@ -1,3 +1,0 @@
-# Experiment 3: Post-hoc examination of estimated semantic association
-
-In experiment 2, embedding-based semantic association was estimated for natural texts. However, the estimates between different implementations - and in particular between different embedding models (SE or WE) - varies. This poses the questions: When and why does the estimated semantic association differ between embedding models?
