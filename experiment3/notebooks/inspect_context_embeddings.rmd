@@ -12,6 +12,7 @@ models_order <- c(
     "intfloat/e5-large-v2",
     "intfloat/multilingual-e5-large",
     "BAAI/bge-m3",
+    "Qwen/Qwen3-Embedding-0.6B",
     "Qwen/Qwen3-Embedding-8B",
     "enwiki_20180420_300d",
     "word2vec-google-news-300"
@@ -302,7 +303,7 @@ df |>
         hjust = 1,
         inherit.aes = FALSE
     ) +
-    facet_wrap(model ~ implementation, scales = "free", ncol = 3) +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
     scale_color_manual(values = c(
         "steelblue1", "steelblue2", "steelblue3", "steelblue4",
         "orchid1", "orchid3", "orchid4",
@@ -310,7 +311,7 @@ df |>
     )) +
     theme_bw() +
     labs(y = "scaled cosine similarity") +
-    theme(legend.position = "right")
+    theme(legend.position = "bottom")
 
 # ggsave(file.path("figs", "context_embedding_selected_words_article4.png"), height = 9, width = 12)
 ```
