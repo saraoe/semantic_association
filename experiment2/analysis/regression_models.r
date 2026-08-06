@@ -52,6 +52,28 @@ erp_priors <- c(
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 
+# model formulas
+sem_formula <- bf(
+    n400 ~ s_sem +
+        (s_sem || subject) +
+        (s_sem || id) +
+        (s_sem || word)
+)
+
+sem_lp_formula <- bf(
+    n400 ~ s_sem + s_lp +
+        (s_sem + s_lp || subject) +
+        (s_sem + s_lp || id) +
+        (s_sem + s_lp || word)
+)
+
+interaction_formula <- bf(
+    n400 ~ s_lp * s_sem +
+        (s_lp * s_sem || subject) +
+        (s_lp * s_sem || id) +
+        (s_lp * s_sem || word)
+)
+
 if ("tanner" %in% dataset) {
     print("Dataset: Tanner")
     # load data
@@ -74,21 +96,6 @@ if ("tanner" %in% dataset) {
         filter(all(!is.na(semantic_association))) |>
         ungroup() |>
         arrange(subject, id, word_n)
-
-    # model formula
-    sem_formula <- bf(
-        n400 ~ s_sem +
-            (s_sem || subject) +
-            (s_sem || id) +
-            (s_sem || word)
-    )
-
-    sem_lp_formula <- bf(
-        n400 ~ s_sem + s_lp +
-            (s_sem + s_lp || subject) +
-            (s_sem + s_lp || id) +
-            (s_sem + s_lp || word)
-    )
 
     # run models
     implementations <- tanner_df |>
@@ -122,15 +129,15 @@ if ("tanner" %in% dataset) {
             file = file.path(out_folder, paste0("tanner_lp_", imp_id))
         )
 
-        # n400 ~ sem + lp (only for target word)
-        m_target <- brm(sem_lp_formula,
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
             family = gaussian(),
             prior = erp_priors,
-            data = data |> filter(word_n == Critword_Position),
+            data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("tanner_target_", imp_id))
+            file = file.path(out_folder, paste0("tanner_interaction_", imp_id))
         )
     }
 }
@@ -156,21 +163,6 @@ if ("ucl" %in% dataset) {
         filter(all(!is.na(semantic_association))) |>
         ungroup() |>
         arrange(subject, id, word_n)
-
-    # model formula
-    sem_formula <- bf(
-        n400 ~ s_sem +
-            (s_sem || subject) +
-            (s_sem || id) +
-            (s_sem || word)
-    )
-
-    sem_lp_formula <- bf(
-        n400 ~ s_sem + s_lp +
-            (s_sem + s_lp || subject) +
-            (s_sem + s_lp || id) +
-            (s_sem + s_lp || word)
-    )
 
     # run models
     implementations <- ucl_df |>
@@ -202,6 +194,17 @@ if ("ucl" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("ucl_lp_", imp_id))
+        )
+
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("ucl_interaction_", imp_id))
         )
     }
 }
