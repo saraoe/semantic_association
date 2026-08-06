@@ -201,6 +201,12 @@ if __name__ == "__main__":
             "n_sentences": 10,
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "Qwen/Qwen3-Embedding-0.6B",
+            "n_sentences": 10,
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
