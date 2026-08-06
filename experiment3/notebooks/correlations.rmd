@@ -556,3 +556,51 @@ for (n in 1:4) {
 ggsave(file.path("figs", "derco_correlations_pos.png"), width = 15, height = 15)
 ```
 
+Sentences(N=1) and Sentence(N=10)
+```{r}
+implementation_substring <- "SE"
+
+cor_matrix <- derco_df |>
+    filter(str_detect(full_implementation, implementation_substring)) |>
+    select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association"), "s_lp", "word_n") |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
+
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
