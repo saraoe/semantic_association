@@ -11,7 +11,7 @@ setwd("extra_experiments")
 
 source(file.path("..", "src", "model_diagnostics.r"))
 
-exp2_models_path <- file.path("..", "experiment2", "analysis", "brms_models")
+exp3_models_path <- file.path("..", "experiment3", "analysis", "brms_models")
 extra_experiments_models_path <- file.path("analysis", "brms_models")
 ```
 
@@ -41,7 +41,7 @@ individual_prefix <- "derco_lp_"
 print(se_model_name)
 se_fit <- readRDS(
     file.path(
-        exp2_models_path,
+        exp3_models_path,
         paste0(individual_prefix, se_model_name, ".rds")
     )
 )
@@ -49,7 +49,7 @@ se_fit <- readRDS(
 print(we_model_name)
 we_fit <- readRDS(
     file.path(
-        exp2_models_path,
+        exp3_models_path,
         paste0(individual_prefix, we_model_name, ".rds")
     )
 )

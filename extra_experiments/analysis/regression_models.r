@@ -34,6 +34,7 @@ if (!dir.exists(out_folder)) {
     dir.create(out_folder)
 }
 exp2_folder <- file.path("..", "experiment2")
+exp3_folder <- file.path("..", "experiment3")
 
 # function for cleaning word
 clean_word <- function(word) {
@@ -199,7 +200,7 @@ if ("ucl" %in% dataset) {
 if ("derco" %in% dataset) {
     # load data
     derco_sem <- read.csv(
-        file.path(exp2_folder, "results", "derco_semantic_association.csv")
+        file.path(exp3_folder, "results", "derco_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
@@ -207,7 +208,7 @@ if ("derco" %in% dataset) {
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     derco_df <- read.csv(
-        file.path(exp2_folder, "data", "DERCo", "mean_amplitude.csv")
+        file.path(exp3_folder, "data", "DERCo", "mean_amplitude.csv")
     ) |>
         left_join(derco_sem) |>
         filter(pos %in% content_pos) |>

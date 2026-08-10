@@ -1,4 +1,4 @@
-# Predictions of regression models from experiment 2
+# Predictions of regression models from experiment 3
 
 ```{r}
 library(tidytable)
@@ -10,7 +10,7 @@ library(ltc)
 
 setwd("extra_experiments")
 
-models_path <- file.path("..", "experiment2", "analysis", "brms_models")
+models_path <- file.path("..", "experiment3", "analysis", "brms_models")
 
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
@@ -36,7 +36,7 @@ get_implementation_id <- function(filename, dataset) {
 ## read data
 ```{r}
 derco_sem <- read.csv(
-    file.path("..", "experiment2", "results", "derco_semantic_association.csv")
+    file.path("..", "experiment3", "results", "derco_semantic_association.csv")
 ) |>
     select(-X) |>
     tidytable::mutate(
@@ -44,7 +44,7 @@ derco_sem <- read.csv(
     ) |>
     tidytable::mutate(implementation_id = str_replace(implementation_id, "/", "_"))
 derco_df <- read.csv(
-    file.path("..", "experiment2", "data", "DERCo", "mean_amplitude.csv")
+    file.path("..", "experiment3", "data", "DERCo", "mean_amplitude.csv")
 ) |>
     tidytable::left_join(derco_sem) |>
     tidytable::filter(pos %in% content_pos) |>
