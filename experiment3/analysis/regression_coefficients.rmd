@@ -103,24 +103,24 @@ get_modelname <- function(text) {
 
 get_fixef_models <- function(
   datasets,
-  include_lp = FALSE,
-  only_target = FALSE
+  model_prefix
 ) {
     for (dataset in datasets) {
-        if (include_lp) {
-            prefix <- paste0(dataset, "_lp")
-        } else {
-            prefix <- dataset
-        }
+        prefix <- paste0(dataset, "_", model_prefix, "_")
 
         model_names <- list.files(models_path,
             full.names = FALSE,
-            pattern = paste0(prefix, "_.*\\.rds$")
+            pattern = paste0(prefix, ".*\\.rds$")
         )
 
         for (model_name in model_names) {
-            if (!include_lp & str_detect(model_name, "lp")) {
-                next
+            if (model_prefix == "") {
+                if (str_detect(model_name, "lp")) {
+                    next
+                }
+                if (str_detect(model_name, "interaction")) {
+                    next
+                }
             }
 
             print(model_name)
@@ -130,7 +130,7 @@ get_fixef_models <- function(
                 next
             }
 
-            implementation <- str_remove(model_name, paste0(prefix, "_"))
+            implementation <- str_remove(model_name, paste0(prefix))
             implementation <- str_remove(implementation, ".rds")
 
             fe_df <- fixef(m) |>
@@ -159,13 +159,14 @@ get_fixef_models <- function(
 }
 ```
 
+### n400 ~ s_lp + s_sem
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("derco"), include_lp = TRUE)
+fixef_df <- get_fixef_models(c("derco"), model_prefix = "lp")
 ```
 
-### coefficient for semantic association
+coefficient for semantic association
 ```{r}
 fixef_df |>
     filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
@@ -254,7 +255,7 @@ ggsave(
 )
 ```
 
-### coefficient for lp
+coefficient for lp
 ```{r}
 fixef_df |>
     filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
@@ -294,4 +295,57 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 3, width = 7)
+```
+
+### n400 ~ s_lp * s_sem
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("derco"), model_prefix = "interaction")
+```
+
+coefficients
+```{r}
+pd <- position_dodge(width = 0.6)
+
+fixef_df |>
+    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(context != "Sentence(N=1)") |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        dataset = case_when(
+            dataset == "derco" ~ "DERCo"
+        ),
+        implementation = paste(model_type, model, sep = ":"),
+        coefficient = factor(coefficient, levels = c("s_lp", "s_sem", "s_lp:s_sem"))
+    ) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = coefficient)) +
+    geom_point(aes(x = Estimate), position = pd) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue2",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Coefficient"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients_interaction.png"), height = 3, width = 7)
 ```
