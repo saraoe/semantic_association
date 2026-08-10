@@ -94,10 +94,17 @@ diagnostics_df |>
 ## Plot effect of all models
 ```{r}
 get_modelname <- function(text) {
+    # remove implementation
     text <- str_remove(text, "CWE_")
     text <- str_remove(text, "WE_")
     text <- str_remove(text, "SE_")
     text <- str_remove(text, "sentences1_")
+    text <- str_remove(text, "all_")
+    # remove organization
+    text <- str_remove(text, "Qwen_")
+    text <- str_remove(text, "BAAI_")
+    text <- str_remove(text, "intfloat_")
+    text <- str_remove(text, "Gameselo_")
     return(text)
 }
 
@@ -114,13 +121,10 @@ get_fixef_models <- function(
         )
 
         for (model_name in model_names) {
-            if (model_prefix == "") {
-                if (str_detect(model_name, "lp")) {
-                    next
-                }
-                if (str_detect(model_name, "interaction")) {
-                    next
-                }
+            implementation <- str_remove(model_name, paste0(prefix))
+            implementation <- str_remove(implementation, ".rds")
+            if (!str_starts(implementation, "SE|WE|CWE")) {
+                next
             }
 
             print(model_name)
@@ -129,9 +133,6 @@ get_fixef_models <- function(
                 print("Divergent transitions - skips this model")
                 next
             }
-
-            implementation <- str_remove(model_name, paste0(prefix))
-            implementation <- str_remove(implementation, ".rds")
 
             fe_df <- fixef(m) |>
                 as.data.frame()
@@ -143,8 +144,8 @@ get_fixef_models <- function(
                     "model" = get_modelname(implementation),
                     "context" = case_when(
                         str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
-                        dataset == "derco" ~ "Sentence(N=10)",
-                        .default = "All"
+                        str_detect(implementation, "all") ~ "All",
+                        .default = "Sentence(N=10)"
                     )
                 )
 
@@ -169,8 +170,8 @@ fixef_df <- get_fixef_models(c("derco"), model_prefix = "lp")
 coefficient for semantic association
 ```{r}
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context != "Sentence(N=1)") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
+    filter(context == "Sentence(N=10)") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -211,7 +212,7 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 3, width =
 
 ```{r}
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(context == "Sentence(N=1)") |>
     filter(dataset == "derco") |>
     filter(coefficient == "s_sem") |>
@@ -255,10 +256,48 @@ ggsave(
 )
 ```
 
+```{r}
+pd <- position_dodge(0.6)
+
+fixef_df |>
+    filter(str_detect(model, "Qwen")) |>
+    filter(dataset == "derco") |>
+    filter(coefficient == "s_sem") |>
+    mutate(
+        dataset = case_when(
+            dataset == "derco" ~ "DERCo"
+        ),
+        implementation = paste(context, model, sep = ":")
+    ) |>
+    ggplot(aes(y = model, color = context)) +
+    geom_point(aes(x = Estimate), position = pd) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta_2$"), y = "",
+        color = "Context length"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path("figs", "regression_coefficients_context_all.png"),
+    height = 3, width = 7
+)
+```
+
 coefficient for lp
 ```{r}
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(context != "Sentence(N=1)") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
@@ -306,11 +345,9 @@ fixef_df <- get_fixef_models(c("derco"), model_prefix = "interaction")
 
 coefficients
 ```{r}
-pd <- position_dodge(width = 0.6)
-
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context != "Sentence(N=1)") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
+    filter(context == "Sentence(N=10)") |>
     filter(coefficient != "Intercept") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -328,7 +365,42 @@ fixef_df |>
     mutate(
         model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
     ) |>
-    ggplot(aes(y = implementation, color = coefficient)) +
+    ggplot(aes(y = coefficient, color = coefficient)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue2",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ implementation, ncol = 2) +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Coefficient"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients_interaction.png"), height = 7, width = 7)
+```
+
+```{r}
+pd <- position_dodge(0.6)
+
+fixef_df |>
+    filter(str_detect(model, "Qwen")) |>
+    filter(coefficient != "Intercept") |>
+    mutate(
+        dataset = case_when(
+            dataset == "derco" ~ "DERCo"
+        ),
+        implementation = paste(context, model, sep = ":"),
+        coefficient = factor(coefficient, levels = c("s_lp", "s_sem", "s_lp:s_sem"))
+    ) |>
+    ggplot(aes(y = coefficient, color = context)) +
     geom_point(aes(x = Estimate), position = pd) +
     geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
@@ -339,13 +411,11 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    facet_wrap(. ~ model, ncol = 1) +
     labs(
         x = TeX("$\\beta$"), y = "",
         color = "Coefficient"
     ) +
     theme_minimal() +
     theme(legend.position = "bottom")
-
-ggsave(file.path("figs", "regression_coefficients_interaction.png"), height = 3, width = 7)
 ```

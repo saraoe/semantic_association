@@ -94,32 +94,37 @@ diagnostics_df |>
 ## Plot effect of all models
 ```{r}
 get_modelname <- function(text) {
+    # remove implementation
     text <- str_remove(text, "CWE_")
     text <- str_remove(text, "WE_")
     text <- str_remove(text, "SE_")
     text <- str_remove(text, "sentences1_")
+    text <- str_remove(text, "all_")
+    # remove organization
+    text <- str_remove(text, "Qwen_")
+    text <- str_remove(text, "BAAI_")
+    text <- str_remove(text, "intfloat_")
+    text <- str_remove(text, "Gameselo_")
     return(text)
 }
 
+
 get_fixef_models <- function(
   datasets,
-  include_lp = FALSE,
-  only_target = FALSE
+  model_prefix
 ) {
     for (dataset in datasets) {
-        if (include_lp) {
-            prefix <- paste0(dataset, "_lp")
-        } else {
-            prefix <- dataset
-        }
+        prefix <- paste0(dataset, "_", model_prefix, "_")
 
         model_names <- list.files(models_path,
             full.names = FALSE,
-            pattern = paste0(prefix, "_.*\\.rds$")
+            pattern = paste0(prefix, ".*\\.rds$")
         )
 
         for (model_name in model_names) {
-            if (!include_lp & str_detect(model_name, "lp")) {
+            implementation <- str_remove(model_name, paste0(prefix))
+            implementation <- str_remove(implementation, ".rds")
+            if (!str_starts(implementation, "SE|WE|CWE")) {
                 next
             }
 
@@ -130,9 +135,6 @@ get_fixef_models <- function(
                 next
             }
 
-            implementation <- str_remove(model_name, paste0(prefix, "_"))
-            implementation <- str_remove(implementation, ".rds")
-
             fe_df <- fixef(m) |>
                 as.data.frame()
             fe_df$coefficient <- rownames(fe_df)
@@ -140,12 +142,7 @@ get_fixef_models <- function(
                 mutate(
                     "implementation" = implementation,
                     "dataset" = dataset,
-                    "model" = get_modelname(implementation),
-                    "context" = case_when(
-                        str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
-                        dataset == "derco" ~ "Sentence(N=10)",
-                        .default = "All"
-                    )
+                    "model" = get_modelname(implementation)
                 )
 
             if (exists("fixef_df_")) {
@@ -162,13 +159,13 @@ get_fixef_models <- function(
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("tanner", "ucl"), include_lp = TRUE)
+fixef_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "lp")
 ```
 
 ### coefficient for semantic association
 ```{r}
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -211,7 +208,7 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width =
 ```{r}
 for (d in c("tanner", "ucl")) {
     fixef_df |>
-        filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
+        filter(model != "STS-multilingual-mpnet-base-v2") |>
         filter(dataset == d) |>
         filter(coefficient == "s_sem") |>
         mutate(model_type = case_when(
@@ -251,8 +248,7 @@ for (d in c("tanner", "ucl")) {
 ### coefficient for lp
 ```{r}
 fixef_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context != "Sentence(N=1)") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -295,13 +291,12 @@ ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 
 ```{r}
 rm(fixef_target_df)
 
-fixef_target_df <- get_fixef_models(c("tanner_target"))
+fixef_target_df <- get_fixef_models(c("tanner"), model_prefix = "target")
 ```
 
 ```{r}
 fixef_target_df |>
-    filter(model != "Gameselo_STS-multilingual-mpnet-base-v2") |>
-    filter(context == "All") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -335,7 +330,7 @@ ggsave(file.path("figs", "tanner_target_regression_coefficients_sem.png"), heigh
 
 ```{r}
 fixef_target_df |>
-    filter(context == "All") |>
+    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
