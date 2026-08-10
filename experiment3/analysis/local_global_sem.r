@@ -148,7 +148,7 @@ for (se_model in se_models) {
         seed = 246,
         file = file.path(
             out_folder,
-            paste0("derco_localCWE_globalSE_", model_imp, ".rds")
+            paste0("derco_localCWE_globalSE_", se_model_imp, ".rds")
         )
     )
     rm(data)
