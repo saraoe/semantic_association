@@ -289,7 +289,7 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(
-    file.path("figs", "regression_coefficients_context_all.png"),
+    file.path("figs", "regression_coefficients_sem_context_all.png"),
     height = 3, width = 7
 )
 ```
