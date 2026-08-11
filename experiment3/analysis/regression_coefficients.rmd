@@ -48,7 +48,7 @@ for (dataset in c("derco")) {
     print(dataset)
     model_names <- list.files(models_path,
         full.names = FALSE,
-        pattern = paste0(dataset, "_lp_.*\\.rds$")
+        pattern = paste0(dataset, "_.*\\.rds$")
     )
     for (model in model_names) {
         print(model)
@@ -124,7 +124,9 @@ get_fixef_models <- function(
             implementation <- str_remove(model_name, paste0(prefix))
             implementation <- str_remove(implementation, ".rds")
             if (!str_starts(implementation, "SE|WE|CWE")) {
-                next
+                if (!str_detect(model_prefix, "local")) {
+                    next
+                }
             }
 
             print(model_name)
@@ -418,4 +420,58 @@ fixef_df |>
     ) +
     theme_minimal() +
     theme(legend.position = "bottom")
+```
+
+### n400 ~ s_lp + local_sem + global_sem
+```{r}
+rm(fixef_df)
+
+fixef_localSE <- get_fixef_models(
+    c("derco"),
+    model_prefix = "localSE_globalSE"
+) |>
+    mutate("Local" = model)
+
+fixef_localCWE <- get_fixef_models(
+    c("derco"),
+    model_prefix = "localCWE_globalSE"
+) |>
+    mutate("Local" = "word2vec-google-news-300")
+
+fixef_df <- rbind(fixef_localSE, fixef_localCWE) |>
+    rename("Global" = model)
+```
+
+coefficients
+```{r}
+fixef_df |>
+    filter(context == "Sentence(N=10)") |>
+    filter(coefficient != "Intercept") |>
+    mutate(
+        dataset = case_when(
+            dataset == "derco" ~ "DERCo"
+        ),
+        coefficient = factor(coefficient, levels = c("s_lp", "local_sem", "global_sem"))
+    ) |>
+    ggplot(aes(y = coefficient, color = coefficient)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "steelblue2",
+            "firebrick",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(Local ~ Global, ncol = 2, labeller = "label_both") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Coefficient",
+        caption = "Context: Local = Sentence(N=1), Global = All"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients_local_global.png"), height = 5, width = 7)
 ```
