@@ -15,7 +15,7 @@ parser <- ArgumentParser(description = "Run brms models")
 parser$add_argument("--dataset",
     type = "character",
     nargs = "+",
-    default = c("derco", "tanner", "ucl"),
+    default = c("derco", "tanner", "ucl", "derco_instructions"),
     help = "Specify dataset (derco or tanner)"
 )
 
@@ -263,6 +263,77 @@ if ("derco" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("derco_pos_", imp_id))
+        )
+    }
+}
+
+if ("derco_instructions" %in% dataset) {
+    # load data
+    derco_sem <- read.csv(
+        file.path("results", "qwen_instructions_semantic_association.csv")
+    ) |>
+        select(-X) |>
+        mutate(
+            implementation_id = paste("instruction", model, sep = "_")
+        ) |>
+        mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+    derco_df <- read.csv(
+        file.path("data", "DERCo", "mean_amplitude.csv")
+    ) |>
+        left_join(derco_sem) |>
+        filter(pos %in% content_pos) |>
+        mutate(word = clean_word(target)) |>
+        # only use complete cases across implementations of sem
+        group_by(article_n, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(subject, article_n, word_n)
+
+    # model formula
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || article_n) +
+            (s_sem + s_lp || word)
+    )
+
+    interaction_formula <- bf(
+        n400 ~ s_lp * s_sem +
+            (s_lp * s_sem || subject) +
+            (s_lp * s_sem || article_n) +
+            (s_lp * s_sem || word)
+    )
+
+    # run models
+    implementations <- derco_df |>
+        pull(implementation_id) |>
+        unique()
+    for (imp_id in implementations) {
+        print(paste("Running implementation", imp_id))
+        data <- derco_df |>
+            filter(implementation_id == imp_id) |>
+            mutate(s_sem = scale(semantic_association))
+
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("derco_lp_", imp_id))
+        )
+
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("derco_interaction_", imp_id))
         )
     }
 }

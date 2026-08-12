@@ -13,9 +13,10 @@ setwd("extra_experiments")
 
 ## Read data
 ```{r}
-data_path <- file.path("..", "experiment2", "results")
+exp2_path <- file.path("..", "experiment2", "results")
+exp3_path <- file.path("..", "experiment3", "results")
 
-tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+tanner_df <- read.csv(file.path(exp2_path, "tanner_semantic_association.csv")) |>
     filter(Acceptability == "Gram") |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
@@ -23,14 +24,14 @@ tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |
     ungroup() |>
     filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
-ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
+ucl_df <- read.csv(file.path(exp2_path, "ucl_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
     ungroup() |>
     filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
 
-derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+derco_df <- read.csv(file.path(exp3_path, "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(article_n, full_implementation) |>
     mutate(
@@ -41,6 +42,18 @@ derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
     mutate(s_sem = scale(semantic_association)) |>
     ungroup() |>
     filter(model != "Gameselo/STS-multilingual-mpnet-base-v2")
+
+derco_inst_df <- read.csv(file.path("results", "qwen_instructions_semantic_association.csv")) |>
+    mutate(full_implementation = paste("instruction", model, sep = "_")) |>
+    group_by(article_n, full_implementation) |>
+    mutate(
+        context_length = ifelse(str_detect(implementation, "sentences1"), "Sentence(N=1)", "Sentence(N=10)")
+    ) |>
+    ungroup() |>
+    group_by(full_implementation) |>
+    mutate(s_sem = scale(semantic_association)) |>
+    ungroup() |>
+    select(colnames(derco_df))
 
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
@@ -588,6 +601,42 @@ name_order <- order(
 )
 
 cor_matrix <- cor_matrix[name_order, name_order]
+
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
+
+Qwen with and without instructions
+```{r}
+cor_matrix <- derco_df |>
+    filter(str_detect(model, "Qwen")) |>
+    rbind(derco_inst_df) |>
+    select(article_n, word_n, semantic_association, s_lp, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association"), "s_lp", "word_n") |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+matrix_names <- colnames(cor_matrix)
 
 melted <- melt(cor_matrix)
 
