@@ -278,7 +278,7 @@ if ("derco_instructions" %in% dataset) {
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     derco_df <- read.csv(
-        file.path("data", "DERCo", "mean_amplitude.csv")
+        file.path(exp3_folder, "data", "DERCo", "mean_amplitude.csv")
     ) |>
         left_join(derco_sem) |>
         filter(pos %in% content_pos) |>
