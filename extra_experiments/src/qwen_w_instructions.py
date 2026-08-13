@@ -76,6 +76,28 @@ if __name__ == "__main__":
     }
     corpora = [
         {
+            "name": "tanner",
+            "df": pd.read_csv(
+                Path("experiment2", "data", "Tanner", "stim.csv"), index_col=0
+            ),
+            "out_path": Path(
+                "extra_experiments",
+                "results",
+                "tanner_qwen_instructions_semantic_association.csv"
+            ),
+        },
+        {
+            "name": "ucl",
+            "df": pd.read_csv(
+                Path("experiment2", "data", "UCL", "stim.csv"), index_col=0
+            ),
+            "out_path": Path(
+                "extra_experiments",
+                "results",
+                "ucl_qwen_instructions_semantic_association.csv"
+            ),
+        },
+        {
             "name": "derco",
             "df": pd.read_csv(
                 Path("experiment3", "data", "DERCo", "stim.csv"), index_col=0
@@ -83,7 +105,7 @@ if __name__ == "__main__":
             "out_path": Path(
                 "extra_experiments",
                 "results",
-                "qwen_instructions_semantic_association.csv",
+                "derco_qwen_instructions_semantic_association.csv",
             ),
         },
     ]
