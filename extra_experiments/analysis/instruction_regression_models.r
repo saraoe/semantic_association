@@ -56,14 +56,14 @@ erp_priors_no_intercept <- erp_priors[2:4, ]
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 
 if ("tanner" %in% dataset) {
-    print("Dataset: Tanner")
+    print("Running dataset tanner")
     # load data
     tanner_sem <- read.csv(
-        file.path(exp2_folder, "results", "tanner_semantic_association.csv")
+        file.path("results", "tanner_qwen_instructions_semantic_association.csv")
     ) |>
         select(-X) |>
-        mutate( 
-            implementation_id = paste(implementation, model, sep = "_")
+        mutate(
+            implementation_id = paste("instruction", model, sep = "_")
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     tanner_df <- read.csv(file.path(exp2_folder, "data", "Tanner", "mean_amplitude.csv")) |>
@@ -79,17 +79,18 @@ if ("tanner" %in% dataset) {
         arrange(subject, id, word_n)
 
     # model formula
-    word_position_formula <- bf(
-        n400 ~ s_sem + s_lp + word_n +
-            (s_sem + s_lp + word_n || subject) +
-            (s_sem + s_lp + word_n || id) +
-            (s_sem + s_lp + word_n || word)
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || id) +
+            (s_sem + s_lp || word)
     )
-    pos_formula <- bf(
-        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
-            (pos + pos:s_sem + pos:s_lp || subject) +
-            (pos + pos:s_sem + pos:s_lp || id) +
-            (pos + pos:s_sem + pos:s_lp || word)
+
+    interaction_formula <- bf(
+        n400 ~ s_lp * s_sem +
+            (s_lp * s_sem || subject) +
+            (s_lp * s_sem || id) +
+            (s_lp * s_sem || word)
     )
 
     # run models
@@ -102,39 +103,39 @@ if ("tanner" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        # n400 ~ sem + lp + word_n
-        m_sem <- brm(word_position_formula,
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("tanner_wordn_", imp_id))
+            file = file.path(out_folder, paste0("tanner_lp_", imp_id))
         )
 
-        # n400 ~ pos:s_sem + pos:s_lp
-        m_sem <- brm(pos_formula,
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
             family = gaussian(),
-            prior = erp_priors_no_intercept,
+            prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("tanner_pos_", imp_id))
+            file = file.path(out_folder, paste0("tanner_interaction_", imp_id))
         )
     }
 }
 
 if ("ucl" %in% dataset) {
-    print("Dataset: UCL")
+    print("Running dataset ucl")
     # load data
     ucl_sem <- read.csv(
-        file.path(exp2_folder, "results", "ucl_semantic_association.csv")
+        file.path("results", "ucl_qwen_instructions_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
-            implementation_id = paste(implementation, model, sep = "_")
+            implementation_id = paste("instruction", model, sep = "_")
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     ucl_df <- read.csv(file.path(exp2_folder, "data", "UCL", "mean_amplitude.csv")) |>
@@ -149,17 +150,18 @@ if ("ucl" %in% dataset) {
         arrange(subject, id, word_n)
 
     # model formula
-    word_position_formula <- bf(
-        n400 ~ s_sem + s_lp + word_n +
-            (s_sem + s_lp + word_n || subject) +
-            (s_sem + s_lp + word_n || id) +
-            (s_sem + s_lp + word_n || word)
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || id) +
+            (s_sem + s_lp || word)
     )
-    pos_formula <- bf(
-        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
-            (pos + pos:s_sem + pos:s_lp || subject) +
-            (pos + pos:s_sem + pos:s_lp || id) +
-            (pos + pos:s_sem + pos:s_lp || word)
+
+    interaction_formula <- bf(
+        n400 ~ s_lp * s_sem +
+            (s_lp * s_sem || subject) +
+            (s_lp * s_sem || id) +
+            (s_lp * s_sem || word)
     )
 
     # run models
@@ -172,39 +174,39 @@ if ("ucl" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        # n400 ~ sem + lp + word_n
-        m_sem <- brm(word_position_formula,
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("ucl_wordn_", imp_id))
+            file = file.path(out_folder, paste0("ucl_lp_", imp_id))
         )
 
-        # n400 ~ pos:s_sem + pos:s_lp
-        m_sem <- brm(pos_formula,
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
             family = gaussian(),
-            prior = erp_priors_no_intercept,
+            prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("ucl_pos_", imp_id))
+            file = file.path(out_folder, paste0("ucl_interaction_", imp_id))
         )
     }
 }
 
-
 if ("derco" %in% dataset) {
+    print("Running dataset derco")
     # load data
     derco_sem <- read.csv(
-        file.path(exp3_folder, "results", "derco_semantic_association.csv")
+        file.path("results", "derco_qwen_instructions_semantic_association.csv")
     ) |>
         select(-X) |>
         mutate(
-            implementation_id = paste(implementation, model, sep = "_")
+            implementation_id = paste("instruction", model, sep = "_")
         ) |>
         mutate(implementation_id = str_replace(implementation_id, "/", "_"))
     derco_df <- read.csv(
@@ -220,17 +222,18 @@ if ("derco" %in% dataset) {
         arrange(subject, article_n, word_n)
 
     # model formula
-    word_position_formula <- bf(
-        n400 ~ s_sem + s_lp + word_n +
-            (s_sem + s_lp + word_n || subject) +
-            (s_sem + s_lp + word_n || article_n) +
-            (s_sem + s_lp + word_n || word)
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || subject) +
+            (s_sem + s_lp || article_n) +
+            (s_sem + s_lp || word)
     )
-    pos_formula <- bf(
-        n400 ~ -1 + pos + pos:s_sem + pos:s_lp +
-            (pos + pos:s_sem + pos:s_lp || subject) +
-            (pos + pos:s_sem + pos:s_lp || article_n) +
-            (pos + pos:s_sem + pos:s_lp || word)
+
+    interaction_formula <- bf(
+        n400 ~ s_lp * s_sem +
+            (s_lp * s_sem || subject) +
+            (s_lp * s_sem || article_n) +
+            (s_lp * s_sem || word)
     )
 
     # run models
@@ -243,26 +246,26 @@ if ("derco" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        # n400 ~ sem + lp + word_n
-        m_sem <- brm(word_position_formula,
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("derco_wordn_", imp_id))
+            file = file.path(out_folder, paste0("derco_lp_", imp_id))
         )
 
-        # n400 ~ pos:s_sem + pos:s_lp
-        m_sem <- brm(pos_formula,
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
             family = gaussian(),
-            prior = erp_priors_no_intercept,
+            prior = erp_priors,
             data = data,
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
-            file = file.path(out_folder, paste0("derco_pos_", imp_id))
+            file = file.path(out_folder, paste0("derco_interaction_", imp_id))
         )
     }
 }
