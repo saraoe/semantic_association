@@ -7,7 +7,7 @@ library(ggplot2)
 library(latex2exp)
 library(brms)
 
-setwd("experiment3")
+setwd("extra_experiments")
 
 source(file.path("..", "src", "model_diagnostics.r"))
 
@@ -260,3 +260,128 @@ fixef_df |>
 
 ggsave(file.path("figs", paste0("pos_regression_coefficients_", coef, ".png")), height = 13, width = 9)
 ```
+
+## Qwen instructions
+```{r}
+rm(fixef_instructions_df)
+
+instruction_models <- list.files(models_path,
+    full.names = FALSE,
+    pattern = "derco_.*instruction_.*\\.rds$"
+)
+
+for (inst_model in instruction_models) {
+    print(inst_model)
+    m <- readRDS(file.path(models_path, inst_model))
+    if (number_divergent_transitions(m) > 0) {
+        print("Divergent transitions - skips this model")
+        next
+    }
+
+    model_formula <- case_when(
+        str_detect(inst_model, "lp") ~ "lp",
+        str_detect(inst_model, "interaction") ~ "interaction",
+        .default = ""
+    )
+    embedding_model <- str_remove(inst_model, ".rds")
+    embedding_model <- str_remove(embedding_model, "derco_")
+    embedding_model <- str_remove(embedding_model, "lp_")
+    embedding_model <- str_remove(embedding_model, "interaction_")
+    embedding_model <- str_remove(embedding_model, "instruction_")
+
+    fe_df <- fixef(m) |>
+        as.data.frame()
+    fe_df$coefficient <- rownames(fe_df)
+    fe_df <- fe_df |>
+        mutate(
+            "model_formula" = model_formula,
+            "model" = embedding_model,
+            "instructions" = TRUE
+        )
+
+    if (exists("fixef_instructions_df")) {
+        fixef_instructions_df <- rbind(fixef_instructions_df, fe_df)
+    } else {
+        fixef_instructions_df <- fe_df
+    }
+}
+
+# load corresponding models from experiment 3
+instruction_reg_models <- fixef_instructions_df |>
+    mutate("reg_model" = paste(model_formula, "SE", model, sep = "_")) |>
+    pull(reg_model) |>
+    unique()
+
+for (reg_model in instruction_reg_models) {
+    print(reg_model)
+    m <- readRDS(
+        file.path(
+            "..", "experiment3", "analysis", "brms_models",
+            paste0("derco_", reg_model, ".rds")
+        )
+    )
+    if (number_divergent_transitions(m) > 0) {
+        print("Divergent transitions - skips this model")
+        next
+    }
+
+    model_formula <- case_when(
+        str_detect(reg_model, "lp") ~ "lp",
+        str_detect(reg_model, "interaction") ~ "interaction",
+        .default = ""
+    )
+
+    embedding_model <- str_remove(reg_model, "SE_")
+    embedding_model <- str_remove(embedding_model, "lp_")
+    embedding_model <- str_remove(embedding_model, "interaction_")
+
+    fe_df <- fixef(m) |>
+        as.data.frame()
+    fe_df$coefficient <- rownames(fe_df)
+    fe_df <- fe_df |>
+        mutate(
+            "model_formula" = model_formula,
+            "model" = embedding_model,
+            "instructions" = FALSE
+        )
+
+    fixef_instructions_df <- rbind(fixef_instructions_df, fe_df)
+}
+```
+
+### coefficients
+```{r}
+qwen_model_size <- "0.6B"
+pd <- position_dodge(.6)
+
+fixef_instructions_df |>
+    filter(str_detect(model, qwen_model_size)) |>
+    mutate(
+        "model_formula" = case_when(
+            model_formula == "lp" ~ "N400 ~ s_lp + s_sem",
+            model_formula == "interaction" ~ "N400 ~ s_lp * s_sem",
+            model_formula == "" ~ "N400 ~ s_sem"
+        )
+    ) |>
+    ggplot(aes(y = coefficient, color = instructions)) +
+    geom_point(aes(x = Estimate), position = pd) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "steelblue2",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(model_formula ~ ., ncol = 1, scale = "free_y") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+# ggsave(file.path("figs", paste0("instructions_qwen", qwen_model_size, "_regression_coefficients.png")), height = 7, width = 7)
+```
+
+
