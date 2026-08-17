@@ -15,8 +15,8 @@ parser <- ArgumentParser(description = "Run brms models")
 parser$add_argument("--dataset",
     type = "character",
     nargs = "+",
-    default = c("derco"),
-    help = "Specify dataset (derco)"
+    default = c("derco", "tint"),
+    help = "Specify dataset (derco or tint)"
 )
 
 args <- parser$parse_args()
@@ -137,6 +137,95 @@ if ("derco" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("derco_interaction_", imp_id))
+        )
+    }
+}
+
+if ("tint" %in% dataset) {
+    # load data
+    tint_sem <- read.csv(
+        file.path("results", "tint_semantic_association.csv")
+    ) |>
+        select(-X) |>
+        mutate(
+            implementation_id = paste(implementation, model, sep = "_")
+        ) |>
+        mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+    tint_df <- read.csv(
+        file.path("..", "cmcl26", "data", "tint.csv")
+    ) |>
+        left_join(tint_sem) |>
+        filter(pos %in% content_pos) |>
+        mutate(word = clean_word(target)) |>
+        # only use complete cases across implementations of sem
+        group_by(document_id, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(participant_number, document_id, word_n)
+
+    # model formula
+    sem_formula <- bf(
+        n400 ~ s_sem +
+            (s_sem || participant_number) +
+            (s_sem || document_id) +
+            (s_sem || word)
+    )
+
+    sem_lp_formula <- bf(
+        n400 ~ s_sem + s_lp +
+            (s_sem + s_lp || participant_number) +
+            (s_sem + s_lp || document_id) +
+            (s_sem + s_lp || word)
+    )
+
+    interaction_formula <- bf(
+        n400 ~ s_lp * s_sem +
+            (s_lp * s_sem || participant_number) +
+            (s_lp * s_sem || document_id) +
+            (s_lp * s_sem || word)
+    )
+
+    # run models
+    implementations <- tint_df |>
+        pull(implementation_id) |>
+        unique()
+    for (imp_id in implementations) {
+        print(paste("Running implementation", imp_id))
+        data <- tint_df |>
+            filter(implementation_id == imp_id) |>
+            mutate(s_sem = scale(semantic_association))
+
+        # n400 ~ sem
+        m_sem <- brm(sem_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("tint_", imp_id))
+        )
+
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("tint_lp_", imp_id))
+        )
+
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("tint_interaction_", imp_id))
         )
     }
 }
