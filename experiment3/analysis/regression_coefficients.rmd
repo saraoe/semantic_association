@@ -214,7 +214,6 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 3, width =
 
 ```{r}
 fixef_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(context == "Sentence(N=1)") |>
     filter(dataset == "derco") |>
     filter(coefficient == "s_sem") |>
@@ -243,7 +242,6 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
     labs(
         x = TeX("$\\beta_2$"), y = "",
         color = "Embeddings",
@@ -336,6 +334,80 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 3, width = 7)
+```
+
+Plot for paper
+```{r}
+library(patchwork)
+
+dataset_plot <- function(dataset_title, context_length = "Sentence(N=10)") {
+    fixef_df |>
+        filter(context == context_length) |>
+        filter(coefficient != "Intercept") |>
+        mutate(model_type = case_when(
+            str_detect(implementation, "SE") ~ "SE",
+            str_detect(implementation, "CWE") ~ "CWE",
+            str_detect(implementation, "WE") ~ "WE"
+        )) |>
+        mutate(
+            model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+        ) |>
+        mutate(
+            dataset = case_when(
+                dataset == "derco" ~ "DERCo"
+            ),
+            implementation = paste(model_type, model, sep = ", "),
+            coefficient = case_when(
+                coefficient == "s_lp" ~ "Log-probability",
+                coefficient == "s_sem" ~ "Semantic association"
+            )
+        ) |>
+        filter(dataset == dataset_title) |>
+        arrange(model_type, model) |>
+        mutate(
+            implementation = factor(
+                implementation,
+                levels = rev(unique(implementation))
+            )
+        ) |>
+        ggplot(aes(y = implementation, color = model_type)) +
+        geom_point(aes(x = Estimate)) +
+        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        scale_color_manual(
+            values = c(
+                "steelblue4",
+                "steelblue1",
+                "firebrick"
+            )
+        ) +
+        facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+        labs(
+            x = TeX("$\\beta$"), y = "",
+            color = "Embeddings",
+            title = dataset_title
+        ) +
+        theme_minimal() +
+        theme(plot.title = element_text(size = 11))
+}
+
+p_derco <- dataset_plot("DERCo")
+
+p_derco +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients.png"), height = 3, width = 8)
+```
+
+```{r}
+p_derco <- dataset_plot("DERCo", context_length = "Sentence(N=1)")
+
+p_derco + labs(caption = "Sentence(N=1)") +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 3, width = 8)
 ```
 
 ### n400 ~ s_lp * s_sem

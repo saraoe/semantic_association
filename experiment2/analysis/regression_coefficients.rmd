@@ -71,6 +71,7 @@ for (dataset in c("tanner", "ucl")) {
 
 ```{r}
 diagnostics_df |>
+    filter(!str_detect(model, "Gameselo")) |>
     # group_by(dataset) |>
     # filter(!str_detect(model, "bsemprior")) |>
     summarize(
@@ -104,6 +105,7 @@ get_modelname <- function(text) {
     text <- str_remove(text, "Qwen_")
     text <- str_remove(text, "BAAI_")
     text <- str_remove(text, "intfloat_")
+    text <- str_remove(text, "bigscience_")
     text <- str_remove(text, "Gameselo_")
     return(text)
 }
@@ -285,6 +287,73 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 7)
+```
+
+Plot for paper
+```{r}
+library(patchwork)
+
+dataset_plot <- function(dataset_title) {
+    fixef_df |>
+        filter(model != "STS-multilingual-mpnet-base-v2") |>
+        filter(model != "sgpt-bloom-7b1-msmarco") |>
+        filter(coefficient != "Intercept") |>
+        mutate(model_type = case_when(
+            str_detect(implementation, "SE") ~ "SE",
+            str_detect(implementation, "CWE") ~ "CWE",
+            str_detect(implementation, "WE") ~ "WE"
+        )) |>
+        mutate(
+            model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+        ) |>
+        mutate(
+            dataset = case_when(
+                dataset == "tanner" ~ "Tanner (2019)",
+                dataset == "ucl" ~ "UCL"
+            ),
+            implementation = paste(model_type, model, sep = ", "),
+            coefficient = case_when(
+                coefficient == "s_lp" ~ "Log-probability",
+                coefficient == "s_sem" ~ "Semantic association"
+            )
+        ) |>
+        filter(dataset == title) |>
+        arrange(model_type, model) |>
+        mutate(
+            implementation = factor(
+                implementation,
+                levels = rev(unique(implementation))
+            )
+        ) |>
+        ggplot(aes(y = implementation, color = model_type)) +
+        geom_point(aes(x = Estimate)) +
+        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        scale_color_manual(
+            values = c(
+                "steelblue4",
+                "steelblue1",
+                "firebrick"
+            )
+        ) +
+        facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+        labs(
+            x = TeX("$\\beta$"), y = "",
+            color = "Embeddings",
+            title = dataset_title
+        ) +
+        theme_minimal() +
+        theme(plot.title = element_text(size = 11))
+}
+
+p_tanner <- dataset_plot("Tanner (2019)")
+p_ucl <- dataset_plot("UCL")
+
+p_tanner / p_ucl +
+    plot_layout(guides = "collect") &
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
 ```
 
 ### interaction
