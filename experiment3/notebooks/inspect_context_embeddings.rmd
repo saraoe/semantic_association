@@ -18,6 +18,19 @@ models_order <- c(
     "enwiki_20180420_300d",
     "word2vec-google-news-300"
 )
+
+# models to include in plots for paper
+include_models <- c(
+    "intfloat/e5-large-v2",
+    "Qwen/Qwen3-Embedding-8B",
+    "word2vec-google-news-300"
+)
+
+remove_organization <- function(model_name) {
+    model_name <- str_remove(model_name, "intfloat/")
+    model_name <- str_remove(model_name, "BAAI/")
+    model_name <- str_remove(model_name, "Qwen/")
+}
 ```
 
 ## plot top five
@@ -173,8 +186,6 @@ df |>
     scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
     theme_bw() +
     theme(legend.position = "bottom")
-
-# ggsave(file.path("figs", "context_embedding_top5_words_article4.png"), height = 9, width = 12)
 ```
 
 line plot all models but one article id colored by rank (specified where in the text)
@@ -198,6 +209,45 @@ df |>
     scale_color_manual(values = adjust_ltc(heatmap1, amount = -5)) +
     theme_bw() +
     theme(legend.position = "bottom")
+```
+
+plot for paper
+```{r}
+colors <- c(
+    "1" = "firebrick4",
+    "2" = "firebrick3",
+    "3" = "plum3",
+    "4" = "steelblue3",
+    "5" = "steelblue4"
+)
+
+df |>
+    filter(model %in% include_models) |>
+    mutate(model = remove_organization(model)) |>
+    filter(context == "Sentence(N=10)") |>
+    filter(similarity_level == "high") |>
+    filter(id == 4) |>
+    filter(word_n %% 100 == 0) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = word,
+            color = similarity_rank,
+            group = similarity_rank
+        )
+    ) +
+    geom_point(size = 1) +
+    geom_line() +
+    facet_wrap(model ~ implementation, scales = "free", ncol = 2) +
+    scale_color_manual(values = colors) +
+    labs(y = "", x = "word number", color = "Similarity rank") +
+    theme_bw() +
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path("figs", "context_embedding_top5_words_article4.png"),
+    width = 10, height = 6
+)
 ```
 
 ## plot specific words
@@ -331,5 +381,67 @@ df |>
     labs(y = "scaled cosine similarity") +
     theme(legend.position = "bottom")
 
-# ggsave(file.path("figs", "context_embedding_selected_words_article4.png"), height = 9, width = 12)
+ggsave(file.path("figs", "context_embedding_selected_words_article4.png"), height = 9, width = 12)
+```
+
+plot for paper
+```{r}
+words <- c(
+    "lambs",
+    "pancakes",
+    "meat"
+)
+
+# annotations
+annotations <- list(
+    "Eating lamb" = 54,
+    "Eating pancakes" = 234,
+    "Eating meat" = 477
+)
+
+annotations_df <- data.frame(
+    label = names(annotations),
+    word_n = unlist(annotations),
+    row.names = NULL
+)
+
+df |>
+    filter(model %in% include_models) |>
+    mutate(model = remove_organization(model)) |>
+    filter(context == "Sentence(N=10)") |>
+    filter(id == 4) |>
+    filter(word %in% words) |>
+    mutate(word = factor(word, levels = words)) |>
+    ggplot(
+        aes(
+            x = word_n,
+            y = s_sim,
+            color = word,
+            group = word
+        )
+    ) +
+    geom_line() +
+    geom_vline(
+        data = annotations_df,
+        aes(xintercept = word_n),
+        linetype = "dashed",
+        linewidth = 0.5,
+        color = "black",
+        inherit.aes = FALSE
+    ) +
+    geom_text(
+        data = annotations_df,
+        aes(x = word_n, y = -3, label = label),
+        angle = 90,
+        vjust = 1.2,
+        hjust = 0.2,
+        inherit.aes = FALSE
+    ) +
+    facet_wrap(model ~ implementation, ncol = 2) +
+    scale_color_manual(values = c("firebrick", "plum3", "steelblue")) +
+    theme_bw() +
+    labs(y = "scaled cosine similarity", x = "word number", color = "") +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "context_embedding_selected_words_article4.png"), width = 10, height = 6)
 ```
