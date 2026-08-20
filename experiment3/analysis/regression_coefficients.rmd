@@ -72,7 +72,7 @@ for (dataset in c("derco", "tint")) {
 ```{r}
 diagnostics_df |>
     # group_by(dataset) |>
-    # filter(!str_detect(model, "bsemprior")) |>
+    filter(!str_detect(model, "SE_all")) |>
     summarize(
         "max_rhat" = max(max_rhat),
         "min_ess_bulk" = min(min_ess_bulk),
@@ -81,6 +81,7 @@ diagnostics_df |>
     )
 
 diagnostics_df |>
+    filter(!str_detect(model, "SE_all")) |>
     # filter(min(min_ess_bulk) == min_ess_bulk) |>
     # filter(min(min_ess_tail) == min_ess_tail) |>
     filter(max(max_rhat) == max_rhat) |>
