@@ -52,6 +52,12 @@ erp_priors <- c(
 # content words pos tags
 content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 
+# models that need more iterations
+more_iter <- list(
+    "derco" = c("WE_sentences1_word2vec-google-news-300"),
+    "tint" = c()
+)
+
 if ("derco" %in% dataset) {
     # load data
     derco_sem <- read.csv(
@@ -106,6 +112,14 @@ if ("derco" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
+        # models needing more iterations
+        # only lp models
+        if (implementation_id %in% more_iter$derco) {
+            iter <- 3000
+        } else {
+            iter <- 2000
+        }
+
         # n400 ~ sem
         m_sem <- brm(sem_formula,
             family = gaussian(),
@@ -125,6 +139,7 @@ if ("derco" %in% dataset) {
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
+            iter = iter,
             file = file.path(out_folder, paste0("derco_lp_", imp_id))
         )
 
@@ -195,6 +210,14 @@ if ("tint" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
+        # models needing more iterations
+        # only lp models
+        if (implementation_id %in% more_iter$derco) {
+            iter <- 3000
+        } else {
+            iter <- 2000
+        }
+
         # n400 ~ sem
         m_sem <- brm(sem_formula,
             family = gaussian(),
@@ -214,6 +237,7 @@ if ("tint" %in% dataset) {
             chains = 4,
             control = list(adapt_delta = 0.9999),
             seed = 246,
+            iter = iter,
             file = file.path(out_folder, paste0("tint_lp_", imp_id))
         )
 
