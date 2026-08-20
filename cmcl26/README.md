@@ -37,6 +37,33 @@ The validation was run using the code in ``src/validate_semantic_association.py`
 
 OpenAI's GPT-5.2 model was used to generate longer contexts for the stimuli of Federmeier and Kutas (1999) and translating the stimuli to Dutch. The code for this is in ``src/add_context_and_translate.py``.
 
+## Citation
+```
+@inproceedings{ostergaard-etal-2026-modeling,
+    title = "Modeling semantic association in self-paced reading with language model embeddings",
+    author = "{\O}stergaard, Sara M{\o}ller  and
+      Enevoldsen, Kenneth  and
+      Alishahi, Afra  and
+      Nicenboim, Bruno",
+    editor = "Oh, Byung-Doh  and
+      Kuribayashi, Tatsuki  and
+      Rambelli, Giulia  and
+      Takmaz, Ece  and
+      Wicke, Philipp  and
+      Li, Jixing  and
+      Yoshida, Ryo",
+    booktitle = "Proceedings of the 15th Workshop on Cognitive Modeling and Computational Linguistics",
+    month = may,
+    year = "2026",
+    address = "Palma, Mallorca (Spain)",
+    publisher = "ELRA Language Resources Association (ELRA)",
+    url = "https://aclanthology.org/2026.cmcl-1.6/",
+    doi = "10.63317/5hz52qgp2gdn",
+    pages = "60--73"
+}
+```
+
 ## References
-[1] *reference coming*,
+[1] Østergaard, S. M., Enevoldsen, K., Alishahi, A., & Nicenboim, B. (2026). Modeling semantic association in self-paced reading with language model embeddings. Proceedings of the 15th Workshop on Cognitive Modeling and Computational Linguistics. https://doi.org/10.63317/5hz52qgp2gdn
+
 [2] Østergaard, Sara Møller; Lichtenberg, Lenneke; Boon, Laura; Nicenboim, Bruno, 2026, "EEG and Self-Paced Reading of Natural, Dutch Texts (Towards a computational model of reading (TCMR))", https://doi.org/10.34894/0O5XQ7, DataverseNL

@@ -4,14 +4,14 @@ This repository contains code for estimating semantic association using language
 
 ## CMCL 26
 
-The folder ``cmcl26/`` contains code for the paper "Modeling semantic association in self-paced reading with language model embeddings"[1] which will be presented at The 15th Workshop on Cognitive Modeling and Computational Linguistics (CMCL). The original code for this paper (before additional experiment were run) is in the ``cmcl26`` branch.
+The folder ``cmcl26/`` contains code for the paper "Modeling semantic association in self-paced reading with language model embeddings"[1] which was presented at The 15th Workshop on Cognitive Modeling and Computational Linguistics (CMCL). The original code for this paper (before additional experiment were run) is in the ``cmcl26`` branch.
 
 ## Virtual environments
 
-The code to reproduce the results relies on both R and python. There are two separate virtual environments for the two.
+The code to reproduce the results relies on both R and Python. There are two separate virtual environments for the two.
 
 ### Python
-The dependencies for the python code is in the file ``requirements.txt``. To install run:
+The dependencies for the Python code is in the file ``requirements.txt``. To install run:
 ```
 pip install -r requirements.txt
 ```
@@ -30,4 +30,4 @@ Rscript install_pangoling.r
 *NB: Do this when the R environment is activated!*
 
 ## References
-[1] *reference coming*
+[1] Østergaard, S. M., Enevoldsen, K., Alishahi, A., & Nicenboim, B. (2026). Modeling semantic association in self-paced reading with language model embeddings. Proceedings of the 15th Workshop on Cognitive Modeling and Computational Linguistics. https://doi.org/10.63317/5hz52qgp2gdn
