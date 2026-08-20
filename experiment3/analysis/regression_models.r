@@ -114,7 +114,7 @@ if ("derco" %in% dataset) {
 
         # models needing more iterations
         # only lp models
-        if (implementation_id %in% more_iter$derco) {
+        if (imp_id %in% more_iter$derco) {
             iter <- 3000
         } else {
             iter <- 2000
@@ -212,7 +212,7 @@ if ("tint" %in% dataset) {
 
         # models needing more iterations
         # only lp models
-        if (implementation_id %in% more_iter$derco) {
+        if (imp_id %in% more_iter$derco) {
             iter <- 3000
         } else {
             iter <- 2000
