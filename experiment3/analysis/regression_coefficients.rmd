@@ -343,10 +343,13 @@ Plot for paper
 ```{r}
 library(patchwork)
 
-dataset_plot <- function(dataset_title, context_length = "Sentence(N=10)") {
+dataset_plot <- function(dataset_name, coefficient_name, x_lab, context_length = "Sentence(N=10)") {
     fixef_df |>
+        filter(dataset == dataset_name) |>
         filter(context == context_length) |>
-        filter(coefficient != "Intercept") |>
+        filter(model != "STS-multilingual-mpnet-base-v2") |>
+        filter(model != coefficient_name) |>
+        filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
             str_detect(implementation, "SE") ~ "SE",
             str_detect(implementation, "CWE") ~ "CWE",
@@ -356,16 +359,12 @@ dataset_plot <- function(dataset_title, context_length = "Sentence(N=10)") {
             model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
         ) |>
         mutate(
-            dataset = case_when(
-                dataset == "derco" ~ "DERCo"
-            ),
             implementation = paste(model_type, model, sep = ", "),
             coefficient = case_when(
                 coefficient == "s_lp" ~ "Log-probability",
                 coefficient == "s_sem" ~ "Semantic association"
             )
         ) |>
-        filter(dataset == dataset_title) |>
         arrange(model_type, model) |>
         mutate(
             implementation = factor(
@@ -386,28 +385,28 @@ dataset_plot <- function(dataset_title, context_length = "Sentence(N=10)") {
         ) +
         facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
         labs(
-            x = TeX("$\\beta$"), y = "",
+            x = x_lab, y = "",
             color = "Embeddings",
-            title = dataset_title
         ) +
         theme_minimal() +
         theme(plot.title = element_text(size = 11))
 }
 
-p_derco <- dataset_plot("DERCo")
-
-p_derco +
-    plot_layout(guides = "collect") &
+dataset_plot("derco", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+    labs(title = "DERCo") +
+    dataset_plot("derco", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+    plot_layout(guides = "collect", axes = "collect") &
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients.png"), height = 3, width = 8)
 ```
 
 ```{r}
-p_derco <- dataset_plot("DERCo", context_length = "Sentence(N=1)")
-
-p_derco + labs(caption = "Sentence(N=1)") +
-    plot_layout(guides = "collect") &
+dataset_plot("derco", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$"), context_length = "Sentence(N=1)") +
+    labs(title = "DERCo") +
+    dataset_plot("derco", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$"), context_length = "Sentence(N=1)") +
+    labs(caption = "Sentence(N=1)") +
+    plot_layout(guides = "collect", axes = "collect") &
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 3, width = 8)

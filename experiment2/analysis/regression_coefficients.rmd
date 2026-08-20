@@ -293,11 +293,12 @@ Plot for paper
 ```{r}
 library(patchwork)
 
-dataset_plot <- function(dataset_title) {
+dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
     fixef_df |>
+        filter(dataset == dataset_name) |>
         filter(model != "STS-multilingual-mpnet-base-v2") |>
-        filter(model != "sgpt-bloom-7b1-msmarco") |>
-        filter(coefficient != "Intercept") |>
+        filter(model != coefficient_name) |>
+        filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
             str_detect(implementation, "SE") ~ "SE",
             str_detect(implementation, "CWE") ~ "CWE",
@@ -307,17 +308,12 @@ dataset_plot <- function(dataset_title) {
             model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
         ) |>
         mutate(
-            dataset = case_when(
-                dataset == "tanner" ~ "Tanner (2019)",
-                dataset == "ucl" ~ "UCL"
-            ),
             implementation = paste(model_type, model, sep = ", "),
             coefficient = case_when(
                 coefficient == "s_lp" ~ "Log-probability",
                 coefficient == "s_sem" ~ "Semantic association"
             )
         ) |>
-        filter(dataset == title) |>
         arrange(model_type, model) |>
         mutate(
             implementation = factor(
@@ -338,16 +334,21 @@ dataset_plot <- function(dataset_title) {
         ) +
         facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
         labs(
-            x = TeX("$\\beta$"), y = "",
+            x = x_lab, y = "",
             color = "Embeddings",
-            title = dataset_title
         ) +
         theme_minimal() +
         theme(plot.title = element_text(size = 11))
 }
 
-p_tanner <- dataset_plot("Tanner (2019)")
-p_ucl <- dataset_plot("UCL")
+p_tanner <- dataset_plot("tanner", coefficient_name = "s_lp", x_lab = "") +
+    labs(title = "Tanner (2019)") +
+    dataset_plot("tanner", coefficient_name = "s_sem", x_lab = "") +
+    plot_layout(axes = "collect")
+p_ucl <- dataset_plot("ucl", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+    labs(title = "UCL") +
+    dataset_plot("ucl", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+    plot_layout(axes = "collect")
 
 p_tanner / p_ucl +
     plot_layout(guides = "collect") &
