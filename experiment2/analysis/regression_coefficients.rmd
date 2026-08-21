@@ -12,6 +12,11 @@ setwd("experiment2")
 source(file.path("..", "src", "model_diagnostics.r"))
 
 models_path <- file.path("analysis", "brms_models")
+
+exclude_models <- c(
+    "STS-multilingual-mpnet-base-v2",
+    "sgpt-bloom-7b1-msmarco"
+)
 ```
 
 ```{r}
@@ -72,6 +77,7 @@ for (dataset in c("tanner", "ucl")) {
 ```{r}
 diagnostics_df |>
     filter(!str_detect(model, "Gameselo")) |>
+    filter(!str_detect(model, "bigscience")) |>
     # group_by(dataset) |>
     # filter(!str_detect(model, "bsemprior")) |>
     summarize(
@@ -161,13 +167,13 @@ get_fixef_models <- function(
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "lp")
+fixef_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "lp") |>
+    filter(!(model %in% exclude_models))
 ```
 
 ### coefficient for semantic association
 ```{r}
 fixef_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -210,7 +216,6 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width =
 ```{r}
 for (d in c("tanner", "ucl")) {
     fixef_df |>
-        filter(model != "STS-multilingual-mpnet-base-v2") |>
         filter(dataset == d) |>
         filter(coefficient == "s_sem") |>
         mutate(model_type = case_when(
@@ -250,7 +255,6 @@ for (d in c("tanner", "ucl")) {
 ### coefficient for lp
 ```{r}
 fixef_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -296,7 +300,6 @@ library(patchwork)
 dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
     fixef_df |>
         filter(dataset == dataset_name) |>
-        filter(model != "STS-multilingual-mpnet-base-v2") |>
         filter(model != coefficient_name) |>
         filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
@@ -361,14 +364,14 @@ ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
 ```{r}
 rm(fixef_interaction_df)
 
-fixef_interaction_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "interaction")
+fixef_interaction_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "interaction") |>
+    filter(!(model %in% exclude_models))
 ```
 
 ```{r}
 pd <- position_dodge(0.8)
 
 fixef_interaction_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
     filter(coefficient != "Intercept") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
@@ -407,79 +410,4 @@ fixef_interaction_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_interaction.png"), height = 8, width = 7)
-```
-
-### coefficient only including target word from Tanner 
-```{r}
-rm(fixef_target_df)
-
-fixef_target_df <- get_fixef_models(c("tanner"), model_prefix = "target")
-```
-
-```{r}
-fixef_target_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
-    filter(coefficient == "s_sem") |>
-    mutate(model_type = case_when(
-        str_detect(implementation, "SE") ~ "SE",
-        str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
-    )) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
-    mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
-    ) |>
-    ggplot(aes(y = implementation, color = model_type)) +
-    geom_point(aes(x = Estimate)) +
-    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
-    geom_vline(aes(xintercept = 0), linetype = "dashed") +
-    scale_color_manual(
-        values = c(
-            "firebrick",
-            "steelblue1",
-            "steelblue4"
-        )
-    ) +
-    labs(
-        x = TeX("$\\beta_2$"), y = "",
-        color = "Embeddings"
-    ) +
-    theme_minimal() +
-    theme(legend.position = "bottom")
-
-ggsave(file.path("figs", "tanner_target_regression_coefficients_sem.png"), height = 3, width = 7)
-```
-
-```{r}
-fixef_target_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
-    filter(coefficient == "s_lp") |>
-    mutate(model_type = case_when(
-        str_detect(implementation, "SE") ~ "SE",
-        str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
-    )) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
-    mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
-    ) |>
-    ggplot(aes(y = implementation, color = model_type)) +
-    geom_point(aes(x = Estimate)) +
-    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
-    geom_vline(aes(xintercept = 0), linetype = "dashed") +
-    scale_color_manual(
-        values = c(
-            "firebrick",
-            "steelblue1",
-            "steelblue4"
-        )
-    ) +
-    labs(
-        x = TeX("$\\beta_1$"), y = "",
-        color = "Embeddings"
-    ) +
-    theme_minimal() +
-    theme(legend.position = "bottom")
-
-ggsave(file.path("figs", "tanner_target_regression_coefficients_lp.png"), height = 3, width = 7)
 ```
