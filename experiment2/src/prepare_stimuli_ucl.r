@@ -42,6 +42,6 @@ stim <- stim |>
         model = "EleutherAI/pythia-70m-deduped",
         batch_size = 10
     )) |>
-    mutate("s_lp" = scale(lp_gpt2))
+    mutate("s_lp" = scale(lp_pythia))
 
 write.csv(stim, file.path(data_folder, "stim.csv"))
