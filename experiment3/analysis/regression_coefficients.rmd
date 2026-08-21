@@ -186,7 +186,7 @@ fixef_df |>
             dataset == "derco" ~ "DERCo",
             dataset == "tint" ~ "TiNT"
         ),
-        implementation = paste(model_type, model, sep = ":")
+        implementation = paste(model_type, model, sep = ", ")
     ) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
     mutate(
@@ -211,7 +211,7 @@ fixef_df |>
     theme_minimal() +
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 3, width = 7)
+ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width = 7)
 ```
 
 ```{r}
@@ -254,8 +254,8 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(
-    file.path("figs", "regression_coefficients_sentences1.png"),
-    height = 3, width = 7
+    file.path("figs", "regression_coefficients_sem_sentences1.png"),
+    height = 5, width = 7
 )
 ```
 
