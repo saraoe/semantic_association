@@ -393,24 +393,40 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab, context_length =
         theme(plot.title = element_text(size = 11))
 }
 
-dataset_plot("derco", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+p_derco <- dataset_plot("derco", coefficient_name = "s_lp", x_lab = "") +
     labs(title = "DERCo") +
-    dataset_plot("derco", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
-    plot_layout(guides = "collect", axes = "collect") &
+    dataset_plot("derco", coefficient_name = "s_sem", x_lab = "") +
+    plot_layout(axes = "collect")
+
+p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+    labs(title = "TiNT") +
+    dataset_plot("tint", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+    plot_layout(axes = "collect")
+
+p_derco / p_tint +
+    plot_layout(guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients.png"), height = 3, width = 8)
+ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
 ```
 
 ```{r}
-dataset_plot("derco", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$"), context_length = "Sentence(N=1)") +
+p_derco <- dataset_plot("derco", coefficient_name = "s_lp", x_lab = "", context_length = "Sentence(N=1)") +
     labs(title = "DERCo") +
-    dataset_plot("derco", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$"), context_length = "Sentence(N=1)") +
-    labs(caption = "Sentence(N=1)") +
-    plot_layout(guides = "collect", axes = "collect") &
+    dataset_plot("derco", coefficient_name = "s_sem", x_lab = "", context_length = "Sentence(N=1)") +
+    plot_layout(axes = "collect")
+
+p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$"), context_length = "Sentence(N=1)") +
+    labs(title = "TiNT") +
+    dataset_plot("tint", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$"), context_length = "Sentence(N=1)") +
+    plot_layout(axes = "collect")
+
+p_derco / (p_tint +
+    labs(caption = "Sentence(N=1)")) +
+    plot_layout(guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 3, width = 8)
+ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 6, width = 8)
 ```
 
 ### n400 ~ s_lp * s_sem
