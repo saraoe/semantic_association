@@ -404,7 +404,7 @@ p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1
     plot_layout(axes = "collect")
 
 p_derco / p_tint +
-    plot_layout(guides = "collect") &
+    plot_layout(guides = "collect", heights = c(9, 6)) &
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
@@ -423,7 +423,7 @@ p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1
 
 p_derco / (p_tint +
     labs(caption = "Sentence(N=1)")) +
-    plot_layout(guides = "collect") &
+    plot_layout(guides = "collect", heights = c(9, 6)) &
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 6, width = 8)
