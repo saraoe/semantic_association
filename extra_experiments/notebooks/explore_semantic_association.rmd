@@ -10,22 +10,23 @@ setwd("extra_experiments")
 
 ## Read data
 ```{r}
-data_path <- file.path("..", "experiment2", "results")
+exp2_data_path <- file.path("..", "experiment2", "results")
+exp3_data_path <- file.path("..", "experiment3", "results")
 
-tanner_df <- read.csv(file.path(data_path, "tanner_semantic_association.csv")) |>
+tanner_df <- read.csv(file.path(exp2_data_path, "tanner_semantic_association.csv")) |>
     filter(Acceptability == "Gram") |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
     ungroup()
 
-ucl_df <- read.csv(file.path(data_path, "ucl_semantic_association.csv")) |>
+ucl_df <- read.csv(file.path(exp2_data_path, "ucl_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(implementation, model) |>
     mutate(s_sem = scale(semantic_association)) |>
     ungroup()
 
-derco_df <- read.csv(file.path(data_path, "derco_semantic_association.csv")) |>
+derco_df <- read.csv(file.path(exp3_data_path, "derco_semantic_association.csv")) |>
     mutate(full_implementation = paste(implementation, model, sep = "_")) |>
     group_by(article_n, full_implementation) |>
     mutate(

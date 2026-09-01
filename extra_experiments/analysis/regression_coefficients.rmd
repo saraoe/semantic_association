@@ -198,7 +198,7 @@ fixef_df |>
     ) +
     facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
     labs(
-        x = TeX("$\\beta_2$"), y = "",
+        x = TeX("$\\beta$"), y = "",
         color = "Embeddings"
     ) +
     theme_minimal() +
