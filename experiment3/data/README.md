@@ -6,8 +6,13 @@ The data in the folder ``DERCo`` is from the Dublin EEG-based Reading Experiment
 
 To obtain capitalization and punctuation of the articles (as the words in the meta data did not include this), the five fairytales were downloaded from the supplementary materials [1] and put in txt-files in the ``articles/`` folder.
 
+## TiNT
+Data in the file ``tint_stim.csv`` is from the Tilburg Corpus of Natural Dutch Texts (TiNT) [3]. The file includes target and context columns in addition to the information in the file ``tint_stimuli.csv`` file from ``cmcl26/`` folder. The file is created in ``src/prepare_stimuli_tinit.r``.
+
 ## References
 
 [1] Quach, B. M., Gurrin, C., & Healy, G. (2024). DERCo: A Dataset for Human Behaviour in Reading Comprehension Using EEG. Scientific Data, 11(1), 1104. https://doi.org/10.1038/s41597-024-03915-8
 
 [2] Quach, B. M. (2024). DERCo: A Dataset for Human Behaviour in Reading Comprehension Using EEG. OSF https://doi.org/10.17605/OSF.IO/RKQBU
+
+[3] Østergaard, Sara Møller; Lichtenberg, Lenneke; Boon, Laura; Nicenboim, Bruno, 2026, "EEG and Self-Paced Reading of Natural, Dutch Texts (Towards a computational model of reading (TCMR))", https://doi.org/10.34894/0O5XQ7, DataverseNL

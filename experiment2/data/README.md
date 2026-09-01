@@ -15,13 +15,6 @@
 │   ├── README.txt          <- Original readme file
 │   ├── mean_amplitude      <- ERPs extracted from epochs
 │   └── stim.csv            <- stimuli (target words and context)
-├── DERCo
-│   ├── preprocessed_eeg
-|   │   └── ...             <- Preprocessed EEG from OSF data repo
-│   ├── articles
-|   │   └── ...             <- Raw articles
-│   ├── mean_amplitude      <- ERPs extracted from epochs
-|   └── stim.csv            <- stimuli (target words and context)
 
 ```
 
