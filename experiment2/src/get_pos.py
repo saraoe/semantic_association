@@ -4,10 +4,14 @@ import spacy
 from spacy.symbols import ORTH
 
 
-def get_pos(token):
+def get_pos(token, spacy_model):
     # hardcode exceptions
-    if token.text in ["…", ",", "'", "-", "'s", "’s", "'ve", "’ve", "n't", "n’t"]:
-        return "PUNCT"
+    if spacy_model == "en_core_web_sm":
+        if token.text in ["…", ",", "'", "-", "'s", "’s", "'ve", "’ve", "n't", "n’t"]:
+            return "PUNCT"
+    if spacy_model == "nl_core_news_sm":
+        if token.text in ["me."]:
+            return "PRON"
     return token.pos_
 
 
@@ -41,7 +45,11 @@ def add_pos_to_stim(stim_path, id_cols, spacy_model="en_core_web_sm"):
     index_col = []
     for name, group in stim_df.groupby(id_cols):
         text = " ".join(group["target"])
-        pos = [get_pos(word) for word in nlp(text) if get_pos(word) != "PUNCT"]
+        pos = [
+            get_pos(word, spacy_model)
+            for word in nlp(text)
+            if get_pos(word, spacy_model) != "PUNCT"
+        ]
 
         assert len(group) == len(pos)
         pos_col += pos
@@ -61,7 +69,17 @@ def add_pos_to_stim(stim_path, id_cols, spacy_model="en_core_web_sm"):
 if __name__ == "__main__":
     data_path = Path("experiment2", "data")
 
-    datasets = [("Tanner", ["id"]), ("UCL", ["id"])]
+    datasets = [
+        ("Tanner", ["id"], "en_core_web_sm"),
+        ("UCL", ["id"], "en_core_web_sm"),
+        ("RaCCooNS", ["id"], "nl_core_news_sm"),
+    ]
 
-    for dataset_folder, ids in datasets:
-        add_pos_to_stim(stim_path=data_path / dataset_folder / "stim.csv", id_cols=ids)
+    for dataset_folder, ids, spacy_model in datasets:
+        if dataset_folder != "RaCCooNS":
+            continue
+        add_pos_to_stim(
+            stim_path=data_path / dataset_folder / "stim.csv",
+            id_cols=ids,
+            spacy_model=spacy_model,
+        )
