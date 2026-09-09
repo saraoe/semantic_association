@@ -11,7 +11,7 @@ if __name__ == "__main__":
     print(project_root)
     sys.path.insert(0, str(project_root))
 
-from experiment2.extract_semantic_association import *
+from experiment2.src.extract_semantic_association import *
 
 from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelContentWord
 from src.sentence_embedding_models import SentenceEmbeddingModel
@@ -29,9 +29,7 @@ if __name__ == "__main__":
             "df": pd.read_csv(
                 Path("experiment3", "data", "tint_stim.csv"), index_col=0
             ),
-            "out_path": Path(
-                "experiment3", "results", "tint_semantic_association.csv"
-            ),
+            "out_path": Path("experiment3", "results", "tint_semantic_association.csv"),
         },
     ]
 
@@ -69,32 +67,36 @@ if __name__ == "__main__":
         },
     ]
     # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models
-    config = [
-        {
-            **entry,
-            "implementation": entry["implementation"],
-            "n_sentences": 10,
-        }
-        for entry in config
-    ] + [
-        {
-            **entry,
-            "implementation": entry["implementation"] + "_sentences1",
-            "n_sentences": 1,
-        }
-        for entry in config
-    ] + [
-        {
-            "implementation": "SE_all",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Qwen/Qwen3-Embedding-8B",
-        },
-        {
-            "implementation": "SE_all",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Qwen/Qwen3-Embedding-0.6B",
-        }
-    ]
+    config = (
+        [
+            {
+                **entry,
+                "implementation": entry["implementation"],
+                "n_sentences": 10,
+            }
+            for entry in config
+        ]
+        + [
+            {
+                **entry,
+                "implementation": entry["implementation"] + "_sentences1",
+                "n_sentences": 1,
+            }
+            for entry in config
+        ]
+        + [
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "Qwen/Qwen3-Embedding-8B",
+            },
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "Qwen/Qwen3-Embedding-0.6B",
+            },
+        ]
+    )
 
     print("Extracting semantic association")
     for name, model in stream_models(config):

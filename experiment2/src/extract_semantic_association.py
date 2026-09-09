@@ -1,5 +1,5 @@
 """
-Extract semantic association from linguistic data
+Extract semantic association from English linguistic data
 """
 
 from pathlib import Path
@@ -9,7 +9,7 @@ import numpy as np
 from functools import cache
 
 if __name__ == "__main__":
-    project_root = Path(__file__).parent.parent
+    project_root = Path(__file__).parent.parent.parent
     print(project_root)
     sys.path.insert(0, str(project_root))
 

@@ -1,5 +1,5 @@
 """
-Extract semantic association from (English) linguistic data
+Extract semantic association from (Dutch) linguistic data
 """
 
 from pathlib import Path
@@ -25,12 +25,12 @@ MODEL_REGISTRY = {
 if __name__ == "__main__":
     corpora = [
         {
-            "name": "derco",
+            "name": "raccoons",
             "df": pd.read_csv(
-                Path("experiment3", "data", "DERCo", "stim.csv"), index_col=0
+                Path("experiment2", "data", "RaCCooNS", "stim.csv"), index_col=0
             ),
             "out_path": Path(
-                "experiment3", "results", "derco_semantic_association.csv"
+                "experiment2", "results", "raccoons_semantic_association.csv"
             ),
         },
     ]
@@ -39,17 +39,12 @@ if __name__ == "__main__":
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
+            "model_name": "clips/e5-large-trm-nl",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/e5-large-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "BAAI/bge-m3",
         },
         {
             "implementation": "SE",
@@ -64,57 +59,15 @@ if __name__ == "__main__":
         {
             "implementation": "WE",
             "model_type": "WordEmbedding",
-            "model_name": "enwiki_20180420_300d",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "word2vec-google-news-300",
+            "model_name": "nlwiki_20180420_300d",
         },
         {
             "implementation": "CWE",
             "model_type": "WordEmbeddingContentWord",
-            "model_name": "enwiki_20180420_300d",
-            "spacy_model_name": "en_core_web_sm",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "word2vec-google-news-300",
-            "spacy_model_name": "en_core_web_sm",
+            "model_name": "nlwiki_20180420_300d",
+            "spacy_model_name": "nl_core_news_sm",
         },
     ]
-    # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models
-    config = (
-        [
-            {
-                **entry,
-                "implementation": entry["implementation"],
-                "n_sentences": 10,
-            }
-            for entry in config
-        ]
-        + [
-            {
-                **entry,
-                "implementation": entry["implementation"] + "_sentences1",
-                "n_sentences": 1,
-            }
-            for entry in config
-        ]
-        + [
-            {
-                "implementation": "SE_all",
-                "model_type": "SentenceEmbedding",
-                "model_name": "Qwen/Qwen3-Embedding-8B",
-            },
-            {
-                "implementation": "SE_all",
-                "model_type": "SentenceEmbedding",
-                "model_name": "Qwen/Qwen3-Embedding-0.6B",
-            },
-        ]
-    )
 
     print("Extracting semantic association")
     for name, model in stream_models(config):

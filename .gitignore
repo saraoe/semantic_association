@@ -18,6 +18,7 @@ experiment1/results/hoeks_semantic_association.csv
 experiment2/data/Tanner/*
 experiment2/data/UCL/*
 experiment2/data/Stone/*
+experiment2/data/RaCCooNS/*
 experiment2/results/*
 experiment2/figs/preprocessing/*
 experiment2/analysis/brms_models/*

@@ -21,6 +21,11 @@
 │   ├── experimental_stimuli.tsv    <- Original stimuli file from the OSF repo
 │   ├── mean_amplitude.csv          <- ERPs extracted from epochs
 │   └── stim.csv                    <- stimuli (incl. target words and context)
+├── RaCCooNS
+│   ├── N400.tsv                    <- Original stimuli file from the OSF repo
+│   ├── words.tsv                   <- Original stimuli file from the OSF repo
+│   ├── mean_amplitude.csv          <- ERPs extracted from epochs
+│   └── stim.csv                    <- stimuli (incl. target words and context)
 
 ```
 
@@ -30,11 +35,15 @@ The data in the folder ``Tanner/`` is from the paper "Robust neurocognitive indi
 
 ## UCL
 
-The data in the folder ``UCL/`` is from the EEG data from the UCL corpus by Frank et al. [5]. Our analysis relies on the already preprocessed EEG in the file ``stimuli_erp.mat``. The data was downloaded from Frank's [website](https://cls.ru.nl/~sfrank/publications.html).  
+The data in the folder ``UCL/`` is the EEG data from the UCL corpus by Frank et al. [5]. Our analysis relies on the already preprocessed EEG in the file ``stimuli_erp.mat``. The data was downloaded from Frank's [website](https://cls.ru.nl/~sfrank/publications.html).  
 
 ## Stone
 
-The data is the folder ``Stone/`` is from the paper "Understanding the Effects of Constraint and Predictability in ERP" [6]. The preprocessed EEG data in the folder ``prepro_eeg/`` was downloaded from zenodo [here](https://zenodo.org/records/7334782) [7]. The stimuli file is downloaded from the OSF repository [here](https://osf.io/fndk5/files/osfstorage).
+The data in the folder ``Stone/`` is from the paper "Understanding the Effects of Constraint and Predictability in ERP" [6]. The preprocessed EEG data in the folder ``prepro_eeg/`` was downloaded from zenodo [here](https://zenodo.org/records/7334782) [7]. The stimuli file is downloaded from the OSF repository [here](https://osf.io/fndk5/files/osfstorage).
+
+## RaCCooNS
+
+The data in the folder ``RaCCooNS/`` is data from the Radboud Coregistration Corpus of Narrative Sentences (RaCCooNS) [8]. The files ``N400.tsv`` and ``words.tsv`` were downloaded from the online data repository [here](https://doi.org/10.34973/3g69-ha39) [9]. The files contain the preprocessed N400 and the words for the linguistic stimuli.  
 
 
 ## References
@@ -52,4 +61,8 @@ The data is the folder ``Stone/`` is from the paper "Understanding the Effects o
 [6] Kate Stone, Bruno Nicenboim, Shravan Vasishth, Frank Rösler; Understanding the Effects of Constraint and Predictability in ERP. Neurobiology of Language 2023; 4 (2): 221–256. doi: https://doi.org/10.1162/nol_a_00094
 
 [7] Stone, K., Nicenboim, B., Vasishth, S., & Rösler, F. (2022). Preprocessed EEG data for the experiment reported in "Understanding the effects of constraint and predictability in ERP" (Version 2) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.7334782
+
+[8] Frank, S. L., & Aumeistere, A. (2024). An eye-tracking-with-EEG coregistration corpus of narrative sentences. Language Resources and Evaluation, 58(2), 641–657. https://doi.org/10.1007/s10579-023-09684-x
+
+[9] Frank, S.L., Aumeistere, A. (2022): EEG+ET sentence reading. Version 1. Radboud University. (dataset). https://doi.org/10.34973/3g69-ha39
 
