@@ -15,8 +15,8 @@ parser <- ArgumentParser(description = "Run brms models")
 parser$add_argument("--dataset",
     type = "character",
     nargs = "+",
-    default = c("tanner", "ucl"),
-    help = "Specify dataset (ucl or tanner)"
+    default = c("tanner", "ucl", "raccoons"),
+    help = "Specify dataset (ucl, tanner, or raccoons)"
 )
 
 args <- parser$parse_args()
@@ -205,6 +205,72 @@ if ("ucl" %in% dataset) {
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("ucl_interaction_", imp_id))
+        )
+    }
+}
+
+if ("raccoons" %in% dataset) {
+    print("Dataset: RaCCooNS")
+    # load data
+    raccoons_sem <- read.csv(
+        file.path("results", "raccoons_semantic_association.csv")
+    ) |>
+        select(-X) |>
+        mutate(
+            implementation_id = paste(implementation, model, sep = "_")
+        ) |>
+        mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+    raccoons_df <- read.csv(file.path("data", "RaCCooNS", "mean_amplitude.csv")) |>
+        left_join(raccoons_sem) |>
+        filter(pos %in% content_pos) |>
+        mutate(word = clean_word(word)) |>
+        # only use complete cases across implementations of sem
+        group_by(id, word_n) |>
+        filter(all(!is.na(semantic_association))) |>
+        ungroup() |>
+        arrange(subject, id, word_n)
+
+    # run models
+    implementations <- raccoons_df |>
+        pull(implementation_id) |>
+        unique()
+    for (imp_id in implementations) {
+        print(paste("Running implementation", imp_id))
+        data <- raccoons_df |>
+            filter(implementation_id == imp_id) |>
+            mutate(s_sem = scale(semantic_association))
+
+        # n400 ~ sem
+        m_sem <- brm(sem_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("raccoons_", imp_id))
+        )
+
+        # n400 ~ sem + lp
+        m_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("raccoons_lp_", imp_id))
+        )
+
+        # n400 ~ sem * lp
+        m_sem_lp <- brm(interaction_formula,
+            family = gaussian(),
+            prior = erp_priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("raccoons_interaction_", imp_id))
         )
     }
 }
