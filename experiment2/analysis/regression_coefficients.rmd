@@ -293,7 +293,7 @@ fixef_df |>
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 7)
 ```
 
-Plot for paper
+## Plot for paper
 ```{r}
 library(patchwork)
 
@@ -410,4 +410,51 @@ fixef_interaction_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "regression_coefficients_interaction.png"), height = 8, width = 7)
+```
+
+## RaCCooNS
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("raccoons"), model_prefix = "lp") |>
+    filter(!(model %in% exclude_models))
+```
+
+```{r}
+fixef_df |>
+    filter(dataset == "raccoons") |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ coefficient) +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings",
+        subtitle = "RaCCooNS (Early N400)"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path("figs", paste0("regression_coefficients_", d, ".png")),
+    height = 3, width = 7
+)
 ```
