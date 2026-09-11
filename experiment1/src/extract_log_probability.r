@@ -28,8 +28,7 @@ kuperberg_stim <- kuperberg_stim |>
 write.csv(kuperberg_stim, file.path("results", "kuperberg_log_probability.csv"))
 
 # Kim & Osterhout (2005)
-kim_osterhout_stim <- read.csv(file.path("data", "kim_osterhout_2005_stim.csv")) |>
-    select(-X)
+kim_osterhout_stim <- read.csv(file.path("data", "kim_osterhout_2005_stim.csv"))
 
 kim_osterhout_stim <- kim_osterhout_stim |>
     mutate("lp_pythia" = causal_targets_pred(
