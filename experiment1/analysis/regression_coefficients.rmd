@@ -1,0 +1,206 @@
+# Regression coefficients
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(latex2exp)
+library(brms)
+
+setwd("experiment1")
+
+source(file.path("..", "src", "model_diagnostics.r"))
+
+models_path <- file.path("analysis", "brms_models")
+
+exclude_models <- c(
+    "STS-multilingual-mpnet-base-v2",
+    "jina-embeddings-v2-base-de"
+)
+```
+
+```{r}
+model_names <- list.files(models_path,
+    full.names = FALSE,
+    pattern = ".*\\.rds$"
+)
+model_name <- model_names[1]
+
+print(model_name)
+m <- readRDS(file.path(models_path, model_name))
+summary(m)
+```
+
+```{r}
+plot(m)
+plot(m, variable = "^b_", regex = TRUE)
+plot(m, variable = "^sd", regex = TRUE)
+```
+
+```{r}
+mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
+    labs(title = model_name) +
+    theme(aspect.ratio = .6)
+```
+
+## Summarize diagnostics across all models
+```{r}
+diagnostics_df <- data.frame()
+
+model_names <- list.files(models_path,
+    full.names = FALSE,
+    pattern = "delogu_lp_.*\\.rds$"
+)
+for (model in model_names) {
+    print(model)
+    fit <- readRDS(
+        file.path(models_path, model)
+    )
+    if (number_divergent_transitions(fit) > 0) {
+        print(paste(
+            "Divergent transistions! Number:",
+            number_divergent_transitions(fit)
+        ))
+    }
+    diag <- diagnostics_rhat_ess(fit) |>
+        mutate("model" = model)
+
+    diagnostics_df <- rbind(diagnostics_df, diag)
+}
+```
+
+```{r}
+diagnostics_df |>
+    filter(!str_detect(model, "Gameselo")) |>
+    filter(!str_detect(model, "jinaai")) |>
+    # group_by(dataset) |>
+    # filter(!str_detect(model, "bsemprior")) |>
+    summarize(
+        "max_rhat" = max(max_rhat),
+        "min_ess_bulk" = min(min_ess_bulk),
+        "min_ess_tail" = min(min_ess_tail),
+        "avg_ess" = mean(avg_ess)
+    )
+
+diagnostics_df |>
+    # filter(min(min_ess_bulk) == min_ess_bulk) |>
+    # filter(min(min_ess_tail) == min_ess_tail) |>
+    filter(max(max_rhat) == max_rhat) |>
+    select(model)
+
+diagnostics_df |>
+    filter(max_rhat >= 1.035) |>
+    select(model, max_rhat)
+```
+
+## Plot effect of all models
+```{r}
+get_modelname <- function(text) {
+    # remove implementation
+    text <- str_remove(text, "CWE_")
+    text <- str_remove(text, "WE_")
+    text <- str_remove(text, "SE_")
+    text <- str_remove(text, "sentences1_")
+    text <- str_remove(text, "all_")
+    # remove organization
+    text <- str_remove(text, "Qwen_")
+    text <- str_remove(text, "BAAI_")
+    text <- str_remove(text, "intfloat_")
+    text <- str_remove(text, "Gameselo_")
+    text <- str_remove(text, "jinaai_")
+    text <- str_remove(text, "aari1995_")
+    return(text)
+}
+
+
+get_fixef_models <- function(
+  datasets,
+  model_prefix
+) {
+    for (dataset in datasets) {
+        prefix <- paste0(dataset, "_", model_prefix, "_")
+
+        model_names <- list.files(models_path,
+            full.names = FALSE,
+            pattern = paste0(prefix, ".*\\.rds$")
+        )
+
+        for (model_name in model_names) {
+            implementation <- str_remove(model_name, paste0(prefix))
+            implementation <- str_remove(implementation, ".rds")
+            if (!str_starts(implementation, "SE|WE|CWE")) {
+                next
+            }
+
+            print(model_name)
+            m <- readRDS(file.path(models_path, model_name))
+            if (number_divergent_transitions(m) > 0) {
+                print("Divergent transitions - skips this model")
+                next
+            }
+
+            fe_df <- fixef(m) |>
+                as.data.frame()
+            fe_df$coefficient <- rownames(fe_df)
+            fe_df <- fe_df |>
+                mutate(
+                    "implementation" = implementation,
+                    "dataset" = dataset,
+                    "model" = get_modelname(implementation)
+                )
+
+            if (exists("fixef_df_")) {
+                fixef_df_ <- rbind(fixef_df_, fe_df)
+            } else {
+                fixef_df_ <- fe_df
+            }
+        }
+    }
+    return(fixef_df_)
+}
+```
+
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("delogu"), model_prefix = "lp") |>
+    filter(!(model %in% exclude_models))
+```
+
+### coefficients
+```{r}
+fixef_df |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        implementation = paste(model_type, model, sep = ", ")
+    ) |>
+    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3, width = 7)
+```

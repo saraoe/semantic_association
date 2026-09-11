@@ -1,0 +1,79 @@
+# Correlation between human association and lm association in Delogu et al. (2019)
+
+```{r}
+library(tidytable)
+library(readxl)
+library(stringr)
+library(ggplot2)
+library(reshape2)
+
+setwd("experiment1")
+
+exclude_models <- c(
+    "Gameselo/STS-multilingual-mpnet-base-v2",
+    "jinaai/jina-embeddings-v2-base-de"
+)
+```
+
+## read data
+```{r}
+assoc_df <- read.csv(file.path("data", "Delogu", "dbc_data.csv")) |>
+    select(ItemNum, Condition, Assoc, Plaus) |>
+    distinct()
+
+lp_df <- read.csv(file.path("results", "delogu_log_probability.csv")) |>
+    select(-X)
+
+delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |>
+    left_join(assoc_df) |>
+    left_join(lp_df) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    )) |>
+    mutate(full_implementation = paste(implementation, model, sep = ", ")) |>
+    filter(!model %in% exclude_models)
+```
+
+```{r}
+cor_matrix <- delogu_df |>
+    select(semantic_association, Assoc, Plaus, lp_benjamin_gerpt2, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association"), "Assoc", "Plaus", "lp_benjamin_gerpt2") |>
+    cor(use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+matrix_names <- colnames(cor_matrix)
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "WE") ~ 1L,
+        str_starts(matrix_names, "CWE") ~ 2L,
+        str_starts(matrix_names, "SE") ~ 3L,
+        TRUE ~ 4L
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
+melted <- melt(cor_matrix)
+
+ggplot(melted, aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    labs(x = "", y = "", fill = "Correlation") +
+    theme(aspect.ratio = 1)
+```
