@@ -1,0 +1,206 @@
+# Modeling the N400 from Delogu et al. (2019)
+
+```{r}
+library(tidytable)
+library(stringr)
+library(lmerTest)
+library(brms)
+library(ggplot2)
+
+options(mc.cores = parallel::detectCores())
+options(brms.backend = "cmdstan")
+
+setwd("experiment1")
+
+brms_out_folder <- file.path("analysis", "brms_models")
+if (!dir.exists(brms_out_folder)) {
+    dir.create(brms_out_folder)
+}
+```
+
+## Read data
+Get N400 (mean amplitude)
+```{r}
+erp_df <- read.csv(file.path("data", "Delogu", "dbc_data.csv"))
+
+n400_chs <- c(
+    "Cz", "Pz", "C4", "CP6", "P4", "P3",
+    "CP5", "C3", "P8", "P7"
+)
+id_cols <- c(
+    "ItemNum", "Condition", "Subject",
+    "TrialNum", "Assoc", "Plaus"
+)
+
+mean_amplitude_df <- erp_df |>
+    select(all_of(c(id_cols, n400_chs, "Timestamp"))) |>
+    filter(Timestamp >= 300 & Timestamp <= 500) |>
+    pivot_longer(
+        cols = n400_chs,
+        names_to = "channel", values_to = "amplitude"
+    ) |>
+    group_by(id_cols) |>
+    summarize(n400 = mean(amplitude))
+```
+
+semantic association
+```{r}
+delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    )) |>
+    left_join(mean_amplitude_df) |>
+    mutate(model = str_replace(model, "/", "_")) |>
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
+```
+
+## Regression models
+
+### lme4
+```{r}
+rm(fixef_all)
+
+all_implementations <- delogu_df |>
+    pull(full_implementation) |>
+    unique()
+
+for (impl in all_implementations) {
+    print(impl)
+    data <- delogu_df |>
+        filter(
+            full_implementation == impl
+        ) |>
+        mutate(
+            s_sem = scale(semantic_association)
+        )
+
+    fit <- lmer(
+        n400 ~ s_sem + (1 | ItemNum) + (1 + s_sem | Subject),
+        data = data
+    )
+
+    tmp_df <- data.frame(
+        "sem_estimate" = coef(summary(fit))[2, 1],
+        "std.error" = coef(summary(fit))[2, 2],
+        "full_implementation" = impl,
+        "implementation" = data |> pull(implementation) |> unique()
+    )
+
+    if (exists("fixef_all")) {
+        fixef_all <- rbind(fixef_all, tmp_df)
+    } else {
+        fixef_all <- tmp_df
+    }
+}
+```
+
+```{r}
+fixef_all |>
+    ggplot(aes(y = full_implementation, color = implementation)) +
+    geom_point(aes(x = sem_estimate)) +
+    geom_errorbar(
+        aes(xmin = sem_estimate - std.error, xmax = sem_estimate + std.error),
+        width = 0.25
+    ) +
+    geom_vline(aes(xintercept = 0), linetype = "dotted") +
+    labs(y = "", x = "Estimate") +
+    scale_color_manual(values = c("steelblue4", "firebrick", "steelblue1")) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "n400_estimate_delogu.png"), width = 7, height = 4)
+```
+
+### brms
+```{r}
+# priors and model formula
+erp_priors <- c(
+    prior(normal(0, 20), class = Intercept),
+    prior(normal(0, 10), class = b),
+    prior(normal(0, 10), class = sigma),
+    prior(normal(0, 10), class = sd)
+)
+
+sem_formula <- bf(
+    n400 ~ s_sem +
+        (s_sem || Subject) +
+        (s_sem || ItemNum)
+)
+```
+
+```{r}
+rm(fixef_all)
+
+all_implementations <- delogu_df |>
+    pull(full_implementation) |>
+    unique()
+
+for (impl in all_implementations) {
+    print(impl)
+    data <- delogu_df |>
+        filter(
+            full_implementation == impl
+        ) |>
+        mutate(
+            s_sem = scale(semantic_association)
+        )
+
+    fit <- brm(sem_formula,
+        family = gaussian(),
+        prior = erp_priors,
+        data = data,
+        chains = 4,
+        control = list(adapt_delta = 0.9999),
+        seed = 246,
+        file = file.path(brms_out_folder, paste0("delogu_", impl))
+    )
+
+    fe_df <- fixef(fit) |>
+        as.data.frame()
+    fe_df$coefficient <- rownames(fe_df)
+    fe_df <- fe_df |>
+        mutate(
+            "implementation" = data |> pull(implementation) |> unique(),
+            "model" = data |> pull(model) |> unique()
+        )
+
+    if (exists("fixef_all")) {
+        fixef_all <- rbind(fixef_all, fe_df)
+    } else {
+        fixef_all <- fe_df
+    }
+}
+```
+
+```{r}
+fixef_all |>
+    filter(!str_detect(model, "Gameselo")) |>
+    filter(!str_detect(model, "jinaai")) |>
+    filter(coefficient != "Intercept") |>
+    mutate(full_implementation = paste(implementation, model, sep = ", ")) |>
+    mutate(
+        implementation = factor(implementation, levels = c("SE", "WE", "CWE")),
+    ) |>
+    ggplot(aes(y = full_implementation, color = implementation)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    facet_wrap(. ~ coefficient) +
+    labs(
+        y = "",
+        color = "Embeddings",
+        subtitle = "Delogu et al. (2019)"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "n400_estimate_delogu.png"), width = 7, height = 4)
+```
+

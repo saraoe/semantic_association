@@ -14,6 +14,7 @@ experiment1/results/kuperberg_semantic_association.csv
 experiment1/data/Delogu/*
 experiment1/data/Hoeks/*
 experiment1/results/hoeks_semantic_association.csv
+experiment1/analysis/brms_models/*
 
 experiment2/data/Tanner/*
 experiment2/data/UCL/*

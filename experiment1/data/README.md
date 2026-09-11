@@ -7,6 +7,7 @@ The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
 
 ## Delogu (2019)
 The file ``delogu_2019_stim.xlsx`` is the stimuli from the study "Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension" by Delogu et al. [3]. The file contains linguistic stimuli (90 sentence frames with each three conditions, i.e., 270 unique sentences). The stimuli was obtained from the appendix of the paper.
+The corresponding ERPs were downloaded from GitHub [here](https://github.com/hbrouwer/dbc2019rerps/releases/tag/v1.0) and saved in the folder ``Delogu/``.
 
 The file ``delogu_2019_stim_nl.csv`` is a Dutch translation of the stimuli from Delogu et al. [3]. The translation was done by Claude 4.8 (on the 29.06.2026).
 
