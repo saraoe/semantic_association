@@ -1,0 +1,271 @@
+"","ItemNum","Condition","context","target","continuation","lp_benjamin_gerpt2","s_lp"
+"1",1,"control","Johann betrat das Restaurant. Wenig später öffnete er die","Speisekarte","und verschaffte sich einen Überblick.",-7.63937139511108,0.0719360720961867
+"2",1,"script-related","Johann verließ das Restaurant. Wenig später öffnete er die","Speisekarte","und verschaffte sich einen Überblick.",-7.98241949081421,-0.0125944646992796
+"3",1,"script-unrelated","Johann betrat die Wohnung. Wenig später öffnete er die","Speisekarte","und verschaffte sich einen Überblick.",-11.5615568161011,-0.894530272420577
+"4",2,"control","Sabine betrat das Kino. Schnell ging sie zur","Kasse","und kaufte eine Karte.",-3.07568740844727,1.19647418202761
+"5",2,"script-related","Sabine verließ das Kino. Schnell ging sie zur","Kasse","und kaufte eine Karte.",-3.87002801895142,1.00074058360396
+"6",2,"script-unrelated","Sabine betrat die Schule. Schnell ging sie zur","Kasse","und kaufte eine Karte.",-5.01507472991943,0.718589438192052
+"7",3,"control","Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine","Mistgabel","und fing an zu schaufeln.",-14.2254458963871,-1.55093961192914
+"8",3,"script-related","Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine","Mistgabel","und fing an zu schaufeln.",-13.7454213500023,-1.4326566857472
+"9",3,"script-unrelated","Kevin betrat die Kirche. Ohne zu zögern nahm er eine","Mistgabel","und fing an zu schaufeln.",-15.4504704475403,-1.85279810988803
+"10",4,"control","Susi betrat die Arztpraxis. Freundlich sprach sie mit der","Arzthelferin","über die Problematik.",-6.96667330223136,0.23769571806029
+"11",4,"script-related","Susi verließ die Arztpraxis. Freundlich sprach sie mit der","Arzthelferin","über die Problematik.",-6.62471477105282,0.321957775084871
+"12",4,"script-unrelated","Susi betrat das Gehege. Freundlich sprach sie mit der","Arzthelferin","über die Problematik.",-11.1805223301053,-0.800639503043793
+"13",5,"control","Roman betrat die Bücherei. Kurz danach ging er zum","Regal","und suchte einen Krimi.",-7.56232690811157,0.0909206166098402
+"14",5,"script-related","Roman verließ die Bücherei. Kurz danach ging er zum","Regal","und suchte einen Krimi.",-8.94162559509277,-0.248952596132616
+"15",5,"script-unrelated","Roman betrat die Kneipe. Kurz danach ging er zum","Regal","und suchte einen Krimi.",-7.98398017883301,-0.0129790340866389
+"16",6,"control","Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die","Nudelpackung","mit einem Handgriff.",-18.218664675951,-2.53490929783111
+"17",6,"script-related","Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die","Nudelpackung","mit einem Handgriff.",-18.4017602801323,-2.58002591529728
+"18",6,"script-unrelated","Lea begann die Wände zu streichen. Vorsichtig öffnete sie die","Nudelpackung","mit einem Handgriff.",-19.7510869503021,-2.91251371852532
+"19",7,"control","Peter erreichte das Theater. Wenig später ging er zur","Loge","und setzte sich.",-8.98458987474442,-0.259539431236714
+"20",7,"script-related","Peter verließ das Theater. Wenig später ging er zur","Loge","und setzte sich.",-9.26315540075302,-0.328180807595197
+"21",7,"script-unrelated","Peter erreichte den Supermarkt. Wenig später ging er zur","Loge","und setzte sich.",-9.70845675468445,-0.437907586303645
+"22",8,"control","Lisa betrat den Bahnhof. Wenig später war sie am","Gleis","und wartete auf den Zug.",-4.19015884399414,0.921857095181811
+"23",8,"script-related","Lisa verließ den Bahnhof. Wenig später war sie am","Gleis","und wartete auf den Zug.",-4.88514852523804,0.750604575320289
+"24",8,"script-unrelated","Lisa betrat das Haus. Wenig später war sie am","Gleis","und wartete auf den Zug.",-7.09204769134521,0.206802194542907
+"25",9,"control","Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem","Laufband","und rann wie verrückt.",-4.30618460476398,0.893267168688049
+"26",9,"script-related","Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem","Laufband","und rann wie verrückt.",-4.85729497671127,0.757467972721753
+"27",9,"script-unrelated","Tim begann seine Fahrstunde. Umgehend war er auf dem","Laufband","und rann wie verrückt.",-6.61339172720909,0.3247478881514
+"28",10,"control","Maria erreichte den Flughafen. Sofort ging sie zum","Check-in","um den Koffer aufzugeben.",-5.99073193967342,0.478177587195381
+"29",10,"script-related","Maria verließ den Flughafen. Sofort ging sie zum","Check-in","um den Koffer aufzugeben.",-6.02272927761078,0.470293117974449
+"30",10,"script-unrelated","Maria erreichte das Einkaufszentrum. Sofort ging sie zum","Check-in","um den Koffer aufzugeben.",-6.72774022817612,0.296571255517169
+"31",11,"control","Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den","Kuchen","und gratulierte.",-6.0510082244873,0.463324898096756
+"32",11,"script-related","Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den","Kuchen","und gratulierte.",-4.76297378540039,0.780709672741556
+"33",11,"script-unrelated","Lukas kam zum Unterricht. Nach einer Weile überreichte er den","Kuchen","und gratulierte.",-7.94312286376953,-0.00291137646779003
+"34",12,"control","Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die","Stylistin","nach einem neuen Schnitt.",-9.22431310266256,-0.318609670634864
+"35",12,"script-related","Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die","Stylistin","nach einem neuen Schnitt.",-8.72757779806852,-0.196209043817418
+"36",12,"script-unrelated","Marie ging zur Uni. Nach einem kurzen Moment fragte sie die","Stylistin","nach einem neuen Schnitt.",-10.5889728367329,-0.654875696620765
+"37",13,"control","Thorsten begann zu duschen. Als erstes benutzte er das","Shampoo","und dann das Duschgel.",-4.44561100006104,0.858911088052301
+"38",13,"script-related","Thorsten hörte auf zu duschen. Als erstes benutzte er das","Shampoo","und dann das Duschgel.",-4.31036376953125,0.892237380021217
+"39",13,"script-unrelated","Thorsten begann zu grillen. Als erstes benutzte er das","Shampoo","und dann das Duschgel.",-7.76869106292725,0.0400703918150995
+"40",14,"control","Claudia betrat den Blumenladen. Schnell fragte sie nach einer","Rose","für eine Freundin.",-6.38493633270264,0.381041618894517
+"41",14,"script-related","Claudia verließ den Blumenladen. Schnell fragte sie nach einer","Rose","für eine Freundin.",-7.12447547912598,0.198811658106379
+"42",14,"script-unrelated","Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer","Rose","für eine Freundin.",-7.44042825698853,0.120957682966249
+"43",15,"control","Jonathan ging zum Friedhof. Nachdenklich betrachtete er den","Grabstein","und sprach ein Gebet.",-4.95923697389662,0.732348428692752
+"44",15,"script-related","Jonathan verließ den Friedhof. Nachdenklich betrachtete er den","Grabstein","und sprach ein Gebet.",-5.12785557284951,0.690799092428481
+"45",15,"script-unrelated","Jonathan ging in die Küche. Nachdenklich betrachtete er den","Grabstein","und sprach ein Gebet.",-9.03490098193288,-0.271936599303479
+"46",16,"control","Lara ging in den Garten. Genau prüfte sie die","Erde","und goss dann die Blumen.",-5.59805631637573,0.57493685109922
+"47",16,"script-related","Lara verließ den Garten. Genau prüfte sie die","Erde","und goss dann die Blumen.",-5.08794069290161,0.700634524457937
+"48",16,"script-unrelated","Lara ging zum Herd. Genau prüfte sie die","Erde","und goss dann die Blumen.",-6.68141031265259,0.307987417501294
+"49",17,"control","Roman ging ins Museum. Akribisch betrachtete er die","Skulpturen","und war begeistert.",-6.71738815307617,0.299122112018359
+"50",17,"script-related","Roman verließ das Museum. Akribisch betrachtete er die","Skulpturen","und war begeistert.",-7.24487495422363,0.169144003957076
+"51",17,"script-unrelated","Roman ging in die Buchhandlung. Akribisch betrachtete er die","Skulpturen","und war begeistert.",-9.7456521987915,-0.447072921707332
+"52",18,"control","Annika ging zum Konditor. Schnell fragte sie nach einem","Kuchen","und bezahlte sofort.",-4.89780807495117,0.747485133626124
+"53",18,"script-related","Annika verließ den Konditor. Schnell fragte sie nach einem","Kuchen","und bezahlte sofort.",-5.42713689804077,0.617053132639889
+"54",18,"script-unrelated","Annika ging in die Boutique. Schnell fragte sie nach einem","Kuchen","und bezahlte sofort.",-6.96074771881104,0.239155842030136
+"55",19,"control","Emil betrat das Spa. Nach einer Weile bekam er eine","Massage","und genoss sie.",-5.56719875335693,0.582540468197961
+"56",19,"script-related","Emil verließ das Spa. Nach einer Weile bekam er eine","Massage","und genoss sie.",-5.80214881896973,0.524646384496162
+"57",19,"script-unrelated","Emil betrat die Apotheke. Nach einer Weile bekam er eine","Massage","und genoss sie.",-7.19769859313965,0.180768738728777
+"58",20,"control","Susanne betrat die Reitschule. Schnell setzte sie den","Sattel","auf und ritt los.",-5.56212520599365,0.583790641825063
+"59",20,"script-related","Susanne verließ die Reitschule. Schnell setzte sie den","Sattel","auf und ritt los.",-5.81032180786133,0.522632476980324
+"60",20,"script-unrelated","Susanne betrat das Bad. Schnell setzte sie den","Sattel","auf und ritt los.",-10.9250392913818,-0.737685886113877
+"61",21,"control","Martin kam zur Sicherheitskontrolle. Zügig öffnete er den","Koffer","und wurde durchgewunken.",-4.87603187561035,0.752851010430867
+"62",21,"script-related","Martin verließ die Sicherheitskontrolle. Zügig öffnete er den","Koffer","und wurde durchgewunken.",-4.64080953598022,0.810812185217354
+"63",21,"script-unrelated","Martin kam zur Autowerkstatt. Zügig öffnete er den","Koffer","und wurde durchgewunken.",-5.95700120925903,0.486489181937183
+"64",22,"control","Jutta ging zur Hotelrezeption. Sofort bekam sie ein","Zimmer","und dankte freundlich.",-3.46660876274109,1.100147187833
+"65",22,"script-related","Jutta verließ die Hotelrezeption. Sofort bekam sie ein","Zimmer","und dankte freundlich.",-3.55696034431458,1.0778836399912
+"66",22,"script-unrelated","Jutta ging zur Post. Sofort bekam sie ein","Zimmer","und dankte freundlich.",-5.56265115737915,0.58366104205902
+"67",23,"control","Jens ging zum Zahnarzt. Ängstlich ging er zum","Röntgen","und ließ sich behandeln.",-6.78310060501099,0.282929896099449
+"68",23,"script-related","Jens verließ den Zahnarzt. Ängstlich ging er zum","Röntgen","und ließ sich behandeln.",-6.7626953125,0.287957967530327
+"69",23,"script-unrelated","Jens ging zur Zollstelle. Ängstlich ging er zum","Röntgen","und ließ sich behandeln.",-8.57892513275146,-0.159579516492474
+"70",24,"control","Elena begann Poker zu spielen. Schnell setzte sie ihr","Geld","und gewann.",-2.51408553123474,1.3348585915047
+"71",24,"script-related","Elena hörte auf Poker zu spielen. Schnell setzte sie ihr","Geld","und gewann.",-2.82291126251221,1.25876079306734
+"72",24,"script-unrelated","Elena begann zu zeichnen. Schnell setzte sie ihr","Geld","und gewann.",-4.80507183074951,0.77033628657217
+"73",25,"control","Bruno begann seinen Urlaub. Endlich kam er am","Meer","an und genoss das Wetter.",-4.61236953735352,0.817820089882881
+"74",25,"script-related","Bruno beendete seinen Urlaub. Endlich kam er am","Meer","an und genoss das Wetter.",-5.03289222717285,0.714199025809508
+"75",25,"script-unrelated","Bruno begann seinen Filmabend. Endlich kam er am","Meer","an und genoss das Wetter.",-7.29568433761597,0.156624055570254
+"76",26,"control","Jana betrat das Bürgeramt. Umgehend zeigte sie ihr","Visum","und stellte einen Antrag.",-8.55400848388672,-0.153439801012159
+"77",26,"script-related","Jana verließ das Bürgeramt. Umgehend zeigte sie ihr","Visum","und stellte einen Antrag.",-8.10555362701416,-0.042935967133491
+"78",26,"script-unrelated","Jana betrat das Gartencenter. Umgehend zeigte sie ihr","Visum","und stellte einen Antrag.",-9.52730751037598,-0.393270571688821
+"79",27,"control","Nico fuhr auf die Kirmes. Sofort ging er zum","Auto-Scooter","und fuhr eine Runde.",-16.6188827725127,-2.14070678002924
+"80",27,"script-related","Nico verließ die Kirmes. Sofort ging er zum","Auto-Scooter","und fuhr eine Runde.",-16.492367612198,-2.10953215889558
+"81",27,"script-unrelated","Nico fuhr zur Pizzeria. Sofort ging er zum","Auto-Scooter","und fuhr eine Runde.",-17.2495511807501,-2.29610988459678
+"82",28,"control","Beate ging Wandern. Nach einer Weile sah sie ein","Edelweiß","das sie gleich mitnahm.",-14.7809114456177,-1.68781196783484
+"83",28,"script-related","Beate kam zurück vom Wandern. Nach einer Weile sah sie ein","Edelweiß","das sie gleich mitnahm.",-14.6531171798706,-1.65632216212453
+"84",28,"script-unrelated","Beate ging schwimmen. Nach einer Weile sah sie ein","Edelweiß","das sie gleich mitnahm.",-14.7366223335266,-1.67689868055487
+"85",29,"control","Hubert nahm ein Taxi. Freundlich begrüßte er den","Fahrer","und nannte sein Ziel.",-3.27487468719482,1.14739241242662
+"86",29,"script-related","Hubert verließ das Taxi. Freundlich begrüßte er den","Fahrer","und nannte sein Ziel.",-2.32359910011292,1.38179638383372
+"87",29,"script-unrelated","Hubert nahm ein Flugzeug. Freundlich begrüßte er den","Fahrer","und nannte sein Ziel.",-4.47144889831543,0.852544367360749
+"88",30,"control","Jenni begann zu baden. Sofort verteilte sie den","Schaum","auf ihrem Körper.",-8.51785564422607,-0.144531373938891
+"89",30,"script-related","Jenni hörte auf zu baden. Sofort verteilte sie den","Schaum","auf ihrem Körper.",-8.2513370513916,-0.0788584843340263
+"90",30,"script-unrelated","Jenni begann die Vorlesung. Sofort verteilte sie den","Schaum","auf ihrem Körper.",-9.50688552856445,-0.388238387844695
+"91",31,"control","Hans betrat die Eishalle. Flott schnürte er seine","Schlittschuhe","und ging auf die Bahn.",-7.67848696839064,0.0622975973522692
+"92",31,"script-related","Hans verließ die Eishalle. Flott schnürte er seine","Schlittschuhe","und ging auf die Bahn.",-7.70986933726817,0.0545646627569212
+"93",31,"script-unrelated","Hans betrat die Kletterhalle. Flott schnürte er seine","Schlittschuhe","und ging auf die Bahn.",-7.89635367225856,0.00861302758351251
+"94",32,"control","Clara begann zu bowlen. Gekonnt erzielte sie einen","Strike","und gewann das Spiel.",-10.8633706271648,-0.72249010058113
+"95",32,"script-related","Clara hörte auf zu bowlen. Gekonnt erzielte sie einen","Strike","und gewann das Spiel.",-10.8046870231628,-0.708029864219187
+"96",32,"script-unrelated","Clara ging zum Schießstand. Gekonnt erzielte sie einen","Strike","und gewann das Spiel.",-11.4413251280785,-0.864903962711597
+"97",33,"control","Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den","Schlauch","und löschte das Feuer.",-5.15629005432129,0.683792547245994
+"98",33,"script-related","Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den","Schlauch","und löschte das Feuer.",-4.79202938079834,0.773550078775974
+"99",33,"script-unrelated","Georg nahm teil an Yoga. Sofort benutzte er den","Schlauch","und löschte das Feuer.",-7.53994512557983,0.0964357152666902
+"100",34,"control","Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein","Tor","und jubelte laut.",-4.78542613983154,0.775177184451547
+"101",34,"script-related","Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein","Tor","und jubelte laut.",-4.64472961425781,0.809846238094384
+"102",34,"script-unrelated","Johanna begann die Jagd. Nach kurzer Zeit machte sie ein","Tor","und jubelte laut.",-6.25061798095703,0.414139025691854
+"103",35,"control","Jürgen betrat die Metzgerei. Sofort fragte er nach einem","Steak","und bezahlte.",-7.48330736160278,0.110391835856901
+"104",35,"script-related","Jürgen verließ die Metzgerei. Sofort fragte er nach einem","Steak","und bezahlte.",-7.97105741500854,-0.00979473376069214
+"105",35,"script-unrelated","Jürgen betrat die Bäckerei. Sofort fragte er nach einem","Steak","und bezahlte.",-8.8954963684082,-0.237585885917787
+"106",36,"control","Frauke betrat den Zoo. Wenig später fotografierte sie ein","Zebra","beim Trinken.",-6.66646400094032,0.31167034058985
+"107",36,"script-related","Frauke verließ den Zoo. Wenig später fotografierte sie ein","Zebra","beim Trinken.",-7.41125628352165,0.128145953670634
+"108",36,"script-unrelated","Frauke ging ins Stadion. Wenig später fotografierte sie ein","Zebra","beim Trinken.",-8.23287972807884,-0.0743104123086237
+"109",37,"control","Bernd betrat den Waschsalon. Schnell wählte er das","Waschprogramm","und lies es laufen.",-9.86565589904785,-0.47664305291392
+"110",37,"script-related","Bernd verließ den Waschsalon. Schnell wählte er das","Waschprogramm","und lies es laufen.",-10.2997641563416,-0.583611738867907
+"111",37,"script-unrelated","Bernd betrat den Kiosk. Schnell wählte er das","Waschprogramm","und lies es laufen.",-12.2877306938171,-1.07346689518296
+"112",38,"control","Nicole ging in den Zirkus. Bald setzte sie sich auf die","Tribüne","und schaute sich das Spektakel an.",-6.23826916515827,0.417181899391876
+"113",38,"script-related","Nicole verließ den Zirkus. Bald setzte sie sich auf die","Tribüne","und schaute sich das Spektakel an.",-6.03265373036265,0.467847631965271
+"114",38,"script-unrelated","Nicole ging ins Büro. Bald setzte sie sich auf die","Tribüne","und schaute sich das Spektakel an.",-8.11084015294909,-0.0442386208449108
+"115",39,"control","Viktor ging in die Sauna. Nach einer Weile machte er einen","Aufguss","und legte sich hin.",-7.71686363220215,0.0528411974099911
+"116",39,"script-related","Viktor verließ die Sauna. Nach einer Weile machte er einen","Aufguss","und legte sich hin.",-7.80333304405212,0.0315342556382105
+"117",39,"script-unrelated","Viktor ging ins Labor. Nach einer Weile machte er einen","Aufguss","und legte sich hin.",-9.21960830688477,-0.317450361145636
+"118",40,"control","Gabi ging zum Tierarzt. Einen Moment später fragte sie die","Arzthelferin","nach Medikamenten.",-7.67526783421636,0.0630908247252747
+"119",40,"script-related","Gabi verließ den Tierarzt. Einen Moment später fragte sie die","Arzthelferin","nach Medikamenten.",-6.89573017135262,0.255176826424523
+"120",40,"script-unrelated","Gabi ging in die Umkleide. Einen Moment später fragte sie die","Arzthelferin","nach Medikamenten.",-9.91142471507192,-0.48792095427955
+"121",41,"control","Jakob betrat den Tatort. Kurz darauf fotografierte er die","Blutspritzer","und war erstaunt.",-15.4644012451172,-1.8562307999741
+"122",41,"script-related","Jakob verließ den Tatort. Kurz darauf fotografierte er die","Blutspritzer","und war erstaunt.",-15.780240893364,-1.93405689882729
+"123",41,"script-unrelated","Jakob betrat die Tankstelle. Kurz darauf fotografierte er die","Blutspritzer","und war erstaunt.",-15.2770836353302,-1.81007383742317
+"124",42,"control","Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die","Axt","und traf gezielt den Stamm.",-8.31476283073425,-0.0944872408893314
+"125",42,"script-related","Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die","Axt","und traf gezielt den Stamm.",-8.49164617061615,-0.138073093303831
+"126",42,"script-unrelated","Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die","Axt","und traf gezielt den Stamm.",-8.29431295394897,-0.0894481834402071
+"127",43,"control","Tom begann ein Lagerfeuer. Sofort stapelte er das","Holz","und zündete es an.",-4.43914651870728,0.860504001949163
+"128",43,"script-related","Tom beendete das Lagerfeuer. Sofort stapelte er das","Holz","und zündete es an.",-4.53694725036621,0.836404907828921
+"129",43,"script-unrelated","Tom begann Frühstück zu machen. Sofort stapelte er das","Holz","und zündete es an.",-6.41599559783936,0.373388300344247
+"130",44,"control","Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die","Weihnachtskiosks","und stöberte nach Geschenken.",-28.4240341186523,-5.0496160342712
+"131",44,"script-related","Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die","Weihnachtskiosks","und stöberte nach Geschenken.",-25.6757168769836,-4.37240273784895
+"132",44,"script-unrelated","Kim ging ins Krankenhaus. Kurz darauf erreichte er die","Weihnachtskiosks","und stöberte nach Geschenken.",-31.5349545478821,-5.81617844083925
+"133",45,"control","Michael begann sein Mittagessen zu kochen. Schnell schnitt er das","Gemüse","und warf es in den Topf.",-4.10513973236084,0.942806668242423
+"134",45,"script-related","Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das","Gemüse","und warf es in den Topf.",-5.04873943328857,0.710294113185158
+"135",45,"script-unrelated","Michael begann einen Kuchen zu backen. Schnell schnitt er das","Gemüse","und warf es in den Topf.",-5.04482984542847,0.711257475362658
+"136",46,"control","Johann betrat die Wohnung. Sofort setzte er sich aufs","Bett","und dachte über den Tag nach.",-0.857254028320312,1.74311871034879
+"137",46,"script-related","Johann verließ die Wohnung. Sofort setzte er sich aufs","Bett","und dachte über den Tag nach.",-1.07860207557678,1.68857630219209
+"138",46,"script-unrelated","Johann betrat das Kino. Sofort setzte er sich aufs","Bett","und dachte über den Tag nach.",-1.12842321395874,1.67629986741825
+"139",47,"control","Sabine betrat die Schule. Schnell ging sie zum","Klassensaal","und grüßte die Schüler.",-11.4291214942932,-0.861896863335027
+"140",47,"script-related","Sabine verließ die Schule. Schnell ging sie zum","Klassensaal","und grüßte die Schüler.",-12.065945148468,-1.01881668305043
+"141",47,"script-unrelated","Sabine betrat den Bauernhof. Schnell ging sie zum","Klassensaal","und grüßte die Schüler.",-14.4968523979187,-1.61781693190733
+"142",48,"control","Kevin betrat die Kirche. Vorsichtig nahm er eine","Kerze","und zündete sie an.",-4.07476329803467,0.950291730342129
+"143",48,"script-related","Kevin verließ die Kirche. Vorsichtig nahm er eine","Kerze","und zündete sie an.",-4.53805208206177,0.836132666071967
+"144",48,"script-unrelated","Kevin betrat die Arztpraxis. Vorsichtig nahm er eine","Kerze","und zündete sie an.",-6.31821727752686,0.397481872080985
+"145",49,"control","Susi betrat das Gehege. Präzise begutachtete sie das","Kalb","und machte sich Notizen.",-9.28280436992645,-0.333022513270034
+"146",49,"script-related","Susi verließ das Gehege. Präzise begutachtete sie das","Kalb","und machte sich Notizen.",-9.29594385623932,-0.336260216219431
+"147",49,"script-unrelated","Susi betrat die Bücherei. Präzise begutachtete sie das","Kalb","und machte sich Notizen.",-11.6206566095352,-0.909093062087868
+"148",50,"control","Thomas betrat die Kneipe. In Eile rief er den","Kellner","und bestellte ein Bier.",-3.90896105766296,0.991147087232493
+"149",50,"script-related","Thomas verließ die Kneipe. In Eile rief er den","Kellner","und bestellte ein Bier.",-4.47177791595459,0.852463294071021
+"150",50,"script-unrelated","Thomas begann Spaghetti zu kochen. In Eile rief er den","Kellner","und bestellte ein Bier.",-4.89123010635376,0.749106011933066
+"151",51,"control","Lea begann die Wände zu streichen. Schnell wählte sie einen","Pinsel","und fing an zu streichen.",-5.55051279067993,0.586652058962356
+"152",51,"script-related","Lea war fertig die Wände zu streichen. Schnell wählte sie einen","Pinsel","und fing an zu streichen.",-5.54290866851807,0.58852579193523
+"153",51,"script-unrelated","Lea erreichte das Theater. Schnell wählte sie einen","Pinsel","und fing an zu streichen.",-9.43146800994873,-0.369654744873868
+"154",52,"control","Peter erreichte den Supermarkt. Schnell kaufte er etwas","Gemüse","zum Kochen am Abend.",-6.5042986869812,0.351629521854138
+"155",52,"script-related","Peter verließ den Supermarkt. Schnell kaufte er etwas","Gemüse","zum Kochen am Abend.",-5.86872816085815,0.508240558083448
+"156",52,"script-unrelated","Peter erreichte den Bahnhof. Schnell kaufte er etwas","Gemüse","zum Kochen am Abend.",-7.41228055953979,0.127893561651192
+"157",53,"control","Lisa betrat das Haus. Kurz danach checkte sie den","Kühlschrank","und suchte etwas zu essen.",-4.12123870849609,0.938839716926804
+"158",53,"script-related","Lisa verließ das Haus. Kurz danach checkte sie den","Kühlschrank","und suchte etwas zu essen.",-4.35457611083984,0.88134300984219
+"159",53,"script-unrelated","Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den","Kühlschrank","und suchte etwas zu essen.",-5.99991512298584,0.475914757508777
+"160",54,"control","Tim begann seine Fahrstunde. Hektisch drückte er aufs","Gaspedal","und fuhr los.",-1.59983039466897,1.56014034770718
+"161",54,"script-related","Tim beendete seine Fahrstunde. Hektisch drückte er aufs","Gaspedal","und fuhr los.",-1.74578379868763,1.52417594579574
+"162",54,"script-unrelated","Tim ging zum Flughafen. Hektisch drückte er aufs","Gaspedal","und fuhr los.",-2.65286684536841,1.30066146542285
+"163",55,"control","Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die","Verkäuferin","und suchte etwas aus.",-6.75022506713867,0.291030762708519
+"164",55,"script-related","Maria verließ das Einkaufszentrum. Sofort begrüßte sie die","Verkäuferin","und suchte etwas aus.",-6.49197673797607,0.354665775303191
+"165",55,"script-unrelated","Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die","Verkäuferin","und suchte etwas aus.",-8.59642887115479,-0.163892615505974
+"166",56,"control","Lukas begann die Vorlesung. Eilig begrüßte er seine","Studenten","und fing an.",-2.65412187576294,1.30035221318016
+"167",56,"script-related","Lukas beendete die Vorlesung. Eilig begrüßte er seine","Studenten","und fing an.",-2.85365343093872,1.25118561036876
+"168",56,"script-unrelated","Lukas ging zum Friseur. Eilig begrüßte er seine","Studenten","und fing an.",-8.38976383209229,-0.112968249775265
+"169",57,"control","Marie ging zur Uni. In Eile betrat sie den","Hörsaal","und öffnete ihr Buch.",-3.00794386863708,1.21316687863869
+"170",57,"script-related","Marie verließ die Uni. In Eile betrat sie den","Hörsaal","und öffnete ihr Buch.",-2.50766515731812,1.33644063688084
+"171",57,"script-unrelated","Marie ging duschen. In Eile betrat sie den","Hörsaal","und öffnete ihr Buch.",-7.71016120910645,0.0544927425700039
+"172",58,"control","Thorsten begann zu grillen. Behutsam platzierte er den","Grillanzünder","und suchte die Zange.",-14.4832459390163,-1.61446416216656
+"173",58,"script-related","Thorsten hörte auf zu grillen. Behutsam platzierte er den","Grillanzünder","und suchte die Zange.",-14.3946592211723,-1.59263549468204
+"174",58,"script-unrelated","Thorsten betrat den Blumenladen. Behutsam platzierte er den","Grillanzünder","und suchte die Zange.",-16.8718780875206,-2.20304739655568
+"175",59,"control","Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am","Käfig","und dachte über den Kauf nach.",-6.81800937652588,0.274328020059368
+"176",59,"script-related","Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am","Käfig","und dachte über den Kauf nach.",-7.15994834899902,0.190070782498548
+"177",59,"script-unrelated","Claudia betrat den Friedhof. Eine Zeit lang stand sie am","Käfig","und dachte über den Kauf nach.",-8.96179008483887,-0.253921331315216
+"178",60,"control","Jonathan ging in die Küche. Eine Weile säuberte er den","Ofen","und danach den Kühlschrank.",-5.23048782348633,0.665509462934764
+"179",60,"script-related","Jonathan verließ die Küche. Eine Weile säuberte er den","Ofen","und danach den Kühlschrank.",-4.6855206489563,0.799794912631002
+"180",60,"script-unrelated","Jonathan ging in den Garten. Eine Weile säuberte er den","Ofen","und danach den Kühlschrank.",-6.69309282302856,0.305108728228363
+"181",61,"control","Lara ging zum Herd. Schnell reinigte sie die","Herdplatte","und dann die Abzugshaube.",-6.33481170237064,0.393392837168891
+"182",61,"script-related","Lara ging weg vom Herd. Schnell reinigte sie die","Herdplatte","und dann die Abzugshaube.",-6.34997819364071,0.389655659599855
+"183",61,"script-unrelated","Lara ging ins Museum. Schnell reinigte sie die","Herdplatte","und dann die Abzugshaube.",-9.67796403169632,-0.430393869495922
+"184",62,"control","Roman ging in die Buchhandlung. Schnell suchte er einen","Roman","für seine Frau.",-5.36743259429932,0.631764879789864
+"185",62,"script-related","Roman verließ die Buchhandlung. Schnell suchte er einen","Roman","für seine Frau.",-5.76949501037598,0.532692614757807
+"186",62,"script-unrelated","Roman ging zum Konditor. Schnell suchte er einen","Roman","für seine Frau.",-8.16944694519043,-0.0586799300084739
+"187",63,"control","Annika ging in die Boutique. Eine Zeit lang suchte sie nach","Stiefeln","und kaufte sie dann.",-12.0559493154287,-1.01635360821308
+"188",63,"script-related","Annika verließ die Boutique. Eine Zeit lang suchte sie nach","Stiefeln","und kaufte sie dann.",-12.4111726880074,-1.10388425695439
+"189",63,"script-unrelated","Annika ging ins Spa. Eine Zeit lang suchte sie nach","Stiefeln","und kaufte sie dann.",-12.7106801867485,-1.17768594820402
+"190",64,"control","Emil betrat die Apotheke. Schnell kaufte er das","Medikament","und ging dann nach Hause.",-3.58382415771484,1.07126412338247
+"191",64,"script-related","Emil verließ die Apotheke. Schnell kaufte er das","Medikament","und ging dann nach Hause.",-3.90355587005615,0.992478980385689
+"192",64,"script-unrelated","Emil betrat die Reitschule. Schnell kaufte er das","Medikament","und ging dann nach Hause.",-7.86705207824707,0.0158332381072788
+"193",65,"control","Susanne betrat das Bad. Sofort entfernte sie ihr","Makeup","und putzte sich die Zähne.",-11.3532261699438,-0.843195484176015
+"194",65,"script-related","Susanne verließ das Bad. Sofort entfernte sie ihr","Makeup","und putzte sich die Zähne.",-11.3777252286673,-0.849232301202014
+"195",65,"script-unrelated","Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr","Makeup","und putzte sich die Zähne.",-12.0000491887331,-1.00257924894479
+"196",66,"control","Martin kam zur Autowerkstatt. Umgehend fragte er nach den","Reifen","für den Winter.",-5.44356060028076,0.613006165512233
+"197",66,"script-related","Martin verließ die Autowerkstatt. Umgehend fragte er nach den","Reifen","für den Winter.",-5.6062183380127,0.572925646026373
+"198",66,"script-unrelated","Martin kam zur Hotelrezeption. Umgehend fragte er nach den","Reifen","für den Winter.",-8.46211814880371,-0.130797088668978
+"199",67,"control","Jutta ging zur Post. Umgehend bekam sie das","Paket","auf das sie gewartet hatte.",-5.02910709381104,0.715131721133938
+"200",67,"script-related","Jutta verließ die Post. Umgehend bekam sie das","Paket","auf das sie gewartet hatte.",-4.63467979431152,0.812322615854232
+"201",67,"script-unrelated","Jutta ging zum Zahnarzt. Umgehend bekam sie das","Paket","auf das sie gewartet hatte.",-7.17276620864868,0.186912331627297
+"202",68,"control","Jens ging zur Zollstelle. Schnell zeigte er sein","Formular","und schaute den Beamten an.",-9.9260425567627,-0.491522939016938
+"203",68,"script-related","Jens verließ die Zollstelle. Schnell zeigte er sein","Formular","und schaute den Beamten an.",-10.5710649490356,-0.650463011114331
+"204",68,"script-unrelated","Jens begann Poker zu spielen. Schnell zeigte er sein","Formular","und schaute den Beamten an.",-13.0442428588867,-1.25987918024334
+"205",69,"control","Elena begann zu zeichnen. Umgehend nahm sie den","Stift","und zeichnete eine Blume.",-5.06895589828491,0.705312570772732
+"206",69,"script-related","Elena hörte auf zu zeichnen. Umgehend nahm sie den","Stift","und zeichnete eine Blume.",-4.94050788879395,0.736963465584802
+"207",69,"script-unrelated","Elena begann den Urlaub. Umgehend nahm sie den","Stift","und zeichnete eine Blume.",-6.16216325759888,0.435935168393751
+"208",70,"control","Bruno begann seinen Filmabend. Schnell besorgte er das","Popcorn","aus der Küche.",-4.99602746963501,0.723282876682143
+"209",70,"script-related","Bruno beendete seinen Filmabend. Schnell besorgte er das","Popcorn","aus der Küche.",-4.74939250946045,0.784056237144479
+"210",70,"script-unrelated","Bruno betrat das Bürgeramt. Schnell besorgte er das","Popcorn","aus der Küche.",-8.5667667388916,-0.156583564693242
+"211",71,"control","Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer","Palme","für den Balkon.",-8.67969226837158,-0.184409562692997
+"212",71,"script-related","Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer","Palme","für den Balkon.",-8.92488670349121,-0.244827963143353
+"213",71,"script-unrelated","Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer","Palme","für den Balkon.",-9.49366760253906,-0.384981356553036
+"214",72,"control","Nico fuhr zur Pizzeria. Sofort griff er die","Speisekarte","und bestellte eine Margherita.",-7.49114608764648,0.108460294103525
+"215",72,"script-related","Nico verließ die Pizzeria. Sofort griff er die","Speisekarte","und bestellte eine Margherita.",-6.69172239303589,0.305446416104706
+"216",72,"script-unrelated","Nico fuhr wandern. Sofort griff er die","Speisekarte","und bestellte eine Margherita.",-10.1738700866699,-0.552590160780156
+"217",73,"control","Beate ging Schwimmen. Schnell prüfte sie das","Becken","und schwamm los.",-5.25128889083862,0.66038386856117
+"218",73,"script-related","Beate kam zurück vom Schwimmen. Schnell prüfte sie das","Becken","und schwamm los.",-4.69025611877441,0.798628044746533
+"219",73,"script-unrelated","Beate fuhr mit dem Taxi. Schnell prüfte sie das","Becken","und schwamm los.",-8.53737449645996,-0.149341017477591
+"220",74,"control","Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die","Höhe","denn er liebte das Fliegen.",-6.3125147819519,0.398887024938739
+"221",74,"script-related","Hubert verließ das Flugzeug. Voller Begeisterung genoss er die","Höhe","denn er liebte das Fliegen.",-6.75584983825684,0.289644761946743
+"222",74,"script-unrelated","Hubert begann zu baden. Voller Begeisterung genoss er die","Höhe","denn er liebte das Fliegen.",-6.84564924240112,0.267517276234656
+"223",75,"control","Jenni begann den Unterricht. Sofort öffnete sie die","Tafel","und begann zu schreiben.",-10.3819932937622,-0.603873833931135
+"224",75,"script-related","Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die","Tafel","und begann zu schreiben.",-11.1469964981079,-0.792378397354091
+"225",75,"script-unrelated","Jenni betrat die Eishalle. Sofort öffnete sie die","Tafel","und begann zu schreiben.",-11.6236886978149,-0.909840199451715
+"226",76,"control","Hans betrat die Kletterhalle. Wenig später griff er das","Seil","und spannte es ein.",-4.35924959182739,0.880191416635497
+"227",76,"script-related","Hans verließ die Kletterhalle. Wenig später griff er das","Seil","und spannte es ein.",-4.16000747680664,0.929286698451442
+"228",76,"script-unrelated","Hans begann zu bowlen. Wenig später griff er das","Seil","und spannte es ein.",-6.41218185424805,0.374328045519957
+"229",77,"control","Clara ging zum Schießstand. Sofort bekam sie einen","Revolver","und begann auf das Ziel zu schießen.",-7.94237119890749,-0.00272615860745467
+"230",77,"script-related","Clara verließ den Schießstand. Sofort bekam sie einen","Revolver","und begann auf das Ziel zu schießen.",-8.15737090073526,-0.0557042699393829
+"231",77,"script-unrelated","Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen","Revolver","und begann auf das Ziel zu schießen.",-8.83264231681824,-0.222098008890574
+"232",78,"control","Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine","Yogamatte","und machte eine Übung.",-7.30065874755383,0.1553983104122
+"233",78,"script-related","Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine","Yogamatte","und machte eine Übung.",-6.55645775049925,0.33877699856905
+"234",78,"script-unrelated","Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine","Yogamatte","und machte eine Übung.",-9.85463537275791,-0.473927483246792
+"235",79,"control","Johanna begann die Jagd. Nach einer Weile erblickte sie den","Hochsitz","und ging darauf zu.",-12.0724601745605,-1.02042205168455
+"236",79,"script-related","Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den","Hochsitz","und ging darauf zu.",-11.5776213407516,-0.89848873454028
+"237",79,"script-unrelated","Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den","Hochsitz","und ging darauf zu.",-11.7048777341843,-0.929846003046511
+"238",80,"control","Jürgen betrat die Bäckerei. Wenig später zeigte er auf das","Croissant","und wählte aus.",-10.8970430344343,-0.730787323907353
+"239",80,"script-related","Jürgen verließ die Bäckerei. Wenig später zeigte er auf das","Croissant","und wählte aus.",-11.5339564681053,-0.887729266202947
+"240",80,"script-unrelated","Jürgen betrat den Zoo. Wenig später zeigte er auf das","Croissant","und wählte aus.",-13.0159241855145,-1.2529011713534
+"241",81,"control","Frauke ging ins Stadion. Schnell wählte sie eine","Tribüne","und setzte sich.",-9.09516675025225,-0.286786697030988
+"242",81,"script-related","Frauke verließ das Stadion. Schnell wählte sie eine","Tribüne","und setzte sich.",-9.10335989296436,-0.288805570653002
+"243",81,"script-unrelated","Frauke ging zum Waschsalon. Schnell wählte sie eine","Tribüne","und setzte sich.",-13.2572664916515,-1.31237036807758
+"244",82,"control","Bernd betrat den Kiosk. Sofort kaufte er eine","Zeitung","und ging wieder heim.",-4.81182718276978,0.768671699187288
+"245",82,"script-related","Bernd verließ den Kiosk. Sofort kaufte er eine","Zeitung","und ging wieder heim.",-4.87993240356445,0.751889880706272
+"246",82,"script-unrelated","Bernd betrat den Zirkus. Sofort kaufte er eine","Zeitung","und ging wieder heim.",-6.10434246063232,0.450182800334417
+"247",83,"control","Nicole betrat das Büro. Zuerst ging sie zum","Schreibtisch","und schaltete dann den Computer ein.",-4.59728240966797,0.821537711458208
+"248",83,"script-related","Nicole verließ das Büro. Zuerst ging sie zum","Schreibtisch","und schaltete dann den Computer ein.",-6.16905212402344,0.434237681702893
+"249",83,"script-unrelated","Nicole betrat die Sauna. Zuerst ging sie zum","Schreibtisch","und schaltete dann den Computer ein.",-7.24242115020752,0.169748646201913
+"250",84,"control","Viktor ging ins Labor. Schnell begann er das","Experiment","und machte sich Notizen.",-4.73279523849487,0.788145973369904
+"251",84,"script-related","Viktor verließ das Labor. Schnell begann er das","Experiment","und machte sich Notizen.",-4.56206846237183,0.83021478591195
+"252",84,"script-unrelated","Viktor ging zum Tierarzt. Schnell begann er das","Experiment","und machte sich Notizen.",-7.53551959991455,0.0975262097622849
+"253",85,"control","Gabi ging in die Umkleide. Schnell probierte sie die","Kleidung","an und ging zur Kasse.",-5.45673799514771,0.609759121509889
+"254",85,"script-related","Gabi verließ die Umkleide. Schnell probierte sie die","Kleidung","an und ging zur Kasse.",-5.63465690612793,0.56591809385341
+"255",85,"script-unrelated","Gabi betrat den Tatort. Schnell probierte sie die","Kleidung","an und ging zur Kasse.",-6.31103038787842,0.399252794722684
+"256",86,"control","Jakob betrat die Tankstelle. Sofort sagte er seine","Nummer","und bezahlte.",-4.44719409942627,0.858520996281438
+"257",86,"script-related","Jakob verließ die Tankstelle. Sofort sagte er seine","Nummer","und bezahlte.",-5.34338140487671,0.637691337268939
+"258",86,"script-unrelated","Jakob begann Bäume zu fällen. Sofort sagte er seine","Nummer","und bezahlte.",-6.91375827789307,0.25073451777347
+"259",87,"control","Hilde begann die Kutsche zu fahren. Schnell bestieg sie den","Kutschbock","und los ging es.",-9.5884838104248,-0.408345033687185
+"260",87,"script-related","Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den","Kutschbock","und los ging es.",-10.6038293838501,-0.658536500800928
+"261",87,"script-unrelated","Hilde begann ein Lagerfeuer. Schnell bestieg sie den","Kutschbock","und los ging es.",-13.8885182142258,-1.46791720722529
+"262",88,"control","Tom begann Frühstück zu machen. Sofort öffnete er die","Butter","und machte sich ein Brot.",-11.1532917022705,-0.793929599630876
+"263",88,"script-related","Tom hörte auf Frühstück zu machen. Sofort öffnete er die","Butter","und machte sich ein Brot.",-10.5149440765381,-0.636634257837257
+"264",88,"script-unrelated","Tom ging zum Weihnachtsmarkt. Sofort öffnete er die","Butter","und machte sich ein Brot.",-10.7775764465332,-0.701349542643168
+"265",89,"control","Kim ging ins Krankenhaus. Gleich ging sie zur","Rezeption","und fragte nach dem Weg.",-5.94690704345703,0.488976486966517
+"266",89,"script-related","Kim verließ das Krankenhaus. Gleich ging sie zur","Rezeption","und fragte nach dem Weg.",-5.41580724716187,0.619844873747025
+"267",89,"script-unrelated","Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur","Rezeption","und fragte nach dem Weg.",-5.53924608230591,0.589428290396675
+"268",90,"control","Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen","Schneebesen","und schlug Eiweiß steif.",-8.36124855279922,-0.105941795188556
+"269",90,"script-related","Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen","Schneebesen","und schlug Eiweiß steif.",-7.81693649291992,0.028182227600545
+"270",90,"script-unrelated","Michael betrat das Restaurant. Als erstes nahm er einen","Schneebesen","und schlug Eiweiß steif.",-11.0415953397751,-0.766406480866766

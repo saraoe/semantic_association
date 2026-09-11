@@ -1,0 +1,232 @@
+# Log probability of semantic illusions
+
+```{r}
+library(tidytable)
+library(ggplot2)
+library(stringr)
+library(reshape2)
+
+setwd("experiment1")
+```
+
+## Read data
+```{r}
+kuperberg_df <- read.csv(file.path("results", "kuperberg_log_probability.csv")) |>
+    # mutate(cond = case_when(
+    #     cond == 1 ~ "a",
+    #     cond == 2 ~ "b",
+    #     cond == 3 ~ "c",
+    #     cond == 4 ~ "d"
+    # )) |>
+    mutate(cond = case_when(
+        cond == 1 ~ "No violation",
+        cond == 2 ~ "Pragmatic non-thematic role violation",
+        cond == 3 ~ "Related animacy thematic role violation",
+        cond == 4 ~ "Unrelated animacy thematic role violation"
+    )) |>
+    mutate("cond" = factor(
+        cond,
+        levels = c(
+            "No violation",
+            "Pragmatic non-thematic role violation",
+            "Related animacy thematic role violation",
+            "Unrelated animacy thematic role violation"
+        )
+    )) |>
+    filter(!scenario %in% c(37, 38, 84)) |> # scenarios with duplicate sentences
+    filter(!scenario == 152) |> # non-sensible scenario
+    filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
+
+kim_osterhout_df <- read.csv(file.path("results", "kim_osterhout_log_probability.csv")) |>
+    mutate("cond" = factor(condition,
+        levels = c(
+            "Attraction Violation",
+            "Passive Control",
+            "Active Control",
+            "No-Attraction Violation"
+        )
+    ))
+
+delogu_df <- read.csv(file.path("results", "delogu_log_probability.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    ))
+
+delogu_nl_df <- read.csv(file.path("results", "delogu_nl_log_probability.csv")) |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    ))
+```
+
+## Kuperberg et al. (2003, 2007)
+```{r}
+kuperberg_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(s_lp, na.rm = TRUE),
+        "sd" = sd(s_lp, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    ) +
+    guides(color = guide_legend(nrow = 2))
+
+ggsave(file.path("figs", "log_probability_kuperberg.png"), width = 7, height = 7)
+```
+
+## Kim and Osterhout (2005)
+```{r}
+kim_osterhout_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(s_lp, na.rm = TRUE),
+        "sd" = sd(s_lp, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    )
+
+ggsave(file.path("figs", "log_probability_kim_osterhout.png"), width = 7, height = 7)
+```
+
+## Delogu et al. (2019)
+```{r}
+delogu_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(s_lp, na.rm = TRUE),
+        "sd" = sd(s_lp, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    )
+
+ggsave(file.path("figs", "log_probability_delogu.png"), width = 7, height = 7)
+```
+
+```{r}
+library(ggdist)
+
+delogu_df |>
+    ggplot(aes(x = cond, y = s_lp, fill = cond)) +
+    ggdist::stat_halfeye() +
+    ggdist::stat_dots(
+        side = "left",
+        justification = 1.12,
+        # binwidth = .25
+    ) +
+    scale_fill_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", fill = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    )
+```
+
+## Delogu et al. (2019), Dutch translation
+```{r}
+delogu_nl_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(s_lp, na.rm = TRUE),
+        "sd" = sd(s_lp, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = cond, color = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    )
+
+ggsave(file.path("figs", "log_probability_delogu_nl.png"), width = 7, height = 7)
+```
+
+```{r}
+library(ggdist)
+
+delogu_nl_df |>
+    ggplot(aes(x = cond, y = s_lp, fill = cond)) +
+    ggdist::stat_halfeye() +
+    ggdist::stat_dots(
+        side = "left",
+        justification = 1.12,
+        # binwidth = .25
+    ) +
+    scale_fill_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", fill = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_blank()
+    )
+```

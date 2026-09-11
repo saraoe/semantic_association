@@ -1,0 +1,271 @@
+"","ItemNum","Condition","context","target","continuation","lp_GroNLP_gpt2_small_dutch","s_lp"
+"1",1,"control","Johan betrad het restaurant. Even later opende hij de","menukaart","en kreeg een overzicht.",-5.02379849925637,0.731698797546787
+"2",1,"script-related","Johan verliet het restaurant. Even later opende hij de","menukaart","en kreeg een overzicht.",-6.94606361538172,0.323850987861482
+"3",1,"script-unrelated","Johan betrad het appartement. Even later opende hij de","menukaart","en kreeg een overzicht.",-11.3221522700042,-0.604625608735141
+"4",2,"control","Sabine betrad de bioscoop. Snel liep ze naar de","kassa","en kocht een kaartje.",-3.22240209579468,1.11390184090625
+"5",2,"script-related","Sabine verliet de bioscoop. Snel liep ze naar de","kassa","en kocht een kaartje.",-3.38280820846558,1.07986840755506
+"6",2,"script-unrelated","Sabine betrad de school. Snel liep ze naar de","kassa","en kocht een kaartje.",-5.60128355026245,0.609173547932114
+"7",3,"control","Kevin betrad de boerderij. Zonder te aarzelen pakte hij een","mestvork","en begon te scheppen.",-13.0057973861694,-0.961845311238755
+"8",3,"script-related","Kevin verliet de boerderij. Zonder te aarzelen pakte hij een","mestvork","en begon te scheppen.",-13.7971197366714,-1.12974051190588
+"9",3,"script-unrelated","Kevin betrad de kerk. Zonder te aarzelen pakte hij een","mestvork","en begon te scheppen.",-16.4047909975052,-1.68301123569349
+"10",4,"control","Susi betrad de huisartsenpraktijk. Vriendelijk sprak ze met de","doktersassistente","over de problematiek.",-7.07203024625778,0.297124594053849
+"11",4,"script-related","Susi verliet de huisartsenpraktijk. Vriendelijk sprak ze met de","doktersassistente","over de problematiek.",-7.52950501441956,0.200061977344061
+"12",4,"script-unrelated","Susi betrad het verblijf. Vriendelijk sprak ze met de","doktersassistente","over de problematiek.",-12.6786853671074,-0.892441814615404
+"13",5,"control","Roman betrad de bibliotheek. Kort daarna liep hij naar het","rek","en zocht een misdaadroman.",-6.68084812164307,0.380121872303242
+"14",5,"script-related","Roman verliet de bibliotheek. Kort daarna liep hij naar het","rek","en zocht een misdaadroman.",-7.93136405944824,0.114799372335891
+"15",5,"script-unrelated","Roman betrad de kroeg. Kort daarna liep hij naar het","rek","en zocht een misdaadroman.",-7.10610914230347,0.289894060142512
+"16",6,"control","Lea begon spaghetti te koken. Voorzichtig opende ze het","pastapak","in één handbeweging.",-19.5787365436554,-2.35642861615715
+"17",6,"script-related","Lea was klaar met spaghetti koken. Voorzichtig opende ze het","pastapak","in één handbeweging.",-19.490371465683,-2.3376801598691
+"18",6,"script-unrelated","Lea begon de muren te verven. Voorzichtig opende ze het","pastapak","in één handbeweging.",-21.0510993003845,-2.66882045033068
+"19",7,"control","Peter bereikte het theater. Even later liep hij naar de","loge","en ging zitten.",-6.29069519042969,0.462900786149641
+"20",7,"script-related","Peter verliet het theater. Even later liep hij naar de","loge","en ging zitten.",-7.01325988769531,0.309593926100221
+"21",7,"script-unrelated","Peter bereikte de supermarkt. Even later liep hij naar de","loge","en ging zitten.",-11.0589122772217,-0.54877386717396
+"22",8,"control","Lisa betrad het station. Even later was ze op het","perron","en wachtte op de trein.",-0.543228685855865,1.68234320617077
+"23",8,"script-related","Lisa verliet het station. Even later was ze op het","perron","en wachtte op de trein.",-0.936519503593445,1.59889852560198
+"24",8,"script-unrelated","Lisa betrad het huis. Even later was ze op het","perron","en wachtte op de trein.",-5.7110915184021,0.585875544490205
+"25",9,"control","Tim begon in de sportschool te trainen. Meteen stapte hij op de","loopband","en rende als een gek.",-8.64107608795166,-0.0357805314995792
+"26",9,"script-related","Tim stopte in de sportschool met trainen. Meteen stapte hij op de","loopband","en rende als een gek.",-8.97560548782349,-0.106757776973438
+"27",9,"script-unrelated","Tim begon zijn rijles. Meteen stapte hij op de","loopband","en rende als een gek.",-10.440767288208,-0.41762178116756
+"28",10,"control","Maria bereikte het vliegveld. Ze liep meteen naar de","check-in","om de koffer af te geven.",-12.8361971378326,-0.925861154201317
+"29",10,"script-related","Maria verliet het vliegveld. Ze liep meteen naar de","check-in","om de koffer af te geven.",-12.5893075466156,-0.873478484315003
+"30",10,"script-unrelated","Maria bereikte het winkelcentrum. Ze liep meteen naar de","check-in","om de koffer af te geven.",-14.7551536560059,-1.33300697724774
+"31",11,"control","Lukas kwam naar het verjaardagsfeest. Na een tijdje overhandigde hij de","taart","en feliciteerde hij de jarige.",-3.3440363407135,1.08809465127527
+"32",11,"script-related","Lukas verliet het verjaardagsfeest. Na een tijdje overhandigde hij de","taart","en feliciteerde hij de jarige.",-5.01834869384766,0.732855085085124
+"33",11,"script-unrelated","Lukas kwam naar de les. Na een tijdje overhandigde hij de","taart","en feliciteerde hij de jarige.",-8.09512519836426,0.0800541016350974
+"34",12,"control","Marie ging naar de kapper. Even later vroeg ze de","styliste","om een nieuwe coupe.",-11.1514424681664,-0.568406037258082
+"35",12,"script-related","Marie verliet de kapper. Even later vroeg ze de","styliste","om een nieuwe coupe.",-11.567343711853,-0.656647981545617
+"36",12,"script-unrelated","Marie ging naar de uni. Even later vroeg ze de","styliste","om een nieuwe coupe.",-12.2939414381981,-0.810810531095225
+"37",13,"control","Thorsten begon te douchen. Als eerste gebruikte hij de","shampoo","en daarna de douchegel.",-5.85969645529985,0.554345971636936
+"38",13,"script-related","Thorsten stopte met douchen. Als eerste gebruikte hij de","shampoo","en daarna de douchegel.",-5.39369668066502,0.653217342606699
+"39",13,"script-unrelated","Thorsten begon te barbecueën. Als eerste gebruikte hij de","shampoo","en daarna de douchegel.",-8.52917408943176,-0.0120382367386246
+"40",14,"control","Claudia betrad de bloemenwinkel. Snel vroeg ze om een","roos","voor een vriendin.",-8.02532386779785,0.0948638797171195
+"41",14,"script-related","Claudia verliet de bloemenwinkel. Snel vroeg ze om een","roos","voor een vriendin.",-9.22005367279053,-0.158622452654237
+"42",14,"script-unrelated","Claudia betrad de dierenwinkel. Snel vroeg ze om een","roos","voor een vriendin.",-9.93583869934082,-0.310490867075924
+"43",15,"control","Jonathan ging naar de begraafplaats. Peinzend bekeek hij de","grafsteen","en sprak een gebed uit.",-4.10094690322876,0.927500614344625
+"44",15,"script-related","Jonathan verliet de begraafplaats. Peinzend bekeek hij de","grafsteen","en sprak een gebed uit.",-4.89588832855225,0.758837553028811
+"45",15,"script-unrelated","Jonathan ging naar de keuken. Peinzend bekeek hij de","grafsteen","en sprak een gebed uit.",-11.0504884719849,-0.54698658482345
+"46",16,"control","Lara ging de tuin in. Aandachtig onderzocht ze de","aarde","en gaf toen de bloemen water.",-5.65869474411011,0.596992590443075
+"47",16,"script-related","Lara verliet de tuin. Aandachtig onderzocht ze de","aarde","en gaf toen de bloemen water.",-5.97939109802246,0.528950308231318
+"48",16,"script-unrelated","Lara ging naar het fornuis. Aandachtig onderzocht ze de","aarde","en gaf toen de bloemen water.",-7.87718200683594,0.126295201551543
+"49",17,"control","Roman ging naar het museum. Nauwkeurig bekeek hij de","sculpturen","en was enthousiast.",-8.65924644470215,-0.039635743842414
+"50",17,"script-related","Roman verliet het museum.  Nauwkeurig bekeek hij de","sculpturen","en was enthousiast.",-8.3574047088623,0.0244061460099238
+"51",17,"script-unrelated","Roman ging naar de boekhandel. Nauwkeurig bekeek hij de","sculpturen","en was enthousiast.",-13.9459791183472,-1.16132407041623
+"52",18,"control","Annika ging naar de banketbakker. Snel vroeg ze om een","taart","en betaalde meteen.",-4.753577709198,0.789031657843854
+"53",18,"script-related","Annika verliet de banketbakker. Snel vroeg ze om een","taart","en betaalde meteen.",-5.75428867340088,0.576710385687136
+"54",18,"script-unrelated","Annika ging naar de boetiek. Snel vroeg ze om een","taart","en betaalde meteen.",-7.42481803894043,0.222273457588681
+"55",19,"control","Emil betrad de spa. Na een tijdje kreeg hij een","massage","en genoot ervan.",-9.20754528045654,-0.155968541716925
+"56",19,"script-related","Emil verliet de spa. Na een tijdje kreeg hij een","massage","en genoot ervan.",-9.32258319854736,-0.180376185870958
+"57",19,"script-unrelated","Emil betrad de apotheek. Na een tijdje kreeg hij een","massage","en genoot ervan.",-9.57202529907227,-0.233300422745966
+"58",20,"control","Susanne betrad de manege. Snel legde ze het","zadel","op en reed weg.",-4.52025604248047,0.838535615401321
+"59",20,"script-related","Susanne verliet de manege. Snel legde ze het","zadel","op en reed weg.",-5.2722749710083,0.678979438540457
+"60",20,"script-unrelated","Susanne betrad de badkamer. Snel legde ze het","zadel","op en reed weg.",-10.0875930786133,-0.342688658461319
+"61",21,"control","Martin kwam bij de veiligheidscontrole. Vlot opende hij de","koffer","en werd doorgelaten.",-4.67653179168701,0.805378523028293
+"62",21,"script-related","Martin verliet de veiligheidscontrole. Vlot opende hij de","koffer","en werd doorgelaten.",-5.23442602157593,0.687009866287072
+"63",21,"script-unrelated","Martin kwam bij de garage. Vlot opende hij de","koffer","en werd doorgelaten.",-6.18671464920044,0.484962381938115
+"64",22,"control","Jutta ging naar de hotelreceptie. Direct kreeg ze een","kamer","en bedankte vriendelijk.",-5.4990701675415,0.63086020494605
+"65",22,"script-related","Jutta verliet de hotelreceptie. Direct kreeg ze een","kamer","en bedankte vriendelijk.",-5.87451505661011,0.551201902675643
+"66",22,"script-unrelated","Jutta ging naar het postkantoor. Direct kreeg ze een","kamer","en bedankte vriendelijk.",-6.64234113693237,0.388291915675562
+"67",23,"control","Jens ging naar de tandarts. Angstig liep hij naar de","röntgen","en liet zich behandelen.",-4.43343067169189,0.856957391359371
+"68",23,"script-related","Jens verliet de tandarts. Angstig liep hij naar de","röntgen","en liet zich behandelen.",-5.99613761901855,0.525397191727871
+"69",23,"script-unrelated","Jens ging naar de douane. Angstig liep hij naar de","röntgen","en liet zich behandelen.",-8.69863033294678,-0.0479918402115973
+"70",24,"control","Elena begon te pokeren. Snel zette ze haar","geld","in en won.",-6.00499439239502,0.523518046342477
+"71",24,"script-related","Elena stopte met pokeren. Snel zette ze haar","geld","in en won.",-6.3632116317749,0.447514941855471
+"72",24,"script-unrelated","Elena begon te tekenen. Snel zette ze haar","geld","in en won.",-8.39936065673828,0.0155043346515721
+"73",25,"control","Bruno begon zijn vakantie. Eindelijk kwam hij bij de","zee","aan en genoot van het weer.",-6.74054050445557,0.367456913978426
+"74",25,"script-related","Bruno beëindigde zijn vakantie. Eindelijk kwam hij bij de","zee","aan en genoot van het weer.",-7.17096328735352,0.276133928521858
+"75",25,"script-unrelated","Bruno begon zijn filmavond. Eindelijk kwam hij bij de","zee","aan en genoot van het weer.",-7.96726560592651,0.107182125904768
+"76",26,"control","Jana betrad het gemeentehuis. Meteen toonde ze haar","visum","en diende een aanvraag in.",-8.86477661132812,-0.0832431669701998
+"77",26,"script-related","Jana verliet het gemeentehuis. Meteen toonde ze haar","visum","en diende een aanvraag in.",-9.26216888427734,-0.16755805504084
+"78",26,"script-unrelated","Jana betrad het tuincentrum. Meteen toonde ze haar","visum","en diende een aanvraag in.",-9.84919929504395,-0.292108547707748
+"79",27,"control","Nico ging naar de kermis. Direct liep hij naar de","botsauto's","en reed een rondje.",-12.344273686409,-0.821489545668789
+"80",27,"script-related","Nico verliet de kermis. Direct liep hij naar de","botsauto's","en reed een rondje.",-13.1381632685661,-0.989929436971304
+"81",27,"script-unrelated","Nico ging naar de pizzeria. Direct liep hij naar de","botsauto's","en reed een rondje.",-14.9606679677963,-1.37661103644831
+"82",28,"control","Beate ging wandelen. Na een tijdje zag ze een","edelweiss","die ze meteen meenam.",-21.7537424564362,-2.81790054848263
+"83",28,"script-related","Beate kwam terug van het wandelen. Na een tijdje zag ze een","edelweiss","die ze meteen meenam.",-21.5232529640198,-2.76899749455478
+"84",28,"script-unrelated","Beate ging zwemmen. Na een tijdje zag ze een","edelweiss","die ze meteen meenam.",-21.5325264930725,-2.77096506316978
+"85",29,"control","Hubert nam een taxi. Vriendelijk begroette hij de","chauffeur","en noemde zijn bestemming.",-1.17650377750397,1.54798095983425
+"86",29,"script-related","Hubert verliet de taxi. Vriendelijk begroette hij de","chauffeur","en noemde zijn bestemming.",-1.25873911380768,1.53053305345086
+"87",29,"script-unrelated","Hubert nam een vliegtuig. Vriendelijk begroette hij de","chauffeur","en noemde zijn bestemming.",-2.6554741859436,1.23418717737862
+"88",30,"control","Jenni begon te baden. Ze verdeelde meteen het","schuim","over haar lichaam.",-7.68664598464966,0.166721310657379
+"89",30,"script-related","Jenni stopte met baden. Ze verdeelde meteen het","schuim","over haar lichaam.",-7.67252540588379,0.169717279877669
+"90",30,"script-unrelated","Jenni begon de hoorcollege. Ze verdeelde meteen het","schuim","over haar lichaam.",-11.1697826385498,-0.572297279031862
+"91",31,"control","Hans betrad de ijshal. Hij trok vlot zijn","schaatsen","aan en ging de baan op.",-5.44309997558594,0.642735424448944
+"92",31,"script-related","Hans verliet de ijshal. Hij trok vlot zijn","schaatsen","aan en ging de baan op.",-5.4944314956665,0.631844393936526
+"93",31,"script-unrelated","Hans betrad de klimhal. Hij trok vlot zijn","schaatsen","aan en ging de baan op.",-8.22275447845459,0.0529749428344234
+"94",32,"control","Clara begon te bowlen. Vakkundig behaalde ze een","strike","en won het spel.",-14.0982937812805,-1.19364073742496
+"95",32,"script-related","Clara stopte met bowlen. Vakkundig behaalde ze een","strike","en won het spel.",-13.9312553405762,-1.15820012020571
+"96",32,"script-unrelated","Clara ging naar de schietbaan. Vakkundig behaalde ze een","strike","en won het spel.",-14.0059089660645,-1.17403941177119
+"97",33,"control","Georg nam deel aan een brandweerinzet. Hij gebruikte meteen de","slang","en bluste het vuur.",-9.02037048339844,-0.11625558518036
+"98",33,"script-related","Georg beëindigde een brandweerinzet. Hij gebruikte meteen de","slang","en bluste het vuur.",-8.52834510803223,-0.0118623514014594
+"99",33,"script-unrelated","Georg nam deel aan yoga. Hij gebruikte meteen de","slang","en bluste het vuur.",-9.44005012512207,-0.20529919379118
+"100",34,"control","Johanna begon de voetbalwedstrijd. Na korte tijd maakte ze een","doelpunt","en juichte luid.",-3.88821291923523,0.972636474476278
+"101",34,"script-related","Johanna beëindigde de voetbalwedstrijd. Na korte tijd maakte ze een","doelpunt","en juichte luid.",-4.54035615921021,0.834270965060495
+"102",34,"script-unrelated","Johanna begon de jacht. Na korte tijd maakte ze een","doelpunt","en juichte luid.",-8.83216285705566,-0.076323492813885
+"103",35,"control","Jürgen betrad de slagerij. Hij vroeg meteen om een","steak","en betaalde.",-9.24780452251434,-0.164510362278056
+"104",35,"script-related","Jürgen verliet de slagerij. Hij vroeg meteen om een","steak","en betaalde.",-10.1400547027588,-0.353819463635273
+"105",35,"script-unrelated","Jürgen betrad de bakkerij. Hij vroeg meteen om een","steak","en betaalde.",-7.07700544595718,0.296069003811314
+"106",36,"control","Frauke betrad de dierentuin. Even later fotografeerde ze een","zebra","die aan het drinken was.",-6.17164325714111,0.488160085620474
+"107",36,"script-related","Frauke verliet de dierentuin. Even later fotografeerde ze een","zebra","die aan het drinken was.",-6.54035186767578,0.409931022440163
+"108",36,"script-unrelated","Frauke ging naar het stadion. Even later fotografeerde ze een","zebra","die aan het drinken was.",-7.8501443862915,0.132031785036124
+"109",37,"control","Bernd betrad de wasserette. Snel koos hij het","wasprogramma","en zette de machine aan.",-18.4441413879395,-2.11570107797499
+"110",37,"script-related","Bernd verliet de wasserette. Snel koos hij het","wasprogramma","en zette de machine aan.",-18.5237598419189,-2.13259375931934
+"111",37,"script-unrelated","Bernd betrad de kiosk. Snel koos hij het","wasprogramma","en zette de machine aan.",-19.0422973632812,-2.24261208642374
+"112",38,"control","Nicole ging naar het circus. Al snel ging ze op de","tribune","zitten en bekeek het spektakel.",-6.40169239044189,0.43935046287403
+"113",38,"script-related","Nicole verliet het circus. Al snel ging ze op de","tribune","zitten en bekeek het spektakel.",-7.08976078033447,0.293362699075333
+"114",38,"script-unrelated","Nicole ging naar het kantoor. Al snel ging ze op de","tribune","zitten en bekeek het spektakel.",-9.42643451690674,-0.202410364388007
+"115",39,"control","Viktor ging naar de sauna. Na een tijdje maakte hij een","opgieting","en ging liggen.",-29.6538195610046,-4.49406327776205
+"116",39,"script-related","Viktor verliet de sauna. Na een tijdje maakte hij een","opgieting","en ging liggen.",-29.454306602478,-4.45173252824351
+"117",39,"script-unrelated","Viktor ging naar het lab. Na een tijdje maakte hij een","opgieting","en ging liggen.",-29.6166834831238,-4.48618410027661
+"118",40,"control","Gabi ging naar de dierenarts. Een moment later vroeg ze de","assistente","om medicijnen.",-5.13127422332764,0.708895627323752
+"119",40,"script-related","Gabi verliet de dierenarts. Een moment later vroeg ze de","assistente","om medicijnen.",-5.49588441848755,0.6315361266818
+"120",40,"script-unrelated","Gabi ging naar de kleedkamer. Een moment later vroeg ze de","assistente","om medicijnen.",-7.59631299972534,0.185887298602881
+"121",41,"control","Jakob betrad de plaats delict. Kort daarna fotografeerde hij de","bloedspatten","en was verbaasd.",-16.1167659759521,-1.6219008440053
+"122",41,"script-related","Jakob verliet de plaats delict. Kort daarna fotografeerde hij de","bloedspatten","en was verbaasd.",-16.9203107357025,-1.79238927845646
+"123",41,"script-unrelated","Jakob betrad het tankstation. Kort daarna fotografeerde hij de","bloedspatten","en was verbaasd.",-16.8163661956787,-1.77033532105911
+"124",42,"control","Peter begon bomen te kappen. Na een tijdje gebruikte hij de","bijl","en raakte gericht de stam.",-6.04304027557373,0.515445835078894
+"125",42,"script-related","Peter stopte met bomen kappen. Na een tijdje gebruikte hij de","bijl","en raakte gericht de stam.",-6.54263591766357,0.409446414579927
+"126",42,"script-unrelated","Peter begon de koets te rijden. Na een tijdje gebruikte hij de","bijl","en raakte gericht de stam.",-8.11076164245605,0.0767365106219698
+"127",43,"control","Tom begon een kampvuur. Meteen stapelde hij het","hout","en stak het aan.",-3.40038371086121,1.07613940571445
+"128",43,"script-related","Tom beëindigde het kampvuur. Meteen stapelde hij het","hout","en stak het aan.",-4.03994655609131,0.940443084018215
+"129",43,"script-unrelated","Tom begon ontbijt te maken. Meteen stapelde hij het","hout","en stak het aan.",-6.18921089172363,0.484432753097125
+"130",44,"control","Kim ging naar de kerstmarkt. Kort daarna bereikte hij de","kerstkraampjes","en snuffelde naar cadeaus.",-15.0421881973743,-1.39390721833266
+"131",44,"script-related","Kim verliet de kerstmarkt. Kort daarna bereikte hij de","kerstkraampjes","en snuffelde naar cadeaus.",-16.6574095487595,-1.73660942147476
+"132",44,"script-unrelated","Kim ging naar het ziekenhuis. Kort daarna bereikte hij de","kerstkraampjes","en snuffelde naar cadeaus.",-22.2203830480576,-2.91690788186579
+"133",45,"control","Michael begon zijn lunch te koken. Snel sneed hij de","groenten","en gooide het in de pot.",-4.86041879653931,0.766363138766537
+"134",45,"script-related","Michael was klaar met zijn lunch koken. Snel sneed hij de","groenten","en gooide het in de pot.",-5.22375154495239,0.68927467454579
+"135",45,"script-unrelated","Michael begon een taart te bakken. Snel sneed hij de","groenten","en gooide het in de pot.",-6.76894569396973,0.361430172802163
+"136",46,"control","Johan betrad het appartement. Meteen ging hij op het","bed","zitten en dacht na over de dag.",-1.19800567626953,1.54341889280091
+"137",46,"script-related","Johan verliet het appartement. Meteen ging hij op het","bed","zitten en dacht na over de dag.",-1.38290464878082,1.50418879892926
+"138",46,"script-unrelated","Johan betrad de bioscoop. Meteen ging hij op het","bed","zitten en dacht na over de dag.",-3.56209373474121,1.04182932096581
+"139",47,"control","Sabine betrad de school. Snel liep ze naar het","klaslokaal","en groette de leerlingen.",-6.08268704265356,0.507033963595107
+"140",47,"script-related","Sabine verliet de school. Snel liep ze naar het","klaslokaal","en groette de leerlingen.",-6.79369421303272,0.356179268955381
+"141",47,"script-unrelated","Sabine betrad de boerderij. Snel liep ze naar het","klaslokaal","en groette de leerlingen.",-10.8666095519438,-0.50797291591955
+"142",48,"control","Kevin betrad de kerk. Voorzichtig pakte hij een","kaars","en stak hem aan.",-4.20727396011353,0.904941157328546
+"143",48,"script-related","Kevin verliet de kerk. Voorzichtig pakte hij een","kaars","en stak hem aan.",-4.91567230224609,0.75463997889077
+"144",48,"script-unrelated","Kevin betrad de huisartsenpraktijk. Voorzichtig pakte hij een","kaars","en stak hem aan.",-6.59618854522705,0.398084130745384
+"145",49,"control","Susi betrad het verblijf. Nauwkeurig beoordeelde ze het","kalf","en maakte aantekeningen.",-9.93019580841064,-0.309293612500132
+"146",49,"script-related","Susi verliet het verblijf. Nauwkeurig beoordeelde ze het","kalf","en maakte aantekeningen.",-10.1654214859009,-0.359201544835455
+"147",49,"script-unrelated","Susi betrad de bibliotheek. Nauwkeurig beoordeelde ze het","kalf","en maakte aantekeningen.",-11.5589208602905,-0.654860901536594
+"148",50,"control","Thomas betrad de kroeg. Haastig riep hij de","ober","en bestelde een biertje.",-2.92543506622314,1.17690946225019
+"149",50,"script-related","Thomas verliet de kroeg. Haastig riep hij de","ober","en bestelde een biertje.",-3.4542543888092,1.06470964099415
+"150",50,"script-unrelated","Thomas begon spaghetti te koken. Haastig riep hij de","ober","en bestelde een biertje.",-1.33194088935852,1.51500180150593
+"151",51,"control","Lea begon de muren te verven. Ze koos snel een","kwast","uit en begon te verven.",-6.22008323669434,0.477882554495212
+"152",51,"script-related","Lea was klaar met de muren verven. Ze koos snel een","kwast","uit en begon te verven.",-6.02614593505859,0.519030314512753
+"153",51,"script-unrelated","Lea bereikte het theater. Ze koos snel een","kwast","uit en begon te verven.",-12.0049095153809,-0.749486504736286
+"154",52,"control","Peter bereikte de supermarkt. Snel kocht hij wat","groenten","om 's avonds te koken.",-5.11657905578613,0.712013507289676
+"155",52,"script-related","Peter verliet de supermarkt. Snel kocht hij wat","groenten","om 's avonds te koken.",-5.29367780685425,0.674438389729032
+"156",52,"script-unrelated","Peter bereikte het station. Snel kocht hij wat","groenten","om 's avonds te koken.",-6.59284019470215,0.398794551704587
+"157",53,"control","Lisa betrad het huis. Kort daarna checkte ze de","koelkast","en zocht iets te eten.",-6.21584033966064,0.478782771768779
+"158",53,"script-related","Lisa verliet het huis. Kort daarna checkte ze de","koelkast","en zocht iets te eten.",-7.16361999511719,0.277691957968131
+"159",53,"script-unrelated","Lisa begon in de sportschool te trainen. Kort daarna checkte ze de","koelkast","en zocht iets te eten.",-8.96180725097656,-0.103830199175595
+"160",54,"control","Tim begon zijn rijles. Gejaagd drukte hij op het","gaspedaal","en reed weg.",-2.70362234115601,1.22397156274823
+"161",54,"script-related","Tim beëindigde zijn rijles. Gejaagd drukte hij op het","gaspedaal","en reed weg.",-2.48939538002014,1.26942418847705
+"162",54,"script-unrelated","Tim ging naar het vliegveld. Gejaagd drukte hij op het","gaspedaal","en reed weg.",-2.69710826873779,1.22535365627197
+"163",55,"control","Maria bereikte het winkelcentrum. Meteen begroette ze de","verkoopster","en koos iets uit.",-4.71497917175293,0.797221125998881
+"164",55,"script-related","Maria verliet het winkelcentrum. Meteen begroette ze de","verkoopster","en koos iets uit.",-5.31581592559814,0.669741335631494
+"165",55,"script-unrelated","Maria bereikte het verjaardagsfeest. Meteen begroette ze de","verkoopster","en koos iets uit.",-8.11020851135254,0.0768538686841566
+"166",56,"control","Lukas begon het college. Haastig begroette hij zijn","studenten","en begon.",-3.8996365070343,0.970212726979892
+"167",56,"script-related","Lukas beëindigde het college. Haastig begroette hij zijn","studenten","en begon.",-4.05903148651123,0.936393826189799
+"168",56,"script-unrelated","Lukas ging naar de kapper. Haastig begroette hij zijn","studenten","en begon.",-9.49901962280273,-0.217810777269207
+"169",57,"control","Marie ging naar de uni. Haastig betrad ze de","collegezaal","en opende haar boek.",-8.39014720916748,0.0174591557529277
+"170",57,"script-related","Marie verliet de uni. Haastig betrad ze de","collegezaal","en opende haar boek.",-8.70213168859482,-0.0487347243330452
+"171",57,"script-unrelated","Marie ging douchen. Haastig betrad ze de","collegezaal","en opende haar boek.",-10.7963560037315,-0.493067190626682
+"172",58,"control","Thorsten begon te barbecueën. Voorzichtig plaatste hij de","aanmaakblokjes","en zocht de tang.",-12.4619795084,-0.846463240131386
+"173",58,"script-related","Thorsten stopte met barbecueën. Voorzichtig plaatste hij de","aanmaakblokjes","en zocht de tang.",-12.8522549271584,-0.929268142212461
+"174",58,"script-unrelated","Thorsten betrad de bloemenwinkel. Voorzichtig plaatste hij de","aanmaakblokjes","en zocht de tang.",-12.3001792430878,-0.812134008819582
+"175",59,"control","Claudia betrad de dierenwinkel. Een tijdje stond ze bij de","kooi","en dacht na over de koop.",-9.7963171005249,-0.280888509938235
+"176",59,"script-related","Claudia verliet de dierenwinkel. Een tijdje stond ze bij de","kooi","en dacht na over de koop.",-8.86841773986816,-0.0840157067657671
+"177",59,"script-unrelated","Claudia betrad de begraafplaats. Een tijdje stond ze bij de","kooi","en dacht na over de koop.",-10.7710742950439,-0.487703159709812
+"178",60,"control","Jonathan ging naar de keuken. Eerst reinigde hij de","oven","en daarna de koelkast.",-3.00042247772217,1.16099935116443
+"179",60,"script-related","Jonathan verliet de keuken. Eerst reinigde hij de","oven","en daarna de koelkast.",-3.49917197227478,1.05517945814938
+"180",60,"script-unrelated","Jonathan ging de tuin in. Eerst reinigde hij de","oven","en daarna de koelkast.",-5.01749658584595,0.733035877203338
+"181",61,"control","Lara liep naar het fornuis. Snel reinigde ze de","kookplaat","en daarna de afzuigkap.",-5.97542607784271,0.529791568254248
+"182",61,"script-related","Lara liep weg van het fornuis. Snel reinigde ze de","kookplaat","en daarna de afzuigkap.",-6.54279696941376,0.409412244161389
+"183",61,"script-unrelated","Lara ging naar het museum. Snel reinigde ze de","kookplaat","en daarna de afzuigkap.",-8.94367051124573,-0.0999821193701599
+"184",62,"control","Roman ging naar de boekhandel. Snel zocht hij een","roman","voor zijn vrouw.",-8.4636869430542,0.00185619904371238
+"185",62,"script-related","Roman verliet de boekhandel. Snel zocht hij een","roman","voor zijn vrouw.",-8.17745685577393,0.0625857587615724
+"186",62,"script-unrelated","Roman ging naar de banketbakker. Snel zocht hij een","roman","voor zijn vrouw.",-13.1092834472656,-0.983801992966464
+"187",63,"control","Annika ging naar de boetiek. Ze zocht een tijdje naar","laarzen","en kocht ze toen.",-10.1123504638672,-0.347941443451609
+"188",63,"script-related","Annika verliet de boetiek. Ze zocht een tijdje naar","laarzen","en kocht ze toen.",-11.492226600647,-0.640710352017683
+"189",63,"script-unrelated","Annika ging naar de spa. Ze zocht een tijdje naar","laarzen","en kocht ze toen.",-9.77905082702637,-0.277225117324629
+"190",64,"control","Emil betrad de apotheek. Snel kocht hij het","medicijn","en ging toen naar huis.",-3.05799746513367,1.14878364152508
+"191",64,"script-related","Emil verliet de apotheek. Snel kocht hij het","medicijn","en ging toen naar huis.",-3.52644324302673,1.0493933010006
+"192",64,"script-unrelated","Emil betrad de manege. Snel kocht hij het","medicijn","en ging toen naar huis.",-7.44595289230347,0.217789266734971
+"193",65,"control","Susanne betrad de badkamer. Direct verwijderde ze haar","make-up","en poetste haar tanden.",-2.19657496269792,1.3315520213312
+"194",65,"script-related","Susanne verliet de badkamer. Direct verwijderde ze haar","make-up","en poetste haar tanden.",-2.07841120800003,1.35662287557157
+"195",65,"script-unrelated","Susanne ging naar de veiligheidscontrole. Direct verwijderde ze haar","make-up","en poetste haar tanden.",-4.24500554427505,0.896935631021514
+"196",66,"control","Martin kwam bij de garage. Meteen vroeg hij naar","banden","voor de winter.",-14.1090774536133,-1.19592871378388
+"197",66,"script-related","Martin verliet de garage. Meteen vroeg hij naar","banden","voor de winter.",-13.8834552764893,-1.14805836021791
+"198",66,"script-unrelated","Martin kwam bij de hotelreceptie. Meteen vroeg hij naar","banden","voor de winter.",-14.9193782806396,-1.36785058591099
+"199",67,"control","Jutta ging naar het postkantoor. Meteen kreeg ze het","pakket","waarop ze had gewacht.",-6.07175779342651,0.509352827065793
+"200",67,"script-related","Jutta verliet het postkantoor. Meteen kreeg ze het","pakket","waarop ze had gewacht.",-6.39909696578979,0.439901135229619
+"201",67,"script-unrelated","Jutta ging naar de tandarts. Meteen kreeg ze het","pakket","waarop ze had gewacht.",-7.20632314682007,0.268631612055084
+"202",68,"control","Jens ging naar de douane. Snel toonde hij zijn","formulier","en keek de beambte aan.",-8.65183067321777,-0.0380623364431654
+"203",68,"script-related","Jens verliet de douane. Snel toonde hij zijn","formulier","en keek de beambte aan.",-9.36838817596436,-0.19009464746894
+"204",68,"script-unrelated","Jens begon te pokeren. Snel toonde hij zijn","formulier","en keek de beambte aan.",-12.0270118713379,-0.75417597102808
+"205",69,"control","Elena begon te tekenen. Meteen pakte ze het","potlood","en tekende een bloem.",-4.24880695343018,0.89612908441947
+"206",69,"script-related","Elena stopte met tekenen. Meteen pakte ze het","potlood","en tekende een bloem.",-4.21904516220093,0.90244365636032
+"207",69,"script-unrelated","Elena begon de vakantie. Meteen pakte ze het","potlood","en tekende een bloem.",-7.04263782501221,0.303360796607698
+"208",70,"control","Bruno begon zijn filmavond. Snel haalde hij de","popcorn","uit de keuken.",-8.90340495109558,-0.0914389582966806
+"209",70,"script-related","Bruno beëindigde zijn filmavond. Snel haalde hij de","popcorn","uit de keuken.",-8.9559760093689,-0.102592982156214
+"210",70,"script-unrelated","Bruno betrad het gemeentehuis. Snel haalde hij de","popcorn","uit de keuken.",-11.9043169021606,-0.728143727078706
+"211",71,"control","Jana betrad het tuincentrum. Na een tijdje vroeg ze om een","palmboom","voor het balkon.",-10.5353427454829,-0.437687896281437
+"212",71,"script-related","Jana verliet het tuincentrum. Na een tijdje vroeg ze om een","palmboom","voor het balkon.",-11.9545476287603,-0.738801201768712
+"213",71,"script-unrelated","Jana ging naar de kermis. Na een tijdje vroeg ze om een","palmboom","voor het balkon.",-12.8286999166012,-0.924270465574484
+"214",72,"control","Nico ging naar de pizzeria. Hij greep meteen de","menukaart","en bestelde een margherita.",-4.16303621977568,0.914327097566897
+"215",72,"script-related","Nico verliet de pizzeria. Hij greep meteen de","menukaart","en bestelde een margherita.",-5.50522317737341,0.629554718225273
+"216",72,"script-unrelated","Nico ging wandelen. Hij greep meteen de","menukaart","en bestelde een margherita.",-7.84551960974932,0.13301302584791
+"217",73,"control","Beate ging zwemmen. Snel controleerde ze het","bassin","en zwom weg.",-7.16093617677689,0.278261384850252
+"218",73,"script-related","Beate kwam terug van het zwemmen. Snel controleerde ze het","bassin","en zwom weg.",-7.13775038719177,0.283180723717085
+"219",73,"script-unrelated","Beate ging met de taxi. Snel controleerde ze het","bassin","en zwom weg.",-12.9001704454422,-0.939434398166475
+"220",74,"control","Hubert nam een vliegtuig. Vol enthousiasme genoot hij van de","hoogte","want hij hield van vliegen.",-6.76784038543701,0.36166468658505
+"221",74,"script-related","Hubert verliet het vliegtuig. Vol enthousiasme genoot hij van de","hoogte","want hij hield van vliegen.",-8.17355823516846,0.0634129307585024
+"222",74,"script-unrelated","Hubert begon te baden. Vol enthousiasme genoot hij van de","hoogte","want hij hield van vliegen.",-7.98103427886963,0.104260820693007
+"223",75,"control","Jenni begon de les. Direct opende ze het","schoolbord","en begon te schrijven.",-9.0206515789032,-0.116315225333515
+"224",75,"script-related","Jenni stopte de les. Direct opende ze het","schoolbord","en begon te schrijven.",-9.20010924339294,-0.154390834561087
+"225",75,"script-unrelated","Jenni betrad de ijshal. Direct opende ze het","schoolbord","en begon te schrijven.",-13.2649803161621,-1.01683626405717
+"226",76,"control","Hans betrad de klimhal. Even later greep hij het","touw","en spande het.",-2.67685890197754,1.22964997305543
+"227",76,"script-related","Hans verliet de klimhal. Even later greep hij het","touw","en spande het.",-2.26665544509888,1.31668301548536
+"228",76,"script-unrelated","Hans begon te bowlen. Even later greep hij het","touw","en spande het.",-3.43552923202515,1.06868256549677
+"229",77,"control","Clara ging naar de schietbaan. Ze kreeg meteen een","revolver","en begon op het doel te schieten.",-6.59152698516846,0.399073175931537
+"230",77,"script-related","Clara verliet de schietbaan. Ze kreeg meteen een","revolver","en begon op het doel te schieten.",-6.90904140472412,0.331706006089584
+"231",77,"script-unrelated","Clara ging op een brandweerinzet. Ze kreeg meteen een","revolver","en begon op het doel te schieten.",-8.21610927581787,0.0543848583125567
+"232",78,"control","Georg nam deel aan de yogales. Na een tijdje ging hij op zijn","yogamat","zitten en deed een oefening.",-12.3320429325104,-0.818894541396742
+"233",78,"script-related","Georg kwam terug van de yogales. Na een tijdje ging hij op zijn","yogamat","zitten en deed een oefening.",-13.0188927650452,-0.964623763361027
+"234",78,"script-unrelated","Georg nam deel aan de voetbalwedstrijd. Na een tijdje ging hij op zijn","yogamat","zitten en deed een oefening.",-15.6799321174622,-1.52921761790554
+"235",79,"control","Johanna begon de jacht. Na een tijdje zag ze de","jachthut","en liep erop af.",-8.68530416488647,-0.0451644214495859
+"236",79,"script-related","Johanna kwam terug van de jacht. Na een tijdje zag ze de","jachthut","en liep erop af.",-9.25894856452942,-0.166874798426203
+"237",79,"script-unrelated","Johanna betrad de slagerij. Na een tijdje zag ze de","jachthut","en liep erop af.",-11.680451631546,-0.680646137116288
+"238",80,"control","Jürgen betrad de bakkerij. Even later wees hij naar de","croissant","en maakte zijn keuze.",-9.2665259540081,-0.168482496384247
+"239",80,"script-related","Jürgen verliet de bakkerij. Even later wees hij naar de","croissant","en maakte zijn keuze.",-9.86476013064384,-0.295410096834896
+"240",80,"script-unrelated","Jürgen betrad de dierentuin. Even later wees hij naar de","croissant","en maakte zijn keuze.",-12.5594847500324,-0.867150968842187
+"241",81,"control","Frauke ging naar het stadion. Snel koos ze een","tribune","en ging zitten.",-8.38194274902344,0.0191998995615356
+"242",81,"script-related","Frauke verliet het stadion. Snel koos ze een","tribune","en ging zitten.",-9.36821365356445,-0.190057618976905
+"243",81,"script-unrelated","Frauke ging naar de wasserette. Snel koos ze een","tribune","en ging zitten.",-12.2433061599731,-0.800067222514317
+"244",82,"control","Bernd betrad de kiosk. Hij kocht meteen een","krant","en ging weer naar huis.",-3.36908602714539,1.08277984861936
+"245",82,"script-related","Bernd verliet de kiosk. Hij kocht meteen een","krant","en ging weer naar huis.",-3.46677541732788,1.06205304903214
+"246",82,"script-unrelated","Bernd betrad het circus. Hij kocht meteen een","krant","en ging weer naar huis.",-7.06950759887695,0.297659825224747
+"247",83,"control","Nicole betrad het kantoor. Eerst liep ze naar het","bureau","en zette toen de computer aan.",-1.81559371948242,1.41238497422264
+"248",83,"script-related","Nicole verliet het kantoor. Eerst liep ze naar het","bureau","en zette toen de computer aan.",-2.27220344543457,1.31550589388748
+"249",83,"script-unrelated","Nicole betrad de sauna. Eerst liep ze naar het","bureau","en zette toen de computer aan.",-5.1794319152832,0.698677989278503
+"250",84,"control","Viktor ging naar het lab. Snel begon hij het","experiment","en maakte aantekeningen.",-6.22906875610352,0.475976093009137
+"251",84,"script-related","Viktor verliet het lab. Snel begon hij het","experiment","en maakte aantekeningen.",-6.60573482513428,0.39605869246523
+"252",84,"script-unrelated","Viktor ging naar de dierenarts. Snel begon hij het","experiment","en maakte aantekeningen.",-7.80414152145386,0.141792232492561
+"253",85,"control","Gabi ging naar de paskamer. Snel paste ze de","kleding","en ging naar de kassa.",-6.19857978820801,0.482444950333466
+"254",85,"script-related","Gabi verliet de paskamer. Snel paste ze de","kleding","en ging naar de kassa.",-6.37725067138672,0.444536272832279
+"255",85,"script-unrelated","Gabi betrad de plaats delict. Snel paste ze de","kleding","en ging naar de kassa.",-5.62213182449341,0.604750160695106
+"256",86,"control","Jakob betrad het tankstation. Hij zei meteen zijn","nummer","en betaalde.",-5.32421684265137,0.667958909476661
+"257",86,"script-related","Jakob verliet het tankstation. Hij zei meteen zijn","nummer","en betaalde.",-5.25328207015991,0.683009170415423
+"258",86,"script-unrelated","Jakob begon bomen te kappen. Hij zei meteen zijn","nummer","en betaalde.",-6.94222116470337,0.324666242261014
+"259",87,"control","Hilde begon de koets te besturen. Snel beklom ze de","koets","en daar ging ze.",-6.18911075592041,0.484453998953211
+"260",87,"script-related","Hilde was klaar met de koets besturen. Snel beklom ze de","koets","en daar ging ze.",-5.89559602737427,0.546729144115922
+"261",87,"script-unrelated","Hilde begon een kampvuur. Snel beklom ze de","koets","en daar ging ze.",-12.3286294937134,-0.818170310631083
+"262",88,"control","Tom begon ontbijt te maken. Hij opende meteen de","boter","en maakte een boterham.",-7.23946237564087,0.261600447739691
+"263",88,"script-related","Tom stopte met ontbijt maken. Hij opende meteen de","boter","en maakte een boterham.",-7.94091653823853,0.112772618836075
+"264",88,"script-unrelated","Tom ging naar de kerstmarkt. Hij opende meteen de","boter","en maakte een boterham.",-9.17564582824707,-0.14920042133402
+"265",89,"control","Kim ging naar het ziekenhuis. Meteen liep ze naar de","receptie","en vroeg de weg.",-4.19656181335449,0.907213958075982
+"266",89,"script-related","Kim verliet het ziekenhuis. Meteen liep ze naar de","receptie","en vroeg de weg.",-4.42228507995605,0.859322156312434
+"267",89,"script-unrelated","Kim begon haar lunch te koken. Meteen liep ze naar de","receptie","en vroeg de weg.",-6.07216930389404,0.509265516714356
+"268",90,"control","Michael begon een taart te bakken. Als eerste pakte hij een","garde","en klopte het eiwit stijf.",-9.52115726470947,-0.222507730196002
+"269",90,"script-related","Michael was klaar met een taart bakken. Als eerste pakte hij een","garde","en klopte het eiwit stijf.",-9.65787410736084,-0.25151500102181
+"270",90,"script-unrelated","Michael betrad het restaurant. Als eerste pakte hij een","garde","en klopte het eiwit stijf.",-10.4169387817383,-0.41256607678515
