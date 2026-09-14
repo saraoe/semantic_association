@@ -47,25 +47,28 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
 ```{r}
 diagnostics_df <- data.frame()
 
-model_names <- list.files(models_path,
-    full.names = FALSE,
-    pattern = "delogu_lp_.*\\.rds$"
-)
-for (model in model_names) {
-    print(model)
-    fit <- readRDS(
-        file.path(models_path, model)
+for (dataset in c("delogu", "michaelov")) {
+    print(dataset)
+    model_names <- list.files(models_path,
+        full.names = FALSE,
+        pattern = paste0(dataset, "_lp_.*\\.rds$")
     )
-    if (number_divergent_transitions(fit) > 0) {
-        print(paste(
-            "Divergent transistions! Number:",
-            number_divergent_transitions(fit)
-        ))
-    }
-    diag <- diagnostics_rhat_ess(fit) |>
-        mutate("model" = model)
+    for (model in model_names) {
+        print(model)
+        fit <- readRDS(
+            file.path(models_path, model)
+        )
+        if (number_divergent_transitions(fit) > 0) {
+            print(paste(
+                "Divergent transistions! Number:",
+                number_divergent_transitions(fit)
+            ))
+        }
+        diag <- diagnostics_rhat_ess(fit) |>
+            mutate("dataset" = dataset, "model" = model)
 
-    diagnostics_df <- rbind(diagnostics_df, diag)
+        diagnostics_df <- rbind(diagnostics_df, diag)
+    }
 }
 ```
 
@@ -165,23 +168,53 @@ rm(fixef_df)
 
 fixef_df <- get_fixef_models(c("delogu"), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
+
+model_name <- "delogu_assoc_lp.rds"
+m <- readRDS(file.path(models_path, model_name))
+if (number_divergent_transitions(m) > 0) {
+    print("Divergent transitions - skips this model")
+} else {
+    fe_df <- fixef(m) |>
+        as.data.frame()
+    fe_df$coefficient <- rownames(fe_df)
+    fe_df <- fe_df |>
+        mutate(
+            "implementation" = "Human rating",
+            "dataset" = "delogu",
+            "model" = "",
+            coefficient = ifelse(coefficient == "s_assoc", "s_sem", coefficient)
+        )
+
+    fixef_df <- rbind(fixef_df, fe_df)
+}
 ```
 
-### coefficients
 ```{r}
 fixef_df |>
     filter(coefficient != "Intercept") |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        implementation == "Human rating" ~ "Human rating",
     )) |>
     mutate(
-        implementation = paste(model_type, model, sep = ", ")
+        implementation = ifelse(implementation == "Human rating", "Human rating", paste(model_type, model, sep = ", ")),
+        coefficient = case_when(
+            coefficient == "s_lp" ~ "Log probability",
+            coefficient == "s_sem" ~ "Semantic assocaition",
+            .default = coefficient
+        )
     ) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
     mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        model_type = factor(model_type, levels = c("Human rating", "WE", "CWE", "SE")),
+    ) |>
+    arrange(model_type, model) |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = rev(unique(implementation))
+        )
     ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
@@ -189,9 +222,10 @@ fixef_df |>
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
-            "firebrick",
+            "darkorange",
             "steelblue1",
-            "steelblue4"
+            "steelblue4",
+            "firebrick"
         )
     ) +
     facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
@@ -203,4 +237,69 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3, width = 7)
+```
+
+### Models with plaus (Delogu)
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("delogu"), model_prefix = "plaus") |>
+    filter(!(model %in% exclude_models))
+
+model_name <- "delogu_assoc_plaus.rds"
+m <- readRDS(file.path(models_path, model_name))
+if (number_divergent_transitions(m) > 0) {
+    print("Divergent transitions - skips this model")
+} else {
+    fe_df <- fixef(m) |>
+        as.data.frame()
+    fe_df$coefficient <- rownames(fe_df)
+    fe_df <- fe_df |>
+        mutate(
+            "implementation" = "Human rating",
+            "dataset" = "delogu",
+            "model" = "",
+            coefficient = ifelse(coefficient == "s_assoc", "s_sem", coefficient)
+        )
+
+    fixef_df <- rbind(fixef_df, fe_df)
+}
+```
+
+```{r}
+fixef_df |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE",
+        implementation == "Human rating" ~ "Human rating",
+    )) |>
+    mutate(
+        implementation = paste(model_type, model, sep = ", ")
+    ) |>
+    mutate(
+        model_type = factor(model_type, levels = c("SE", "WE", "CWE", "Human rating")),
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "firebrick",
+            "steelblue1",
+            "steelblue4",
+            "purple4"
+        )
+    ) +
+    facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "delogu_regression_coefficients_plaus.png"), height = 3, width = 7)
 ```
