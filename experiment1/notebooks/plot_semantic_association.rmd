@@ -62,6 +62,17 @@ delogu_nl_df <- read.csv(file.path("results", "delogu_nl_semantic_association.cs
         levels = c("control", "script-related", "script-unrelated")
     ))
 
+aurnhammer_df <- read.csv(file.path("results", "aurnhammer_semantic_association.csv")) |>
+    mutate(cond = case_when(
+        Condition == "A" ~ "A+E+",
+        Condition == "B" ~ "A-E+",
+        Condition == "C" ~ "A+E-",
+        Condition == "D" ~ "A-E-"
+    )) |>
+    mutate("cond" = factor(cond,
+        levels = c("A+E+", "A-E+", "A+E-", "A-E-")
+    ))
+
 hoeks_df <- read.csv(file.path("results", "hoeks_semantic_association.csv")) |>
     mutate("cond" = condition)
 
@@ -738,6 +749,67 @@ delogu_nl_df |>
     )
 
 ggsave(file.path("figs", "semantic_association_delogu_nl.png"), width = 7, height = 5)
+```
+
+## Aurnhammer
+
+### Initial exploration
+By condition
+```{r}
+aurnhammer_df |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE),
+        "max" = max(semantic_association, na.rm = TRUE),
+        "min" = min(semantic_association, na.rm = TRUE),
+        "NAs" = sum(is.na(semantic_association))
+    )
+```
+
+```{r}
+aurnhammer_df |>
+    filter(!implementation %in% exclude_imp) |>
+    filter(!model %in% exclude_models) |>
+    group_by(implementation, model) |>
+    mutate(semantic_association = scale(semantic_association)) |>
+    ungroup() |>
+    group_by(implementation, model, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    mutate("implementation_f" = factor(
+        implementation,
+        levels = c("WE", "CWE", "SE")
+    )) |>
+    mutate(model = remove_organization(model)) |>
+    ggplot(aes(x = model, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    facet_wrap(. ~ implementation_f,
+        nrow = 3,
+        scales = "free_x", space = "free_x"
+    ) +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
+    )
+
+ggsave(file.path("figs", "semantic_association_aurnhammer.png"), width = 7, height = 5)
 ```
 
 ## Hoeks
