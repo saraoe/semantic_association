@@ -812,6 +812,42 @@ aurnhammer_df |>
 ggsave(file.path("figs", "semantic_association_aurnhammer.png"), width = 7, height = 5)
 ```
 
+```{r}
+aurnhammer_df |>
+    select(starts_with("Association"), cond, Item) |>
+    distinct() |>
+    pivot_longer(
+        cols = starts_with("Association"),
+        names_to = "association_type",
+        values_to = "semantic_association"
+    ) |>
+    group_by(association_type, cond) |>
+    summarize(
+        "mean" = mean(semantic_association, na.rm = TRUE),
+        "sd" = sd(semantic_association, na.rm = TRUE)
+    ) |>
+    ggplot(aes(x = association_type, color = cond, group = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - sd, ymax = mean + sd),
+        width = 0.15,
+        position = position_dodge(width = 0.3)
+    ) +
+    scale_colour_manual(
+        values = c("blue", "firebrick2", "purple", "orange")
+    ) +
+    labs(x = "", color = "Condition") +
+    theme_bw() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1)
+    )
+```
+
 ## Hoeks
 
 ### Initial exploration
