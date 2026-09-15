@@ -25,6 +25,12 @@ if __name__ == "__main__":
                 "experiment1", "results", "delogu_semantic_association.csv"
             ),
         },
+        {
+            "df": pd.read_csv(Path("experiment1", "data", "aurnhammer_2021_stim.")),
+            "out_path": Path(
+                "experiment1", "results", "aurnhammer_semantic_association.csv"
+            ),
+        },
     ]
 
     config = [

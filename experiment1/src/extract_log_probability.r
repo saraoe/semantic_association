@@ -83,3 +83,18 @@ delogu_nl_stim <- delogu_nl_stim |>
     mutate("s_lp" = scale(lp_GroNLP_gpt2_small_dutch))
 
 write.csv(delogu_nl_stim, file.path("results", "delogu_nl_log_probability.csv"))
+
+# Aurnhammer et al. (2021)
+aurnhammer_stim <- read.csv(file.path("data", "aurnhammer_2021_stim.csv")) |>
+    select(-X)
+
+aurnhammer_stim <- aurnhammer_stim |>
+    mutate("lp_benjamin_gerpt2" = causal_targets_pred(
+        contexts = context,
+        targets = target,
+        model = "benjamin/gerpt2",
+        batch_size = 10
+    )) |>
+    mutate("s_lp" = scale(lp_benjamin_gerpt2))
+
+write.csv(aurnhammer_stim, file.path("results", "aurnhammer_log_probability.csv"))

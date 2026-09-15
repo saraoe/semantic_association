@@ -1,0 +1,481 @@
+"","Tar","Item","Condition","Completion","Part","Cloze","Cloze_Balanced","Association_Noun","Association_Verb","Association_MainVerb","article","target","context","lp_benjamin_gerpt2","s_lp"
+"1","Axt",1,"A","und hackte die Holzscheite.",0,0.75,1,6.9,3.1,6,"die","Axt","Gestern schärfte der Holzfäller, bevor er das Holz stapelte, die",-7.31705290079117,-0.461596856282432
+"2","Axt",1,"B","und hackte die Holzscheite.",0,0.67,1,3.1,1.2,6,"die","Axt","Gestern schärfte der Holzfäller, bevor er den Film schaute, die",-8.53382933139801,-0.929670630467669
+"3","Axt",1,"C","und hackte die Holzscheite.",0,0,1,6.9,3.1,1.4,"die","Axt","Gestern aß der Holzfäller, bevor er das Holz stapelte, die",-7.21726912260056,-0.423211686677487
+"4","Axt",1,"D","und hackte die Holzscheite.",0,0,1,3.1,1.2,1.4,"die","Axt","Gestern aß der Holzfäller, bevor er den Film schaute, die",-8.36302828788757,-0.863966293122118
+"5","Messer",2,"A","und rasiert den Kunden.",0,0.67,1,5,5.1,6.4,"das","Messer","Nachdenklich schärft der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",-5.35648107528687,0.292602708108669
+"6","Messer",2,"B","und rasiert den Kunden.",0,0.75,1,1.2,1.4,6.4,"das","Messer","Nachdenklich schärft der Barbier, nachdem er die Topfpflanze gegossen hat, das",-6.95083475112915,-0.320718789305129
+"7","Messer",2,"C","und rasiert den Kunden.",0,0,1,5,5.1,1.4,"das","Messer","Nachdenklich trinkt der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",-5.82018089294434,0.114225055254487
+"8","Messer",2,"D","und rasiert den Kunden.",0,0,1,1.2,1.4,1.4,"das","Messer","Nachdenklich trinkt der Barbier, nachdem er die Topfpflanze gegossen hat, das",-7.0885443687439,-0.373693402255507
+"9","Kaffee",3,"A","und gießt die Milch dazu.",0,0.58,0,5.8,2.3,5.8,"den","Kaffee","Sogleich süßt der Kellner, nachdem er die Bestellung aufgenommen hat, den",-5.10912990570068,0.387754613245092
+"10","Kaffee",3,"B","und gießt die Milch dazu.",0,0.25,0,3.5,3.5,5.8,"den","Kaffee","Sogleich süßt der Kellner, nachdem er das Radio angemacht hat, den",-5.45739078521729,0.253784411180028
+"11","Kaffee",3,"C","und gießt die Milch dazu.",0,0,0,5.8,2.3,3,"den","Kaffee","Sogleich putzt der Kellner, nachdem er die Bestellung aufgenommen hat, den",-4.94277381896973,0.451749049212273
+"12","Kaffee",3,"D","und gießt die Milch dazu.",0,0,0,3.5,3.5,3,"den","Kaffee","Sogleich putzt der Kellner, nachdem er das Radio angemacht hat, den",-5.26397800445557,0.32818710997462
+"13","Ofen",4,"A","auf 180 Grad.",0,1,0,6,2.7,6.6,"den","Ofen","Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",-4.03489112854004,0.800996508924271
+"14","Ofen",4,"B","auf 180 Grad.",0,0.75,0,2.4,1.3,6.6,"den","Ofen","Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",-3.92616558074951,0.8428214294475
+"15","Ofen",4,"C","auf 180 Grad.",0,0,0,6,2.7,1.3,"den","Ofen","Vorsichtig schlürft der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",-4.42231273651123,0.651961822121907
+"16","Ofen",4,"D","auf 180 Grad.",0,0.08,0,2.4,1.3,1.3,"den","Ofen","Vorsichtig schlürft der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",-4.32191133499146,0.690584581209549
+"17","Weinflasche",5,"A","für die Weinprobe.",0,1,1,5.9,1.7,6.8,"die","Weinflasche","Zufrieden entkorkt der Winzer, der die Reben geschnitten hat, die",-9.97607898712158,-1.48448022629063
+"18","Weinflasche",5,"B","für die Weinprobe.",0,1,1,2,2.7,6.8,"die","Weinflasche","Zufrieden entkorkt der Winzer, der die Lohnabrechnungen beendet hat, die",-10.7934556007385,-1.79891149471652
+"19","Weinflasche",5,"C","für die Weinprobe.",0,0.08,1,5.9,1.7,1,"die","Weinflasche","Zufrieden glättet der Winzer, der die Reben geschnitten hat, die",-10.0004277229309,-1.49384678236472
+"20","Weinflasche",5,"D","für die Weinprobe.",0,0,1,2,2.7,1,"die","Weinflasche","Zufrieden glättet der Winzer, der die Lohnabrechnungen beendet hat, die",-11.1070103645325,-1.91953082790791
+"21","Ticket",6,"A","für die Fahrt.",0,0.33,1,6.7,2.3,6.3,"das","Ticket","Umgehend löst der Fahrgast, der den Automaten bedient, das",-3.85006427764893,0.872096342460847
+"22","Ticket",6,"B","für die Fahrt.",0,0.33,1,1.3,1.3,6.3,"das","Ticket","Umgehend löst der Fahrgast, der die Einkaufstasche abstellt, das",-3.84361028671265,0.87457908606116
+"23","Ticket",6,"C","für die Fahrt.",0,0,1,6.7,2.3,1.2,"das","Ticket","Umgehend knotet der Fahrgast, der den Automaten bedient, das",-5.07960224151611,0.399113417434661
+"24","Ticket",6,"D","für die Fahrt.",0,0,1,1.3,1.3,1.2,"das","Ticket","Umgehend knotet der Fahrgast, der die Einkaufstasche abstellt, das",-5.25116729736328,0.333115177175656
+"25","Sieg",7,"A","mit einer Party.",0,0.5,0,6.8,4.4,6.2,"den","Sieg","Am Abend feiert der Gewinner, der den Pokal erhält, den",-4.88187217712402,0.475176903858158
+"26","Sieg",7,"B","mit einer Party.",0,0.75,0,1.8,2,6.2,"den","Sieg","Am Abend feiert der Gewinner, der das Eis isst, den",-5.29144096374512,0.317622563619506
+"27","Sieg",7,"C","mit einer Party.",0,0,0,6.8,4.4,1.8,"den","Sieg","Am Abend knabbert der Gewinner, der den Pokal erhält, den",-5.63875389099121,0.184017023119084
+"28","Sieg",7,"D","mit einer Party.",0,0,0,1.8,2,1.8,"den","Sieg","Am Abend knabbert der Gewinner, der das Eis isst, den",-6.07437610626221,0.016440359656646
+"29","Fisch",8,"A","für das Abendessen.",1,0.83,1,7,4.9,6.9,"den","Fisch","Endlich fängt der Angler, der den Köder auswarf, den",-3.02341604232788,1.19009425045559
+"30","Fisch",8,"B","für das Abendessen.",1,0.83,1,2,1.2,6.9,"den","Fisch","Endlich fängt der Angler, der die Zeitung las, den",-4.50063896179199,0.621831018333602
+"31","Fisch",8,"C","für das Abendessen.",1,0,1,7,4.9,1.3,"den","Fisch","Endlich baut der Angler, der den Köder auswarf, den",-3.24314498901367,1.10556815775204
+"32","Fisch",8,"D","für das Abendessen.",1,0,1,2,1.2,1.3,"den","Fisch","Endlich baut der Angler, der die Zeitung las, den",-5.02358150482178,0.420663668571657
+"33","Unkraut",9,"A","und leerte den Kompost.",0,0.83,0,6.7,3.3,6.9,"das","Unkraut","Am Nachmittag jätete der Schrebergärtner, der das Beet pflegte, das",-4.24535465240479,0.720034671181765
+"34","Unkraut",9,"B","und leerte den Kompost.",0,0.67,0,3.3,1.4,6.9,"das","Unkraut","Am Nachmittag jätete der Schrebergärtner, der die Sonne genoss, das",-6.80095863342285,-0.263063924935319
+"35","Unkraut",9,"C","und leerte den Kompost.",0,0,0,6.7,3.3,1.2,"das","Unkraut","Am Nachmittag polierte der Schrebergärtner, der das Beet pflegte, das",-4.62239933013916,0.574991817865181
+"36","Unkraut",9,"D","und leerte den Kompost.",0,0,0,3.3,1.4,1.2,"das","Unkraut","Am Nachmittag polierte der Schrebergärtner, der die Sonne genoss, das",-6.51516532897949,-0.153123966137007
+"37","Klassenzimmer",10,"A","und nimmt ein Stück Kreide.",1,0.75,1,6.8,3.7,5.5,"das","Klassenzimmer","Eine Weile lüftet der Lehrer, bevor er die Tafel beschreibt, das",-8.08884048461914,-0.758490778735792
+"38","Klassenzimmer",10,"B","und nimmt ein Stück Kreide.",1,0.75,1,1.9,2.6,5.5,"das","Klassenzimmer","Eine Weile lüftet der Lehrer, bevor er den Mantel aufhängt, das",-8.33903789520264,-0.854737585722992
+"39","Klassenzimmer",10,"C","und nimmt ein Stück Kreide.",1,0,1,6.8,3.7,4.7,"das","Klassenzimmer","Eine Weile bastelt der Lehrer, bevor er die Tafel beschreibt, das",-8.03190898895264,-0.736590173681057
+"40","Klassenzimmer",10,"D","und nimmt ein Stück Kreide.",1,0,1,1.9,2.6,4.7,"das","Klassenzimmer","Eine Weile bastelt der Lehrer, bevor er den Mantel aufhängt, das",-8.35807704925537,-0.862061633486074
+"41","Käse",11,"A","und gibt Öl in die Pfanne.",0,0.5,1,5.2,4.6,6.4,"den","Käse","Schnell reibt der Chefkoch, während er die Nudeln kocht, den",-5.39939975738525,0.276092600740112
+"42","Käse",11,"B","und gibt Öl in die Pfanne.",0,0.58,1,1.7,1.2,6.4,"den","Käse","Schnell reibt der Chefkoch, während er die Nachrichten hört, den",-7.30960369110107,-0.458731268482871
+"43","Käse",11,"C","und gibt Öl in die Pfanne.",0,0,1,5.2,4.6,1.1,"den","Käse","Schnell flickt der Chefkoch, während er die Nudeln kocht, den",-5.55468082427979,0.216358541785186
+"44","Käse",11,"D","und gibt Öl in die Pfanne.",0,0,1,1.7,1.2,1.1,"den","Käse","Schnell flickt der Chefkoch, während er die Nachrichten hört, den",-7.57558345794678,-0.561049286972338
+"45","Bier",12,"A","das zuvor gebraut wurde.",0,0.67,1,3.9,1.2,5,"das","Bier","Vorgestern probierte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",-6.90922069549561,-0.30471055016638
+"46","Bier",12,"B","das zuvor gebraut wurde.",0,0.58,1,1.8,2.3,5,"das","Bier","Vorgestern probierte der Braumeister, nachdem er den Boden gewischt hatte, das",-6.51620721817017,-0.153524763681646
+"47","Bier",12,"C","das zuvor gebraut wurde.",0,0,1,3.9,1.2,1.1,"das","Bier","Vorgestern bemalte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",-7.39117908477783,-0.490111973630064
+"48","Bier",12,"D","das zuvor gebraut wurde.",0,0,1,1.8,2.3,1.1,"das","Bier","Vorgestern bemalte der Braumeister, nachdem er den Boden gewischt hatte, das",-7.28056240081787,-0.447559564291257
+"49","Rasen",13,"A","hinter der Villa.",0,0.92,1,7,5.6,6.8,"den","Rasen","Eine Zeit lang mähte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",-3.49740695953369,1.00775778176233
+"50","Rasen",13,"B","hinter der Villa.",0,0.92,1,2.2,1.9,6.8,"den","Rasen","Eine Zeit lang mähte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",-2.91079783439636,1.23341661297226
+"51","Rasen",13,"C","hinter der Villa.",0,0,1,7,5.6,1.4,"den","Rasen","Eine Zeit lang räucherte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",-3.86616158485413,0.865903974538336
+"52","Rasen",13,"D","hinter der Villa.",0,0,1,2.2,1.9,1.4,"den","Rasen","Eine Zeit lang räucherte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",-3.00568318367004,1.19691578797907
+"53","Straße",14,"A","und den Bürgersteig.",1,0.42,1,6.5,5.1,6.8,"die","Straße","Achtsam pflasterte der Bauarbeiter, der die Absperrungen umging, die",-5.88753890991211,0.0883135398514355
+"54","Straße",14,"B","und den Bürgersteig.",1,0.42,1,5.7,2,6.8,"die","Straße","Achtsam pflasterte der Bauarbeiter, der die Steine schleppte, die",-5.977370262146,0.0537569039546436
+"55","Straße",14,"C","und den Bürgersteig.",1,0.08,1,6.5,5.1,2,"die","Straße","Achtsam salzte der Bauarbeiter, der die Absperrungen umging, die",-6.20119285583496,-0.032343947065024
+"56","Straße",14,"D","und den Bürgersteig.",1,0,1,5.7,2,2,"die","Straße","Achtsam salzte der Bauarbeiter, der die Steine schleppte, die",-6.39156532287598,-0.105577087441027
+"57","Glocken",15,"A","und freute sich.",0,1,1,6.7,1.1,7,"die","Glocken","Gestern läutete der Priester, nachdem er den Kirchturm erklommen hatte, die",-2.01768755912781,1.5769813688248
+"58","Glocken",15,"B","und freute sich.",0,0.92,1,2.2,1.1,7,"die","Glocken","Gestern läutete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",-4.33513498306274,0.685497662441621
+"59","Glocken",15,"C","und freute sich.",0,0,1,6.7,1.1,1,"die","Glocken","Gestern faltete der Priester, nachdem er den Kirchturm erklommen hatte, die",-4.73850917816162,0.530326279137707
+"60","Glocken",15,"D","und freute sich.",0,0,1,2.2,1.1,1,"die","Glocken","Gestern faltete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",-6.97042083740234,-0.328253232850225
+"61","Wunde",16,"A","mit fünf Stichen.",0,0.92,1,6.7,3.3,5.8,"die","Wunde","Rasch näht der Notarzt, der den Verletzten betreut, die",-7.4599552154541,-0.516569013929113
+"62","Wunde",16,"B","mit fünf Stichen.",0,0.92,1,3.2,1.8,5.8,"die","Wunde","Rasch näht der Notarzt, der den Ohrring trägt, die",-6.81211376190186,-0.267355118417827
+"63","Wunde",16,"C","mit fünf Stichen.",0,0,1,6.7,3.3,2,"die","Wunde","Rasch versteckt der Notarzt, der den Verletzten betreut, die",-7.58400630950928,-0.564289418701628
+"64","Wunde",16,"D","mit fünf Stichen.",0,0,1,3.2,1.8,2,"die","Wunde","Rasch versteckt der Notarzt, der den Ohrring trägt, die",-7.12000846862793,-0.385797121240855
+"65","Hemd",17,"A","und die Hose.",0,0.75,1,6.4,1.5,6.9,"das","Hemd","Eilig bügelt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",-4.25464630126953,0.716460327495344
+"66","Hemd",17,"B","und die Hose.",0,0.67,1,1.4,1.2,6.9,"das","Hemd","Eilig bügelt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",-6.22742891311646,-0.0424365245037277
+"67","Hemd",17,"C","und die Hose.",0,0,1,6.4,1.5,1,"das","Hemd","Eilig salzt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",-4.47829627990723,0.630425878631813
+"68","Hemd",17,"D","und die Hose.",0,0,1,1.4,1.2,1,"das","Hemd","Eilig salzt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",-6.6466760635376,-0.203713971270313
+"69","Auto",18,"A","und übergibt es an den Kunden.",1,0.58,0,7,3.5,6.3,"das","Auto","Schnell repariert der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",-2.18603515625,1.51222083173854
+"70","Auto",18,"B","und übergibt es an den Kunden.",1,0.75,0,5,3.1,6.3,"das","Auto","Schnell repariert der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",-1.70161843299866,1.69856793563306
+"71","Auto",18,"C","und übergibt es an den Kunden.",1,0,0,7,3.5,1.1,"das","Auto","Schnell brät der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",-2.14171314239502,1.52927077763061
+"72","Auto",18,"D","und übergibt es an den Kunden.",1,0,0,5,3.1,1.1,"das","Auto","Schnell brät der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",-1.75767135620117,1.67700530287856
+"73","Teig",19,"A","für das Brot.",2,1,1,6.9,6.9,6.6,"den","Teig","Am Morgen knetet die Bäckerin, die den Kuchen backt, den",-4.14665174484253,0.758004047727529
+"74","Teig",19,"B","für das Brot.",2,1,1,1.5,1,6.6,"den","Teig","Am Morgen knetet die Bäckerin, die den Stammgast begrüßt, den",-6.52748489379883,-0.157863099026383
+"75","Teig",19,"C","für das Brot.",2,0,1,6.9,6.9,1.2,"den","Teig","Am Morgen hört die Bäckerin, die den Kuchen backt, den",-4.1135082244873,0.770753811999934
+"76","Teig",19,"D","für das Brot.",2,0,1,1.5,1,1.2,"den","Teig","Am Morgen hört die Bäckerin, die den Stammgast begrüßt, den",-6.51838445663452,-0.15436231131955
+"77","Steak",20,"A","und die Beilagen.",0,0.67,0,4.7,2.4,6.5,"das","Steak","Am Nachmittag pfeffert der Grillmeister, bevor er die Kohle anzündet, das",-6.77107667922974,-0.251568831237436
+"78","Steak",20,"B","und die Beilagen.",0,0.83,0,1.4,1.1,6.5,"das","Steak","Am Nachmittag pfeffert der Grillmeister, bevor er die Mücke verscheucht, das",-7.9244327545166,-0.695245843348653
+"79","Steak",20,"C","und die Beilagen.",0,0,0,4.7,2.4,1.4,"das","Steak","Am Nachmittag druckt der Grillmeister, bevor er die Kohle anzündet, das",-6.78953695297241,-0.258670193316678
+"80","Steak",20,"D","und die Beilagen.",0,0,0,1.4,1.1,1.4,"das","Steak","Am Nachmittag druckt der Grillmeister, bevor er die Mücke verscheucht, das",-7.86399030685425,-0.671994633112602
+"81","Feuer",21,"A","und rennt weg.",0,0.58,0,6.6,1.5,6.8,"das","Feuer","Schnell entfacht der Brandstifter, der das Streichholz fallengelassen hat, das",-2.16011309623718,1.52219261961974
+"82","Feuer",21,"B","und rennt weg.",0,1,0,3.3,3,6.8,"das","Feuer","Schnell entfacht der Brandstifter, der die Treppe hochgeklettert ist, das",-3.90015196800232,0.852828436151845
+"83","Feuer",21,"C","und rennt weg.",0,0,0,6.6,1.5,1.6,"das","Feuer","Schnell entstaubt der Brandstifter, der das Streichholz fallengelassen hat, das",-2.87183785438538,1.24840387310256
+"84","Feuer",21,"D","und rennt weg.",0,0,0,3.3,3,1.6,"das","Feuer","Schnell entstaubt der Brandstifter, der die Treppe hochgeklettert ist, das",-4.21920585632324,0.730093680679659
+"85","Haare",22,"A","und holt den Föhn.",0,0.92,1,6.5,3.9,6.8,"die","Haare","Nun kämmt der Friseur, nachdem er die Kopfhaut massiert hat, die",-1.50946402549744,1.77248655904079
+"86","Haare",22,"B","und holt den Föhn.",0,1,1,1,1,6.8,"die","Haare","Nun kämmt der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",-3.58950591087341,0.972328837982912
+"87","Haare",22,"C","und holt den Föhn.",0,0.17,1,6.5,3.9,1.2,"die","Haare","Nun speichert der Friseur, nachdem er die Kopfhaut massiert hat, die",-0.944065690040588,1.98998595016834
+"88","Haare",22,"D","und holt den Föhn.",0,0,1,1,1,1.2,"die","Haare","Nun speichert der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",-2.73534440994263,1.30091064434236
+"89","Bleistift",23,"A","und machte sich wieder an die Arbeit.",0,1,1,6,3.3,6.7,"den","Bleistift","Flink spitzte der Zeichner, der die Karikatur entwarf, den",-5.14353370666504,0.374520039860339
+"90","Bleistift",23,"B","und machte sich wieder an die Arbeit.",0,1,1,2.3,1.6,6.7,"den","Bleistift","Flink spitzte der Zeichner, der den Atlas öffnete, den",-6.19355630874634,-0.0294062936657612
+"91","Bleistift",23,"C","und machte sich wieder an die Arbeit.",0,0,1,6,3.3,1.3,"den","Bleistift","Flink knotete der Zeichner, der die Karikatur entwarf, den",-5.24729919433594,0.334603172453509
+"92","Bleistift",23,"D","und machte sich wieder an die Arbeit.",0,0,1,2.3,1.6,1.3,"den","Bleistift","Flink knotete der Zeichner, der den Atlas öffnete, den",-6.30907535552979,-0.0738445609251312
+"93","Patienten",24,"A","gegen Tetanus.",0,0.25,0,6.7,2,6.5,"den","Patienten","Heute impft der Arzt, nachdem er die Spritze befüllt hat, den",-4.16597080230713,0.750572325749937
+"94","Patienten",24,"B","gegen Tetanus.",0,0.42,0,2.1,1.3,6.5,"den","Patienten","Heute impft der Arzt, nachdem er die Schublade geschlossen hat, den",-5.61445426940918,0.193364685762008
+"95","Patienten",24,"C","gegen Tetanus.",0,0,0,6.7,2,1.5,"den","Patienten","Heute feuert der Arzt, nachdem er die Spritze befüllt hat, den",-2.42969083786011,1.41849051972383
+"96","Patienten",24,"D","gegen Tetanus.",0,0,0,2.1,1.3,1.5,"den","Patienten","Heute feuert der Arzt, nachdem er die Schublade geschlossen hat, den",-3.63453793525696,0.955005762780104
+"97","Leiche",25,"A","in der Leichenhalle.",0,0.75,1,6.6,1.5,7,"die","Leiche","Unverzüglich obduziert der Pathologe, nachdem er die Mordakte gelesen hat, die",-7.24860954284668,-0.435267828151101
+"98","Leiche",25,"B","in der Leichenhalle.",0,0.75,1,2.6,1.2,7,"die","Leiche","Unverzüglich obduziert der Pathologe, nachdem er das Dokument unterschrieben hat, die",-8.75252342224121,-1.01379863123929
+"99","Leiche",25,"C","in der Leichenhalle.",0,0,1,6.6,1.5,1.2,"die","Leiche","Unverzüglich pfeffert der Pathologe, nachdem er die Mordakte gelesen hat, die",-7.34208011627197,-0.471224412267885
+"100","Leiche",25,"D","in der Leichenhalle.",0,0,1,2.6,1.2,1.2,"die","Leiche","Unverzüglich pfeffert der Pathologe, nachdem er das Dokument unterschrieben hat, die",-9.0710973739624,-1.13634876303703
+"101","Buch",26,"A","für den Fan.",1,1,1,6.7,3.3,6.7,"das","Buch","Am Nachmittag signiert der Autor, der die Geschichte erfunden hat, das",-2.90585875511169,1.23531659510835
+"102","Buch",26,"B","für den Fan.",1,0.92,1,1.8,1.5,6.7,"das","Buch","Am Nachmittag signiert der Autor, der den Vorhang zugezogen hat, das",-3.62798833847046,0.957525284370211
+"103","Buch",26,"C","für den Fan.",1,0,1,6.7,3.3,1.3,"das","Buch","Am Nachmittag schluckt der Autor, der die Geschichte erfunden hat, das",-2.59430694580078,1.35516542482777
+"104","Buch",26,"D","für den Fan.",1,0,1,1.8,1.5,1.3,"das","Buch","Am Nachmittag schluckt der Autor, der den Vorhang zugezogen hat, das",-3.03824067115784,1.18439146086106
+"105","Gäste",27,"A","und überreichte ihnen die Schlüssel.",2,1,1,4.7,1.4,6.5,"die","Gäste","Sofort begrüßte der Hotelier, der die Koffer stapelte, die",-5.35715007781982,0.292345353895796
+"106","Gäste",27,"B","und überreichte ihnen die Schlüssel.",2,0.92,1,1.4,1.6,6.5,"die","Gäste","Sofort begrüßte der Hotelier, der die Fische räucherte, die",-6.16905117034912,-0.0199795721021324
+"107","Gäste",27,"C","und überreichte ihnen die Schlüssel.",2,0,1,4.7,1.4,1.9,"die","Gäste","Sofort feuerte der Hotelier, der die Koffer stapelte, die",-5.84943008422852,0.102973374985315
+"108","Gäste",27,"D","und überreichte ihnen die Schlüssel.",2,0,1,1.4,1.6,1.9,"die","Gäste","Sofort feuerte der Hotelier, der die Fische räucherte, die",-6.81231784820557,-0.267433627044419
+"109","Baum",28,"A","neben der Schule.",0,0.92,1,5.9,1.3,7,"den","Baum","Vorsichtig fällt der Holzarbeiter, der die Säge gestartet hat, den",-3.36418032646179,1.05900786468253
+"110","Baum",28,"B","neben der Schule.",0,0.83,1,2.8,1.9,7,"den","Baum","Vorsichtig fällt der Holzarbeiter, der den Transporter geparkt hat, den",-5.93834972381592,0.0687674598690036
+"111","Baum",28,"C","neben der Schule.",0,0,1,5.9,1.3,1.3,"den","Baum","Vorsichtig durchwühlt der Holzarbeiter, der die Säge gestartet hat, den",-3.62994909286499,0.956771014574534
+"112","Baum",28,"D","neben der Schule.",0,0,1,2.8,1.9,1.3,"den","Baum","Vorsichtig durchwühlt der Holzarbeiter, der den Transporter geparkt hat, den",-5.81885290145874,0.114735911621452
+"113","Zigarre",29,"A","und schlenderte über den Marktplatz.",2,1,1,6.2,3.2,6.9,"die","Zigarre","Langsam paffte der Kubaner, der den Rauchring blies, die",-5.41202510334551,0.271235838901731
+"114","Zigarre",29,"B","und schlenderte über den Marktplatz.",2,1,1,2,1.3,6.9,"die","Zigarre","Langsam paffte der Kubaner, der die Straßenbahn verpasste, die",-9.42525817081332,-1.272588565749
+"115","Zigarre",29,"C","und schlenderte über den Marktplatz.",2,0.08,1,6.2,3.2,1.5,"die","Zigarre","Langsam öffnete der Kubaner, der den Rauchring blies, die",-6.49811090156436,-0.146563409895144
+"116","Zigarre",29,"D","und schlenderte über den Marktplatz.",2,0.08,1,2,1.3,1.5,"die","Zigarre","Langsam öffnete der Kubaner, der die Straßenbahn verpasste, die",-9.69847829453647,-1.37769182981426
+"117","Schnitzel",30,"A","für das Gericht.",0,0.58,0,6,1.2,6.5,"das","Schnitzel","Fröhlich paniert der Koch, nachdem er die Bratkartoffeln geschält hat, das",-7.35685062408447,-0.476906382401857
+"118","Schnitzel",30,"B","für das Gericht.",0,0.83,0,1.3,1.5,6.5,"das","Schnitzel","Fröhlich paniert der Koch, nachdem er die Ärmel hochgekrempelt hat, das",-10.0092935562134,-1.49725732183725
+"119","Schnitzel",30,"C","für das Gericht.",0,0,0,6,1.2,1,"das","Schnitzel","Fröhlich baut der Koch, nachdem er die Bratkartoffeln geschält hat, das",-6.78836297988892,-0.258218585282398
+"120","Schnitzel",30,"D","für das Gericht.",0,0,0,1.3,1.5,1,"das","Schnitzel","Fröhlich baut der Koch, nachdem er die Ärmel hochgekrempelt hat, das",-9.6711311340332,-1.36717182933757
+"121","Kuchen",31,"A","für die Geburtstagsfeier.",1,0.92,0,6.9,5.3,5.9,"den","Kuchen","Umsichtig glasiert der Konditor, der die Backform eingefettet hat, den",-2.31099820137024,1.46414961446986
+"122","Kuchen",31,"B","für die Geburtstagsfeier.",1,0.42,0,5.4,1.6,5.9,"den","Kuchen","Umsichtig glasiert der Konditor, der den Tisch abgewischt hat, den",-2.95487666130066,1.21646021707916
+"123","Kuchen",31,"C","für die Geburtstagsfeier.",1,0,0,6.9,5.3,1.2,"den","Kuchen","Umsichtig durchsucht der Konditor, der die Backform eingefettet hat, den",-2.09450340270996,1.54743158390269
+"124","Kuchen",31,"D","für die Geburtstagsfeier.",1,0,0,5.4,1.6,1.2,"den","Kuchen","Umsichtig durchsucht der Konditor, der den Tisch abgewischt hat, den",-2.7832407951355,1.2824856968967
+"125","Kette",32,"A","und die Bremsen.",0,0.83,0,4.9,2,6.8,"die","Kette","Gestern ölte der Fahrradfahrer, bevor er die Bremse einstellte, die",-6.33335971832275,-0.0831863537641982
+"126","Kette",32,"B","und die Bremsen.",0,0.58,0,1.2,1.1,6.8,"die","Kette","Gestern ölte der Fahrradfahrer, bevor er die Limonade trank, die",-7.91649913787842,-0.692193912205541
+"127","Kette",32,"C","und die Bremsen.",0,0,0,4.9,2,1.4,"die","Kette","Gestern beheizte der Fahrradfahrer, bevor er die Bremse einstellte, die",-6.68650054931641,-0.21903379247541
+"128","Kette",32,"D","und die Bremsen.",0,0,0,1.2,1.1,1.4,"die","Kette","Gestern beheizte der Fahrradfahrer, bevor die Limonade trank, die",-8.02395534515381,-0.733530538420382
+"129","Brief",33,"A","an die Agentur.",0,0.92,1,6.8,1.3,6.6,"den","Brief","Hastig frankiert der Postbeamte, der das Postamt aufgeschlossen hat, den",-3.35335159301758,1.0631734993919
+"130","Brief",33,"B","an die Agentur.",0,1,1,1.5,3.7,6.6,"den","Brief","Hastig frankiert der Postbeamte, der das Mittagessen bestellt hat, den",-4.34406614303589,0.682061992871331
+"131","Brief",33,"C","an die Agentur.",0,0,1,6.8,1.3,2.2,"den","Brief","Hastig umgeht der Postbeamte, der das Postamt aufgeschlossen hat, den",-3.668377161026,0.941988372138075
+"132","Brief",33,"D","an die Agentur.",0,0,1,1.5,3.7,2.2,"den","Brief","Hastig umgeht der Postbeamte, der das Mittagessen bestellt hat, den",-4.57839488983154,0.591919598464467
+"133","Berg",34,"A","und stellt sein Zelt auf.",1,0.75,0,6.4,3.2,6.8,"den","Berg","Fröhlich erklimmt der Wanderer, nachdem er das Tal durchquert hat, den",-2.2240104675293,1.49761235738841
+"134","Berg",34,"B","und stellt sein Zelt auf.",1,0.92,0,1.4,1.5,6.8,"den","Berg","Fröhlich erklimmt der Wanderer, nachdem er die Stoppuhr gestartet hat, den",-3.09833383560181,1.16127461410393
+"135","Berg",34,"C","und stellt sein Zelt auf.",1,0,0,6.4,3.2,1.5,"den","Berg","Fröhlich kauft der Wanderer, nachdem er das Tal durchquert hat, den",-2.77878594398499,1.284199404476
+"136","Berg",34,"D","und stellt sein Zelt auf.",1,0,0,1.4,1.5,1.5,"den","Berg","Fröhlich kauft der Wanderer, nachdem er die Stoppuhr gestartet hat, den",-4.13906383514404,0.760922991126996
+"137","Befehl",35,"A","zum Abmarsch.",0,0.92,0,6,7,6.6,"den","Befehl","Bedächtig erteilt der General, der die Rekruten kommandiert, den",-3.82541847229004,0.881577176278786
+"138","Befehl",35,"B","zum Abmarsch.",0,0.75,0,1.7,2.4,6.6,"den","Befehl","Bedächtig erteilt der General, der die Getränke einschenkt, den",-6.97801494598389,-0.331174560857509
+"139","Befehl",35,"C","zum Abmarsch.",0,0,0,6,7,1.4,"den","Befehl","Bedächtig biegt der General, der die Rekruten kommandiert, den",-4.53721857070923,0.607759447605057
+"140","Befehl",35,"D","zum Abmarsch.",0,0,0,1.7,2.4,1.4,"den","Befehl","Bedächtig biegt der General, der die Getränke einschenkt, den",-6.99342918395996,-0.337104163341716
+"141","Wand",36,"A","des Büros.",0,0.5,0,7,5.5,6.4,"die","Wand","Sofort streicht der Maler, nachdem er die Tapete angebracht hat, die",-4.47734832763672,0.630790540196455
+"142","Wand",36,"B","des Büros.",0,0.67,0,1.5,1.3,6.4,"die","Wand","Sofort streicht der Maler, nachdem er den Hund gefüttert hat, die",-6.35585021972656,-0.0918380777872784
+"143","Wand",36,"C","des Büros.",0,0.08,0,7,5.5,1.1,"die","Wand","Sofort lenkt der Maler, nachdem er die Tapete angebracht hat, die",-4.21517753601074,0.731643308898015
+"144","Wand",36,"D","des Büros.",0,0,0,1.5,1.3,1.1,"die","Wand","Sofort lenkt der Maler, nachdem er den Hund gefüttert hat, die",-6.26993179321289,-0.0587866797171709
+"145","Hammer",37,"A","auf das Metall.",0,1,0,6.5,1.9,5.6,"den","Hammer","Direkt schwingt der Schmied, der den Amboss aufgestellt hat, den",-7.89220809936523,-0.682849551327287
+"146","Hammer",37,"B","auf das Metall.",0,0.83,0,2.9,3.8,5.6,"den","Hammer","Direkt schwingt der Schmied, der den Stuhl weggestellt hat, den",-7.57972288131714,-0.562641654700031
+"147","Hammer",37,"C","auf das Metall.",0,0,0,6.5,1.9,1.2,"den","Hammer","Direkt speichert der Schmied, der den Amboss aufgestellt hat, den",-8.33324813842773,-0.852510362021846
+"148","Hammer",37,"D","auf das Metall.",0,0,0,2.9,3.8,1.2,"den","Hammer","Direkt speichert der Schmied, der den Stuhl weggestellt hat, den",-8.08095741271973,-0.755458291317958
+"149","Land",38,"A","im Norden.",1,0.33,0,6.6,2.5,7,"das","Land","Vor langer Zeit regierte der König, der die Reise unternahm, das",-2.21288061141968,1.50189382900828
+"150","Land",38,"B","im Norden.",1,0.5,0,2.4,2.5,7,"das","Land","Vor langer Zeit regierte der König, der den Gesang vernahm, das",-3.93206310272217,0.840552750256611
+"151","Land",38,"C","im Norden.",1,0,0,6.6,2.5,1.2,"das","Land","Vor langer Zeit briet der König, der die Reise unternahm, das",-2.78414463996887,1.28213800273383
+"152","Land",38,"D","im Norden.",1,0,0,2.4,2.5,1.2,"das","Land","Vor langer Zeit briet der König, der den Gesang vernahm, das",-4.77059745788574,0.517982448488316
+"153","Stab",39,"A","und gab den Takt an.",0,0.42,1,1.9,1.6,3,"den","Stab","Zügig hob der Dirigent, der das Tempo wechselte, den",-5.83665561676025,0.10788750140219
+"154","Stab",39,"B","und gab den Takt an.",0,0.5,1,1,1.6,3,"den","Stab","Zügig hob der Dirigent, der das Gähnen unterdrückte, den",-5.82045125961304,0.114121049667388
+"155","Stab",39,"C","und gab den Takt an.",0,0,1,1.9,1.6,1.3,"den","Stab","Zügig verdrückte der Dirigent, der das Tempo wechselte, den",-7.21897888183594,-0.423869402785494
+"156","Stab",39,"D","und gab den Takt an.",0,0,1,1,1.6,1.3,"den","Stab","Zügig verdrückte der Dirigent, der das Gähnen unterdrückte, den",-7.79428052902222,-0.645178434190027
+"157","Bart",40,"A","des Mannes.",2,0.58,0,5.4,1.3,6.8,"den","Bart","Direkt trimmt der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",-4.61861133575439,0.576448996672783
+"158","Bart",40,"B","des Mannes.",2,0.25,0,1.2,1,6.8,"den","Bart","Direkt trimmt der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",-6.53916883468628,-0.162357717898823
+"159","Bart",40,"C","des Mannes.",2,0,0,5.4,1.3,1.7,"den","Bart","Direkt hört der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",-4.52644729614258,0.611902978834276
+"160","Bart",40,"D","des Mannes.",2,0,0,1.2,1,1.7,"den","Bart","Direkt hört der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",-6.58746528625488,-0.180936564264377
+"161","Geschirr",41,"A","und die Brettchen.",0,0.5,1,6.7,4.7,6.9,"das","Geschirr","Gestern spülte der Tellerwäscher, bevor er den Tisch wischte, das",-4.36711454391479,0.673195654144715
+"162","Geschirr",41,"B","und die Brettchen.",0,0.42,1,1.2,1.2,6.9,"das","Geschirr","Gestern spülte der Tellerwäscher, bevor er das Taxi rief, das",-7.75209903717041,-0.628951911720331
+"163","Geschirr",41,"C","und die Brettchen.",0,0,1,6.7,4.7,1.1,"das","Geschirr","Gestern glättete der Tellerwäscher, bevor er den Tisch wischte, das",-5.11121559143066,0.386952284430332
+"164","Geschirr",41,"D","und die Brettchen.",0,0,1,1.2,1.2,1.1,"das","Geschirr","Gestern glättete der Tellerwäscher, bevor er das Taxi rief, das",-8.17860794067383,-0.793022834828931
+"165","Schloss",42,"A","und stiehlt die Wertsachen.",0,0.25,0,7,1.8,6.4,"das","Schloss","Im Handumdrehen knackt der Einbrecher, der den Zahlencode erraten hat, das",-5.65350818634033,0.17834128965171
+"166","Schloss",42,"B","und stiehlt die Wertsachen.",0,0.5,0,2.6,1.5,6.4,"das","Schloss","Im Handumdrehen knackt der Einbrecher, der die Akte durchblättert hat, das",-6.51608562469482,-0.153477988682157
+"167","Schloss",42,"C","und stiehlt die Wertsachen.",0,0,0,7,1.8,1.6,"das","Schloss","Im Handumdrehen kopiert der Einbrecher, der den Zahlencode erraten hat, das",-5.76844024658203,0.13412882640948
+"168","Schloss",42,"D","und stiehlt die Wertsachen.",0,0,0,2.6,1.5,1.6,"das","Schloss","Im Handumdrehen kopiert der Einbrecher, der die Akte durchblättert hat, das",-6.62941455841064,-0.197073755656618
+"169","Zwiebeln",43,"A","und den Knoblauch.",0,0.25,1,5.7,2.3,6.2,"die","Zwiebeln","Routiniert hackte der Küchengehilfe, bevor er die Suppe umrührte, die",-7.96428537368774,-0.710576487004612
+"170","Zwiebeln",43,"B","und den Knoblauch.",0,0.33,1,1.3,1.1,6.2,"die","Zwiebeln","Routiniert hackte der Küchengehilfe, bevor er das Radio einschaltete, die",-9.67195129394531,-1.3674873312949
+"171","Zwiebeln",43,"C","und den Knoblauch.",0,0,1,5.7,2.3,1.3,"die","Zwiebeln","Routiniert schraubte der Küchengehilfe, bevor er die Suppe umrührte, die",-7.98513174057007,-0.718595739662057
+"172","Zwiebeln",43,"D","und den Knoblauch.",0,0,1,1.3,1.1,1.3,"die","Zwiebeln","Routiniert schraubte der Küchengehilfe, bevor er das Radio einschaltete, die",-10.095983505249,-1.5306055118649
+"173","Wachs",44,"A","und fuhr mit der Arbeit fort.",0,0.83,1,6.7,2.3,6.3,"das","Wachs","Umsichtig schmolz der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",-6.74899864196777,-0.243075775349876
+"174","Wachs",44,"B","und fuhr mit der Arbeit fort.",0,0.83,1,1.5,1.4,6.3,"das","Wachs","Umsichtig schmolz der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",-7.26486158370972,-0.441519719553354
+"175","Wachs",44,"C","und fuhr mit der Arbeit fort.",0,0,1,6.7,2.3,1,"das","Wachs","Umsichtig würzte der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",-6.99953174591064,-0.339451718021939
+"176","Wachs",44,"D","und fuhr mit der Arbeit fort.",0,0,1,1.5,1.4,1,"das","Wachs","Umsichtig würzte der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",-7.22634696960449,-0.426703784323141
+"177","Cocktail",45,"A","für den Touristen.",0,0.5,0,6.2,1.4,6.9,"den","Cocktail","Gestern mixte der Barkeeper, der den Wodka geöffnet hatte, den",-4.7408332824707,0.529432234637675
+"178","Cocktail",45,"B","für den Touristen.",0,0.83,0,1.3,1,6.9,"den","Cocktail","Gestern mixte der Barkeeper, der den Boden gefegt hatte, den",-6.9696569442749,-0.327959375794613
+"179","Cocktail",45,"C","für den Touristen.",0,0,0,6.2,1.4,1.6,"den","Cocktail","Gestern gründete der Barkeeper, der den Wodka geöffnet hatte, den",-2.92751407623291,1.22698615113078
+"180","Cocktail",45,"D","für den Touristen.",0,0.08,0,1.3,1,1.6,"den","Cocktail","Gestern gründete der Barkeeper, der den Boden gefegt hatte, den",-5.70811462402344,0.157335095959747
+"181","Orchester",46,"A","und das Streichquartett.",0,0.25,1,6.8,3.6,6.8,"das","Orchester","Am Abend dirigiert der Kapellmeister, der das Konzert eröffnet hat, das",-5.90682315826416,0.0808952083638934
+"182","Orchester",46,"B","und das Streichquartett.",0,0.25,1,1.6,1.4,6.8,"das","Orchester","Am Abend dirigiert der Kapellmeister, der die Unterschriften gesammelt hat, das",-9.12030029296875,-1.15527631243798
+"183","Orchester",46,"C","und das Streichquartett.",0,0,1,6.8,3.6,1.3,"das","Orchester","Am Abend vernichtet der Kapellmeister, der das Konzert eröffnet hat, das",-6.25302171707153,-0.0522816530235675
+"184","Orchester",46,"D","und das Streichquartett.",0,0,1,1.6,1.4,1.3,"das","Orchester","Am Abend vernichtet der Kapellmeister, der die Unterschriften gesammelt hat, das",-9.46616363525391,-1.28832422157195
+"185","Wort",47,"A","und notiert es.",3,0.83,0,6.3,3.6,6.8,"das","Wort","Direkt buchstabiert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",-4.82703256607056,0.496272795490317
+"186","Wort",47,"B","und notiert es.",3,0.67,0,3,2.7,6.8,"das","Wort","Direkt buchstabiert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",-4.25611066818237,0.715897009756403
+"187","Wort",47,"C","und notiert es.",3,0,0,6.3,3.6,1.7,"das","Wort","Direkt dekoriert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",-5.07292079925537,0.401683657798724
+"188","Wort",47,"D","und notiert es.",3,0,0,3,2.7,1.7,"das","Wort","Direkt dekoriert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",-4.69286441802979,0.547885063651664
+"189","Weide",48,"A","mit einem Draht.",0,0.67,0,6.7,5.4,6,"die","Weide","Vorsichtig umzäunt der Schäfer, der die Schafe gehütet hat, die",-7.02425956726074,-0.348964102035612
+"190","Weide",48,"B","mit einem Draht.",0,0.42,0,1.4,1.4,6,"die","Weide","Vorsichtig umzäunt der Schäfer, der das Mittagessen vergessen hat, die",-10.2730407714844,-1.59871651464983
+"191","Weide",48,"C","mit einem Draht.",0,0,0,6.7,5.4,1,"die","Weide","Vorsichtig fälscht der Schäfer, der die Schafe gehütet hat, die",-7.76012182235718,-0.632038144529735
+"192","Weide",48,"D","mit einem Draht.",0,0,0,1.4,1.4,1,"die","Weide","Vorsichtig fälscht der Schäfer, der das Mittagessen vergessen hat, die",-10.9664134979248,-1.86544553800888
+"193","Predigt",49,"A","für die Gemeinde.",0,0.25,0,6.2,2.1,6.2,"die","Predigt","Nachdenklich hält der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",-4.04790925979614,0.795988649077048
+"194","Predigt",49,"B","für die Gemeinde.",0,0.5,0,1.6,2.9,6.2,"die","Predigt","Nachdenklich hält der Pfarrer, nachdem er die Brille aufgesetzt hat, die",-6.73572969436646,-0.237971430601747
+"195","Predigt",49,"C","für die Gemeinde.",0,0,0,6.2,2.1,1.3,"die","Predigt","Nachdenklich leert der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",-5.02205753326416,0.421249915231916
+"196","Predigt",49,"D","für die Gemeinde.",0,0,0,1.6,2.9,1.3,"die","Predigt","Nachdenklich leert der Pfarrer, nachdem er die Brille aufgesetzt hat, die",-7.70630979537964,-0.611337547501098
+"197","Wohnung",50,"A","mit neuen Möbeln.",0,0.5,0,7,2.7,6.8,"die","Wohnung","Unverzüglich möblierte der Vermieter, der den Mieter aufgenommen hatte, die",-2.01352763175964,1.57858162410143
+"198","Wohnung",50,"B","mit neuen Möbeln.",0,0.75,0,4.7,3.6,6.8,"die","Wohnung","Unverzüglich möblierte der Vermieter, der die Überweisung erhalten hatte, die",-3.25022625923157,1.10284411018378
+"199","Wohnung",50,"C","mit neuen Möbeln.",0,0,0,7,2.7,1.4,"die","Wohnung","Unverzüglich erntete der Vermieter, der den Mieter aufgenommen hatte, die",-1.64398431777954,1.7207388268123
+"200","Wohnung",50,"D","mit neuen Möbeln.",0,0,0,4.7,3.6,1.4,"die","Wohnung","Unverzüglich erntete der Vermieter, der die Überweisung erhalten hatte, die",-3.25228643417358,1.10205159494734
+"201","Abzug",51,"A","und trifft das Opfer.",2,0.5,0,3.2,4.4,5.9,"den","Abzug","Sofort betätigt der Killer, der das Ziel anvisiert hat, den",-8.10944938659668,-0.766418682570705
+"202","Abzug",51,"B","und trifft das Opfer.",2,0.33,0,1.4,3,5.9,"den","Abzug","Sofort betätigt der Killer, der den Tee abgestellt hat, den",-9.27271556854248,-1.21390794885594
+"203","Abzug",51,"C","und trifft das Opfer.",2,0,0,3.2,4.4,1.6,"den","Abzug","Sofort knickt der Killer, der das Ziel anvisiert hat, den",-7.80910587310791,-0.650881498931612
+"204","Abzug",51,"D","und trifft das Opfer.",2,0,0,1.4,3,1.6,"den","Abzug","Sofort knickt der Killer, der den Tee abgestellt hat, den",-8.88968563079834,-1.06656266497629
+"205","Paket",52,"A","mit der Arbeitskleidung.",0,0.42,1,6.7,4.4,6.5,"das","Paket","Heute überbringt der Bote, als er den Empfänger angetroffen hat, das",-6.11047267913818,0.00255460490646203
+"206","Paket",52,"B","mit der Arbeitskleidung.",0,0.33,1,3.6,1.2,6.5,"das","Paket","Heute überbringt der Bote, als er das Foyer durchquert hat, das",-9.2180004119873,-1.19285993281149
+"207","Paket",52,"C","mit der Arbeitskleidung.",0,0,1,6.7,4.4,1.3,"das","Paket","Heute erntet der Bote, als er den Empfänger angetroffen hat, das",-6.29408168792725,-0.0680767449097444
+"208","Paket",52,"D","mit der Arbeitskleidung.",0,0,1,3.6,1.2,1.3,"das","Paket","Heute erntet der Bote, als er das Foyer durchquert hat, das",-9.51410865783691,-1.30676787901741
+"209","Tor",53,"A","und jubelte über seinen Erfolg.",3,0.92,0,6.8,3.4,6.9,"das","Tor","Schnell schoss der Fußballspieler, der das Fußballfeld überquert hatte, das",-3.96536040306091,0.827743829367206
+"210","Tor",53,"B","und jubelte über seinen Erfolg.",3,0.67,0,1.6,2.7,6.9,"das","Tor","Schnell schoss der Fußballspieler, der die Jacke ausgezogen hatte, das",-4.88577651977539,0.473674967796144
+"211","Tor",53,"C","und jubelte über seinen Erfolg.",3,0,0,6.8,3.4,1.5,"das","Tor","Schnell spürte der Fußballspieler, der das Fußballfeld überquert hatte, das",-4.48642444610596,0.62729910748952
+"212","Tor",53,"D","und jubelte über seinen Erfolg.",3,0,0,1.6,2.7,1.5,"das","Tor","Schnell spürte der Fußballspieler, der die Jacke ausgezogen hatte, das",-6.13549137115479,-0.00706967224324273
+"213","Flugzeug",54,"A","durch die Wolken.",0,1,1,7,1.8,5.8,"das","Flugzeug","Konzentriert steuerte der Pilot, der die Stewardess gerufen hatte, das",-3.04565453529358,1.18153946991184
+"214","Flugzeug",54,"B","durch die Wolken.",0,0.92,1,1.6,3.4,5.8,"das","Flugzeug","Konzentriert steuerte der Pilot, der den Krimi gelesen hatte, das",-3.99192833900452,0.817523583694604
+"215","Flugzeug",54,"C","durch die Wolken.",0,0,1,7,1.8,3.1,"das","Flugzeug","Konzentriert faltete der Pilot, der die Stewardess gerufen hatte, das",-3.16273307800293,1.13650129035511
+"216","Flugzeug",54,"D","durch die Wolken.",0,0.08,1,1.6,3.4,3.1,"das","Flugzeug","Konzentriert faltete der Pilot, der den Krimi gelesen hatte, das",-4.10998344421387,0.772109736690995
+"217","Skizze",55,"A","für den Bauherrn.",0,0.42,0,6.4,6.5,6.7,"die","Skizze","Rasch entwarf der Architekt, bevor er den Bauplan erstellte, die",-8.08224678039551,-0.755954289743909
+"218","Skizze",55,"B","für den Bauherrn.",0,0.25,0,4.3,4.7,6.7,"die","Skizze","Rasch entwarf der Architekt, bevor er den Vortrag schrieb, die",-7.65497255325317,-0.591588959285586
+"219","Skizze",55,"C","für den Bauherrn.",0,0,0,6.4,6.5,1.2,"die","Skizze","Rasch schüttelte der Architekt, bevor er den Bauplan erstellte, die",-8.03818702697754,-0.73900523110564
+"220","Skizze",55,"D","für den Bauherrn.",0,0,0,4.3,4.7,1.2,"die","Skizze","Rasch schüttelte der Architekt, bevor er den Vortrag schrieb, die",-8.51921367645264,-0.924048229671281
+"221","Kamin",56,"A","und verlässt das Grundstück.",1,0.42,0,6.8,3,6.4,"den","Kamin","Geschwind kehrt der Schornsteinfeger, der den Rauch einatmet, den",-4.19941520690918,0.737706816282719
+"222","Kamin",56,"B","und verlässt das Grundstück.",1,0.17,0,3,1.3,6.4,"den","Kamin","Geschwind kehrt der Schornsteinfeger, der die Katze verscheucht, den",-5.19027614593506,0.356538996331389
+"223","Kamin",56,"C","und verlässt das Grundstück.",1,0,0,6.8,3,1.1,"den","Kamin","Geschwind wirft der Schornsteinfeger, der den Rauch einatmet, den",-3.90371799468994,0.851456644647231
+"224","Kamin",56,"D","und verlässt das Grundstück.",1,0.08,0,3,1.3,1.1,"den","Kamin","Geschwind wirft der Schornsteinfeger, der die Katze verscheucht, den",-4.48625564575195,0.627364042194692
+"225","Wahl",57,"A","zum Minister.",0,1,0,6.5,5.3,6.7,"die","Wahl","Vorgestern gewann der Politiker, der die Stimmen zählte, die",-6.22701072692871,-0.0422756551917606
+"226","Wahl",57,"B","zum Minister.",0,0.58,0,2.8,1.6,6.7,"die","Wahl","Vorgestern gewann der Politiker, der die Hände schüttelte, die",-6.98821020126343,-0.335096506991112
+"227","Wahl",57,"C","zum Minister.",0,0.08,0,6.5,5.3,1.6,"die","Wahl","Vorgestern reparierte der Politiker, der die Stimmen zählte, die",-7.93708276748657,-0.700112094177816
+"228","Wahl",57,"D","zum Minister.",0,0,0,2.8,1.6,1.6,"die","Wahl","Vorgestern reparierte der Politiker, der die Hände schüttelte, die",-8.16049385070801,-0.786054643924704
+"229","Foto",58,"A","von der Unfallstelle.",0,0.67,0,6.7,2.1,6.7,"das","Foto","Sofort schoss der Reporter, der die Kamera bediente, das",-4.44204044342041,0.644372899459759
+"230","Foto",58,"B","von der Unfallstelle.",0,0.5,0,1.6,1.6,6.7,"das","Foto","Sofort schoss der Reporter, der die Zigarette rauchte, das",-5.50342750549316,0.236074846079483
+"231","Foto",58,"C","von der Unfallstelle.",0,0,0,6.7,2.1,1.7,"das","Foto","Sofort verspeiste der Reporter, der die Kamera bediente, das",-4.68089580535889,0.55248919105232
+"232","Foto",58,"D","von der Unfallstelle.",0,0,0,1.6,1.6,1.7,"das","Foto","Sofort verspeiste der Reporter, der die Zigarette rauchte, das",-5.67733573913574,0.169175224065624
+"233","Programm",59,"A","für seinen Boss.",0,0.5,0,6.9,5.8,6.7,"das","Programm","Unverzüglich entwickelte der Informatiker, der den Computer hochfuhr, das",-5.35097408294678,0.294721157007082
+"234","Programm",59,"B","für seinen Boss.",0,0.75,0,1.8,2,6.7,"das","Programm","Unverzüglich entwickelte der Informatiker, der den Energydrink trank, das",-7.26263093948364,-0.440661627601948
+"235","Programm",59,"C","für seinen Boss.",0,0,0,6.9,5.8,4.5,"das","Programm","Unverzüglich trocknete der Informatiker, der den Computer hochfuhr, das",-5.63735771179199,0.184554110172037
+"236","Programm",59,"D","für seinen Boss.",0,0,0,1.8,2,4.5,"das","Programm","Unverzüglich trocknete der Informatiker, der den Energydrink trank, das",-7.49563455581665,-0.530294266230071
+"237","Urteil",60,"A","und schloss die Verhandlung.",0,1,1,7,4.5,6.7,"das","Urteil","Nun verkündete der Richter, nachdem er den Angeklagten hereingerufen hatte, das",-1.65794479846954,1.71536846071904
+"238","Urteil",60,"B","und schloss die Verhandlung.",0,1,1,1.9,2.8,6.7,"das","Urteil","Nun verkündete der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",-3.08417820930481,1.16672004948559
+"239","Urteil",60,"C","und schloss die Verhandlung.",0,0,1,7,4.5,1.7,"das","Urteil","Nun roch der Richter, nachdem er den Angeklagten hereingerufen hatte, das",-2.20989632606506,1.50304183424083
+"240","Urteil",60,"D","und schloss die Verhandlung.",0,0,1,1.9,2.8,1.7,"das","Urteil","Nun roch der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",-5.84505462646484,0.104656541241427
+"241","Prüfung",61,"A","in Mathematik.",0,0.58,0,6.6,5,5.8,"die","Prüfung","Zunächst bestand der Student, der das Studium wiederaufnahm, die",-6.27870321273804,-0.0621608997783285
+"242","Prüfung",61,"B","in Mathematik.",0,0.25,0,2,1.3,5.8,"die","Prüfung","Zunächst bestand der Student, der das Jackett auszog, die",-8.47874546051025,-0.908480776115949
+"243","Prüfung",61,"C","in Mathematik.",0,0,0,6.6,5,3.4,"die","Prüfung","Zunächst kochte der Student, der das Studium wiederaufnahm, die",-7.76413106918335,-0.633580435493269
+"244","Prüfung",61,"D","in Mathematik.",0,0,0,2,1.3,3.4,"die","Prüfung","Zunächst kochte der Student, der das Jackett auszog, die",-9.44284725189209,-1.27935479441509
+"245","Lied",62,"A","über die Vergangenheit.",1,0.58,1,6.3,1.3,7,"das","Lied","Konzentriert sang der Sänger, der das Mikrofon umklammerte, das",-3.69524049758911,0.931654490731421
+"246","Lied",62,"B","über die Vergangenheit.",1,0.58,1,1.9,1.5,7,"das","Lied","Konzentriert sang der Sänger, der den Hut abnahm, das",-3.12997364997864,1.14910330065854
+"247","Lied",62,"C","über die Vergangenheit.",1,0,1,6.3,1.3,1.1,"das","Lied","Konzentriert reparierte der Sänger, der das Mikrofon umklammerte, das",-4.50856590270996,0.618781655229678
+"248","Lied",62,"D","über die Vergangenheit.",1,0,1,1.9,1.5,1.1,"das","Lied","Konzentriert reparierte der Sänger, der den Hut abnahm, das",-3.51747345924377,1.00003853111141
+"249","Farbe",63,"A","für den nächsten Auftrag.",0,0.92,1,6.9,3.5,6.3,"die","Farbe","Zufrieden mischte der Anstreicher, der die Pinsel gewaschen hatte, die",-5.48113346099854,0.244650996377899
+"250","Farbe",63,"B","für den nächsten Auftrag.",0,1,1,3.5,1.8,6.3,"die","Farbe","Zufrieden mischte der Anstreicher, der die Plätzchen gegessen hatte, die",-8.60369873046875,-0.956548233041533
+"251","Farbe",63,"C","für den nächsten Auftrag.",0,0,1,6.9,3.5,1.4,"die","Farbe","Zufrieden würzte der Anstreicher, der die Pinsel gewaschen hatte, die",-5.50764989852905,0.234450561293315
+"252","Farbe",63,"D","für den nächsten Auftrag.",0,0,1,3.5,1.8,1.4,"die","Farbe","Zufrieden würzte der Anstreicher, der die Plätzchen gegessen hatte, die",-8.55374717712402,-0.937332696388821
+"253","Blumen",64,"A","im Blumenkasten.",0,0.58,1,6.2,5.8,7,"die","Blumen","Einen Moment lang gießt der Gärtner, der den Dünger verteilt hat, die",-4.4511923789978,0.640852301164907
+"254","Blumen",64,"B","im Blumenkasten.",0,0.5,1,2,1.4,7,"die","Blumen","Einen Moment lang gießt der Gärtner, der die Opernmusik angestellt hat, die",-6.95632076263428,-0.322829167223238
+"255","Blumen",64,"C","im Blumenkasten.",0,0,1,6.2,5.8,1.7,"die","Blumen","Einen Moment lang ölt der Gärtner, der den Dünger verteilt hat, die",-4.56742191314697,0.596140721163427
+"256","Blumen",64,"D","im Blumenkasten.",0,0,1,2,1.4,1.7,"die","Blumen","Einen Moment lang ölt der Gärtner, der die Opernmusik angestellt hat, die",-7.14396190643311,-0.395011612708765
+"257","Hecke",65,"A","um das Grundstück.",2,0.5,1,6.6,1.9,6.5,"die","Hecke","Gestern Nachmittag stutzte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",-7.89518368244171,-0.683994208937324
+"258","Hecke",65,"B","um das Grundstück.",2,0.58,1,1.4,1.8,6.5,"die","Hecke","Gestern Nachmittag stutzte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",-10.1245057582855,-1.54157755100967
+"259","Hecke",65,"C","um das Grundstück.",2,0,1,6.6,1.9,1.3,"die","Hecke","Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",-7.1464906334877,-0.395984372195681
+"260","Hecke",65,"D","um das Grundstück.",2,0,1,1.4,1.8,1.3,"die","Hecke","Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",-9.81712245941162,-1.42333227833155
+"261","Feld",66,"A","mit einem Gaul.",2,0.92,0,6.8,2.1,6.2,"das","Feld","Früher beackerte der Landwirt, der den Traktor gestartet hatte, das",-4.88138771057129,0.475363270130631
+"262","Feld",66,"B","mit einem Gaul.",2,0.67,0,3.9,1.1,6.2,"das","Feld","Früher beackerte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",-5.75332832336426,0.139942133404761
+"263","Feld",66,"C","mit einem Gaul.",2,0,0,6.8,2.1,2.5,"das","Feld","Früher kopierte der Landwirt, der den Traktor gestartet hatte, das",-4.89468002319336,0.470249937245345
+"264","Feld",66,"D","mit einem Gaul.",2,0,0,3.9,1.1,2.5,"das","Feld","Früher kopierte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",-5.75043916702271,0.141053544078888
+"265","Schuh",67,"A","und polierte ihn.",1,0.5,0,6.4,4.1,4.9,"den","Schuh","Heute Morgen flickte der Schuster, der den Absatz ausgetauscht hatte, den",-4.53323841094971,0.609290549254988
+"266","Schuh",67,"B","und polierte ihn.",1,0.75,0,1.2,1,4.9,"den","Schuh","Heute Morgen flickte der Schuster, der die Sirene gehört hatte, den",-4.48320436477661,0.628537819534803
+"267","Schuh",67,"C","und polierte ihn.",1,0,0,6.4,4.1,1,"den","Schuh","Heute Morgen schmeckte der Schuster, der den Absatz ausgetauscht hatte, den",-5.1128978729248,0.386305138555052
+"268","Schuh",67,"D","und polierte ihn.",1,0,0,1.2,1,1,"den","Schuh","Heute Morgen schmeckte der Schuster, der die Sirene gehört hatte, den",-5.45671558380127,0.254044150000718
+"269","Koffer",68,"A","für die Kreuzfahrt.",1,0.83,0,6.6,3.5,6.9,"den","Koffer","Schnell packte der Urlauber, als er die Klamotten gefaltet hatte, den",-1.94379210472107,1.60540772831801
+"270","Koffer",68,"B","für die Kreuzfahrt.",1,0.5,0,1.2,1.9,6.9,"den","Koffer","Schnell packte der Urlauber, als er die Gardinen aufgezogen hatte, den",-2.61506533622742,1.34718001525819
+"271","Koffer",68,"C","für die Kreuzfahrt.",1,0,0,6.6,3.5,1.2,"den","Koffer","Schnell rührte der Urlauber, als er die Klamotten gefaltet hatte, den",-4.09307193756104,0.77861531367871
+"272","Koffer",68,"D","für die Kreuzfahrt.",1,0,0,1.2,1.9,1.2,"den","Koffer","Schnell rührte der Urlauber, als er die Gardinen aufgezogen hatte, den",-5.53350925445557,0.224502894637341
+"273","Honig",69,"A","aus den Waben.",0,1,1,6.9,1,5.5,"den","Honig","Sorgfältig erntet der Imker, nachdem er den Bienenstock erreicht hat, den",-3.29732179641724,1.08472723572494
+"274","Honig",69,"B","aus den Waben.",0,0.92,1,2.8,1.1,5.5,"den","Honig","Sorgfältig erntet der Imker, nachdem er das Haus verlassen hat, den",-4.56104183197021,0.598595032901306
+"275","Honig",69,"C","aus den Waben.",0,0,1,6.9,1,1.2,"den","Honig","Sorgfältig näht der Imker, nachdem er den Bienenstock erreicht hat, den",-3.08318877220154,1.16710066957947
+"276","Honig",69,"D","aus den Waben.",0,0,1,2.8,1.1,1.2,"den","Honig","Sorgfältig näht der Imker, nachdem er das Haus verlassen hat, den",-4.94635248184204,0.45037239677634
+"277","Gewehr",70,"A","und zielt erneut.",0,0.42,1,6.4,6.1,6,"das","Gewehr","Vorsichtig lädt der Jäger, der die Munition verschossen hat, das",-4.06044483184814,0.791166421776816
+"278","Gewehr",70,"B","und zielt erneut.",0,0.5,1,1.4,1.3,6,"das","Gewehr","Vorsichtig lädt der Jäger, der den Campingplatz verlassen hat, das",-6.54046058654785,-0.162854633481627
+"279","Gewehr",70,"C","und zielt erneut.",0,0,1,6.4,6.1,1.3,"das","Gewehr","Vorsichtig schneidet der Jäger, der die Munition verschossen hat, das",-3.49942946434021,1.00697975760416
+"280","Gewehr",70,"D","und zielt erneut.",0,0,1,1.4,1.3,1.3,"das","Gewehr","Vorsichtig schneidet der Jäger, der den Campingplatz verlassen hat, das",-5.69194602966309,0.163554886872155
+"281","Mörtel",71,"A","für die Mauer.",0,0.42,0,6.1,4,6,"den","Mörtel","Vorsichtig mischte der Maurer, der die Backsteine aufeinanderlegte, den",-6.31877011060715,-0.0775739729064261
+"282","Mörtel",71,"B","für die Mauer.",0,0.25,0,1.4,1,6,"den","Mörtel","Vorsichtig mischte der Maurer, der die Nachbarn belauschte, den",-9.37391352653503,-1.25283713004807
+"283","Mörtel",71,"C","für die Mauer.",0,0,0,6.1,4,1.3,"den","Mörtel","Vorsichtig schrieb der Maurer, der die Backsteine aufeinanderlegte, den",-6.19523826241493,-0.0300533134319733
+"284","Mörtel",71,"D","für die Mauer.",0,0,0,1.4,1,1.3,"den","Mörtel","Vorsichtig schrieb der Maurer, der die Nachbarn belauschte, den",-9.87861406803131,-1.44698708344064
+"285","Mehl",72,"A","aus dem Korn.",2,0.67,0,6.9,1.4,5.9,"das","Mehl","Vorgestern mahlte der Müller, der die Mühle betrieb, das",-4.01476144790649,0.808740064231788
+"286","Mehl",72,"B","aus dem Korn.",2,0.5,0,1,1.1,5.9,"das","Mehl","Vorgestern mahlte der Müller, der das Lied pfiff, das",-7.10088157653809,-0.378439322105593
+"287","Mehl",72,"C","aus dem Korn.",2,0,0,6.9,1.4,2.4,"das","Mehl","Vorgestern verzierte der Müller, der die Mühle betrieb, das",-4.42926692962646,0.649286659013893
+"288","Mehl",72,"D","aus dem Korn.",2,0.17,0,1,1.1,2.4,"das","Mehl","Vorgestern verzierte der Müller, der das Lied pfiff, das",-7.52250957489014,-0.540632641705304
+"289","Kuh",73,"A","und brachte ihr frisches Heu.",0,1,0,7,4.5,6.8,"die","Kuh","Vorsichtig melkte der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",-5.24061679840088,0.337173779680313
+"290","Kuh",73,"B","und brachte ihr frisches Heu.",0,0.75,0,3.1,1,6.8,"die","Kuh","Vorsichtig melkte der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",-6.38753128051758,-0.104025258046225
+"291","Kuh",73,"C","und brachte ihr frisches Heu.",0,0,0,7,4.5,1.4,"die","Kuh","Vorsichtig kleidete der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",-5.47751426696777,0.246043240480328
+"292","Kuh",73,"D","und brachte ihr frisches Heu.",0,0.08,0,3.1,1,1.4,"die","Kuh","Vorsichtig kleidete der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",-6.489182472229,-0.143128790756062
+"293","Bett",74,"A","und das Kissen.",0,0.92,0,6.9,4.7,6.9,"das","Bett","Zuerst bezog der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",-5.87223100662231,0.0942022371400109
+"294","Bett",74,"B","und das Kissen.",0,0.67,0,1.1,1.8,6.9,"das","Bett","Zuerst bezog der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",-6.50827121734619,-0.150471915381681
+"295","Bett",74,"C","und das Kissen.",0,0.08,0,6.9,4.7,1.2,"das","Bett","Zuerst fälschte der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",-6.13709878921509,-0.0076880193933467
+"296","Bett",74,"D","und das Kissen.",0,0,0,1.1,1.8,1.2,"das","Bett","Zuerst fälschte der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",-7.0631046295166,-0.363907155205611
+"297","Ziel",75,"A","und durchtrennt die Ziellinie.",1,0.92,0,6,5.8,6.6,"das","Ziel","Augenblicklich erreicht der Sprinter, der das Rennen gewinnt, das",-3.75390386581421,0.90908766293887
+"298","Ziel",75,"B","und durchtrennt die Ziellinie.",1,0.75,0,1.9,2.7,6.6,"das","Ziel","Augenblicklich erreicht der Sprinter, der den Wind genießt, das",-4.94429779052734,0.451162802552015
+"299","Ziel",75,"C","und durchtrennt die Ziellinie.",1,0,0,6,5.8,1.9,"das","Ziel","Augenblicklich reinigt der Sprinter, der das Rennen gewinnt, das",-4.48524761199951,0.627751816112022
+"300","Ziel",75,"D","und durchtrennt die Ziellinie.",1,0,0,1.9,2.7,1.9,"das","Ziel","Augenblicklich reinigt der Sprinter, der den Wind genießt, das",-5.59149503707886,0.202196722822333
+"301","Welle",76,"A","bis zum Strand.",0,0.58,0,5.1,1.3,7,"die","Welle","Direkt surft der Surfer, der die Badehose angezogen hat, die",-6.85678958892822,-0.284541170386839
+"302","Welle",76,"B","bis zum Strand.",0,0.42,0,3.2,1.3,7,"die","Welle","Direkt surft der Surfer, der den Tagesausflug unternommen hat, die",-7.6002082824707,-0.570522049809973
+"303","Welle",76,"C","bis zum Strand.",0,0,0,5.1,1.3,1.5,"die","Welle","Direkt reserviert der Surfer, der die Badehose angezogen hat, die",-7.51831150054932,-0.539017711919034
+"304","Welle",76,"D","bis zum Strand.",0,0,0,3.2,1.3,1.5,"die","Welle","Direkt reserviert der Surfer, der den Tagesausflug unternommen hat, die",-8.26816940307617,-0.827475648569995
+"305","Fahrkarten",77,"A","der Pendler.",0,0.5,1,6.7,3.3,6.6,"die","Fahrkarten","Gut gelaunt kontrollierte der Schaffner, der das Zugabteil betreten hatte, die",-5.27254486083984,0.324891581971425
+"306","Fahrkarten",77,"B","der Pendler.",0,0.42,1,2.8,2.4,6.6,"die","Fahrkarten","Gut gelaunt kontrollierte der Schaffner, der die Mittagspause beendet hatte, die",-8.57921886444092,-0.947131233340543
+"307","Fahrkarten",77,"C","der Pendler.",0,0,1,6.7,3.3,1.3,"die","Fahrkarten","Gut gelaunt zitierte der Schaffner, der das Zugabteil betreten hatte, die",-5.8389310836792,0.107012166901954
+"308","Fahrkarten",77,"D","der Pendler.",0,0,1,2.8,2.4,1.3,"die","Fahrkarten","Gut gelaunt zitierte der Schaffner, der die Mittagspause beendet hatte, die",-8.75744915008545,-1.01569347729701
+"309","Leitung",78,"A","im Gebäude.",0,0.5,1,6.8,4.5,6.2,"die","Leitung","Am Mittag verlegte der Elektriker, nachdem er den Strom abgeschaltet hatte, die",-4.24584865570068,0.719844636281881
+"310","Leitung",78,"B","im Gebäude.",0,0.41,1,2.2,3.4,6.2,"die","Leitung","Am Mittag verlegte der Elektriker, nachdem er den Anwohner informiert hatte, die",-5.58355331420898,0.205251772298744
+"311","Leitung",78,"C","im Gebäude.",0,0,1,6.8,4.5,1.5,"die","Leitung","Am Mittag verfasste der Elektriker, nachdem er den Strom abgeschaltet hatte, die",-4.81837177276611,0.499604459473508
+"312","Leitung",78,"D","im Gebäude.",0,0,1,2.2,3.4,1.5,"die","Leitung","Am Mittag verfasste der Elektriker, nachdem er den Anwohner informiert hatte, die",-5.96749019622803,0.0575576019523161
+"313","Segel",79,"A","des großen Bootes.",3,0.42,1,5.5,4.4,5.8,"die","Segel","Langsam hisst der Matrose, nachdem er die Taue gekappt hat, die",-8.52907943725586,-0.927843424727837
+"314","Segel",79,"B","des großen Bootes.",3,0.42,1,2.2,2.7,5.8,"die","Segel","Langsam hisst der Matrose, nachdem er die Handschuhe angezogen hat, die",-9.37693405151367,-1.25399907606479
+"315","Segel",79,"C","des großen Bootes.",3,0,1,5.5,4.4,1.9,"die","Segel","Langsam verzehrt der Matrose, nachdem er die Taue gekappt hat, die",-8.6873722076416,-0.988736036219119
+"316","Segel",79,"D","des großen Bootes.",3,0,1,2.2,2.7,1.9,"die","Segel","Langsam verzehrt der Matrose, nachdem er die Handschuhe angezogen hat, die",-9.27435493469238,-1.21453858590787
+"317","Gläser",80,"A","und spricht mit dem Kollegen.",0,0.67,1,5.2,1.4,5.8,"die","Gläser","Direkt entspiegelt der Optiker, nachdem er den Sehtest durchgeführt hat, die",-6.0982494354248,0.00725668465898799
+"318","Gläser",80,"B","und spricht mit dem Kollegen.",0,0.67,1,1.5,5,5.8,"die","Gläser","Direkt entspiegelt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",-9.79972362518311,-1.41663923448314
+"319","Gläser",80,"C","und spricht mit dem Kollegen.",0,0,1,5.2,1.4,4.3,"die","Gläser","Direkt verschließt der Optiker, nachdem er den Sehtest durchgeführt hat, die",-6.10869693756104,0.00323770333036804
+"320","Gläser",80,"D","und spricht mit dem Kollegen.",0,0,1,1.5,5,4.3,"die","Gläser","Direkt verschließt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",-9.67414855957031,-1.36833258305037
+"321","Korb",81,"A","und holt einen Punkt.",0,0.83,0,6,4.8,4.8,"den","Korb","Auf der Stelle wirft der Basketballer, der den Ball gedribbelt hat, den",-3.45969295501709,1.0222657357214
+"322","Korb",81,"B","und holt einen Punkt.",0,0.5,0,2.9,1.8,4.8,"den","Korb","Auf der Stelle wirft der Basketballer, der die Sitzbank verlassen hat, den",-2.77645564079285,1.28509583358385
+"323","Korb",81,"C","und holt einen Punkt.",0,0,0,6,4.8,1.8,"den","Korb","Auf der Stelle bucht der Basketballer, der den Ball gedribbelt hat, den",-4.803879737854,0.505179305687083
+"324","Korb",81,"D","und holt einen Punkt.",0,0,0,2.9,1.8,1.8,"den","Korb","Auf der Stelle bucht der Basketballer, der die Sitzbank verlassen hat, den",-4.44664621353149,0.642601135851674
+"325","Muschel",82,"A","und holt die Perle.",0,0.92,0,6.2,1.5,4.2,"die","Muschel","Ohne zu zögern knackt der Perlentaucher, der den Meeresgrund erreicht hat, die",-7.05403424985707,-0.360417930123882
+"326","Muschel",82,"B","und holt die Perle.",0,0.75,0,1,1.2,4.2,"die","Muschel","Ohne zu zögern knackt der Perlentaucher, der die Taschenlampe angemacht hat, die",-10.4878539554775,-1.68135159472469
+"327","Muschel",82,"C","und holt die Perle.",0,0,0,6.2,1.5,1.4,"die","Muschel","Ohne zu zögern verknotet der Perlentaucher, die den Meeresgrund erreicht hat, die",-8.31436131894588,-0.845244914849422
+"328","Muschel",82,"D","und holt die Perle.",0,0,0,1,1.2,1.4,"die","Muschel","Ohne zu zögern verknotet der Perlentaucher, der die Taschenlampe angemacht hat, die",-10.621092684567,-1.73260633078287
+"329","Bogen",83,"A","und feuert den Pfeil ab.",0,1,0,7,2.1,6.7,"den","Bogen","Umsichtig spannt der Schütze, der den Pfeil gespitzt hat, den",-3.28054904937744,1.09117943418383
+"330","Bogen",83,"B","und feuert den Pfeil ab.",0,0.67,0,1.5,1.2,6.7,"den","Bogen","Umsichtig spannt der Schütze, der das Laub zusammengekehrt hat, den",-5.76983833312988,0.133591005631045
+"331","Bogen",83,"C","und feuert den Pfeil ab.",0,0.08,0,7,2.1,1.2,"den","Bogen","Umsichtig tippt der Schütze, der den Pfeil gespitzt hat, den",-4.27662467956543,0.708005608764228
+"332","Bogen",83,"D","und feuert den Pfeil ab.",0,0,0,1.5,1.2,1.2,"den","Bogen","Umsichtig tippt der Schütze, der das Laub zusammengekehrt hat, den",-7.79337978363037,-0.64483193233107
+"333","Ziegel",84,"A","und beendete den Arbeitstag.",0,0.58,1,7,4.8,4.2,"die","Ziegel","Schnell verlegte der Dachdecker, der das Dach abdeckte, die",-5.92662715911865,0.0732769366824583
+"334","Ziegel",84,"B","und beendete den Arbeitstag.",0,0.5,1,1.2,1.6,4.2,"die","Ziegel","Schnell verlegte der Dachdecker, der den Ehering auszog, die",-7.44486331939697,-0.510763411051394
+"335","Ziegel",84,"C","und beendete den Arbeitstag.",0,0,1,7,4.8,1,"die","Ziegel","Schnell naschte der Dachdecker, der das Dach abdeckte, die",-6.39398574829102,-0.106508185077909
+"336","Ziegel",84,"D","und beendete den Arbeitstag.",0,0,1,1.2,1.6,1,"die","Ziegel","Schnell naschte der Dachdecker, der den Ehering auszog, die",-7.61235427856445,-0.575194413680471
+"337","Kartons",85,"A","und die Kisten.",0,0.58,1,6.5,1.9,5.5,"die","Kartons","Zuerst stapelt der Umzugshelfer, der den Umzugswagen gefahren hat, die",-6.36137580871582,-0.0939636805091427
+"338","Kartons",85,"B","und die Kisten.",0,0.67,1,4.4,1.1,5.5,"die","Kartons","Zuerst stapelt der Umzugshelfer, der die Firma gegründet hat, die",-9.44079875946045,-1.27856677324723
+"339","Kartons",85,"C","und die Kisten.",0,0,1,6.5,1.9,2,"die","Kartons","Zuerst serviert der Umzugshelfer, der den Umzugswagen gefahren hat, die",-6.62918472290039,-0.196985341736016
+"340","Kartons",85,"D","und die Kisten.",0,0,1,4.4,1.1,2,"die","Kartons","Zuerst serviert der Umzugshelfer, der die Firma gegründet hat, die",-9.65364360809326,-1.36044466725423
+"341","Unterricht",86,"A","und wurde erwischt.",2,0.5,0,7,5.9,6.7,"den","Unterricht","Heute früh schwänzte der Schüler, der die Klasse wiederholt hatte, den",-1.94787323474884,1.60383778507537
+"342","Unterricht",86,"B","und wurde erwischt.",2,0.33,0,3.8,1.8,6.7,"den","Unterricht","Heute früh schwänzte der Schüler, der das Handy verloren hatte, den",-3.34377384185791,1.06685790190065
+"343","Unterricht",86,"C","und wurde erwischt.",2,0,0,7,5.9,1.7,"den","Unterricht","Heute früh dekorierte der Schüler, der die Klasse wiederholt hatte, den",-3.1711962223053,1.13324565867501
+"344","Unterricht",86,"D","und wurde erwischt.",2,0,0,3.8,1.8,1.7,"den","Unterricht","Heute früh dekorierte der Schüler, der das Handy verloren hatte, den",-4.93184852600098,0.455951828774179
+"345","Ausweis",87,"A","und ließ die Frau in den Club.",0,0.33,1,6.4,3.3,6.6,"den","Ausweis","Am Abend kontrollierte der Türsteher, der den Geldbeutel durchsuchte, den",-4.42443561553955,0.651145185660245
+"346","Ausweis",87,"B","und ließ die Frau in den Club.",0,0.25,1,2,1.2,6.6,"den","Ausweis","Am Abend kontrollierte der Türsteher, der die Nachtluft genoss, den",-9.40714836120605,-1.26562202142794
+"347","Ausweis",87,"C","und ließ die Frau in den Club.",0,0,1,6.4,3.3,1.5,"den","Ausweis","Am Abend probierte der Türsteher, der den Geldbeutel durchsuchte, den",-5.12349987030029,0.382226725462376
+"348","Ausweis",87,"D","und ließ die Frau in den Club.",0,0,1,2,1.2,1.5,"den","Ausweis","Am Abend probierte der Türsteher, der die Nachtluft genoss, den",-10.0125541687012,-1.49851162554903
+"349","Windel",88,"A","und warf sie in den Abfall.",0,0.92,1,6.7,2.4,6.5,"die","Windel","Umsichtig wechselte der Babysitter, der das Baby geweckt hatte, die",-5.89054107666016,0.0871586559424902
+"350","Windel",88,"B","und warf sie in den Abfall.",0,0.83,1,1,1.1,6.5,"die","Windel","Umsichtig wechselte der Babysitter, der den Obstsalat zubereitet hatte, die",-8.13528156280518,-0.776355893638558
+"351","Windel",88,"C","und warf sie in den Abfall.",0,0.08,1,6.7,2.4,1.5,"die","Windel","Umsichtig bastelte der Babysitter, der das Baby geweckt hatte, die",-6.34306240081787,-0.0869188152920283
+"352","Windel",88,"D","und warf sie in den Abfall.",0,0,1,1,1.1,1.5,"die","Windel","Umsichtig bastelte der Babysitter, der den Obstsalat zubereitet hatte, die",-8.32102012634277,-0.847806447955614
+"353","Gewichte",89,"A","in die Höhe.",0,0.5,1,6.7,1.6,6.7,"die","Gewichte","Langsam stemmte der Bodybuilder, der das Fitnessstudio betreten hatte, die",-8.62410926818848,-0.9643998294263
+"354","Gewichte",89,"B","in die Höhe.",0,0.42,1,1.7,2,6.7,"die","Gewichte","Langsam stemmte der Bodybuilder, der das Licht angemacht hatte, die",-8.62676525115967,-0.96542154216023
+"355","Gewichte",89,"C","in die Höhe.",0,0,1,6.7,1.6,2,"die","Gewichte","Langsam verdaute der Bodybuilder, der das Fitnessstudio betreten hatte, die",-8.39490413665771,-0.876228405095931
+"356","Gewichte",89,"D","in die Höhe.",0,0,1,1.7,2,2,"die","Gewichte","Langsam verdaute der Bodybuilder, der das Licht angemacht hatte, die",-8.87169742584229,-1.05964289995388
+"357","Rohr",90,"A","im Badezimmer.",0,0.17,1,6.4,1.5,5.5,"das","Rohr","Umsichtig repariert der Klempner, der das Wasser ausgestellt hat, das",-5.6915135383606,0.163721259125238
+"358","Rohr",90,"B","im Badezimmer.",0,0.25,1,1.3,4.6,5.5,"das","Rohr","Umsichtig repariert der Klempner, der den Kirchenchor geleitet hat, das",-7.62027645111084,-0.57824194247069
+"359","Rohr",90,"C","im Badezimmer.",0,0,1,6.4,1.5,1.1,"das","Rohr","Umsichtig nascht der Klempner, der das Wasser ausgestellt hat, das",-6.31762361526489,-0.0771329351048742
+"360","Rohr",90,"D","im Badezimmer.",0,0,1,1.3,4.6,1.1,"das","Rohr","Umsichtig nascht der Klempner, der den Kirchenchor geleitet hat, das",-8.23524951934814,-0.814811913610376
+"361","Artikel",91,"A","für die nächste Ausgabe.",0,0.5,0,6.4,1.5,6.1,"den","Artikel","Schnell schreibt der Journalist, der die Recherche durchgeführt hat, den",-3.01726865768433,1.19245904768464
+"362","Artikel",91,"B","für die nächste Ausgabe.",0,0.25,0,2.5,5.4,6.1,"den","Artikel","Schnell schreibt der Journalist, der das Portemonnaie gefunden hat, den",-5.73342037200928,0.147600393124975
+"363","Artikel",91,"C","für die nächste Ausgabe.",0,0,0,6.4,1.5,2.3,"den","Artikel","Schnell lenkt der Journalist, der die Recherche durchgeführt hat, den",-5.21887588500977,0.345537149588898
+"364","Artikel",91,"D","für die nächste Ausgabe.",0,0,0,2.5,5.4,2.3,"den","Artikel","Schnell lenkt der Journalist, der das Portemonnaie gefunden hat, den",-6.78524780273438,-0.257020228138634
+"365","Reifen",92,"A","an seinem Rad.",0,0.67,1,6.8,4.1,6.7,"den","Reifen","Heute Morgen flickte der Radler, der die Luftpumpe benutzt hatte, den",-3.5182421207428,0.99974283974209
+"366","Reifen",92,"B","an seinem Rad.",0,0.67,1,1.2,1.8,6.7,"den","Reifen","Heute Morgen flickte der Radler, der den Schrank abgeschlossen hatte, den",-5.25079250335693,0.333259354232903
+"367","Reifen",92,"C","an seinem Rad.",0,0,1,6.8,4.1,1.1,"den","Reifen","Heute Morgen trank der Radler, der die Luftpumpe benutzt hatte, den",-6.864990234375,-0.287695823097455
+"368","Reifen",92,"D","an seinem Rad.",0,0,1,1.2,1.8,1.1,"den","Reifen","Heute Morgen trank der Radler, der den Schrank abgeschlossen hatte, den",-6.96678829193115,-0.326855852669421
+"369","Briefkasten",93,"A","und fährt weiter.",2,0.58,1,6.2,1.3,6.3,"den","Briefkasten","Umgehend entleert der Postbote, der das Postauto geparkt hat, den",-3.28214645385742,1.09056493909251
+"370","Briefkasten",93,"B","und fährt weiter.",2,0.58,1,2.5,2,6.3,"den","Briefkasten","Umgehend entleert der Postbote, der den Kugelschreiber verloren hat, den",-4.61163330078125,0.579133331349324
+"371","Briefkasten",93,"C","und fährt weiter.",2,0,1,6.2,1.3,1.1,"den","Briefkasten","Umgehend verdrückt der Postbote, der das Postauto geparkt hat, den",-2.85791707038879,1.25375896853422
+"372","Briefkasten",93,"D","und fährt weiter.",2,0,1,2.5,2,1.1,"den","Briefkasten","Umgehend verdrückt der Postbote, der den Kugelschreiber verloren hat, den",-4.23493909835815,0.724041362608559
+"373","Drogen",94,"A","für die nächste Woche.",0,0.5,1,6.8,2.2,4.7,"die","Drogen","Hektisch kauft der Junkie, der den Dealer angerufen hat, die",-7.47371006011963,-0.521860275243827
+"374","Drogen",94,"B","für die nächste Woche.",0,0.5,1,2.1,2.2,4.7,"die","Drogen","Hektisch kauft der Junkie, der die Kapuze aufgezogen hat, die",-10.3281745910645,-1.61992558343761
+"375","Drogen",94,"C","für die nächste Woche.",0,0,1,6.8,2.2,1.1,"die","Drogen","Hektisch näht der Junkie, der den Dealer angerufen hat, die",-7.46218109130859,-0.517425271566813
+"376","Drogen",94,"D","für die nächste Woche.",0,0.08,1,2.1,2.2,1.1,"die","Drogen","Hektisch näht der Junkie, der die Kapuze aufgezogen hat, die",-10.8728160858154,-1.82944016114753
+"377","Tonne",95,"A","und sprang auf den Müllwagen.",0,0.75,1,6.4,1.8,5.8,"die","Tonne","Zügig leerte der Müllmann, der den Müllwagen geparkt hatte, die",-7.01235437393188,-0.344384371007239
+"378","Tonne",95,"B","und sprang auf den Müllwagen.",0,0.75,1,4.2,1.1,5.8,"die","Tonne","Zügig leerte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",-7.87178802490234,-0.674994286315109
+"379","Tonne",95,"C","und sprang auf den Müllwagen.",0,0,1,6.4,1.8,1.8,"die","Tonne","Zügig bastelte der Müllmann, der den Müllwagen geparkt hatte, die",-6.78994703292847,-0.258827944295346
+"380","Tonne",95,"D","und sprang auf den Müllwagen.",0,0,1,4.2,1.1,1.8,"die","Tonne","Zügig bastelte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",-7.4660758972168,-0.518923539001417
+"381","Peitsche",96,"A","und gab die Sporen.",2,0.58,1,6,5.6,5.8,"die","Peitsche","Hektisch knallte der Reiter, der das Pferd ritt, die",-8.13218351453543,-0.775164125693558
+"382","Peitsche",96,"B","und gab die Sporen.",2,0.5,1,1.2,1.2,5.8,"die","Peitsche","Hektisch knallte der Reiter, der die Landschaft durchquerte, die",-11.1630756855011,-1.94109822987805
+"383","Peitsche",96,"C","und gab die Sporen.",2,0,1,6,5.6,1.1,"die","Peitsche","Hektisch verfasste der Reiter, der das Pferd ritt, die",-9.05376133322716,-1.12967987480722
+"384","Peitsche",96,"D","und gab die Sporen.",2,0,1,1.2,1.2,1.1,"die","Peitsche","Hektisch verfasste der Reiter, der die Landschaft durchquerte, die",-12.4408199489117,-2.43262532127629
+"385","Waffe",97,"A","und verlangte das Geld.",0,0.58,1,3.9,6.5,6.1,"die","Waffe","Nach kurzem Überlegen zückte der Gangster, der die Bank überfiel, die",-7.60183620452881,-0.571148284509011
+"386","Waffe",97,"B","und verlangte das Geld.",0,0.58,1,1.3,1.1,6.1,"die","Waffe","Nach kurzem Überlegen zückte der Gangster, der den Bus betrat, die",-6.35036277770996,-0.0897271495750576
+"387","Waffe",97,"C","und verlangte das Geld.",0,0,1,3.9,6.5,1.4,"die","Waffe","Nach kurzem Überlegen gründete der Gangster, der die Bank überfiel, die",-9.15064525604248,-1.16694951799666
+"388","Waffe",97,"D","und verlangte das Geld.",0,0,1,1.3,1.1,1.4,"die","Waffe","Nach kurzem Überlegen gründete der Gangster, der den Bus betrat, die",-6.54057502746582,-0.162898657010558
+"389","Schiff",98,"A","und übernahm das Kommando.",0,0.92,1,6.2,5.1,6.8,"das","Schiff","Zufrieden kaperte der Pirat, der die Flagge hisste, das",-4.49351835250854,0.624570198989936
+"390","Schiff",98,"B","und übernahm das Kommando.",0,0.92,1,2.3,1.4,6.8,"das","Schiff","Zufrieden kaperte der Pirat, der die Fehde austrug, das",-5.90903568267822,0.0800440868045691
+"391","Schiff",98,"C","und übernahm das Kommando.",0,0,1,6.2,5.1,1.1,"das","Schiff","Zufrieden verrührte der Pirat, der die Flagge hisste, das",-4.06499004364014,0.78941795395279
+"392","Schiff",98,"D","und übernahm das Kommando.",0,0,1,2.3,1.4,1.1,"das","Schiff","Zufrieden verrührte der Pirat, der die Fehde austrug, das",-5.62463760375977,0.189447325412669
+"393","Aktie",99,"A","und berichtet seinem Auftraggeber.",0,0.75,1,6.9,1.1,6.5,"die","Aktie","Sofort kauft der Börsenmakler, der die Börse betreten hat, die",-5.18299722671509,0.359339076202744
+"394","Aktie",99,"B","und berichtet seinem Auftraggeber.",0,0.83,1,1.4,1.6,6.5,"die","Aktie","Sofort kauft der Börsenmakler, der den Whiskey eingeschenkt hat, die",-5.78458976745605,0.127916372751894
+"395","Aktie",99,"C","und berichtet seinem Auftraggeber.",0,0,1,6.9,1.1,1.4,"die","Aktie","Sofort knabbert der Börsenmakler, der die Börse betreten hat, die",-5.24126529693604,0.336924313016373
+"396","Aktie",99,"D","und berichtet seinem Auftraggeber.",0,0,1,1.4,1.6,1.4,"die","Aktie","Sofort knabbert der Börsenmakler, der den Whiskey eingeschenkt hat, die",-5.92098999023438,0.0754454623450299
+"397","Loch",100,"A","in die Decke.",0,1,0,6.5,2,6.9,"das","Loch","Gestern bohrte der Handwerker, der die Bohrmaschine hielt, das",-4.26507759094238,0.712447582833322
+"398","Loch",100,"B","in die Decke.",0,0.75,0,1.4,1.7,6.9,"das","Loch","Gestern bohrte der Handwerker, der das Kaugummi kaute, das",-4.7442946434021,0.528100706318896
+"399","Loch",100,"C","in die Decke.",0,0,0,6.5,2,3.9,"das","Loch","Gestern warf der Handwerker, der die Bohrmaschine hielt, das",-3.09333395957947,1.16319798373977
+"400","Loch",100,"D","in die Decke.",0,0,0,1.4,1.7,3.9,"das","Loch","Gestern warf der Handwerker, der das Kaugummi kaute, das",-3.86366009712219,0.86686625550821
+"401","Blutdruck",101,"A","und den Blutzucker.",3,0.58,1,6.8,1.6,6.7,"den","Blutdruck","Am Morgen misst der Arzthelfer, der das Messgerät hält, den",-2.66124987602234,1.32941358643277
+"402","Blutdruck",101,"B","und den Blutzucker.",3,0.58,1,2.3,1.6,6.7,"den","Blutdruck","Am Morgen misst der Arzthelfer, der den Bildschirm anstellt, den",-4.97536706924438,0.439210964741477
+"403","Blutdruck",101,"C","und den Blutzucker.",3,0,1,6.8,1.6,1.4,"den","Blutdruck","Am Morgen kauft der Arzthelfer, der das Messgerät hält, den",-4.06636333465576,0.788889671605623
+"404","Blutdruck",101,"D","und den Blutzucker.",3,0,1,2.3,1.6,1.4,"den","Blutdruck","Am Morgen kauft der Arzthelfer, der den Bildschirm anstellt, den",-6.15119647979736,-0.0131111678634813
+"405","Tuch",102,"A","und machte sich bereit.",0,0.67,0,6.3,3.5,2.7,"das","Tuch","Konzentriert schwang der Torero, der den Stier verwundet hatte, das",-8.24357986450195,-0.81801645965378
+"406","Tuch",102,"B","und machte sich bereit.",0,0.83,0,4.1,1.8,2.7,"das","Tuch","Konzentriert schwang der Torero, der das Gebet aufgesagt hatte, das",-8.83594036102295,-1.04588774833953
+"407","Tuch",102,"C","und machte sich bereit.",0,0,0,6.3,3.5,2.6,"das","Tuch","Konzentriert befüllte der Torero, der den Stier verwundet hatte, das",-8.2336950302124,-0.814213927342402
+"408","Tuch",102,"D","und machte sich bereit.",0,0,0,4.1,1.8,2.6,"das","Tuch","Konzentriert befüllte der Torero, der das Gebet aufgesagt hatte, das",-8.73679828643799,-1.00774943150149
+"409","Schwert",103,"A","und griff den Gegner an.",0,0.92,1,6.2,1.5,5.9,"das","Schwert","Angespannt zückte der Ritter, nachdem er den Kampf begonnen hatte, das",-3.38369488716125,1.05150093584302
+"410","Schwert",103,"B","und griff den Gegner an.",0,0.92,1,1.1,1,5.9,"das","Schwert","Angespannt zückte der Ritter, nachdem er die Brücke überquert hatte, das",-4.60522127151489,0.58159993298903
+"411","Schwert",103,"C","und griff den Gegner an.",0,0,1,6.2,1.5,1.1,"das","Schwert","Angespannt kaute der Ritter, nachdem er den Kampf begonnen hatte, das",-3.57144284248352,0.979277401730491
+"412","Schwert",103,"D","und griff den Gegner an.",0,0.08,1,1.1,1,1.1,"das","Schwert","Angespannt kaute der Ritter, nachdem er die Brücke überquert hatte, das",-4.72751426696777,0.534555839679711
+"413","Rettungswagen",104,"A","in Richtung des Krankenhauses.",0,0.75,0,6.8,2.6,4.7,"den","Rettungswagen","Wachsam steuert der Sanitäter, der das Blaulicht eingeschaltet hat, den",-4.49119800329208,0.625462798967924
+"414","Rettungswagen",104,"B","in Richtung des Krankenhauses.",0,0.58,0,1.3,1.2,4.7,"den","Rettungswagen","Wachsam steuert der Sanitäter, der den Notizblock weggelegt hat, den",-6.36993193626404,-0.0972550813064998
+"415","Rettungswagen",104,"C","in Richtung des Krankenhauses.",0,0,0,6.8,2.6,1,"den","Rettungswagen","Wachsam kopiert der Sanitäter, der das Blaulicht eingeschaltet hat, den",-5.17349720001221,0.362993579398092
+"416","Rettungswagen",104,"D","in Richtung des Krankenhauses.",0,0,0,1.3,1.2,1,"den","Rettungswagen","Wachsam kopiert der Sanitäter, der den Notizblock weggelegt hat, den",-6.76057159900665,-0.247527700570823
+"417","Aussage",105,"A","und wendete sich an seinen Anwalt.",0,1,0,6.4,3.5,6.3,"die","Aussage","Ohne zu zögern verweigerte der Zeuge, der den Angeklagten wiedererkannte, die",-4.17597723007202,0.74672301843907
+"418","Aussage",105,"B","und wendete sich an seinen Anwalt.",0,0.83,0,1.1,1.6,6.3,"die","Aussage","Ohne zu zögern verweigerte der Zeuge, der den Gehstock umklammerte, die",-5.70931911468506,0.156871748317753
+"419","Aussage",105,"C","und wendete sich an seinen Anwalt.",0,0,0,6.4,3.5,2.6,"die","Aussage","Ohne zu zögern bestellte der Zeuge, der den Angeklagten wiedererkannte, die",-5.07371425628662,0.401378427998139
+"420","Aussage",105,"D","und wendete sich an seinen Anwalt.",0,0,0,1.1,1.6,2.6,"die","Aussage","Ohne zu zögern bestellte der Zeuge, der den Gehstock umklammerte, die",-7.44602203369141,-0.511209149281816
+"421","Schlittschuhe",106,"A","und begibt sich auf die Eisfläche.",2,1,0,6.7,2,6.1,"die","Schlittschuhe","Sogleich schnürt der Eiskunstläufer, der die Eishalle erreicht hat, die",-6.97245232854038,-0.329034713901541
+"422","Schlittschuhe",106,"B","und begibt sich auf die Eisfläche.",2,0.75,0,1.5,1.1,6.1,"die","Schlittschuhe","Sogleich schnürt der Eiskunstläufer, der das Bonbon gelutscht hat, die",-6.73860670626163,-0.239078169508155
+"423","Schlittschuhe",106,"C","und begibt sich auf die Eisfläche.",2,0,0,6.7,2,1.6,"die","Schlittschuhe","Sogleich zerbricht der Eiskunstläufer, der die Eishalle erreicht hat, die",-7.78014862723649,-0.639742125235585
+"424","Schlittschuhe",106,"D","und begibt sich auf die Eisfläche.",2,0.08,0,1.5,1.1,1.6,"die","Schlittschuhe","Sogleich zerbricht der Eiskunstläufer, der das Bonbon gelutscht hat, die",-8.05127730965614,-0.744040846412118
+"425","Lasso",107,"A","und fängt das Tier ein.",0,0.33,0,5.4,4.5,6.5,"das","Lasso","Gut gelaunt schwingt der Cowboy, nachdem er das Pferd gesattelt hatte, das",-11.8284221291542,-2.19704600564661
+"426","Lasso",107,"B","und fängt das Tier ein.",0,0.75,0,1.3,1.6,6.5,"das","Lasso","Gut gelaunt schwingt der Cowboy, nachdem er den Kameraden gerufen hat, das",-11.9598489999771,-2.24760374978762
+"427","Lasso",107,"C","und fängt das Tier ein.",0,0,0,5.4,4.5,1.1,"das","Lasso","Gut gelaunt zerhackt der Cowboy, nachdem er das Pferd gesattelt hatte, das",-11.7106120586395,-2.15172641943854
+"428","Lasso",107,"D","und fängt das Tier ein.",0,0,0,1.3,1.6,1.1,"das","Lasso","Gut gelaunt zerhackt der Cowboy, nachdem er den Kameraden gerufen hat, das",-11.6900591254234,-2.14382004586075
+"429","Drehbuch",108,"A","für die Serie.",2,0.33,0,6.6,4.4,6,"das","Drehbuch","Entspannt schrieb der Regisseur, der den Plot konstruiert hatte, das",-1.39945340156555,1.81480582710764
+"430","Drehbuch",108,"B","für die Serie.",2,0.75,0,1.1,1.3,6,"das","Drehbuch","Entspannt schrieb der Regisseur, der den Kamin angemacht hatte, das",-5.1585521697998,0.368742685413684
+"431","Drehbuch",108,"C","für die Serie.",2,0,0,6.6,4.4,1.1,"das","Drehbuch","Entspannt verzehrte der Regisseur, der den Plot konstruiert hatte, das",-1.43647170066833,1.80056549951819
+"432","Drehbuch",108,"D","für die Serie.",2,0,0,1.1,1.3,1.1,"das","Drehbuch","Entspannt verzehrte der Regisseur, der den Kamin angemacht hatte, das",-5.06785202026367,0.403633533267607
+"433","Stern",109,"A","am Firmament.",0,0.58,1,5.7,2.4,4.9,"den","Stern","Sofort entdeckt der Astronom, der das Teleskop aufgestellt hat, den",-3.8025689125061,0.890367024123886
+"434","Stern",109,"B","am Firmament.",0,0.58,1,3,1.9,4.9,"den","Stern","Sofort entdeckt der Astronom, der die Uhrzeit notiert hat, den",-5.88111257553101,0.0907856444322576
+"435","Stern",109,"C","am Firmament.",0,0,1,5.7,2.4,1.4,"den","Stern","Sofort serviert der Astronom, der das Teleskop aufgestellt hat, den",-3.92951917648315,0.841531356618464
+"436","Stern",109,"D","am Firmament.",0,0,1,3,1.9,1.4,"den","Stern","Sofort serviert der Astronom, der die Uhrzeit notiert hat, den",-6.16289520263672,-0.0176114731084088
+"437","Anker",110,"A","und verließ den Hafen.",0,0.5,1,6.4,2,6.9,"den","Anker","Gestern lichtete der Seemann, der das Boot kommandierte, den",-5.45918655395508,0.253093608638559
+"438","Anker",110,"B","und verließ den Hafen.",0,0.58,1,1,4.1,6.9,"den","Anker","Gestern lichtete der Seemann, der den Atem anhielt, den",-6.96484088897705,-0.326106718952119
+"439","Anker",110,"C","und verließ den Hafen.",0,0,1,6.4,2,1,"den","Anker","Gestern kochte der Seemann, der das Boot kommandierte, den",-6.07130146026611,0.0176231251339139
+"440","Anker",110,"D","und verließ den Hafen.",0,0,1,1,4.1,1,"den","Anker","Gestern kochte der Seemann, der den Atem anhielt, den",-7.29763221740723,-0.454126040493993
+"441","Seil",111,"A","um den Aufstieg abzusichern.",2,0.58,0,4.6,1.6,6.1,"das","Seil","Am Vormittag knotete der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",-3.32143902778625,1.07544973558125
+"442","Seil",111,"B","um den Aufstieg abzusichern.",2,0.75,0,1.4,1.6,6.1,"das","Seil","Am Vormittag knotete der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",-5.2425217628479,0.33644097135499
+"443","Seil",111,"C","um den Aufstieg abzusichern.",2,0,0,4.6,1.6,1.2,"das","Seil","Am Vormittag roch der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",-3.70543932914734,0.92773116886254
+"444","Seil",111,"D","um den Aufstieg abzusichern.",2,0,0,1.4,1.6,1.2,"das","Seil","Am Vormittag roch der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",-5.78733253479004,0.126861275508525
+"445","Rouletterad",112,"A","und verrät die nächste Zahl.",0,0.67,0,6.3,2.1,6.1,"das","Rouletterad","Entspannt dreht der Croupier, der den Spieltisch vorbereitet hat, das",-20.1306673288345,-5.39078246131378
+"446","Rouletterad",112,"B","und verrät die nächste Zahl.",0,0.33,0,2,1.3,6.1,"das","Rouletterad","Entspannt dreht der Croupier, der die Frau beeindruckt hat, das",-22.3062148094177,-6.22767960572008
+"447","Rouletterad",112,"C","und verrät die nächste Zahl.",0,0,0,6.3,2.1,1.1,"das","Rouletterad","Entspannt schlürft der Croupier, der den Spieltisch vorbereitet hat, das",-21.0378144979477,-5.73974697813671
+"448","Rouletterad",112,"D","und verrät die nächste Zahl.",0,0,0,2,1.3,1.1,"das","Rouletterad","Entspannt schlürft der Croupier, der die Frau beeindruckt hat, das",-22.7691662311554,-6.40576936303819
+"449","Nägel",113,"A","und lackierte sie.",0,0.75,0,6.9,1.7,6.8,"die","Nägel","Neulich feilte die Kosmetikerin, während sie die Maniküre durchführte, die",-4.31014347076416,0.695111484003205
+"450","Nägel",113,"B","und lackierte sie.",0,1,0,1.3,1,6.8,"die","Nägel","Neulich feilte die Kosmetikerin, während sie das Gespräch belauschte, die",-7.55256462097168,-0.552194320990695
+"451","Nägel",113,"C","und lackierte sie.",0,0.08,0,6.9,1.7,5.5,"die","Nägel","Neulich baute die Kosmetikerin, während sie die Maniküre durchführte, die",-4.01415920257568,0.808971738052785
+"452","Nägel",113,"D","und lackierte sie.",0,0,0,1.3,1,5.5,"die","Nägel","Neulich baute die Kosmetikerin, während sie das Gespräch belauschte, die",-7.45968294143677,-0.516464274616533
+"453","Zukunft",114,"A","der Familie.",0,0.58,1,6.7,3.9,6.8,"die","Zukunft","Sogleich prophezeite der Wahrsager, der die Kristallkugel befragt hatte, die",-5.95335483551025,0.0629952415007237
+"454","Zukunft",114,"B","der Familie.",0,0.58,1,1.4,1.1,6.8,"die","Zukunft","Sogleich prophezeite der Wahrsager, der die Kerze angezündet hatte, die",-7.75558996200562,-0.630294812784084
+"455","Zukunft",114,"C","der Familie.",0,0,1,6.7,3.9,1.5,"die","Zukunft","Sogleich würzte der Wahrsager, der die Kristallkugel befragt hatte, die",-7.71708297729492,-0.6154818124558
+"456","Zukunft",114,"D","der Familie.",0,0,1,1.4,1.1,1.5,"die","Zukunft","Sogleich würzte der Wahrsager, der die Kerze angezündet hatte, die",-8.85682964324951,-1.05392350982032
+"457","Ausgrabung",115,"A","in der Ruine.",0,0.92,0,6.6,5.3,3,"die","Ausgrabung","Heute beginnt der Archäologe, der die Schaufel hervorgeholt hat, die",-6.65775938332081,-0.207977541134862
+"458","Ausgrabung",115,"B","in der Ruine.",0,0.5,0,1.3,2.5,3,"die","Ausgrabung","Heute beginnt der Archäologe, der das Taxi genommen hat, die",-7.23406970500946,-0.429674592942629
+"459","Ausgrabung",115,"C","in der Ruine.",0,0,0,6.6,5.3,1.5,"die","Ausgrabung","Heute raspelt der Archäologe, der die Schaufel hervorgeholt hat, die",-8.26191267371178,-0.825068788234783
+"460","Ausgrabung",115,"D","in der Ruine.",0,0,0,1.3,2.5,1.5,"die","Ausgrabung","Heute raspelt der Archäologe, der das Taxi genommen hat, die",-8.86313104629517,-1.05634755538206
+"461","Strauß",116,"A","für die Hochzeit.",0,0.92,1,6.8,3.9,6.5,"den","Strauß","Zügig bindet der Florist, der die Rosen gezüchtet hat, den",-5.27558517456055,0.323722023552836
+"462","Strauß",116,"B","für die Hochzeit.",0,0.92,1,2.6,1.6,6.5,"den","Strauß","Zügig bindet der Florist, der die Fenster geschlossen hat, den",-7.09845113754272,-0.37750437240993
+"463","Strauß",116,"C","für die Hochzeit.",0,0,1,6.8,3.9,1,"den","Strauß","Zügig ölt der Florist, der die Rosen gezüchtet hat, den",-6.04364776611328,0.0282610440372451
+"464","Strauß",116,"D","für die Hochzeit.",0,0,1,2.6,1.6,1,"den","Strauß","Zügig ölt der Florist, der die Fenster geschlossen hat, den",-7.67587280273438,-0.599628939687902
+"465","Rolle",117,"A","für das Theaterstück.",0,0.75,1,6.1,3.8,5.8,"die","Rolle","Umgehend spielt der Schauspieler, der das Skript auswendig gelernt hat, die",-1.39248609542847,1.81748603457834
+"466","Rolle",117,"B","für das Theaterstück.",0,0.67,1,2.3,4.6,5.8,"die","Rolle","Umgehend spielt der Schauspieler, der die Torte gebacken hat, die",-3.01313138008118,1.19405058997117
+"467","Rolle",117,"C","für das Theaterstück.",0,0,1,6.1,3.8,2.5,"die","Rolle","Umgehend schnibbelt der Schauspieler, der das Skript auswendig gelernt hat, die",-4.85114431381226,0.486997404807387
+"468","Rolle",117,"D","für das Theaterstück.",0,0,1,2.3,4.6,2.5,"die","Rolle","Umgehend schnibbelt der Schauspieler, der die Torte gebacken hat, die",-7.00277805328369,-0.340700518792603
+"469","Sendung",118,"A","für den Fernsehkanal.",0,0.42,0,6.4,6.3,6.7,"die","Sendung","Am Abend moderiert der Moderator, der die Zuschauer unterhält, die",-6.4575834274292,-0.13097316069285
+"470","Sendung",118,"B","für den Fernsehkanal.",0,0.17,0,2,1.5,6.7,"die","Sendung","Am Abend moderiert der Moderator, der die Weltmeere bereist, die",-8.66055679321289,-0.978420589665205
+"471","Sendung",118,"C","für den Fernsehkanal.",0,0,0,6.4,6.3,3.7,"die","Sendung","Am Abend wiegt der Moderator, der die Zuschauer unterhält, die",-6.85364055633545,-0.283329789615766
+"472","Sendung",118,"D","für den Fernsehkanal.",0,0,0,2,1.5,3.7,"die","Sendung","Am Abend wiegt der Moderator, der die Weltmeere bereist, die",-8.87538909912109,-1.06106302562463
+"473","Stück",119,"A","für seine nächste Sonate.",0,0.25,0,4.8,4.1,6.9,"das","Stück","Ohne zu zögern komponierte der Musiker, der die Noten aufschrieb, das",-4.68598699569702,0.550530694309021
+"474","Stück",119,"B","für seine nächste Sonate.",0,0.42,0,1.7,2.1,6.9,"das","Stück","Ohne zu zögern komponierte der Musiker, der die Fragen beantwortete, das",-6.4128589630127,-0.113768398724042
+"475","Stück",119,"C","für seine nächste Sonate.",0,0,0,4.8,4.1,4.2,"das","Stück","Ohne zu zögern grillte der Musiker, der die Noten aufschrieb, das",-5.48405027389526,0.243528946684281
+"476","Stück",119,"D","für seine nächste Sonate.",0,0.08,0,1.7,2.1,4.2,"das","Stück","Ohne zu zögern grillte der Musiker, der die Fragen beantwortete, das",-6.97989845275879,-0.331899114771158
+"477","Bild",120,"A","in seinem Atelier.",2,0.58,1,6.6,2.3,7,"das","Bild","Fröhlich malte der Künstler, der die Leinwand aufgespannt hatte, das",-3.29091763496399,1.08719081074703
+"478","Bild",120,"B","in seinem Atelier.",2,0.58,1,1.5,1.7,7,"das","Bild","Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",-4.71248149871826,0.540338697067483
+"479","Bild",120,"C","in seinem Atelier.",2,0,1,6.6,2.3,2.2,"das","Bild","Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",-2.80409955978394,1.27446167502362
+"480","Bild",120,"D","in seinem Atelier.",2,0,1,1.5,1.7,2.2,"das","Bild","Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",-4.50441074371338,0.620380076192598

@@ -1,6 +1,6 @@
 # Data for experiment 1
 
-## Kuperberg
+## Kuperberg et al. (2003, 2007)
 The folder ``Kuperberg`` contains linguistic stimuli from the two papers [1] and [2]. The function in ``src/prepare_stimuli.py`` was used to extract target words and their preceding context from the sentences. For a couple of sentences the target verb was not annotated as a verb by SpaCy (i.e., when the verb was "scribble"). These sentences were manually annotated after (which is indicated by the "manually_annotated" column).
 
 The ready stimuli is in the file ``Kuperberg/sentence.xlsx``.
@@ -11,11 +11,14 @@ The corresponding ERPs were downloaded from GitHub [here](https://github.com/hbr
 
 The file ``delogu_2019_stim_nl.csv`` is a Dutch translation of the stimuli from Delogu et al. [3]. The translation was done by Claude 4.8 (on the 29.06.2026).
 
-## Hoeks
-The folder ``Hoeks`` contains the linguistic stimuli from the paper [4]. The file ``sentences.csv`` contains on row for each sentence frame. This is preprocessed in the script ``src/prepare_hoeks_stim.py``, where the file ``stim.csv`` is created, which contains on row for each condition in each sentence frame together with the target and context.
+## Aurnhammer et al. (2021)
+The file ``aurnhammer_2021_stim.csv`` contains linguistic stimuli from the "Retrieval (N400) and integration (P600) in expectation-based comprehension" by Aurnhammer et al. [4]. The data was downloaded from GitHub [here](https://github.com/caurnhammer/plosone21lmererp/blob/main/data/stimuli.csv).
 
-## Michaelov (2024)
-The file ``michaelov_2024.csv`` is from the study "Strong Prediction: Language Model Surprisal  Explains Multiple N400 Effects" by Michaelov et al. [5]. The file contains linguistic stimuli (125 sentence frames with each four conditions, i.e., 500 unique sentences) along with the N400 (in different channels) for 50 participants. The file was downloaded from the [OSF repository](https://osf.io/pysbc/files/osfstorage) on 15-04-2026 and was called ``data/N400_data.csv``.
+## Hoeks et al. (2004)
+The folder ``Hoeks`` contains the linguistic stimuli from the paper [5]. The file ``sentences.csv`` contains on row for each sentence frame. This is preprocessed in the script ``src/prepare_hoeks_stim.py``, where the file ``stim.csv`` is created, which contains on row for each condition in each sentence frame together with the target and context.
+
+## Michaelov et al. (2024)
+The file ``michaelov_2024.csv`` is from the study "Strong Prediction: Language Model Surprisal  Explains Multiple N400 Effects" by Michaelov et al. [6]. The file contains linguistic stimuli (125 sentence frames with each four conditions, i.e., 500 unique sentences) along with the N400 (in different channels) for 50 participants. The file was downloaded from the [OSF repository](https://osf.io/pysbc/files/osfstorage) on 15-04-2026 and was called ``data/N400_data.csv``.
 
 ## SUBTLEX-US
 
@@ -28,6 +31,8 @@ SUBTLEX-US was downloaded from https://www.ugent.be/pp/experimentele-psychologie
 
 [3] Delogu, F., Brouwer, H., & Crocker, M. W. (2019). Event-related potentials index lexical retrieval (N400) and integration (P600) during language comprehension. Brain and Cognition, 135, 103569. https://doi.org/10.1016/j.bandc.2019.05.007
 
-[4] Hoeks, J. C. J., Stowe, L. A., & Doedens, G. (2004). Seeing words in context: The interaction of lexical and sentence level information during reading. Cognitive Brain Research, 19(1), 59–73. https://doi.org/10.1016/j.cogbrainres.2003.10.022
+[4] Aurnhammer, C., Delogu, F., Schulz, M., Brouwer, H., & Crocker, M. W. (2021). Retrieval (N400) and integration (P600) in expectation-based comprehension. PLOS ONE, 16(9), e0257430. https://doi.org/10.1371/journal.pone.0257430
 
-[5] Michaelov, J. A., Bardolph, M. D., Van Petten, C. K., Bergen, B. K., & Coulson, S. (2024). Strong Prediction: Language Model Surprisal Explains Multiple N400 Effects. Neurobiology of Language, 5(1), 107–135. https://doi.org/10.1162/nol_a_00105
+[5] Hoeks, J. C. J., Stowe, L. A., & Doedens, G. (2004). Seeing words in context: The interaction of lexical and sentence level information during reading. Cognitive Brain Research, 19(1), 59–73. https://doi.org/10.1016/j.cogbrainres.2003.10.022
+
+[6] Michaelov, J. A., Bardolph, M. D., Van Petten, C. K., Bergen, B. K., & Coulson, S. (2024). Strong Prediction: Language Model Surprisal Explains Multiple N400 Effects. Neurobiology of Language, 5(1), 107–135. https://doi.org/10.1162/nol_a_00105
