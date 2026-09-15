@@ -112,6 +112,7 @@ get_modelname <- function(text) {
     text <- str_remove(text, "Gameselo_")
     text <- str_remove(text, "jinaai_")
     text <- str_remove(text, "aari1995_")
+    text <- str_remove(text, "sentence-transformers_")
     return(text)
 }
 
@@ -199,7 +200,11 @@ fixef_df |>
         implementation == "Human rating" ~ "Human rating",
     )) |>
     mutate(
-        implementation = ifelse(implementation == "Human rating", "Human rating", paste(model_type, model, sep = ", ")),
+        implementation = ifelse(
+            implementation == "Human rating",
+            "Human rating",
+            paste(model_type, model, sep = ", ")
+        ),
         coefficient = case_when(
             coefficient == "s_lp" ~ "Log probability",
             coefficient == "s_sem" ~ "Semantic assocaition",
@@ -207,7 +212,10 @@ fixef_df |>
         )
     ) |>
     mutate(
-        model_type = factor(model_type, levels = c("Human rating", "WE", "CWE", "SE")),
+        model_type = factor(
+            model_type,
+            levels = c("Human rating", "WE", "CWE", "SE")
+        ),
     ) |>
     arrange(model_type, model) |>
     mutate(
@@ -279,7 +287,17 @@ fixef_df |>
         implementation = paste(model_type, model, sep = ", ")
     ) |>
     mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE", "Human rating")),
+        model_type = factor(
+            model_type,
+            levels = c("Human rating", "WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(model_type, model) |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = rev(unique(implementation))
+        )
     ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
@@ -287,10 +305,10 @@ fixef_df |>
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
-            "firebrick",
+            "darkorange",
             "steelblue1",
             "steelblue4",
-            "purple4"
+            "firebrick"
         )
     ) +
     facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
