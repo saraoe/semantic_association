@@ -26,7 +26,7 @@ if __name__ == "__main__":
             ),
         },
         {
-            "df": pd.read_csv(Path("experiment1", "data", "aurnhammer_2021_stim.")),
+            "df": pd.read_csv(Path("experiment1", "data", "aurnhammer_2021_stim.csv")),
             "out_path": Path(
                 "experiment1", "results", "aurnhammer_semantic_association.csv"
             ),
