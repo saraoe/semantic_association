@@ -2699,3 +2699,273 @@
 267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.24086444,SE,Qwen/Qwen3-Embedding-0.6B
 268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.27940178,SE,Qwen/Qwen3-Embedding-0.6B
 269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.20799242,SE,Qwen/Qwen3-Embedding-0.6B
+0,1,control,Johann betrat das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.3867145,SE,sentence-transformers/stsb-xlm-r-multilingual
+1,1,script-related,Johann verließ das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.2795283,SE,sentence-transformers/stsb-xlm-r-multilingual
+2,1,script-unrelated,Johann betrat die Wohnung. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.12856396,SE,sentence-transformers/stsb-xlm-r-multilingual
+3,2,control,Sabine betrat das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.23445943,SE,sentence-transformers/stsb-xlm-r-multilingual
+4,2,script-related,Sabine verließ das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.2366502,SE,sentence-transformers/stsb-xlm-r-multilingual
+5,2,script-unrelated,Sabine betrat die Schule. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.21947227,SE,sentence-transformers/stsb-xlm-r-multilingual
+6,3,control,Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.20314799,SE,sentence-transformers/stsb-xlm-r-multilingual
+7,3,script-related,Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.24936439,SE,sentence-transformers/stsb-xlm-r-multilingual
+8,3,script-unrelated,Kevin betrat die Kirche. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.17773007,SE,sentence-transformers/stsb-xlm-r-multilingual
+9,4,control,Susi betrat die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.5685276,SE,sentence-transformers/stsb-xlm-r-multilingual
+10,4,script-related,Susi verließ die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.42616382,SE,sentence-transformers/stsb-xlm-r-multilingual
+11,4,script-unrelated,Susi betrat das Gehege. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.3625075,SE,sentence-transformers/stsb-xlm-r-multilingual
+12,5,control,Roman betrat die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.2284932,SE,sentence-transformers/stsb-xlm-r-multilingual
+13,5,script-related,Roman verließ die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.17441525,SE,sentence-transformers/stsb-xlm-r-multilingual
+14,5,script-unrelated,Roman betrat die Kneipe. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.23647754,SE,sentence-transformers/stsb-xlm-r-multilingual
+15,6,control,Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.2615999,SE,sentence-transformers/stsb-xlm-r-multilingual
+16,6,script-related,Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.2478915,SE,sentence-transformers/stsb-xlm-r-multilingual
+17,6,script-unrelated,Lea begann die Wände zu streichen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.15531676,SE,sentence-transformers/stsb-xlm-r-multilingual
+18,7,control,Peter erreichte das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.21682297,SE,sentence-transformers/stsb-xlm-r-multilingual
+19,7,script-related,Peter verließ das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.19910191,SE,sentence-transformers/stsb-xlm-r-multilingual
+20,7,script-unrelated,Peter erreichte den Supermarkt. Wenig später ging er zur,Loge,und setzte sich.,0.10437552,SE,sentence-transformers/stsb-xlm-r-multilingual
+21,8,control,Lisa betrat den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.1417888,SE,sentence-transformers/stsb-xlm-r-multilingual
+22,8,script-related,Lisa verließ den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.105586976,SE,sentence-transformers/stsb-xlm-r-multilingual
+23,8,script-unrelated,Lisa betrat das Haus. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.14179677,SE,sentence-transformers/stsb-xlm-r-multilingual
+24,9,control,Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.11814125,SE,sentence-transformers/stsb-xlm-r-multilingual
+25,9,script-related,Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.018321278,SE,sentence-transformers/stsb-xlm-r-multilingual
+26,9,script-unrelated,Tim begann seine Fahrstunde. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.17336826,SE,sentence-transformers/stsb-xlm-r-multilingual
+27,10,control,Maria erreichte den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.23759161,SE,sentence-transformers/stsb-xlm-r-multilingual
+28,10,script-related,Maria verließ den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.19154954,SE,sentence-transformers/stsb-xlm-r-multilingual
+29,10,script-unrelated,Maria erreichte das Einkaufszentrum. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.31918266,SE,sentence-transformers/stsb-xlm-r-multilingual
+30,11,control,Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.2692807,SE,sentence-transformers/stsb-xlm-r-multilingual
+31,11,script-related,Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.24198182,SE,sentence-transformers/stsb-xlm-r-multilingual
+32,11,script-unrelated,Lukas kam zum Unterricht. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.10932894,SE,sentence-transformers/stsb-xlm-r-multilingual
+33,12,control,Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.49088547,SE,sentence-transformers/stsb-xlm-r-multilingual
+34,12,script-related,Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.36178157,SE,sentence-transformers/stsb-xlm-r-multilingual
+35,12,script-unrelated,Marie ging zur Uni. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.3207531,SE,sentence-transformers/stsb-xlm-r-multilingual
+36,13,control,Thorsten begann zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.5017455,SE,sentence-transformers/stsb-xlm-r-multilingual
+37,13,script-related,Thorsten hörte auf zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.36760208,SE,sentence-transformers/stsb-xlm-r-multilingual
+38,13,script-unrelated,Thorsten begann zu grillen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.029521164,SE,sentence-transformers/stsb-xlm-r-multilingual
+39,14,control,Claudia betrat den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.37396613,SE,sentence-transformers/stsb-xlm-r-multilingual
+40,14,script-related,Claudia verließ den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.36502576,SE,sentence-transformers/stsb-xlm-r-multilingual
+41,14,script-unrelated,Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.11741269,SE,sentence-transformers/stsb-xlm-r-multilingual
+42,15,control,Jonathan ging zum Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.26565087,SE,sentence-transformers/stsb-xlm-r-multilingual
+43,15,script-related,Jonathan verließ den Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.22959296,SE,sentence-transformers/stsb-xlm-r-multilingual
+44,15,script-unrelated,Jonathan ging in die Küche. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.31063762,SE,sentence-transformers/stsb-xlm-r-multilingual
+45,16,control,Lara ging in den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.24916193,SE,sentence-transformers/stsb-xlm-r-multilingual
+46,16,script-related,Lara verließ den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.20287947,SE,sentence-transformers/stsb-xlm-r-multilingual
+47,16,script-unrelated,Lara ging zum Herd. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.13884746,SE,sentence-transformers/stsb-xlm-r-multilingual
+48,17,control,Roman ging ins Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.21393359,SE,sentence-transformers/stsb-xlm-r-multilingual
+49,17,script-related,Roman verließ das Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.14715716,SE,sentence-transformers/stsb-xlm-r-multilingual
+50,17,script-unrelated,Roman ging in die Buchhandlung. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.024647567,SE,sentence-transformers/stsb-xlm-r-multilingual
+51,18,control,Annika ging zum Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.25010464,SE,sentence-transformers/stsb-xlm-r-multilingual
+52,18,script-related,Annika verließ den Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.21888371,SE,sentence-transformers/stsb-xlm-r-multilingual
+53,18,script-unrelated,Annika ging in die Boutique. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.2661959,SE,sentence-transformers/stsb-xlm-r-multilingual
+54,19,control,Emil betrat das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.50412685,SE,sentence-transformers/stsb-xlm-r-multilingual
+55,19,script-related,Emil verließ das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.36650065,SE,sentence-transformers/stsb-xlm-r-multilingual
+56,19,script-unrelated,Emil betrat die Apotheke. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.33715966,SE,sentence-transformers/stsb-xlm-r-multilingual
+57,20,control,Susanne betrat die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.1910445,SE,sentence-transformers/stsb-xlm-r-multilingual
+58,20,script-related,Susanne verließ die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.16290662,SE,sentence-transformers/stsb-xlm-r-multilingual
+59,20,script-unrelated,Susanne betrat das Bad. Schnell setzte sie den,Sattel,auf und ritt los.,0.22494698,SE,sentence-transformers/stsb-xlm-r-multilingual
+60,21,control,Martin kam zur Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.11884308,SE,sentence-transformers/stsb-xlm-r-multilingual
+61,21,script-related,Martin verließ die Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.13970019,SE,sentence-transformers/stsb-xlm-r-multilingual
+62,21,script-unrelated,Martin kam zur Autowerkstatt. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.057624314,SE,sentence-transformers/stsb-xlm-r-multilingual
+63,22,control,Jutta ging zur Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.36192462,SE,sentence-transformers/stsb-xlm-r-multilingual
+64,22,script-related,Jutta verließ die Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.29110998,SE,sentence-transformers/stsb-xlm-r-multilingual
+65,22,script-unrelated,Jutta ging zur Post. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.30709812,SE,sentence-transformers/stsb-xlm-r-multilingual
+66,23,control,Jens ging zum Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.2759809,SE,sentence-transformers/stsb-xlm-r-multilingual
+67,23,script-related,Jens verließ den Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.0806087,SE,sentence-transformers/stsb-xlm-r-multilingual
+68,23,script-unrelated,Jens ging zur Zollstelle. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.3123728,SE,sentence-transformers/stsb-xlm-r-multilingual
+69,24,control,Elena begann Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.1492027,SE,sentence-transformers/stsb-xlm-r-multilingual
+70,24,script-related,Elena hörte auf Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.08897989,SE,sentence-transformers/stsb-xlm-r-multilingual
+71,24,script-unrelated,Elena begann zu zeichnen. Schnell setzte sie ihr,Geld,und gewann.,-0.055045545,SE,sentence-transformers/stsb-xlm-r-multilingual
+72,25,control,Bruno begann seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.18367513,SE,sentence-transformers/stsb-xlm-r-multilingual
+73,25,script-related,Bruno beendete seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.17473593,SE,sentence-transformers/stsb-xlm-r-multilingual
+74,25,script-unrelated,Bruno begann seinen Filmabend. Endlich kam er am,Meer,an und genoss das Wetter.,0.13934103,SE,sentence-transformers/stsb-xlm-r-multilingual
+75,26,control,Jana betrat das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.30861875,SE,sentence-transformers/stsb-xlm-r-multilingual
+76,26,script-related,Jana verließ das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.27600312,SE,sentence-transformers/stsb-xlm-r-multilingual
+77,26,script-unrelated,Jana betrat das Gartencenter. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.2853928,SE,sentence-transformers/stsb-xlm-r-multilingual
+78,27,control,Nico fuhr auf die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.3177094,SE,sentence-transformers/stsb-xlm-r-multilingual
+79,27,script-related,Nico verließ die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.23115651,SE,sentence-transformers/stsb-xlm-r-multilingual
+80,27,script-unrelated,Nico fuhr zur Pizzeria. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.27443907,SE,sentence-transformers/stsb-xlm-r-multilingual
+81,28,control,Beate ging Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.24789569,SE,sentence-transformers/stsb-xlm-r-multilingual
+82,28,script-related,Beate kam zurück vom Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.27199227,SE,sentence-transformers/stsb-xlm-r-multilingual
+83,28,script-unrelated,Beate ging schwimmen. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.18369243,SE,sentence-transformers/stsb-xlm-r-multilingual
+84,29,control,Hubert nahm ein Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.38632232,SE,sentence-transformers/stsb-xlm-r-multilingual
+85,29,script-related,Hubert verließ das Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.36100817,SE,sentence-transformers/stsb-xlm-r-multilingual
+86,29,script-unrelated,Hubert nahm ein Flugzeug. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.29009053,SE,sentence-transformers/stsb-xlm-r-multilingual
+87,30,control,Jenni begann zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.43983647,SE,sentence-transformers/stsb-xlm-r-multilingual
+88,30,script-related,Jenni hörte auf zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.36358103,SE,sentence-transformers/stsb-xlm-r-multilingual
+89,30,script-unrelated,Jenni begann die Vorlesung. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.23102744,SE,sentence-transformers/stsb-xlm-r-multilingual
+90,31,control,Hans betrat die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.46399376,SE,sentence-transformers/stsb-xlm-r-multilingual
+91,31,script-related,Hans verließ die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.37589103,SE,sentence-transformers/stsb-xlm-r-multilingual
+92,31,script-unrelated,Hans betrat die Kletterhalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.21091853,SE,sentence-transformers/stsb-xlm-r-multilingual
+93,32,control,Clara begann zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.08734465,SE,sentence-transformers/stsb-xlm-r-multilingual
+94,32,script-related,Clara hörte auf zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.08167259,SE,sentence-transformers/stsb-xlm-r-multilingual
+95,32,script-unrelated,Clara ging zum Schießstand. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.24045408,SE,sentence-transformers/stsb-xlm-r-multilingual
+96,33,control,Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.25111026,SE,sentence-transformers/stsb-xlm-r-multilingual
+97,33,script-related,Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.29616472,SE,sentence-transformers/stsb-xlm-r-multilingual
+98,33,script-unrelated,Georg nahm teil an Yoga. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.19475262,SE,sentence-transformers/stsb-xlm-r-multilingual
+99,34,control,Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,-0.041200787,SE,sentence-transformers/stsb-xlm-r-multilingual
+100,34,script-related,Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,-0.009113726,SE,sentence-transformers/stsb-xlm-r-multilingual
+101,34,script-unrelated,Johanna begann die Jagd. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.044433497,SE,sentence-transformers/stsb-xlm-r-multilingual
+102,35,control,Jürgen betrat die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.010182157,SE,sentence-transformers/stsb-xlm-r-multilingual
+103,35,script-related,Jürgen verließ die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.034466654,SE,sentence-transformers/stsb-xlm-r-multilingual
+104,35,script-unrelated,Jürgen betrat die Bäckerei. Sofort fragte er nach einem,Steak,und bezahlte.,-0.12601201,SE,sentence-transformers/stsb-xlm-r-multilingual
+105,36,control,Frauke betrat den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.16476832,SE,sentence-transformers/stsb-xlm-r-multilingual
+106,36,script-related,Frauke verließ den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.14355317,SE,sentence-transformers/stsb-xlm-r-multilingual
+107,36,script-unrelated,Frauke ging ins Stadion. Wenig später fotografierte sie ein,Zebra,beim Trinken.,-0.032264903,SE,sentence-transformers/stsb-xlm-r-multilingual
+108,37,control,Bernd betrat den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.5570281,SE,sentence-transformers/stsb-xlm-r-multilingual
+109,37,script-related,Bernd verließ den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.49713993,SE,sentence-transformers/stsb-xlm-r-multilingual
+110,37,script-unrelated,Bernd betrat den Kiosk. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.2526546,SE,sentence-transformers/stsb-xlm-r-multilingual
+111,38,control,Nicole ging in den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.21408418,SE,sentence-transformers/stsb-xlm-r-multilingual
+112,38,script-related,Nicole verließ den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.16161646,SE,sentence-transformers/stsb-xlm-r-multilingual
+113,38,script-unrelated,Nicole ging ins Büro. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.25289282,SE,sentence-transformers/stsb-xlm-r-multilingual
+114,39,control,Viktor ging in die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.27745745,SE,sentence-transformers/stsb-xlm-r-multilingual
+115,39,script-related,Viktor verließ die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.26651332,SE,sentence-transformers/stsb-xlm-r-multilingual
+116,39,script-unrelated,Viktor ging ins Labor. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.20599301,SE,sentence-transformers/stsb-xlm-r-multilingual
+117,40,control,Gabi ging zum Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.43002665,SE,sentence-transformers/stsb-xlm-r-multilingual
+118,40,script-related,Gabi verließ den Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.26010606,SE,sentence-transformers/stsb-xlm-r-multilingual
+119,40,script-unrelated,Gabi ging in die Umkleide. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.33717778,SE,sentence-transformers/stsb-xlm-r-multilingual
+120,41,control,Jakob betrat den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.21077979,SE,sentence-transformers/stsb-xlm-r-multilingual
+121,41,script-related,Jakob verließ den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.21655905,SE,sentence-transformers/stsb-xlm-r-multilingual
+122,41,script-unrelated,Jakob betrat die Tankstelle. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.27172443,SE,sentence-transformers/stsb-xlm-r-multilingual
+123,42,control,Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.12816209,SE,sentence-transformers/stsb-xlm-r-multilingual
+124,42,script-related,Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.06037289,SE,sentence-transformers/stsb-xlm-r-multilingual
+125,42,script-unrelated,Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.09383734,SE,sentence-transformers/stsb-xlm-r-multilingual
+126,43,control,Tom begann ein Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.12623885,SE,sentence-transformers/stsb-xlm-r-multilingual
+127,43,script-related,Tom beendete das Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.12651394,SE,sentence-transformers/stsb-xlm-r-multilingual
+128,43,script-unrelated,Tom begann Frühstück zu machen. Sofort stapelte er das,Holz,und zündete es an.,0.03640826,SE,sentence-transformers/stsb-xlm-r-multilingual
+129,44,control,Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.5921393,SE,sentence-transformers/stsb-xlm-r-multilingual
+130,44,script-related,Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.51677644,SE,sentence-transformers/stsb-xlm-r-multilingual
+131,44,script-unrelated,Kim ging ins Krankenhaus. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.14042382,SE,sentence-transformers/stsb-xlm-r-multilingual
+132,45,control,Michael begann sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.3139488,SE,sentence-transformers/stsb-xlm-r-multilingual
+133,45,script-related,Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.27166873,SE,sentence-transformers/stsb-xlm-r-multilingual
+134,45,script-unrelated,Michael begann einen Kuchen zu backen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.13539667,SE,sentence-transformers/stsb-xlm-r-multilingual
+135,46,control,Johann betrat die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.503393,SE,sentence-transformers/stsb-xlm-r-multilingual
+136,46,script-related,Johann verließ die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.44449127,SE,sentence-transformers/stsb-xlm-r-multilingual
+137,46,script-unrelated,Johann betrat das Kino. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.37692735,SE,sentence-transformers/stsb-xlm-r-multilingual
+138,47,control,Sabine betrat die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.47410396,SE,sentence-transformers/stsb-xlm-r-multilingual
+139,47,script-related,Sabine verließ die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.25440443,SE,sentence-transformers/stsb-xlm-r-multilingual
+140,47,script-unrelated,Sabine betrat den Bauernhof. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.220305,SE,sentence-transformers/stsb-xlm-r-multilingual
+141,48,control,Kevin betrat die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.28504384,SE,sentence-transformers/stsb-xlm-r-multilingual
+142,48,script-related,Kevin verließ die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.33056876,SE,sentence-transformers/stsb-xlm-r-multilingual
+143,48,script-unrelated,Kevin betrat die Arztpraxis. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.24534662,SE,sentence-transformers/stsb-xlm-r-multilingual
+144,49,control,Susi betrat das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.36161035,SE,sentence-transformers/stsb-xlm-r-multilingual
+145,49,script-related,Susi verließ das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.3458927,SE,sentence-transformers/stsb-xlm-r-multilingual
+146,49,script-unrelated,Susi betrat die Bücherei. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.21124706,SE,sentence-transformers/stsb-xlm-r-multilingual
+147,50,control,Thomas betrat die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.2266424,SE,sentence-transformers/stsb-xlm-r-multilingual
+148,50,script-related,Thomas verließ die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.14400458,SE,sentence-transformers/stsb-xlm-r-multilingual
+149,50,script-unrelated,Thomas begann Spaghetti zu kochen. In Eile rief er den,Kellner,und bestellte ein Bier.,0.06401396,SE,sentence-transformers/stsb-xlm-r-multilingual
+150,51,control,Lea begann die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.36949348,SE,sentence-transformers/stsb-xlm-r-multilingual
+151,51,script-related,Lea war fertig die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.34287685,SE,sentence-transformers/stsb-xlm-r-multilingual
+152,51,script-unrelated,Lea erreichte das Theater. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.15869401,SE,sentence-transformers/stsb-xlm-r-multilingual
+153,52,control,Peter erreichte den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.24808896,SE,sentence-transformers/stsb-xlm-r-multilingual
+154,52,script-related,Peter verließ den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.2379677,SE,sentence-transformers/stsb-xlm-r-multilingual
+155,52,script-unrelated,Peter erreichte den Bahnhof. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.24001388,SE,sentence-transformers/stsb-xlm-r-multilingual
+156,53,control,Lisa betrat das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.19919948,SE,sentence-transformers/stsb-xlm-r-multilingual
+157,53,script-related,Lisa verließ das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.15407719,SE,sentence-transformers/stsb-xlm-r-multilingual
+158,53,script-unrelated,Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.02487638,SE,sentence-transformers/stsb-xlm-r-multilingual
+159,54,control,Tim begann seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.05415239,SE,sentence-transformers/stsb-xlm-r-multilingual
+160,54,script-related,Tim beendete seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.06534566,SE,sentence-transformers/stsb-xlm-r-multilingual
+161,54,script-unrelated,Tim ging zum Flughafen. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.0065768384,SE,sentence-transformers/stsb-xlm-r-multilingual
+162,55,control,Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.41183734,SE,sentence-transformers/stsb-xlm-r-multilingual
+163,55,script-related,Maria verließ das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.40727267,SE,sentence-transformers/stsb-xlm-r-multilingual
+164,55,script-unrelated,Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.33257395,SE,sentence-transformers/stsb-xlm-r-multilingual
+165,56,control,Lukas begann die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.24707653,SE,sentence-transformers/stsb-xlm-r-multilingual
+166,56,script-related,Lukas beendete die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.21881902,SE,sentence-transformers/stsb-xlm-r-multilingual
+167,56,script-unrelated,Lukas ging zum Friseur. Eilig begrüßte er seine,Studenten,und fing an.,0.0632827,SE,sentence-transformers/stsb-xlm-r-multilingual
+168,57,control,Marie ging zur Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.20911226,SE,sentence-transformers/stsb-xlm-r-multilingual
+169,57,script-related,Marie verließ die Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.15718384,SE,sentence-transformers/stsb-xlm-r-multilingual
+170,57,script-unrelated,Marie ging duschen. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.17920643,SE,sentence-transformers/stsb-xlm-r-multilingual
+171,58,control,Thorsten begann zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.5561788,SE,sentence-transformers/stsb-xlm-r-multilingual
+172,58,script-related,Thorsten hörte auf zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.3661804,SE,sentence-transformers/stsb-xlm-r-multilingual
+173,58,script-unrelated,Thorsten betrat den Blumenladen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.05474626,SE,sentence-transformers/stsb-xlm-r-multilingual
+174,59,control,Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.20646916,SE,sentence-transformers/stsb-xlm-r-multilingual
+175,59,script-related,Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.045340326,SE,sentence-transformers/stsb-xlm-r-multilingual
+176,59,script-unrelated,Claudia betrat den Friedhof. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.08913343,SE,sentence-transformers/stsb-xlm-r-multilingual
+177,60,control,Jonathan ging in die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.26532236,SE,sentence-transformers/stsb-xlm-r-multilingual
+178,60,script-related,Jonathan verließ die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.24563763,SE,sentence-transformers/stsb-xlm-r-multilingual
+179,60,script-unrelated,Jonathan ging in den Garten. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.21009424,SE,sentence-transformers/stsb-xlm-r-multilingual
+180,61,control,Lara ging zum Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.32641512,SE,sentence-transformers/stsb-xlm-r-multilingual
+181,61,script-related,Lara ging weg vom Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.24477841,SE,sentence-transformers/stsb-xlm-r-multilingual
+182,61,script-unrelated,Lara ging ins Museum. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.10299442,SE,sentence-transformers/stsb-xlm-r-multilingual
+183,62,control,Roman ging in die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.051152747,SE,sentence-transformers/stsb-xlm-r-multilingual
+184,62,script-related,Roman verließ die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.085467234,SE,sentence-transformers/stsb-xlm-r-multilingual
+185,62,script-unrelated,Roman ging zum Konditor. Schnell suchte er einen,Roman,für seine Frau.,0.15555133,SE,sentence-transformers/stsb-xlm-r-multilingual
+186,63,control,Annika ging in die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.19028406,SE,sentence-transformers/stsb-xlm-r-multilingual
+187,63,script-related,Annika verließ die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.09304499,SE,sentence-transformers/stsb-xlm-r-multilingual
+188,63,script-unrelated,Annika ging ins Spa. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.15502426,SE,sentence-transformers/stsb-xlm-r-multilingual
+189,64,control,Emil betrat die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.2524895,SE,sentence-transformers/stsb-xlm-r-multilingual
+190,64,script-related,Emil verließ die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.21436155,SE,sentence-transformers/stsb-xlm-r-multilingual
+191,64,script-unrelated,Emil betrat die Reitschule. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.09181992,SE,sentence-transformers/stsb-xlm-r-multilingual
+192,65,control,Susanne betrat das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.2586019,SE,sentence-transformers/stsb-xlm-r-multilingual
+193,65,script-related,Susanne verließ das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.21863864,SE,sentence-transformers/stsb-xlm-r-multilingual
+194,65,script-unrelated,Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.21082287,SE,sentence-transformers/stsb-xlm-r-multilingual
+195,66,control,Martin kam zur Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.11835786,SE,sentence-transformers/stsb-xlm-r-multilingual
+196,66,script-related,Martin verließ die Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.16515072,SE,sentence-transformers/stsb-xlm-r-multilingual
+197,66,script-unrelated,Martin kam zur Hotelrezeption. Umgehend fragte er nach den,Reifen,für den Winter.,0.06918586,SE,sentence-transformers/stsb-xlm-r-multilingual
+198,67,control,Jutta ging zur Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.4231131,SE,sentence-transformers/stsb-xlm-r-multilingual
+199,67,script-related,Jutta verließ die Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.3732262,SE,sentence-transformers/stsb-xlm-r-multilingual
+200,67,script-unrelated,Jutta ging zum Zahnarzt. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.15339708,SE,sentence-transformers/stsb-xlm-r-multilingual
+201,68,control,Jens ging zur Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.45555228,SE,sentence-transformers/stsb-xlm-r-multilingual
+202,68,script-related,Jens verließ die Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.39177296,SE,sentence-transformers/stsb-xlm-r-multilingual
+203,68,script-unrelated,Jens begann Poker zu spielen. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.12388343,SE,sentence-transformers/stsb-xlm-r-multilingual
+204,69,control,Elena begann zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.33171192,SE,sentence-transformers/stsb-xlm-r-multilingual
+205,69,script-related,Elena hörte auf zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.24644089,SE,sentence-transformers/stsb-xlm-r-multilingual
+206,69,script-unrelated,Elena begann den Urlaub. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.16425957,SE,sentence-transformers/stsb-xlm-r-multilingual
+207,70,control,Bruno begann seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.18165833,SE,sentence-transformers/stsb-xlm-r-multilingual
+208,70,script-related,Bruno beendete seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.16669486,SE,sentence-transformers/stsb-xlm-r-multilingual
+209,70,script-unrelated,Bruno betrat das Bürgeramt. Schnell besorgte er das,Popcorn,aus der Küche.,-0.008575872,SE,sentence-transformers/stsb-xlm-r-multilingual
+210,71,control,Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.28999105,SE,sentence-transformers/stsb-xlm-r-multilingual
+211,71,script-related,Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.26628032,SE,sentence-transformers/stsb-xlm-r-multilingual
+212,71,script-unrelated,Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.26818207,SE,sentence-transformers/stsb-xlm-r-multilingual
+213,72,control,Nico fuhr zur Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.3817167,SE,sentence-transformers/stsb-xlm-r-multilingual
+214,72,script-related,Nico verließ die Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.24166726,SE,sentence-transformers/stsb-xlm-r-multilingual
+215,72,script-unrelated,Nico fuhr wandern. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.24177517,SE,sentence-transformers/stsb-xlm-r-multilingual
+216,73,control,Beate ging Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.27812698,SE,sentence-transformers/stsb-xlm-r-multilingual
+217,73,script-related,Beate kam zurück vom Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.30662826,SE,sentence-transformers/stsb-xlm-r-multilingual
+218,73,script-unrelated,Beate fuhr mit dem Taxi. Schnell prüfte sie das,Becken,und schwamm los.,0.16899483,SE,sentence-transformers/stsb-xlm-r-multilingual
+219,74,control,Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.35211158,SE,sentence-transformers/stsb-xlm-r-multilingual
+220,74,script-related,Hubert verließ das Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.36456087,SE,sentence-transformers/stsb-xlm-r-multilingual
+221,74,script-unrelated,Hubert begann zu baden. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.20308046,SE,sentence-transformers/stsb-xlm-r-multilingual
+222,75,control,Jenni begann den Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.219078,SE,sentence-transformers/stsb-xlm-r-multilingual
+223,75,script-related,Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.2183275,SE,sentence-transformers/stsb-xlm-r-multilingual
+224,75,script-unrelated,Jenni betrat die Eishalle. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.17978433,SE,sentence-transformers/stsb-xlm-r-multilingual
+225,76,control,Hans betrat die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.26414028,SE,sentence-transformers/stsb-xlm-r-multilingual
+226,76,script-related,Hans verließ die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.2464509,SE,sentence-transformers/stsb-xlm-r-multilingual
+227,76,script-unrelated,Hans begann zu bowlen. Wenig später griff er das,Seil,und spannte es ein.,0.070216924,SE,sentence-transformers/stsb-xlm-r-multilingual
+228,77,control,Clara ging zum Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.17382842,SE,sentence-transformers/stsb-xlm-r-multilingual
+229,77,script-related,Clara verließ den Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.124302916,SE,sentence-transformers/stsb-xlm-r-multilingual
+230,77,script-unrelated,Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,-0.009396458,SE,sentence-transformers/stsb-xlm-r-multilingual
+231,78,control,Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.68192136,SE,sentence-transformers/stsb-xlm-r-multilingual
+232,78,script-related,Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.5772087,SE,sentence-transformers/stsb-xlm-r-multilingual
+233,78,script-unrelated,Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.14714582,SE,sentence-transformers/stsb-xlm-r-multilingual
+234,79,control,Johanna begann die Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.15048136,SE,sentence-transformers/stsb-xlm-r-multilingual
+235,79,script-related,Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.23297448,SE,sentence-transformers/stsb-xlm-r-multilingual
+236,79,script-unrelated,Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.37424228,SE,sentence-transformers/stsb-xlm-r-multilingual
+237,80,control,Jürgen betrat die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.21419741,SE,sentence-transformers/stsb-xlm-r-multilingual
+238,80,script-related,Jürgen verließ die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.15027063,SE,sentence-transformers/stsb-xlm-r-multilingual
+239,80,script-unrelated,Jürgen betrat den Zoo. Wenig später zeigte er auf das,Croissant,und wählte aus.,-0.053480577,SE,sentence-transformers/stsb-xlm-r-multilingual
+240,81,control,Frauke ging ins Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.29752433,SE,sentence-transformers/stsb-xlm-r-multilingual
+241,81,script-related,Frauke verließ das Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.22467005,SE,sentence-transformers/stsb-xlm-r-multilingual
+242,81,script-unrelated,Frauke ging zum Waschsalon. Schnell wählte sie eine,Tribüne,und setzte sich.,0.17125423,SE,sentence-transformers/stsb-xlm-r-multilingual
+243,82,control,Bernd betrat den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.1450305,SE,sentence-transformers/stsb-xlm-r-multilingual
+244,82,script-related,Bernd verließ den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.25069544,SE,sentence-transformers/stsb-xlm-r-multilingual
+245,82,script-unrelated,Bernd betrat den Zirkus. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.049914874,SE,sentence-transformers/stsb-xlm-r-multilingual
+246,83,control,Nicole betrat das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.48182112,SE,sentence-transformers/stsb-xlm-r-multilingual
+247,83,script-related,Nicole verließ das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.3054822,SE,sentence-transformers/stsb-xlm-r-multilingual
+248,83,script-unrelated,Nicole betrat die Sauna. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.22343971,SE,sentence-transformers/stsb-xlm-r-multilingual
+249,84,control,Viktor ging ins Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.30080795,SE,sentence-transformers/stsb-xlm-r-multilingual
+250,84,script-related,Viktor verließ das Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.13343427,SE,sentence-transformers/stsb-xlm-r-multilingual
+251,84,script-unrelated,Viktor ging zum Tierarzt. Schnell begann er das,Experiment,und machte sich Notizen.,0.10124172,SE,sentence-transformers/stsb-xlm-r-multilingual
+252,85,control,Gabi ging in die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.4862046,SE,sentence-transformers/stsb-xlm-r-multilingual
+253,85,script-related,Gabi verließ die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.36275694,SE,sentence-transformers/stsb-xlm-r-multilingual
+254,85,script-unrelated,Gabi betrat den Tatort. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.22308204,SE,sentence-transformers/stsb-xlm-r-multilingual
+255,86,control,Jakob betrat die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.18246792,SE,sentence-transformers/stsb-xlm-r-multilingual
+256,86,script-related,Jakob verließ die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.2939864,SE,sentence-transformers/stsb-xlm-r-multilingual
+257,86,script-unrelated,Jakob begann Bäume zu fällen. Sofort sagte er seine,Nummer,und bezahlte.,0.11872192,SE,sentence-transformers/stsb-xlm-r-multilingual
+258,87,control,Hilde begann die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.10369413,SE,sentence-transformers/stsb-xlm-r-multilingual
+259,87,script-related,Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.107769206,SE,sentence-transformers/stsb-xlm-r-multilingual
+260,87,script-unrelated,Hilde begann ein Lagerfeuer. Schnell bestieg sie den,Kutschbock,und los ging es.,0.11132131,SE,sentence-transformers/stsb-xlm-r-multilingual
+261,88,control,Tom begann Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.23313461,SE,sentence-transformers/stsb-xlm-r-multilingual
+262,88,script-related,Tom hörte auf Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.24616855,SE,sentence-transformers/stsb-xlm-r-multilingual
+263,88,script-unrelated,Tom ging zum Weihnachtsmarkt. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.13583179,SE,sentence-transformers/stsb-xlm-r-multilingual
+264,89,control,Kim ging ins Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.33811602,SE,sentence-transformers/stsb-xlm-r-multilingual
+265,89,script-related,Kim verließ das Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.31182742,SE,sentence-transformers/stsb-xlm-r-multilingual
+266,89,script-unrelated,Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.089059755,SE,sentence-transformers/stsb-xlm-r-multilingual
+267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.29100335,SE,sentence-transformers/stsb-xlm-r-multilingual
+268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.26378924,SE,sentence-transformers/stsb-xlm-r-multilingual
+269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.119021304,SE,sentence-transformers/stsb-xlm-r-multilingual

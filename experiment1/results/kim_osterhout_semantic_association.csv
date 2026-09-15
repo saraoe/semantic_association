@@ -6143,3 +6143,771 @@
 381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.48596117,SE,Qwen/Qwen3-Embedding-0.6B
 382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.42875293,SE,Qwen/Qwen3-Embedding-0.6B
 383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.32965448,SE,Qwen/Qwen3-Embedding-0.6B
+0,1,The murder had been witnessing by the three bystanders,Attraction Violation,1,1,The murder had been,witnessing,0.20042567,SE,sentence-transformers/stsb-xlm-r-multilingual
+1,1,The murder had been witnessed in the dark.,Passive Control,1,1,The murder had been,witnessed,0.21423012,SE,sentence-transformers/stsb-xlm-r-multilingual
+2,1,The bystanders had been witnessing the crime.,Active Control,1,0,The bystanders had been,witnessing,0.6206362,SE,sentence-transformers/stsb-xlm-r-multilingual
+3,1,The unpleasant cough syrup was witnessing in the dark.,No-Attraction Violation,0,1,The unpleasant cough syrup was,witnessing,0.011907232,SE,sentence-transformers/stsb-xlm-r-multilingual
+4,2,Patty's overgrown lawn was mowing the boy next door.,Attraction Violation,1,1,Patty's overgrown lawn was,mowing,0.37683216,SE,sentence-transformers/stsb-xlm-r-multilingual
+5,2,Patty's overgrown lawn was mowed only last week.,Passive Control,1,1,Patty's overgrown lawn was,mowed,0.39281,SE,sentence-transformers/stsb-xlm-r-multilingual
+6,2,Patty's teenage son was mowing the lawn.,Active Control,1,0,Patty's teenage son was,mowing,0.09968047,SE,sentence-transformers/stsb-xlm-r-multilingual
+7,2,All of her money had been mowing the grass.,No-Attraction Violation,0,1,All of her money had been,mowing,0.016144827,SE,sentence-transformers/stsb-xlm-r-multilingual
+8,3,Three more martinis were ordering by Laurie's sister.,Attraction Violation,1,1,Three more martinis were,ordering,0.15090415,SE,sentence-transformers/stsb-xlm-r-multilingual
+9,3,Three more martinis were ordered repeatedly.,Passive Control,1,1,Three more martinis were,ordered,0.14689781,SE,sentence-transformers/stsb-xlm-r-multilingual
+10,3,"The regular customers were ordering quiche, as usual.",Active Control,1,0,The regular customers were,ordering,0.43842953,SE,sentence-transformers/stsb-xlm-r-multilingual
+11,3,The rough part of the wood was ordering late.,No-Attraction Violation,0,1,The rough part of the wood was,ordering,0.124279924,SE,sentence-transformers/stsb-xlm-r-multilingual
+12,4,The quality of Karla's work was evaluating frequently.,Attraction Violation,1,1,The quality of Karla's work was,evaluating,0.43912888,SE,sentence-transformers/stsb-xlm-r-multilingual
+13,4,The quality of Karla's work was evaluated frequently.,Passive Control,1,1,The quality of Karla's work was,evaluated,0.4540138,SE,sentence-transformers/stsb-xlm-r-multilingual
+14,4,The engineers were evaluating the success of the new device.,Active Control,1,0,The engineers were,evaluating,0.32357976,SE,sentence-transformers/stsb-xlm-r-multilingual
+15,4,The old lady's purse had been evaluating Nelson's idea.,No-Attraction Violation,0,1,The old lady's purse had been,evaluating,0.018539555,SE,sentence-transformers/stsb-xlm-r-multilingual
+16,5,The legal contract had been signing falsely.,Attraction Violation,1,1,The legal contract had been,signing,0.5073993,SE,sentence-transformers/stsb-xlm-r-multilingual
+17,5,The legal contract had been signed by the family.,Passive Control,1,1,The legal contract had been,signed,0.5183283,SE,sentence-transformers/stsb-xlm-r-multilingual
+18,5,The state's governor had been signing new legislation.,Active Control,1,0,The state's governor had been,signing,0.279497,SE,sentence-transformers/stsb-xlm-r-multilingual
+19,5,An appointment was signing falsely.,No-Attraction Violation,0,1,An appointment was,signing,0.57032895,SE,sentence-transformers/stsb-xlm-r-multilingual
+20,6,The vocabulary list was memorizing well.,Attraction Violation,1,1,The vocabulary list was,memorizing,0.4936904,SE,sentence-transformers/stsb-xlm-r-multilingual
+21,6,The vocabulary list was memorized well.,Passive Control,1,1,The vocabulary list was,memorized,0.47193363,SE,sentence-transformers/stsb-xlm-r-multilingual
+22,6,The medical students were memorizing sample exam questions all night.,Active Control,1,0,The medical students were,memorizing,0.15628666,SE,sentence-transformers/stsb-xlm-r-multilingual
+23,6,The simple coffin was memorizing the lines of the poem.,No-Attraction Violation,0,1,The simple coffin was,memorizing,0.28688657,SE,sentence-transformers/stsb-xlm-r-multilingual
+24,7,The firewood had been chopping poorly.,Attraction Violation,1,1,The firewood had been,chopping,0.29897398,SE,sentence-transformers/stsb-xlm-r-multilingual
+25,7,The firewood had been chopped by Jen's grandfather.,Passive Control,1,1,The firewood had been,chopped,0.3956259,SE,sentence-transformers/stsb-xlm-r-multilingual
+26,7,Jen's grandfather had been chopping the firewood.,Active Control,1,0,Jen's grandfather had been,chopping,0.08556687,SE,sentence-transformers/stsb-xlm-r-multilingual
+27,7,Mark's wrinkly shirts were chopping vegetables.,No-Attraction Violation,0,1,Mark's wrinkly shirts were,chopping,0.29516125,SE,sentence-transformers/stsb-xlm-r-multilingual
+28,8,Lisa's phone had been disconnecting last month.,Attraction Violation,1,1,Lisa's phone had been,disconnecting,0.10846503,SE,sentence-transformers/stsb-xlm-r-multilingual
+29,8,Lisa's phone had been disconnected last month.,Passive Control,1,1,Lisa's phone had been,disconnected,0.17146619,SE,sentence-transformers/stsb-xlm-r-multilingual
+30,8,The electrician had been disconnecting the machine's power source.,Active Control,1,0,The electrician had been,disconnecting,0.32935688,SE,sentence-transformers/stsb-xlm-r-multilingual
+31,8,Mother Theresa's death was disconnecting the two cables.,No-Attraction Violation,0,1,Mother Theresa's death was,disconnecting,0.34186634,SE,sentence-transformers/stsb-xlm-r-multilingual
+32,9,Wendy's muddy car was washing the boys.,Attraction Violation,1,1,Wendy's muddy car was,washing,0.3372176,SE,sentence-transformers/stsb-xlm-r-multilingual
+33,9,Wendy's muddy car was washed wearily.,Passive Control,1,1,Wendy's muddy car was,washed,0.36602363,SE,sentence-transformers/stsb-xlm-r-multilingual
+34,9,Wendy and Harriet were washing the muddy car.,Active Control,1,0,Wendy and Harriet were,washing,0.26838526,SE,sentence-transformers/stsb-xlm-r-multilingual
+35,9,Frank's loan application had been washing the used pencil.,No-Attraction Violation,0,1,Frank's loan application had been,washing,0.16703579,SE,sentence-transformers/stsb-xlm-r-multilingual
+36,10,The library books had been borrowing the graduate student.,Attraction Violation,1,1,The library books had been,borrowing,0.3298861,SE,sentence-transformers/stsb-xlm-r-multilingual
+37,10,The library books had been borrowed by the graduate student.,Passive Control,1,1,The library books had been,borrowed,0.34315628,SE,sentence-transformers/stsb-xlm-r-multilingual
+38,10,Katie and Lara had been borrowing dozens of books about botany from the library.,Active Control,1,0,Katie and Lara had been,borrowing,0.1466242,SE,sentence-transformers/stsb-xlm-r-multilingual
+39,10,The tragic mistake was borrowing in a hurry.,No-Attraction Violation,0,1,The tragic mistake was,borrowing,0.15847284,SE,sentence-transformers/stsb-xlm-r-multilingual
+40,11,"The dark, underwater cave was exploring by the divers.",Attraction Violation,1,1,"The dark, underwater cave was",exploring,0.400289,SE,sentence-transformers/stsb-xlm-r-multilingual
+41,11,"The dark, underwater cave was explored by the divers.",Passive Control,1,1,"The dark, underwater cave was",explored,0.32757267,SE,sentence-transformers/stsb-xlm-r-multilingual
+42,11,The cautious scuba divers were exploring the underwater cave.,Active Control,1,0,The cautious scuba divers were,exploring,0.33600184,SE,sentence-transformers/stsb-xlm-r-multilingual
+43,11,The phone bill had been exploring at the zoo.,No-Attraction Violation,0,1,The phone bill had been,exploring,0.08889376,SE,sentence-transformers/stsb-xlm-r-multilingual
+44,12,The unpleasant cough syrup was swallowing the boy.,Attraction Violation,1,1,The unpleasant cough syrup was,swallowing,0.32864872,SE,sentence-transformers/stsb-xlm-r-multilingual
+45,12,The unpleasant cough syrup was swallowed by the boy.,Passive Control,1,1,The unpleasant cough syrup was,swallowed,0.3500469,SE,sentence-transformers/stsb-xlm-r-multilingual
+46,12,The huge adult alligator had been swallowing fish by the bucket.,Active Control,1,0,The huge adult alligator had been,swallowing,0.14104551,SE,sentence-transformers/stsb-xlm-r-multilingual
+47,12,The murder had been swallowing with disgust.,No-Attraction Violation,0,1,The murder had been,swallowing,0.060505055,SE,sentence-transformers/stsb-xlm-r-multilingual
+48,13,The pizza had been delivering once more.,Attraction Violation,1,1,The pizza had been,delivering,0.17502582,SE,sentence-transformers/stsb-xlm-r-multilingual
+49,13,The pizza had been delivered by Antonio himself.,Passive Control,1,1,The pizza had been,delivered,0.18764623,SE,sentence-transformers/stsb-xlm-r-multilingual
+50,13,The exhausted messenger had been delivering packages all over town.,Active Control,1,0,The exhausted messenger had been,delivering,0.20912275,SE,sentence-transformers/stsb-xlm-r-multilingual
+51,13,A genetic mutation was delivering once more.,No-Attraction Violation,0,1,A genetic mutation was,delivering,0.20049998,SE,sentence-transformers/stsb-xlm-r-multilingual
+52,14,Frank's loan application had been approving by the bank.,Attraction Violation,1,1,Frank's loan application had been,approving,0.1522766,SE,sentence-transformers/stsb-xlm-r-multilingual
+53,14,Frank's loan application had been approved anyways.,Passive Control,1,1,Frank's loan application had been,approved,0.15381135,SE,sentence-transformers/stsb-xlm-r-multilingual
+54,14,The board of directors had been approving too many expensive projects.,Active Control,1,0,The board of directors had been,approving,0.30025148,SE,sentence-transformers/stsb-xlm-r-multilingual
+55,14,Wendy's muddy car was approving the boy's request.,No-Attraction Violation,0,1,Wendy's muddy car was,approving,-0.011021801,SE,sentence-transformers/stsb-xlm-r-multilingual
+56,15,The cheap products had been manufacturing a Belgian firm.,Attraction Violation,1,1,The cheap products had been,manufacturing,0.055536225,SE,sentence-transformers/stsb-xlm-r-multilingual
+57,15,The cheap products had been manufactured by a Belgian firm.,Passive Control,1,1,The cheap products had been,manufactured,0.14595114,SE,sentence-transformers/stsb-xlm-r-multilingual
+58,15,The auto company had been manufacturing parts in China.,Active Control,1,0,The auto company had been,manufacturing,0.4032244,SE,sentence-transformers/stsb-xlm-r-multilingual
+59,15,A drawing of the house had been manufacturing at a factory.,No-Attraction Violation,0,1,A drawing of the house had been,manufacturing,0.34401026,SE,sentence-transformers/stsb-xlm-r-multilingual
+60,16,Their secret conversation had been overhearing by a surprised neighbor.,Attraction Violation,1,1,Their secret conversation had been,overhearing,0.19525407,SE,sentence-transformers/stsb-xlm-r-multilingual
+61,16,Their secret conversation had been overheard by a surprised neighbor.,Passive Control,1,1,Their secret conversation had been,overheard,0.37933394,SE,sentence-transformers/stsb-xlm-r-multilingual
+62,16,The annoyed resident had been overhearing his neighbor's phone conversations through the wall.,Active Control,1,0,The annoyed resident had been,overhearing,0.30590618,SE,sentence-transformers/stsb-xlm-r-multilingual
+63,16,A wet snowball had been overhearing despite the precautions.,No-Attraction Violation,0,1,A wet snowball had been,overhearing,0.07512515,SE,sentence-transformers/stsb-xlm-r-multilingual
+64,17,The rough part of the wood was sanding to perfection.,Attraction Violation,1,1,The rough part of the wood was,sanding,0.15408489,SE,sentence-transformers/stsb-xlm-r-multilingual
+65,17,The rough part of the wood was sanded by the carpenter.,Passive Control,1,1,The rough part of the wood was,sanded,0.16755055,SE,sentence-transformers/stsb-xlm-r-multilingual
+66,17,The skillful carpenter was sanding the rough edge of the wood.,Active Control,1,0,The skillful carpenter was,sanding,0.15636325,SE,sentence-transformers/stsb-xlm-r-multilingual
+67,17,Three more martinis were sanding the chair.,No-Attraction Violation,0,1,Three more martinis were,sanding,0.12782843,SE,sentence-transformers/stsb-xlm-r-multilingual
+68,18,A package had been receiving by the secretary in the office.,Attraction Violation,1,1,A package had been,receiving,0.60406965,SE,sentence-transformers/stsb-xlm-r-multilingual
+69,18,A package had been received by the secretary in the office.,Passive Control,1,1,A package had been,received,0.58055544,SE,sentence-transformers/stsb-xlm-r-multilingual
+70,18,The secretary had been receiving flowers all day.,Active Control,1,0,The secretary had been,receiving,0.44963565,SE,sentence-transformers/stsb-xlm-r-multilingual
+71,18,The noises in the attic had been receiving assistance from the government.,No-Attraction Violation,0,1,The noises in the attic had been,receiving,0.1831978,SE,sentence-transformers/stsb-xlm-r-multilingual
+72,19,The club's rules had been violating Richard.,Attraction Violation,1,1,The club's rules had been,violating,0.13362524,SE,sentence-transformers/stsb-xlm-r-multilingual
+73,19,The club's rules had been violated only twice.,Passive Control,1,1,The club's rules had been,violated,0.078873746,SE,sentence-transformers/stsb-xlm-r-multilingual
+74,19,The rebel had been violating the rules.,Active Control,1,0,The rebel had been,violating,0.14618185,SE,sentence-transformers/stsb-xlm-r-multilingual
+75,19,Thirty pounds of potatoes had been violating only twice.,No-Attraction Violation,0,1,Thirty pounds of potatoes had been,violating,-0.15669909,SE,sentence-transformers/stsb-xlm-r-multilingual
+76,20,A new medication had been prescribing the physician.,Attraction Violation,1,1,A new medication had been,prescribing,0.30541417,SE,sentence-transformers/stsb-xlm-r-multilingual
+77,20,A new medication had been prescribed by the physician.,Passive Control,1,1,A new medication had been,prescribed,0.4028006,SE,sentence-transformers/stsb-xlm-r-multilingual
+78,20,The new doctor had been prescribing powerful painkillers for Jelena's sore knee.,Active Control,1,0,The new doctor had been,prescribing,0.34021613,SE,sentence-transformers/stsb-xlm-r-multilingual
+79,20,The portrait of Napoleon had been prescribing with caution.,No-Attraction Violation,0,1,The portrait of Napoleon had been,prescribing,0.09745403,SE,sentence-transformers/stsb-xlm-r-multilingual
+80,21,The wheat crops had been harvesting by the local farmers.,Attraction Violation,1,1,The wheat crops had been,harvesting,0.40696368,SE,sentence-transformers/stsb-xlm-r-multilingual
+81,21,The wheat crops had been harvested after the rain.,Passive Control,1,1,The wheat crops had been,harvested,0.5417361,SE,sentence-transformers/stsb-xlm-r-multilingual
+82,21,The local farmers had been harvesting the corn all week.,Active Control,1,0,The local farmers had been,harvesting,0.4086674,SE,sentence-transformers/stsb-xlm-r-multilingual
+83,21,The elevator button had been harvesting after the rain.,No-Attraction Violation,0,1,The elevator button had been,harvesting,0.022466082,SE,sentence-transformers/stsb-xlm-r-multilingual
+84,22,The musical piece was composing by Beethoven in 1799.,Attraction Violation,1,1,The musical piece was,composing,0.6062517,SE,sentence-transformers/stsb-xlm-r-multilingual
+85,22,The musical piece was composed in a dream.,Passive Control,1,1,The musical piece was,composed,0.5427502,SE,sentence-transformers/stsb-xlm-r-multilingual
+86,22,Ludwig von Beethoven was composing symphonies as a teenager.,Active Control,1,0,Ludwig von Beethoven was,composing,0.3617207,SE,sentence-transformers/stsb-xlm-r-multilingual
+87,22,The bank had been composing in a dream.,No-Attraction Violation,0,1,The bank had been,composing,0.10799637,SE,sentence-transformers/stsb-xlm-r-multilingual
+88,23,The old lady's purse had been snatching a kid.,Attraction Violation,1,1,The old lady's purse had been,snatching,0.19008598,SE,sentence-transformers/stsb-xlm-r-multilingual
+89,23,The old lady's purse had been snatched with speed.,Passive Control,1,1,The old lady's purse had been,snatched,0.25686878,SE,sentence-transformers/stsb-xlm-r-multilingual
+90,23,The clever dog had been snatching cookies from the table.,Active Control,1,0,The clever dog had been,snatching,0.14350806,SE,sentence-transformers/stsb-xlm-r-multilingual
+91,23,The quality of Karla's work was snatching victory from the jaws of defeat.,No-Attraction Violation,0,1,The quality of Karla's work was,snatching,0.19176343,SE,sentence-transformers/stsb-xlm-r-multilingual
+92,24,Olson's bulging suitcase had been packing his assistant.,Attraction Violation,1,1,Olson's bulging suitcase had been,packing,0.34603122,SE,sentence-transformers/stsb-xlm-r-multilingual
+93,24,Olson's bulging suitcase had been packed for the trip.,Passive Control,1,1,Olson's bulging suitcase had been,packed,0.46544507,SE,sentence-transformers/stsb-xlm-r-multilingual
+94,24,The excited vacationers had been packing their suitcases when the hurricane hit.,Active Control,1,0,The excited vacationers had been,packing,-0.007716372,SE,sentence-transformers/stsb-xlm-r-multilingual
+95,24,Stormy weather had been packing for the trip.,No-Attraction Violation,0,1,Stormy weather had been,packing,0.13696215,SE,sentence-transformers/stsb-xlm-r-multilingual
+96,25,Several spelling errors were noticing the careful editor.,Attraction Violation,1,1,Several spelling errors were,noticing,0.20480876,SE,sentence-transformers/stsb-xlm-r-multilingual
+97,25,Several spelling errors were noticed by the careful editor.,Passive Control,1,1,Several spelling errors were,noticed,0.194636,SE,sentence-transformers/stsb-xlm-r-multilingual
+98,25,Brittany's close friends were noticing changes in her personality.,Active Control,1,0,Brittany's close friends were,noticing,0.32431147,SE,sentence-transformers/stsb-xlm-r-multilingual
+99,25,The final destination had been noticing too late.,No-Attraction Violation,0,1,The final destination had been,noticing,0.3556744,SE,sentence-transformers/stsb-xlm-r-multilingual
+100,26,An illegal weapon had been smuggling only once.,Attraction Violation,1,1,An illegal weapon had been,smuggling,0.42589256,SE,sentence-transformers/stsb-xlm-r-multilingual
+101,26,An illegal weapon had been smuggled only once.,Passive Control,1,1,An illegal weapon had been,smuggled,0.4124356,SE,sentence-transformers/stsb-xlm-r-multilingual
+102,26,The drug dealer had been smuggling heroin into Canada.,Active Control,1,0,The drug dealer had been,smuggling,0.4897865,SE,sentence-transformers/stsb-xlm-r-multilingual
+103,26,Cleopatra's beauty was smuggling only once.,No-Attraction Violation,0,1,Cleopatra's beauty was,smuggling,0.124747604,SE,sentence-transformers/stsb-xlm-r-multilingual
+104,27,The leftover food was discarding wastefully.,Attraction Violation,1,1,The leftover food was,discarding,0.3001701,SE,sentence-transformers/stsb-xlm-r-multilingual
+105,27,The leftover food was discarded wastefully.,Passive Control,1,1,The leftover food was,discarded,0.34188896,SE,sentence-transformers/stsb-xlm-r-multilingual
+106,27,The campers were discarding the leftover food.,Active Control,1,0,The campers were,discarding,0.10899813,SE,sentence-transformers/stsb-xlm-r-multilingual
+107,27,The sleek new building was discarding wastefully.,No-Attraction Violation,0,1,The sleek new building was,discarding,-0.025742335,SE,sentence-transformers/stsb-xlm-r-multilingual
+108,28,Thirty pounds of potatoes had been peeling by the cooks.,Attraction Violation,1,1,Thirty pounds of potatoes had been,peeling,-0.06362981,SE,sentence-transformers/stsb-xlm-r-multilingual
+109,28,Thirty pounds of potatoes had been peeled carefully.,Passive Control,1,1,Thirty pounds of potatoes had been,peeled,-0.06411352,SE,sentence-transformers/stsb-xlm-r-multilingual
+110,28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored looking cooks had been,peeling,0.0002181188,SE,sentence-transformers/stsb-xlm-r-multilingual
+111,28,The club's rules had been peeling the sticker off the box.,No-Attraction Violation,0,1,The club's rules had been,peeling,-0.012181048,SE,sentence-transformers/stsb-xlm-r-multilingual
+112,29,The grimy pots and pans had been scrubbing the dishwashers.,Attraction Violation,1,1,The grimy pots and pans had been,scrubbing,0.35334328,SE,sentence-transformers/stsb-xlm-r-multilingual
+113,29,The grimy pots and pans had been scrubbed by the dishwashers.,Passive Control,1,1,The grimy pots and pans had been,scrubbed,0.3540969,SE,sentence-transformers/stsb-xlm-r-multilingual
+114,29,The guys in the kitchen had been scrubbing the pots and pans.,Active Control,1,0,The guys in the kitchen had been,scrubbing,0.24580663,SE,sentence-transformers/stsb-xlm-r-multilingual
+115,29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The stolen artwork had been,scrubbing,0.119056985,SE,sentence-transformers/stsb-xlm-r-multilingual
+116,30,The roast lamb had been carving by a servant.,Attraction Violation,1,1,The roast lamb had been,carving,-0.015805442,SE,sentence-transformers/stsb-xlm-r-multilingual
+117,30,The roast lamb had been carved by a servant.,Passive Control,1,1,The roast lamb had been,carved,0.05166061,SE,sentence-transformers/stsb-xlm-r-multilingual
+118,30,The butcher had been carving the meat.,Active Control,1,0,The butcher had been,carving,0.35005778,SE,sentence-transformers/stsb-xlm-r-multilingual
+119,30,Janet's houseplants were carving before dinner.,No-Attraction Violation,0,1,Janet's houseplants were,carving,0.2532767,SE,sentence-transformers/stsb-xlm-r-multilingual
+120,31,Cleopatra's beauty was admiring many people.,Attraction Violation,1,1,Cleopatra's beauty was,admiring,0.40779436,SE,sentence-transformers/stsb-xlm-r-multilingual
+121,31,Cleopatra's beauty was admired always.,Passive Control,1,1,Cleopatra's beauty was,admired,0.46504322,SE,sentence-transformers/stsb-xlm-r-multilingual
+122,31,The men were admiring the beautiful woman from a distance.,Active Control,1,0,The men were,admiring,0.45179734,SE,sentence-transformers/stsb-xlm-r-multilingual
+123,31,An illegal weapon had been admiring always.,No-Attraction Violation,0,1,An illegal weapon had been,admiring,0.11185079,SE,sentence-transformers/stsb-xlm-r-multilingual
+124,32,A wet snowball had been tossing by the girls through the window.,Attraction Violation,1,1,A wet snowball had been,tossing,0.19201553,SE,sentence-transformers/stsb-xlm-r-multilingual
+125,32,A wet snowball had been tossed in anger.,Passive Control,1,1,A wet snowball had been,tossed,0.2650598,SE,sentence-transformers/stsb-xlm-r-multilingual
+126,32,The baseball players had been tossing the ball around the infield.,Active Control,1,0,The baseball players had been,tossing,0.39031962,SE,sentence-transformers/stsb-xlm-r-multilingual
+127,32,Their secret conversation had been tossing a steak on the grill.,No-Attraction Violation,0,1,Their secret conversation had been,tossing,-0.019282734,SE,sentence-transformers/stsb-xlm-r-multilingual
+128,33,The sealed envelope was opening the judge.,Attraction Violation,1,1,The sealed envelope was,opening,0.2150632,SE,sentence-transformers/stsb-xlm-r-multilingual
+129,33,The sealed envelope was opened without permission.,Passive Control,1,1,The sealed envelope was,opened,0.2097483,SE,sentence-transformers/stsb-xlm-r-multilingual
+130,33,Tuxedoed waiters were opening bottles of champagne for the toast.,Active Control,1,0,Tuxedoed waiters were,opening,0.19715987,SE,sentence-transformers/stsb-xlm-r-multilingual
+131,33,The men's faces had been opening without permission.,No-Attraction Violation,0,1,The men's faces had been,opening,0.31920147,SE,sentence-transformers/stsb-xlm-r-multilingual
+132,34,The man's beard had been shaving twice a day.,Attraction Violation,1,1,The man's beard had been,shaving,0.4940421,SE,sentence-transformers/stsb-xlm-r-multilingual
+133,34,The man's beard had been shaved twice a day.,Passive Control,1,1,The man's beard had been,shaved,0.44708562,SE,sentence-transformers/stsb-xlm-r-multilingual
+134,34,His uncle Ralph had been shaving his beard off.,Active Control,1,0,His uncle Ralph had been,shaving,0.24226546,SE,sentence-transformers/stsb-xlm-r-multilingual
+135,34,The popular amusement park is shaving twice a day.,No-Attraction Violation,0,1,The popular amusement park is,shaving,-0.017233392,SE,sentence-transformers/stsb-xlm-r-multilingual
+136,35,The elevator button had been pressing slowly.,Attraction Violation,1,1,The elevator button had been,pressing,0.22662333,SE,sentence-transformers/stsb-xlm-r-multilingual
+137,35,The elevator button had been pressed by the attendant.,Passive Control,1,1,The elevator button had been,pressed,0.29122904,SE,sentence-transformers/stsb-xlm-r-multilingual
+138,35,The attendant had been pressing the buttons.,Active Control,1,0,The attendant had been,pressing,0.21665102,SE,sentence-transformers/stsb-xlm-r-multilingual
+139,35,The wheat crops had been pressing slowly.,No-Attraction Violation,0,1,The wheat crops had been,pressing,-0.061884873,SE,sentence-transformers/stsb-xlm-r-multilingual
+140,36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The winning lottery numbers had been,announcing,0.10112999,SE,sentence-transformers/stsb-xlm-r-multilingual
+141,36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The winning lottery numbers had been,announced,0.13460031,SE,sentence-transformers/stsb-xlm-r-multilingual
+142,36,The flight attendant had been announcing the reason for the delay.,Active Control,1,0,The flight attendant had been,announcing,0.26467255,SE,sentence-transformers/stsb-xlm-r-multilingual
+143,36,The tarnished silverware was announcing on the television.,No-Attraction Violation,0,1,The tarnished silverware was,announcing,-0.023615811,SE,sentence-transformers/stsb-xlm-r-multilingual
+144,37,The victim's body had been identifying at the morgue.,Attraction Violation,1,1,The victim's body had been,identifying,0.41839537,SE,sentence-transformers/stsb-xlm-r-multilingual
+145,37,The victim's body had been identified by the family members.,Passive Control,1,1,The victim's body had been,identified,0.3828638,SE,sentence-transformers/stsb-xlm-r-multilingual
+146,37,The laboratory technicians had been identifying the chemical.,Active Control,1,0,The laboratory technicians had been,identifying,0.33956143,SE,sentence-transformers/stsb-xlm-r-multilingual
+147,37,The movie was identifying rare fish for the divers.,No-Attraction Violation,0,1,The movie was,identifying,0.24892907,SE,sentence-transformers/stsb-xlm-r-multilingual
+148,38,The hearty meal was devouring by the kids.,Attraction Violation,1,1,The hearty meal was,devouring,0.29827958,SE,sentence-transformers/stsb-xlm-r-multilingual
+149,38,The hearty meal was devoured with gusto.,Passive Control,1,1,The hearty meal was,devoured,0.24936779,SE,sentence-transformers/stsb-xlm-r-multilingual
+150,38,The hungry boys were devouring the plate of cookies when Jack arrived.,Active Control,1,0,The hungry boys were,devouring,0.28328696,SE,sentence-transformers/stsb-xlm-r-multilingual
+151,38,The dusty tabletops were devouring with gusto.,No-Attraction Violation,0,1,The dusty tabletops were,devouring,0.072093956,SE,sentence-transformers/stsb-xlm-r-multilingual
+152,39,The overgrown shrubs were trimming regularly.,Attraction Violation,1,1,The overgrown shrubs were,trimming,0.3512122,SE,sentence-transformers/stsb-xlm-r-multilingual
+153,39,The overgrown shrubs were trimmed by a gardener.,Passive Control,1,1,The overgrown shrubs were,trimmed,0.41510624,SE,sentence-transformers/stsb-xlm-r-multilingual
+154,39,A gardener was trimming the overgrown shrubbery.,Active Control,1,0,A gardener was,trimming,0.43086654,SE,sentence-transformers/stsb-xlm-r-multilingual
+155,39,The alarm clock had been trimming regularly.,No-Attraction Violation,0,1,The alarm clock had been,trimming,0.13284414,SE,sentence-transformers/stsb-xlm-r-multilingual
+156,40,Wilson's unreasonable proposal was rejecting by the boss.,Attraction Violation,1,1,Wilson's unreasonable proposal was,rejecting,0.23720752,SE,sentence-transformers/stsb-xlm-r-multilingual
+157,40,Wilson's unreasonable proposal was rejected at the hospital.,Passive Control,1,1,Wilson's unreasonable proposal was,rejected,0.23151357,SE,sentence-transformers/stsb-xlm-r-multilingual
+158,40,The admissions committee was rejecting nearly every application.,Active Control,1,0,The admissions committee was,rejecting,0.089712605,SE,sentence-transformers/stsb-xlm-r-multilingual
+159,40,The rare bird's behavior was rejecting all offers.,No-Attraction Violation,0,1,The rare bird's behavior was,rejecting,0.08437874,SE,sentence-transformers/stsb-xlm-r-multilingual
+160,41,Hathaway's gigantic fortune had been inheriting by his daughters.,Attraction Violation,1,1,Hathaway's gigantic fortune had been,inheriting,0.48774332,SE,sentence-transformers/stsb-xlm-r-multilingual
+161,41,Hathaway's gigantic fortune had been inherited by his daughters.,Passive Control,1,1,Hathaway's gigantic fortune had been,inherited,0.46134347,SE,sentence-transformers/stsb-xlm-r-multilingual
+162,41,Generations of aristocratic Englishmen have been inheriting their fortunes.,Active Control,1,0,Generations of aristocratic Englishmen have been,inheriting,0.53380775,SE,sentence-transformers/stsb-xlm-r-multilingual
+163,41,The strange mystery had been inheriting the estate from her grandmother.,No-Attraction Violation,0,1,The strange mystery had been,inheriting,0.10848066,SE,sentence-transformers/stsb-xlm-r-multilingual
+164,42,All of her money had been spending before the wedding.,Attraction Violation,1,1,All of her money had been,spending,0.49637634,SE,sentence-transformers/stsb-xlm-r-multilingual
+165,42,All of her money had been spent before the wedding.,Passive Control,1,1,All of her money had been,spent,0.30686015,SE,sentence-transformers/stsb-xlm-r-multilingual
+166,42,The shopping fanatic had been spending all her money in Bloomingdales.,Active Control,1,0,The shopping fanatic had been,spending,0.3831485,SE,sentence-transformers/stsb-xlm-r-multilingual
+167,42,Patty's overgrown lawn was spending its time on the beach.,No-Attraction Violation,0,1,Patty's overgrown lawn was,spending,0.12732397,SE,sentence-transformers/stsb-xlm-r-multilingual
+168,43,An appointment was scheduling by the secretary.,Attraction Violation,1,1,An appointment was,scheduling,0.63555765,SE,sentence-transformers/stsb-xlm-r-multilingual
+169,43,An appointment was scheduled by the secretary.,Passive Control,1,1,An appointment was,scheduled,0.68309605,SE,sentence-transformers/stsb-xlm-r-multilingual
+170,43,The secretary was scheduling new appointments for the afternoon.,Active Control,1,0,The secretary was,scheduling,0.36814204,SE,sentence-transformers/stsb-xlm-r-multilingual
+171,43,The legal contract had been scheduling for next week.,No-Attraction Violation,0,1,The legal contract had been,scheduling,0.20466107,SE,sentence-transformers/stsb-xlm-r-multilingual
+172,44,The men's faces had been photographing by a security camera.,Attraction Violation,1,1,The men's faces had been,photographing,0.31946862,SE,sentence-transformers/stsb-xlm-r-multilingual
+173,44,The men's faces had been photographed by a security camera.,Passive Control,1,1,The men's faces had been,photographed,0.38010967,SE,sentence-transformers/stsb-xlm-r-multilingual
+174,44,The intrusive reporter had been photographing the celebrities at the party.,Active Control,1,0,The intrusive reporter had been,photographing,0.1930863,SE,sentence-transformers/stsb-xlm-r-multilingual
+175,44,The sealed envelope was photographing at the party.,No-Attraction Violation,0,1,The sealed envelope was,photographing,0.1518458,SE,sentence-transformers/stsb-xlm-r-multilingual
+176,45,The broken television had been repairing the technician.,Attraction Violation,1,1,The broken television had been,repairing,0.19751382,SE,sentence-transformers/stsb-xlm-r-multilingual
+177,45,The broken television had been repaired by the technician.,Passive Control,1,1,The broken television had been,repaired,0.14147037,SE,sentence-transformers/stsb-xlm-r-multilingual
+178,45,The competent technician had been repairing the television.,Active Control,1,0,The competent technician had been,repairing,0.46447858,SE,sentence-transformers/stsb-xlm-r-multilingual
+179,45,Larry's note had been repairing the computer's hard drive.,No-Attraction Violation,0,1,Larry's note had been,repairing,0.2508941,SE,sentence-transformers/stsb-xlm-r-multilingual
+180,46,The alarm clock had been unplugging accidentally.,Attraction Violation,1,1,The alarm clock had been,unplugging,0.15787533,SE,sentence-transformers/stsb-xlm-r-multilingual
+181,46,The alarm clock had been unplugged late.,Passive Control,1,1,The alarm clock had been,unplugged,0.2173921,SE,sentence-transformers/stsb-xlm-r-multilingual
+182,46,The frantic woman had been unplugging every electrical device in the house.,Active Control,1,0,The frantic woman had been,unplugging,0.11624117,SE,sentence-transformers/stsb-xlm-r-multilingual
+183,46,The overgrown shrubs were unplugging accidentally.,No-Attraction Violation,0,1,The overgrown shrubs were,unplugging,0.13210672,SE,sentence-transformers/stsb-xlm-r-multilingual
+184,47,The car door had been unlocking late at night.,Attraction Violation,1,1,The car door had been,unlocking,0.54409564,SE,sentence-transformers/stsb-xlm-r-multilingual
+185,47,The car door had been unlocked by the child.,Passive Control,1,1,The car door had been,unlocked,0.58564955,SE,sentence-transformers/stsb-xlm-r-multilingual
+186,47,The babysitter had been unlocking the back door.,Active Control,1,0,The babysitter had been,unlocking,0.21229954,SE,sentence-transformers/stsb-xlm-r-multilingual
+187,47,The Queen's 80th birthday was unlocking late at night.,No-Attraction Violation,0,1,The Queen's 80th birthday was,unlocking,0.0040470343,SE,sentence-transformers/stsb-xlm-r-multilingual
+188,48,The portrait of Napoleon had been painting by a Dutch artist.,Attraction Violation,1,1,The portrait of Napoleon had been,painting,0.26132816,SE,sentence-transformers/stsb-xlm-r-multilingual
+189,48,The portrait of Napoleon had been painted by a Dutch artist.,Passive Control,1,1,The portrait of Napoleon had been,painted,0.26440614,SE,sentence-transformers/stsb-xlm-r-multilingual
+190,48,The French Impressionist artists had been painting with a focus on light and color.,Active Control,1,0,The French Impressionist artists had been,painting,0.5210343,SE,sentence-transformers/stsb-xlm-r-multilingual
+191,48,A new medication had been painting on Tuesday.,No-Attraction Violation,0,1,A new medication had been,painting,0.1442376,SE,sentence-transformers/stsb-xlm-r-multilingual
+192,49,The embarrassing allegations had been denying by the mayor.,Attraction Violation,1,1,The embarrassing allegations had been,denying,0.221438,SE,sentence-transformers/stsb-xlm-r-multilingual
+193,49,The embarrassing allegations had been denied by the mayor.,Passive Control,1,1,The embarrassing allegations had been,denied,0.1786025,SE,sentence-transformers/stsb-xlm-r-multilingual
+194,49,The embarassed mayor had been denying allegations of corruption.,Active Control,1,0,The embarassed mayor had been,denying,-0.01927749,SE,sentence-transformers/stsb-xlm-r-multilingual
+195,49,Tamara's birthday gift had been denying the rumor.,No-Attraction Violation,0,1,Tamara's birthday gift had been,denying,-0.03542323,SE,sentence-transformers/stsb-xlm-r-multilingual
+196,50,The noises in the attic had been hearing nightly.,Attraction Violation,1,1,The noises in the attic had been,hearing,0.35715595,SE,sentence-transformers/stsb-xlm-r-multilingual
+197,50,The noises in the attic had been heard by the boys.,Passive Control,1,1,The noises in the attic had been,heard,0.3320009,SE,sentence-transformers/stsb-xlm-r-multilingual
+198,50,The frightened campers had been hearing noises in the woods.,Active Control,1,0,The frightened campers had been,hearing,0.050529733,SE,sentence-transformers/stsb-xlm-r-multilingual
+199,50,A package had been hearing nightly.,No-Attraction Violation,0,1,A package had been,hearing,0.3719886,SE,sentence-transformers/stsb-xlm-r-multilingual
+200,51,The appetizers had been serving before the meal.,Attraction Violation,1,1,The appetizers had been,serving,0.26493216,SE,sentence-transformers/stsb-xlm-r-multilingual
+201,51,The appetizers had been served before the meal.,Passive Control,1,1,The appetizers had been,served,0.2793165,SE,sentence-transformers/stsb-xlm-r-multilingual
+202,51,The waiters had been serving the meal.,Active Control,1,0,The waiters had been,serving,0.33285952,SE,sentence-transformers/stsb-xlm-r-multilingual
+203,51,The final exams had been serving before the meal.,No-Attraction Violation,0,1,The final exams had been,serving,0.13224542,SE,sentence-transformers/stsb-xlm-r-multilingual
+204,52,Billy's unruly hair was combing his mother to one side.,Attraction Violation,1,1,Billy's unruly hair was,combing,0.1559093,SE,sentence-transformers/stsb-xlm-r-multilingual
+205,52,Billy's unruly hair was combed by his mother to one side.,Passive Control,1,1,Billy's unruly hair was,combed,0.17722152,SE,sentence-transformers/stsb-xlm-r-multilingual
+206,52,The patient barber was combing the boy's hair to one side.,Active Control,1,0,The patient barber was,combing,0.36706492,SE,sentence-transformers/stsb-xlm-r-multilingual
+207,52,The girl's disease was combing the area for escaped prisoners.,No-Attraction Violation,0,1,The girl's disease was,combing,0.04271195,SE,sentence-transformers/stsb-xlm-r-multilingual
+208,53,A drawing of the house had been sketching again.,Attraction Violation,1,1,A drawing of the house had been,sketching,0.5640259,SE,sentence-transformers/stsb-xlm-r-multilingual
+209,53,A drawing of the house had been sketched again.,Passive Control,1,1,A drawing of the house had been,sketched,0.5902339,SE,sentence-transformers/stsb-xlm-r-multilingual
+210,53,An artist in the studio had been sketching the house.,Active Control,1,0,An artist in the studio had been,sketching,0.33649334,SE,sentence-transformers/stsb-xlm-r-multilingual
+211,53,The cheap products had been sketching again.,No-Attraction Violation,0,1,The cheap products had been,sketching,0.09326965,SE,sentence-transformers/stsb-xlm-r-multilingual
+212,54,The simple coffin was burying the villagers.,Attraction Violation,1,1,The simple coffin was,burying,0.47686586,SE,sentence-transformers/stsb-xlm-r-multilingual
+213,54,The simple coffin was buried at the church.,Passive Control,1,1,The simple coffin was,buried,0.52467334,SE,sentence-transformers/stsb-xlm-r-multilingual
+214,54,The tribal people were burying their dead.,Active Control,1,0,The tribal people were,burying,0.09149337,SE,sentence-transformers/stsb-xlm-r-multilingual
+215,54,The vocabulary list was burying at the church.,No-Attraction Violation,0,1,The vocabulary list was,burying,0.2584992,SE,sentence-transformers/stsb-xlm-r-multilingual
+216,55,The homicide case had been investigating diligently.,Attraction Violation,1,1,The homicide case had been,investigating,0.33366755,SE,sentence-transformers/stsb-xlm-r-multilingual
+217,55,The homicide case had been investigated by the FBI.,Passive Control,1,1,The homicide case had been,investigated,0.32705557,SE,sentence-transformers/stsb-xlm-r-multilingual
+218,55,The FBI agents had been investigating the homicide case for weeks.,Active Control,1,0,The FBI agents had been,investigating,0.44186628,SE,sentence-transformers/stsb-xlm-r-multilingual
+219,55,Martin's tonsils had been investigating the problem.,No-Attraction Violation,0,1,Martin's tonsils had been,investigating,0.08182708,SE,sentence-transformers/stsb-xlm-r-multilingual
+220,56,Mark's wrinkly shirts were ironing by his mother.,Attraction Violation,1,1,Mark's wrinkly shirts were,ironing,0.31676257,SE,sentence-transformers/stsb-xlm-r-multilingual
+221,56,Mark's wrinkly shirts were ironed by his mother.,Passive Control,1,1,Mark's wrinkly shirts were,ironed,0.2744015,SE,sentence-transformers/stsb-xlm-r-multilingual
+222,56,Mark's doting mother was ironing his shirts while he slept.,Active Control,1,0,Mark's doting mother was,ironing,0.15019506,SE,sentence-transformers/stsb-xlm-r-multilingual
+223,56,The firewood had been ironing her dress.,No-Attraction Violation,0,1,The firewood had been,ironing,0.19961607,SE,sentence-transformers/stsb-xlm-r-multilingual
+224,57,An important lesson had been learning in space.,Attraction Violation,1,1,An important lesson had been,learning,0.644421,SE,sentence-transformers/stsb-xlm-r-multilingual
+225,57,An important lesson had been learned in space.,Passive Control,1,1,An important lesson had been,learned,0.7125176,SE,sentence-transformers/stsb-xlm-r-multilingual
+226,57,The children had been learning Spanish.,Active Control,1,0,The children had been,learning,0.5333218,SE,sentence-transformers/stsb-xlm-r-multilingual
+227,57,The bathroom floor had been learning in space.,No-Attraction Violation,0,1,The bathroom floor had been,learning,0.21720785,SE,sentence-transformers/stsb-xlm-r-multilingual
+228,58,The height of the bookcase was measuring by a carpenter.,Attraction Violation,1,1,The height of the bookcase was,measuring,0.16573718,SE,sentence-transformers/stsb-xlm-r-multilingual
+229,58,The height of the bookcase was measured incorrectly.,Passive Control,1,1,The height of the bookcase was,measured,0.22049125,SE,sentence-transformers/stsb-xlm-r-multilingual
+230,58,The carpenter was measuring the height of the bookcase.,Active Control,1,0,The carpenter was,measuring,0.2539558,SE,sentence-transformers/stsb-xlm-r-multilingual
+231,58,An urgent message had been measuring her heart rate.,No-Attraction Violation,0,1,An urgent message had been,measuring,0.110170275,SE,sentence-transformers/stsb-xlm-r-multilingual
+232,59,Several important topics were discussing despite the weather.,Attraction Violation,1,1,Several important topics were,discussing,0.50792384,SE,sentence-transformers/stsb-xlm-r-multilingual
+233,59,Several important topics were discussed by the board of trustees.,Passive Control,1,1,Several important topics were,discussed,0.5246923,SE,sentence-transformers/stsb-xlm-r-multilingual
+234,59,The board members were discussing several important topics.,Active Control,1,0,The board members were,discussing,0.4530646,SE,sentence-transformers/stsb-xlm-r-multilingual
+235,59,"The fresh, warm bread was discussing despite the weather.",No-Attraction Violation,0,1,"The fresh, warm bread was",discussing,-0.06305994,SE,sentence-transformers/stsb-xlm-r-multilingual
+236,60,The dusty tabletops were wiping thoroughly.,Attraction Violation,1,1,The dusty tabletops were,wiping,0.3194964,SE,sentence-transformers/stsb-xlm-r-multilingual
+237,60,The dusty tabletops were wiped thoroughly.,Passive Control,1,1,The dusty tabletops were,wiped,0.38929254,SE,sentence-transformers/stsb-xlm-r-multilingual
+238,60,The tired busboy was wiping for hours.,Active Control,1,0,The tired busboy was,wiping,0.021364972,SE,sentence-transformers/stsb-xlm-r-multilingual
+239,60,The hearty meal was wiping thoroughly.,No-Attraction Violation,0,1,The hearty meal was,wiping,0.073878504,SE,sentence-transformers/stsb-xlm-r-multilingual
+240,61,A tiny spy camera was concealing by the agent inside a flowerpot.,Attraction Violation,1,1,A tiny spy camera was,concealing,0.54649836,SE,sentence-transformers/stsb-xlm-r-multilingual
+241,61,A tiny spy camera was concealed by the agent inside a flowerpot.,Passive Control,1,1,A tiny spy camera was,concealed,0.5838914,SE,sentence-transformers/stsb-xlm-r-multilingual
+242,61,The sneaky lawyer was concealing the truth.,Active Control,1,0,The sneaky lawyer was,concealing,0.25718102,SE,sentence-transformers/stsb-xlm-r-multilingual
+243,61,A faint light was concealing their identity.,No-Attraction Violation,0,1,A faint light was,concealing,0.5677817,SE,sentence-transformers/stsb-xlm-r-multilingual
+244,62,"The fresh, warm bread was slicing by the baker into halves.",Attraction Violation,1,1,"The fresh, warm bread was",slicing,0.0062812534,SE,sentence-transformers/stsb-xlm-r-multilingual
+245,62,"The fresh, warm bread was sliced with love.",Passive Control,1,1,"The fresh, warm bread was",sliced,0.02338889,SE,sentence-transformers/stsb-xlm-r-multilingual
+246,62,The chef's assistants were slicing the mushrooms for a pie.,Active Control,1,0,The chef's assistants were,slicing,0.18396305,SE,sentence-transformers/stsb-xlm-r-multilingual
+247,62,Several important topics were slicing with love.,No-Attraction Violation,0,1,Several important topics were,slicing,0.20808832,SE,sentence-transformers/stsb-xlm-r-multilingual
+248,63,The tarnished silverware was polishing by the butler.,Attraction Violation,1,1,The tarnished silverware was,polishing,0.363711,SE,sentence-transformers/stsb-xlm-r-multilingual
+249,63,The tarnished silverware was polished by the butler.,Passive Control,1,1,The tarnished silverware was,polished,0.40923557,SE,sentence-transformers/stsb-xlm-r-multilingual
+250,63,The thorough butler was polishing the doorknobs.,Active Control,1,0,The thorough butler was,polishing,0.47364742,SE,sentence-transformers/stsb-xlm-r-multilingual
+251,63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The winning lottery numbers had been,polishing,-0.025186656,SE,sentence-transformers/stsb-xlm-r-multilingual
+252,64,Poisonous fumes had been inhaling the firefighters.,Attraction Violation,1,1,Poisonous fumes had been,inhaling,0.5291837,SE,sentence-transformers/stsb-xlm-r-multilingual
+253,64,Poisonous fumes had been inhaled by the firefighters.,Passive Control,1,1,Poisonous fumes had been,inhaled,0.5106914,SE,sentence-transformers/stsb-xlm-r-multilingual
+254,64,The firefighters had been inhaling the smoke.,Active Control,1,0,The firefighters had been,inhaling,0.4065211,SE,sentence-transformers/stsb-xlm-r-multilingual
+255,64,The man's signature was inhaling during the fire.,No-Attraction Violation,0,1,The man's signature was,inhaling,0.20298834,SE,sentence-transformers/stsb-xlm-r-multilingual
+256,65,A genetic mutation was discovering the scientists.,Attraction Violation,1,1,A genetic mutation was,discovering,0.35571328,SE,sentence-transformers/stsb-xlm-r-multilingual
+257,65,A genetic mutation was discovered suddenly.,Passive Control,1,1,A genetic mutation was,discovered,0.35142136,SE,sentence-transformers/stsb-xlm-r-multilingual
+258,65,The excited explorers were discovering ancient artifacts everywhere they looked.,Active Control,1,0,The excited explorers were,discovering,0.53606564,SE,sentence-transformers/stsb-xlm-r-multilingual
+259,65,The pizza had been discovering new methods for making dough.,No-Attraction Violation,0,1,The pizza had been,discovering,0.019659689,SE,sentence-transformers/stsb-xlm-r-multilingual
+260,66,The Queen's 80th birthday was celebrating expensively.,Attraction Violation,1,1,The Queen's 80th birthday was,celebrating,0.3344156,SE,sentence-transformers/stsb-xlm-r-multilingual
+261,66,The Queen's 80th birthday was celebrated by thousands of people in the streets.,Passive Control,1,1,The Queen's 80th birthday was,celebrated,0.3280286,SE,sentence-transformers/stsb-xlm-r-multilingual
+262,66,Thousands of excited fans were celebrating the Superbowl victory in the streets.,Active Control,1,0,Thousands of excited fans were,celebrating,0.5692477,SE,sentence-transformers/stsb-xlm-r-multilingual
+263,66,The car door had been celebrating her promotion.,No-Attraction Violation,0,1,The car door had been,celebrating,0.12019044,SE,sentence-transformers/stsb-xlm-r-multilingual
+264,67,The diagram on the chalkboard had been erasing Mrs. Larson.,Attraction Violation,1,1,The diagram on the chalkboard had been,erasing,0.11598961,SE,sentence-transformers/stsb-xlm-r-multilingual
+265,67,The diagram on the chalkboard had been erased by Mrs. Larson.,Passive Control,1,1,The diagram on the chalkboard had been,erased,0.07118519,SE,sentence-transformers/stsb-xlm-r-multilingual
+266,67,Mrs. Larson had been erasing the chalkboard.,Active Control,1,0,Mrs. Larson had been,erasing,0.23527189,SE,sentence-transformers/stsb-xlm-r-multilingual
+267,67,Food for the homeless had been erasing over and over.,No-Attraction Violation,0,1,Food for the homeless had been,erasing,-0.014865879,SE,sentence-transformers/stsb-xlm-r-multilingual
+268,68,The movie was directing Steven Spielberg.,Attraction Violation,1,1,The movie was,directing,0.65304494,SE,sentence-transformers/stsb-xlm-r-multilingual
+269,68,The movie was directed professionally.,Passive Control,1,1,The movie was,directed,0.5750816,SE,sentence-transformers/stsb-xlm-r-multilingual
+270,68,Steven Spielberg was directing another blockbuster.,Active Control,1,0,Steven Spielberg was,directing,0.43864015,SE,sentence-transformers/stsb-xlm-r-multilingual
+271,68,The victim's body had been directing the police.,No-Attraction Violation,0,1,The victim's body had been,directing,0.19600563,SE,sentence-transformers/stsb-xlm-r-multilingual
+272,69,Theresa's birthday gift had been wrapping yesterday.,Attraction Violation,1,1,Theresa's birthday gift had been,wrapping,0.2912611,SE,sentence-transformers/stsb-xlm-r-multilingual
+273,69,Theresa's birthday gift had been wrapped yesterday.,Passive Control,1,1,Theresa's birthday gift had been,wrapped,0.30065775,SE,sentence-transformers/stsb-xlm-r-multilingual
+274,69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's loving grandmother had been,wrapping,0.15952572,SE,sentence-transformers/stsb-xlm-r-multilingual
+275,69,The embarrassing allegations had been wrapping yesterday.,No-Attraction Violation,0,1,The embarrassing allegations had been,wrapping,0.2277093,SE,sentence-transformers/stsb-xlm-r-multilingual
+276,70,The popular amusement park is visiting by millions of tourists eh year.,Attraction Violation,1,1,The popular amusement park is,visiting,0.34954476,SE,sentence-transformers/stsb-xlm-r-multilingual
+277,70,The popular amusement park is visited daily.,Passive Control,1,1,The popular amusement park is,visited,0.3733974,SE,sentence-transformers/stsb-xlm-r-multilingual
+278,70,The tourists had been visiting the amusement park in the morning.,Active Control,1,0,The tourists had been,visiting,0.53857154,SE,sentence-transformers/stsb-xlm-r-multilingual
+279,70,The man's beard had been visiting a friend in the hospital.,No-Attraction Violation,0,1,The man's beard had been,visiting,0.16917427,SE,sentence-transformers/stsb-xlm-r-multilingual
+280,71,Ten new trees had been planting on dry land.,Attraction Violation,1,1,Ten new trees had been,planting,0.49261388,SE,sentence-transformers/stsb-xlm-r-multilingual
+281,71,Ten new trees had been planted by the Forestry Service.,Passive Control,1,1,Ten new trees had been,planted,0.46792623,SE,sentence-transformers/stsb-xlm-r-multilingual
+282,71,The forestry workers had been planting cedar saplings on the hillside.,Active Control,1,0,The forestry workers had been,planting,0.48580682,SE,sentence-transformers/stsb-xlm-r-multilingual
+283,71,The sin had been planting doubt in her mind.,No-Attraction Violation,0,1,The sin had been,planting,0.122235484,SE,sentence-transformers/stsb-xlm-r-multilingual
+284,72,Food for the homeless had been donating neighborhood residents.,Attraction Violation,1,1,Food for the homeless had been,donating,0.28136346,SE,sentence-transformers/stsb-xlm-r-multilingual
+285,72,Food for the homeless had been donated many times.,Passive Control,1,1,Food for the homeless had been,donated,0.37533396,SE,sentence-transformers/stsb-xlm-r-multilingual
+286,72,The wealthy American philanthropist had been donating money to Romanian orphanages.,Active Control,1,0,The wealthy American philanthropist had been,donating,0.45115542,SE,sentence-transformers/stsb-xlm-r-multilingual
+287,72,The diagram on the chalkboard had been donating blood.,No-Attraction Violation,0,1,The diagram on the chalkboard had been,donating,0.017727127,SE,sentence-transformers/stsb-xlm-r-multilingual
+288,73,The rare bird's behavior was observing by the biologists.,Attraction Violation,1,1,The rare bird's behavior was,observing,0.24709085,SE,sentence-transformers/stsb-xlm-r-multilingual
+289,73,The rare bird's behavior was observed by the biologists.,Passive Control,1,1,The rare bird's behavior was,observed,0.25605825,SE,sentence-transformers/stsb-xlm-r-multilingual
+290,73,The excited bird watchers were observing the rare eagle.,Active Control,1,0,The excited bird watchers were,observing,0.40933755,SE,sentence-transformers/stsb-xlm-r-multilingual
+291,73,Wilson's unreasonable proposal was observing the stars.,No-Attraction Violation,0,1,Wilson's unreasonable proposal was,observing,0.16349071,SE,sentence-transformers/stsb-xlm-r-multilingual
+292,74,Stormy weather had been forecasting by the weatherman.,Attraction Violation,1,1,Stormy weather had been,forecasting,0.43951362,SE,sentence-transformers/stsb-xlm-r-multilingual
+293,74,Stormy weather had been forecasted by the weatherman.,Passive Control,1,1,Stormy weather had been,forecasted,0.42847025,SE,sentence-transformers/stsb-xlm-r-multilingual
+294,74,The weather service had been forecasting snow for the mountain areas.,Active Control,1,0,The weather service had been,forecasting,0.6278094,SE,sentence-transformers/stsb-xlm-r-multilingual
+295,74,Olson's bulging suitcase had been forecasting correctly.,No-Attraction Violation,0,1,Olson's bulging suitcase had been,forecasting,0.025419733,SE,sentence-transformers/stsb-xlm-r-multilingual
+296,75,The tragic mistake was regretting by Erika for many years.,Attraction Violation,1,1,The tragic mistake was,regretting,0.5674131,SE,sentence-transformers/stsb-xlm-r-multilingual
+297,75,The tragic mistake was regretted years later.,Passive Control,1,1,The tragic mistake was,regretted,0.5960765,SE,sentence-transformers/stsb-xlm-r-multilingual
+298,75,Erika was regretting the mistake.,Active Control,1,0,Erika was,regretting,0.32034105,SE,sentence-transformers/stsb-xlm-r-multilingual
+299,75,The library books had been regretting their behavior.,No-Attraction Violation,0,1,The library books had been,regretting,0.09788314,SE,sentence-transformers/stsb-xlm-r-multilingual
+300,76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The stolen artwork had been,seizing,0.23795274,SE,sentence-transformers/stsb-xlm-r-multilingual
+301,76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The stolen artwork had been,seized,0.13121793,SE,sentence-transformers/stsb-xlm-r-multilingual
+302,76,The police had been seizing shipments of drugs at the border.,Active Control,1,0,The police had been,seizing,0.33754843,SE,sentence-transformers/stsb-xlm-r-multilingual
+303,76,The grimy pots and pans had been seizing without warning.,No-Attraction Violation,0,1,The grimy pots and pans had been,seizing,0.09036995,SE,sentence-transformers/stsb-xlm-r-multilingual
+304,77,The value of the jewels was estimating the dealer.,Attraction Violation,1,1,The value of the jewels was,estimating,0.16972001,SE,sentence-transformers/stsb-xlm-r-multilingual
+305,77,The value of the jewels was estimated by the dealer.,Passive Control,1,1,The value of the jewels was,estimated,0.1431649,SE,sentence-transformers/stsb-xlm-r-multilingual
+306,77,The jewel expert was estimating the value of the diamond.,Active Control,1,0,The jewel expert was,estimating,0.20326954,SE,sentence-transformers/stsb-xlm-r-multilingual
+307,77,The useful new gadget had been estimating professionally.,No-Attraction Violation,0,1,The useful new gadget had been,estimating,0.1819422,SE,sentence-transformers/stsb-xlm-r-multilingual
+308,78,Larry's note had been scribbling his wife.,Attraction Violation,1,1,Larry's note had been,scribbling,0.3415773,SE,sentence-transformers/stsb-xlm-r-multilingual
+309,78,Larry's note had been scribbled with haste.,Passive Control,1,1,Larry's note had been,scribbled,0.35121042,SE,sentence-transformers/stsb-xlm-r-multilingual
+310,78,Larry's wife had been scribbling a note to him about dinner plans.,Active Control,1,0,Larry's wife had been,scribbling,0.095028944,SE,sentence-transformers/stsb-xlm-r-multilingual
+311,78,The broken television had been scribbling his thoughts on a napkin.,No-Attraction Violation,0,1,The broken television had been,scribbling,0.027526755,SE,sentence-transformers/stsb-xlm-r-multilingual
+312,79,Carrie's morning meeting was canceling as expected.,Attraction Violation,1,1,Carrie's morning meeting was,canceling,0.099333175,SE,sentence-transformers/stsb-xlm-r-multilingual
+313,79,Carrie's morning meeting was canceled by the boss.,Passive Control,1,1,Carrie's morning meeting was,canceled,0.09459999,SE,sentence-transformers/stsb-xlm-r-multilingual
+314,79,Carrie had been canceling all of her meetings.,Active Control,1,0,Carrie had been,canceling,0.15224455,SE,sentence-transformers/stsb-xlm-r-multilingual
+315,79,The bubblegum had been canceling as expected.,No-Attraction Violation,0,1,The bubblegum had been,canceling,0.058148243,SE,sentence-transformers/stsb-xlm-r-multilingual
+316,80,The girl's disease was curing a simple treatment.,Attraction Violation,1,1,The girl's disease was,curing,0.2595896,SE,sentence-transformers/stsb-xlm-r-multilingual
+317,80,The girl's disease was cured by a simple treatment.,Passive Control,1,1,The girl's disease was,cured,0.23498991,SE,sentence-transformers/stsb-xlm-r-multilingual
+318,80,The foreign doctors were curing hundreds of villagers of malaria.,Active Control,1,0,The foreign doctors were,curing,0.41846147,SE,sentence-transformers/stsb-xlm-r-multilingual
+319,80,Billy's unruly hair was curing his cold.,No-Attraction Violation,0,1,Billy's unruly hair was,curing,0.048535425,SE,sentence-transformers/stsb-xlm-r-multilingual
+320,81,Janet's houseplants were watering too much.,Attraction Violation,1,1,Janet's houseplants were,watering,0.2393363,SE,sentence-transformers/stsb-xlm-r-multilingual
+321,81,Janet's houseplants were watered by her neighbor.,Passive Control,1,1,Janet's houseplants were,watered,0.28885752,SE,sentence-transformers/stsb-xlm-r-multilingual
+322,81,The gardener was watering the plants.,Active Control,1,0,The gardener was,watering,0.6373336,SE,sentence-transformers/stsb-xlm-r-multilingual
+323,81,The roast lamb had been watering too much.,No-Attraction Violation,0,1,The roast lamb had been,watering,0.037928145,SE,sentence-transformers/stsb-xlm-r-multilingual
+324,82,The useful new gadget had been inventing by a bored waiter.,Attraction Violation,1,1,The useful new gadget had been,inventing,0.61383057,SE,sentence-transformers/stsb-xlm-r-multilingual
+325,82,The useful new gadget had been invented by a bored waiter.,Passive Control,1,1,The useful new gadget had been,invented,0.6164755,SE,sentence-transformers/stsb-xlm-r-multilingual
+326,82,The resourceful engineers had been inventing tiny new devices.,Active Control,1,0,The resourceful engineers had been,inventing,0.46418566,SE,sentence-transformers/stsb-xlm-r-multilingual
+327,82,The value of the jewels was inventing the digital computer.,No-Attraction Violation,0,1,The value of the jewels was,inventing,0.17909504,SE,sentence-transformers/stsb-xlm-r-multilingual
+328,83,The phone bill had been paying his roommate.,Attraction Violation,1,1,The phone bill had been,paying,0.39609042,SE,sentence-transformers/stsb-xlm-r-multilingual
+329,83,The phone bill had been paid quickly.,Passive Control,1,1,The phone bill had been,paid,0.3611294,SE,sentence-transformers/stsb-xlm-r-multilingual
+330,83,Juan and Perry had been paying too much for their apartment.,Active Control,1,0,Juan and Perry had been,paying,0.15993133,SE,sentence-transformers/stsb-xlm-r-multilingual
+331,83,"The dark, underwater cave was paying attention to the divers.",No-Attraction Violation,0,1,"The dark, underwater cave was",paying,0.011718275,SE,sentence-transformers/stsb-xlm-r-multilingual
+332,84,The man's signature was forging the lawyers.,Attraction Violation,1,1,The man's signature was,forging,0.36744064,SE,sentence-transformers/stsb-xlm-r-multilingual
+333,84,The man's signature was forged by the lawyers.,Passive Control,1,1,The man's signature was,forged,0.6334528,SE,sentence-transformers/stsb-xlm-r-multilingual
+334,84,The con artists were forging the signatures on checks.,Active Control,1,0,The con artists were,forging,0.25093248,SE,sentence-transformers/stsb-xlm-r-multilingual
+335,84,Poisonous fumes had been forging very well.,No-Attraction Violation,0,1,Poisonous fumes had been,forging,0.09591111,SE,sentence-transformers/stsb-xlm-r-multilingual
+336,85,The bank had been robbing two masked men.,Attraction Violation,1,1,The bank had been,robbing,0.4429567,SE,sentence-transformers/stsb-xlm-r-multilingual
+337,85,The bank had been robbed repeatedly.,Passive Control,1,1,The bank had been,robbed,0.4629802,SE,sentence-transformers/stsb-xlm-r-multilingual
+338,85,The clever burglars had been robbing houses in broad daylight.,Active Control,1,0,The clever burglars had been,robbing,0.31056803,SE,sentence-transformers/stsb-xlm-r-multilingual
+339,85,The musical piece was robbing repeatedly.,No-Attraction Violation,0,1,The musical piece was,robbing,-0.02928866,SE,sentence-transformers/stsb-xlm-r-multilingual
+340,86,An urgent message had been sending by the ambassador to the President.,Attraction Violation,1,1,An urgent message had been,sending,0.44406766,SE,sentence-transformers/stsb-xlm-r-multilingual
+341,86,An urgent message had been sent again.,Passive Control,1,1,An urgent message had been,sent,0.42200893,SE,sentence-transformers/stsb-xlm-r-multilingual
+342,86,The Prime Minister had been sending urgent messages to her Ambassador.,Active Control,1,0,The Prime Minister had been,sending,0.3916554,SE,sentence-transformers/stsb-xlm-r-multilingual
+343,86,The height of the bookcase was sending mixed signals to the carpenter.,No-Attraction Violation,0,1,The height of the bookcase was,sending,0.076694146,SE,sentence-transformers/stsb-xlm-r-multilingual
+344,87,The sleek new building was designing a team of German architects.,Attraction Violation,1,1,The sleek new building was,designing,0.36025497,SE,sentence-transformers/stsb-xlm-r-multilingual
+345,87,The sleek new building was designed by a team of German architects.,Passive Control,1,1,The sleek new building was,designed,0.46634832,SE,sentence-transformers/stsb-xlm-r-multilingual
+346,87,A team of architects had been designing the new building.,Active Control,1,0,A team of architects had been,designing,0.58994764,SE,sentence-transformers/stsb-xlm-r-multilingual
+347,87,The leftover food was designing with flair.,No-Attraction Violation,0,1,The leftover food was,designing,0.009214212,SE,sentence-transformers/stsb-xlm-r-multilingual
+348,88,The final exams had been grading in school.,Attraction Violation,1,1,The final exams had been,grading,0.50166243,SE,sentence-transformers/stsb-xlm-r-multilingual
+349,88,The final exams had been graded in school.,Passive Control,1,1,The final exams had been,graded,0.4885573,SE,sentence-transformers/stsb-xlm-r-multilingual
+350,88,The professor had been grading the final exams until 4 AM.,Active Control,1,0,The professor had been,grading,0.33261856,SE,sentence-transformers/stsb-xlm-r-multilingual
+351,88,The appetizers had been grading Iverson's students.,No-Attraction Violation,0,1,The appetizers had been,grading,0.025303636,SE,sentence-transformers/stsb-xlm-r-multilingual
+352,89,The final destination had been reaching too late.,Attraction Violation,1,1,The final destination had been,reaching,0.576219,SE,sentence-transformers/stsb-xlm-r-multilingual
+353,89,The final destination had been reached too late.,Passive Control,1,1,The final destination had been,reached,0.6180596,SE,sentence-transformers/stsb-xlm-r-multilingual
+354,89,The curious child had been reaching for the cup on the table.,Active Control,1,0,The curious child had been,reaching,0.35160494,SE,sentence-transformers/stsb-xlm-r-multilingual
+355,89,Several spelling errors were reaching too late.,No-Attraction Violation,0,1,Several spelling errors were,reaching,0.083402924,SE,sentence-transformers/stsb-xlm-r-multilingual
+356,90,A faint light was perceiving by the rescue workers.,Attraction Violation,1,1,A faint light was,perceiving,0.43515167,SE,sentence-transformers/stsb-xlm-r-multilingual
+357,90,A faint light was perceived underwater.,Passive Control,1,1,A faint light was,perceived,0.57587534,SE,sentence-transformers/stsb-xlm-r-multilingual
+358,90,The worried pilot was perceiving a rattling sound in the jet's engine.,Active Control,1,0,The worried pilot was,perceiving,0.063043654,SE,sentence-transformers/stsb-xlm-r-multilingual
+359,90,A tiny spy camera was perceiving underwater.,No-Attraction Violation,0,1,A tiny spy camera was,perceiving,0.26091415,SE,sentence-transformers/stsb-xlm-r-multilingual
+360,91,The bubblegum had been chewing by the boy.,Attraction Violation,1,1,The bubblegum had been,chewing,0.38385198,SE,sentence-transformers/stsb-xlm-r-multilingual
+361,91,The bubblegum had been chewed by the boy.,Passive Control,1,1,The bubblegum had been,chewed,0.39432758,SE,sentence-transformers/stsb-xlm-r-multilingual
+362,91,The hungry dog had been chewing a bone.,Active Control,1,0,The hungry dog had been,chewing,0.25367817,SE,sentence-transformers/stsb-xlm-r-multilingual
+363,91,Carrie's morning meeting was chewing for a long time.,No-Attraction Violation,0,1,Carrie's morning meeting was,chewing,0.25978482,SE,sentence-transformers/stsb-xlm-r-multilingual
+364,92,Martin's tonsils had been removing at the hospital.,Attraction Violation,1,1,Martin's tonsils had been,removing,0.09415986,SE,sentence-transformers/stsb-xlm-r-multilingual
+365,92,Martin's tonsils had been removed at the hospital.,Passive Control,1,1,Martin's tonsils had been,removed,0.083554916,SE,sentence-transformers/stsb-xlm-r-multilingual
+366,92,The surgeon had been removing the cancerous growth.,Active Control,1,0,The surgeon had been,removing,0.14559804,SE,sentence-transformers/stsb-xlm-r-multilingual
+367,92,The homicide case had been removing at the hospital.,No-Attraction Violation,0,1,The homicide case had been,removing,0.117604546,SE,sentence-transformers/stsb-xlm-r-multilingual
+368,93,Mother Theresa's death was mourning millions of people.,Attraction Violation,1,1,Mother Theresa's death was,mourning,0.34123972,SE,sentence-transformers/stsb-xlm-r-multilingual
+369,93,Mother Theresa's death was mourned by millions of people.,Passive Control,1,1,Mother Theresa's death was,mourned,0.31272936,SE,sentence-transformers/stsb-xlm-r-multilingual
+370,93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-clad women were,mourning,0.24982302,SE,sentence-transformers/stsb-xlm-r-multilingual
+371,93,Lisa's phone had been mourning the loss of a loved one.,No-Attraction Violation,0,1,Lisa's phone had been,mourning,0.021292645,SE,sentence-transformers/stsb-xlm-r-multilingual
+372,94,The bathroom floor had been mopping by a janitor.,Attraction Violation,1,1,The bathroom floor had been,mopping,0.36147565,SE,sentence-transformers/stsb-xlm-r-multilingual
+373,94,The bathroom floor had been mopped in the past.,Passive Control,1,1,The bathroom floor had been,mopped,0.3784256,SE,sentence-transformers/stsb-xlm-r-multilingual
+374,94,The school janitor had been mopping the bathroom.,Active Control,1,0,The school janitor had been,mopping,0.18428108,SE,sentence-transformers/stsb-xlm-r-multilingual
+375,94,An important lesson had been mopping in the past.,No-Attraction Violation,0,1,An important lesson had been,mopping,0.082534984,SE,sentence-transformers/stsb-xlm-r-multilingual
+376,95,The sin had been confessing by the repentant Catholic.,Attraction Violation,1,1,The sin had been,confessing,0.2913223,SE,sentence-transformers/stsb-xlm-r-multilingual
+377,95,The sin had been confessed on Sunday.,Passive Control,1,1,The sin had been,confessed,0.3060723,SE,sentence-transformers/stsb-xlm-r-multilingual
+378,95,The repentant Catholic had been confessing his sins.,Active Control,1,0,The repentant Catholic had been,confessing,0.33104712,SE,sentence-transformers/stsb-xlm-r-multilingual
+379,95,Ten new trees had been confessing on Sunday.,No-Attraction Violation,0,1,Ten new trees had been,confessing,0.018440723,SE,sentence-transformers/stsb-xlm-r-multilingual
+380,96,The strange mystery had been solving the detectives.,Attraction Violation,1,1,The strange mystery had been,solving,0.34638238,SE,sentence-transformers/stsb-xlm-r-multilingual
+381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.3417631,SE,sentence-transformers/stsb-xlm-r-multilingual
+382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.38410985,SE,sentence-transformers/stsb-xlm-r-multilingual
+383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.23948596,SE,sentence-transformers/stsb-xlm-r-multilingual
+0,1,The murder had been witnessing by the three bystanders,Attraction Violation,1,1,The murder had been,witnessing,0.03901189,SE,sentence-transformers/stsb-roberta-base-v2
+1,1,The murder had been witnessed in the dark.,Passive Control,1,1,The murder had been,witnessed,0.075033195,SE,sentence-transformers/stsb-roberta-base-v2
+2,1,The bystanders had been witnessing the crime.,Active Control,1,0,The bystanders had been,witnessing,0.31836733,SE,sentence-transformers/stsb-roberta-base-v2
+3,1,The unpleasant cough syrup was witnessing in the dark.,No-Attraction Violation,0,1,The unpleasant cough syrup was,witnessing,0.14606927,SE,sentence-transformers/stsb-roberta-base-v2
+4,2,Patty's overgrown lawn was mowing the boy next door.,Attraction Violation,1,1,Patty's overgrown lawn was,mowing,0.34050435,SE,sentence-transformers/stsb-roberta-base-v2
+5,2,Patty's overgrown lawn was mowed only last week.,Passive Control,1,1,Patty's overgrown lawn was,mowed,0.36060467,SE,sentence-transformers/stsb-roberta-base-v2
+6,2,Patty's teenage son was mowing the lawn.,Active Control,1,0,Patty's teenage son was,mowing,-0.03371711,SE,sentence-transformers/stsb-roberta-base-v2
+7,2,All of her money had been mowing the grass.,No-Attraction Violation,0,1,All of her money had been,mowing,0.026370896,SE,sentence-transformers/stsb-roberta-base-v2
+8,3,Three more martinis were ordering by Laurie's sister.,Attraction Violation,1,1,Three more martinis were,ordering,0.19026434,SE,sentence-transformers/stsb-roberta-base-v2
+9,3,Three more martinis were ordered repeatedly.,Passive Control,1,1,Three more martinis were,ordered,0.18569657,SE,sentence-transformers/stsb-roberta-base-v2
+10,3,"The regular customers were ordering quiche, as usual.",Active Control,1,0,The regular customers were,ordering,0.17887428,SE,sentence-transformers/stsb-roberta-base-v2
+11,3,The rough part of the wood was ordering late.,No-Attraction Violation,0,1,The rough part of the wood was,ordering,0.15521501,SE,sentence-transformers/stsb-roberta-base-v2
+12,4,The quality of Karla's work was evaluating frequently.,Attraction Violation,1,1,The quality of Karla's work was,evaluating,0.001569031,SE,sentence-transformers/stsb-roberta-base-v2
+13,4,The quality of Karla's work was evaluated frequently.,Passive Control,1,1,The quality of Karla's work was,evaluated,0.04353789,SE,sentence-transformers/stsb-roberta-base-v2
+14,4,The engineers were evaluating the success of the new device.,Active Control,1,0,The engineers were,evaluating,0.1745017,SE,sentence-transformers/stsb-roberta-base-v2
+15,4,The old lady's purse had been evaluating Nelson's idea.,No-Attraction Violation,0,1,The old lady's purse had been,evaluating,0.012640591,SE,sentence-transformers/stsb-roberta-base-v2
+16,5,The legal contract had been signing falsely.,Attraction Violation,1,1,The legal contract had been,signing,0.39653507,SE,sentence-transformers/stsb-roberta-base-v2
+17,5,The legal contract had been signed by the family.,Passive Control,1,1,The legal contract had been,signed,0.46390608,SE,sentence-transformers/stsb-roberta-base-v2
+18,5,The state's governor had been signing new legislation.,Active Control,1,0,The state's governor had been,signing,0.02468553,SE,sentence-transformers/stsb-roberta-base-v2
+19,5,An appointment was signing falsely.,No-Attraction Violation,0,1,An appointment was,signing,0.2351297,SE,sentence-transformers/stsb-roberta-base-v2
+20,6,The vocabulary list was memorizing well.,Attraction Violation,1,1,The vocabulary list was,memorizing,0.17344397,SE,sentence-transformers/stsb-roberta-base-v2
+21,6,The vocabulary list was memorized well.,Passive Control,1,1,The vocabulary list was,memorized,0.17192562,SE,sentence-transformers/stsb-roberta-base-v2
+22,6,The medical students were memorizing sample exam questions all night.,Active Control,1,0,The medical students were,memorizing,0.08307512,SE,sentence-transformers/stsb-roberta-base-v2
+23,6,The simple coffin was memorizing the lines of the poem.,No-Attraction Violation,0,1,The simple coffin was,memorizing,0.15387632,SE,sentence-transformers/stsb-roberta-base-v2
+24,7,The firewood had been chopping poorly.,Attraction Violation,1,1,The firewood had been,chopping,0.08956247,SE,sentence-transformers/stsb-roberta-base-v2
+25,7,The firewood had been chopped by Jen's grandfather.,Passive Control,1,1,The firewood had been,chopped,0.08333252,SE,sentence-transformers/stsb-roberta-base-v2
+26,7,Jen's grandfather had been chopping the firewood.,Active Control,1,0,Jen's grandfather had been,chopping,0.063242726,SE,sentence-transformers/stsb-roberta-base-v2
+27,7,Mark's wrinkly shirts were chopping vegetables.,No-Attraction Violation,0,1,Mark's wrinkly shirts were,chopping,-0.009951675,SE,sentence-transformers/stsb-roberta-base-v2
+28,8,Lisa's phone had been disconnecting last month.,Attraction Violation,1,1,Lisa's phone had been,disconnecting,0.077971704,SE,sentence-transformers/stsb-roberta-base-v2
+29,8,Lisa's phone had been disconnected last month.,Passive Control,1,1,Lisa's phone had been,disconnected,0.15547828,SE,sentence-transformers/stsb-roberta-base-v2
+30,8,The electrician had been disconnecting the machine's power source.,Active Control,1,0,The electrician had been,disconnecting,0.12355308,SE,sentence-transformers/stsb-roberta-base-v2
+31,8,Mother Theresa's death was disconnecting the two cables.,No-Attraction Violation,0,1,Mother Theresa's death was,disconnecting,0.14994107,SE,sentence-transformers/stsb-roberta-base-v2
+32,9,Wendy's muddy car was washing the boys.,Attraction Violation,1,1,Wendy's muddy car was,washing,0.39182866,SE,sentence-transformers/stsb-roberta-base-v2
+33,9,Wendy's muddy car was washed wearily.,Passive Control,1,1,Wendy's muddy car was,washed,0.2738907,SE,sentence-transformers/stsb-roberta-base-v2
+34,9,Wendy and Harriet were washing the muddy car.,Active Control,1,0,Wendy and Harriet were,washing,0.24226424,SE,sentence-transformers/stsb-roberta-base-v2
+35,9,Frank's loan application had been washing the used pencil.,No-Attraction Violation,0,1,Frank's loan application had been,washing,0.11220828,SE,sentence-transformers/stsb-roberta-base-v2
+36,10,The library books had been borrowing the graduate student.,Attraction Violation,1,1,The library books had been,borrowing,0.15219136,SE,sentence-transformers/stsb-roberta-base-v2
+37,10,The library books had been borrowed by the graduate student.,Passive Control,1,1,The library books had been,borrowed,0.1769087,SE,sentence-transformers/stsb-roberta-base-v2
+38,10,Katie and Lara had been borrowing dozens of books about botany from the library.,Active Control,1,0,Katie and Lara had been,borrowing,-0.036250215,SE,sentence-transformers/stsb-roberta-base-v2
+39,10,The tragic mistake was borrowing in a hurry.,No-Attraction Violation,0,1,The tragic mistake was,borrowing,0.01598144,SE,sentence-transformers/stsb-roberta-base-v2
+40,11,"The dark, underwater cave was exploring by the divers.",Attraction Violation,1,1,"The dark, underwater cave was",exploring,0.28275502,SE,sentence-transformers/stsb-roberta-base-v2
+41,11,"The dark, underwater cave was explored by the divers.",Passive Control,1,1,"The dark, underwater cave was",explored,0.33078685,SE,sentence-transformers/stsb-roberta-base-v2
+42,11,The cautious scuba divers were exploring the underwater cave.,Active Control,1,0,The cautious scuba divers were,exploring,0.20241033,SE,sentence-transformers/stsb-roberta-base-v2
+43,11,The phone bill had been exploring at the zoo.,No-Attraction Violation,0,1,The phone bill had been,exploring,-0.0109828655,SE,sentence-transformers/stsb-roberta-base-v2
+44,12,The unpleasant cough syrup was swallowing the boy.,Attraction Violation,1,1,The unpleasant cough syrup was,swallowing,0.20342812,SE,sentence-transformers/stsb-roberta-base-v2
+45,12,The unpleasant cough syrup was swallowed by the boy.,Passive Control,1,1,The unpleasant cough syrup was,swallowed,0.22260958,SE,sentence-transformers/stsb-roberta-base-v2
+46,12,The huge adult alligator had been swallowing fish by the bucket.,Active Control,1,0,The huge adult alligator had been,swallowing,0.08578873,SE,sentence-transformers/stsb-roberta-base-v2
+47,12,The murder had been swallowing with disgust.,No-Attraction Violation,0,1,The murder had been,swallowing,0.0013383897,SE,sentence-transformers/stsb-roberta-base-v2
+48,13,The pizza had been delivering once more.,Attraction Violation,1,1,The pizza had been,delivering,0.15789197,SE,sentence-transformers/stsb-roberta-base-v2
+49,13,The pizza had been delivered by Antonio himself.,Passive Control,1,1,The pizza had been,delivered,0.18664746,SE,sentence-transformers/stsb-roberta-base-v2
+50,13,The exhausted messenger had been delivering packages all over town.,Active Control,1,0,The exhausted messenger had been,delivering,0.22001748,SE,sentence-transformers/stsb-roberta-base-v2
+51,13,A genetic mutation was delivering once more.,No-Attraction Violation,0,1,A genetic mutation was,delivering,0.037446182,SE,sentence-transformers/stsb-roberta-base-v2
+52,14,Frank's loan application had been approving by the bank.,Attraction Violation,1,1,Frank's loan application had been,approving,0.066385545,SE,sentence-transformers/stsb-roberta-base-v2
+53,14,Frank's loan application had been approved anyways.,Passive Control,1,1,Frank's loan application had been,approved,0.18152691,SE,sentence-transformers/stsb-roberta-base-v2
+54,14,The board of directors had been approving too many expensive projects.,Active Control,1,0,The board of directors had been,approving,-0.007518559,SE,sentence-transformers/stsb-roberta-base-v2
+55,14,Wendy's muddy car was approving the boy's request.,No-Attraction Violation,0,1,Wendy's muddy car was,approving,0.0024254457,SE,sentence-transformers/stsb-roberta-base-v2
+56,15,The cheap products had been manufacturing a Belgian firm.,Attraction Violation,1,1,The cheap products had been,manufacturing,0.12551427,SE,sentence-transformers/stsb-roberta-base-v2
+57,15,The cheap products had been manufactured by a Belgian firm.,Passive Control,1,1,The cheap products had been,manufactured,0.27093375,SE,sentence-transformers/stsb-roberta-base-v2
+58,15,The auto company had been manufacturing parts in China.,Active Control,1,0,The auto company had been,manufacturing,0.20051123,SE,sentence-transformers/stsb-roberta-base-v2
+59,15,A drawing of the house had been manufacturing at a factory.,No-Attraction Violation,0,1,A drawing of the house had been,manufacturing,0.07691957,SE,sentence-transformers/stsb-roberta-base-v2
+60,16,Their secret conversation had been overhearing by a surprised neighbor.,Attraction Violation,1,1,Their secret conversation had been,overhearing,0.09274038,SE,sentence-transformers/stsb-roberta-base-v2
+61,16,Their secret conversation had been overheard by a surprised neighbor.,Passive Control,1,1,Their secret conversation had been,overheard,0.20951203,SE,sentence-transformers/stsb-roberta-base-v2
+62,16,The annoyed resident had been overhearing his neighbor's phone conversations through the wall.,Active Control,1,0,The annoyed resident had been,overhearing,0.119377665,SE,sentence-transformers/stsb-roberta-base-v2
+63,16,A wet snowball had been overhearing despite the precautions.,No-Attraction Violation,0,1,A wet snowball had been,overhearing,0.038854416,SE,sentence-transformers/stsb-roberta-base-v2
+64,17,The rough part of the wood was sanding to perfection.,Attraction Violation,1,1,The rough part of the wood was,sanding,0.06975911,SE,sentence-transformers/stsb-roberta-base-v2
+65,17,The rough part of the wood was sanded by the carpenter.,Passive Control,1,1,The rough part of the wood was,sanded,0.17326751,SE,sentence-transformers/stsb-roberta-base-v2
+66,17,The skillful carpenter was sanding the rough edge of the wood.,Active Control,1,0,The skillful carpenter was,sanding,0.1075526,SE,sentence-transformers/stsb-roberta-base-v2
+67,17,Three more martinis were sanding the chair.,No-Attraction Violation,0,1,Three more martinis were,sanding,0.07611447,SE,sentence-transformers/stsb-roberta-base-v2
+68,18,A package had been receiving by the secretary in the office.,Attraction Violation,1,1,A package had been,receiving,0.2662081,SE,sentence-transformers/stsb-roberta-base-v2
+69,18,A package had been received by the secretary in the office.,Passive Control,1,1,A package had been,received,0.40330905,SE,sentence-transformers/stsb-roberta-base-v2
+70,18,The secretary had been receiving flowers all day.,Active Control,1,0,The secretary had been,receiving,0.058560655,SE,sentence-transformers/stsb-roberta-base-v2
+71,18,The noises in the attic had been receiving assistance from the government.,No-Attraction Violation,0,1,The noises in the attic had been,receiving,0.033844396,SE,sentence-transformers/stsb-roberta-base-v2
+72,19,The club's rules had been violating Richard.,Attraction Violation,1,1,The club's rules had been,violating,0.28895926,SE,sentence-transformers/stsb-roberta-base-v2
+73,19,The club's rules had been violated only twice.,Passive Control,1,1,The club's rules had been,violated,0.32870454,SE,sentence-transformers/stsb-roberta-base-v2
+74,19,The rebel had been violating the rules.,Active Control,1,0,The rebel had been,violating,0.16904408,SE,sentence-transformers/stsb-roberta-base-v2
+75,19,Thirty pounds of potatoes had been violating only twice.,No-Attraction Violation,0,1,Thirty pounds of potatoes had been,violating,-0.0010844563,SE,sentence-transformers/stsb-roberta-base-v2
+76,20,A new medication had been prescribing the physician.,Attraction Violation,1,1,A new medication had been,prescribing,0.13209148,SE,sentence-transformers/stsb-roberta-base-v2
+77,20,A new medication had been prescribed by the physician.,Passive Control,1,1,A new medication had been,prescribed,0.36773995,SE,sentence-transformers/stsb-roberta-base-v2
+78,20,The new doctor had been prescribing powerful painkillers for Jelena's sore knee.,Active Control,1,0,The new doctor had been,prescribing,0.022578482,SE,sentence-transformers/stsb-roberta-base-v2
+79,20,The portrait of Napoleon had been prescribing with caution.,No-Attraction Violation,0,1,The portrait of Napoleon had been,prescribing,0.08643357,SE,sentence-transformers/stsb-roberta-base-v2
+80,21,The wheat crops had been harvesting by the local farmers.,Attraction Violation,1,1,The wheat crops had been,harvesting,0.2979857,SE,sentence-transformers/stsb-roberta-base-v2
+81,21,The wheat crops had been harvested after the rain.,Passive Control,1,1,The wheat crops had been,harvested,0.2895562,SE,sentence-transformers/stsb-roberta-base-v2
+82,21,The local farmers had been harvesting the corn all week.,Active Control,1,0,The local farmers had been,harvesting,0.22280847,SE,sentence-transformers/stsb-roberta-base-v2
+83,21,The elevator button had been harvesting after the rain.,No-Attraction Violation,0,1,The elevator button had been,harvesting,0.053135123,SE,sentence-transformers/stsb-roberta-base-v2
+84,22,The musical piece was composing by Beethoven in 1799.,Attraction Violation,1,1,The musical piece was,composing,0.18087253,SE,sentence-transformers/stsb-roberta-base-v2
+85,22,The musical piece was composed in a dream.,Passive Control,1,1,The musical piece was,composed,0.33410117,SE,sentence-transformers/stsb-roberta-base-v2
+86,22,Ludwig von Beethoven was composing symphonies as a teenager.,Active Control,1,0,Ludwig von Beethoven was,composing,0.110925905,SE,sentence-transformers/stsb-roberta-base-v2
+87,22,The bank had been composing in a dream.,No-Attraction Violation,0,1,The bank had been,composing,0.0524204,SE,sentence-transformers/stsb-roberta-base-v2
+88,23,The old lady's purse had been snatching a kid.,Attraction Violation,1,1,The old lady's purse had been,snatching,0.050473765,SE,sentence-transformers/stsb-roberta-base-v2
+89,23,The old lady's purse had been snatched with speed.,Passive Control,1,1,The old lady's purse had been,snatched,0.02461649,SE,sentence-transformers/stsb-roberta-base-v2
+90,23,The clever dog had been snatching cookies from the table.,Active Control,1,0,The clever dog had been,snatching,0.116644815,SE,sentence-transformers/stsb-roberta-base-v2
+91,23,The quality of Karla's work was snatching victory from the jaws of defeat.,No-Attraction Violation,0,1,The quality of Karla's work was,snatching,0.029024843,SE,sentence-transformers/stsb-roberta-base-v2
+92,24,Olson's bulging suitcase had been packing his assistant.,Attraction Violation,1,1,Olson's bulging suitcase had been,packing,0.22630057,SE,sentence-transformers/stsb-roberta-base-v2
+93,24,Olson's bulging suitcase had been packed for the trip.,Passive Control,1,1,Olson's bulging suitcase had been,packed,0.29429373,SE,sentence-transformers/stsb-roberta-base-v2
+94,24,The excited vacationers had been packing their suitcases when the hurricane hit.,Active Control,1,0,The excited vacationers had been,packing,0.07403994,SE,sentence-transformers/stsb-roberta-base-v2
+95,24,Stormy weather had been packing for the trip.,No-Attraction Violation,0,1,Stormy weather had been,packing,0.07783068,SE,sentence-transformers/stsb-roberta-base-v2
+96,25,Several spelling errors were noticing the careful editor.,Attraction Violation,1,1,Several spelling errors were,noticing,0.097987555,SE,sentence-transformers/stsb-roberta-base-v2
+97,25,Several spelling errors were noticed by the careful editor.,Passive Control,1,1,Several spelling errors were,noticed,0.13744918,SE,sentence-transformers/stsb-roberta-base-v2
+98,25,Brittany's close friends were noticing changes in her personality.,Active Control,1,0,Brittany's close friends were,noticing,0.06397819,SE,sentence-transformers/stsb-roberta-base-v2
+99,25,The final destination had been noticing too late.,No-Attraction Violation,0,1,The final destination had been,noticing,-0.015669273,SE,sentence-transformers/stsb-roberta-base-v2
+100,26,An illegal weapon had been smuggling only once.,Attraction Violation,1,1,An illegal weapon had been,smuggling,-0.0067608515,SE,sentence-transformers/stsb-roberta-base-v2
+101,26,An illegal weapon had been smuggled only once.,Passive Control,1,1,An illegal weapon had been,smuggled,0.04610054,SE,sentence-transformers/stsb-roberta-base-v2
+102,26,The drug dealer had been smuggling heroin into Canada.,Active Control,1,0,The drug dealer had been,smuggling,0.058543876,SE,sentence-transformers/stsb-roberta-base-v2
+103,26,Cleopatra's beauty was smuggling only once.,No-Attraction Violation,0,1,Cleopatra's beauty was,smuggling,0.002956167,SE,sentence-transformers/stsb-roberta-base-v2
+104,27,The leftover food was discarding wastefully.,Attraction Violation,1,1,The leftover food was,discarding,0.27920344,SE,sentence-transformers/stsb-roberta-base-v2
+105,27,The leftover food was discarded wastefully.,Passive Control,1,1,The leftover food was,discarded,0.26699194,SE,sentence-transformers/stsb-roberta-base-v2
+106,27,The campers were discarding the leftover food.,Active Control,1,0,The campers were,discarding,0.045281097,SE,sentence-transformers/stsb-roberta-base-v2
+107,27,The sleek new building was discarding wastefully.,No-Attraction Violation,0,1,The sleek new building was,discarding,0.03434745,SE,sentence-transformers/stsb-roberta-base-v2
+108,28,Thirty pounds of potatoes had been peeling by the cooks.,Attraction Violation,1,1,Thirty pounds of potatoes had been,peeling,0.19998373,SE,sentence-transformers/stsb-roberta-base-v2
+109,28,Thirty pounds of potatoes had been peeled carefully.,Passive Control,1,1,Thirty pounds of potatoes had been,peeled,0.10102187,SE,sentence-transformers/stsb-roberta-base-v2
+110,28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored looking cooks had been,peeling,-0.03587382,SE,sentence-transformers/stsb-roberta-base-v2
+111,28,The club's rules had been peeling the sticker off the box.,No-Attraction Violation,0,1,The club's rules had been,peeling,-0.042145498,SE,sentence-transformers/stsb-roberta-base-v2
+112,29,The grimy pots and pans had been scrubbing the dishwashers.,Attraction Violation,1,1,The grimy pots and pans had been,scrubbing,0.2200355,SE,sentence-transformers/stsb-roberta-base-v2
+113,29,The grimy pots and pans had been scrubbed by the dishwashers.,Passive Control,1,1,The grimy pots and pans had been,scrubbed,0.21004325,SE,sentence-transformers/stsb-roberta-base-v2
+114,29,The guys in the kitchen had been scrubbing the pots and pans.,Active Control,1,0,The guys in the kitchen had been,scrubbing,0.036474433,SE,sentence-transformers/stsb-roberta-base-v2
+115,29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The stolen artwork had been,scrubbing,-0.011669464,SE,sentence-transformers/stsb-roberta-base-v2
+116,30,The roast lamb had been carving by a servant.,Attraction Violation,1,1,The roast lamb had been,carving,0.12825103,SE,sentence-transformers/stsb-roberta-base-v2
+117,30,The roast lamb had been carved by a servant.,Passive Control,1,1,The roast lamb had been,carved,0.13902804,SE,sentence-transformers/stsb-roberta-base-v2
+118,30,The butcher had been carving the meat.,Active Control,1,0,The butcher had been,carving,0.17662528,SE,sentence-transformers/stsb-roberta-base-v2
+119,30,Janet's houseplants were carving before dinner.,No-Attraction Violation,0,1,Janet's houseplants were,carving,-0.08510978,SE,sentence-transformers/stsb-roberta-base-v2
+120,31,Cleopatra's beauty was admiring many people.,Attraction Violation,1,1,Cleopatra's beauty was,admiring,-0.015396118,SE,sentence-transformers/stsb-roberta-base-v2
+121,31,Cleopatra's beauty was admired always.,Passive Control,1,1,Cleopatra's beauty was,admired,0.028216029,SE,sentence-transformers/stsb-roberta-base-v2
+122,31,The men were admiring the beautiful woman from a distance.,Active Control,1,0,The men were,admiring,-0.015699236,SE,sentence-transformers/stsb-roberta-base-v2
+123,31,An illegal weapon had been admiring always.,No-Attraction Violation,0,1,An illegal weapon had been,admiring,0.12853429,SE,sentence-transformers/stsb-roberta-base-v2
+124,32,A wet snowball had been tossing by the girls through the window.,Attraction Violation,1,1,A wet snowball had been,tossing,0.36793047,SE,sentence-transformers/stsb-roberta-base-v2
+125,32,A wet snowball had been tossed in anger.,Passive Control,1,1,A wet snowball had been,tossed,0.36440873,SE,sentence-transformers/stsb-roberta-base-v2
+126,32,The baseball players had been tossing the ball around the infield.,Active Control,1,0,The baseball players had been,tossing,0.043811336,SE,sentence-transformers/stsb-roberta-base-v2
+127,32,Their secret conversation had been tossing a steak on the grill.,No-Attraction Violation,0,1,Their secret conversation had been,tossing,0.006360016,SE,sentence-transformers/stsb-roberta-base-v2
+128,33,The sealed envelope was opening the judge.,Attraction Violation,1,1,The sealed envelope was,opening,0.11108662,SE,sentence-transformers/stsb-roberta-base-v2
+129,33,The sealed envelope was opened without permission.,Passive Control,1,1,The sealed envelope was,opened,0.20313482,SE,sentence-transformers/stsb-roberta-base-v2
+130,33,Tuxedoed waiters were opening bottles of champagne for the toast.,Active Control,1,0,Tuxedoed waiters were,opening,-0.030075295,SE,sentence-transformers/stsb-roberta-base-v2
+131,33,The men's faces had been opening without permission.,No-Attraction Violation,0,1,The men's faces had been,opening,0.07660117,SE,sentence-transformers/stsb-roberta-base-v2
+132,34,The man's beard had been shaving twice a day.,Attraction Violation,1,1,The man's beard had been,shaving,0.4666193,SE,sentence-transformers/stsb-roberta-base-v2
+133,34,The man's beard had been shaved twice a day.,Passive Control,1,1,The man's beard had been,shaved,0.48173174,SE,sentence-transformers/stsb-roberta-base-v2
+134,34,His uncle Ralph had been shaving his beard off.,Active Control,1,0,His uncle Ralph had been,shaving,-0.011477476,SE,sentence-transformers/stsb-roberta-base-v2
+135,34,The popular amusement park is shaving twice a day.,No-Attraction Violation,0,1,The popular amusement park is,shaving,-0.019108912,SE,sentence-transformers/stsb-roberta-base-v2
+136,35,The elevator button had been pressing slowly.,Attraction Violation,1,1,The elevator button had been,pressing,0.17897567,SE,sentence-transformers/stsb-roberta-base-v2
+137,35,The elevator button had been pressed by the attendant.,Passive Control,1,1,The elevator button had been,pressed,0.24922512,SE,sentence-transformers/stsb-roberta-base-v2
+138,35,The attendant had been pressing the buttons.,Active Control,1,0,The attendant had been,pressing,0.0538319,SE,sentence-transformers/stsb-roberta-base-v2
+139,35,The wheat crops had been pressing slowly.,No-Attraction Violation,0,1,The wheat crops had been,pressing,0.026468085,SE,sentence-transformers/stsb-roberta-base-v2
+140,36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The winning lottery numbers had been,announcing,0.04622712,SE,sentence-transformers/stsb-roberta-base-v2
+141,36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The winning lottery numbers had been,announced,0.05265853,SE,sentence-transformers/stsb-roberta-base-v2
+142,36,The flight attendant had been announcing the reason for the delay.,Active Control,1,0,The flight attendant had been,announcing,0.04950594,SE,sentence-transformers/stsb-roberta-base-v2
+143,36,The tarnished silverware was announcing on the television.,No-Attraction Violation,0,1,The tarnished silverware was,announcing,0.01890768,SE,sentence-transformers/stsb-roberta-base-v2
+144,37,The victim's body had been identifying at the morgue.,Attraction Violation,1,1,The victim's body had been,identifying,0.10791784,SE,sentence-transformers/stsb-roberta-base-v2
+145,37,The victim's body had been identified by the family members.,Passive Control,1,1,The victim's body had been,identified,0.21782753,SE,sentence-transformers/stsb-roberta-base-v2
+146,37,The laboratory technicians had been identifying the chemical.,Active Control,1,0,The laboratory technicians had been,identifying,0.08560268,SE,sentence-transformers/stsb-roberta-base-v2
+147,37,The movie was identifying rare fish for the divers.,No-Attraction Violation,0,1,The movie was,identifying,0.13562515,SE,sentence-transformers/stsb-roberta-base-v2
+148,38,The hearty meal was devouring by the kids.,Attraction Violation,1,1,The hearty meal was,devouring,0.2426198,SE,sentence-transformers/stsb-roberta-base-v2
+149,38,The hearty meal was devoured with gusto.,Passive Control,1,1,The hearty meal was,devoured,0.12824829,SE,sentence-transformers/stsb-roberta-base-v2
+150,38,The hungry boys were devouring the plate of cookies when Jack arrived.,Active Control,1,0,The hungry boys were,devouring,0.30792356,SE,sentence-transformers/stsb-roberta-base-v2
+151,38,The dusty tabletops were devouring with gusto.,No-Attraction Violation,0,1,The dusty tabletops were,devouring,0.21193443,SE,sentence-transformers/stsb-roberta-base-v2
+152,39,The overgrown shrubs were trimming regularly.,Attraction Violation,1,1,The overgrown shrubs were,trimming,0.046697736,SE,sentence-transformers/stsb-roberta-base-v2
+153,39,The overgrown shrubs were trimmed by a gardener.,Passive Control,1,1,The overgrown shrubs were,trimmed,0.14471771,SE,sentence-transformers/stsb-roberta-base-v2
+154,39,A gardener was trimming the overgrown shrubbery.,Active Control,1,0,A gardener was,trimming,0.037621588,SE,sentence-transformers/stsb-roberta-base-v2
+155,39,The alarm clock had been trimming regularly.,No-Attraction Violation,0,1,The alarm clock had been,trimming,-0.021187557,SE,sentence-transformers/stsb-roberta-base-v2
+156,40,Wilson's unreasonable proposal was rejecting by the boss.,Attraction Violation,1,1,Wilson's unreasonable proposal was,rejecting,0.17724144,SE,sentence-transformers/stsb-roberta-base-v2
+157,40,Wilson's unreasonable proposal was rejected at the hospital.,Passive Control,1,1,Wilson's unreasonable proposal was,rejected,0.1399418,SE,sentence-transformers/stsb-roberta-base-v2
+158,40,The admissions committee was rejecting nearly every application.,Active Control,1,0,The admissions committee was,rejecting,0.20308234,SE,sentence-transformers/stsb-roberta-base-v2
+159,40,The rare bird's behavior was rejecting all offers.,No-Attraction Violation,0,1,The rare bird's behavior was,rejecting,0.0037407987,SE,sentence-transformers/stsb-roberta-base-v2
+160,41,Hathaway's gigantic fortune had been inheriting by his daughters.,Attraction Violation,1,1,Hathaway's gigantic fortune had been,inheriting,0.15253271,SE,sentence-transformers/stsb-roberta-base-v2
+161,41,Hathaway's gigantic fortune had been inherited by his daughters.,Passive Control,1,1,Hathaway's gigantic fortune had been,inherited,0.27580756,SE,sentence-transformers/stsb-roberta-base-v2
+162,41,Generations of aristocratic Englishmen have been inheriting their fortunes.,Active Control,1,0,Generations of aristocratic Englishmen have been,inheriting,0.040840726,SE,sentence-transformers/stsb-roberta-base-v2
+163,41,The strange mystery had been inheriting the estate from her grandmother.,No-Attraction Violation,0,1,The strange mystery had been,inheriting,0.030640159,SE,sentence-transformers/stsb-roberta-base-v2
+164,42,All of her money had been spending before the wedding.,Attraction Violation,1,1,All of her money had been,spending,0.34714913,SE,sentence-transformers/stsb-roberta-base-v2
+165,42,All of her money had been spent before the wedding.,Passive Control,1,1,All of her money had been,spent,0.30674675,SE,sentence-transformers/stsb-roberta-base-v2
+166,42,The shopping fanatic had been spending all her money in Bloomingdales.,Active Control,1,0,The shopping fanatic had been,spending,0.19747153,SE,sentence-transformers/stsb-roberta-base-v2
+167,42,Patty's overgrown lawn was spending its time on the beach.,No-Attraction Violation,0,1,Patty's overgrown lawn was,spending,0.15380816,SE,sentence-transformers/stsb-roberta-base-v2
+168,43,An appointment was scheduling by the secretary.,Attraction Violation,1,1,An appointment was,scheduling,0.41397217,SE,sentence-transformers/stsb-roberta-base-v2
+169,43,An appointment was scheduled by the secretary.,Passive Control,1,1,An appointment was,scheduled,0.590499,SE,sentence-transformers/stsb-roberta-base-v2
+170,43,The secretary was scheduling new appointments for the afternoon.,Active Control,1,0,The secretary was,scheduling,0.1540096,SE,sentence-transformers/stsb-roberta-base-v2
+171,43,The legal contract had been scheduling for next week.,No-Attraction Violation,0,1,The legal contract had been,scheduling,0.22817346,SE,sentence-transformers/stsb-roberta-base-v2
+172,44,The men's faces had been photographing by a security camera.,Attraction Violation,1,1,The men's faces had been,photographing,0.08633548,SE,sentence-transformers/stsb-roberta-base-v2
+173,44,The men's faces had been photographed by a security camera.,Passive Control,1,1,The men's faces had been,photographed,0.1812891,SE,sentence-transformers/stsb-roberta-base-v2
+174,44,The intrusive reporter had been photographing the celebrities at the party.,Active Control,1,0,The intrusive reporter had been,photographing,0.14858188,SE,sentence-transformers/stsb-roberta-base-v2
+175,44,The sealed envelope was photographing at the party.,No-Attraction Violation,0,1,The sealed envelope was,photographing,0.112903684,SE,sentence-transformers/stsb-roberta-base-v2
+176,45,The broken television had been repairing the technician.,Attraction Violation,1,1,The broken television had been,repairing,0.36611685,SE,sentence-transformers/stsb-roberta-base-v2
+177,45,The broken television had been repaired by the technician.,Passive Control,1,1,The broken television had been,repaired,0.30926672,SE,sentence-transformers/stsb-roberta-base-v2
+178,45,The competent technician had been repairing the television.,Active Control,1,0,The competent technician had been,repairing,0.23736607,SE,sentence-transformers/stsb-roberta-base-v2
+179,45,Larry's note had been repairing the computer's hard drive.,No-Attraction Violation,0,1,Larry's note had been,repairing,0.107671075,SE,sentence-transformers/stsb-roberta-base-v2
+180,46,The alarm clock had been unplugging accidentally.,Attraction Violation,1,1,The alarm clock had been,unplugging,0.12259095,SE,sentence-transformers/stsb-roberta-base-v2
+181,46,The alarm clock had been unplugged late.,Passive Control,1,1,The alarm clock had been,unplugged,0.14631397,SE,sentence-transformers/stsb-roberta-base-v2
+182,46,The frantic woman had been unplugging every electrical device in the house.,Active Control,1,0,The frantic woman had been,unplugging,-0.039917275,SE,sentence-transformers/stsb-roberta-base-v2
+183,46,The overgrown shrubs were unplugging accidentally.,No-Attraction Violation,0,1,The overgrown shrubs were,unplugging,-0.064281315,SE,sentence-transformers/stsb-roberta-base-v2
+184,47,The car door had been unlocking late at night.,Attraction Violation,1,1,The car door had been,unlocking,0.18376951,SE,sentence-transformers/stsb-roberta-base-v2
+185,47,The car door had been unlocked by the child.,Passive Control,1,1,The car door had been,unlocked,0.27363163,SE,sentence-transformers/stsb-roberta-base-v2
+186,47,The babysitter had been unlocking the back door.,Active Control,1,0,The babysitter had been,unlocking,-0.035187297,SE,sentence-transformers/stsb-roberta-base-v2
+187,47,The Queen's 80th birthday was unlocking late at night.,No-Attraction Violation,0,1,The Queen's 80th birthday was,unlocking,0.06064687,SE,sentence-transformers/stsb-roberta-base-v2
+188,48,The portrait of Napoleon had been painting by a Dutch artist.,Attraction Violation,1,1,The portrait of Napoleon had been,painting,0.24144314,SE,sentence-transformers/stsb-roberta-base-v2
+189,48,The portrait of Napoleon had been painted by a Dutch artist.,Passive Control,1,1,The portrait of Napoleon had been,painted,0.36166027,SE,sentence-transformers/stsb-roberta-base-v2
+190,48,The French Impressionist artists had been painting with a focus on light and color.,Active Control,1,0,The French Impressionist artists had been,painting,0.15996996,SE,sentence-transformers/stsb-roberta-base-v2
+191,48,A new medication had been painting on Tuesday.,No-Attraction Violation,0,1,A new medication had been,painting,0.15838236,SE,sentence-transformers/stsb-roberta-base-v2
+192,49,The embarrassing allegations had been denying by the mayor.,Attraction Violation,1,1,The embarrassing allegations had been,denying,0.17516997,SE,sentence-transformers/stsb-roberta-base-v2
+193,49,The embarrassing allegations had been denied by the mayor.,Passive Control,1,1,The embarrassing allegations had been,denied,0.25242013,SE,sentence-transformers/stsb-roberta-base-v2
+194,49,The embarassed mayor had been denying allegations of corruption.,Active Control,1,0,The embarassed mayor had been,denying,0.1407529,SE,sentence-transformers/stsb-roberta-base-v2
+195,49,Tamara's birthday gift had been denying the rumor.,No-Attraction Violation,0,1,Tamara's birthday gift had been,denying,-0.024201183,SE,sentence-transformers/stsb-roberta-base-v2
+196,50,The noises in the attic had been hearing nightly.,Attraction Violation,1,1,The noises in the attic had been,hearing,0.2541948,SE,sentence-transformers/stsb-roberta-base-v2
+197,50,The noises in the attic had been heard by the boys.,Passive Control,1,1,The noises in the attic had been,heard,0.3707692,SE,sentence-transformers/stsb-roberta-base-v2
+198,50,The frightened campers had been hearing noises in the woods.,Active Control,1,0,The frightened campers had been,hearing,0.09697496,SE,sentence-transformers/stsb-roberta-base-v2
+199,50,A package had been hearing nightly.,No-Attraction Violation,0,1,A package had been,hearing,0.080784544,SE,sentence-transformers/stsb-roberta-base-v2
+200,51,The appetizers had been serving before the meal.,Attraction Violation,1,1,The appetizers had been,serving,0.10685312,SE,sentence-transformers/stsb-roberta-base-v2
+201,51,The appetizers had been served before the meal.,Passive Control,1,1,The appetizers had been,served,0.11821284,SE,sentence-transformers/stsb-roberta-base-v2
+202,51,The waiters had been serving the meal.,Active Control,1,0,The waiters had been,serving,0.12877451,SE,sentence-transformers/stsb-roberta-base-v2
+203,51,The final exams had been serving before the meal.,No-Attraction Violation,0,1,The final exams had been,serving,0.09263603,SE,sentence-transformers/stsb-roberta-base-v2
+204,52,Billy's unruly hair was combing his mother to one side.,Attraction Violation,1,1,Billy's unruly hair was,combing,0.0663579,SE,sentence-transformers/stsb-roberta-base-v2
+205,52,Billy's unruly hair was combed by his mother to one side.,Passive Control,1,1,Billy's unruly hair was,combed,-0.0675281,SE,sentence-transformers/stsb-roberta-base-v2
+206,52,The patient barber was combing the boy's hair to one side.,Active Control,1,0,The patient barber was,combing,0.21110408,SE,sentence-transformers/stsb-roberta-base-v2
+207,52,The girl's disease was combing the area for escaped prisoners.,No-Attraction Violation,0,1,The girl's disease was,combing,0.0016440365,SE,sentence-transformers/stsb-roberta-base-v2
+208,53,A drawing of the house had been sketching again.,Attraction Violation,1,1,A drawing of the house had been,sketching,0.19302662,SE,sentence-transformers/stsb-roberta-base-v2
+209,53,A drawing of the house had been sketched again.,Passive Control,1,1,A drawing of the house had been,sketched,0.2520887,SE,sentence-transformers/stsb-roberta-base-v2
+210,53,An artist in the studio had been sketching the house.,Active Control,1,0,An artist in the studio had been,sketching,0.14885177,SE,sentence-transformers/stsb-roberta-base-v2
+211,53,The cheap products had been sketching again.,No-Attraction Violation,0,1,The cheap products had been,sketching,0.031311374,SE,sentence-transformers/stsb-roberta-base-v2
+212,54,The simple coffin was burying the villagers.,Attraction Violation,1,1,The simple coffin was,burying,0.29754373,SE,sentence-transformers/stsb-roberta-base-v2
+213,54,The simple coffin was buried at the church.,Passive Control,1,1,The simple coffin was,buried,0.28482658,SE,sentence-transformers/stsb-roberta-base-v2
+214,54,The tribal people were burying their dead.,Active Control,1,0,The tribal people were,burying,-0.06426015,SE,sentence-transformers/stsb-roberta-base-v2
+215,54,The vocabulary list was burying at the church.,No-Attraction Violation,0,1,The vocabulary list was,burying,0.006373696,SE,sentence-transformers/stsb-roberta-base-v2
+216,55,The homicide case had been investigating diligently.,Attraction Violation,1,1,The homicide case had been,investigating,0.30815136,SE,sentence-transformers/stsb-roberta-base-v2
+217,55,The homicide case had been investigated by the FBI.,Passive Control,1,1,The homicide case had been,investigated,0.31321523,SE,sentence-transformers/stsb-roberta-base-v2
+218,55,The FBI agents had been investigating the homicide case for weeks.,Active Control,1,0,The FBI agents had been,investigating,0.19441268,SE,sentence-transformers/stsb-roberta-base-v2
+219,55,Martin's tonsils had been investigating the problem.,No-Attraction Violation,0,1,Martin's tonsils had been,investigating,-0.021661151,SE,sentence-transformers/stsb-roberta-base-v2
+220,56,Mark's wrinkly shirts were ironing by his mother.,Attraction Violation,1,1,Mark's wrinkly shirts were,ironing,0.14373387,SE,sentence-transformers/stsb-roberta-base-v2
+221,56,Mark's wrinkly shirts were ironed by his mother.,Passive Control,1,1,Mark's wrinkly shirts were,ironed,0.15421245,SE,sentence-transformers/stsb-roberta-base-v2
+222,56,Mark's doting mother was ironing his shirts while he slept.,Active Control,1,0,Mark's doting mother was,ironing,-0.04731575,SE,sentence-transformers/stsb-roberta-base-v2
+223,56,The firewood had been ironing her dress.,No-Attraction Violation,0,1,The firewood had been,ironing,0.24155693,SE,sentence-transformers/stsb-roberta-base-v2
+224,57,An important lesson had been learning in space.,Attraction Violation,1,1,An important lesson had been,learning,0.5475738,SE,sentence-transformers/stsb-roberta-base-v2
+225,57,An important lesson had been learned in space.,Passive Control,1,1,An important lesson had been,learned,0.7485442,SE,sentence-transformers/stsb-roberta-base-v2
+226,57,The children had been learning Spanish.,Active Control,1,0,The children had been,learning,0.23250188,SE,sentence-transformers/stsb-roberta-base-v2
+227,57,The bathroom floor had been learning in space.,No-Attraction Violation,0,1,The bathroom floor had been,learning,-0.04783453,SE,sentence-transformers/stsb-roberta-base-v2
+228,58,The height of the bookcase was measuring by a carpenter.,Attraction Violation,1,1,The height of the bookcase was,measuring,0.054472435,SE,sentence-transformers/stsb-roberta-base-v2
+229,58,The height of the bookcase was measured incorrectly.,Passive Control,1,1,The height of the bookcase was,measured,0.15674473,SE,sentence-transformers/stsb-roberta-base-v2
+230,58,The carpenter was measuring the height of the bookcase.,Active Control,1,0,The carpenter was,measuring,0.08952879,SE,sentence-transformers/stsb-roberta-base-v2
+231,58,An urgent message had been measuring her heart rate.,No-Attraction Violation,0,1,An urgent message had been,measuring,0.07281902,SE,sentence-transformers/stsb-roberta-base-v2
+232,59,Several important topics were discussing despite the weather.,Attraction Violation,1,1,Several important topics were,discussing,0.4072183,SE,sentence-transformers/stsb-roberta-base-v2
+233,59,Several important topics were discussed by the board of trustees.,Passive Control,1,1,Several important topics were,discussed,0.60748345,SE,sentence-transformers/stsb-roberta-base-v2
+234,59,The board members were discussing several important topics.,Active Control,1,0,The board members were,discussing,0.027117612,SE,sentence-transformers/stsb-roberta-base-v2
+235,59,"The fresh, warm bread was discussing despite the weather.",No-Attraction Violation,0,1,"The fresh, warm bread was",discussing,-0.09458672,SE,sentence-transformers/stsb-roberta-base-v2
+236,60,The dusty tabletops were wiping thoroughly.,Attraction Violation,1,1,The dusty tabletops were,wiping,0.123139724,SE,sentence-transformers/stsb-roberta-base-v2
+237,60,The dusty tabletops were wiped thoroughly.,Passive Control,1,1,The dusty tabletops were,wiped,0.13346328,SE,sentence-transformers/stsb-roberta-base-v2
+238,60,The tired busboy was wiping for hours.,Active Control,1,0,The tired busboy was,wiping,-0.022179937,SE,sentence-transformers/stsb-roberta-base-v2
+239,60,The hearty meal was wiping thoroughly.,No-Attraction Violation,0,1,The hearty meal was,wiping,-0.09959268,SE,sentence-transformers/stsb-roberta-base-v2
+240,61,A tiny spy camera was concealing by the agent inside a flowerpot.,Attraction Violation,1,1,A tiny spy camera was,concealing,0.09802323,SE,sentence-transformers/stsb-roberta-base-v2
+241,61,A tiny spy camera was concealed by the agent inside a flowerpot.,Passive Control,1,1,A tiny spy camera was,concealed,0.16244097,SE,sentence-transformers/stsb-roberta-base-v2
+242,61,The sneaky lawyer was concealing the truth.,Active Control,1,0,The sneaky lawyer was,concealing,0.22143635,SE,sentence-transformers/stsb-roberta-base-v2
+243,61,A faint light was concealing their identity.,No-Attraction Violation,0,1,A faint light was,concealing,0.06623848,SE,sentence-transformers/stsb-roberta-base-v2
+244,62,"The fresh, warm bread was slicing by the baker into halves.",Attraction Violation,1,1,"The fresh, warm bread was",slicing,0.018792134,SE,sentence-transformers/stsb-roberta-base-v2
+245,62,"The fresh, warm bread was sliced with love.",Passive Control,1,1,"The fresh, warm bread was",sliced,0.036316685,SE,sentence-transformers/stsb-roberta-base-v2
+246,62,The chef's assistants were slicing the mushrooms for a pie.,Active Control,1,0,The chef's assistants were,slicing,0.019005798,SE,sentence-transformers/stsb-roberta-base-v2
+247,62,Several important topics were slicing with love.,No-Attraction Violation,0,1,Several important topics were,slicing,0.0031203856,SE,sentence-transformers/stsb-roberta-base-v2
+248,63,The tarnished silverware was polishing by the butler.,Attraction Violation,1,1,The tarnished silverware was,polishing,0.33236676,SE,sentence-transformers/stsb-roberta-base-v2
+249,63,The tarnished silverware was polished by the butler.,Passive Control,1,1,The tarnished silverware was,polished,0.30614018,SE,sentence-transformers/stsb-roberta-base-v2
+250,63,The thorough butler was polishing the doorknobs.,Active Control,1,0,The thorough butler was,polishing,0.14770143,SE,sentence-transformers/stsb-roberta-base-v2
+251,63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The winning lottery numbers had been,polishing,0.08070137,SE,sentence-transformers/stsb-roberta-base-v2
+252,64,Poisonous fumes had been inhaling the firefighters.,Attraction Violation,1,1,Poisonous fumes had been,inhaling,0.3781014,SE,sentence-transformers/stsb-roberta-base-v2
+253,64,Poisonous fumes had been inhaled by the firefighters.,Passive Control,1,1,Poisonous fumes had been,inhaled,0.31346598,SE,sentence-transformers/stsb-roberta-base-v2
+254,64,The firefighters had been inhaling the smoke.,Active Control,1,0,The firefighters had been,inhaling,0.15163653,SE,sentence-transformers/stsb-roberta-base-v2
+255,64,The man's signature was inhaling during the fire.,No-Attraction Violation,0,1,The man's signature was,inhaling,0.05147662,SE,sentence-transformers/stsb-roberta-base-v2
+256,65,A genetic mutation was discovering the scientists.,Attraction Violation,1,1,A genetic mutation was,discovering,0.20877732,SE,sentence-transformers/stsb-roberta-base-v2
+257,65,A genetic mutation was discovered suddenly.,Passive Control,1,1,A genetic mutation was,discovered,0.27364254,SE,sentence-transformers/stsb-roberta-base-v2
+258,65,The excited explorers were discovering ancient artifacts everywhere they looked.,Active Control,1,0,The excited explorers were,discovering,0.3383238,SE,sentence-transformers/stsb-roberta-base-v2
+259,65,The pizza had been discovering new methods for making dough.,No-Attraction Violation,0,1,The pizza had been,discovering,0.026983147,SE,sentence-transformers/stsb-roberta-base-v2
+260,66,The Queen's 80th birthday was celebrating expensively.,Attraction Violation,1,1,The Queen's 80th birthday was,celebrating,0.18885395,SE,sentence-transformers/stsb-roberta-base-v2
+261,66,The Queen's 80th birthday was celebrated by thousands of people in the streets.,Passive Control,1,1,The Queen's 80th birthday was,celebrated,0.21406849,SE,sentence-transformers/stsb-roberta-base-v2
+262,66,Thousands of excited fans were celebrating the Superbowl victory in the streets.,Active Control,1,0,Thousands of excited fans were,celebrating,0.3110788,SE,sentence-transformers/stsb-roberta-base-v2
+263,66,The car door had been celebrating her promotion.,No-Attraction Violation,0,1,The car door had been,celebrating,0.023899155,SE,sentence-transformers/stsb-roberta-base-v2
+264,67,The diagram on the chalkboard had been erasing Mrs. Larson.,Attraction Violation,1,1,The diagram on the chalkboard had been,erasing,0.25151685,SE,sentence-transformers/stsb-roberta-base-v2
+265,67,The diagram on the chalkboard had been erased by Mrs. Larson.,Passive Control,1,1,The diagram on the chalkboard had been,erased,0.25018093,SE,sentence-transformers/stsb-roberta-base-v2
+266,67,Mrs. Larson had been erasing the chalkboard.,Active Control,1,0,Mrs. Larson had been,erasing,0.16202684,SE,sentence-transformers/stsb-roberta-base-v2
+267,67,Food for the homeless had been erasing over and over.,No-Attraction Violation,0,1,Food for the homeless had been,erasing,-0.03310321,SE,sentence-transformers/stsb-roberta-base-v2
+268,68,The movie was directing Steven Spielberg.,Attraction Violation,1,1,The movie was,directing,0.070624955,SE,sentence-transformers/stsb-roberta-base-v2
+269,68,The movie was directed professionally.,Passive Control,1,1,The movie was,directed,0.24074814,SE,sentence-transformers/stsb-roberta-base-v2
+270,68,Steven Spielberg was directing another blockbuster.,Active Control,1,0,Steven Spielberg was,directing,0.13162535,SE,sentence-transformers/stsb-roberta-base-v2
+271,68,The victim's body had been directing the police.,No-Attraction Violation,0,1,The victim's body had been,directing,-0.089531876,SE,sentence-transformers/stsb-roberta-base-v2
+272,69,Theresa's birthday gift had been wrapping yesterday.,Attraction Violation,1,1,Theresa's birthday gift had been,wrapping,0.18331558,SE,sentence-transformers/stsb-roberta-base-v2
+273,69,Theresa's birthday gift had been wrapped yesterday.,Passive Control,1,1,Theresa's birthday gift had been,wrapped,0.19674154,SE,sentence-transformers/stsb-roberta-base-v2
+274,69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's loving grandmother had been,wrapping,0.06427808,SE,sentence-transformers/stsb-roberta-base-v2
+275,69,The embarrassing allegations had been wrapping yesterday.,No-Attraction Violation,0,1,The embarrassing allegations had been,wrapping,-0.013009279,SE,sentence-transformers/stsb-roberta-base-v2
+276,70,The popular amusement park is visiting by millions of tourists eh year.,Attraction Violation,1,1,The popular amusement park is,visiting,0.3390691,SE,sentence-transformers/stsb-roberta-base-v2
+277,70,The popular amusement park is visited daily.,Passive Control,1,1,The popular amusement park is,visited,0.3358779,SE,sentence-transformers/stsb-roberta-base-v2
+278,70,The tourists had been visiting the amusement park in the morning.,Active Control,1,0,The tourists had been,visiting,0.46465895,SE,sentence-transformers/stsb-roberta-base-v2
+279,70,The man's beard had been visiting a friend in the hospital.,No-Attraction Violation,0,1,The man's beard had been,visiting,0.033265635,SE,sentence-transformers/stsb-roberta-base-v2
+280,71,Ten new trees had been planting on dry land.,Attraction Violation,1,1,Ten new trees had been,planting,0.3453553,SE,sentence-transformers/stsb-roberta-base-v2
+281,71,Ten new trees had been planted by the Forestry Service.,Passive Control,1,1,Ten new trees had been,planted,0.38216636,SE,sentence-transformers/stsb-roberta-base-v2
+282,71,The forestry workers had been planting cedar saplings on the hillside.,Active Control,1,0,The forestry workers had been,planting,0.19735913,SE,sentence-transformers/stsb-roberta-base-v2
+283,71,The sin had been planting doubt in her mind.,No-Attraction Violation,0,1,The sin had been,planting,0.11814124,SE,sentence-transformers/stsb-roberta-base-v2
+284,72,Food for the homeless had been donating neighborhood residents.,Attraction Violation,1,1,Food for the homeless had been,donating,0.15343446,SE,sentence-transformers/stsb-roberta-base-v2
+285,72,Food for the homeless had been donated many times.,Passive Control,1,1,Food for the homeless had been,donated,0.19354519,SE,sentence-transformers/stsb-roberta-base-v2
+286,72,The wealthy American philanthropist had been donating money to Romanian orphanages.,Active Control,1,0,The wealthy American philanthropist had been,donating,0.36469457,SE,sentence-transformers/stsb-roberta-base-v2
+287,72,The diagram on the chalkboard had been donating blood.,No-Attraction Violation,0,1,The diagram on the chalkboard had been,donating,0.00034346653,SE,sentence-transformers/stsb-roberta-base-v2
+288,73,The rare bird's behavior was observing by the biologists.,Attraction Violation,1,1,The rare bird's behavior was,observing,0.06105689,SE,sentence-transformers/stsb-roberta-base-v2
+289,73,The rare bird's behavior was observed by the biologists.,Passive Control,1,1,The rare bird's behavior was,observed,0.20237713,SE,sentence-transformers/stsb-roberta-base-v2
+290,73,The excited bird watchers were observing the rare eagle.,Active Control,1,0,The excited bird watchers were,observing,-0.064212956,SE,sentence-transformers/stsb-roberta-base-v2
+291,73,Wilson's unreasonable proposal was observing the stars.,No-Attraction Violation,0,1,Wilson's unreasonable proposal was,observing,0.00083201576,SE,sentence-transformers/stsb-roberta-base-v2
+292,74,Stormy weather had been forecasting by the weatherman.,Attraction Violation,1,1,Stormy weather had been,forecasting,0.3287593,SE,sentence-transformers/stsb-roberta-base-v2
+293,74,Stormy weather had been forecasted by the weatherman.,Passive Control,1,1,Stormy weather had been,forecasted,0.44435242,SE,sentence-transformers/stsb-roberta-base-v2
+294,74,The weather service had been forecasting snow for the mountain areas.,Active Control,1,0,The weather service had been,forecasting,0.40699813,SE,sentence-transformers/stsb-roberta-base-v2
+295,74,Olson's bulging suitcase had been forecasting correctly.,No-Attraction Violation,0,1,Olson's bulging suitcase had been,forecasting,-0.021358619,SE,sentence-transformers/stsb-roberta-base-v2
+296,75,The tragic mistake was regretting by Erika for many years.,Attraction Violation,1,1,The tragic mistake was,regretting,0.17700925,SE,sentence-transformers/stsb-roberta-base-v2
+297,75,The tragic mistake was regretted years later.,Passive Control,1,1,The tragic mistake was,regretted,0.32236722,SE,sentence-transformers/stsb-roberta-base-v2
+298,75,Erika was regretting the mistake.,Active Control,1,0,Erika was,regretting,0.10666755,SE,sentence-transformers/stsb-roberta-base-v2
+299,75,The library books had been regretting their behavior.,No-Attraction Violation,0,1,The library books had been,regretting,-0.007684034,SE,sentence-transformers/stsb-roberta-base-v2
+300,76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The stolen artwork had been,seizing,0.11236357,SE,sentence-transformers/stsb-roberta-base-v2
+301,76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The stolen artwork had been,seized,0.1567947,SE,sentence-transformers/stsb-roberta-base-v2
+302,76,The police had been seizing shipments of drugs at the border.,Active Control,1,0,The police had been,seizing,0.22410598,SE,sentence-transformers/stsb-roberta-base-v2
+303,76,The grimy pots and pans had been seizing without warning.,No-Attraction Violation,0,1,The grimy pots and pans had been,seizing,-0.002831407,SE,sentence-transformers/stsb-roberta-base-v2
+304,77,The value of the jewels was estimating the dealer.,Attraction Violation,1,1,The value of the jewels was,estimating,0.242182,SE,sentence-transformers/stsb-roberta-base-v2
+305,77,The value of the jewels was estimated by the dealer.,Passive Control,1,1,The value of the jewels was,estimated,0.27198285,SE,sentence-transformers/stsb-roberta-base-v2
+306,77,The jewel expert was estimating the value of the diamond.,Active Control,1,0,The jewel expert was,estimating,0.23867472,SE,sentence-transformers/stsb-roberta-base-v2
+307,77,The useful new gadget had been estimating professionally.,No-Attraction Violation,0,1,The useful new gadget had been,estimating,0.11523656,SE,sentence-transformers/stsb-roberta-base-v2
+308,78,Larry's note had been scribbling his wife.,Attraction Violation,1,1,Larry's note had been,scribbling,0.2863149,SE,sentence-transformers/stsb-roberta-base-v2
+309,78,Larry's note had been scribbled with haste.,Passive Control,1,1,Larry's note had been,scribbled,0.26694623,SE,sentence-transformers/stsb-roberta-base-v2
+310,78,Larry's wife had been scribbling a note to him about dinner plans.,Active Control,1,0,Larry's wife had been,scribbling,0.018994357,SE,sentence-transformers/stsb-roberta-base-v2
+311,78,The broken television had been scribbling his thoughts on a napkin.,No-Attraction Violation,0,1,The broken television had been,scribbling,0.067206584,SE,sentence-transformers/stsb-roberta-base-v2
+312,79,Carrie's morning meeting was canceling as expected.,Attraction Violation,1,1,Carrie's morning meeting was,canceling,0.1748887,SE,sentence-transformers/stsb-roberta-base-v2
+313,79,Carrie's morning meeting was canceled by the boss.,Passive Control,1,1,Carrie's morning meeting was,canceled,0.12982811,SE,sentence-transformers/stsb-roberta-base-v2
+314,79,Carrie had been canceling all of her meetings.,Active Control,1,0,Carrie had been,canceling,0.20484725,SE,sentence-transformers/stsb-roberta-base-v2
+315,79,The bubblegum had been canceling as expected.,No-Attraction Violation,0,1,The bubblegum had been,canceling,0.120229684,SE,sentence-transformers/stsb-roberta-base-v2
+316,80,The girl's disease was curing a simple treatment.,Attraction Violation,1,1,The girl's disease was,curing,0.17788129,SE,sentence-transformers/stsb-roberta-base-v2
+317,80,The girl's disease was cured by a simple treatment.,Passive Control,1,1,The girl's disease was,cured,0.20246355,SE,sentence-transformers/stsb-roberta-base-v2
+318,80,The foreign doctors were curing hundreds of villagers of malaria.,Active Control,1,0,The foreign doctors were,curing,0.05295865,SE,sentence-transformers/stsb-roberta-base-v2
+319,80,Billy's unruly hair was curing his cold.,No-Attraction Violation,0,1,Billy's unruly hair was,curing,0.11759481,SE,sentence-transformers/stsb-roberta-base-v2
+320,81,Janet's houseplants were watering too much.,Attraction Violation,1,1,Janet's houseplants were,watering,-0.040042683,SE,sentence-transformers/stsb-roberta-base-v2
+321,81,Janet's houseplants were watered by her neighbor.,Passive Control,1,1,Janet's houseplants were,watered,0.0036850988,SE,sentence-transformers/stsb-roberta-base-v2
+322,81,The gardener was watering the plants.,Active Control,1,0,The gardener was,watering,0.19210118,SE,sentence-transformers/stsb-roberta-base-v2
+323,81,The roast lamb had been watering too much.,No-Attraction Violation,0,1,The roast lamb had been,watering,0.047152765,SE,sentence-transformers/stsb-roberta-base-v2
+324,82,The useful new gadget had been inventing by a bored waiter.,Attraction Violation,1,1,The useful new gadget had been,inventing,0.47100005,SE,sentence-transformers/stsb-roberta-base-v2
+325,82,The useful new gadget had been invented by a bored waiter.,Passive Control,1,1,The useful new gadget had been,invented,0.44585413,SE,sentence-transformers/stsb-roberta-base-v2
+326,82,The resourceful engineers had been inventing tiny new devices.,Active Control,1,0,The resourceful engineers had been,inventing,0.17547157,SE,sentence-transformers/stsb-roberta-base-v2
+327,82,The value of the jewels was inventing the digital computer.,No-Attraction Violation,0,1,The value of the jewels was,inventing,0.082676254,SE,sentence-transformers/stsb-roberta-base-v2
+328,83,The phone bill had been paying his roommate.,Attraction Violation,1,1,The phone bill had been,paying,0.27721822,SE,sentence-transformers/stsb-roberta-base-v2
+329,83,The phone bill had been paid quickly.,Passive Control,1,1,The phone bill had been,paid,0.2471135,SE,sentence-transformers/stsb-roberta-base-v2
+330,83,Juan and Perry had been paying too much for their apartment.,Active Control,1,0,Juan and Perry had been,paying,0.15100126,SE,sentence-transformers/stsb-roberta-base-v2
+331,83,"The dark, underwater cave was paying attention to the divers.",No-Attraction Violation,0,1,"The dark, underwater cave was",paying,0.02805781,SE,sentence-transformers/stsb-roberta-base-v2
+332,84,The man's signature was forging the lawyers.,Attraction Violation,1,1,The man's signature was,forging,0.032015223,SE,sentence-transformers/stsb-roberta-base-v2
+333,84,The man's signature was forged by the lawyers.,Passive Control,1,1,The man's signature was,forged,0.15060392,SE,sentence-transformers/stsb-roberta-base-v2
+334,84,The con artists were forging the signatures on checks.,Active Control,1,0,The con artists were,forging,-0.0020962185,SE,sentence-transformers/stsb-roberta-base-v2
+335,84,Poisonous fumes had been forging very well.,No-Attraction Violation,0,1,Poisonous fumes had been,forging,0.08260214,SE,sentence-transformers/stsb-roberta-base-v2
+336,85,The bank had been robbing two masked men.,Attraction Violation,1,1,The bank had been,robbing,0.23767401,SE,sentence-transformers/stsb-roberta-base-v2
+337,85,The bank had been robbed repeatedly.,Passive Control,1,1,The bank had been,robbed,0.30931538,SE,sentence-transformers/stsb-roberta-base-v2
+338,85,The clever burglars had been robbing houses in broad daylight.,Active Control,1,0,The clever burglars had been,robbing,0.30090374,SE,sentence-transformers/stsb-roberta-base-v2
+339,85,The musical piece was robbing repeatedly.,No-Attraction Violation,0,1,The musical piece was,robbing,0.15982336,SE,sentence-transformers/stsb-roberta-base-v2
+340,86,An urgent message had been sending by the ambassador to the President.,Attraction Violation,1,1,An urgent message had been,sending,0.3633213,SE,sentence-transformers/stsb-roberta-base-v2
+341,86,An urgent message had been sent again.,Passive Control,1,1,An urgent message had been,sent,0.3648094,SE,sentence-transformers/stsb-roberta-base-v2
+342,86,The Prime Minister had been sending urgent messages to her Ambassador.,Active Control,1,0,The Prime Minister had been,sending,-0.029387841,SE,sentence-transformers/stsb-roberta-base-v2
+343,86,The height of the bookcase was sending mixed signals to the carpenter.,No-Attraction Violation,0,1,The height of the bookcase was,sending,0.028574532,SE,sentence-transformers/stsb-roberta-base-v2
+344,87,The sleek new building was designing a team of German architects.,Attraction Violation,1,1,The sleek new building was,designing,0.36750174,SE,sentence-transformers/stsb-roberta-base-v2
+345,87,The sleek new building was designed by a team of German architects.,Passive Control,1,1,The sleek new building was,designed,0.3586829,SE,sentence-transformers/stsb-roberta-base-v2
+346,87,A team of architects had been designing the new building.,Active Control,1,0,A team of architects had been,designing,0.3452546,SE,sentence-transformers/stsb-roberta-base-v2
+347,87,The leftover food was designing with flair.,No-Attraction Violation,0,1,The leftover food was,designing,0.13650352,SE,sentence-transformers/stsb-roberta-base-v2
+348,88,The final exams had been grading in school.,Attraction Violation,1,1,The final exams had been,grading,0.3281932,SE,sentence-transformers/stsb-roberta-base-v2
+349,88,The final exams had been graded in school.,Passive Control,1,1,The final exams had been,graded,0.21080111,SE,sentence-transformers/stsb-roberta-base-v2
+350,88,The professor had been grading the final exams until 4 AM.,Active Control,1,0,The professor had been,grading,0.2640837,SE,sentence-transformers/stsb-roberta-base-v2
+351,88,The appetizers had been grading Iverson's students.,No-Attraction Violation,0,1,The appetizers had been,grading,-0.005098082,SE,sentence-transformers/stsb-roberta-base-v2
+352,89,The final destination had been reaching too late.,Attraction Violation,1,1,The final destination had been,reaching,0.25618914,SE,sentence-transformers/stsb-roberta-base-v2
+353,89,The final destination had been reached too late.,Passive Control,1,1,The final destination had been,reached,0.237695,SE,sentence-transformers/stsb-roberta-base-v2
+354,89,The curious child had been reaching for the cup on the table.,Active Control,1,0,The curious child had been,reaching,0.15558441,SE,sentence-transformers/stsb-roberta-base-v2
+355,89,Several spelling errors were reaching too late.,No-Attraction Violation,0,1,Several spelling errors were,reaching,0.09923325,SE,sentence-transformers/stsb-roberta-base-v2
+356,90,A faint light was perceiving by the rescue workers.,Attraction Violation,1,1,A faint light was,perceiving,0.16447929,SE,sentence-transformers/stsb-roberta-base-v2
+357,90,A faint light was perceived underwater.,Passive Control,1,1,A faint light was,perceived,0.24368322,SE,sentence-transformers/stsb-roberta-base-v2
+358,90,The worried pilot was perceiving a rattling sound in the jet's engine.,Active Control,1,0,The worried pilot was,perceiving,0.08481285,SE,sentence-transformers/stsb-roberta-base-v2
+359,90,A tiny spy camera was perceiving underwater.,No-Attraction Violation,0,1,A tiny spy camera was,perceiving,0.33605248,SE,sentence-transformers/stsb-roberta-base-v2
+360,91,The bubblegum had been chewing by the boy.,Attraction Violation,1,1,The bubblegum had been,chewing,0.11169204,SE,sentence-transformers/stsb-roberta-base-v2
+361,91,The bubblegum had been chewed by the boy.,Passive Control,1,1,The bubblegum had been,chewed,0.15066186,SE,sentence-transformers/stsb-roberta-base-v2
+362,91,The hungry dog had been chewing a bone.,Active Control,1,0,The hungry dog had been,chewing,0.25000086,SE,sentence-transformers/stsb-roberta-base-v2
+363,91,Carrie's morning meeting was chewing for a long time.,No-Attraction Violation,0,1,Carrie's morning meeting was,chewing,0.105013005,SE,sentence-transformers/stsb-roberta-base-v2
+364,92,Martin's tonsils had been removing at the hospital.,Attraction Violation,1,1,Martin's tonsils had been,removing,-0.039074186,SE,sentence-transformers/stsb-roberta-base-v2
+365,92,Martin's tonsils had been removed at the hospital.,Passive Control,1,1,Martin's tonsils had been,removed,-0.041010555,SE,sentence-transformers/stsb-roberta-base-v2
+366,92,The surgeon had been removing the cancerous growth.,Active Control,1,0,The surgeon had been,removing,0.11802308,SE,sentence-transformers/stsb-roberta-base-v2
+367,92,The homicide case had been removing at the hospital.,No-Attraction Violation,0,1,The homicide case had been,removing,0.049976453,SE,sentence-transformers/stsb-roberta-base-v2
+368,93,Mother Theresa's death was mourning millions of people.,Attraction Violation,1,1,Mother Theresa's death was,mourning,0.2950667,SE,sentence-transformers/stsb-roberta-base-v2
+369,93,Mother Theresa's death was mourned by millions of people.,Passive Control,1,1,Mother Theresa's death was,mourned,0.3587355,SE,sentence-transformers/stsb-roberta-base-v2
+370,93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-clad women were,mourning,0.0049113957,SE,sentence-transformers/stsb-roberta-base-v2
+371,93,Lisa's phone had been mourning the loss of a loved one.,No-Attraction Violation,0,1,Lisa's phone had been,mourning,0.07889024,SE,sentence-transformers/stsb-roberta-base-v2
+372,94,The bathroom floor had been mopping by a janitor.,Attraction Violation,1,1,The bathroom floor had been,mopping,0.22730319,SE,sentence-transformers/stsb-roberta-base-v2
+373,94,The bathroom floor had been mopped in the past.,Passive Control,1,1,The bathroom floor had been,mopped,0.1926356,SE,sentence-transformers/stsb-roberta-base-v2
+374,94,The school janitor had been mopping the bathroom.,Active Control,1,0,The school janitor had been,mopping,0.06644278,SE,sentence-transformers/stsb-roberta-base-v2
+375,94,An important lesson had been mopping in the past.,No-Attraction Violation,0,1,An important lesson had been,mopping,0.021054193,SE,sentence-transformers/stsb-roberta-base-v2
+376,95,The sin had been confessing by the repentant Catholic.,Attraction Violation,1,1,The sin had been,confessing,0.22082709,SE,sentence-transformers/stsb-roberta-base-v2
+377,95,The sin had been confessed on Sunday.,Passive Control,1,1,The sin had been,confessed,0.31884274,SE,sentence-transformers/stsb-roberta-base-v2
+378,95,The repentant Catholic had been confessing his sins.,Active Control,1,0,The repentant Catholic had been,confessing,0.17636824,SE,sentence-transformers/stsb-roberta-base-v2
+379,95,Ten new trees had been confessing on Sunday.,No-Attraction Violation,0,1,Ten new trees had been,confessing,-0.04542029,SE,sentence-transformers/stsb-roberta-base-v2
+380,96,The strange mystery had been solving the detectives.,Attraction Violation,1,1,The strange mystery had been,solving,0.36880296,SE,sentence-transformers/stsb-roberta-base-v2
+381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.41169766,SE,sentence-transformers/stsb-roberta-base-v2
+382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.14356816,SE,sentence-transformers/stsb-roberta-base-v2
+383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,-0.041402005,SE,sentence-transformers/stsb-roberta-base-v2
