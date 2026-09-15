@@ -164,6 +164,7 @@ get_fixef_models <- function(
 }
 ```
 
+### Delogu
 ```{r}
 rm(fixef_df)
 
@@ -247,7 +248,7 @@ fixef_df |>
 ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3, width = 7)
 ```
 
-### Models with plaus (Delogu)
+Models with plaus (Delogu)
 ```{r}
 rm(fixef_df)
 
