@@ -65,6 +65,11 @@ if __name__ == "__main__":
             "model_name": "Qwen/Qwen3-Embedding-0.6B",
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "sentence-transformers/stsb-xlm-r-multilingual",
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "dewiki_20180420_100d",
