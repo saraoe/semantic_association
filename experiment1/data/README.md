@@ -13,6 +13,7 @@ The file ``delogu_2019_stim_nl.csv`` is a Dutch translation of the stimuli from 
 
 ## Aurnhammer et al. (2021)
 The file ``aurnhammer_2021_stim.csv`` contains linguistic stimuli from the "Retrieval (N400) and integration (P600) in expectation-based comprehension" by Aurnhammer et al. [4]. The data was downloaded from GitHub [here](https://github.com/caurnhammer/plosone21lmererp/blob/main/data/stimuli.csv).
+The corresponding ERPs were downloaded from OSF [here](https://osf.io/nrb4t/) and saved in the folder ``Aurnhammer/``
 
 ## Hoeks et al. (2004)
 The folder ``Hoeks`` contains the linguistic stimuli from the paper [5]. The file ``sentences.csv`` contains on row for each sentence frame. This is preprocessed in the script ``src/prepare_hoeks_stim.py``, where the file ``stim.csv`` is created, which contains on row for each condition in each sentence frame together with the target and context.
