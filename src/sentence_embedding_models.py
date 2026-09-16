@@ -22,17 +22,25 @@ class SentenceEmbeddingModel(EmbeddingModel):
         self,
         model_name: str,
         n_sentences: int | None = None,
+        trust_remote_code: bool = False,
         verbose=False,
+        task: str | None = None,
     ):
         super().__init__(n_sentences, verbose)
 
-        self.model = SentenceTransformer(model_name)
+        self.model = SentenceTransformer(
+            model_name, trust_remote_code=trust_remote_code
+        )
         self.model_name = model_name
+        self.task = task
 
     def get_embedding(self, text: str):
         """Get embedding for any amount of words."""
         if self.n_sentences:
             text = self.get_n_sentences(text)
+
+        if self.task:
+            return self.model.encode(text, task=self.task)
         return self.model.encode(text)
 
 

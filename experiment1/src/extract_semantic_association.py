@@ -150,11 +150,13 @@ if __name__ == "__main__":
             "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
         },
-        # {
-        #     "implementation": "SE",
-        #     "model_type": "SentenceEmbedding",
-        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
-        # },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-small",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
