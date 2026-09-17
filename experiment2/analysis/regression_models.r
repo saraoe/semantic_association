@@ -88,7 +88,6 @@ if ("tanner" %in% dataset) {
     tanner_df <- read.csv(file.path("data", "Tanner", "mean_amplitude.csv")) |>
         mutate(context = ifelse(is.na(context), "", context)) |>
         left_join(tanner_sem) |>
-        mutate(semantic_association = as.numeric(semantic_association)) |>
         filter(Acceptability == "Gram") |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
