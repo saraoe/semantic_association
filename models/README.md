@@ -43,6 +43,7 @@
 | Qwen/Qwen3-Embedding-8B | Qwen/Qwen3-Embedding-8B | 1d8ad4ca9b3dd8059ad90a75d4983776a23d44af |
 | Qwen/Qwen3-Embedding-0.6B | Qwen/Qwen3-Embedding-0.6B | 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3 |
 | bigscience/sgpt-bloom-7b1-msmarco | bigscience/sgpt-bloom-7b1-msmarco | dc579f3d2d5a0795eba2049e16c3e36c74007ad3 |
+| jinaai/jina-embeddings-v5-text-small | jinaai/jina-embeddings-v5-text-small | dd76d535f5447ca3897a9c893fb1e612ead98192 |
 
 ## German Models
 | name | HF repo | revision |
