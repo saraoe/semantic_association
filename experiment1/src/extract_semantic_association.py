@@ -160,6 +160,13 @@ if __name__ == "__main__":
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-nano",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
             "model_name": "BAAI/bge-m3",
         },
         {

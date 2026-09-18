@@ -7295,3 +7295,387 @@
 381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.5270515,SE,jinaai/jina-embeddings-v5-text-small
 382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.50334716,SE,jinaai/jina-embeddings-v5-text-small
 383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.40580362,SE,jinaai/jina-embeddings-v5-text-small
+0,1,The murder had been witnessing by the three bystanders,Attraction Violation,1,1,The murder had been,witnessing,0.5279414,SE,jinaai/jina-embeddings-v5-text-nano
+1,1,The murder had been witnessed in the dark.,Passive Control,1,1,The murder had been,witnessed,0.6081681,SE,jinaai/jina-embeddings-v5-text-nano
+2,1,The bystanders had been witnessing the crime.,Active Control,1,0,The bystanders had been,witnessing,0.66082007,SE,jinaai/jina-embeddings-v5-text-nano
+3,1,The unpleasant cough syrup was witnessing in the dark.,No-Attraction Violation,0,1,The unpleasant cough syrup was,witnessing,0.457135,SE,jinaai/jina-embeddings-v5-text-nano
+4,2,Patty's overgrown lawn was mowing the boy next door.,Attraction Violation,1,1,Patty's overgrown lawn was,mowing,0.60425985,SE,jinaai/jina-embeddings-v5-text-nano
+5,2,Patty's overgrown lawn was mowed only last week.,Passive Control,1,1,Patty's overgrown lawn was,mowed,0.6194761,SE,jinaai/jina-embeddings-v5-text-nano
+6,2,Patty's teenage son was mowing the lawn.,Active Control,1,0,Patty's teenage son was,mowing,0.42019555,SE,jinaai/jina-embeddings-v5-text-nano
+7,2,All of her money had been mowing the grass.,No-Attraction Violation,0,1,All of her money had been,mowing,0.3819087,SE,jinaai/jina-embeddings-v5-text-nano
+8,3,Three more martinis were ordering by Laurie's sister.,Attraction Violation,1,1,Three more martinis were,ordering,0.4837368,SE,jinaai/jina-embeddings-v5-text-nano
+9,3,Three more martinis were ordered repeatedly.,Passive Control,1,1,Three more martinis were,ordered,0.5168572,SE,jinaai/jina-embeddings-v5-text-nano
+10,3,"The regular customers were ordering quiche, as usual.",Active Control,1,0,The regular customers were,ordering,0.5669404,SE,jinaai/jina-embeddings-v5-text-nano
+11,3,The rough part of the wood was ordering late.,No-Attraction Violation,0,1,The rough part of the wood was,ordering,0.46739364,SE,jinaai/jina-embeddings-v5-text-nano
+12,4,The quality of Karla's work was evaluating frequently.,Attraction Violation,1,1,The quality of Karla's work was,evaluating,0.5534318,SE,jinaai/jina-embeddings-v5-text-nano
+13,4,The quality of Karla's work was evaluated frequently.,Passive Control,1,1,The quality of Karla's work was,evaluated,0.5844615,SE,jinaai/jina-embeddings-v5-text-nano
+14,4,The engineers were evaluating the success of the new device.,Active Control,1,0,The engineers were,evaluating,0.51341134,SE,jinaai/jina-embeddings-v5-text-nano
+15,4,The old lady's purse had been evaluating Nelson's idea.,No-Attraction Violation,0,1,The old lady's purse had been,evaluating,0.409877,SE,jinaai/jina-embeddings-v5-text-nano
+16,5,The legal contract had been signing falsely.,Attraction Violation,1,1,The legal contract had been,signing,0.6508466,SE,jinaai/jina-embeddings-v5-text-nano
+17,5,The legal contract had been signed by the family.,Passive Control,1,1,The legal contract had been,signed,0.6454373,SE,jinaai/jina-embeddings-v5-text-nano
+18,5,The state's governor had been signing new legislation.,Active Control,1,0,The state's governor had been,signing,0.5111309,SE,jinaai/jina-embeddings-v5-text-nano
+19,5,An appointment was signing falsely.,No-Attraction Violation,0,1,An appointment was,signing,0.6878424,SE,jinaai/jina-embeddings-v5-text-nano
+20,6,The vocabulary list was memorizing well.,Attraction Violation,1,1,The vocabulary list was,memorizing,0.61497694,SE,jinaai/jina-embeddings-v5-text-nano
+21,6,The vocabulary list was memorized well.,Passive Control,1,1,The vocabulary list was,memorized,0.6505695,SE,jinaai/jina-embeddings-v5-text-nano
+22,6,The medical students were memorizing sample exam questions all night.,Active Control,1,0,The medical students were,memorizing,0.4901716,SE,jinaai/jina-embeddings-v5-text-nano
+23,6,The simple coffin was memorizing the lines of the poem.,No-Attraction Violation,0,1,The simple coffin was,memorizing,0.5056451,SE,jinaai/jina-embeddings-v5-text-nano
+24,7,The firewood had been chopping poorly.,Attraction Violation,1,1,The firewood had been,chopping,0.59279114,SE,jinaai/jina-embeddings-v5-text-nano
+25,7,The firewood had been chopped by Jen's grandfather.,Passive Control,1,1,The firewood had been,chopped,0.62115824,SE,jinaai/jina-embeddings-v5-text-nano
+26,7,Jen's grandfather had been chopping the firewood.,Active Control,1,0,Jen's grandfather had been,chopping,0.4936924,SE,jinaai/jina-embeddings-v5-text-nano
+27,7,Mark's wrinkly shirts were chopping vegetables.,No-Attraction Violation,0,1,Mark's wrinkly shirts were,chopping,0.51459974,SE,jinaai/jina-embeddings-v5-text-nano
+28,8,Lisa's phone had been disconnecting last month.,Attraction Violation,1,1,Lisa's phone had been,disconnecting,0.59842587,SE,jinaai/jina-embeddings-v5-text-nano
+29,8,Lisa's phone had been disconnected last month.,Passive Control,1,1,Lisa's phone had been,disconnected,0.61232287,SE,jinaai/jina-embeddings-v5-text-nano
+30,8,The electrician had been disconnecting the machine's power source.,Active Control,1,0,The electrician had been,disconnecting,0.52925617,SE,jinaai/jina-embeddings-v5-text-nano
+31,8,Mother Theresa's death was disconnecting the two cables.,No-Attraction Violation,0,1,Mother Theresa's death was,disconnecting,0.46705326,SE,jinaai/jina-embeddings-v5-text-nano
+32,9,Wendy's muddy car was washing the boys.,Attraction Violation,1,1,Wendy's muddy car was,washing,0.55787426,SE,jinaai/jina-embeddings-v5-text-nano
+33,9,Wendy's muddy car was washed wearily.,Passive Control,1,1,Wendy's muddy car was,washed,0.5888253,SE,jinaai/jina-embeddings-v5-text-nano
+34,9,Wendy and Harriet were washing the muddy car.,Active Control,1,0,Wendy and Harriet were,washing,0.48602763,SE,jinaai/jina-embeddings-v5-text-nano
+35,9,Frank's loan application had been washing the used pencil.,No-Attraction Violation,0,1,Frank's loan application had been,washing,0.39404213,SE,jinaai/jina-embeddings-v5-text-nano
+36,10,The library books had been borrowing the graduate student.,Attraction Violation,1,1,The library books had been,borrowing,0.57457745,SE,jinaai/jina-embeddings-v5-text-nano
+37,10,The library books had been borrowed by the graduate student.,Passive Control,1,1,The library books had been,borrowed,0.6250717,SE,jinaai/jina-embeddings-v5-text-nano
+38,10,Katie and Lara had been borrowing dozens of books about botany from the library.,Active Control,1,0,Katie and Lara had been,borrowing,0.46176994,SE,jinaai/jina-embeddings-v5-text-nano
+39,10,The tragic mistake was borrowing in a hurry.,No-Attraction Violation,0,1,The tragic mistake was,borrowing,0.39180923,SE,jinaai/jina-embeddings-v5-text-nano
+40,11,"The dark, underwater cave was exploring by the divers.",Attraction Violation,1,1,"The dark, underwater cave was",exploring,0.5020772,SE,jinaai/jina-embeddings-v5-text-nano
+41,11,"The dark, underwater cave was explored by the divers.",Passive Control,1,1,"The dark, underwater cave was",explored,0.51593316,SE,jinaai/jina-embeddings-v5-text-nano
+42,11,The cautious scuba divers were exploring the underwater cave.,Active Control,1,0,The cautious scuba divers were,exploring,0.45413384,SE,jinaai/jina-embeddings-v5-text-nano
+43,11,The phone bill had been exploring at the zoo.,No-Attraction Violation,0,1,The phone bill had been,exploring,0.48364252,SE,jinaai/jina-embeddings-v5-text-nano
+44,12,The unpleasant cough syrup was swallowing the boy.,Attraction Violation,1,1,The unpleasant cough syrup was,swallowing,0.61370516,SE,jinaai/jina-embeddings-v5-text-nano
+45,12,The unpleasant cough syrup was swallowed by the boy.,Passive Control,1,1,The unpleasant cough syrup was,swallowed,0.6232676,SE,jinaai/jina-embeddings-v5-text-nano
+46,12,The huge adult alligator had been swallowing fish by the bucket.,Active Control,1,0,The huge adult alligator had been,swallowing,0.4337934,SE,jinaai/jina-embeddings-v5-text-nano
+47,12,The murder had been swallowing with disgust.,No-Attraction Violation,0,1,The murder had been,swallowing,0.42631894,SE,jinaai/jina-embeddings-v5-text-nano
+48,13,The pizza had been delivering once more.,Attraction Violation,1,1,The pizza had been,delivering,0.5170448,SE,jinaai/jina-embeddings-v5-text-nano
+49,13,The pizza had been delivered by Antonio himself.,Passive Control,1,1,The pizza had been,delivered,0.5900231,SE,jinaai/jina-embeddings-v5-text-nano
+50,13,The exhausted messenger had been delivering packages all over town.,Active Control,1,0,The exhausted messenger had been,delivering,0.59757984,SE,jinaai/jina-embeddings-v5-text-nano
+51,13,A genetic mutation was delivering once more.,No-Attraction Violation,0,1,A genetic mutation was,delivering,0.48532283,SE,jinaai/jina-embeddings-v5-text-nano
+52,14,Frank's loan application had been approving by the bank.,Attraction Violation,1,1,Frank's loan application had been,approving,0.59733844,SE,jinaai/jina-embeddings-v5-text-nano
+53,14,Frank's loan application had been approved anyways.,Passive Control,1,1,Frank's loan application had been,approved,0.6263844,SE,jinaai/jina-embeddings-v5-text-nano
+54,14,The board of directors had been approving too many expensive projects.,Active Control,1,0,The board of directors had been,approving,0.5334751,SE,jinaai/jina-embeddings-v5-text-nano
+55,14,Wendy's muddy car was approving the boy's request.,No-Attraction Violation,0,1,Wendy's muddy car was,approving,0.4163132,SE,jinaai/jina-embeddings-v5-text-nano
+56,15,The cheap products had been manufacturing a Belgian firm.,Attraction Violation,1,1,The cheap products had been,manufacturing,0.5282031,SE,jinaai/jina-embeddings-v5-text-nano
+57,15,The cheap products had been manufactured by a Belgian firm.,Passive Control,1,1,The cheap products had been,manufactured,0.5799038,SE,jinaai/jina-embeddings-v5-text-nano
+58,15,The auto company had been manufacturing parts in China.,Active Control,1,0,The auto company had been,manufacturing,0.58424824,SE,jinaai/jina-embeddings-v5-text-nano
+59,15,A drawing of the house had been manufacturing at a factory.,No-Attraction Violation,0,1,A drawing of the house had been,manufacturing,0.44034666,SE,jinaai/jina-embeddings-v5-text-nano
+60,16,Their secret conversation had been overhearing by a surprised neighbor.,Attraction Violation,1,1,Their secret conversation had been,overhearing,0.633383,SE,jinaai/jina-embeddings-v5-text-nano
+61,16,Their secret conversation had been overheard by a surprised neighbor.,Passive Control,1,1,Their secret conversation had been,overheard,0.6105713,SE,jinaai/jina-embeddings-v5-text-nano
+62,16,The annoyed resident had been overhearing his neighbor's phone conversations through the wall.,Active Control,1,0,The annoyed resident had been,overhearing,0.5429505,SE,jinaai/jina-embeddings-v5-text-nano
+63,16,A wet snowball had been overhearing despite the precautions.,No-Attraction Violation,0,1,A wet snowball had been,overhearing,0.51761645,SE,jinaai/jina-embeddings-v5-text-nano
+64,17,The rough part of the wood was sanding to perfection.,Attraction Violation,1,1,The rough part of the wood was,sanding,0.6237767,SE,jinaai/jina-embeddings-v5-text-nano
+65,17,The rough part of the wood was sanded by the carpenter.,Passive Control,1,1,The rough part of the wood was,sanded,0.60395557,SE,jinaai/jina-embeddings-v5-text-nano
+66,17,The skillful carpenter was sanding the rough edge of the wood.,Active Control,1,0,The skillful carpenter was,sanding,0.5305629,SE,jinaai/jina-embeddings-v5-text-nano
+67,17,Three more martinis were sanding the chair.,No-Attraction Violation,0,1,Three more martinis were,sanding,0.43519095,SE,jinaai/jina-embeddings-v5-text-nano
+68,18,A package had been receiving by the secretary in the office.,Attraction Violation,1,1,A package had been,receiving,0.64760107,SE,jinaai/jina-embeddings-v5-text-nano
+69,18,A package had been received by the secretary in the office.,Passive Control,1,1,A package had been,received,0.69627726,SE,jinaai/jina-embeddings-v5-text-nano
+70,18,The secretary had been receiving flowers all day.,Active Control,1,0,The secretary had been,receiving,0.5538677,SE,jinaai/jina-embeddings-v5-text-nano
+71,18,The noises in the attic had been receiving assistance from the government.,No-Attraction Violation,0,1,The noises in the attic had been,receiving,0.4609091,SE,jinaai/jina-embeddings-v5-text-nano
+72,19,The club's rules had been violating Richard.,Attraction Violation,1,1,The club's rules had been,violating,0.5678086,SE,jinaai/jina-embeddings-v5-text-nano
+73,19,The club's rules had been violated only twice.,Passive Control,1,1,The club's rules had been,violated,0.5808394,SE,jinaai/jina-embeddings-v5-text-nano
+74,19,The rebel had been violating the rules.,Active Control,1,0,The rebel had been,violating,0.5515157,SE,jinaai/jina-embeddings-v5-text-nano
+75,19,Thirty pounds of potatoes had been violating only twice.,No-Attraction Violation,0,1,Thirty pounds of potatoes had been,violating,0.41643918,SE,jinaai/jina-embeddings-v5-text-nano
+76,20,A new medication had been prescribing the physician.,Attraction Violation,1,1,A new medication had been,prescribing,0.60086304,SE,jinaai/jina-embeddings-v5-text-nano
+77,20,A new medication had been prescribed by the physician.,Passive Control,1,1,A new medication had been,prescribed,0.62308323,SE,jinaai/jina-embeddings-v5-text-nano
+78,20,The new doctor had been prescribing powerful painkillers for Jelena's sore knee.,Active Control,1,0,The new doctor had been,prescribing,0.541079,SE,jinaai/jina-embeddings-v5-text-nano
+79,20,The portrait of Napoleon had been prescribing with caution.,No-Attraction Violation,0,1,The portrait of Napoleon had been,prescribing,0.37689406,SE,jinaai/jina-embeddings-v5-text-nano
+80,21,The wheat crops had been harvesting by the local farmers.,Attraction Violation,1,1,The wheat crops had been,harvesting,0.6556443,SE,jinaai/jina-embeddings-v5-text-nano
+81,21,The wheat crops had been harvested after the rain.,Passive Control,1,1,The wheat crops had been,harvested,0.69049346,SE,jinaai/jina-embeddings-v5-text-nano
+82,21,The local farmers had been harvesting the corn all week.,Active Control,1,0,The local farmers had been,harvesting,0.65860194,SE,jinaai/jina-embeddings-v5-text-nano
+83,21,The elevator button had been harvesting after the rain.,No-Attraction Violation,0,1,The elevator button had been,harvesting,0.4797812,SE,jinaai/jina-embeddings-v5-text-nano
+84,22,The musical piece was composing by Beethoven in 1799.,Attraction Violation,1,1,The musical piece was,composing,0.62785125,SE,jinaai/jina-embeddings-v5-text-nano
+85,22,The musical piece was composed in a dream.,Passive Control,1,1,The musical piece was,composed,0.6524862,SE,jinaai/jina-embeddings-v5-text-nano
+86,22,Ludwig von Beethoven was composing symphonies as a teenager.,Active Control,1,0,Ludwig von Beethoven was,composing,0.58773,SE,jinaai/jina-embeddings-v5-text-nano
+87,22,The bank had been composing in a dream.,No-Attraction Violation,0,1,The bank had been,composing,0.49990624,SE,jinaai/jina-embeddings-v5-text-nano
+88,23,The old lady's purse had been snatching a kid.,Attraction Violation,1,1,The old lady's purse had been,snatching,0.47736162,SE,jinaai/jina-embeddings-v5-text-nano
+89,23,The old lady's purse had been snatched with speed.,Passive Control,1,1,The old lady's purse had been,snatched,0.5316535,SE,jinaai/jina-embeddings-v5-text-nano
+90,23,The clever dog had been snatching cookies from the table.,Active Control,1,0,The clever dog had been,snatching,0.4863579,SE,jinaai/jina-embeddings-v5-text-nano
+91,23,The quality of Karla's work was snatching victory from the jaws of defeat.,No-Attraction Violation,0,1,The quality of Karla's work was,snatching,0.41967902,SE,jinaai/jina-embeddings-v5-text-nano
+92,24,Olson's bulging suitcase had been packing his assistant.,Attraction Violation,1,1,Olson's bulging suitcase had been,packing,0.6372861,SE,jinaai/jina-embeddings-v5-text-nano
+93,24,Olson's bulging suitcase had been packed for the trip.,Passive Control,1,1,Olson's bulging suitcase had been,packed,0.6302103,SE,jinaai/jina-embeddings-v5-text-nano
+94,24,The excited vacationers had been packing their suitcases when the hurricane hit.,Active Control,1,0,The excited vacationers had been,packing,0.44684595,SE,jinaai/jina-embeddings-v5-text-nano
+95,24,Stormy weather had been packing for the trip.,No-Attraction Violation,0,1,Stormy weather had been,packing,0.45959696,SE,jinaai/jina-embeddings-v5-text-nano
+96,25,Several spelling errors were noticing the careful editor.,Attraction Violation,1,1,Several spelling errors were,noticing,0.5152164,SE,jinaai/jina-embeddings-v5-text-nano
+97,25,Several spelling errors were noticed by the careful editor.,Passive Control,1,1,Several spelling errors were,noticed,0.5721351,SE,jinaai/jina-embeddings-v5-text-nano
+98,25,Brittany's close friends were noticing changes in her personality.,Active Control,1,0,Brittany's close friends were,noticing,0.44056967,SE,jinaai/jina-embeddings-v5-text-nano
+99,25,The final destination had been noticing too late.,No-Attraction Violation,0,1,The final destination had been,noticing,0.47105357,SE,jinaai/jina-embeddings-v5-text-nano
+100,26,An illegal weapon had been smuggling only once.,Attraction Violation,1,1,An illegal weapon had been,smuggling,0.6670837,SE,jinaai/jina-embeddings-v5-text-nano
+101,26,An illegal weapon had been smuggled only once.,Passive Control,1,1,An illegal weapon had been,smuggled,0.69796735,SE,jinaai/jina-embeddings-v5-text-nano
+102,26,The drug dealer had been smuggling heroin into Canada.,Active Control,1,0,The drug dealer had been,smuggling,0.6405129,SE,jinaai/jina-embeddings-v5-text-nano
+103,26,Cleopatra's beauty was smuggling only once.,No-Attraction Violation,0,1,Cleopatra's beauty was,smuggling,0.34245256,SE,jinaai/jina-embeddings-v5-text-nano
+104,27,The leftover food was discarding wastefully.,Attraction Violation,1,1,The leftover food was,discarding,0.5768922,SE,jinaai/jina-embeddings-v5-text-nano
+105,27,The leftover food was discarded wastefully.,Passive Control,1,1,The leftover food was,discarded,0.6278935,SE,jinaai/jina-embeddings-v5-text-nano
+106,27,The campers were discarding the leftover food.,Active Control,1,0,The campers were,discarding,0.37521863,SE,jinaai/jina-embeddings-v5-text-nano
+107,27,The sleek new building was discarding wastefully.,No-Attraction Violation,0,1,The sleek new building was,discarding,0.37535954,SE,jinaai/jina-embeddings-v5-text-nano
+108,28,Thirty pounds of potatoes had been peeling by the cooks.,Attraction Violation,1,1,Thirty pounds of potatoes had been,peeling,0.50497854,SE,jinaai/jina-embeddings-v5-text-nano
+109,28,Thirty pounds of potatoes had been peeled carefully.,Passive Control,1,1,Thirty pounds of potatoes had been,peeled,0.5611197,SE,jinaai/jina-embeddings-v5-text-nano
+110,28,The bored looking cooks had been peeling potatoes for hours.,Active Control,1,0,The bored looking cooks had been,peeling,0.47735947,SE,jinaai/jina-embeddings-v5-text-nano
+111,28,The club's rules had been peeling the sticker off the box.,No-Attraction Violation,0,1,The club's rules had been,peeling,0.48723254,SE,jinaai/jina-embeddings-v5-text-nano
+112,29,The grimy pots and pans had been scrubbing the dishwashers.,Attraction Violation,1,1,The grimy pots and pans had been,scrubbing,0.57871497,SE,jinaai/jina-embeddings-v5-text-nano
+113,29,The grimy pots and pans had been scrubbed by the dishwashers.,Passive Control,1,1,The grimy pots and pans had been,scrubbed,0.60897076,SE,jinaai/jina-embeddings-v5-text-nano
+114,29,The guys in the kitchen had been scrubbing the pots and pans.,Active Control,1,0,The guys in the kitchen had been,scrubbing,0.5242922,SE,jinaai/jina-embeddings-v5-text-nano
+115,29,The stolen artwork had been scrubbing with vigor.,No-Attraction Violation,0,1,The stolen artwork had been,scrubbing,0.48402998,SE,jinaai/jina-embeddings-v5-text-nano
+116,30,The roast lamb had been carving by a servant.,Attraction Violation,1,1,The roast lamb had been,carving,0.44723326,SE,jinaai/jina-embeddings-v5-text-nano
+117,30,The roast lamb had been carved by a servant.,Passive Control,1,1,The roast lamb had been,carved,0.48291028,SE,jinaai/jina-embeddings-v5-text-nano
+118,30,The butcher had been carving the meat.,Active Control,1,0,The butcher had been,carving,0.5683573,SE,jinaai/jina-embeddings-v5-text-nano
+119,30,Janet's houseplants were carving before dinner.,No-Attraction Violation,0,1,Janet's houseplants were,carving,0.44347805,SE,jinaai/jina-embeddings-v5-text-nano
+120,31,Cleopatra's beauty was admiring many people.,Attraction Violation,1,1,Cleopatra's beauty was,admiring,0.53293633,SE,jinaai/jina-embeddings-v5-text-nano
+121,31,Cleopatra's beauty was admired always.,Passive Control,1,1,Cleopatra's beauty was,admired,0.5570724,SE,jinaai/jina-embeddings-v5-text-nano
+122,31,The men were admiring the beautiful woman from a distance.,Active Control,1,0,The men were,admiring,0.5192373,SE,jinaai/jina-embeddings-v5-text-nano
+123,31,An illegal weapon had been admiring always.,No-Attraction Violation,0,1,An illegal weapon had been,admiring,0.45803064,SE,jinaai/jina-embeddings-v5-text-nano
+124,32,A wet snowball had been tossing by the girls through the window.,Attraction Violation,1,1,A wet snowball had been,tossing,0.48155466,SE,jinaai/jina-embeddings-v5-text-nano
+125,32,A wet snowball had been tossed in anger.,Passive Control,1,1,A wet snowball had been,tossed,0.5243604,SE,jinaai/jina-embeddings-v5-text-nano
+126,32,The baseball players had been tossing the ball around the infield.,Active Control,1,0,The baseball players had been,tossing,0.5008413,SE,jinaai/jina-embeddings-v5-text-nano
+127,32,Their secret conversation had been tossing a steak on the grill.,No-Attraction Violation,0,1,Their secret conversation had been,tossing,0.48361176,SE,jinaai/jina-embeddings-v5-text-nano
+128,33,The sealed envelope was opening the judge.,Attraction Violation,1,1,The sealed envelope was,opening,0.5983028,SE,jinaai/jina-embeddings-v5-text-nano
+129,33,The sealed envelope was opened without permission.,Passive Control,1,1,The sealed envelope was,opened,0.6344882,SE,jinaai/jina-embeddings-v5-text-nano
+130,33,Tuxedoed waiters were opening bottles of champagne for the toast.,Active Control,1,0,Tuxedoed waiters were,opening,0.47057,SE,jinaai/jina-embeddings-v5-text-nano
+131,33,The men's faces had been opening without permission.,No-Attraction Violation,0,1,The men's faces had been,opening,0.4875272,SE,jinaai/jina-embeddings-v5-text-nano
+132,34,The man's beard had been shaving twice a day.,Attraction Violation,1,1,The man's beard had been,shaving,0.6474523,SE,jinaai/jina-embeddings-v5-text-nano
+133,34,The man's beard had been shaved twice a day.,Passive Control,1,1,The man's beard had been,shaved,0.6751228,SE,jinaai/jina-embeddings-v5-text-nano
+134,34,His uncle Ralph had been shaving his beard off.,Active Control,1,0,His uncle Ralph had been,shaving,0.46352538,SE,jinaai/jina-embeddings-v5-text-nano
+135,34,The popular amusement park is shaving twice a day.,No-Attraction Violation,0,1,The popular amusement park is,shaving,0.39535913,SE,jinaai/jina-embeddings-v5-text-nano
+136,35,The elevator button had been pressing slowly.,Attraction Violation,1,1,The elevator button had been,pressing,0.63236976,SE,jinaai/jina-embeddings-v5-text-nano
+137,35,The elevator button had been pressed by the attendant.,Passive Control,1,1,The elevator button had been,pressed,0.66938186,SE,jinaai/jina-embeddings-v5-text-nano
+138,35,The attendant had been pressing the buttons.,Active Control,1,0,The attendant had been,pressing,0.49612078,SE,jinaai/jina-embeddings-v5-text-nano
+139,35,The wheat crops had been pressing slowly.,No-Attraction Violation,0,1,The wheat crops had been,pressing,0.42647016,SE,jinaai/jina-embeddings-v5-text-nano
+140,36,The winning lottery numbers had been announcing the TV news.,Attraction Violation,1,1,The winning lottery numbers had been,announcing,0.48845223,SE,jinaai/jina-embeddings-v5-text-nano
+141,36,The winning lottery numbers had been announced by the TV news.,Passive Control,1,1,The winning lottery numbers had been,announced,0.58072925,SE,jinaai/jina-embeddings-v5-text-nano
+142,36,The flight attendant had been announcing the reason for the delay.,Active Control,1,0,The flight attendant had been,announcing,0.47314295,SE,jinaai/jina-embeddings-v5-text-nano
+143,36,The tarnished silverware was announcing on the television.,No-Attraction Violation,0,1,The tarnished silverware was,announcing,0.40183967,SE,jinaai/jina-embeddings-v5-text-nano
+144,37,The victim's body had been identifying at the morgue.,Attraction Violation,1,1,The victim's body had been,identifying,0.52210486,SE,jinaai/jina-embeddings-v5-text-nano
+145,37,The victim's body had been identified by the family members.,Passive Control,1,1,The victim's body had been,identified,0.58989537,SE,jinaai/jina-embeddings-v5-text-nano
+146,37,The laboratory technicians had been identifying the chemical.,Active Control,1,0,The laboratory technicians had been,identifying,0.4937424,SE,jinaai/jina-embeddings-v5-text-nano
+147,37,The movie was identifying rare fish for the divers.,No-Attraction Violation,0,1,The movie was,identifying,0.5077769,SE,jinaai/jina-embeddings-v5-text-nano
+148,38,The hearty meal was devouring by the kids.,Attraction Violation,1,1,The hearty meal was,devouring,0.6207399,SE,jinaai/jina-embeddings-v5-text-nano
+149,38,The hearty meal was devoured with gusto.,Passive Control,1,1,The hearty meal was,devoured,0.65315264,SE,jinaai/jina-embeddings-v5-text-nano
+150,38,The hungry boys were devouring the plate of cookies when Jack arrived.,Active Control,1,0,The hungry boys were,devouring,0.58306164,SE,jinaai/jina-embeddings-v5-text-nano
+151,38,The dusty tabletops were devouring with gusto.,No-Attraction Violation,0,1,The dusty tabletops were,devouring,0.57546705,SE,jinaai/jina-embeddings-v5-text-nano
+152,39,The overgrown shrubs were trimming regularly.,Attraction Violation,1,1,The overgrown shrubs were,trimming,0.5075288,SE,jinaai/jina-embeddings-v5-text-nano
+153,39,The overgrown shrubs were trimmed by a gardener.,Passive Control,1,1,The overgrown shrubs were,trimmed,0.5226743,SE,jinaai/jina-embeddings-v5-text-nano
+154,39,A gardener was trimming the overgrown shrubbery.,Active Control,1,0,A gardener was,trimming,0.47650343,SE,jinaai/jina-embeddings-v5-text-nano
+155,39,The alarm clock had been trimming regularly.,No-Attraction Violation,0,1,The alarm clock had been,trimming,0.46363825,SE,jinaai/jina-embeddings-v5-text-nano
+156,40,Wilson's unreasonable proposal was rejecting by the boss.,Attraction Violation,1,1,Wilson's unreasonable proposal was,rejecting,0.61987907,SE,jinaai/jina-embeddings-v5-text-nano
+157,40,Wilson's unreasonable proposal was rejected at the hospital.,Passive Control,1,1,Wilson's unreasonable proposal was,rejected,0.6287426,SE,jinaai/jina-embeddings-v5-text-nano
+158,40,The admissions committee was rejecting nearly every application.,Active Control,1,0,The admissions committee was,rejecting,0.5710087,SE,jinaai/jina-embeddings-v5-text-nano
+159,40,The rare bird's behavior was rejecting all offers.,No-Attraction Violation,0,1,The rare bird's behavior was,rejecting,0.48848018,SE,jinaai/jina-embeddings-v5-text-nano
+160,41,Hathaway's gigantic fortune had been inheriting by his daughters.,Attraction Violation,1,1,Hathaway's gigantic fortune had been,inheriting,0.51762635,SE,jinaai/jina-embeddings-v5-text-nano
+161,41,Hathaway's gigantic fortune had been inherited by his daughters.,Passive Control,1,1,Hathaway's gigantic fortune had been,inherited,0.54446316,SE,jinaai/jina-embeddings-v5-text-nano
+162,41,Generations of aristocratic Englishmen have been inheriting their fortunes.,Active Control,1,0,Generations of aristocratic Englishmen have been,inheriting,0.5408399,SE,jinaai/jina-embeddings-v5-text-nano
+163,41,The strange mystery had been inheriting the estate from her grandmother.,No-Attraction Violation,0,1,The strange mystery had been,inheriting,0.44297343,SE,jinaai/jina-embeddings-v5-text-nano
+164,42,All of her money had been spending before the wedding.,Attraction Violation,1,1,All of her money had been,spending,0.51074696,SE,jinaai/jina-embeddings-v5-text-nano
+165,42,All of her money had been spent before the wedding.,Passive Control,1,1,All of her money had been,spent,0.60489494,SE,jinaai/jina-embeddings-v5-text-nano
+166,42,The shopping fanatic had been spending all her money in Bloomingdales.,Active Control,1,0,The shopping fanatic had been,spending,0.5269508,SE,jinaai/jina-embeddings-v5-text-nano
+167,42,Patty's overgrown lawn was spending its time on the beach.,No-Attraction Violation,0,1,Patty's overgrown lawn was,spending,0.3636784,SE,jinaai/jina-embeddings-v5-text-nano
+168,43,An appointment was scheduling by the secretary.,Attraction Violation,1,1,An appointment was,scheduling,0.7510912,SE,jinaai/jina-embeddings-v5-text-nano
+169,43,An appointment was scheduled by the secretary.,Passive Control,1,1,An appointment was,scheduled,0.7873281,SE,jinaai/jina-embeddings-v5-text-nano
+170,43,The secretary was scheduling new appointments for the afternoon.,Active Control,1,0,The secretary was,scheduling,0.5634547,SE,jinaai/jina-embeddings-v5-text-nano
+171,43,The legal contract had been scheduling for next week.,No-Attraction Violation,0,1,The legal contract had been,scheduling,0.5377626,SE,jinaai/jina-embeddings-v5-text-nano
+172,44,The men's faces had been photographing by a security camera.,Attraction Violation,1,1,The men's faces had been,photographing,0.43501452,SE,jinaai/jina-embeddings-v5-text-nano
+173,44,The men's faces had been photographed by a security camera.,Passive Control,1,1,The men's faces had been,photographed,0.53542525,SE,jinaai/jina-embeddings-v5-text-nano
+174,44,The intrusive reporter had been photographing the celebrities at the party.,Active Control,1,0,The intrusive reporter had been,photographing,0.5319954,SE,jinaai/jina-embeddings-v5-text-nano
+175,44,The sealed envelope was photographing at the party.,No-Attraction Violation,0,1,The sealed envelope was,photographing,0.45937115,SE,jinaai/jina-embeddings-v5-text-nano
+176,45,The broken television had been repairing the technician.,Attraction Violation,1,1,The broken television had been,repairing,0.61458564,SE,jinaai/jina-embeddings-v5-text-nano
+177,45,The broken television had been repaired by the technician.,Passive Control,1,1,The broken television had been,repaired,0.625264,SE,jinaai/jina-embeddings-v5-text-nano
+178,45,The competent technician had been repairing the television.,Active Control,1,0,The competent technician had been,repairing,0.59846497,SE,jinaai/jina-embeddings-v5-text-nano
+179,45,Larry's note had been repairing the computer's hard drive.,No-Attraction Violation,0,1,Larry's note had been,repairing,0.4889378,SE,jinaai/jina-embeddings-v5-text-nano
+180,46,The alarm clock had been unplugging accidentally.,Attraction Violation,1,1,The alarm clock had been,unplugging,0.52008057,SE,jinaai/jina-embeddings-v5-text-nano
+181,46,The alarm clock had been unplugged late.,Passive Control,1,1,The alarm clock had been,unplugged,0.5146065,SE,jinaai/jina-embeddings-v5-text-nano
+182,46,The frantic woman had been unplugging every electrical device in the house.,Active Control,1,0,The frantic woman had been,unplugging,0.4187863,SE,jinaai/jina-embeddings-v5-text-nano
+183,46,The overgrown shrubs were unplugging accidentally.,No-Attraction Violation,0,1,The overgrown shrubs were,unplugging,0.4376234,SE,jinaai/jina-embeddings-v5-text-nano
+184,47,The car door had been unlocking late at night.,Attraction Violation,1,1,The car door had been,unlocking,0.5318845,SE,jinaai/jina-embeddings-v5-text-nano
+185,47,The car door had been unlocked by the child.,Passive Control,1,1,The car door had been,unlocked,0.5348169,SE,jinaai/jina-embeddings-v5-text-nano
+186,47,The babysitter had been unlocking the back door.,Active Control,1,0,The babysitter had been,unlocking,0.42663375,SE,jinaai/jina-embeddings-v5-text-nano
+187,47,The Queen's 80th birthday was unlocking late at night.,No-Attraction Violation,0,1,The Queen's 80th birthday was,unlocking,0.3778449,SE,jinaai/jina-embeddings-v5-text-nano
+188,48,The portrait of Napoleon had been painting by a Dutch artist.,Attraction Violation,1,1,The portrait of Napoleon had been,painting,0.575927,SE,jinaai/jina-embeddings-v5-text-nano
+189,48,The portrait of Napoleon had been painted by a Dutch artist.,Passive Control,1,1,The portrait of Napoleon had been,painted,0.5891812,SE,jinaai/jina-embeddings-v5-text-nano
+190,48,The French Impressionist artists had been painting with a focus on light and color.,Active Control,1,0,The French Impressionist artists had been,painting,0.62357056,SE,jinaai/jina-embeddings-v5-text-nano
+191,48,A new medication had been painting on Tuesday.,No-Attraction Violation,0,1,A new medication had been,painting,0.42343983,SE,jinaai/jina-embeddings-v5-text-nano
+192,49,The embarrassing allegations had been denying by the mayor.,Attraction Violation,1,1,The embarrassing allegations had been,denying,0.52770096,SE,jinaai/jina-embeddings-v5-text-nano
+193,49,The embarrassing allegations had been denied by the mayor.,Passive Control,1,1,The embarrassing allegations had been,denied,0.5498388,SE,jinaai/jina-embeddings-v5-text-nano
+194,49,The embarassed mayor had been denying allegations of corruption.,Active Control,1,0,The embarassed mayor had been,denying,0.50078434,SE,jinaai/jina-embeddings-v5-text-nano
+195,49,Tamara's birthday gift had been denying the rumor.,No-Attraction Violation,0,1,Tamara's birthday gift had been,denying,0.38147306,SE,jinaai/jina-embeddings-v5-text-nano
+196,50,The noises in the attic had been hearing nightly.,Attraction Violation,1,1,The noises in the attic had been,hearing,0.6430816,SE,jinaai/jina-embeddings-v5-text-nano
+197,50,The noises in the attic had been heard by the boys.,Passive Control,1,1,The noises in the attic had been,heard,0.67659146,SE,jinaai/jina-embeddings-v5-text-nano
+198,50,The frightened campers had been hearing noises in the woods.,Active Control,1,0,The frightened campers had been,hearing,0.3978607,SE,jinaai/jina-embeddings-v5-text-nano
+199,50,A package had been hearing nightly.,No-Attraction Violation,0,1,A package had been,hearing,0.58078164,SE,jinaai/jina-embeddings-v5-text-nano
+200,51,The appetizers had been serving before the meal.,Attraction Violation,1,1,The appetizers had been,serving,0.6280287,SE,jinaai/jina-embeddings-v5-text-nano
+201,51,The appetizers had been served before the meal.,Passive Control,1,1,The appetizers had been,served,0.67532426,SE,jinaai/jina-embeddings-v5-text-nano
+202,51,The waiters had been serving the meal.,Active Control,1,0,The waiters had been,serving,0.66618377,SE,jinaai/jina-embeddings-v5-text-nano
+203,51,The final exams had been serving before the meal.,No-Attraction Violation,0,1,The final exams had been,serving,0.51577324,SE,jinaai/jina-embeddings-v5-text-nano
+204,52,Billy's unruly hair was combing his mother to one side.,Attraction Violation,1,1,Billy's unruly hair was,combing,0.52978367,SE,jinaai/jina-embeddings-v5-text-nano
+205,52,Billy's unruly hair was combed by his mother to one side.,Passive Control,1,1,Billy's unruly hair was,combed,0.5694018,SE,jinaai/jina-embeddings-v5-text-nano
+206,52,The patient barber was combing the boy's hair to one side.,Active Control,1,0,The patient barber was,combing,0.6133518,SE,jinaai/jina-embeddings-v5-text-nano
+207,52,The girl's disease was combing the area for escaped prisoners.,No-Attraction Violation,0,1,The girl's disease was,combing,0.48836467,SE,jinaai/jina-embeddings-v5-text-nano
+208,53,A drawing of the house had been sketching again.,Attraction Violation,1,1,A drawing of the house had been,sketching,0.66491073,SE,jinaai/jina-embeddings-v5-text-nano
+209,53,A drawing of the house had been sketched again.,Passive Control,1,1,A drawing of the house had been,sketched,0.6881235,SE,jinaai/jina-embeddings-v5-text-nano
+210,53,An artist in the studio had been sketching the house.,Active Control,1,0,An artist in the studio had been,sketching,0.57015496,SE,jinaai/jina-embeddings-v5-text-nano
+211,53,The cheap products had been sketching again.,No-Attraction Violation,0,1,The cheap products had been,sketching,0.45600024,SE,jinaai/jina-embeddings-v5-text-nano
+212,54,The simple coffin was burying the villagers.,Attraction Violation,1,1,The simple coffin was,burying,0.63249415,SE,jinaai/jina-embeddings-v5-text-nano
+213,54,The simple coffin was buried at the church.,Passive Control,1,1,The simple coffin was,buried,0.6218716,SE,jinaai/jina-embeddings-v5-text-nano
+214,54,The tribal people were burying their dead.,Active Control,1,0,The tribal people were,burying,0.45444995,SE,jinaai/jina-embeddings-v5-text-nano
+215,54,The vocabulary list was burying at the church.,No-Attraction Violation,0,1,The vocabulary list was,burying,0.50739884,SE,jinaai/jina-embeddings-v5-text-nano
+216,55,The homicide case had been investigating diligently.,Attraction Violation,1,1,The homicide case had been,investigating,0.5597873,SE,jinaai/jina-embeddings-v5-text-nano
+217,55,The homicide case had been investigated by the FBI.,Passive Control,1,1,The homicide case had been,investigated,0.6102809,SE,jinaai/jina-embeddings-v5-text-nano
+218,55,The FBI agents had been investigating the homicide case for weeks.,Active Control,1,0,The FBI agents had been,investigating,0.5510707,SE,jinaai/jina-embeddings-v5-text-nano
+219,55,Martin's tonsils had been investigating the problem.,No-Attraction Violation,0,1,Martin's tonsils had been,investigating,0.43130258,SE,jinaai/jina-embeddings-v5-text-nano
+220,56,Mark's wrinkly shirts were ironing by his mother.,Attraction Violation,1,1,Mark's wrinkly shirts were,ironing,0.57222396,SE,jinaai/jina-embeddings-v5-text-nano
+221,56,Mark's wrinkly shirts were ironed by his mother.,Passive Control,1,1,Mark's wrinkly shirts were,ironed,0.58223534,SE,jinaai/jina-embeddings-v5-text-nano
+222,56,Mark's doting mother was ironing his shirts while he slept.,Active Control,1,0,Mark's doting mother was,ironing,0.405283,SE,jinaai/jina-embeddings-v5-text-nano
+223,56,The firewood had been ironing her dress.,No-Attraction Violation,0,1,The firewood had been,ironing,0.61170393,SE,jinaai/jina-embeddings-v5-text-nano
+224,57,An important lesson had been learning in space.,Attraction Violation,1,1,An important lesson had been,learning,0.63534373,SE,jinaai/jina-embeddings-v5-text-nano
+225,57,An important lesson had been learned in space.,Passive Control,1,1,An important lesson had been,learned,0.68753517,SE,jinaai/jina-embeddings-v5-text-nano
+226,57,The children had been learning Spanish.,Active Control,1,0,The children had been,learning,0.46626395,SE,jinaai/jina-embeddings-v5-text-nano
+227,57,The bathroom floor had been learning in space.,No-Attraction Violation,0,1,The bathroom floor had been,learning,0.35015884,SE,jinaai/jina-embeddings-v5-text-nano
+228,58,The height of the bookcase was measuring by a carpenter.,Attraction Violation,1,1,The height of the bookcase was,measuring,0.5862346,SE,jinaai/jina-embeddings-v5-text-nano
+229,58,The height of the bookcase was measured incorrectly.,Passive Control,1,1,The height of the bookcase was,measured,0.60774535,SE,jinaai/jina-embeddings-v5-text-nano
+230,58,The carpenter was measuring the height of the bookcase.,Active Control,1,0,The carpenter was,measuring,0.52433974,SE,jinaai/jina-embeddings-v5-text-nano
+231,58,An urgent message had been measuring her heart rate.,No-Attraction Violation,0,1,An urgent message had been,measuring,0.54257137,SE,jinaai/jina-embeddings-v5-text-nano
+232,59,Several important topics were discussing despite the weather.,Attraction Violation,1,1,Several important topics were,discussing,0.6373382,SE,jinaai/jina-embeddings-v5-text-nano
+233,59,Several important topics were discussed by the board of trustees.,Passive Control,1,1,Several important topics were,discussed,0.6967456,SE,jinaai/jina-embeddings-v5-text-nano
+234,59,The board members were discussing several important topics.,Active Control,1,0,The board members were,discussing,0.49676275,SE,jinaai/jina-embeddings-v5-text-nano
+235,59,"The fresh, warm bread was discussing despite the weather.",No-Attraction Violation,0,1,"The fresh, warm bread was",discussing,0.3441991,SE,jinaai/jina-embeddings-v5-text-nano
+236,60,The dusty tabletops were wiping thoroughly.,Attraction Violation,1,1,The dusty tabletops were,wiping,0.59402204,SE,jinaai/jina-embeddings-v5-text-nano
+237,60,The dusty tabletops were wiped thoroughly.,Passive Control,1,1,The dusty tabletops were,wiped,0.5960765,SE,jinaai/jina-embeddings-v5-text-nano
+238,60,The tired busboy was wiping for hours.,Active Control,1,0,The tired busboy was,wiping,0.48318636,SE,jinaai/jina-embeddings-v5-text-nano
+239,60,The hearty meal was wiping thoroughly.,No-Attraction Violation,0,1,The hearty meal was,wiping,0.4198376,SE,jinaai/jina-embeddings-v5-text-nano
+240,61,A tiny spy camera was concealing by the agent inside a flowerpot.,Attraction Violation,1,1,A tiny spy camera was,concealing,0.5803258,SE,jinaai/jina-embeddings-v5-text-nano
+241,61,A tiny spy camera was concealed by the agent inside a flowerpot.,Passive Control,1,1,A tiny spy camera was,concealed,0.5962979,SE,jinaai/jina-embeddings-v5-text-nano
+242,61,The sneaky lawyer was concealing the truth.,Active Control,1,0,The sneaky lawyer was,concealing,0.63567334,SE,jinaai/jina-embeddings-v5-text-nano
+243,61,A faint light was concealing their identity.,No-Attraction Violation,0,1,A faint light was,concealing,0.5699333,SE,jinaai/jina-embeddings-v5-text-nano
+244,62,"The fresh, warm bread was slicing by the baker into halves.",Attraction Violation,1,1,"The fresh, warm bread was",slicing,0.48802686,SE,jinaai/jina-embeddings-v5-text-nano
+245,62,"The fresh, warm bread was sliced with love.",Passive Control,1,1,"The fresh, warm bread was",sliced,0.5682035,SE,jinaai/jina-embeddings-v5-text-nano
+246,62,The chef's assistants were slicing the mushrooms for a pie.,Active Control,1,0,The chef's assistants were,slicing,0.4790895,SE,jinaai/jina-embeddings-v5-text-nano
+247,62,Several important topics were slicing with love.,No-Attraction Violation,0,1,Several important topics were,slicing,0.49147457,SE,jinaai/jina-embeddings-v5-text-nano
+248,63,The tarnished silverware was polishing by the butler.,Attraction Violation,1,1,The tarnished silverware was,polishing,0.586415,SE,jinaai/jina-embeddings-v5-text-nano
+249,63,The tarnished silverware was polished by the butler.,Passive Control,1,1,The tarnished silverware was,polished,0.60319614,SE,jinaai/jina-embeddings-v5-text-nano
+250,63,The thorough butler was polishing the doorknobs.,Active Control,1,0,The thorough butler was,polishing,0.53522784,SE,jinaai/jina-embeddings-v5-text-nano
+251,63,The winning lottery numbers had been polishing his shoes.,No-Attraction Violation,0,1,The winning lottery numbers had been,polishing,0.468227,SE,jinaai/jina-embeddings-v5-text-nano
+252,64,Poisonous fumes had been inhaling the firefighters.,Attraction Violation,1,1,Poisonous fumes had been,inhaling,0.59951687,SE,jinaai/jina-embeddings-v5-text-nano
+253,64,Poisonous fumes had been inhaled by the firefighters.,Passive Control,1,1,Poisonous fumes had been,inhaled,0.6354863,SE,jinaai/jina-embeddings-v5-text-nano
+254,64,The firefighters had been inhaling the smoke.,Active Control,1,0,The firefighters had been,inhaling,0.54482317,SE,jinaai/jina-embeddings-v5-text-nano
+255,64,The man's signature was inhaling during the fire.,No-Attraction Violation,0,1,The man's signature was,inhaling,0.51896375,SE,jinaai/jina-embeddings-v5-text-nano
+256,65,A genetic mutation was discovering the scientists.,Attraction Violation,1,1,A genetic mutation was,discovering,0.5224874,SE,jinaai/jina-embeddings-v5-text-nano
+257,65,A genetic mutation was discovered suddenly.,Passive Control,1,1,A genetic mutation was,discovered,0.5755985,SE,jinaai/jina-embeddings-v5-text-nano
+258,65,The excited explorers were discovering ancient artifacts everywhere they looked.,Active Control,1,0,The excited explorers were,discovering,0.56154686,SE,jinaai/jina-embeddings-v5-text-nano
+259,65,The pizza had been discovering new methods for making dough.,No-Attraction Violation,0,1,The pizza had been,discovering,0.4461902,SE,jinaai/jina-embeddings-v5-text-nano
+260,66,The Queen's 80th birthday was celebrating expensively.,Attraction Violation,1,1,The Queen's 80th birthday was,celebrating,0.5513831,SE,jinaai/jina-embeddings-v5-text-nano
+261,66,The Queen's 80th birthday was celebrated by thousands of people in the streets.,Passive Control,1,1,The Queen's 80th birthday was,celebrated,0.5746146,SE,jinaai/jina-embeddings-v5-text-nano
+262,66,Thousands of excited fans were celebrating the Superbowl victory in the streets.,Active Control,1,0,Thousands of excited fans were,celebrating,0.5506837,SE,jinaai/jina-embeddings-v5-text-nano
+263,66,The car door had been celebrating her promotion.,No-Attraction Violation,0,1,The car door had been,celebrating,0.4708323,SE,jinaai/jina-embeddings-v5-text-nano
+264,67,The diagram on the chalkboard had been erasing Mrs. Larson.,Attraction Violation,1,1,The diagram on the chalkboard had been,erasing,0.56440336,SE,jinaai/jina-embeddings-v5-text-nano
+265,67,The diagram on the chalkboard had been erased by Mrs. Larson.,Passive Control,1,1,The diagram on the chalkboard had been,erased,0.55705196,SE,jinaai/jina-embeddings-v5-text-nano
+266,67,Mrs. Larson had been erasing the chalkboard.,Active Control,1,0,Mrs. Larson had been,erasing,0.53064823,SE,jinaai/jina-embeddings-v5-text-nano
+267,67,Food for the homeless had been erasing over and over.,No-Attraction Violation,0,1,Food for the homeless had been,erasing,0.43552494,SE,jinaai/jina-embeddings-v5-text-nano
+268,68,The movie was directing Steven Spielberg.,Attraction Violation,1,1,The movie was,directing,0.60089684,SE,jinaai/jina-embeddings-v5-text-nano
+269,68,The movie was directed professionally.,Passive Control,1,1,The movie was,directed,0.622388,SE,jinaai/jina-embeddings-v5-text-nano
+270,68,Steven Spielberg was directing another blockbuster.,Active Control,1,0,Steven Spielberg was,directing,0.6452521,SE,jinaai/jina-embeddings-v5-text-nano
+271,68,The victim's body had been directing the police.,No-Attraction Violation,0,1,The victim's body had been,directing,0.41457444,SE,jinaai/jina-embeddings-v5-text-nano
+272,69,Theresa's birthday gift had been wrapping yesterday.,Attraction Violation,1,1,Theresa's birthday gift had been,wrapping,0.48170722,SE,jinaai/jina-embeddings-v5-text-nano
+273,69,Theresa's birthday gift had been wrapped yesterday.,Passive Control,1,1,Theresa's birthday gift had been,wrapped,0.53927904,SE,jinaai/jina-embeddings-v5-text-nano
+274,69,Theresa's loving grandmother had been wrapping the presents.,Active Control,1,0,Theresa's loving grandmother had been,wrapping,0.38194814,SE,jinaai/jina-embeddings-v5-text-nano
+275,69,The embarrassing allegations had been wrapping yesterday.,No-Attraction Violation,0,1,The embarrassing allegations had been,wrapping,0.46823344,SE,jinaai/jina-embeddings-v5-text-nano
+276,70,The popular amusement park is visiting by millions of tourists eh year.,Attraction Violation,1,1,The popular amusement park is,visiting,0.5704286,SE,jinaai/jina-embeddings-v5-text-nano
+277,70,The popular amusement park is visited daily.,Passive Control,1,1,The popular amusement park is,visited,0.51524174,SE,jinaai/jina-embeddings-v5-text-nano
+278,70,The tourists had been visiting the amusement park in the morning.,Active Control,1,0,The tourists had been,visiting,0.6821488,SE,jinaai/jina-embeddings-v5-text-nano
+279,70,The man's beard had been visiting a friend in the hospital.,No-Attraction Violation,0,1,The man's beard had been,visiting,0.48553315,SE,jinaai/jina-embeddings-v5-text-nano
+280,71,Ten new trees had been planting on dry land.,Attraction Violation,1,1,Ten new trees had been,planting,0.65135384,SE,jinaai/jina-embeddings-v5-text-nano
+281,71,Ten new trees had been planted by the Forestry Service.,Passive Control,1,1,Ten new trees had been,planted,0.670559,SE,jinaai/jina-embeddings-v5-text-nano
+282,71,The forestry workers had been planting cedar saplings on the hillside.,Active Control,1,0,The forestry workers had been,planting,0.539256,SE,jinaai/jina-embeddings-v5-text-nano
+283,71,The sin had been planting doubt in her mind.,No-Attraction Violation,0,1,The sin had been,planting,0.44455528,SE,jinaai/jina-embeddings-v5-text-nano
+284,72,Food for the homeless had been donating neighborhood residents.,Attraction Violation,1,1,Food for the homeless had been,donating,0.5571176,SE,jinaai/jina-embeddings-v5-text-nano
+285,72,Food for the homeless had been donated many times.,Passive Control,1,1,Food for the homeless had been,donated,0.5865531,SE,jinaai/jina-embeddings-v5-text-nano
+286,72,The wealthy American philanthropist had been donating money to Romanian orphanages.,Active Control,1,0,The wealthy American philanthropist had been,donating,0.5679621,SE,jinaai/jina-embeddings-v5-text-nano
+287,72,The diagram on the chalkboard had been donating blood.,No-Attraction Violation,0,1,The diagram on the chalkboard had been,donating,0.44270357,SE,jinaai/jina-embeddings-v5-text-nano
+288,73,The rare bird's behavior was observing by the biologists.,Attraction Violation,1,1,The rare bird's behavior was,observing,0.5934934,SE,jinaai/jina-embeddings-v5-text-nano
+289,73,The rare bird's behavior was observed by the biologists.,Passive Control,1,1,The rare bird's behavior was,observed,0.57981825,SE,jinaai/jina-embeddings-v5-text-nano
+290,73,The excited bird watchers were observing the rare eagle.,Active Control,1,0,The excited bird watchers were,observing,0.57159716,SE,jinaai/jina-embeddings-v5-text-nano
+291,73,Wilson's unreasonable proposal was observing the stars.,No-Attraction Violation,0,1,Wilson's unreasonable proposal was,observing,0.47440377,SE,jinaai/jina-embeddings-v5-text-nano
+292,74,Stormy weather had been forecasting by the weatherman.,Attraction Violation,1,1,Stormy weather had been,forecasting,0.4596533,SE,jinaai/jina-embeddings-v5-text-nano
+293,74,Stormy weather had been forecasted by the weatherman.,Passive Control,1,1,Stormy weather had been,forecasted,0.56983936,SE,jinaai/jina-embeddings-v5-text-nano
+294,74,The weather service had been forecasting snow for the mountain areas.,Active Control,1,0,The weather service had been,forecasting,0.5721627,SE,jinaai/jina-embeddings-v5-text-nano
+295,74,Olson's bulging suitcase had been forecasting correctly.,No-Attraction Violation,0,1,Olson's bulging suitcase had been,forecasting,0.444891,SE,jinaai/jina-embeddings-v5-text-nano
+296,75,The tragic mistake was regretting by Erika for many years.,Attraction Violation,1,1,The tragic mistake was,regretting,0.66254205,SE,jinaai/jina-embeddings-v5-text-nano
+297,75,The tragic mistake was regretted years later.,Passive Control,1,1,The tragic mistake was,regretted,0.6608061,SE,jinaai/jina-embeddings-v5-text-nano
+298,75,Erika was regretting the mistake.,Active Control,1,0,Erika was,regretting,0.54881305,SE,jinaai/jina-embeddings-v5-text-nano
+299,75,The library books had been regretting their behavior.,No-Attraction Violation,0,1,The library books had been,regretting,0.5080946,SE,jinaai/jina-embeddings-v5-text-nano
+300,76,The stolen artwork had been seizing without warning.,Attraction Violation,1,1,The stolen artwork had been,seizing,0.57496774,SE,jinaai/jina-embeddings-v5-text-nano
+301,76,The stolen artwork had been seized by the border police.,Passive Control,1,1,The stolen artwork had been,seized,0.6273731,SE,jinaai/jina-embeddings-v5-text-nano
+302,76,The police had been seizing shipments of drugs at the border.,Active Control,1,0,The police had been,seizing,0.6115443,SE,jinaai/jina-embeddings-v5-text-nano
+303,76,The grimy pots and pans had been seizing without warning.,No-Attraction Violation,0,1,The grimy pots and pans had been,seizing,0.4594382,SE,jinaai/jina-embeddings-v5-text-nano
+304,77,The value of the jewels was estimating the dealer.,Attraction Violation,1,1,The value of the jewels was,estimating,0.56322473,SE,jinaai/jina-embeddings-v5-text-nano
+305,77,The value of the jewels was estimated by the dealer.,Passive Control,1,1,The value of the jewels was,estimated,0.57182235,SE,jinaai/jina-embeddings-v5-text-nano
+306,77,The jewel expert was estimating the value of the diamond.,Active Control,1,0,The jewel expert was,estimating,0.514514,SE,jinaai/jina-embeddings-v5-text-nano
+307,77,The useful new gadget had been estimating professionally.,No-Attraction Violation,0,1,The useful new gadget had been,estimating,0.5005706,SE,jinaai/jina-embeddings-v5-text-nano
+308,78,Larry's note had been scribbling his wife.,Attraction Violation,1,1,Larry's note had been,scribbling,0.54593277,SE,jinaai/jina-embeddings-v5-text-nano
+309,78,Larry's note had been scribbled with haste.,Passive Control,1,1,Larry's note had been,scribbled,0.62175906,SE,jinaai/jina-embeddings-v5-text-nano
+310,78,Larry's wife had been scribbling a note to him about dinner plans.,Active Control,1,0,Larry's wife had been,scribbling,0.45930853,SE,jinaai/jina-embeddings-v5-text-nano
+311,78,The broken television had been scribbling his thoughts on a napkin.,No-Attraction Violation,0,1,The broken television had been,scribbling,0.46938217,SE,jinaai/jina-embeddings-v5-text-nano
+312,79,Carrie's morning meeting was canceling as expected.,Attraction Violation,1,1,Carrie's morning meeting was,canceling,0.48985007,SE,jinaai/jina-embeddings-v5-text-nano
+313,79,Carrie's morning meeting was canceled by the boss.,Passive Control,1,1,Carrie's morning meeting was,canceled,0.50736403,SE,jinaai/jina-embeddings-v5-text-nano
+314,79,Carrie had been canceling all of her meetings.,Active Control,1,0,Carrie had been,canceling,0.5342461,SE,jinaai/jina-embeddings-v5-text-nano
+315,79,The bubblegum had been canceling as expected.,No-Attraction Violation,0,1,The bubblegum had been,canceling,0.49929568,SE,jinaai/jina-embeddings-v5-text-nano
+316,80,The girl's disease was curing a simple treatment.,Attraction Violation,1,1,The girl's disease was,curing,0.5852211,SE,jinaai/jina-embeddings-v5-text-nano
+317,80,The girl's disease was cured by a simple treatment.,Passive Control,1,1,The girl's disease was,cured,0.5995973,SE,jinaai/jina-embeddings-v5-text-nano
+318,80,The foreign doctors were curing hundreds of villagers of malaria.,Active Control,1,0,The foreign doctors were,curing,0.51121974,SE,jinaai/jina-embeddings-v5-text-nano
+319,80,Billy's unruly hair was curing his cold.,No-Attraction Violation,0,1,Billy's unruly hair was,curing,0.4409844,SE,jinaai/jina-embeddings-v5-text-nano
+320,81,Janet's houseplants were watering too much.,Attraction Violation,1,1,Janet's houseplants were,watering,0.54806536,SE,jinaai/jina-embeddings-v5-text-nano
+321,81,Janet's houseplants were watered by her neighbor.,Passive Control,1,1,Janet's houseplants were,watered,0.5217694,SE,jinaai/jina-embeddings-v5-text-nano
+322,81,The gardener was watering the plants.,Active Control,1,0,The gardener was,watering,0.6239941,SE,jinaai/jina-embeddings-v5-text-nano
+323,81,The roast lamb had been watering too much.,No-Attraction Violation,0,1,The roast lamb had been,watering,0.4036722,SE,jinaai/jina-embeddings-v5-text-nano
+324,82,The useful new gadget had been inventing by a bored waiter.,Attraction Violation,1,1,The useful new gadget had been,inventing,0.6814963,SE,jinaai/jina-embeddings-v5-text-nano
+325,82,The useful new gadget had been invented by a bored waiter.,Passive Control,1,1,The useful new gadget had been,invented,0.71043664,SE,jinaai/jina-embeddings-v5-text-nano
+326,82,The resourceful engineers had been inventing tiny new devices.,Active Control,1,0,The resourceful engineers had been,inventing,0.5915146,SE,jinaai/jina-embeddings-v5-text-nano
+327,82,The value of the jewels was inventing the digital computer.,No-Attraction Violation,0,1,The value of the jewels was,inventing,0.48613206,SE,jinaai/jina-embeddings-v5-text-nano
+328,83,The phone bill had been paying his roommate.,Attraction Violation,1,1,The phone bill had been,paying,0.6294709,SE,jinaai/jina-embeddings-v5-text-nano
+329,83,The phone bill had been paid quickly.,Passive Control,1,1,The phone bill had been,paid,0.6870383,SE,jinaai/jina-embeddings-v5-text-nano
+330,83,Juan and Perry had been paying too much for their apartment.,Active Control,1,0,Juan and Perry had been,paying,0.52542824,SE,jinaai/jina-embeddings-v5-text-nano
+331,83,"The dark, underwater cave was paying attention to the divers.",No-Attraction Violation,0,1,"The dark, underwater cave was",paying,0.34296325,SE,jinaai/jina-embeddings-v5-text-nano
+332,84,The man's signature was forging the lawyers.,Attraction Violation,1,1,The man's signature was,forging,0.54394746,SE,jinaai/jina-embeddings-v5-text-nano
+333,84,The man's signature was forged by the lawyers.,Passive Control,1,1,The man's signature was,forged,0.5676166,SE,jinaai/jina-embeddings-v5-text-nano
+334,84,The con artists were forging the signatures on checks.,Active Control,1,0,The con artists were,forging,0.57582307,SE,jinaai/jina-embeddings-v5-text-nano
+335,84,Poisonous fumes had been forging very well.,No-Attraction Violation,0,1,Poisonous fumes had been,forging,0.5210253,SE,jinaai/jina-embeddings-v5-text-nano
+336,85,The bank had been robbing two masked men.,Attraction Violation,1,1,The bank had been,robbing,0.554205,SE,jinaai/jina-embeddings-v5-text-nano
+337,85,The bank had been robbed repeatedly.,Passive Control,1,1,The bank had been,robbed,0.5984007,SE,jinaai/jina-embeddings-v5-text-nano
+338,85,The clever burglars had been robbing houses in broad daylight.,Active Control,1,0,The clever burglars had been,robbing,0.68614906,SE,jinaai/jina-embeddings-v5-text-nano
+339,85,The musical piece was robbing repeatedly.,No-Attraction Violation,0,1,The musical piece was,robbing,0.48048028,SE,jinaai/jina-embeddings-v5-text-nano
+340,86,An urgent message had been sending by the ambassador to the President.,Attraction Violation,1,1,An urgent message had been,sending,0.69146025,SE,jinaai/jina-embeddings-v5-text-nano
+341,86,An urgent message had been sent again.,Passive Control,1,1,An urgent message had been,sent,0.67634183,SE,jinaai/jina-embeddings-v5-text-nano
+342,86,The Prime Minister had been sending urgent messages to her Ambassador.,Active Control,1,0,The Prime Minister had been,sending,0.47333547,SE,jinaai/jina-embeddings-v5-text-nano
+343,86,The height of the bookcase was sending mixed signals to the carpenter.,No-Attraction Violation,0,1,The height of the bookcase was,sending,0.46657145,SE,jinaai/jina-embeddings-v5-text-nano
+344,87,The sleek new building was designing a team of German architects.,Attraction Violation,1,1,The sleek new building was,designing,0.5441104,SE,jinaai/jina-embeddings-v5-text-nano
+345,87,The sleek new building was designed by a team of German architects.,Passive Control,1,1,The sleek new building was,designed,0.5567975,SE,jinaai/jina-embeddings-v5-text-nano
+346,87,A team of architects had been designing the new building.,Active Control,1,0,A team of architects had been,designing,0.6233909,SE,jinaai/jina-embeddings-v5-text-nano
+347,87,The leftover food was designing with flair.,No-Attraction Violation,0,1,The leftover food was,designing,0.41669592,SE,jinaai/jina-embeddings-v5-text-nano
+348,88,The final exams had been grading in school.,Attraction Violation,1,1,The final exams had been,grading,0.6441246,SE,jinaai/jina-embeddings-v5-text-nano
+349,88,The final exams had been graded in school.,Passive Control,1,1,The final exams had been,graded,0.6422151,SE,jinaai/jina-embeddings-v5-text-nano
+350,88,The professor had been grading the final exams until 4 AM.,Active Control,1,0,The professor had been,grading,0.5951003,SE,jinaai/jina-embeddings-v5-text-nano
+351,88,The appetizers had been grading Iverson's students.,No-Attraction Violation,0,1,The appetizers had been,grading,0.50546247,SE,jinaai/jina-embeddings-v5-text-nano
+352,89,The final destination had been reaching too late.,Attraction Violation,1,1,The final destination had been,reaching,0.58247554,SE,jinaai/jina-embeddings-v5-text-nano
+353,89,The final destination had been reached too late.,Passive Control,1,1,The final destination had been,reached,0.70165515,SE,jinaai/jina-embeddings-v5-text-nano
+354,89,The curious child had been reaching for the cup on the table.,Active Control,1,0,The curious child had been,reaching,0.48841876,SE,jinaai/jina-embeddings-v5-text-nano
+355,89,Several spelling errors were reaching too late.,No-Attraction Violation,0,1,Several spelling errors were,reaching,0.4443798,SE,jinaai/jina-embeddings-v5-text-nano
+356,90,A faint light was perceiving by the rescue workers.,Attraction Violation,1,1,A faint light was,perceiving,0.5759758,SE,jinaai/jina-embeddings-v5-text-nano
+357,90,A faint light was perceived underwater.,Passive Control,1,1,A faint light was,perceived,0.5780012,SE,jinaai/jina-embeddings-v5-text-nano
+358,90,The worried pilot was perceiving a rattling sound in the jet's engine.,Active Control,1,0,The worried pilot was,perceiving,0.4426992,SE,jinaai/jina-embeddings-v5-text-nano
+359,90,A tiny spy camera was perceiving underwater.,No-Attraction Violation,0,1,A tiny spy camera was,perceiving,0.55376,SE,jinaai/jina-embeddings-v5-text-nano
+360,91,The bubblegum had been chewing by the boy.,Attraction Violation,1,1,The bubblegum had been,chewing,0.70835006,SE,jinaai/jina-embeddings-v5-text-nano
+361,91,The bubblegum had been chewed by the boy.,Passive Control,1,1,The bubblegum had been,chewed,0.76524585,SE,jinaai/jina-embeddings-v5-text-nano
+362,91,The hungry dog had been chewing a bone.,Active Control,1,0,The hungry dog had been,chewing,0.49259108,SE,jinaai/jina-embeddings-v5-text-nano
+363,91,Carrie's morning meeting was chewing for a long time.,No-Attraction Violation,0,1,Carrie's morning meeting was,chewing,0.45490447,SE,jinaai/jina-embeddings-v5-text-nano
+364,92,Martin's tonsils had been removing at the hospital.,Attraction Violation,1,1,Martin's tonsils had been,removing,0.5102678,SE,jinaai/jina-embeddings-v5-text-nano
+365,92,Martin's tonsils had been removed at the hospital.,Passive Control,1,1,Martin's tonsils had been,removed,0.5438992,SE,jinaai/jina-embeddings-v5-text-nano
+366,92,The surgeon had been removing the cancerous growth.,Active Control,1,0,The surgeon had been,removing,0.5076673,SE,jinaai/jina-embeddings-v5-text-nano
+367,92,The homicide case had been removing at the hospital.,No-Attraction Violation,0,1,The homicide case had been,removing,0.4719595,SE,jinaai/jina-embeddings-v5-text-nano
+368,93,Mother Theresa's death was mourning millions of people.,Attraction Violation,1,1,Mother Theresa's death was,mourning,0.64799404,SE,jinaai/jina-embeddings-v5-text-nano
+369,93,Mother Theresa's death was mourned by millions of people.,Passive Control,1,1,Mother Theresa's death was,mourned,0.62266976,SE,jinaai/jina-embeddings-v5-text-nano
+370,93,The black-clad women were mourning the death of their brother.,Active Control,1,0,The black-clad women were,mourning,0.4653532,SE,jinaai/jina-embeddings-v5-text-nano
+371,93,Lisa's phone had been mourning the loss of a loved one.,No-Attraction Violation,0,1,Lisa's phone had been,mourning,0.49956894,SE,jinaai/jina-embeddings-v5-text-nano
+372,94,The bathroom floor had been mopping by a janitor.,Attraction Violation,1,1,The bathroom floor had been,mopping,0.6138591,SE,jinaai/jina-embeddings-v5-text-nano
+373,94,The bathroom floor had been mopped in the past.,Passive Control,1,1,The bathroom floor had been,mopped,0.6064702,SE,jinaai/jina-embeddings-v5-text-nano
+374,94,The school janitor had been mopping the bathroom.,Active Control,1,0,The school janitor had been,mopping,0.5790555,SE,jinaai/jina-embeddings-v5-text-nano
+375,94,An important lesson had been mopping in the past.,No-Attraction Violation,0,1,An important lesson had been,mopping,0.41966256,SE,jinaai/jina-embeddings-v5-text-nano
+376,95,The sin had been confessing by the repentant Catholic.,Attraction Violation,1,1,The sin had been,confessing,0.61268795,SE,jinaai/jina-embeddings-v5-text-nano
+377,95,The sin had been confessed on Sunday.,Passive Control,1,1,The sin had been,confessed,0.67024994,SE,jinaai/jina-embeddings-v5-text-nano
+378,95,The repentant Catholic had been confessing his sins.,Active Control,1,0,The repentant Catholic had been,confessing,0.57092667,SE,jinaai/jina-embeddings-v5-text-nano
+379,95,Ten new trees had been confessing on Sunday.,No-Attraction Violation,0,1,Ten new trees had been,confessing,0.41752833,SE,jinaai/jina-embeddings-v5-text-nano
+380,96,The strange mystery had been solving the detectives.,Attraction Violation,1,1,The strange mystery had been,solving,0.5644798,SE,jinaai/jina-embeddings-v5-text-nano
+381,96,The strange mystery had been solved at the station.,Passive Control,1,1,The strange mystery had been,solved,0.6073901,SE,jinaai/jina-embeddings-v5-text-nano
+382,96,The brilliant detective had been solving mysterious crimes for two decades.,Active Control,1,0,The brilliant detective had been,solving,0.51849425,SE,jinaai/jina-embeddings-v5-text-nano
+383,96,Hathaway's gigantic fortune had been solving at the station.,No-Attraction Violation,0,1,Hathaway's gigantic fortune had been,solving,0.4220059,SE,jinaai/jina-embeddings-v5-text-nano
