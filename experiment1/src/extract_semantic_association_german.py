@@ -47,6 +47,11 @@ if __name__ == "__main__":
         {
             "implementation": "SE",
             "model_type": "SentenceEmbedding",
+            "model_name": "aari1995/German_Semantic_V3b",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
             "model_name": "intfloat/multilingual-e5-large",
         },
         {

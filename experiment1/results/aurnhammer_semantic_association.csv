@@ -5279,3 +5279,483 @@
 477,478,Bild,120,B,in seinem Atelier.,2,0.58,1,1.5,1.7,7.0,das,Bild,"Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",0.18178633,SE,sentence-transformers/stsb-xlm-r-multilingual
 478,479,Bild,120,C,in seinem Atelier.,2,0.0,1,6.6,2.3,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",0.3627799,SE,sentence-transformers/stsb-xlm-r-multilingual
 479,480,Bild,120,D,in seinem Atelier.,2,0.0,1,1.5,1.7,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",0.22573276,SE,sentence-transformers/stsb-xlm-r-multilingual
+0,1,Axt,1,A,und hackte die Holzscheite.,0,0.75,1,6.9,3.1,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er das Holz stapelte, die",0.6639117,SE,aari1995/German_Semantic_V3b
+1,2,Axt,1,B,und hackte die Holzscheite.,0,0.67,1,3.1,1.2,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er den Film schaute, die",0.60462815,SE,aari1995/German_Semantic_V3b
+2,3,Axt,1,C,und hackte die Holzscheite.,0,0.0,1,6.9,3.1,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er das Holz stapelte, die",0.57762456,SE,aari1995/German_Semantic_V3b
+3,4,Axt,1,D,und hackte die Holzscheite.,0,0.0,1,3.1,1.2,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er den Film schaute, die",0.54029816,SE,aari1995/German_Semantic_V3b
+4,5,Messer,2,A,und rasiert den Kunden.,0,0.67,1,5.0,5.1,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.62883794,SE,aari1995/German_Semantic_V3b
+5,6,Messer,2,B,und rasiert den Kunden.,0,0.75,1,1.2,1.4,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.5346335,SE,aari1995/German_Semantic_V3b
+6,7,Messer,2,C,und rasiert den Kunden.,0,0.0,1,5.0,5.1,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.5436383,SE,aari1995/German_Semantic_V3b
+7,8,Messer,2,D,und rasiert den Kunden.,0,0.0,1,1.2,1.4,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.4437215,SE,aari1995/German_Semantic_V3b
+8,9,Kaffee,3,A,und gießt die Milch dazu.,0,0.58,0,5.8,2.3,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.50031716,SE,aari1995/German_Semantic_V3b
+9,10,Kaffee,3,B,und gießt die Milch dazu.,0,0.25,0,3.5,3.5,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er das Radio angemacht hat, den",0.52133214,SE,aari1995/German_Semantic_V3b
+10,11,Kaffee,3,C,und gießt die Milch dazu.,0,0.0,0,5.8,2.3,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.49618918,SE,aari1995/German_Semantic_V3b
+11,12,Kaffee,3,D,und gießt die Milch dazu.,0,0.0,0,3.5,3.5,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er das Radio angemacht hat, den",0.49087754,SE,aari1995/German_Semantic_V3b
+12,13,Ofen,4,A,auf 180 Grad.,0,1.0,0,6.0,2.7,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.65428305,SE,aari1995/German_Semantic_V3b
+13,14,Ofen,4,B,auf 180 Grad.,0,0.75,0,2.4,1.3,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.6332373,SE,aari1995/German_Semantic_V3b
+14,15,Ofen,4,C,auf 180 Grad.,0,0.0,0,6.0,2.7,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.5651296,SE,aari1995/German_Semantic_V3b
+15,16,Ofen,4,D,auf 180 Grad.,0,0.08,0,2.4,1.3,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.55240023,SE,aari1995/German_Semantic_V3b
+16,17,Weinflasche,5,A,für die Weinprobe.,0,1.0,1,5.9,1.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Reben geschnitten hat, die",0.71089333,SE,aari1995/German_Semantic_V3b
+17,18,Weinflasche,5,B,für die Weinprobe.,0,1.0,1,2.0,2.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Lohnabrechnungen beendet hat, die",0.66879696,SE,aari1995/German_Semantic_V3b
+18,19,Weinflasche,5,C,für die Weinprobe.,0,0.08,1,5.9,1.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Reben geschnitten hat, die",0.7043528,SE,aari1995/German_Semantic_V3b
+19,20,Weinflasche,5,D,für die Weinprobe.,0,0.0,1,2.0,2.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Lohnabrechnungen beendet hat, die",0.67460513,SE,aari1995/German_Semantic_V3b
+20,21,Ticket,6,A,für die Fahrt.,0,0.33,1,6.7,2.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der den Automaten bedient, das",0.67840004,SE,aari1995/German_Semantic_V3b
+21,22,Ticket,6,B,für die Fahrt.,0,0.33,1,1.3,1.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der die Einkaufstasche abstellt, das",0.6285411,SE,aari1995/German_Semantic_V3b
+22,23,Ticket,6,C,für die Fahrt.,0,0.0,1,6.7,2.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der den Automaten bedient, das",0.6609908,SE,aari1995/German_Semantic_V3b
+23,24,Ticket,6,D,für die Fahrt.,0,0.0,1,1.3,1.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der die Einkaufstasche abstellt, das",0.63045514,SE,aari1995/German_Semantic_V3b
+24,25,Sieg,7,A,mit einer Party.,0,0.5,0,6.8,4.4,6.2,den,Sieg,"Am Abend feiert der Gewinner, der den Pokal erhält, den",0.6179914,SE,aari1995/German_Semantic_V3b
+25,26,Sieg,7,B,mit einer Party.,0,0.75,0,1.8,2.0,6.2,den,Sieg,"Am Abend feiert der Gewinner, der das Eis isst, den",0.54110813,SE,aari1995/German_Semantic_V3b
+26,27,Sieg,7,C,mit einer Party.,0,0.0,0,6.8,4.4,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der den Pokal erhält, den",0.5696236,SE,aari1995/German_Semantic_V3b
+27,28,Sieg,7,D,mit einer Party.,0,0.0,0,1.8,2.0,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der das Eis isst, den",0.5354938,SE,aari1995/German_Semantic_V3b
+28,29,Fisch,8,A,für das Abendessen.,1,0.83,1,7.0,4.9,6.9,den,Fisch,"Endlich fängt der Angler, der den Köder auswarf, den",0.72644514,SE,aari1995/German_Semantic_V3b
+29,30,Fisch,8,B,für das Abendessen.,1,0.83,1,2.0,1.2,6.9,den,Fisch,"Endlich fängt der Angler, der die Zeitung las, den",0.64006567,SE,aari1995/German_Semantic_V3b
+30,31,Fisch,8,C,für das Abendessen.,1,0.0,1,7.0,4.9,1.3,den,Fisch,"Endlich baut der Angler, der den Köder auswarf, den",0.6896804,SE,aari1995/German_Semantic_V3b
+31,32,Fisch,8,D,für das Abendessen.,1,0.0,1,2.0,1.2,1.3,den,Fisch,"Endlich baut der Angler, der die Zeitung las, den",0.57529014,SE,aari1995/German_Semantic_V3b
+32,33,Unkraut,9,A,und leerte den Kompost.,0,0.83,0,6.7,3.3,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der das Beet pflegte, das",0.70080304,SE,aari1995/German_Semantic_V3b
+33,34,Unkraut,9,B,und leerte den Kompost.,0,0.67,0,3.3,1.4,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der die Sonne genoss, das",0.7168689,SE,aari1995/German_Semantic_V3b
+34,35,Unkraut,9,C,und leerte den Kompost.,0,0.0,0,6.7,3.3,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der das Beet pflegte, das",0.6785426,SE,aari1995/German_Semantic_V3b
+35,36,Unkraut,9,D,und leerte den Kompost.,0,0.0,0,3.3,1.4,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der die Sonne genoss, das",0.6387012,SE,aari1995/German_Semantic_V3b
+36,37,Klassenzimmer,10,A,und nimmt ein Stück Kreide.,1,0.75,1,6.8,3.7,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er die Tafel beschreibt, das",0.71345127,SE,aari1995/German_Semantic_V3b
+37,38,Klassenzimmer,10,B,und nimmt ein Stück Kreide.,1,0.75,1,1.9,2.6,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er den Mantel aufhängt, das",0.62472075,SE,aari1995/German_Semantic_V3b
+38,39,Klassenzimmer,10,C,und nimmt ein Stück Kreide.,1,0.0,1,6.8,3.7,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er die Tafel beschreibt, das",0.7180377,SE,aari1995/German_Semantic_V3b
+39,40,Klassenzimmer,10,D,und nimmt ein Stück Kreide.,1,0.0,1,1.9,2.6,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er den Mantel aufhängt, das",0.6280896,SE,aari1995/German_Semantic_V3b
+40,41,Käse,11,A,und gibt Öl in die Pfanne.,0,0.5,1,5.2,4.6,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nudeln kocht, den",0.5600135,SE,aari1995/German_Semantic_V3b
+41,42,Käse,11,B,und gibt Öl in die Pfanne.,0,0.58,1,1.7,1.2,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nachrichten hört, den",0.5669857,SE,aari1995/German_Semantic_V3b
+42,43,Käse,11,C,und gibt Öl in die Pfanne.,0,0.0,1,5.2,4.6,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nudeln kocht, den",0.5532537,SE,aari1995/German_Semantic_V3b
+43,44,Käse,11,D,und gibt Öl in die Pfanne.,0,0.0,1,1.7,1.2,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nachrichten hört, den",0.5462109,SE,aari1995/German_Semantic_V3b
+44,45,Bier,12,A,das zuvor gebraut wurde.,0,0.67,1,3.9,1.2,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.5631358,SE,aari1995/German_Semantic_V3b
+45,46,Bier,12,B,das zuvor gebraut wurde.,0,0.58,1,1.8,2.3,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Boden gewischt hatte, das",0.53685254,SE,aari1995/German_Semantic_V3b
+46,47,Bier,12,C,das zuvor gebraut wurde.,0,0.0,1,3.9,1.2,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.5321218,SE,aari1995/German_Semantic_V3b
+47,48,Bier,12,D,das zuvor gebraut wurde.,0,0.0,1,1.8,2.3,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Boden gewischt hatte, das",0.48333922,SE,aari1995/German_Semantic_V3b
+48,49,Rasen,13,A,hinter der Villa.,0,0.92,1,7.0,5.6,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.69477916,SE,aari1995/German_Semantic_V3b
+49,50,Rasen,13,B,hinter der Villa.,0,0.92,1,2.2,1.9,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.6485282,SE,aari1995/German_Semantic_V3b
+50,51,Rasen,13,C,hinter der Villa.,0,0.0,1,7.0,5.6,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.6075286,SE,aari1995/German_Semantic_V3b
+51,52,Rasen,13,D,hinter der Villa.,0,0.0,1,2.2,1.9,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.5266236,SE,aari1995/German_Semantic_V3b
+52,53,Straße,14,A,und den Bürgersteig.,1,0.42,1,6.5,5.1,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Absperrungen umging, die",0.51525074,SE,aari1995/German_Semantic_V3b
+53,54,Straße,14,B,und den Bürgersteig.,1,0.42,1,5.7,2.0,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Steine schleppte, die",0.55804837,SE,aari1995/German_Semantic_V3b
+54,55,Straße,14,C,und den Bürgersteig.,1,0.08,1,6.5,5.1,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Absperrungen umging, die",0.45627305,SE,aari1995/German_Semantic_V3b
+55,56,Straße,14,D,und den Bürgersteig.,1,0.0,1,5.7,2.0,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Steine schleppte, die",0.48441252,SE,aari1995/German_Semantic_V3b
+56,57,Glocken,15,A,und freute sich.,0,1.0,1,6.7,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.6621731,SE,aari1995/German_Semantic_V3b
+57,58,Glocken,15,B,und freute sich.,0,0.92,1,2.2,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.5895788,SE,aari1995/German_Semantic_V3b
+58,59,Glocken,15,C,und freute sich.,0,0.0,1,6.7,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.5134864,SE,aari1995/German_Semantic_V3b
+59,60,Glocken,15,D,und freute sich.,0,0.0,1,2.2,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.46915627,SE,aari1995/German_Semantic_V3b
+60,61,Wunde,16,A,mit fünf Stichen.,0,0.92,1,6.7,3.3,5.8,die,Wunde,"Rasch näht der Notarzt, der den Verletzten betreut, die",0.7214,SE,aari1995/German_Semantic_V3b
+61,62,Wunde,16,B,mit fünf Stichen.,0,0.92,1,3.2,1.8,5.8,die,Wunde,"Rasch näht der Notarzt, der den Ohrring trägt, die",0.6427435,SE,aari1995/German_Semantic_V3b
+62,63,Wunde,16,C,mit fünf Stichen.,0,0.0,1,6.7,3.3,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Verletzten betreut, die",0.63189125,SE,aari1995/German_Semantic_V3b
+63,64,Wunde,16,D,mit fünf Stichen.,0,0.0,1,3.2,1.8,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Ohrring trägt, die",0.5600754,SE,aari1995/German_Semantic_V3b
+64,65,Hemd,17,A,und die Hose.,0,0.75,1,6.4,1.5,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.5707124,SE,aari1995/German_Semantic_V3b
+65,66,Hemd,17,B,und die Hose.,0,0.67,1,1.4,1.2,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.43186834,SE,aari1995/German_Semantic_V3b
+66,67,Hemd,17,C,und die Hose.,0,0.0,1,6.4,1.5,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.494807,SE,aari1995/German_Semantic_V3b
+67,68,Hemd,17,D,und die Hose.,0,0.0,1,1.4,1.2,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.4387295,SE,aari1995/German_Semantic_V3b
+68,69,Auto,18,A,und übergibt es an den Kunden.,1,0.58,0,7.0,3.5,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.5456229,SE,aari1995/German_Semantic_V3b
+69,70,Auto,18,B,und übergibt es an den Kunden.,1,0.75,0,5.0,3.1,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.58242285,SE,aari1995/German_Semantic_V3b
+70,71,Auto,18,C,und übergibt es an den Kunden.,1,0.0,0,7.0,3.5,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.5527324,SE,aari1995/German_Semantic_V3b
+71,72,Auto,18,D,und übergibt es an den Kunden.,1,0.0,0,5.0,3.1,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.56813806,SE,aari1995/German_Semantic_V3b
+72,73,Teig,19,A,für das Brot.,2,1.0,1,6.9,6.9,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Kuchen backt, den",0.777353,SE,aari1995/German_Semantic_V3b
+73,74,Teig,19,B,für das Brot.,2,1.0,1,1.5,1.0,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Stammgast begrüßt, den",0.5848921,SE,aari1995/German_Semantic_V3b
+74,75,Teig,19,C,für das Brot.,2,0.0,1,6.9,6.9,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Kuchen backt, den",0.67167974,SE,aari1995/German_Semantic_V3b
+75,76,Teig,19,D,für das Brot.,2,0.0,1,1.5,1.0,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Stammgast begrüßt, den",0.52514714,SE,aari1995/German_Semantic_V3b
+76,77,Steak,20,A,und die Beilagen.,0,0.67,0,4.7,2.4,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Kohle anzündet, das",0.54968405,SE,aari1995/German_Semantic_V3b
+77,78,Steak,20,B,und die Beilagen.,0,0.83,0,1.4,1.1,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Mücke verscheucht, das",0.56876916,SE,aari1995/German_Semantic_V3b
+78,79,Steak,20,C,und die Beilagen.,0,0.0,0,4.7,2.4,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Kohle anzündet, das",0.52507055,SE,aari1995/German_Semantic_V3b
+79,80,Steak,20,D,und die Beilagen.,0,0.0,0,1.4,1.1,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Mücke verscheucht, das",0.52303606,SE,aari1995/German_Semantic_V3b
+80,81,Feuer,21,A,und rennt weg.,0,0.58,0,6.6,1.5,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der das Streichholz fallengelassen hat, das",0.76487625,SE,aari1995/German_Semantic_V3b
+81,82,Feuer,21,B,und rennt weg.,0,1.0,0,3.3,3.0,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der die Treppe hochgeklettert ist, das",0.7495269,SE,aari1995/German_Semantic_V3b
+82,83,Feuer,21,C,und rennt weg.,0,0.0,0,6.6,1.5,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der das Streichholz fallengelassen hat, das",0.6984153,SE,aari1995/German_Semantic_V3b
+83,84,Feuer,21,D,und rennt weg.,0,0.0,0,3.3,3.0,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der die Treppe hochgeklettert ist, das",0.6836164,SE,aari1995/German_Semantic_V3b
+84,85,Haare,22,A,und holt den Föhn.,0,0.92,1,6.5,3.9,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er die Kopfhaut massiert hat, die",0.6702223,SE,aari1995/German_Semantic_V3b
+85,86,Haare,22,B,und holt den Föhn.,0,1.0,1,1.0,1.0,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.57041544,SE,aari1995/German_Semantic_V3b
+86,87,Haare,22,C,und holt den Föhn.,0,0.17,1,6.5,3.9,1.2,die,Haare,"Nun speichert der Friseur, nachdem er die Kopfhaut massiert hat, die",0.6402178,SE,aari1995/German_Semantic_V3b
+87,88,Haare,22,D,und holt den Föhn.,0,0.0,1,1.0,1.0,1.2,die,Haare,"Nun speichert der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.55818224,SE,aari1995/German_Semantic_V3b
+88,89,Bleistift,23,A,und machte sich wieder an die Arbeit.,0,1.0,1,6.0,3.3,6.7,den,Bleistift,"Flink spitzte der Zeichner, der die Karikatur entwarf, den",0.66836184,SE,aari1995/German_Semantic_V3b
+89,90,Bleistift,23,B,und machte sich wieder an die Arbeit.,0,1.0,1,2.3,1.6,6.7,den,Bleistift,"Flink spitzte der Zeichner, der den Atlas öffnete, den",0.6200454,SE,aari1995/German_Semantic_V3b
+90,91,Bleistift,23,C,und machte sich wieder an die Arbeit.,0,0.0,1,6.0,3.3,1.3,den,Bleistift,"Flink knotete der Zeichner, der die Karikatur entwarf, den",0.64106894,SE,aari1995/German_Semantic_V3b
+91,92,Bleistift,23,D,und machte sich wieder an die Arbeit.,0,0.0,1,2.3,1.6,1.3,den,Bleistift,"Flink knotete der Zeichner, der den Atlas öffnete, den",0.5946584,SE,aari1995/German_Semantic_V3b
+92,93,Patienten,24,A,gegen Tetanus.,0,0.25,0,6.7,2.0,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Spritze befüllt hat, den",0.61386865,SE,aari1995/German_Semantic_V3b
+93,94,Patienten,24,B,gegen Tetanus.,0,0.42,0,2.1,1.3,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Schublade geschlossen hat, den",0.57600373,SE,aari1995/German_Semantic_V3b
+94,95,Patienten,24,C,gegen Tetanus.,0,0.0,0,6.7,2.0,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Spritze befüllt hat, den",0.5837507,SE,aari1995/German_Semantic_V3b
+95,96,Patienten,24,D,gegen Tetanus.,0,0.0,0,2.1,1.3,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Schublade geschlossen hat, den",0.55195296,SE,aari1995/German_Semantic_V3b
+96,97,Leiche,25,A,in der Leichenhalle.,0,0.75,1,6.6,1.5,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.685334,SE,aari1995/German_Semantic_V3b
+97,98,Leiche,25,B,in der Leichenhalle.,0,0.75,1,2.6,1.2,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.62872255,SE,aari1995/German_Semantic_V3b
+98,99,Leiche,25,C,in der Leichenhalle.,0,0.0,1,6.6,1.5,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.6788726,SE,aari1995/German_Semantic_V3b
+99,100,Leiche,25,D,in der Leichenhalle.,0,0.0,1,2.6,1.2,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.594535,SE,aari1995/German_Semantic_V3b
+100,101,Buch,26,A,für den Fan.,1,1.0,1,6.7,3.3,6.7,das,Buch,"Am Nachmittag signiert der Autor, der die Geschichte erfunden hat, das",0.6253243,SE,aari1995/German_Semantic_V3b
+101,102,Buch,26,B,für den Fan.,1,0.92,1,1.8,1.5,6.7,das,Buch,"Am Nachmittag signiert der Autor, der den Vorhang zugezogen hat, das",0.56661415,SE,aari1995/German_Semantic_V3b
+102,103,Buch,26,C,für den Fan.,1,0.0,1,6.7,3.3,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der die Geschichte erfunden hat, das",0.6115819,SE,aari1995/German_Semantic_V3b
+103,104,Buch,26,D,für den Fan.,1,0.0,1,1.8,1.5,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der den Vorhang zugezogen hat, das",0.53078526,SE,aari1995/German_Semantic_V3b
+104,105,Gäste,27,A,und überreichte ihnen die Schlüssel.,2,1.0,1,4.7,1.4,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Koffer stapelte, die",0.57899654,SE,aari1995/German_Semantic_V3b
+105,106,Gäste,27,B,und überreichte ihnen die Schlüssel.,2,0.92,1,1.4,1.6,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Fische räucherte, die",0.58229625,SE,aari1995/German_Semantic_V3b
+106,107,Gäste,27,C,und überreichte ihnen die Schlüssel.,2,0.0,1,4.7,1.4,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Koffer stapelte, die",0.4835365,SE,aari1995/German_Semantic_V3b
+107,108,Gäste,27,D,und überreichte ihnen die Schlüssel.,2,0.0,1,1.4,1.6,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Fische räucherte, die",0.48133034,SE,aari1995/German_Semantic_V3b
+108,109,Baum,28,A,neben der Schule.,0,0.92,1,5.9,1.3,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der die Säge gestartet hat, den",0.52194,SE,aari1995/German_Semantic_V3b
+109,110,Baum,28,B,neben der Schule.,0,0.83,1,2.8,1.9,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der den Transporter geparkt hat, den",0.4765619,SE,aari1995/German_Semantic_V3b
+110,111,Baum,28,C,neben der Schule.,0,0.0,1,5.9,1.3,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der die Säge gestartet hat, den",0.5178572,SE,aari1995/German_Semantic_V3b
+111,112,Baum,28,D,neben der Schule.,0,0.0,1,2.8,1.9,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der den Transporter geparkt hat, den",0.42620736,SE,aari1995/German_Semantic_V3b
+112,113,Zigarre,29,A,und schlenderte über den Marktplatz.,2,1.0,1,6.2,3.2,6.9,die,Zigarre,"Langsam paffte der Kubaner, der den Rauchring blies, die",0.7206301,SE,aari1995/German_Semantic_V3b
+113,114,Zigarre,29,B,und schlenderte über den Marktplatz.,2,1.0,1,2.0,1.3,6.9,die,Zigarre,"Langsam paffte der Kubaner, der die Straßenbahn verpasste, die",0.48398152,SE,aari1995/German_Semantic_V3b
+114,115,Zigarre,29,C,und schlenderte über den Marktplatz.,2,0.08,1,6.2,3.2,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der den Rauchring blies, die",0.6825685,SE,aari1995/German_Semantic_V3b
+115,116,Zigarre,29,D,und schlenderte über den Marktplatz.,2,0.08,1,2.0,1.3,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der die Straßenbahn verpasste, die",0.49191555,SE,aari1995/German_Semantic_V3b
+116,117,Schnitzel,30,A,für das Gericht.,0,0.58,0,6.0,1.2,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.7475139,SE,aari1995/German_Semantic_V3b
+117,118,Schnitzel,30,B,für das Gericht.,0,0.83,0,1.3,1.5,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.6800846,SE,aari1995/German_Semantic_V3b
+118,119,Schnitzel,30,C,für das Gericht.,0,0.0,0,6.0,1.2,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.6935597,SE,aari1995/German_Semantic_V3b
+119,120,Schnitzel,30,D,für das Gericht.,0,0.0,0,1.3,1.5,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.5910871,SE,aari1995/German_Semantic_V3b
+120,121,Kuchen,31,A,für die Geburtstagsfeier.,1,0.92,0,6.9,5.3,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der die Backform eingefettet hat, den",0.76156735,SE,aari1995/German_Semantic_V3b
+121,122,Kuchen,31,B,für die Geburtstagsfeier.,1,0.42,0,5.4,1.6,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der den Tisch abgewischt hat, den",0.6021205,SE,aari1995/German_Semantic_V3b
+122,123,Kuchen,31,C,für die Geburtstagsfeier.,1,0.0,0,6.9,5.3,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der die Backform eingefettet hat, den",0.74782276,SE,aari1995/German_Semantic_V3b
+123,124,Kuchen,31,D,für die Geburtstagsfeier.,1,0.0,0,5.4,1.6,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der den Tisch abgewischt hat, den",0.60503894,SE,aari1995/German_Semantic_V3b
+124,125,Kette,32,A,und die Bremsen.,0,0.83,0,4.9,2.0,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.50440335,SE,aari1995/German_Semantic_V3b
+125,126,Kette,32,B,und die Bremsen.,0,0.58,0,1.2,1.1,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Limonade trank, die",0.45171392,SE,aari1995/German_Semantic_V3b
+126,127,Kette,32,C,und die Bremsen.,0,0.0,0,4.9,2.0,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.46673185,SE,aari1995/German_Semantic_V3b
+127,128,Kette,32,D,und die Bremsen.,0,0.0,0,1.2,1.1,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor die Limonade trank, die",0.47038606,SE,aari1995/German_Semantic_V3b
+128,129,Brief,33,A,an die Agentur.,0,0.92,1,6.8,1.3,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Postamt aufgeschlossen hat, den",0.6543977,SE,aari1995/German_Semantic_V3b
+129,130,Brief,33,B,an die Agentur.,0,1.0,1,1.5,3.7,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Mittagessen bestellt hat, den",0.6393188,SE,aari1995/German_Semantic_V3b
+130,131,Brief,33,C,an die Agentur.,0,0.0,1,6.8,1.3,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Postamt aufgeschlossen hat, den",0.63641214,SE,aari1995/German_Semantic_V3b
+131,132,Brief,33,D,an die Agentur.,0,0.0,1,1.5,3.7,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Mittagessen bestellt hat, den",0.6097887,SE,aari1995/German_Semantic_V3b
+132,133,Berg,34,A,und stellt sein Zelt auf.,1,0.75,0,6.4,3.2,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er das Tal durchquert hat, den",0.6397637,SE,aari1995/German_Semantic_V3b
+133,134,Berg,34,B,und stellt sein Zelt auf.,1,0.92,0,1.4,1.5,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.59566057,SE,aari1995/German_Semantic_V3b
+134,135,Berg,34,C,und stellt sein Zelt auf.,1,0.0,0,6.4,3.2,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er das Tal durchquert hat, den",0.5241308,SE,aari1995/German_Semantic_V3b
+135,136,Berg,34,D,und stellt sein Zelt auf.,1,0.0,0,1.4,1.5,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.49889,SE,aari1995/German_Semantic_V3b
+136,137,Befehl,35,A,zum Abmarsch.,0,0.92,0,6.0,7.0,6.6,den,Befehl,"Bedächtig erteilt der General, der die Rekruten kommandiert, den",0.7359805,SE,aari1995/German_Semantic_V3b
+137,138,Befehl,35,B,zum Abmarsch.,0,0.75,0,1.7,2.4,6.6,den,Befehl,"Bedächtig erteilt der General, der die Getränke einschenkt, den",0.65858483,SE,aari1995/German_Semantic_V3b
+138,139,Befehl,35,C,zum Abmarsch.,0,0.0,0,6.0,7.0,1.4,den,Befehl,"Bedächtig biegt der General, der die Rekruten kommandiert, den",0.6730264,SE,aari1995/German_Semantic_V3b
+139,140,Befehl,35,D,zum Abmarsch.,0,0.0,0,1.7,2.4,1.4,den,Befehl,"Bedächtig biegt der General, der die Getränke einschenkt, den",0.6002725,SE,aari1995/German_Semantic_V3b
+140,141,Wand,36,A,des Büros.,0,0.5,0,7.0,5.5,6.4,die,Wand,"Sofort streicht der Maler, nachdem er die Tapete angebracht hat, die",0.62018204,SE,aari1995/German_Semantic_V3b
+141,142,Wand,36,B,des Büros.,0,0.67,0,1.5,1.3,6.4,die,Wand,"Sofort streicht der Maler, nachdem er den Hund gefüttert hat, die",0.4611537,SE,aari1995/German_Semantic_V3b
+142,143,Wand,36,C,des Büros.,0,0.08,0,7.0,5.5,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er die Tapete angebracht hat, die",0.650363,SE,aari1995/German_Semantic_V3b
+143,144,Wand,36,D,des Büros.,0,0.0,0,1.5,1.3,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er den Hund gefüttert hat, die",0.44844648,SE,aari1995/German_Semantic_V3b
+144,145,Hammer,37,A,auf das Metall.,0,1.0,0,6.5,1.9,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Amboss aufgestellt hat, den",0.7757831,SE,aari1995/German_Semantic_V3b
+145,146,Hammer,37,B,auf das Metall.,0,0.83,0,2.9,3.8,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Stuhl weggestellt hat, den",0.62603396,SE,aari1995/German_Semantic_V3b
+146,147,Hammer,37,C,auf das Metall.,0,0.0,0,6.5,1.9,1.2,den,Hammer,"Direkt speichert der Schmied, der den Amboss aufgestellt hat, den",0.7255978,SE,aari1995/German_Semantic_V3b
+147,148,Hammer,37,D,auf das Metall.,0,0.0,0,2.9,3.8,1.2,den,Hammer,"Direkt speichert der Schmied, der den Stuhl weggestellt hat, den",0.6271079,SE,aari1995/German_Semantic_V3b
+148,149,Land,38,A,im Norden.,1,0.33,0,6.6,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der die Reise unternahm, das",0.54355985,SE,aari1995/German_Semantic_V3b
+149,150,Land,38,B,im Norden.,1,0.5,0,2.4,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der den Gesang vernahm, das",0.4979239,SE,aari1995/German_Semantic_V3b
+150,151,Land,38,C,im Norden.,1,0.0,0,6.6,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der die Reise unternahm, das",0.52748513,SE,aari1995/German_Semantic_V3b
+151,152,Land,38,D,im Norden.,1,0.0,0,2.4,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der den Gesang vernahm, das",0.47236305,SE,aari1995/German_Semantic_V3b
+152,153,Stab,39,A,und gab den Takt an.,0,0.42,1,1.9,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Tempo wechselte, den",0.64250165,SE,aari1995/German_Semantic_V3b
+153,154,Stab,39,B,und gab den Takt an.,0,0.5,1,1.0,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Gähnen unterdrückte, den",0.5908175,SE,aari1995/German_Semantic_V3b
+154,155,Stab,39,C,und gab den Takt an.,0,0.0,1,1.9,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Tempo wechselte, den",0.60645884,SE,aari1995/German_Semantic_V3b
+155,156,Stab,39,D,und gab den Takt an.,0,0.0,1,1.0,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Gähnen unterdrückte, den",0.54732233,SE,aari1995/German_Semantic_V3b
+156,157,Bart,40,A,des Mannes.,2,0.58,0,5.4,1.3,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.6062423,SE,aari1995/German_Semantic_V3b
+157,158,Bart,40,B,des Mannes.,2,0.25,0,1.2,1.0,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.5561884,SE,aari1995/German_Semantic_V3b
+158,159,Bart,40,C,des Mannes.,2,0.0,0,5.4,1.3,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.5941868,SE,aari1995/German_Semantic_V3b
+159,160,Bart,40,D,des Mannes.,2,0.0,0,1.2,1.0,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.54065955,SE,aari1995/German_Semantic_V3b
+160,161,Geschirr,41,A,und die Brettchen.,0,0.5,1,6.7,4.7,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er den Tisch wischte, das",0.6722429,SE,aari1995/German_Semantic_V3b
+161,162,Geschirr,41,B,und die Brettchen.,0,0.42,1,1.2,1.2,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er das Taxi rief, das",0.5771226,SE,aari1995/German_Semantic_V3b
+162,163,Geschirr,41,C,und die Brettchen.,0,0.0,1,6.7,4.7,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er den Tisch wischte, das",0.6584983,SE,aari1995/German_Semantic_V3b
+163,164,Geschirr,41,D,und die Brettchen.,0,0.0,1,1.2,1.2,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er das Taxi rief, das",0.54059243,SE,aari1995/German_Semantic_V3b
+164,165,Schloss,42,A,und stiehlt die Wertsachen.,0,0.25,0,7.0,1.8,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der den Zahlencode erraten hat, das",0.557576,SE,aari1995/German_Semantic_V3b
+165,166,Schloss,42,B,und stiehlt die Wertsachen.,0,0.5,0,2.6,1.5,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der die Akte durchblättert hat, das",0.561997,SE,aari1995/German_Semantic_V3b
+166,167,Schloss,42,C,und stiehlt die Wertsachen.,0,0.0,0,7.0,1.8,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der den Zahlencode erraten hat, das",0.5239782,SE,aari1995/German_Semantic_V3b
+167,168,Schloss,42,D,und stiehlt die Wertsachen.,0,0.0,0,2.6,1.5,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der die Akte durchblättert hat, das",0.5169009,SE,aari1995/German_Semantic_V3b
+168,169,Zwiebeln,43,A,und den Knoblauch.,0,0.25,1,5.7,2.3,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er die Suppe umrührte, die",0.5573272,SE,aari1995/German_Semantic_V3b
+169,170,Zwiebeln,43,B,und den Knoblauch.,0,0.33,1,1.3,1.1,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er das Radio einschaltete, die",0.5318613,SE,aari1995/German_Semantic_V3b
+170,171,Zwiebeln,43,C,und den Knoblauch.,0,0.0,1,5.7,2.3,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er die Suppe umrührte, die",0.5266753,SE,aari1995/German_Semantic_V3b
+171,172,Zwiebeln,43,D,und den Knoblauch.,0,0.0,1,1.3,1.1,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er das Radio einschaltete, die",0.51350635,SE,aari1995/German_Semantic_V3b
+172,173,Wachs,44,A,und fuhr mit der Arbeit fort.,0,0.83,1,6.7,2.3,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.63620234,SE,aari1995/German_Semantic_V3b
+173,174,Wachs,44,B,und fuhr mit der Arbeit fort.,0,0.83,1,1.5,1.4,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.6427461,SE,aari1995/German_Semantic_V3b
+174,175,Wachs,44,C,und fuhr mit der Arbeit fort.,0,0.0,1,6.7,2.3,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.5962705,SE,aari1995/German_Semantic_V3b
+175,176,Wachs,44,D,und fuhr mit der Arbeit fort.,0,0.0,1,1.5,1.4,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.60353595,SE,aari1995/German_Semantic_V3b
+176,177,Cocktail,45,A,für den Touristen.,0,0.5,0,6.2,1.4,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Wodka geöffnet hatte, den",0.6877873,SE,aari1995/German_Semantic_V3b
+177,178,Cocktail,45,B,für den Touristen.,0,0.83,0,1.3,1.0,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Boden gefegt hatte, den",0.63970107,SE,aari1995/German_Semantic_V3b
+178,179,Cocktail,45,C,für den Touristen.,0,0.0,0,6.2,1.4,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Wodka geöffnet hatte, den",0.6199134,SE,aari1995/German_Semantic_V3b
+179,180,Cocktail,45,D,für den Touristen.,0,0.08,0,1.3,1.0,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Boden gefegt hatte, den",0.59176195,SE,aari1995/German_Semantic_V3b
+180,181,Orchester,46,A,und das Streichquartett.,0,0.25,1,6.8,3.6,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der das Konzert eröffnet hat, das",0.6676994,SE,aari1995/German_Semantic_V3b
+181,182,Orchester,46,B,und das Streichquartett.,0,0.25,1,1.6,1.4,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der die Unterschriften gesammelt hat, das",0.62389314,SE,aari1995/German_Semantic_V3b
+182,183,Orchester,46,C,und das Streichquartett.,0,0.0,1,6.8,3.6,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der das Konzert eröffnet hat, das",0.6788942,SE,aari1995/German_Semantic_V3b
+183,184,Orchester,46,D,und das Streichquartett.,0,0.0,1,1.6,1.4,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der die Unterschriften gesammelt hat, das",0.54049677,SE,aari1995/German_Semantic_V3b
+184,185,Wort,47,A,und notiert es.,3,0.83,0,6.3,3.6,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.56806725,SE,aari1995/German_Semantic_V3b
+185,186,Wort,47,B,und notiert es.,3,0.67,0,3.0,2.7,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.52917016,SE,aari1995/German_Semantic_V3b
+186,187,Wort,47,C,und notiert es.,3,0.0,0,6.3,3.6,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.56014395,SE,aari1995/German_Semantic_V3b
+187,188,Wort,47,D,und notiert es.,3,0.0,0,3.0,2.7,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.47455248,SE,aari1995/German_Semantic_V3b
+188,189,Weide,48,A,mit einem Draht.,0,0.67,0,6.7,5.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der die Schafe gehütet hat, die",0.5881744,SE,aari1995/German_Semantic_V3b
+189,190,Weide,48,B,mit einem Draht.,0,0.42,0,1.4,1.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der das Mittagessen vergessen hat, die",0.5640341,SE,aari1995/German_Semantic_V3b
+190,191,Weide,48,C,mit einem Draht.,0,0.0,0,6.7,5.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der die Schafe gehütet hat, die",0.5572882,SE,aari1995/German_Semantic_V3b
+191,192,Weide,48,D,mit einem Draht.,0,0.0,0,1.4,1.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der das Mittagessen vergessen hat, die",0.5244294,SE,aari1995/German_Semantic_V3b
+192,193,Predigt,49,A,für die Gemeinde.,0,0.25,0,6.2,2.1,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.7840135,SE,aari1995/German_Semantic_V3b
+193,194,Predigt,49,B,für die Gemeinde.,0,0.5,0,1.6,2.9,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.69083005,SE,aari1995/German_Semantic_V3b
+194,195,Predigt,49,C,für die Gemeinde.,0,0.0,0,6.2,2.1,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.6754459,SE,aari1995/German_Semantic_V3b
+195,196,Predigt,49,D,für die Gemeinde.,0,0.0,0,1.6,2.9,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.6490484,SE,aari1995/German_Semantic_V3b
+196,197,Wohnung,50,A,mit neuen Möbeln.,0,0.5,0,7.0,2.7,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der den Mieter aufgenommen hatte, die",0.74545133,SE,aari1995/German_Semantic_V3b
+197,198,Wohnung,50,B,mit neuen Möbeln.,0,0.75,0,4.7,3.6,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der die Überweisung erhalten hatte, die",0.6380461,SE,aari1995/German_Semantic_V3b
+198,199,Wohnung,50,C,mit neuen Möbeln.,0,0.0,0,7.0,2.7,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der den Mieter aufgenommen hatte, die",0.7047224,SE,aari1995/German_Semantic_V3b
+199,200,Wohnung,50,D,mit neuen Möbeln.,0,0.0,0,4.7,3.6,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der die Überweisung erhalten hatte, die",0.58257335,SE,aari1995/German_Semantic_V3b
+200,201,Abzug,51,A,und trifft das Opfer.,2,0.5,0,3.2,4.4,5.9,den,Abzug,"Sofort betätigt der Killer, der das Ziel anvisiert hat, den",0.4947411,SE,aari1995/German_Semantic_V3b
+201,202,Abzug,51,B,und trifft das Opfer.,2,0.33,0,1.4,3.0,5.9,den,Abzug,"Sofort betätigt der Killer, der den Tee abgestellt hat, den",0.62867576,SE,aari1995/German_Semantic_V3b
+202,203,Abzug,51,C,und trifft das Opfer.,2,0.0,0,3.2,4.4,1.6,den,Abzug,"Sofort knickt der Killer, der das Ziel anvisiert hat, den",0.5205221,SE,aari1995/German_Semantic_V3b
+203,204,Abzug,51,D,und trifft das Opfer.,2,0.0,0,1.4,3.0,1.6,den,Abzug,"Sofort knickt der Killer, der den Tee abgestellt hat, den",0.6428157,SE,aari1995/German_Semantic_V3b
+204,205,Paket,52,A,mit der Arbeitskleidung.,0,0.42,1,6.7,4.4,6.5,das,Paket,"Heute überbringt der Bote, als er den Empfänger angetroffen hat, das",0.64775103,SE,aari1995/German_Semantic_V3b
+205,206,Paket,52,B,mit der Arbeitskleidung.,0,0.33,1,3.6,1.2,6.5,das,Paket,"Heute überbringt der Bote, als er das Foyer durchquert hat, das",0.5680489,SE,aari1995/German_Semantic_V3b
+206,207,Paket,52,C,mit der Arbeitskleidung.,0,0.0,1,6.7,4.4,1.3,das,Paket,"Heute erntet der Bote, als er den Empfänger angetroffen hat, das",0.66241235,SE,aari1995/German_Semantic_V3b
+207,208,Paket,52,D,mit der Arbeitskleidung.,0,0.0,1,3.6,1.2,1.3,das,Paket,"Heute erntet der Bote, als er das Foyer durchquert hat, das",0.55006874,SE,aari1995/German_Semantic_V3b
+208,209,Tor,53,A,und jubelte über seinen Erfolg.,3,0.92,0,6.8,3.4,6.9,das,Tor,"Schnell schoss der Fußballspieler, der das Fußballfeld überquert hatte, das",0.54266626,SE,aari1995/German_Semantic_V3b
+209,210,Tor,53,B,und jubelte über seinen Erfolg.,3,0.67,0,1.6,2.7,6.9,das,Tor,"Schnell schoss der Fußballspieler, der die Jacke ausgezogen hatte, das",0.47711173,SE,aari1995/German_Semantic_V3b
+210,211,Tor,53,C,und jubelte über seinen Erfolg.,3,0.0,0,6.8,3.4,1.5,das,Tor,"Schnell spürte der Fußballspieler, der das Fußballfeld überquert hatte, das",0.5491169,SE,aari1995/German_Semantic_V3b
+211,212,Tor,53,D,und jubelte über seinen Erfolg.,3,0.0,0,1.6,2.7,1.5,das,Tor,"Schnell spürte der Fußballspieler, der die Jacke ausgezogen hatte, das",0.49455795,SE,aari1995/German_Semantic_V3b
+212,213,Flugzeug,54,A,durch die Wolken.,0,1.0,1,7.0,1.8,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der die Stewardess gerufen hatte, das",0.6139097,SE,aari1995/German_Semantic_V3b
+213,214,Flugzeug,54,B,durch die Wolken.,0,0.92,1,1.6,3.4,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der den Krimi gelesen hatte, das",0.5329141,SE,aari1995/German_Semantic_V3b
+214,215,Flugzeug,54,C,durch die Wolken.,0,0.0,1,7.0,1.8,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der die Stewardess gerufen hatte, das",0.6312731,SE,aari1995/German_Semantic_V3b
+215,216,Flugzeug,54,D,durch die Wolken.,0,0.08,1,1.6,3.4,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der den Krimi gelesen hatte, das",0.5327119,SE,aari1995/German_Semantic_V3b
+216,217,Skizze,55,A,für den Bauherrn.,0,0.42,0,6.4,6.5,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Bauplan erstellte, die",0.6907092,SE,aari1995/German_Semantic_V3b
+217,218,Skizze,55,B,für den Bauherrn.,0,0.25,0,4.3,4.7,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Vortrag schrieb, die",0.66136336,SE,aari1995/German_Semantic_V3b
+218,219,Skizze,55,C,für den Bauherrn.,0,0.0,0,6.4,6.5,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Bauplan erstellte, die",0.6378629,SE,aari1995/German_Semantic_V3b
+219,220,Skizze,55,D,für den Bauherrn.,0,0.0,0,4.3,4.7,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Vortrag schrieb, die",0.61287934,SE,aari1995/German_Semantic_V3b
+220,221,Kamin,56,A,und verlässt das Grundstück.,1,0.42,0,6.8,3.0,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der den Rauch einatmet, den",0.7033792,SE,aari1995/German_Semantic_V3b
+221,222,Kamin,56,B,und verlässt das Grundstück.,1,0.17,0,3.0,1.3,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der die Katze verscheucht, den",0.5890478,SE,aari1995/German_Semantic_V3b
+222,223,Kamin,56,C,und verlässt das Grundstück.,1,0.0,0,6.8,3.0,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der den Rauch einatmet, den",0.70329314,SE,aari1995/German_Semantic_V3b
+223,224,Kamin,56,D,und verlässt das Grundstück.,1,0.08,0,3.0,1.3,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der die Katze verscheucht, den",0.54472333,SE,aari1995/German_Semantic_V3b
+224,225,Wahl,57,A,zum Minister.,0,1.0,0,6.5,5.3,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Stimmen zählte, die",0.62210596,SE,aari1995/German_Semantic_V3b
+225,226,Wahl,57,B,zum Minister.,0,0.58,0,2.8,1.6,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Hände schüttelte, die",0.5485122,SE,aari1995/German_Semantic_V3b
+226,227,Wahl,57,C,zum Minister.,0,0.08,0,6.5,5.3,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Stimmen zählte, die",0.59573376,SE,aari1995/German_Semantic_V3b
+227,228,Wahl,57,D,zum Minister.,0,0.0,0,2.8,1.6,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Hände schüttelte, die",0.46551764,SE,aari1995/German_Semantic_V3b
+228,229,Foto,58,A,von der Unfallstelle.,0,0.67,0,6.7,2.1,6.7,das,Foto,"Sofort schoss der Reporter, der die Kamera bediente, das",0.62235194,SE,aari1995/German_Semantic_V3b
+229,230,Foto,58,B,von der Unfallstelle.,0,0.5,0,1.6,1.6,6.7,das,Foto,"Sofort schoss der Reporter, der die Zigarette rauchte, das",0.4515021,SE,aari1995/German_Semantic_V3b
+230,231,Foto,58,C,von der Unfallstelle.,0,0.0,0,6.7,2.1,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Kamera bediente, das",0.5932277,SE,aari1995/German_Semantic_V3b
+231,232,Foto,58,D,von der Unfallstelle.,0,0.0,0,1.6,1.6,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Zigarette rauchte, das",0.41800997,SE,aari1995/German_Semantic_V3b
+232,233,Programm,59,A,für seinen Boss.,0,0.5,0,6.9,5.8,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Computer hochfuhr, das",0.50460523,SE,aari1995/German_Semantic_V3b
+233,234,Programm,59,B,für seinen Boss.,0,0.75,0,1.8,2.0,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Energydrink trank, das",0.5104499,SE,aari1995/German_Semantic_V3b
+234,235,Programm,59,C,für seinen Boss.,0,0.0,0,6.9,5.8,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Computer hochfuhr, das",0.50967854,SE,aari1995/German_Semantic_V3b
+235,236,Programm,59,D,für seinen Boss.,0,0.0,0,1.8,2.0,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Energydrink trank, das",0.4560979,SE,aari1995/German_Semantic_V3b
+236,237,Urteil,60,A,und schloss die Verhandlung.,0,1.0,1,7.0,4.5,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.68996435,SE,aari1995/German_Semantic_V3b
+237,238,Urteil,60,B,und schloss die Verhandlung.,0,1.0,1,1.9,2.8,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.71342427,SE,aari1995/German_Semantic_V3b
+238,239,Urteil,60,C,und schloss die Verhandlung.,0,0.0,1,7.0,4.5,1.7,das,Urteil,"Nun roch der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.6273904,SE,aari1995/German_Semantic_V3b
+239,240,Urteil,60,D,und schloss die Verhandlung.,0,0.0,1,1.9,2.8,1.7,das,Urteil,"Nun roch der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.66069883,SE,aari1995/German_Semantic_V3b
+240,241,Prüfung,61,A,in Mathematik.,0,0.58,0,6.6,5.0,5.8,die,Prüfung,"Zunächst bestand der Student, der das Studium wiederaufnahm, die",0.49937746,SE,aari1995/German_Semantic_V3b
+241,242,Prüfung,61,B,in Mathematik.,0,0.25,0,2.0,1.3,5.8,die,Prüfung,"Zunächst bestand der Student, der das Jackett auszog, die",0.4409557,SE,aari1995/German_Semantic_V3b
+242,243,Prüfung,61,C,in Mathematik.,0,0.0,0,6.6,5.0,3.4,die,Prüfung,"Zunächst kochte der Student, der das Studium wiederaufnahm, die",0.44925487,SE,aari1995/German_Semantic_V3b
+243,244,Prüfung,61,D,in Mathematik.,0,0.0,0,2.0,1.3,3.4,die,Prüfung,"Zunächst kochte der Student, der das Jackett auszog, die",0.3988623,SE,aari1995/German_Semantic_V3b
+244,245,Lied,62,A,über die Vergangenheit.,1,0.58,1,6.3,1.3,7.0,das,Lied,"Konzentriert sang der Sänger, der das Mikrofon umklammerte, das",0.6797263,SE,aari1995/German_Semantic_V3b
+245,246,Lied,62,B,über die Vergangenheit.,1,0.58,1,1.9,1.5,7.0,das,Lied,"Konzentriert sang der Sänger, der den Hut abnahm, das",0.65051395,SE,aari1995/German_Semantic_V3b
+246,247,Lied,62,C,über die Vergangenheit.,1,0.0,1,6.3,1.3,1.1,das,Lied,"Konzentriert reparierte der Sänger, der das Mikrofon umklammerte, das",0.5517474,SE,aari1995/German_Semantic_V3b
+247,248,Lied,62,D,über die Vergangenheit.,1,0.0,1,1.9,1.5,1.1,das,Lied,"Konzentriert reparierte der Sänger, der den Hut abnahm, das",0.5302645,SE,aari1995/German_Semantic_V3b
+248,249,Farbe,63,A,für den nächsten Auftrag.,0,0.92,1,6.9,3.5,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Pinsel gewaschen hatte, die",0.5682418,SE,aari1995/German_Semantic_V3b
+249,250,Farbe,63,B,für den nächsten Auftrag.,0,1.0,1,3.5,1.8,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Plätzchen gegessen hatte, die",0.40654108,SE,aari1995/German_Semantic_V3b
+250,251,Farbe,63,C,für den nächsten Auftrag.,0,0.0,1,6.9,3.5,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Pinsel gewaschen hatte, die",0.5226047,SE,aari1995/German_Semantic_V3b
+251,252,Farbe,63,D,für den nächsten Auftrag.,0,0.0,1,3.5,1.8,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Plätzchen gegessen hatte, die",0.35077262,SE,aari1995/German_Semantic_V3b
+252,253,Blumen,64,A,im Blumenkasten.,0,0.58,1,6.2,5.8,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der den Dünger verteilt hat, die",0.66434807,SE,aari1995/German_Semantic_V3b
+253,254,Blumen,64,B,im Blumenkasten.,0,0.5,1,2.0,1.4,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der die Opernmusik angestellt hat, die",0.5850613,SE,aari1995/German_Semantic_V3b
+254,255,Blumen,64,C,im Blumenkasten.,0,0.0,1,6.2,5.8,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der den Dünger verteilt hat, die",0.6123691,SE,aari1995/German_Semantic_V3b
+255,256,Blumen,64,D,im Blumenkasten.,0,0.0,1,2.0,1.4,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der die Opernmusik angestellt hat, die",0.530392,SE,aari1995/German_Semantic_V3b
+256,257,Hecke,65,A,um das Grundstück.,2,0.5,1,6.6,1.9,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.70030713,SE,aari1995/German_Semantic_V3b
+257,258,Hecke,65,B,um das Grundstück.,2,0.58,1,1.4,1.8,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.69313186,SE,aari1995/German_Semantic_V3b
+258,259,Hecke,65,C,um das Grundstück.,2,0.0,1,6.6,1.9,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.6557051,SE,aari1995/German_Semantic_V3b
+259,260,Hecke,65,D,um das Grundstück.,2,0.0,1,1.4,1.8,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.6182089,SE,aari1995/German_Semantic_V3b
+260,261,Feld,66,A,mit einem Gaul.,2,0.92,0,6.8,2.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Traktor gestartet hatte, das",0.60845953,SE,aari1995/German_Semantic_V3b
+261,262,Feld,66,B,mit einem Gaul.,2,0.67,0,3.9,1.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.6494466,SE,aari1995/German_Semantic_V3b
+262,263,Feld,66,C,mit einem Gaul.,2,0.0,0,6.8,2.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Traktor gestartet hatte, das",0.5210349,SE,aari1995/German_Semantic_V3b
+263,264,Feld,66,D,mit einem Gaul.,2,0.0,0,3.9,1.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.5362866,SE,aari1995/German_Semantic_V3b
+264,265,Schuh,67,A,und polierte ihn.,1,0.5,0,6.4,4.1,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der den Absatz ausgetauscht hatte, den",0.6138752,SE,aari1995/German_Semantic_V3b
+265,266,Schuh,67,B,und polierte ihn.,1,0.75,0,1.2,1.0,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der die Sirene gehört hatte, den",0.5999818,SE,aari1995/German_Semantic_V3b
+266,267,Schuh,67,C,und polierte ihn.,1,0.0,0,6.4,4.1,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der den Absatz ausgetauscht hatte, den",0.6353506,SE,aari1995/German_Semantic_V3b
+267,268,Schuh,67,D,und polierte ihn.,1,0.0,0,1.2,1.0,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der die Sirene gehört hatte, den",0.5442196,SE,aari1995/German_Semantic_V3b
+268,269,Koffer,68,A,für die Kreuzfahrt.,1,0.83,0,6.6,3.5,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Klamotten gefaltet hatte, den",0.67404234,SE,aari1995/German_Semantic_V3b
+269,270,Koffer,68,B,für die Kreuzfahrt.,1,0.5,0,1.2,1.9,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.6572948,SE,aari1995/German_Semantic_V3b
+270,271,Koffer,68,C,für die Kreuzfahrt.,1,0.0,0,6.6,3.5,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Klamotten gefaltet hatte, den",0.6343254,SE,aari1995/German_Semantic_V3b
+271,272,Koffer,68,D,für die Kreuzfahrt.,1,0.0,0,1.2,1.9,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.56008774,SE,aari1995/German_Semantic_V3b
+272,273,Honig,69,A,aus den Waben.,0,1.0,1,6.9,1.0,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er den Bienenstock erreicht hat, den",0.7373689,SE,aari1995/German_Semantic_V3b
+273,274,Honig,69,B,aus den Waben.,0,0.92,1,2.8,1.1,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er das Haus verlassen hat, den",0.67351496,SE,aari1995/German_Semantic_V3b
+274,275,Honig,69,C,aus den Waben.,0,0.0,1,6.9,1.0,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er den Bienenstock erreicht hat, den",0.7314541,SE,aari1995/German_Semantic_V3b
+275,276,Honig,69,D,aus den Waben.,0,0.0,1,2.8,1.1,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er das Haus verlassen hat, den",0.6518938,SE,aari1995/German_Semantic_V3b
+276,277,Gewehr,70,A,und zielt erneut.,0,0.42,1,6.4,6.1,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der die Munition verschossen hat, das",0.75584865,SE,aari1995/German_Semantic_V3b
+277,278,Gewehr,70,B,und zielt erneut.,0,0.5,1,1.4,1.3,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der den Campingplatz verlassen hat, das",0.58835584,SE,aari1995/German_Semantic_V3b
+278,279,Gewehr,70,C,und zielt erneut.,0,0.0,1,6.4,6.1,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der die Munition verschossen hat, das",0.7337206,SE,aari1995/German_Semantic_V3b
+279,280,Gewehr,70,D,und zielt erneut.,0,0.0,1,1.4,1.3,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der den Campingplatz verlassen hat, das",0.574921,SE,aari1995/German_Semantic_V3b
+280,281,Mörtel,71,A,für die Mauer.,0,0.42,0,6.1,4.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Backsteine aufeinanderlegte, den",0.8467177,SE,aari1995/German_Semantic_V3b
+281,282,Mörtel,71,B,für die Mauer.,0,0.25,0,1.4,1.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Nachbarn belauschte, den",0.6083945,SE,aari1995/German_Semantic_V3b
+282,283,Mörtel,71,C,für die Mauer.,0,0.0,0,6.1,4.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Backsteine aufeinanderlegte, den",0.7789954,SE,aari1995/German_Semantic_V3b
+283,284,Mörtel,71,D,für die Mauer.,0,0.0,0,1.4,1.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Nachbarn belauschte, den",0.5774616,SE,aari1995/German_Semantic_V3b
+284,285,Mehl,72,A,aus dem Korn.,2,0.67,0,6.9,1.4,5.9,das,Mehl,"Vorgestern mahlte der Müller, der die Mühle betrieb, das",0.7434673,SE,aari1995/German_Semantic_V3b
+285,286,Mehl,72,B,aus dem Korn.,2,0.5,0,1.0,1.1,5.9,das,Mehl,"Vorgestern mahlte der Müller, der das Lied pfiff, das",0.68547106,SE,aari1995/German_Semantic_V3b
+286,287,Mehl,72,C,aus dem Korn.,2,0.0,0,6.9,1.4,2.4,das,Mehl,"Vorgestern verzierte der Müller, der die Mühle betrieb, das",0.68903476,SE,aari1995/German_Semantic_V3b
+287,288,Mehl,72,D,aus dem Korn.,2,0.17,0,1.0,1.1,2.4,das,Mehl,"Vorgestern verzierte der Müller, der das Lied pfiff, das",0.63408583,SE,aari1995/German_Semantic_V3b
+288,289,Kuh,73,A,und brachte ihr frisches Heu.,0,1.0,0,7.0,4.5,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.55783844,SE,aari1995/German_Semantic_V3b
+289,290,Kuh,73,B,und brachte ihr frisches Heu.,0,0.75,0,3.1,1.0,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.5314845,SE,aari1995/German_Semantic_V3b
+290,291,Kuh,73,C,und brachte ihr frisches Heu.,0,0.0,0,7.0,4.5,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.52524656,SE,aari1995/German_Semantic_V3b
+291,292,Kuh,73,D,und brachte ihr frisches Heu.,0,0.08,0,3.1,1.0,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.4950245,SE,aari1995/German_Semantic_V3b
+292,293,Bett,74,A,und das Kissen.,0,0.92,0,6.9,4.7,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.5567924,SE,aari1995/German_Semantic_V3b
+293,294,Bett,74,B,und das Kissen.,0,0.67,0,1.1,1.8,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.44265407,SE,aari1995/German_Semantic_V3b
+294,295,Bett,74,C,und das Kissen.,0,0.08,0,6.9,4.7,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.50247765,SE,aari1995/German_Semantic_V3b
+295,296,Bett,74,D,und das Kissen.,0,0.0,0,1.1,1.8,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.4128259,SE,aari1995/German_Semantic_V3b
+296,297,Ziel,75,A,und durchtrennt die Ziellinie.,1,0.92,0,6.0,5.8,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der das Rennen gewinnt, das",0.6282561,SE,aari1995/German_Semantic_V3b
+297,298,Ziel,75,B,und durchtrennt die Ziellinie.,1,0.75,0,1.9,2.7,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der den Wind genießt, das",0.6135653,SE,aari1995/German_Semantic_V3b
+298,299,Ziel,75,C,und durchtrennt die Ziellinie.,1,0.0,0,6.0,5.8,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der das Rennen gewinnt, das",0.5571918,SE,aari1995/German_Semantic_V3b
+299,300,Ziel,75,D,und durchtrennt die Ziellinie.,1,0.0,0,1.9,2.7,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der den Wind genießt, das",0.5313041,SE,aari1995/German_Semantic_V3b
+300,301,Welle,76,A,bis zum Strand.,0,0.58,0,5.1,1.3,7.0,die,Welle,"Direkt surft der Surfer, der die Badehose angezogen hat, die",0.6909477,SE,aari1995/German_Semantic_V3b
+301,302,Welle,76,B,bis zum Strand.,0,0.42,0,3.2,1.3,7.0,die,Welle,"Direkt surft der Surfer, der den Tagesausflug unternommen hat, die",0.59857345,SE,aari1995/German_Semantic_V3b
+302,303,Welle,76,C,bis zum Strand.,0,0.0,0,5.1,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der die Badehose angezogen hat, die",0.62268066,SE,aari1995/German_Semantic_V3b
+303,304,Welle,76,D,bis zum Strand.,0,0.0,0,3.2,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der den Tagesausflug unternommen hat, die",0.5361413,SE,aari1995/German_Semantic_V3b
+304,305,Fahrkarten,77,A,der Pendler.,0,0.5,1,6.7,3.3,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der das Zugabteil betreten hatte, die",0.6269982,SE,aari1995/German_Semantic_V3b
+305,306,Fahrkarten,77,B,der Pendler.,0,0.42,1,2.8,2.4,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der die Mittagspause beendet hatte, die",0.60706425,SE,aari1995/German_Semantic_V3b
+306,307,Fahrkarten,77,C,der Pendler.,0,0.0,1,6.7,3.3,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der das Zugabteil betreten hatte, die",0.6143723,SE,aari1995/German_Semantic_V3b
+307,308,Fahrkarten,77,D,der Pendler.,0,0.0,1,2.8,2.4,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der die Mittagspause beendet hatte, die",0.5772939,SE,aari1995/German_Semantic_V3b
+308,309,Leitung,78,A,im Gebäude.,0,0.5,1,6.8,4.5,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.5893971,SE,aari1995/German_Semantic_V3b
+309,310,Leitung,78,B,im Gebäude.,0,0.41,1,2.2,3.4,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Anwohner informiert hatte, die",0.6008775,SE,aari1995/German_Semantic_V3b
+310,311,Leitung,78,C,im Gebäude.,0,0.0,1,6.8,4.5,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.5392437,SE,aari1995/German_Semantic_V3b
+311,312,Leitung,78,D,im Gebäude.,0,0.0,1,2.2,3.4,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Anwohner informiert hatte, die",0.5442255,SE,aari1995/German_Semantic_V3b
+312,313,Segel,79,A,des großen Bootes.,3,0.42,1,5.5,4.4,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Taue gekappt hat, die",0.64583504,SE,aari1995/German_Semantic_V3b
+313,314,Segel,79,B,des großen Bootes.,3,0.42,1,2.2,2.7,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Handschuhe angezogen hat, die",0.61352557,SE,aari1995/German_Semantic_V3b
+314,315,Segel,79,C,des großen Bootes.,3,0.0,1,5.5,4.4,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Taue gekappt hat, die",0.63097703,SE,aari1995/German_Semantic_V3b
+315,316,Segel,79,D,des großen Bootes.,3,0.0,1,2.2,2.7,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Handschuhe angezogen hat, die",0.5743534,SE,aari1995/German_Semantic_V3b
+316,317,Gläser,80,A,und spricht mit dem Kollegen.,0,0.67,1,5.2,1.4,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.5017103,SE,aari1995/German_Semantic_V3b
+317,318,Gläser,80,B,und spricht mit dem Kollegen.,0,0.67,1,1.5,5.0,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.522393,SE,aari1995/German_Semantic_V3b
+318,319,Gläser,80,C,und spricht mit dem Kollegen.,0,0.0,1,5.2,1.4,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.5221049,SE,aari1995/German_Semantic_V3b
+319,320,Gläser,80,D,und spricht mit dem Kollegen.,0,0.0,1,1.5,5.0,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.5307687,SE,aari1995/German_Semantic_V3b
+320,321,Korb,81,A,und holt einen Punkt.,0,0.83,0,6.0,4.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der den Ball gedribbelt hat, den",0.6073165,SE,aari1995/German_Semantic_V3b
+321,322,Korb,81,B,und holt einen Punkt.,0,0.5,0,2.9,1.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der die Sitzbank verlassen hat, den",0.5616941,SE,aari1995/German_Semantic_V3b
+322,323,Korb,81,C,und holt einen Punkt.,0,0.0,0,6.0,4.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der den Ball gedribbelt hat, den",0.6035026,SE,aari1995/German_Semantic_V3b
+323,324,Korb,81,D,und holt einen Punkt.,0,0.0,0,2.9,1.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der die Sitzbank verlassen hat, den",0.54896283,SE,aari1995/German_Semantic_V3b
+324,325,Muschel,82,A,und holt die Perle.,0,0.92,0,6.2,1.5,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der den Meeresgrund erreicht hat, die",0.68443036,SE,aari1995/German_Semantic_V3b
+325,326,Muschel,82,B,und holt die Perle.,0,0.75,0,1.0,1.2,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der die Taschenlampe angemacht hat, die",0.58857447,SE,aari1995/German_Semantic_V3b
+326,327,Muschel,82,C,und holt die Perle.,0,0.0,0,6.2,1.5,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, die den Meeresgrund erreicht hat, die",0.701529,SE,aari1995/German_Semantic_V3b
+327,328,Muschel,82,D,und holt die Perle.,0,0.0,0,1.0,1.2,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, der die Taschenlampe angemacht hat, die",0.59939593,SE,aari1995/German_Semantic_V3b
+328,329,Bogen,83,A,und feuert den Pfeil ab.,0,1.0,0,7.0,2.1,6.7,den,Bogen,"Umsichtig spannt der Schütze, der den Pfeil gespitzt hat, den",0.65704215,SE,aari1995/German_Semantic_V3b
+329,330,Bogen,83,B,und feuert den Pfeil ab.,0,0.67,0,1.5,1.2,6.7,den,Bogen,"Umsichtig spannt der Schütze, der das Laub zusammengekehrt hat, den",0.6719451,SE,aari1995/German_Semantic_V3b
+330,331,Bogen,83,C,und feuert den Pfeil ab.,0,0.08,0,7.0,2.1,1.2,den,Bogen,"Umsichtig tippt der Schütze, der den Pfeil gespitzt hat, den",0.63359416,SE,aari1995/German_Semantic_V3b
+331,332,Bogen,83,D,und feuert den Pfeil ab.,0,0.0,0,1.5,1.2,1.2,den,Bogen,"Umsichtig tippt der Schütze, der das Laub zusammengekehrt hat, den",0.66856885,SE,aari1995/German_Semantic_V3b
+332,333,Ziegel,84,A,und beendete den Arbeitstag.,0,0.58,1,7.0,4.8,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der das Dach abdeckte, die",0.647912,SE,aari1995/German_Semantic_V3b
+333,334,Ziegel,84,B,und beendete den Arbeitstag.,0,0.5,1,1.2,1.6,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der den Ehering auszog, die",0.62205106,SE,aari1995/German_Semantic_V3b
+334,335,Ziegel,84,C,und beendete den Arbeitstag.,0,0.0,1,7.0,4.8,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der das Dach abdeckte, die",0.6270653,SE,aari1995/German_Semantic_V3b
+335,336,Ziegel,84,D,und beendete den Arbeitstag.,0,0.0,1,1.2,1.6,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der den Ehering auszog, die",0.5700828,SE,aari1995/German_Semantic_V3b
+336,337,Kartons,85,A,und die Kisten.,0,0.58,1,6.5,1.9,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.6215447,SE,aari1995/German_Semantic_V3b
+337,338,Kartons,85,B,und die Kisten.,0,0.67,1,4.4,1.1,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der die Firma gegründet hat, die",0.62406164,SE,aari1995/German_Semantic_V3b
+338,339,Kartons,85,C,und die Kisten.,0,0.0,1,6.5,1.9,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.57291234,SE,aari1995/German_Semantic_V3b
+339,340,Kartons,85,D,und die Kisten.,0,0.0,1,4.4,1.1,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der die Firma gegründet hat, die",0.5703571,SE,aari1995/German_Semantic_V3b
+340,341,Unterricht,86,A,und wurde erwischt.,2,0.5,0,7.0,5.9,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der die Klasse wiederholt hatte, den",0.6913586,SE,aari1995/German_Semantic_V3b
+341,342,Unterricht,86,B,und wurde erwischt.,2,0.33,0,3.8,1.8,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der das Handy verloren hatte, den",0.54337937,SE,aari1995/German_Semantic_V3b
+342,343,Unterricht,86,C,und wurde erwischt.,2,0.0,0,7.0,5.9,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der die Klasse wiederholt hatte, den",0.65881485,SE,aari1995/German_Semantic_V3b
+343,344,Unterricht,86,D,und wurde erwischt.,2,0.0,0,3.8,1.8,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der das Handy verloren hatte, den",0.53080297,SE,aari1995/German_Semantic_V3b
+344,345,Ausweis,87,A,und ließ die Frau in den Club.,0,0.33,1,6.4,3.3,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der den Geldbeutel durchsuchte, den",0.5730303,SE,aari1995/German_Semantic_V3b
+345,346,Ausweis,87,B,und ließ die Frau in den Club.,0,0.25,1,2.0,1.2,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der die Nachtluft genoss, den",0.47847232,SE,aari1995/German_Semantic_V3b
+346,347,Ausweis,87,C,und ließ die Frau in den Club.,0,0.0,1,6.4,3.3,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der den Geldbeutel durchsuchte, den",0.5143251,SE,aari1995/German_Semantic_V3b
+347,348,Ausweis,87,D,und ließ die Frau in den Club.,0,0.0,1,2.0,1.2,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der die Nachtluft genoss, den",0.45326206,SE,aari1995/German_Semantic_V3b
+348,349,Windel,88,A,und warf sie in den Abfall.,0,0.92,1,6.7,2.4,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der das Baby geweckt hatte, die",0.625678,SE,aari1995/German_Semantic_V3b
+349,350,Windel,88,B,und warf sie in den Abfall.,0,0.83,1,1.0,1.1,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der den Obstsalat zubereitet hatte, die",0.57110405,SE,aari1995/German_Semantic_V3b
+350,351,Windel,88,C,und warf sie in den Abfall.,0,0.08,1,6.7,2.4,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der das Baby geweckt hatte, die",0.61668056,SE,aari1995/German_Semantic_V3b
+351,352,Windel,88,D,und warf sie in den Abfall.,0,0.0,1,1.0,1.1,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der den Obstsalat zubereitet hatte, die",0.558723,SE,aari1995/German_Semantic_V3b
+352,353,Gewichte,89,A,in die Höhe.,0,0.5,1,6.7,1.6,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.54133505,SE,aari1995/German_Semantic_V3b
+353,354,Gewichte,89,B,in die Höhe.,0,0.42,1,1.7,2.0,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Licht angemacht hatte, die",0.51075494,SE,aari1995/German_Semantic_V3b
+354,355,Gewichte,89,C,in die Höhe.,0,0.0,1,6.7,1.6,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.5275743,SE,aari1995/German_Semantic_V3b
+355,356,Gewichte,89,D,in die Höhe.,0,0.0,1,1.7,2.0,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Licht angemacht hatte, die",0.46292788,SE,aari1995/German_Semantic_V3b
+356,357,Rohr,90,A,im Badezimmer.,0,0.17,1,6.4,1.5,5.5,das,Rohr,"Umsichtig repariert der Klempner, der das Wasser ausgestellt hat, das",0.570001,SE,aari1995/German_Semantic_V3b
+357,358,Rohr,90,B,im Badezimmer.,0,0.25,1,1.3,4.6,5.5,das,Rohr,"Umsichtig repariert der Klempner, der den Kirchenchor geleitet hat, das",0.5105223,SE,aari1995/German_Semantic_V3b
+358,359,Rohr,90,C,im Badezimmer.,0,0.0,1,6.4,1.5,1.1,das,Rohr,"Umsichtig nascht der Klempner, der das Wasser ausgestellt hat, das",0.57335377,SE,aari1995/German_Semantic_V3b
+359,360,Rohr,90,D,im Badezimmer.,0,0.0,1,1.3,4.6,1.1,das,Rohr,"Umsichtig nascht der Klempner, der den Kirchenchor geleitet hat, das",0.52280843,SE,aari1995/German_Semantic_V3b
+360,361,Artikel,91,A,für die nächste Ausgabe.,0,0.5,0,6.4,1.5,6.1,den,Artikel,"Schnell schreibt der Journalist, der die Recherche durchgeführt hat, den",0.6842747,SE,aari1995/German_Semantic_V3b
+361,362,Artikel,91,B,für die nächste Ausgabe.,0,0.25,0,2.5,5.4,6.1,den,Artikel,"Schnell schreibt der Journalist, der das Portemonnaie gefunden hat, den",0.6970457,SE,aari1995/German_Semantic_V3b
+362,363,Artikel,91,C,für die nächste Ausgabe.,0,0.0,0,6.4,1.5,2.3,den,Artikel,"Schnell lenkt der Journalist, der die Recherche durchgeführt hat, den",0.6357815,SE,aari1995/German_Semantic_V3b
+363,364,Artikel,91,D,für die nächste Ausgabe.,0,0.0,0,2.5,5.4,2.3,den,Artikel,"Schnell lenkt der Journalist, der das Portemonnaie gefunden hat, den",0.6567027,SE,aari1995/German_Semantic_V3b
+364,365,Reifen,92,A,an seinem Rad.,0,0.67,1,6.8,4.1,6.7,den,Reifen,"Heute Morgen flickte der Radler, der die Luftpumpe benutzt hatte, den",0.61221504,SE,aari1995/German_Semantic_V3b
+365,366,Reifen,92,B,an seinem Rad.,0,0.67,1,1.2,1.8,6.7,den,Reifen,"Heute Morgen flickte der Radler, der den Schrank abgeschlossen hatte, den",0.49596468,SE,aari1995/German_Semantic_V3b
+366,367,Reifen,92,C,an seinem Rad.,0,0.0,1,6.8,4.1,1.1,den,Reifen,"Heute Morgen trank der Radler, der die Luftpumpe benutzt hatte, den",0.56743413,SE,aari1995/German_Semantic_V3b
+367,368,Reifen,92,D,an seinem Rad.,0,0.0,1,1.2,1.8,1.1,den,Reifen,"Heute Morgen trank der Radler, der den Schrank abgeschlossen hatte, den",0.45011747,SE,aari1995/German_Semantic_V3b
+368,369,Briefkasten,93,A,und fährt weiter.,2,0.58,1,6.2,1.3,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der das Postauto geparkt hat, den",0.63987744,SE,aari1995/German_Semantic_V3b
+369,370,Briefkasten,93,B,und fährt weiter.,2,0.58,1,2.5,2.0,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der den Kugelschreiber verloren hat, den",0.61659867,SE,aari1995/German_Semantic_V3b
+370,371,Briefkasten,93,C,und fährt weiter.,2,0.0,1,6.2,1.3,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der das Postauto geparkt hat, den",0.62092525,SE,aari1995/German_Semantic_V3b
+371,372,Briefkasten,93,D,und fährt weiter.,2,0.0,1,2.5,2.0,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der den Kugelschreiber verloren hat, den",0.5993533,SE,aari1995/German_Semantic_V3b
+372,373,Drogen,94,A,für die nächste Woche.,0,0.5,1,6.8,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der den Dealer angerufen hat, die",0.5716348,SE,aari1995/German_Semantic_V3b
+373,374,Drogen,94,B,für die nächste Woche.,0,0.5,1,2.1,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der die Kapuze aufgezogen hat, die",0.58936405,SE,aari1995/German_Semantic_V3b
+374,375,Drogen,94,C,für die nächste Woche.,0,0.0,1,6.8,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der den Dealer angerufen hat, die",0.51708394,SE,aari1995/German_Semantic_V3b
+375,376,Drogen,94,D,für die nächste Woche.,0,0.08,1,2.1,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der die Kapuze aufgezogen hat, die",0.50775766,SE,aari1995/German_Semantic_V3b
+376,377,Tonne,95,A,und sprang auf den Müllwagen.,0,0.75,1,6.4,1.8,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Müllwagen geparkt hatte, die",0.69678,SE,aari1995/German_Semantic_V3b
+377,378,Tonne,95,B,und sprang auf den Müllwagen.,0,0.75,1,4.2,1.1,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.61331207,SE,aari1995/German_Semantic_V3b
+378,379,Tonne,95,C,und sprang auf den Müllwagen.,0,0.0,1,6.4,1.8,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Müllwagen geparkt hatte, die",0.64268863,SE,aari1995/German_Semantic_V3b
+379,380,Tonne,95,D,und sprang auf den Müllwagen.,0,0.0,1,4.2,1.1,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.5713725,SE,aari1995/German_Semantic_V3b
+380,381,Peitsche,96,A,und gab die Sporen.,2,0.58,1,6.0,5.6,5.8,die,Peitsche,"Hektisch knallte der Reiter, der das Pferd ritt, die",0.5522002,SE,aari1995/German_Semantic_V3b
+381,382,Peitsche,96,B,und gab die Sporen.,2,0.5,1,1.2,1.2,5.8,die,Peitsche,"Hektisch knallte der Reiter, der die Landschaft durchquerte, die",0.4598727,SE,aari1995/German_Semantic_V3b
+382,383,Peitsche,96,C,und gab die Sporen.,2,0.0,1,6.0,5.6,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der das Pferd ritt, die",0.50998485,SE,aari1995/German_Semantic_V3b
+383,384,Peitsche,96,D,und gab die Sporen.,2,0.0,1,1.2,1.2,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der die Landschaft durchquerte, die",0.43669412,SE,aari1995/German_Semantic_V3b
+384,385,Waffe,97,A,und verlangte das Geld.,0,0.58,1,3.9,6.5,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der die Bank überfiel, die",0.58036417,SE,aari1995/German_Semantic_V3b
+385,386,Waffe,97,B,und verlangte das Geld.,0,0.58,1,1.3,1.1,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der den Bus betrat, die",0.50066864,SE,aari1995/German_Semantic_V3b
+386,387,Waffe,97,C,und verlangte das Geld.,0,0.0,1,3.9,6.5,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der die Bank überfiel, die",0.49331373,SE,aari1995/German_Semantic_V3b
+387,388,Waffe,97,D,und verlangte das Geld.,0,0.0,1,1.3,1.1,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der den Bus betrat, die",0.4486706,SE,aari1995/German_Semantic_V3b
+388,389,Schiff,98,A,und übernahm das Kommando.,0,0.92,1,6.2,5.1,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Flagge hisste, das",0.5956699,SE,aari1995/German_Semantic_V3b
+389,390,Schiff,98,B,und übernahm das Kommando.,0,0.92,1,2.3,1.4,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Fehde austrug, das",0.5389174,SE,aari1995/German_Semantic_V3b
+390,391,Schiff,98,C,und übernahm das Kommando.,0,0.0,1,6.2,5.1,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Flagge hisste, das",0.5567477,SE,aari1995/German_Semantic_V3b
+391,392,Schiff,98,D,und übernahm das Kommando.,0,0.0,1,2.3,1.4,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Fehde austrug, das",0.5065561,SE,aari1995/German_Semantic_V3b
+392,393,Aktie,99,A,und berichtet seinem Auftraggeber.,0,0.75,1,6.9,1.1,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der die Börse betreten hat, die",0.67472327,SE,aari1995/German_Semantic_V3b
+393,394,Aktie,99,B,und berichtet seinem Auftraggeber.,0,0.83,1,1.4,1.6,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.61970073,SE,aari1995/German_Semantic_V3b
+394,395,Aktie,99,C,und berichtet seinem Auftraggeber.,0,0.0,1,6.9,1.1,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der die Börse betreten hat, die",0.59306526,SE,aari1995/German_Semantic_V3b
+395,396,Aktie,99,D,und berichtet seinem Auftraggeber.,0,0.0,1,1.4,1.6,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.5654931,SE,aari1995/German_Semantic_V3b
+396,397,Loch,100,A,in die Decke.,0,1.0,0,6.5,2.0,6.9,das,Loch,"Gestern bohrte der Handwerker, der die Bohrmaschine hielt, das",0.5393257,SE,aari1995/German_Semantic_V3b
+397,398,Loch,100,B,in die Decke.,0,0.75,0,1.4,1.7,6.9,das,Loch,"Gestern bohrte der Handwerker, der das Kaugummi kaute, das",0.60556984,SE,aari1995/German_Semantic_V3b
+398,399,Loch,100,C,in die Decke.,0,0.0,0,6.5,2.0,3.9,das,Loch,"Gestern warf der Handwerker, der die Bohrmaschine hielt, das",0.55357677,SE,aari1995/German_Semantic_V3b
+399,400,Loch,100,D,in die Decke.,0,0.0,0,1.4,1.7,3.9,das,Loch,"Gestern warf der Handwerker, der das Kaugummi kaute, das",0.5739767,SE,aari1995/German_Semantic_V3b
+400,401,Blutdruck,101,A,und den Blutzucker.,3,0.58,1,6.8,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der das Messgerät hält, den",0.65892106,SE,aari1995/German_Semantic_V3b
+401,402,Blutdruck,101,B,und den Blutzucker.,3,0.58,1,2.3,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der den Bildschirm anstellt, den",0.59732646,SE,aari1995/German_Semantic_V3b
+402,403,Blutdruck,101,C,und den Blutzucker.,3,0.0,1,6.8,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der das Messgerät hält, den",0.59183663,SE,aari1995/German_Semantic_V3b
+403,404,Blutdruck,101,D,und den Blutzucker.,3,0.0,1,2.3,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der den Bildschirm anstellt, den",0.52474403,SE,aari1995/German_Semantic_V3b
+404,405,Tuch,102,A,und machte sich bereit.,0,0.67,0,6.3,3.5,2.7,das,Tuch,"Konzentriert schwang der Torero, der den Stier verwundet hatte, das",0.47433394,SE,aari1995/German_Semantic_V3b
+405,406,Tuch,102,B,und machte sich bereit.,0,0.83,0,4.1,1.8,2.7,das,Tuch,"Konzentriert schwang der Torero, der das Gebet aufgesagt hatte, das",0.51183164,SE,aari1995/German_Semantic_V3b
+406,407,Tuch,102,C,und machte sich bereit.,0,0.0,0,6.3,3.5,2.6,das,Tuch,"Konzentriert befüllte der Torero, der den Stier verwundet hatte, das",0.48158345,SE,aari1995/German_Semantic_V3b
+407,408,Tuch,102,D,und machte sich bereit.,0,0.0,0,4.1,1.8,2.6,das,Tuch,"Konzentriert befüllte der Torero, der das Gebet aufgesagt hatte, das",0.4925016,SE,aari1995/German_Semantic_V3b
+408,409,Schwert,103,A,und griff den Gegner an.,0,0.92,1,6.2,1.5,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er den Kampf begonnen hatte, das",0.678226,SE,aari1995/German_Semantic_V3b
+409,410,Schwert,103,B,und griff den Gegner an.,0,0.92,1,1.1,1.0,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er die Brücke überquert hatte, das",0.55467266,SE,aari1995/German_Semantic_V3b
+410,411,Schwert,103,C,und griff den Gegner an.,0,0.0,1,6.2,1.5,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er den Kampf begonnen hatte, das",0.6228461,SE,aari1995/German_Semantic_V3b
+411,412,Schwert,103,D,und griff den Gegner an.,0,0.08,1,1.1,1.0,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er die Brücke überquert hatte, das",0.5087674,SE,aari1995/German_Semantic_V3b
+412,413,Rettungswagen,104,A,in Richtung des Krankenhauses.,0,0.75,0,6.8,2.6,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.6731885,SE,aari1995/German_Semantic_V3b
+413,414,Rettungswagen,104,B,in Richtung des Krankenhauses.,0,0.58,0,1.3,1.2,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der den Notizblock weggelegt hat, den",0.6443468,SE,aari1995/German_Semantic_V3b
+414,415,Rettungswagen,104,C,in Richtung des Krankenhauses.,0,0.0,0,6.8,2.6,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.6780704,SE,aari1995/German_Semantic_V3b
+415,416,Rettungswagen,104,D,in Richtung des Krankenhauses.,0,0.0,0,1.3,1.2,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der den Notizblock weggelegt hat, den",0.62145627,SE,aari1995/German_Semantic_V3b
+416,417,Aussage,105,A,und wendete sich an seinen Anwalt.,0,1.0,0,6.4,3.5,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Angeklagten wiedererkannte, die",0.6464638,SE,aari1995/German_Semantic_V3b
+417,418,Aussage,105,B,und wendete sich an seinen Anwalt.,0,0.83,0,1.1,1.6,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Gehstock umklammerte, die",0.6194969,SE,aari1995/German_Semantic_V3b
+418,419,Aussage,105,C,und wendete sich an seinen Anwalt.,0,0.0,0,6.4,3.5,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Angeklagten wiedererkannte, die",0.71523803,SE,aari1995/German_Semantic_V3b
+419,420,Aussage,105,D,und wendete sich an seinen Anwalt.,0,0.0,0,1.1,1.6,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Gehstock umklammerte, die",0.6309121,SE,aari1995/German_Semantic_V3b
+420,421,Schlittschuhe,106,A,und begibt sich auf die Eisfläche.,2,1.0,0,6.7,2.0,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der die Eishalle erreicht hat, die",0.7260664,SE,aari1995/German_Semantic_V3b
+421,422,Schlittschuhe,106,B,und begibt sich auf die Eisfläche.,2,0.75,0,1.5,1.1,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.69102275,SE,aari1995/German_Semantic_V3b
+422,423,Schlittschuhe,106,C,und begibt sich auf die Eisfläche.,2,0.0,0,6.7,2.0,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der die Eishalle erreicht hat, die",0.69029385,SE,aari1995/German_Semantic_V3b
+423,424,Schlittschuhe,106,D,und begibt sich auf die Eisfläche.,2,0.08,0,1.5,1.1,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.6566157,SE,aari1995/German_Semantic_V3b
+424,425,Lasso,107,A,und fängt das Tier ein.,0,0.33,0,5.4,4.5,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.5900538,SE,aari1995/German_Semantic_V3b
+425,426,Lasso,107,B,und fängt das Tier ein.,0,0.75,0,1.3,1.6,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.62185997,SE,aari1995/German_Semantic_V3b
+426,427,Lasso,107,C,und fängt das Tier ein.,0,0.0,0,5.4,4.5,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.6021187,SE,aari1995/German_Semantic_V3b
+427,428,Lasso,107,D,und fängt das Tier ein.,0,0.0,0,1.3,1.6,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.60113525,SE,aari1995/German_Semantic_V3b
+428,429,Drehbuch,108,A,für die Serie.,2,0.33,0,6.6,4.4,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Plot konstruiert hatte, das",0.80708694,SE,aari1995/German_Semantic_V3b
+429,430,Drehbuch,108,B,für die Serie.,2,0.75,0,1.1,1.3,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Kamin angemacht hatte, das",0.69485587,SE,aari1995/German_Semantic_V3b
+430,431,Drehbuch,108,C,für die Serie.,2,0.0,0,6.6,4.4,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Plot konstruiert hatte, das",0.7716395,SE,aari1995/German_Semantic_V3b
+431,432,Drehbuch,108,D,für die Serie.,2,0.0,0,1.1,1.3,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Kamin angemacht hatte, das",0.58882904,SE,aari1995/German_Semantic_V3b
+432,433,Stern,109,A,am Firmament.,0,0.58,1,5.7,2.4,4.9,den,Stern,"Sofort entdeckt der Astronom, der das Teleskop aufgestellt hat, den",0.7015172,SE,aari1995/German_Semantic_V3b
+433,434,Stern,109,B,am Firmament.,0,0.58,1,3.0,1.9,4.9,den,Stern,"Sofort entdeckt der Astronom, der die Uhrzeit notiert hat, den",0.697458,SE,aari1995/German_Semantic_V3b
+434,435,Stern,109,C,am Firmament.,0,0.0,1,5.7,2.4,1.4,den,Stern,"Sofort serviert der Astronom, der das Teleskop aufgestellt hat, den",0.6849077,SE,aari1995/German_Semantic_V3b
+435,436,Stern,109,D,am Firmament.,0,0.0,1,3.0,1.9,1.4,den,Stern,"Sofort serviert der Astronom, der die Uhrzeit notiert hat, den",0.68548375,SE,aari1995/German_Semantic_V3b
+436,437,Anker,110,A,und verließ den Hafen.,0,0.5,1,6.4,2.0,6.9,den,Anker,"Gestern lichtete der Seemann, der das Boot kommandierte, den",0.52431566,SE,aari1995/German_Semantic_V3b
+437,438,Anker,110,B,und verließ den Hafen.,0,0.58,1,1.0,4.1,6.9,den,Anker,"Gestern lichtete der Seemann, der den Atem anhielt, den",0.57526594,SE,aari1995/German_Semantic_V3b
+438,439,Anker,110,C,und verließ den Hafen.,0,0.0,1,6.4,2.0,1.0,den,Anker,"Gestern kochte der Seemann, der das Boot kommandierte, den",0.4577773,SE,aari1995/German_Semantic_V3b
+439,440,Anker,110,D,und verließ den Hafen.,0,0.0,1,1.0,4.1,1.0,den,Anker,"Gestern kochte der Seemann, der den Atem anhielt, den",0.52293825,SE,aari1995/German_Semantic_V3b
+440,441,Seil,111,A,um den Aufstieg abzusichern.,2,0.58,0,4.6,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.6228291,SE,aari1995/German_Semantic_V3b
+441,442,Seil,111,B,um den Aufstieg abzusichern.,2,0.75,0,1.4,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.5027025,SE,aari1995/German_Semantic_V3b
+442,443,Seil,111,C,um den Aufstieg abzusichern.,2,0.0,0,4.6,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.49494934,SE,aari1995/German_Semantic_V3b
+443,444,Seil,111,D,um den Aufstieg abzusichern.,2,0.0,0,1.4,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.41529152,SE,aari1995/German_Semantic_V3b
+444,445,Rouletterad,112,A,und verrät die nächste Zahl.,0,0.67,0,6.3,2.1,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der den Spieltisch vorbereitet hat, das",0.7409557,SE,aari1995/German_Semantic_V3b
+445,446,Rouletterad,112,B,und verrät die nächste Zahl.,0,0.33,0,2.0,1.3,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der die Frau beeindruckt hat, das",0.6117689,SE,aari1995/German_Semantic_V3b
+446,447,Rouletterad,112,C,und verrät die nächste Zahl.,0,0.0,0,6.3,2.1,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der den Spieltisch vorbereitet hat, das",0.6748993,SE,aari1995/German_Semantic_V3b
+447,448,Rouletterad,112,D,und verrät die nächste Zahl.,0,0.0,0,2.0,1.3,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der die Frau beeindruckt hat, das",0.5057468,SE,aari1995/German_Semantic_V3b
+448,449,Nägel,113,A,und lackierte sie.,0,0.75,0,6.9,1.7,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie die Maniküre durchführte, die",0.63917464,SE,aari1995/German_Semantic_V3b
+449,450,Nägel,113,B,und lackierte sie.,0,1.0,0,1.3,1.0,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie das Gespräch belauschte, die",0.534431,SE,aari1995/German_Semantic_V3b
+450,451,Nägel,113,C,und lackierte sie.,0,0.08,0,6.9,1.7,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie die Maniküre durchführte, die",0.6218373,SE,aari1995/German_Semantic_V3b
+451,452,Nägel,113,D,und lackierte sie.,0,0.0,0,1.3,1.0,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie das Gespräch belauschte, die",0.54172766,SE,aari1995/German_Semantic_V3b
+452,453,Zukunft,114,A,der Familie.,0,0.58,1,6.7,3.9,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kristallkugel befragt hatte, die",0.59489465,SE,aari1995/German_Semantic_V3b
+453,454,Zukunft,114,B,der Familie.,0,0.58,1,1.4,1.1,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kerze angezündet hatte, die",0.5875879,SE,aari1995/German_Semantic_V3b
+454,455,Zukunft,114,C,der Familie.,0,0.0,1,6.7,3.9,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kristallkugel befragt hatte, die",0.5173575,SE,aari1995/German_Semantic_V3b
+455,456,Zukunft,114,D,der Familie.,0,0.0,1,1.4,1.1,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kerze angezündet hatte, die",0.4908209,SE,aari1995/German_Semantic_V3b
+456,457,Ausgrabung,115,A,in der Ruine.,0,0.92,0,6.6,5.3,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der die Schaufel hervorgeholt hat, die",0.8418408,SE,aari1995/German_Semantic_V3b
+457,458,Ausgrabung,115,B,in der Ruine.,0,0.5,0,1.3,2.5,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der das Taxi genommen hat, die",0.70095676,SE,aari1995/German_Semantic_V3b
+458,459,Ausgrabung,115,C,in der Ruine.,0,0.0,0,6.6,5.3,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der die Schaufel hervorgeholt hat, die",0.8054915,SE,aari1995/German_Semantic_V3b
+459,460,Ausgrabung,115,D,in der Ruine.,0,0.0,0,1.3,2.5,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der das Taxi genommen hat, die",0.71131134,SE,aari1995/German_Semantic_V3b
+460,461,Strauß,116,A,für die Hochzeit.,0,0.92,1,6.8,3.9,6.5,den,Strauß,"Zügig bindet der Florist, der die Rosen gezüchtet hat, den",0.7216189,SE,aari1995/German_Semantic_V3b
+461,462,Strauß,116,B,für die Hochzeit.,0,0.92,1,2.6,1.6,6.5,den,Strauß,"Zügig bindet der Florist, der die Fenster geschlossen hat, den",0.6734743,SE,aari1995/German_Semantic_V3b
+462,463,Strauß,116,C,für die Hochzeit.,0,0.0,1,6.8,3.9,1.0,den,Strauß,"Zügig ölt der Florist, der die Rosen gezüchtet hat, den",0.6470485,SE,aari1995/German_Semantic_V3b
+463,464,Strauß,116,D,für die Hochzeit.,0,0.0,1,2.6,1.6,1.0,den,Strauß,"Zügig ölt der Florist, der die Fenster geschlossen hat, den",0.6060252,SE,aari1995/German_Semantic_V3b
+464,465,Rolle,117,A,für das Theaterstück.,0,0.75,1,6.1,3.8,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der das Skript auswendig gelernt hat, die",0.6626103,SE,aari1995/German_Semantic_V3b
+465,466,Rolle,117,B,für das Theaterstück.,0,0.67,1,2.3,4.6,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der die Torte gebacken hat, die",0.5860341,SE,aari1995/German_Semantic_V3b
+466,467,Rolle,117,C,für das Theaterstück.,0,0.0,1,6.1,3.8,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der das Skript auswendig gelernt hat, die",0.65471524,SE,aari1995/German_Semantic_V3b
+467,468,Rolle,117,D,für das Theaterstück.,0,0.0,1,2.3,4.6,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der die Torte gebacken hat, die",0.5799971,SE,aari1995/German_Semantic_V3b
+468,469,Sendung,118,A,für den Fernsehkanal.,0,0.42,0,6.4,6.3,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Zuschauer unterhält, die",0.6088208,SE,aari1995/German_Semantic_V3b
+469,470,Sendung,118,B,für den Fernsehkanal.,0,0.17,0,2.0,1.5,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Weltmeere bereist, die",0.596323,SE,aari1995/German_Semantic_V3b
+470,471,Sendung,118,C,für den Fernsehkanal.,0,0.0,0,6.4,6.3,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Zuschauer unterhält, die",0.6077008,SE,aari1995/German_Semantic_V3b
+471,472,Sendung,118,D,für den Fernsehkanal.,0,0.0,0,2.0,1.5,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Weltmeere bereist, die",0.614873,SE,aari1995/German_Semantic_V3b
+472,473,Stück,119,A,für seine nächste Sonate.,0,0.25,0,4.8,4.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Noten aufschrieb, das",0.63208115,SE,aari1995/German_Semantic_V3b
+473,474,Stück,119,B,für seine nächste Sonate.,0,0.42,0,1.7,2.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Fragen beantwortete, das",0.57113993,SE,aari1995/German_Semantic_V3b
+474,475,Stück,119,C,für seine nächste Sonate.,0,0.0,0,4.8,4.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Noten aufschrieb, das",0.6388061,SE,aari1995/German_Semantic_V3b
+475,476,Stück,119,D,für seine nächste Sonate.,0,0.08,0,1.7,2.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Fragen beantwortete, das",0.52164304,SE,aari1995/German_Semantic_V3b
+476,477,Bild,120,A,in seinem Atelier.,2,0.58,1,6.6,2.3,7.0,das,Bild,"Fröhlich malte der Künstler, der die Leinwand aufgespannt hatte, das",0.6975086,SE,aari1995/German_Semantic_V3b
+477,478,Bild,120,B,in seinem Atelier.,2,0.58,1,1.5,1.7,7.0,das,Bild,"Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",0.5886934,SE,aari1995/German_Semantic_V3b
+478,479,Bild,120,C,in seinem Atelier.,2,0.0,1,6.6,2.3,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",0.7108028,SE,aari1995/German_Semantic_V3b
+479,480,Bild,120,D,in seinem Atelier.,2,0.0,1,1.5,1.7,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",0.53959763,SE,aari1995/German_Semantic_V3b

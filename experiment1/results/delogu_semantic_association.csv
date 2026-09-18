@@ -2969,3 +2969,273 @@
 267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.29100335,SE,sentence-transformers/stsb-xlm-r-multilingual
 268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.26378924,SE,sentence-transformers/stsb-xlm-r-multilingual
 269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.119021304,SE,sentence-transformers/stsb-xlm-r-multilingual
+0,1,control,Johann betrat das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.57291996,SE,aari1995/German_Semantic_V3b
+1,1,script-related,Johann verließ das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.55681694,SE,aari1995/German_Semantic_V3b
+2,1,script-unrelated,Johann betrat die Wohnung. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.3605705,SE,aari1995/German_Semantic_V3b
+3,2,control,Sabine betrat das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.4853607,SE,aari1995/German_Semantic_V3b
+4,2,script-related,Sabine verließ das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.50216734,SE,aari1995/German_Semantic_V3b
+5,2,script-unrelated,Sabine betrat die Schule. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.46109158,SE,aari1995/German_Semantic_V3b
+6,3,control,Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.47141737,SE,aari1995/German_Semantic_V3b
+7,3,script-related,Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.49964544,SE,aari1995/German_Semantic_V3b
+8,3,script-unrelated,Kevin betrat die Kirche. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.44136387,SE,aari1995/German_Semantic_V3b
+9,4,control,Susi betrat die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.6928403,SE,aari1995/German_Semantic_V3b
+10,4,script-related,Susi verließ die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.61098605,SE,aari1995/German_Semantic_V3b
+11,4,script-unrelated,Susi betrat das Gehege. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.55839705,SE,aari1995/German_Semantic_V3b
+12,5,control,Roman betrat die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.47694486,SE,aari1995/German_Semantic_V3b
+13,5,script-related,Roman verließ die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.4405493,SE,aari1995/German_Semantic_V3b
+14,5,script-unrelated,Roman betrat die Kneipe. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.4261447,SE,aari1995/German_Semantic_V3b
+15,6,control,Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.71502626,SE,aari1995/German_Semantic_V3b
+16,6,script-related,Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.6930714,SE,aari1995/German_Semantic_V3b
+17,6,script-unrelated,Lea begann die Wände zu streichen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.4736321,SE,aari1995/German_Semantic_V3b
+18,7,control,Peter erreichte das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.45791656,SE,aari1995/German_Semantic_V3b
+19,7,script-related,Peter verließ das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.42339575,SE,aari1995/German_Semantic_V3b
+20,7,script-unrelated,Peter erreichte den Supermarkt. Wenig später ging er zur,Loge,und setzte sich.,0.39420173,SE,aari1995/German_Semantic_V3b
+21,8,control,Lisa betrat den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.55845374,SE,aari1995/German_Semantic_V3b
+22,8,script-related,Lisa verließ den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.5477857,SE,aari1995/German_Semantic_V3b
+23,8,script-unrelated,Lisa betrat das Haus. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.37885532,SE,aari1995/German_Semantic_V3b
+24,9,control,Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.6217499,SE,aari1995/German_Semantic_V3b
+25,9,script-related,Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.57348114,SE,aari1995/German_Semantic_V3b
+26,9,script-unrelated,Tim begann seine Fahrstunde. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.58031636,SE,aari1995/German_Semantic_V3b
+27,10,control,Maria erreichte den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.5941528,SE,aari1995/German_Semantic_V3b
+28,10,script-related,Maria verließ den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.5247742,SE,aari1995/German_Semantic_V3b
+29,10,script-unrelated,Maria erreichte das Einkaufszentrum. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.5904691,SE,aari1995/German_Semantic_V3b
+30,11,control,Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.469342,SE,aari1995/German_Semantic_V3b
+31,11,script-related,Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.45044243,SE,aari1995/German_Semantic_V3b
+32,11,script-unrelated,Lukas kam zum Unterricht. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.39889807,SE,aari1995/German_Semantic_V3b
+33,12,control,Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.65473974,SE,aari1995/German_Semantic_V3b
+34,12,script-related,Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.62097955,SE,aari1995/German_Semantic_V3b
+35,12,script-unrelated,Marie ging zur Uni. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.5174343,SE,aari1995/German_Semantic_V3b
+36,13,control,Thorsten begann zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.58668655,SE,aari1995/German_Semantic_V3b
+37,13,script-related,Thorsten hörte auf zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.5898537,SE,aari1995/German_Semantic_V3b
+38,13,script-unrelated,Thorsten begann zu grillen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.38300505,SE,aari1995/German_Semantic_V3b
+39,14,control,Claudia betrat den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.63024324,SE,aari1995/German_Semantic_V3b
+40,14,script-related,Claudia verließ den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.61497843,SE,aari1995/German_Semantic_V3b
+41,14,script-unrelated,Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.5676186,SE,aari1995/German_Semantic_V3b
+42,15,control,Jonathan ging zum Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.67359346,SE,aari1995/German_Semantic_V3b
+43,15,script-related,Jonathan verließ den Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.6561805,SE,aari1995/German_Semantic_V3b
+44,15,script-unrelated,Jonathan ging in die Küche. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.42022985,SE,aari1995/German_Semantic_V3b
+45,16,control,Lara ging in den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.50225204,SE,aari1995/German_Semantic_V3b
+46,16,script-related,Lara verließ den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.5147492,SE,aari1995/German_Semantic_V3b
+47,16,script-unrelated,Lara ging zum Herd. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.50418204,SE,aari1995/German_Semantic_V3b
+48,17,control,Roman ging ins Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.51815826,SE,aari1995/German_Semantic_V3b
+49,17,script-related,Roman verließ das Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.51589864,SE,aari1995/German_Semantic_V3b
+50,17,script-unrelated,Roman ging in die Buchhandlung. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.4514661,SE,aari1995/German_Semantic_V3b
+51,18,control,Annika ging zum Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.62874913,SE,aari1995/German_Semantic_V3b
+52,18,script-related,Annika verließ den Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.6007058,SE,aari1995/German_Semantic_V3b
+53,18,script-unrelated,Annika ging in die Boutique. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.46149883,SE,aari1995/German_Semantic_V3b
+54,19,control,Emil betrat das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.4326959,SE,aari1995/German_Semantic_V3b
+55,19,script-related,Emil verließ das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.46576446,SE,aari1995/German_Semantic_V3b
+56,19,script-unrelated,Emil betrat die Apotheke. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.47189757,SE,aari1995/German_Semantic_V3b
+57,20,control,Susanne betrat die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.5639295,SE,aari1995/German_Semantic_V3b
+58,20,script-related,Susanne verließ die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.49277154,SE,aari1995/German_Semantic_V3b
+59,20,script-unrelated,Susanne betrat das Bad. Schnell setzte sie den,Sattel,auf und ritt los.,0.47249407,SE,aari1995/German_Semantic_V3b
+60,21,control,Martin kam zur Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.44574594,SE,aari1995/German_Semantic_V3b
+61,21,script-related,Martin verließ die Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.41466713,SE,aari1995/German_Semantic_V3b
+62,21,script-unrelated,Martin kam zur Autowerkstatt. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.431489,SE,aari1995/German_Semantic_V3b
+63,22,control,Jutta ging zur Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.5616075,SE,aari1995/German_Semantic_V3b
+64,22,script-related,Jutta verließ die Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.4814444,SE,aari1995/German_Semantic_V3b
+65,22,script-unrelated,Jutta ging zur Post. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.42995661,SE,aari1995/German_Semantic_V3b
+66,23,control,Jens ging zum Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.39973655,SE,aari1995/German_Semantic_V3b
+67,23,script-related,Jens verließ den Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.36569405,SE,aari1995/German_Semantic_V3b
+68,23,script-unrelated,Jens ging zur Zollstelle. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.3998511,SE,aari1995/German_Semantic_V3b
+69,24,control,Elena begann Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.47016776,SE,aari1995/German_Semantic_V3b
+70,24,script-related,Elena hörte auf Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.48496908,SE,aari1995/German_Semantic_V3b
+71,24,script-unrelated,Elena begann zu zeichnen. Schnell setzte sie ihr,Geld,und gewann.,0.4227009,SE,aari1995/German_Semantic_V3b
+72,25,control,Bruno begann seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.4394232,SE,aari1995/German_Semantic_V3b
+73,25,script-related,Bruno beendete seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.41996145,SE,aari1995/German_Semantic_V3b
+74,25,script-unrelated,Bruno begann seinen Filmabend. Endlich kam er am,Meer,an und genoss das Wetter.,0.42275718,SE,aari1995/German_Semantic_V3b
+75,26,control,Jana betrat das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.5270772,SE,aari1995/German_Semantic_V3b
+76,26,script-related,Jana verließ das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.44521743,SE,aari1995/German_Semantic_V3b
+77,26,script-unrelated,Jana betrat das Gartencenter. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.4804949,SE,aari1995/German_Semantic_V3b
+78,27,control,Nico fuhr auf die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.5556502,SE,aari1995/German_Semantic_V3b
+79,27,script-related,Nico verließ die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.42270064,SE,aari1995/German_Semantic_V3b
+80,27,script-unrelated,Nico fuhr zur Pizzeria. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.53713185,SE,aari1995/German_Semantic_V3b
+81,28,control,Beate ging Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.5597915,SE,aari1995/German_Semantic_V3b
+82,28,script-related,Beate kam zurück vom Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.5504235,SE,aari1995/German_Semantic_V3b
+83,28,script-unrelated,Beate ging schwimmen. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.56670606,SE,aari1995/German_Semantic_V3b
+84,29,control,Hubert nahm ein Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.6833115,SE,aari1995/German_Semantic_V3b
+85,29,script-related,Hubert verließ das Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.6594747,SE,aari1995/German_Semantic_V3b
+86,29,script-unrelated,Hubert nahm ein Flugzeug. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.5966954,SE,aari1995/German_Semantic_V3b
+87,30,control,Jenni begann zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.5351553,SE,aari1995/German_Semantic_V3b
+88,30,script-related,Jenni hörte auf zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.499948,SE,aari1995/German_Semantic_V3b
+89,30,script-unrelated,Jenni begann die Vorlesung. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.42115015,SE,aari1995/German_Semantic_V3b
+90,31,control,Hans betrat die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.6532835,SE,aari1995/German_Semantic_V3b
+91,31,script-related,Hans verließ die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.5944881,SE,aari1995/German_Semantic_V3b
+92,31,script-unrelated,Hans betrat die Kletterhalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.42522672,SE,aari1995/German_Semantic_V3b
+93,32,control,Clara begann zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.66502595,SE,aari1995/German_Semantic_V3b
+94,32,script-related,Clara hörte auf zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.63701487,SE,aari1995/German_Semantic_V3b
+95,32,script-unrelated,Clara ging zum Schießstand. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.6581775,SE,aari1995/German_Semantic_V3b
+96,33,control,Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.45176655,SE,aari1995/German_Semantic_V3b
+97,33,script-related,Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.4785023,SE,aari1995/German_Semantic_V3b
+98,33,script-unrelated,Georg nahm teil an Yoga. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.46253124,SE,aari1995/German_Semantic_V3b
+99,34,control,Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.49090928,SE,aari1995/German_Semantic_V3b
+100,34,script-related,Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.48455948,SE,aari1995/German_Semantic_V3b
+101,34,script-unrelated,Johanna begann die Jagd. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.5007777,SE,aari1995/German_Semantic_V3b
+102,35,control,Jürgen betrat die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.5251869,SE,aari1995/German_Semantic_V3b
+103,35,script-related,Jürgen verließ die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.51563907,SE,aari1995/German_Semantic_V3b
+104,35,script-unrelated,Jürgen betrat die Bäckerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.3735191,SE,aari1995/German_Semantic_V3b
+105,36,control,Frauke betrat den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.55185014,SE,aari1995/German_Semantic_V3b
+106,36,script-related,Frauke verließ den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.5153039,SE,aari1995/German_Semantic_V3b
+107,36,script-unrelated,Frauke ging ins Stadion. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.4839957,SE,aari1995/German_Semantic_V3b
+108,37,control,Bernd betrat den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.60245126,SE,aari1995/German_Semantic_V3b
+109,37,script-related,Bernd verließ den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.59536815,SE,aari1995/German_Semantic_V3b
+110,37,script-unrelated,Bernd betrat den Kiosk. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.40653577,SE,aari1995/German_Semantic_V3b
+111,38,control,Nicole ging in den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.49222955,SE,aari1995/German_Semantic_V3b
+112,38,script-related,Nicole verließ den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.43989766,SE,aari1995/German_Semantic_V3b
+113,38,script-unrelated,Nicole ging ins Büro. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.44660598,SE,aari1995/German_Semantic_V3b
+114,39,control,Viktor ging in die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.62408435,SE,aari1995/German_Semantic_V3b
+115,39,script-related,Viktor verließ die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.58441335,SE,aari1995/German_Semantic_V3b
+116,39,script-unrelated,Viktor ging ins Labor. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.5475555,SE,aari1995/German_Semantic_V3b
+117,40,control,Gabi ging zum Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.684829,SE,aari1995/German_Semantic_V3b
+118,40,script-related,Gabi verließ den Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.62508106,SE,aari1995/German_Semantic_V3b
+119,40,script-unrelated,Gabi ging in die Umkleide. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.5601413,SE,aari1995/German_Semantic_V3b
+120,41,control,Jakob betrat den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.44744888,SE,aari1995/German_Semantic_V3b
+121,41,script-related,Jakob verließ den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.45245475,SE,aari1995/German_Semantic_V3b
+122,41,script-unrelated,Jakob betrat die Tankstelle. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.42046085,SE,aari1995/German_Semantic_V3b
+123,42,control,Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.58680034,SE,aari1995/German_Semantic_V3b
+124,42,script-related,Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.5640765,SE,aari1995/German_Semantic_V3b
+125,42,script-unrelated,Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.44250175,SE,aari1995/German_Semantic_V3b
+126,43,control,Tom begann ein Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.44998178,SE,aari1995/German_Semantic_V3b
+127,43,script-related,Tom beendete das Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.430185,SE,aari1995/German_Semantic_V3b
+128,43,script-unrelated,Tom begann Frühstück zu machen. Sofort stapelte er das,Holz,und zündete es an.,0.38909864,SE,aari1995/German_Semantic_V3b
+129,44,control,Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.6890958,SE,aari1995/German_Semantic_V3b
+130,44,script-related,Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.6218761,SE,aari1995/German_Semantic_V3b
+131,44,script-unrelated,Kim ging ins Krankenhaus. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.45867115,SE,aari1995/German_Semantic_V3b
+132,45,control,Michael begann sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.6311155,SE,aari1995/German_Semantic_V3b
+133,45,script-related,Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.61161053,SE,aari1995/German_Semantic_V3b
+134,45,script-unrelated,Michael begann einen Kuchen zu backen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.56998867,SE,aari1995/German_Semantic_V3b
+135,46,control,Johann betrat die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.37168166,SE,aari1995/German_Semantic_V3b
+136,46,script-related,Johann verließ die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.39920706,SE,aari1995/German_Semantic_V3b
+137,46,script-unrelated,Johann betrat das Kino. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.3705972,SE,aari1995/German_Semantic_V3b
+138,47,control,Sabine betrat die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.60245365,SE,aari1995/German_Semantic_V3b
+139,47,script-related,Sabine verließ die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.455495,SE,aari1995/German_Semantic_V3b
+140,47,script-unrelated,Sabine betrat den Bauernhof. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.47465697,SE,aari1995/German_Semantic_V3b
+141,48,control,Kevin betrat die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.52213526,SE,aari1995/German_Semantic_V3b
+142,48,script-related,Kevin verließ die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.4850673,SE,aari1995/German_Semantic_V3b
+143,48,script-unrelated,Kevin betrat die Arztpraxis. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.476252,SE,aari1995/German_Semantic_V3b
+144,49,control,Susi betrat das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.5044993,SE,aari1995/German_Semantic_V3b
+145,49,script-related,Susi verließ das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.54723155,SE,aari1995/German_Semantic_V3b
+146,49,script-unrelated,Susi betrat die Bücherei. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.4126548,SE,aari1995/German_Semantic_V3b
+147,50,control,Thomas betrat die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.588748,SE,aari1995/German_Semantic_V3b
+148,50,script-related,Thomas verließ die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.5377612,SE,aari1995/German_Semantic_V3b
+149,50,script-unrelated,Thomas begann Spaghetti zu kochen. In Eile rief er den,Kellner,und bestellte ein Bier.,0.62860763,SE,aari1995/German_Semantic_V3b
+150,51,control,Lea begann die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.6678136,SE,aari1995/German_Semantic_V3b
+151,51,script-related,Lea war fertig die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.65653116,SE,aari1995/German_Semantic_V3b
+152,51,script-unrelated,Lea erreichte das Theater. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.45300704,SE,aari1995/German_Semantic_V3b
+153,52,control,Peter erreichte den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.52647734,SE,aari1995/German_Semantic_V3b
+154,52,script-related,Peter verließ den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.4922659,SE,aari1995/German_Semantic_V3b
+155,52,script-unrelated,Peter erreichte den Bahnhof. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.4633815,SE,aari1995/German_Semantic_V3b
+156,53,control,Lisa betrat das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.41405421,SE,aari1995/German_Semantic_V3b
+157,53,script-related,Lisa verließ das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.33228967,SE,aari1995/German_Semantic_V3b
+158,53,script-unrelated,Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.44294173,SE,aari1995/German_Semantic_V3b
+159,54,control,Tim begann seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.6394109,SE,aari1995/German_Semantic_V3b
+160,54,script-related,Tim beendete seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.59783995,SE,aari1995/German_Semantic_V3b
+161,54,script-unrelated,Tim ging zum Flughafen. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.5420532,SE,aari1995/German_Semantic_V3b
+162,55,control,Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.6235115,SE,aari1995/German_Semantic_V3b
+163,55,script-related,Maria verließ das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.61303824,SE,aari1995/German_Semantic_V3b
+164,55,script-unrelated,Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.48260987,SE,aari1995/German_Semantic_V3b
+165,56,control,Lukas begann die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.43485636,SE,aari1995/German_Semantic_V3b
+166,56,script-related,Lukas beendete die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.43624973,SE,aari1995/German_Semantic_V3b
+167,56,script-unrelated,Lukas ging zum Friseur. Eilig begrüßte er seine,Studenten,und fing an.,0.38961098,SE,aari1995/German_Semantic_V3b
+168,57,control,Marie ging zur Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.5053843,SE,aari1995/German_Semantic_V3b
+169,57,script-related,Marie verließ die Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.41866577,SE,aari1995/German_Semantic_V3b
+170,57,script-unrelated,Marie ging duschen. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.4006579,SE,aari1995/German_Semantic_V3b
+171,58,control,Thorsten begann zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.7348489,SE,aari1995/German_Semantic_V3b
+172,58,script-related,Thorsten hörte auf zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.6571425,SE,aari1995/German_Semantic_V3b
+173,58,script-unrelated,Thorsten betrat den Blumenladen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.4984077,SE,aari1995/German_Semantic_V3b
+174,59,control,Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.5474621,SE,aari1995/German_Semantic_V3b
+175,59,script-related,Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.49771842,SE,aari1995/German_Semantic_V3b
+176,59,script-unrelated,Claudia betrat den Friedhof. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.4786543,SE,aari1995/German_Semantic_V3b
+177,60,control,Jonathan ging in die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.5001754,SE,aari1995/German_Semantic_V3b
+178,60,script-related,Jonathan verließ die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.4700994,SE,aari1995/German_Semantic_V3b
+179,60,script-unrelated,Jonathan ging in den Garten. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.44861224,SE,aari1995/German_Semantic_V3b
+180,61,control,Lara ging zum Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.6215608,SE,aari1995/German_Semantic_V3b
+181,61,script-related,Lara ging weg vom Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.50985587,SE,aari1995/German_Semantic_V3b
+182,61,script-unrelated,Lara ging ins Museum. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.38500196,SE,aari1995/German_Semantic_V3b
+183,62,control,Roman ging in die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.72956246,SE,aari1995/German_Semantic_V3b
+184,62,script-related,Roman verließ die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.7233946,SE,aari1995/German_Semantic_V3b
+185,62,script-unrelated,Roman ging zum Konditor. Schnell suchte er einen,Roman,für seine Frau.,0.641314,SE,aari1995/German_Semantic_V3b
+186,63,control,Annika ging in die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.3714728,SE,aari1995/German_Semantic_V3b
+187,63,script-related,Annika verließ die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.3459541,SE,aari1995/German_Semantic_V3b
+188,63,script-unrelated,Annika ging ins Spa. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.36800084,SE,aari1995/German_Semantic_V3b
+189,64,control,Emil betrat die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.6051435,SE,aari1995/German_Semantic_V3b
+190,64,script-related,Emil verließ die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.56330293,SE,aari1995/German_Semantic_V3b
+191,64,script-unrelated,Emil betrat die Reitschule. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.49503416,SE,aari1995/German_Semantic_V3b
+192,65,control,Susanne betrat das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.41696435,SE,aari1995/German_Semantic_V3b
+193,65,script-related,Susanne verließ das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.39680523,SE,aari1995/German_Semantic_V3b
+194,65,script-unrelated,Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.43677723,SE,aari1995/German_Semantic_V3b
+195,66,control,Martin kam zur Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.43690962,SE,aari1995/German_Semantic_V3b
+196,66,script-related,Martin verließ die Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.4169098,SE,aari1995/German_Semantic_V3b
+197,66,script-unrelated,Martin kam zur Hotelrezeption. Umgehend fragte er nach den,Reifen,für den Winter.,0.39036354,SE,aari1995/German_Semantic_V3b
+198,67,control,Jutta ging zur Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.6046155,SE,aari1995/German_Semantic_V3b
+199,67,script-related,Jutta verließ die Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.5735095,SE,aari1995/German_Semantic_V3b
+200,67,script-unrelated,Jutta ging zum Zahnarzt. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.46515474,SE,aari1995/German_Semantic_V3b
+201,68,control,Jens ging zur Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.49628934,SE,aari1995/German_Semantic_V3b
+202,68,script-related,Jens verließ die Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.43621555,SE,aari1995/German_Semantic_V3b
+203,68,script-unrelated,Jens begann Poker zu spielen. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.39688766,SE,aari1995/German_Semantic_V3b
+204,69,control,Elena begann zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.62650335,SE,aari1995/German_Semantic_V3b
+205,69,script-related,Elena hörte auf zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.620834,SE,aari1995/German_Semantic_V3b
+206,69,script-unrelated,Elena begann den Urlaub. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.49665722,SE,aari1995/German_Semantic_V3b
+207,70,control,Bruno begann seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.56351495,SE,aari1995/German_Semantic_V3b
+208,70,script-related,Bruno beendete seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.5574561,SE,aari1995/German_Semantic_V3b
+209,70,script-unrelated,Bruno betrat das Bürgeramt. Schnell besorgte er das,Popcorn,aus der Küche.,0.45004174,SE,aari1995/German_Semantic_V3b
+210,71,control,Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.4287533,SE,aari1995/German_Semantic_V3b
+211,71,script-related,Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.40730256,SE,aari1995/German_Semantic_V3b
+212,71,script-unrelated,Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.3849352,SE,aari1995/German_Semantic_V3b
+213,72,control,Nico fuhr zur Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.5767881,SE,aari1995/German_Semantic_V3b
+214,72,script-related,Nico verließ die Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.51294965,SE,aari1995/German_Semantic_V3b
+215,72,script-unrelated,Nico fuhr wandern. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.43066648,SE,aari1995/German_Semantic_V3b
+216,73,control,Beate ging Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.564046,SE,aari1995/German_Semantic_V3b
+217,73,script-related,Beate kam zurück vom Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.5241098,SE,aari1995/German_Semantic_V3b
+218,73,script-unrelated,Beate fuhr mit dem Taxi. Schnell prüfte sie das,Becken,und schwamm los.,0.40269294,SE,aari1995/German_Semantic_V3b
+219,74,control,Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.45498303,SE,aari1995/German_Semantic_V3b
+220,74,script-related,Hubert verließ das Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.43552354,SE,aari1995/German_Semantic_V3b
+221,74,script-unrelated,Hubert begann zu baden. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.40516087,SE,aari1995/German_Semantic_V3b
+222,75,control,Jenni begann den Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.42929405,SE,aari1995/German_Semantic_V3b
+223,75,script-related,Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4116532,SE,aari1995/German_Semantic_V3b
+224,75,script-unrelated,Jenni betrat die Eishalle. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.39734697,SE,aari1995/German_Semantic_V3b
+225,76,control,Hans betrat die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.42532924,SE,aari1995/German_Semantic_V3b
+226,76,script-related,Hans verließ die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.40930322,SE,aari1995/German_Semantic_V3b
+227,76,script-unrelated,Hans begann zu bowlen. Wenig später griff er das,Seil,und spannte es ein.,0.4775099,SE,aari1995/German_Semantic_V3b
+228,77,control,Clara ging zum Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.64494276,SE,aari1995/German_Semantic_V3b
+229,77,script-related,Clara verließ den Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.6064192,SE,aari1995/German_Semantic_V3b
+230,77,script-unrelated,Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.47767934,SE,aari1995/German_Semantic_V3b
+231,78,control,Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.70491856,SE,aari1995/German_Semantic_V3b
+232,78,script-related,Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.64952564,SE,aari1995/German_Semantic_V3b
+233,78,script-unrelated,Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.48453322,SE,aari1995/German_Semantic_V3b
+234,79,control,Johanna begann die Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.4814534,SE,aari1995/German_Semantic_V3b
+235,79,script-related,Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.4802029,SE,aari1995/German_Semantic_V3b
+236,79,script-unrelated,Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.48860645,SE,aari1995/German_Semantic_V3b
+237,80,control,Jürgen betrat die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.56904024,SE,aari1995/German_Semantic_V3b
+238,80,script-related,Jürgen verließ die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.5457759,SE,aari1995/German_Semantic_V3b
+239,80,script-unrelated,Jürgen betrat den Zoo. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.45069855,SE,aari1995/German_Semantic_V3b
+240,81,control,Frauke ging ins Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.52517253,SE,aari1995/German_Semantic_V3b
+241,81,script-related,Frauke verließ das Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.4592601,SE,aari1995/German_Semantic_V3b
+242,81,script-unrelated,Frauke ging zum Waschsalon. Schnell wählte sie eine,Tribüne,und setzte sich.,0.37586483,SE,aari1995/German_Semantic_V3b
+243,82,control,Bernd betrat den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.47858688,SE,aari1995/German_Semantic_V3b
+244,82,script-related,Bernd verließ den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.46000814,SE,aari1995/German_Semantic_V3b
+245,82,script-unrelated,Bernd betrat den Zirkus. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.43458325,SE,aari1995/German_Semantic_V3b
+246,83,control,Nicole betrat das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.5306977,SE,aari1995/German_Semantic_V3b
+247,83,script-related,Nicole verließ das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.5187526,SE,aari1995/German_Semantic_V3b
+248,83,script-unrelated,Nicole betrat die Sauna. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.45299277,SE,aari1995/German_Semantic_V3b
+249,84,control,Viktor ging ins Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.5746762,SE,aari1995/German_Semantic_V3b
+250,84,script-related,Viktor verließ das Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.4987595,SE,aari1995/German_Semantic_V3b
+251,84,script-unrelated,Viktor ging zum Tierarzt. Schnell begann er das,Experiment,und machte sich Notizen.,0.47041294,SE,aari1995/German_Semantic_V3b
+252,85,control,Gabi ging in die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.6435435,SE,aari1995/German_Semantic_V3b
+253,85,script-related,Gabi verließ die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.5649653,SE,aari1995/German_Semantic_V3b
+254,85,script-unrelated,Gabi betrat den Tatort. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.4856012,SE,aari1995/German_Semantic_V3b
+255,86,control,Jakob betrat die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.4836156,SE,aari1995/German_Semantic_V3b
+256,86,script-related,Jakob verließ die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.42021975,SE,aari1995/German_Semantic_V3b
+257,86,script-unrelated,Jakob begann Bäume zu fällen. Sofort sagte er seine,Nummer,und bezahlte.,0.42348608,SE,aari1995/German_Semantic_V3b
+258,87,control,Hilde begann die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.6796601,SE,aari1995/German_Semantic_V3b
+259,87,script-related,Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.67030746,SE,aari1995/German_Semantic_V3b
+260,87,script-unrelated,Hilde begann ein Lagerfeuer. Schnell bestieg sie den,Kutschbock,und los ging es.,0.5124746,SE,aari1995/German_Semantic_V3b
+261,88,control,Tom begann Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.5059947,SE,aari1995/German_Semantic_V3b
+262,88,script-related,Tom hörte auf Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.47881815,SE,aari1995/German_Semantic_V3b
+263,88,script-unrelated,Tom ging zum Weihnachtsmarkt. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.44453773,SE,aari1995/German_Semantic_V3b
+264,89,control,Kim ging ins Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.54494536,SE,aari1995/German_Semantic_V3b
+265,89,script-related,Kim verließ das Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.5210046,SE,aari1995/German_Semantic_V3b
+266,89,script-unrelated,Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.47713232,SE,aari1995/German_Semantic_V3b
+267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.57799417,SE,aari1995/German_Semantic_V3b
+268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.5974617,SE,aari1995/German_Semantic_V3b
+269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.4537882,SE,aari1995/German_Semantic_V3b
