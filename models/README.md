@@ -44,12 +44,14 @@
 | Qwen/Qwen3-Embedding-0.6B | Qwen/Qwen3-Embedding-0.6B | 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3 |
 | bigscience/sgpt-bloom-7b1-msmarco | bigscience/sgpt-bloom-7b1-msmarco | dc579f3d2d5a0795eba2049e16c3e36c74007ad3 |
 | jinaai/jina-embeddings-v5-text-small | jinaai/jina-embeddings-v5-text-small | dd76d535f5447ca3897a9c893fb1e612ead98192 |
+| jinaai/jina-embeddings-v5-text-nano | jinaai/jina-embeddings-v5-text-nano | 8a7f00aac812071b69403df470f1038ec85f8925 |
 
 ## German Models
 | name | HF repo | revision |
 | --- | --- | --- |
 | jinaai/jina-embeddings-v2-base-de | jinaai/jina-embeddings-v2-base-de | 3f9eede875721714945b6a99a3198299243cf2be |
 | aari1995/German_Semantic_STS_V2 | aari1995/German_Semantic_STS_V2 | 22912542b0ec7a7ef369837e28ffe6352a27afc9 |
+| aari1995/German_Semantic_V3b | aari1995/German_Semantic_V3b | e6cfe3d6e255cb1c792a530fe5f0a1457e999fa8 |
 
 # Other Language Models
 *NB: Not in this folder, but used in the project.*
