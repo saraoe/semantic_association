@@ -168,7 +168,7 @@ get_fixef_models <- function(
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("delogu"), model_prefix = "lp") |>
+fixef_df <- get_fixef_models(c("delogu", ), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
 
 model_name <- "delogu_assoc_lp.rds"
@@ -321,4 +321,68 @@ fixef_df |>
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "delogu_regression_coefficients_plaus.png"), height = 3, width = 7)
+```
+
+### Other datasets
+```{r}
+rm(fixef_df)
+
+fixef_df <- get_fixef_models(c("aurnhammer"), model_prefix = "lp") |>
+    filter(!(model %in% exclude_models))
+```
+
+```{r}
+fixef_df |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE",
+        implementation == "Human rating" ~ "Human rating",
+    )) |>
+    mutate(
+        implementation = ifelse(
+            implementation == "Human rating",
+            "Human rating",
+            paste(model_type, model, sep = ", ")
+        ),
+        coefficient = case_when(
+            coefficient == "s_lp" ~ "Log probability",
+            coefficient == "s_sem" ~ "Semantic assocaition",
+            .default = coefficient
+        )
+    ) |>
+    mutate(
+        model_type = factor(
+            model_type,
+            levels = c("Human rating", "WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(model_type, model) |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = rev(unique(implementation))
+        )
+    ) |>
+    ggplot(aes(y = implementation, color = model_type)) +
+    geom_point(aes(x = Estimate)) +
+    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "steelblue1",
+            "steelblue4",
+            "firebrick"
+        )
+    ) +
+    facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+    labs(
+        x = TeX("$\\beta$"), y = "",
+        color = "Embeddings"
+    ) +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", paste0(unique(fixef_df$dataset), "_regression_coefficients.png")), height = 3, width = 7)
 ```
