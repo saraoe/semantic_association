@@ -84,7 +84,7 @@ diagnostics_df |>
     filter(!str_detect(model, "SE_all")) |>
     # filter(min(min_ess_bulk) == min_ess_bulk) |>
     # filter(min(min_ess_tail) == min_ess_tail) |>
-    filter(max(max_rhat) == max_rhat) |>
+    # filter(max(max_rhat) == max_rhat) |>
     select(model)
 
 diagnostics_df |>
@@ -105,7 +105,9 @@ get_modelname <- function(text) {
     text <- str_remove(text, "Qwen_")
     text <- str_remove(text, "BAAI_")
     text <- str_remove(text, "intfloat_")
+    text <- str_remove(text, "clips_")
     text <- str_remove(text, "Gameselo_")
+    text <- str_remove(text, "jinaai_")
     return(text)
 }
 
@@ -146,8 +148,8 @@ get_fixef_models <- function(
                     "dataset" = dataset,
                     "model" = get_modelname(implementation),
                     "context" = case_when(
-                        str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
-                        str_detect(implementation, "all") ~ "All",
+                        str_detect(implementation, "sentences1_") ~ "Sentence(N=1)",
+                        str_detect(implementation, "all_") ~ "All",
                         .default = "Sentence(N=10)"
                     )
                 )
