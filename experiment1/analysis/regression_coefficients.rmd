@@ -168,7 +168,7 @@ get_fixef_models <- function(
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("delogu", ), model_prefix = "lp") |>
+fixef_df <- get_fixef_models(c("delogu"), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
 
 model_name <- "delogu_assoc_lp.rds"
