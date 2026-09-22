@@ -11,8 +11,21 @@ setwd("experiment1")
 
 exclude_models <- c(
     "Gameselo/STS-multilingual-mpnet-base-v2",
-    "jinaai/jina-embeddings-v2-base-de"
+    "jinaai/jina-embeddings-v2-base-de",
+    "sentence-transformers/stsb-xlm-r-multilingual",
+    "aari1995/German_Semantic_V3b"
 )
+
+remove_organization <- function(text) {
+    text <- str_remove(text, "Qwen/")
+    text <- str_remove(text, "BAAI/")
+    text <- str_remove(text, "intfloat/")
+    text <- str_remove(text, "Gameselo/")
+    text <- str_remove(text, "jinaai/")
+    text <- str_remove(text, "aari1995/")
+    text <- str_remove(text, "sentence-transformers/")
+    return(text)
+}
 ```
 
 ## Delogu et al. (2019)
@@ -27,11 +40,13 @@ lp_df <- read.csv(file.path("results", "delogu_log_probability.csv")) |>
 delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |>
     left_join(assoc_df) |>
     left_join(lp_df) |>
+    filter(!model %in% exclude_models) |>
     mutate("cond" = factor(Condition,
         levels = c("control", "script-related", "script-unrelated")
     )) |>
-    mutate(full_implementation = paste(implementation, model, sep = ", ")) |>
-    filter(!model %in% exclude_models)
+    mutate(
+        full_implementation = paste(implementation, remove_organization(model), sep = ", ")
+    )
 ```
 
 ```{r}
@@ -42,8 +57,12 @@ cor_matrix <- delogu_df |>
         values_from = semantic_association,
         names_prefix = "semantic_association_"
     ) |>
-    select(starts_with("semantic_association"), "Assoc", "Plaus", "lp_benjamin_gerpt2") |>
-    cor(use = "pairwise.complete.obs")
+    select(starts_with("semantic_association"), "Assoc", , "lp_benjamin_gerpt2") |>
+    rename(
+        "Human rated association" = "Assoc",
+        "Log-probability, GerPT2" = "lp_benjamin_gerpt2"
+    ) |>
+    cor(method = "pearson", use = "pairwise.complete.obs")
 
 # Remove prefix
 prefix <- "^semantic_association_"
@@ -74,8 +93,10 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
     ) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-    labs(x = "", y = "", fill = "Correlation") +
+    labs(x = "", y = "", fill = "Pearson's r") +
     theme(aspect.ratio = 1)
+
+ggsave(file.path("figs", "delogu_correlations.png"), width = 7, height = 5)
 ```
 
 ## Aurnhammer et al. (2021)
