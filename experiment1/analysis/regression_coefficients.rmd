@@ -15,7 +15,9 @@ models_path <- file.path("analysis", "brms_models")
 
 exclude_models <- c(
     "STS-multilingual-mpnet-base-v2",
-    "jina-embeddings-v2-base-de"
+    "jina-embeddings-v2-base-de",
+    "German_Semantic_V3b",
+    "stsb-xlm-r-multilingual"
 )
 ```
 
@@ -243,6 +245,70 @@ fixef_df |>
         color = "Embeddings"
     ) +
     theme_minimal() +
+    theme(legend.position = "bottom")
+```
+
+```{r}
+library(patchwork)
+
+dataset_plot <- function(coefficient_name, x_lab) {
+    fixef_df |>
+        filter(coefficient == coefficient_name) |>
+        mutate(model_type = case_when(
+            str_detect(implementation, "SE") ~ "SE",
+            str_detect(implementation, "CWE") ~ "CWE",
+            str_detect(implementation, "WE") ~ "WE",
+            implementation == "Human rating" ~ "Human rating",
+        )) |>
+        mutate(
+            implementation = ifelse(
+                implementation == "Human rating",
+                "Human-rated association",
+                paste(model_type, model, sep = ", ")
+            ),
+            coefficient = case_when(
+                coefficient == "s_lp" ~ "Log probability",
+                coefficient == "s_sem" ~ "Semantic association",
+                .default = coefficient
+            )
+        ) |>
+        mutate(
+            model_type = factor(
+                model_type,
+                levels = c("Human rating", "WE", "CWE", "SE")
+            ),
+        ) |>
+        arrange(model_type, model) |>
+        mutate(
+            implementation = factor(
+                implementation,
+                levels = rev(unique(implementation))
+            )
+        ) |>
+        ggplot(aes(y = implementation, color = model_type)) +
+        geom_point(aes(x = Estimate)) +
+        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
+        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        scale_color_manual(
+            values = c(
+                "darkorange",
+                "steelblue1",
+                "steelblue4",
+                "firebrick"
+            )
+        ) +
+        facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+        labs(
+            x = x_lab, y = "",
+            color = "",
+        ) +
+        theme_minimal() +
+        theme(plot.title = element_text(size = 11))
+}
+
+dataset_plot(coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+    dataset_plot(coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+    plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
 ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3, width = 7)
