@@ -3,7 +3,7 @@ name = "semantic-association"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.12"
+requires-python = ">=3.12,<3.13"
 dependencies = [
     "gensim==4.4.0",
     "matplotlib==3.10.7",
@@ -13,9 +13,19 @@ dependencies = [
     "pandas==2.3.3",
     "sentence-transformers==5.2.0",
     "spacy==3.7.5",
+    "de-core-news-sm",
+    "en-core-web-lg",
+    "en-core-web-sm",
+    "nl-core-news-sm",
     "torch==2.9.0",
     "transformers==4.57.1",
     "mne==1.12.1",
     "ndjson==0.3.1",
     "peft==0.21.0"
 ]
+
+[tool.uv.sources]
+de-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.7.0/de_core_news_sm-3.7.0-py3-none-any.whl" }
+en-core-web-lg = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl" }
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl" }
+nl-core-news-sm = { url = "https://github.com/explosion/spacy-models/releases/download/nl_core_news_sm-3.7.0/nl_core_news_sm-3.7.0-py3-none-any.whl" }
