@@ -5759,3 +5759,963 @@
 477,478,Bild,120,B,in seinem Atelier.,2,0.58,1,1.5,1.7,7.0,das,Bild,"Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",0.5886934,SE,aari1995/German_Semantic_V3b
 478,479,Bild,120,C,in seinem Atelier.,2,0.0,1,6.6,2.3,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",0.7108028,SE,aari1995/German_Semantic_V3b
 479,480,Bild,120,D,in seinem Atelier.,2,0.0,1,1.5,1.7,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",0.53959763,SE,aari1995/German_Semantic_V3b
+0,1,Axt,1,A,und hackte die Holzscheite.,0,0.75,1,6.9,3.1,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er das Holz stapelte, die",0.53200114,SE,jinaai/jina-embeddings-v5-text-small
+1,2,Axt,1,B,und hackte die Holzscheite.,0,0.67,1,3.1,1.2,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er den Film schaute, die",0.48826358,SE,jinaai/jina-embeddings-v5-text-small
+2,3,Axt,1,C,und hackte die Holzscheite.,0,0.0,1,6.9,3.1,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er das Holz stapelte, die",0.43037736,SE,jinaai/jina-embeddings-v5-text-small
+3,4,Axt,1,D,und hackte die Holzscheite.,0,0.0,1,3.1,1.2,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er den Film schaute, die",0.39572883,SE,jinaai/jina-embeddings-v5-text-small
+4,5,Messer,2,A,und rasiert den Kunden.,0,0.67,1,5.0,5.1,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.58472824,SE,jinaai/jina-embeddings-v5-text-small
+5,6,Messer,2,B,und rasiert den Kunden.,0,0.75,1,1.2,1.4,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.5616366,SE,jinaai/jina-embeddings-v5-text-small
+6,7,Messer,2,C,und rasiert den Kunden.,0,0.0,1,5.0,5.1,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.48829234,SE,jinaai/jina-embeddings-v5-text-small
+7,8,Messer,2,D,und rasiert den Kunden.,0,0.0,1,1.2,1.4,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.43045804,SE,jinaai/jina-embeddings-v5-text-small
+8,9,Kaffee,3,A,und gießt die Milch dazu.,0,0.58,0,5.8,2.3,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.42991954,SE,jinaai/jina-embeddings-v5-text-small
+9,10,Kaffee,3,B,und gießt die Milch dazu.,0,0.25,0,3.5,3.5,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er das Radio angemacht hat, den",0.42724815,SE,jinaai/jina-embeddings-v5-text-small
+10,11,Kaffee,3,C,und gießt die Milch dazu.,0,0.0,0,5.8,2.3,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.33539066,SE,jinaai/jina-embeddings-v5-text-small
+11,12,Kaffee,3,D,und gießt die Milch dazu.,0,0.0,0,3.5,3.5,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er das Radio angemacht hat, den",0.32651195,SE,jinaai/jina-embeddings-v5-text-small
+12,13,Ofen,4,A,auf 180 Grad.,0,1.0,0,6.0,2.7,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.6305862,SE,jinaai/jina-embeddings-v5-text-small
+13,14,Ofen,4,B,auf 180 Grad.,0,0.75,0,2.4,1.3,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.60941494,SE,jinaai/jina-embeddings-v5-text-small
+14,15,Ofen,4,C,auf 180 Grad.,0,0.0,0,6.0,2.7,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.55150557,SE,jinaai/jina-embeddings-v5-text-small
+15,16,Ofen,4,D,auf 180 Grad.,0,0.08,0,2.4,1.3,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.5404181,SE,jinaai/jina-embeddings-v5-text-small
+16,17,Weinflasche,5,A,für die Weinprobe.,0,1.0,1,5.9,1.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Reben geschnitten hat, die",0.53872585,SE,jinaai/jina-embeddings-v5-text-small
+17,18,Weinflasche,5,B,für die Weinprobe.,0,1.0,1,2.0,2.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Lohnabrechnungen beendet hat, die",0.52206504,SE,jinaai/jina-embeddings-v5-text-small
+18,19,Weinflasche,5,C,für die Weinprobe.,0,0.08,1,5.9,1.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Reben geschnitten hat, die",0.45803642,SE,jinaai/jina-embeddings-v5-text-small
+19,20,Weinflasche,5,D,für die Weinprobe.,0,0.0,1,2.0,2.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Lohnabrechnungen beendet hat, die",0.49376723,SE,jinaai/jina-embeddings-v5-text-small
+20,21,Ticket,6,A,für die Fahrt.,0,0.33,1,6.7,2.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der den Automaten bedient, das",0.493034,SE,jinaai/jina-embeddings-v5-text-small
+21,22,Ticket,6,B,für die Fahrt.,0,0.33,1,1.3,1.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der die Einkaufstasche abstellt, das",0.4505237,SE,jinaai/jina-embeddings-v5-text-small
+22,23,Ticket,6,C,für die Fahrt.,0,0.0,1,6.7,2.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der den Automaten bedient, das",0.45162338,SE,jinaai/jina-embeddings-v5-text-small
+23,24,Ticket,6,D,für die Fahrt.,0,0.0,1,1.3,1.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der die Einkaufstasche abstellt, das",0.44215095,SE,jinaai/jina-embeddings-v5-text-small
+24,25,Sieg,7,A,mit einer Party.,0,0.5,0,6.8,4.4,6.2,den,Sieg,"Am Abend feiert der Gewinner, der den Pokal erhält, den",0.48685664,SE,jinaai/jina-embeddings-v5-text-small
+25,26,Sieg,7,B,mit einer Party.,0,0.75,0,1.8,2.0,6.2,den,Sieg,"Am Abend feiert der Gewinner, der das Eis isst, den",0.46367112,SE,jinaai/jina-embeddings-v5-text-small
+26,27,Sieg,7,C,mit einer Party.,0,0.0,0,6.8,4.4,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der den Pokal erhält, den",0.43688244,SE,jinaai/jina-embeddings-v5-text-small
+27,28,Sieg,7,D,mit einer Party.,0,0.0,0,1.8,2.0,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der das Eis isst, den",0.4165524,SE,jinaai/jina-embeddings-v5-text-small
+28,29,Fisch,8,A,für das Abendessen.,1,0.83,1,7.0,4.9,6.9,den,Fisch,"Endlich fängt der Angler, der den Köder auswarf, den",0.62598944,SE,jinaai/jina-embeddings-v5-text-small
+29,30,Fisch,8,B,für das Abendessen.,1,0.83,1,2.0,1.2,6.9,den,Fisch,"Endlich fängt der Angler, der die Zeitung las, den",0.5252111,SE,jinaai/jina-embeddings-v5-text-small
+30,31,Fisch,8,C,für das Abendessen.,1,0.0,1,7.0,4.9,1.3,den,Fisch,"Endlich baut der Angler, der den Köder auswarf, den",0.61201704,SE,jinaai/jina-embeddings-v5-text-small
+31,32,Fisch,8,D,für das Abendessen.,1,0.0,1,2.0,1.2,1.3,den,Fisch,"Endlich baut der Angler, der die Zeitung las, den",0.5202326,SE,jinaai/jina-embeddings-v5-text-small
+32,33,Unkraut,9,A,und leerte den Kompost.,0,0.83,0,6.7,3.3,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der das Beet pflegte, das",0.5674635,SE,jinaai/jina-embeddings-v5-text-small
+33,34,Unkraut,9,B,und leerte den Kompost.,0,0.67,0,3.3,1.4,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der die Sonne genoss, das",0.42483038,SE,jinaai/jina-embeddings-v5-text-small
+34,35,Unkraut,9,C,und leerte den Kompost.,0,0.0,0,6.7,3.3,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der das Beet pflegte, das",0.5454222,SE,jinaai/jina-embeddings-v5-text-small
+35,36,Unkraut,9,D,und leerte den Kompost.,0,0.0,0,3.3,1.4,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der die Sonne genoss, das",0.44659793,SE,jinaai/jina-embeddings-v5-text-small
+36,37,Klassenzimmer,10,A,und nimmt ein Stück Kreide.,1,0.75,1,6.8,3.7,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er die Tafel beschreibt, das",0.59038943,SE,jinaai/jina-embeddings-v5-text-small
+37,38,Klassenzimmer,10,B,und nimmt ein Stück Kreide.,1,0.75,1,1.9,2.6,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er den Mantel aufhängt, das",0.52613443,SE,jinaai/jina-embeddings-v5-text-small
+38,39,Klassenzimmer,10,C,und nimmt ein Stück Kreide.,1,0.0,1,6.8,3.7,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er die Tafel beschreibt, das",0.5904671,SE,jinaai/jina-embeddings-v5-text-small
+39,40,Klassenzimmer,10,D,und nimmt ein Stück Kreide.,1,0.0,1,1.9,2.6,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er den Mantel aufhängt, das",0.51017565,SE,jinaai/jina-embeddings-v5-text-small
+40,41,Käse,11,A,und gibt Öl in die Pfanne.,0,0.5,1,5.2,4.6,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nudeln kocht, den",0.42074874,SE,jinaai/jina-embeddings-v5-text-small
+41,42,Käse,11,B,und gibt Öl in die Pfanne.,0,0.58,1,1.7,1.2,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nachrichten hört, den",0.33683732,SE,jinaai/jina-embeddings-v5-text-small
+42,43,Käse,11,C,und gibt Öl in die Pfanne.,0,0.0,1,5.2,4.6,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nudeln kocht, den",0.4080917,SE,jinaai/jina-embeddings-v5-text-small
+43,44,Käse,11,D,und gibt Öl in die Pfanne.,0,0.0,1,1.7,1.2,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nachrichten hört, den",0.3187343,SE,jinaai/jina-embeddings-v5-text-small
+44,45,Bier,12,A,das zuvor gebraut wurde.,0,0.67,1,3.9,1.2,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.48893133,SE,jinaai/jina-embeddings-v5-text-small
+45,46,Bier,12,B,das zuvor gebraut wurde.,0,0.58,1,1.8,2.3,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Boden gewischt hatte, das",0.46488935,SE,jinaai/jina-embeddings-v5-text-small
+46,47,Bier,12,C,das zuvor gebraut wurde.,0,0.0,1,3.9,1.2,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.46162498,SE,jinaai/jina-embeddings-v5-text-small
+47,48,Bier,12,D,das zuvor gebraut wurde.,0,0.0,1,1.8,2.3,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Boden gewischt hatte, das",0.43470177,SE,jinaai/jina-embeddings-v5-text-small
+48,49,Rasen,13,A,hinter der Villa.,0,0.92,1,7.0,5.6,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.4735291,SE,jinaai/jina-embeddings-v5-text-small
+49,50,Rasen,13,B,hinter der Villa.,0,0.92,1,2.2,1.9,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.44339,SE,jinaai/jina-embeddings-v5-text-small
+50,51,Rasen,13,C,hinter der Villa.,0,0.0,1,7.0,5.6,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.473729,SE,jinaai/jina-embeddings-v5-text-small
+51,52,Rasen,13,D,hinter der Villa.,0,0.0,1,2.2,1.9,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.44027153,SE,jinaai/jina-embeddings-v5-text-small
+52,53,Straße,14,A,und den Bürgersteig.,1,0.42,1,6.5,5.1,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Absperrungen umging, die",0.39451152,SE,jinaai/jina-embeddings-v5-text-small
+53,54,Straße,14,B,und den Bürgersteig.,1,0.42,1,5.7,2.0,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Steine schleppte, die",0.37509048,SE,jinaai/jina-embeddings-v5-text-small
+54,55,Straße,14,C,und den Bürgersteig.,1,0.08,1,6.5,5.1,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Absperrungen umging, die",0.42268372,SE,jinaai/jina-embeddings-v5-text-small
+55,56,Straße,14,D,und den Bürgersteig.,1,0.0,1,5.7,2.0,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Steine schleppte, die",0.39770886,SE,jinaai/jina-embeddings-v5-text-small
+56,57,Glocken,15,A,und freute sich.,0,1.0,1,6.7,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.60951734,SE,jinaai/jina-embeddings-v5-text-small
+57,58,Glocken,15,B,und freute sich.,0,0.92,1,2.2,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.62562144,SE,jinaai/jina-embeddings-v5-text-small
+58,59,Glocken,15,C,und freute sich.,0,0.0,1,6.7,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.42628342,SE,jinaai/jina-embeddings-v5-text-small
+59,60,Glocken,15,D,und freute sich.,0,0.0,1,2.2,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.497088,SE,jinaai/jina-embeddings-v5-text-small
+60,61,Wunde,16,A,mit fünf Stichen.,0,0.92,1,6.7,3.3,5.8,die,Wunde,"Rasch näht der Notarzt, der den Verletzten betreut, die",0.5263457,SE,jinaai/jina-embeddings-v5-text-small
+61,62,Wunde,16,B,mit fünf Stichen.,0,0.92,1,3.2,1.8,5.8,die,Wunde,"Rasch näht der Notarzt, der den Ohrring trägt, die",0.44981188,SE,jinaai/jina-embeddings-v5-text-small
+62,63,Wunde,16,C,mit fünf Stichen.,0,0.0,1,6.7,3.3,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Verletzten betreut, die",0.45912373,SE,jinaai/jina-embeddings-v5-text-small
+63,64,Wunde,16,D,mit fünf Stichen.,0,0.0,1,3.2,1.8,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Ohrring trägt, die",0.40805623,SE,jinaai/jina-embeddings-v5-text-small
+64,65,Hemd,17,A,und die Hose.,0,0.75,1,6.4,1.5,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.5291344,SE,jinaai/jina-embeddings-v5-text-small
+65,66,Hemd,17,B,und die Hose.,0,0.67,1,1.4,1.2,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.49778858,SE,jinaai/jina-embeddings-v5-text-small
+66,67,Hemd,17,C,und die Hose.,0,0.0,1,6.4,1.5,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.5524276,SE,jinaai/jina-embeddings-v5-text-small
+67,68,Hemd,17,D,und die Hose.,0,0.0,1,1.4,1.2,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.4206398,SE,jinaai/jina-embeddings-v5-text-small
+68,69,Auto,18,A,und übergibt es an den Kunden.,1,0.58,0,7.0,3.5,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.49055338,SE,jinaai/jina-embeddings-v5-text-small
+69,70,Auto,18,B,und übergibt es an den Kunden.,1,0.75,0,5.0,3.1,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.5182927,SE,jinaai/jina-embeddings-v5-text-small
+70,71,Auto,18,C,und übergibt es an den Kunden.,1,0.0,0,7.0,3.5,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.5559744,SE,jinaai/jina-embeddings-v5-text-small
+71,72,Auto,18,D,und übergibt es an den Kunden.,1,0.0,0,5.0,3.1,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.5507858,SE,jinaai/jina-embeddings-v5-text-small
+72,73,Teig,19,A,für das Brot.,2,1.0,1,6.9,6.9,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Kuchen backt, den",0.6069565,SE,jinaai/jina-embeddings-v5-text-small
+73,74,Teig,19,B,für das Brot.,2,1.0,1,1.5,1.0,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Stammgast begrüßt, den",0.5203923,SE,jinaai/jina-embeddings-v5-text-small
+74,75,Teig,19,C,für das Brot.,2,0.0,1,6.9,6.9,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Kuchen backt, den",0.5628654,SE,jinaai/jina-embeddings-v5-text-small
+75,76,Teig,19,D,für das Brot.,2,0.0,1,1.5,1.0,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Stammgast begrüßt, den",0.5021177,SE,jinaai/jina-embeddings-v5-text-small
+76,77,Steak,20,A,und die Beilagen.,0,0.67,0,4.7,2.4,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Kohle anzündet, das",0.46425837,SE,jinaai/jina-embeddings-v5-text-small
+77,78,Steak,20,B,und die Beilagen.,0,0.83,0,1.4,1.1,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Mücke verscheucht, das",0.45182353,SE,jinaai/jina-embeddings-v5-text-small
+78,79,Steak,20,C,und die Beilagen.,0,0.0,0,4.7,2.4,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Kohle anzündet, das",0.4848061,SE,jinaai/jina-embeddings-v5-text-small
+79,80,Steak,20,D,und die Beilagen.,0,0.0,0,1.4,1.1,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Mücke verscheucht, das",0.4781512,SE,jinaai/jina-embeddings-v5-text-small
+80,81,Feuer,21,A,und rennt weg.,0,0.58,0,6.6,1.5,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der das Streichholz fallengelassen hat, das",0.63185495,SE,jinaai/jina-embeddings-v5-text-small
+81,82,Feuer,21,B,und rennt weg.,0,1.0,0,3.3,3.0,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der die Treppe hochgeklettert ist, das",0.58171445,SE,jinaai/jina-embeddings-v5-text-small
+82,83,Feuer,21,C,und rennt weg.,0,0.0,0,6.6,1.5,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der das Streichholz fallengelassen hat, das",0.5700554,SE,jinaai/jina-embeddings-v5-text-small
+83,84,Feuer,21,D,und rennt weg.,0,0.0,0,3.3,3.0,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der die Treppe hochgeklettert ist, das",0.54609627,SE,jinaai/jina-embeddings-v5-text-small
+84,85,Haare,22,A,und holt den Föhn.,0,0.92,1,6.5,3.9,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er die Kopfhaut massiert hat, die",0.6910612,SE,jinaai/jina-embeddings-v5-text-small
+85,86,Haare,22,B,und holt den Föhn.,0,1.0,1,1.0,1.0,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.5344347,SE,jinaai/jina-embeddings-v5-text-small
+86,87,Haare,22,C,und holt den Föhn.,0,0.17,1,6.5,3.9,1.2,die,Haare,"Nun speichert der Friseur, nachdem er die Kopfhaut massiert hat, die",0.5990735,SE,jinaai/jina-embeddings-v5-text-small
+87,88,Haare,22,D,und holt den Föhn.,0,0.0,1,1.0,1.0,1.2,die,Haare,"Nun speichert der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.49362165,SE,jinaai/jina-embeddings-v5-text-small
+88,89,Bleistift,23,A,und machte sich wieder an die Arbeit.,0,1.0,1,6.0,3.3,6.7,den,Bleistift,"Flink spitzte der Zeichner, der die Karikatur entwarf, den",0.5872043,SE,jinaai/jina-embeddings-v5-text-small
+89,90,Bleistift,23,B,und machte sich wieder an die Arbeit.,0,1.0,1,2.3,1.6,6.7,den,Bleistift,"Flink spitzte der Zeichner, der den Atlas öffnete, den",0.49864566,SE,jinaai/jina-embeddings-v5-text-small
+90,91,Bleistift,23,C,und machte sich wieder an die Arbeit.,0,0.0,1,6.0,3.3,1.3,den,Bleistift,"Flink knotete der Zeichner, der die Karikatur entwarf, den",0.5480288,SE,jinaai/jina-embeddings-v5-text-small
+91,92,Bleistift,23,D,und machte sich wieder an die Arbeit.,0,0.0,1,2.3,1.6,1.3,den,Bleistift,"Flink knotete der Zeichner, der den Atlas öffnete, den",0.5142648,SE,jinaai/jina-embeddings-v5-text-small
+92,93,Patienten,24,A,gegen Tetanus.,0,0.25,0,6.7,2.0,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Spritze befüllt hat, den",0.4838081,SE,jinaai/jina-embeddings-v5-text-small
+93,94,Patienten,24,B,gegen Tetanus.,0,0.42,0,2.1,1.3,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Schublade geschlossen hat, den",0.47935122,SE,jinaai/jina-embeddings-v5-text-small
+94,95,Patienten,24,C,gegen Tetanus.,0,0.0,0,6.7,2.0,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Spritze befüllt hat, den",0.5180869,SE,jinaai/jina-embeddings-v5-text-small
+95,96,Patienten,24,D,gegen Tetanus.,0,0.0,0,2.1,1.3,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Schublade geschlossen hat, den",0.50513595,SE,jinaai/jina-embeddings-v5-text-small
+96,97,Leiche,25,A,in der Leichenhalle.,0,0.75,1,6.6,1.5,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.5925245,SE,jinaai/jina-embeddings-v5-text-small
+97,98,Leiche,25,B,in der Leichenhalle.,0,0.75,1,2.6,1.2,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.5706663,SE,jinaai/jina-embeddings-v5-text-small
+98,99,Leiche,25,C,in der Leichenhalle.,0,0.0,1,6.6,1.5,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.565922,SE,jinaai/jina-embeddings-v5-text-small
+99,100,Leiche,25,D,in der Leichenhalle.,0,0.0,1,2.6,1.2,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.49470142,SE,jinaai/jina-embeddings-v5-text-small
+100,101,Buch,26,A,für den Fan.,1,1.0,1,6.7,3.3,6.7,das,Buch,"Am Nachmittag signiert der Autor, der die Geschichte erfunden hat, das",0.5186642,SE,jinaai/jina-embeddings-v5-text-small
+101,102,Buch,26,B,für den Fan.,1,0.92,1,1.8,1.5,6.7,das,Buch,"Am Nachmittag signiert der Autor, der den Vorhang zugezogen hat, das",0.47779325,SE,jinaai/jina-embeddings-v5-text-small
+102,103,Buch,26,C,für den Fan.,1,0.0,1,6.7,3.3,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der die Geschichte erfunden hat, das",0.45240432,SE,jinaai/jina-embeddings-v5-text-small
+103,104,Buch,26,D,für den Fan.,1,0.0,1,1.8,1.5,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der den Vorhang zugezogen hat, das",0.44675452,SE,jinaai/jina-embeddings-v5-text-small
+104,105,Gäste,27,A,und überreichte ihnen die Schlüssel.,2,1.0,1,4.7,1.4,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Koffer stapelte, die",0.47046137,SE,jinaai/jina-embeddings-v5-text-small
+105,106,Gäste,27,B,und überreichte ihnen die Schlüssel.,2,0.92,1,1.4,1.6,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Fische räucherte, die",0.49164975,SE,jinaai/jina-embeddings-v5-text-small
+106,107,Gäste,27,C,und überreichte ihnen die Schlüssel.,2,0.0,1,4.7,1.4,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Koffer stapelte, die",0.48106587,SE,jinaai/jina-embeddings-v5-text-small
+107,108,Gäste,27,D,und überreichte ihnen die Schlüssel.,2,0.0,1,1.4,1.6,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Fische räucherte, die",0.46174258,SE,jinaai/jina-embeddings-v5-text-small
+108,109,Baum,28,A,neben der Schule.,0,0.92,1,5.9,1.3,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der die Säge gestartet hat, den",0.5319083,SE,jinaai/jina-embeddings-v5-text-small
+109,110,Baum,28,B,neben der Schule.,0,0.83,1,2.8,1.9,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der den Transporter geparkt hat, den",0.51452243,SE,jinaai/jina-embeddings-v5-text-small
+110,111,Baum,28,C,neben der Schule.,0,0.0,1,5.9,1.3,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der die Säge gestartet hat, den",0.54074466,SE,jinaai/jina-embeddings-v5-text-small
+111,112,Baum,28,D,neben der Schule.,0,0.0,1,2.8,1.9,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der den Transporter geparkt hat, den",0.5130812,SE,jinaai/jina-embeddings-v5-text-small
+112,113,Zigarre,29,A,und schlenderte über den Marktplatz.,2,1.0,1,6.2,3.2,6.9,die,Zigarre,"Langsam paffte der Kubaner, der den Rauchring blies, die",0.6417146,SE,jinaai/jina-embeddings-v5-text-small
+113,114,Zigarre,29,B,und schlenderte über den Marktplatz.,2,1.0,1,2.0,1.3,6.9,die,Zigarre,"Langsam paffte der Kubaner, der die Straßenbahn verpasste, die",0.49455896,SE,jinaai/jina-embeddings-v5-text-small
+114,115,Zigarre,29,C,und schlenderte über den Marktplatz.,2,0.08,1,6.2,3.2,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der den Rauchring blies, die",0.6037515,SE,jinaai/jina-embeddings-v5-text-small
+115,116,Zigarre,29,D,und schlenderte über den Marktplatz.,2,0.08,1,2.0,1.3,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der die Straßenbahn verpasste, die",0.46433198,SE,jinaai/jina-embeddings-v5-text-small
+116,117,Schnitzel,30,A,für das Gericht.,0,0.58,0,6.0,1.2,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.5871817,SE,jinaai/jina-embeddings-v5-text-small
+117,118,Schnitzel,30,B,für das Gericht.,0,0.83,0,1.3,1.5,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.59633416,SE,jinaai/jina-embeddings-v5-text-small
+118,119,Schnitzel,30,C,für das Gericht.,0,0.0,0,6.0,1.2,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.6087996,SE,jinaai/jina-embeddings-v5-text-small
+119,120,Schnitzel,30,D,für das Gericht.,0,0.0,0,1.3,1.5,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.60094035,SE,jinaai/jina-embeddings-v5-text-small
+120,121,Kuchen,31,A,für die Geburtstagsfeier.,1,0.92,0,6.9,5.3,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der die Backform eingefettet hat, den",0.65106404,SE,jinaai/jina-embeddings-v5-text-small
+121,122,Kuchen,31,B,für die Geburtstagsfeier.,1,0.42,0,5.4,1.6,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der den Tisch abgewischt hat, den",0.54833037,SE,jinaai/jina-embeddings-v5-text-small
+122,123,Kuchen,31,C,für die Geburtstagsfeier.,1,0.0,0,6.9,5.3,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der die Backform eingefettet hat, den",0.6901598,SE,jinaai/jina-embeddings-v5-text-small
+123,124,Kuchen,31,D,für die Geburtstagsfeier.,1,0.0,0,5.4,1.6,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der den Tisch abgewischt hat, den",0.57854486,SE,jinaai/jina-embeddings-v5-text-small
+124,125,Kette,32,A,und die Bremsen.,0,0.83,0,4.9,2.0,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.4109088,SE,jinaai/jina-embeddings-v5-text-small
+125,126,Kette,32,B,und die Bremsen.,0,0.58,0,1.2,1.1,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Limonade trank, die",0.33722717,SE,jinaai/jina-embeddings-v5-text-small
+126,127,Kette,32,C,und die Bremsen.,0,0.0,0,4.9,2.0,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.4396493,SE,jinaai/jina-embeddings-v5-text-small
+127,128,Kette,32,D,und die Bremsen.,0,0.0,0,1.2,1.1,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor die Limonade trank, die",0.3388747,SE,jinaai/jina-embeddings-v5-text-small
+128,129,Brief,33,A,an die Agentur.,0,0.92,1,6.8,1.3,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Postamt aufgeschlossen hat, den",0.5087685,SE,jinaai/jina-embeddings-v5-text-small
+129,130,Brief,33,B,an die Agentur.,0,1.0,1,1.5,3.7,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Mittagessen bestellt hat, den",0.5580271,SE,jinaai/jina-embeddings-v5-text-small
+130,131,Brief,33,C,an die Agentur.,0,0.0,1,6.8,1.3,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Postamt aufgeschlossen hat, den",0.49404627,SE,jinaai/jina-embeddings-v5-text-small
+131,132,Brief,33,D,an die Agentur.,0,0.0,1,1.5,3.7,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Mittagessen bestellt hat, den",0.51721436,SE,jinaai/jina-embeddings-v5-text-small
+132,133,Berg,34,A,und stellt sein Zelt auf.,1,0.75,0,6.4,3.2,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er das Tal durchquert hat, den",0.47570735,SE,jinaai/jina-embeddings-v5-text-small
+133,134,Berg,34,B,und stellt sein Zelt auf.,1,0.92,0,1.4,1.5,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.46461183,SE,jinaai/jina-embeddings-v5-text-small
+134,135,Berg,34,C,und stellt sein Zelt auf.,1,0.0,0,6.4,3.2,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er das Tal durchquert hat, den",0.4736542,SE,jinaai/jina-embeddings-v5-text-small
+135,136,Berg,34,D,und stellt sein Zelt auf.,1,0.0,0,1.4,1.5,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.43535584,SE,jinaai/jina-embeddings-v5-text-small
+136,137,Befehl,35,A,zum Abmarsch.,0,0.92,0,6.0,7.0,6.6,den,Befehl,"Bedächtig erteilt der General, der die Rekruten kommandiert, den",0.6243743,SE,jinaai/jina-embeddings-v5-text-small
+137,138,Befehl,35,B,zum Abmarsch.,0,0.75,0,1.7,2.4,6.6,den,Befehl,"Bedächtig erteilt der General, der die Getränke einschenkt, den",0.5811946,SE,jinaai/jina-embeddings-v5-text-small
+138,139,Befehl,35,C,zum Abmarsch.,0,0.0,0,6.0,7.0,1.4,den,Befehl,"Bedächtig biegt der General, der die Rekruten kommandiert, den",0.5945899,SE,jinaai/jina-embeddings-v5-text-small
+139,140,Befehl,35,D,zum Abmarsch.,0,0.0,0,1.7,2.4,1.4,den,Befehl,"Bedächtig biegt der General, der die Getränke einschenkt, den",0.47576237,SE,jinaai/jina-embeddings-v5-text-small
+140,141,Wand,36,A,des Büros.,0,0.5,0,7.0,5.5,6.4,die,Wand,"Sofort streicht der Maler, nachdem er die Tapete angebracht hat, die",0.4038816,SE,jinaai/jina-embeddings-v5-text-small
+141,142,Wand,36,B,des Büros.,0,0.67,0,1.5,1.3,6.4,die,Wand,"Sofort streicht der Maler, nachdem er den Hund gefüttert hat, die",0.34728378,SE,jinaai/jina-embeddings-v5-text-small
+142,143,Wand,36,C,des Büros.,0,0.08,0,7.0,5.5,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er die Tapete angebracht hat, die",0.45404163,SE,jinaai/jina-embeddings-v5-text-small
+143,144,Wand,36,D,des Büros.,0,0.0,0,1.5,1.3,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er den Hund gefüttert hat, die",0.37220004,SE,jinaai/jina-embeddings-v5-text-small
+144,145,Hammer,37,A,auf das Metall.,0,1.0,0,6.5,1.9,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Amboss aufgestellt hat, den",0.58073664,SE,jinaai/jina-embeddings-v5-text-small
+145,146,Hammer,37,B,auf das Metall.,0,0.83,0,2.9,3.8,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Stuhl weggestellt hat, den",0.39528316,SE,jinaai/jina-embeddings-v5-text-small
+146,147,Hammer,37,C,auf das Metall.,0,0.0,0,6.5,1.9,1.2,den,Hammer,"Direkt speichert der Schmied, der den Amboss aufgestellt hat, den",0.57345676,SE,jinaai/jina-embeddings-v5-text-small
+147,148,Hammer,37,D,auf das Metall.,0,0.0,0,2.9,3.8,1.2,den,Hammer,"Direkt speichert der Schmied, der den Stuhl weggestellt hat, den",0.4049856,SE,jinaai/jina-embeddings-v5-text-small
+148,149,Land,38,A,im Norden.,1,0.33,0,6.6,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der die Reise unternahm, das",0.369197,SE,jinaai/jina-embeddings-v5-text-small
+149,150,Land,38,B,im Norden.,1,0.5,0,2.4,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der den Gesang vernahm, das",0.3691479,SE,jinaai/jina-embeddings-v5-text-small
+150,151,Land,38,C,im Norden.,1,0.0,0,6.6,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der die Reise unternahm, das",0.35134193,SE,jinaai/jina-embeddings-v5-text-small
+151,152,Land,38,D,im Norden.,1,0.0,0,2.4,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der den Gesang vernahm, das",0.37068385,SE,jinaai/jina-embeddings-v5-text-small
+152,153,Stab,39,A,und gab den Takt an.,0,0.42,1,1.9,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Tempo wechselte, den",0.40339264,SE,jinaai/jina-embeddings-v5-text-small
+153,154,Stab,39,B,und gab den Takt an.,0,0.5,1,1.0,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Gähnen unterdrückte, den",0.4185744,SE,jinaai/jina-embeddings-v5-text-small
+154,155,Stab,39,C,und gab den Takt an.,0,0.0,1,1.9,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Tempo wechselte, den",0.39623985,SE,jinaai/jina-embeddings-v5-text-small
+155,156,Stab,39,D,und gab den Takt an.,0,0.0,1,1.0,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Gähnen unterdrückte, den",0.40989566,SE,jinaai/jina-embeddings-v5-text-small
+156,157,Bart,40,A,des Mannes.,2,0.58,0,5.4,1.3,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.4129851,SE,jinaai/jina-embeddings-v5-text-small
+157,158,Bart,40,B,des Mannes.,2,0.25,0,1.2,1.0,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.3827419,SE,jinaai/jina-embeddings-v5-text-small
+158,159,Bart,40,C,des Mannes.,2,0.0,0,5.4,1.3,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.4181282,SE,jinaai/jina-embeddings-v5-text-small
+159,160,Bart,40,D,des Mannes.,2,0.0,0,1.2,1.0,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.39557305,SE,jinaai/jina-embeddings-v5-text-small
+160,161,Geschirr,41,A,und die Brettchen.,0,0.5,1,6.7,4.7,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er den Tisch wischte, das",0.5949442,SE,jinaai/jina-embeddings-v5-text-small
+161,162,Geschirr,41,B,und die Brettchen.,0,0.42,1,1.2,1.2,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er das Taxi rief, das",0.62327087,SE,jinaai/jina-embeddings-v5-text-small
+162,163,Geschirr,41,C,und die Brettchen.,0,0.0,1,6.7,4.7,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er den Tisch wischte, das",0.5907664,SE,jinaai/jina-embeddings-v5-text-small
+163,164,Geschirr,41,D,und die Brettchen.,0,0.0,1,1.2,1.2,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er das Taxi rief, das",0.56391495,SE,jinaai/jina-embeddings-v5-text-small
+164,165,Schloss,42,A,und stiehlt die Wertsachen.,0,0.25,0,7.0,1.8,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der den Zahlencode erraten hat, das",0.41071084,SE,jinaai/jina-embeddings-v5-text-small
+165,166,Schloss,42,B,und stiehlt die Wertsachen.,0,0.5,0,2.6,1.5,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der die Akte durchblättert hat, das",0.41062185,SE,jinaai/jina-embeddings-v5-text-small
+166,167,Schloss,42,C,und stiehlt die Wertsachen.,0,0.0,0,7.0,1.8,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der den Zahlencode erraten hat, das",0.40740997,SE,jinaai/jina-embeddings-v5-text-small
+167,168,Schloss,42,D,und stiehlt die Wertsachen.,0,0.0,0,2.6,1.5,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der die Akte durchblättert hat, das",0.37726575,SE,jinaai/jina-embeddings-v5-text-small
+168,169,Zwiebeln,43,A,und den Knoblauch.,0,0.25,1,5.7,2.3,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er die Suppe umrührte, die",0.42025083,SE,jinaai/jina-embeddings-v5-text-small
+169,170,Zwiebeln,43,B,und den Knoblauch.,0,0.33,1,1.3,1.1,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er das Radio einschaltete, die",0.4168175,SE,jinaai/jina-embeddings-v5-text-small
+170,171,Zwiebeln,43,C,und den Knoblauch.,0,0.0,1,5.7,2.3,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er die Suppe umrührte, die",0.41308329,SE,jinaai/jina-embeddings-v5-text-small
+171,172,Zwiebeln,43,D,und den Knoblauch.,0,0.0,1,1.3,1.1,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er das Radio einschaltete, die",0.4090569,SE,jinaai/jina-embeddings-v5-text-small
+172,173,Wachs,44,A,und fuhr mit der Arbeit fort.,0,0.83,1,6.7,2.3,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.53250456,SE,jinaai/jina-embeddings-v5-text-small
+173,174,Wachs,44,B,und fuhr mit der Arbeit fort.,0,0.83,1,1.5,1.4,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.5664485,SE,jinaai/jina-embeddings-v5-text-small
+174,175,Wachs,44,C,und fuhr mit der Arbeit fort.,0,0.0,1,6.7,2.3,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.5822259,SE,jinaai/jina-embeddings-v5-text-small
+175,176,Wachs,44,D,und fuhr mit der Arbeit fort.,0,0.0,1,1.5,1.4,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.6240876,SE,jinaai/jina-embeddings-v5-text-small
+176,177,Cocktail,45,A,für den Touristen.,0,0.5,0,6.2,1.4,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Wodka geöffnet hatte, den",0.64621407,SE,jinaai/jina-embeddings-v5-text-small
+177,178,Cocktail,45,B,für den Touristen.,0,0.83,0,1.3,1.0,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Boden gefegt hatte, den",0.5917624,SE,jinaai/jina-embeddings-v5-text-small
+178,179,Cocktail,45,C,für den Touristen.,0,0.0,0,6.2,1.4,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Wodka geöffnet hatte, den",0.59745437,SE,jinaai/jina-embeddings-v5-text-small
+179,180,Cocktail,45,D,für den Touristen.,0,0.08,0,1.3,1.0,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Boden gefegt hatte, den",0.44214174,SE,jinaai/jina-embeddings-v5-text-small
+180,181,Orchester,46,A,und das Streichquartett.,0,0.25,1,6.8,3.6,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der das Konzert eröffnet hat, das",0.64596796,SE,jinaai/jina-embeddings-v5-text-small
+181,182,Orchester,46,B,und das Streichquartett.,0,0.25,1,1.6,1.4,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der die Unterschriften gesammelt hat, das",0.6016479,SE,jinaai/jina-embeddings-v5-text-small
+182,183,Orchester,46,C,und das Streichquartett.,0,0.0,1,6.8,3.6,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der das Konzert eröffnet hat, das",0.4731357,SE,jinaai/jina-embeddings-v5-text-small
+183,184,Orchester,46,D,und das Streichquartett.,0,0.0,1,1.6,1.4,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der die Unterschriften gesammelt hat, das",0.42888057,SE,jinaai/jina-embeddings-v5-text-small
+184,185,Wort,47,A,und notiert es.,3,0.83,0,6.3,3.6,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.5162783,SE,jinaai/jina-embeddings-v5-text-small
+185,186,Wort,47,B,und notiert es.,3,0.67,0,3.0,2.7,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.50318396,SE,jinaai/jina-embeddings-v5-text-small
+186,187,Wort,47,C,und notiert es.,3,0.0,0,6.3,3.6,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.50510937,SE,jinaai/jina-embeddings-v5-text-small
+187,188,Wort,47,D,und notiert es.,3,0.0,0,3.0,2.7,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.4840632,SE,jinaai/jina-embeddings-v5-text-small
+188,189,Weide,48,A,mit einem Draht.,0,0.67,0,6.7,5.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der die Schafe gehütet hat, die",0.45503142,SE,jinaai/jina-embeddings-v5-text-small
+189,190,Weide,48,B,mit einem Draht.,0,0.42,0,1.4,1.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der das Mittagessen vergessen hat, die",0.45102072,SE,jinaai/jina-embeddings-v5-text-small
+190,191,Weide,48,C,mit einem Draht.,0,0.0,0,6.7,5.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der die Schafe gehütet hat, die",0.4621573,SE,jinaai/jina-embeddings-v5-text-small
+191,192,Weide,48,D,mit einem Draht.,0,0.0,0,1.4,1.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der das Mittagessen vergessen hat, die",0.45704475,SE,jinaai/jina-embeddings-v5-text-small
+192,193,Predigt,49,A,für die Gemeinde.,0,0.25,0,6.2,2.1,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.53632426,SE,jinaai/jina-embeddings-v5-text-small
+193,194,Predigt,49,B,für die Gemeinde.,0,0.5,0,1.6,2.9,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.49162138,SE,jinaai/jina-embeddings-v5-text-small
+194,195,Predigt,49,C,für die Gemeinde.,0,0.0,0,6.2,2.1,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.5381702,SE,jinaai/jina-embeddings-v5-text-small
+195,196,Predigt,49,D,für die Gemeinde.,0,0.0,0,1.6,2.9,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.4380933,SE,jinaai/jina-embeddings-v5-text-small
+196,197,Wohnung,50,A,mit neuen Möbeln.,0,0.5,0,7.0,2.7,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der den Mieter aufgenommen hatte, die",0.52418584,SE,jinaai/jina-embeddings-v5-text-small
+197,198,Wohnung,50,B,mit neuen Möbeln.,0,0.75,0,4.7,3.6,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der die Überweisung erhalten hatte, die",0.48100367,SE,jinaai/jina-embeddings-v5-text-small
+198,199,Wohnung,50,C,mit neuen Möbeln.,0,0.0,0,7.0,2.7,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der den Mieter aufgenommen hatte, die",0.47299206,SE,jinaai/jina-embeddings-v5-text-small
+199,200,Wohnung,50,D,mit neuen Möbeln.,0,0.0,0,4.7,3.6,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der die Überweisung erhalten hatte, die",0.44114044,SE,jinaai/jina-embeddings-v5-text-small
+200,201,Abzug,51,A,und trifft das Opfer.,2,0.5,0,3.2,4.4,5.9,den,Abzug,"Sofort betätigt der Killer, der das Ziel anvisiert hat, den",0.39967442,SE,jinaai/jina-embeddings-v5-text-small
+201,202,Abzug,51,B,und trifft das Opfer.,2,0.33,0,1.4,3.0,5.9,den,Abzug,"Sofort betätigt der Killer, der den Tee abgestellt hat, den",0.42490342,SE,jinaai/jina-embeddings-v5-text-small
+202,203,Abzug,51,C,und trifft das Opfer.,2,0.0,0,3.2,4.4,1.6,den,Abzug,"Sofort knickt der Killer, der das Ziel anvisiert hat, den",0.50231206,SE,jinaai/jina-embeddings-v5-text-small
+203,204,Abzug,51,D,und trifft das Opfer.,2,0.0,0,1.4,3.0,1.6,den,Abzug,"Sofort knickt der Killer, der den Tee abgestellt hat, den",0.46101913,SE,jinaai/jina-embeddings-v5-text-small
+204,205,Paket,52,A,mit der Arbeitskleidung.,0,0.42,1,6.7,4.4,6.5,das,Paket,"Heute überbringt der Bote, als er den Empfänger angetroffen hat, das",0.51476187,SE,jinaai/jina-embeddings-v5-text-small
+205,206,Paket,52,B,mit der Arbeitskleidung.,0,0.33,1,3.6,1.2,6.5,das,Paket,"Heute überbringt der Bote, als er das Foyer durchquert hat, das",0.4488619,SE,jinaai/jina-embeddings-v5-text-small
+206,207,Paket,52,C,mit der Arbeitskleidung.,0,0.0,1,6.7,4.4,1.3,das,Paket,"Heute erntet der Bote, als er den Empfänger angetroffen hat, das",0.4917778,SE,jinaai/jina-embeddings-v5-text-small
+207,208,Paket,52,D,mit der Arbeitskleidung.,0,0.0,1,3.6,1.2,1.3,das,Paket,"Heute erntet der Bote, als er das Foyer durchquert hat, das",0.50730675,SE,jinaai/jina-embeddings-v5-text-small
+208,209,Tor,53,A,und jubelte über seinen Erfolg.,3,0.92,0,6.8,3.4,6.9,das,Tor,"Schnell schoss der Fußballspieler, der das Fußballfeld überquert hatte, das",0.35772923,SE,jinaai/jina-embeddings-v5-text-small
+209,210,Tor,53,B,und jubelte über seinen Erfolg.,3,0.67,0,1.6,2.7,6.9,das,Tor,"Schnell schoss der Fußballspieler, der die Jacke ausgezogen hatte, das",0.31533644,SE,jinaai/jina-embeddings-v5-text-small
+210,211,Tor,53,C,und jubelte über seinen Erfolg.,3,0.0,0,6.8,3.4,1.5,das,Tor,"Schnell spürte der Fußballspieler, der das Fußballfeld überquert hatte, das",0.3549134,SE,jinaai/jina-embeddings-v5-text-small
+211,212,Tor,53,D,und jubelte über seinen Erfolg.,3,0.0,0,1.6,2.7,1.5,das,Tor,"Schnell spürte der Fußballspieler, der die Jacke ausgezogen hatte, das",0.3136395,SE,jinaai/jina-embeddings-v5-text-small
+212,213,Flugzeug,54,A,durch die Wolken.,0,1.0,1,7.0,1.8,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der die Stewardess gerufen hatte, das",0.5087869,SE,jinaai/jina-embeddings-v5-text-small
+213,214,Flugzeug,54,B,durch die Wolken.,0,0.92,1,1.6,3.4,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der den Krimi gelesen hatte, das",0.47903198,SE,jinaai/jina-embeddings-v5-text-small
+214,215,Flugzeug,54,C,durch die Wolken.,0,0.0,1,7.0,1.8,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der die Stewardess gerufen hatte, das",0.51670873,SE,jinaai/jina-embeddings-v5-text-small
+215,216,Flugzeug,54,D,durch die Wolken.,0,0.08,1,1.6,3.4,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der den Krimi gelesen hatte, das",0.5070127,SE,jinaai/jina-embeddings-v5-text-small
+216,217,Skizze,55,A,für den Bauherrn.,0,0.42,0,6.4,6.5,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Bauplan erstellte, die",0.5303251,SE,jinaai/jina-embeddings-v5-text-small
+217,218,Skizze,55,B,für den Bauherrn.,0,0.25,0,4.3,4.7,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Vortrag schrieb, die",0.5117626,SE,jinaai/jina-embeddings-v5-text-small
+218,219,Skizze,55,C,für den Bauherrn.,0,0.0,0,6.4,6.5,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Bauplan erstellte, die",0.5398,SE,jinaai/jina-embeddings-v5-text-small
+219,220,Skizze,55,D,für den Bauherrn.,0,0.0,0,4.3,4.7,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Vortrag schrieb, die",0.5058584,SE,jinaai/jina-embeddings-v5-text-small
+220,221,Kamin,56,A,und verlässt das Grundstück.,1,0.42,0,6.8,3.0,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der den Rauch einatmet, den",0.6024827,SE,jinaai/jina-embeddings-v5-text-small
+221,222,Kamin,56,B,und verlässt das Grundstück.,1,0.17,0,3.0,1.3,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der die Katze verscheucht, den",0.49204558,SE,jinaai/jina-embeddings-v5-text-small
+222,223,Kamin,56,C,und verlässt das Grundstück.,1,0.0,0,6.8,3.0,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der den Rauch einatmet, den",0.60177416,SE,jinaai/jina-embeddings-v5-text-small
+223,224,Kamin,56,D,und verlässt das Grundstück.,1,0.08,0,3.0,1.3,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der die Katze verscheucht, den",0.45886716,SE,jinaai/jina-embeddings-v5-text-small
+224,225,Wahl,57,A,zum Minister.,0,1.0,0,6.5,5.3,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Stimmen zählte, die",0.6156083,SE,jinaai/jina-embeddings-v5-text-small
+225,226,Wahl,57,B,zum Minister.,0,0.58,0,2.8,1.6,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Hände schüttelte, die",0.50094205,SE,jinaai/jina-embeddings-v5-text-small
+226,227,Wahl,57,C,zum Minister.,0,0.08,0,6.5,5.3,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Stimmen zählte, die",0.5622224,SE,jinaai/jina-embeddings-v5-text-small
+227,228,Wahl,57,D,zum Minister.,0,0.0,0,2.8,1.6,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Hände schüttelte, die",0.46672687,SE,jinaai/jina-embeddings-v5-text-small
+228,229,Foto,58,A,von der Unfallstelle.,0,0.67,0,6.7,2.1,6.7,das,Foto,"Sofort schoss der Reporter, der die Kamera bediente, das",0.5120655,SE,jinaai/jina-embeddings-v5-text-small
+229,230,Foto,58,B,von der Unfallstelle.,0,0.5,0,1.6,1.6,6.7,das,Foto,"Sofort schoss der Reporter, der die Zigarette rauchte, das",0.45877087,SE,jinaai/jina-embeddings-v5-text-small
+230,231,Foto,58,C,von der Unfallstelle.,0,0.0,0,6.7,2.1,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Kamera bediente, das",0.4718569,SE,jinaai/jina-embeddings-v5-text-small
+231,232,Foto,58,D,von der Unfallstelle.,0,0.0,0,1.6,1.6,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Zigarette rauchte, das",0.43384066,SE,jinaai/jina-embeddings-v5-text-small
+232,233,Programm,59,A,für seinen Boss.,0,0.5,0,6.9,5.8,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Computer hochfuhr, das",0.5294047,SE,jinaai/jina-embeddings-v5-text-small
+233,234,Programm,59,B,für seinen Boss.,0,0.75,0,1.8,2.0,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Energydrink trank, das",0.49491772,SE,jinaai/jina-embeddings-v5-text-small
+234,235,Programm,59,C,für seinen Boss.,0,0.0,0,6.9,5.8,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Computer hochfuhr, das",0.47308654,SE,jinaai/jina-embeddings-v5-text-small
+235,236,Programm,59,D,für seinen Boss.,0,0.0,0,1.8,2.0,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Energydrink trank, das",0.4185957,SE,jinaai/jina-embeddings-v5-text-small
+236,237,Urteil,60,A,und schloss die Verhandlung.,0,1.0,1,7.0,4.5,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.61153895,SE,jinaai/jina-embeddings-v5-text-small
+237,238,Urteil,60,B,und schloss die Verhandlung.,0,1.0,1,1.9,2.8,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.61621165,SE,jinaai/jina-embeddings-v5-text-small
+238,239,Urteil,60,C,und schloss die Verhandlung.,0,0.0,1,7.0,4.5,1.7,das,Urteil,"Nun roch der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.576174,SE,jinaai/jina-embeddings-v5-text-small
+239,240,Urteil,60,D,und schloss die Verhandlung.,0,0.0,1,1.9,2.8,1.7,das,Urteil,"Nun roch der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.58499956,SE,jinaai/jina-embeddings-v5-text-small
+240,241,Prüfung,61,A,in Mathematik.,0,0.58,0,6.6,5.0,5.8,die,Prüfung,"Zunächst bestand der Student, der das Studium wiederaufnahm, die",0.465225,SE,jinaai/jina-embeddings-v5-text-small
+241,242,Prüfung,61,B,in Mathematik.,0,0.25,0,2.0,1.3,5.8,die,Prüfung,"Zunächst bestand der Student, der das Jackett auszog, die",0.4064252,SE,jinaai/jina-embeddings-v5-text-small
+242,243,Prüfung,61,C,in Mathematik.,0,0.0,0,6.6,5.0,3.4,die,Prüfung,"Zunächst kochte der Student, der das Studium wiederaufnahm, die",0.38064805,SE,jinaai/jina-embeddings-v5-text-small
+243,244,Prüfung,61,D,in Mathematik.,0,0.0,0,2.0,1.3,3.4,die,Prüfung,"Zunächst kochte der Student, der das Jackett auszog, die",0.38066557,SE,jinaai/jina-embeddings-v5-text-small
+244,245,Lied,62,A,über die Vergangenheit.,1,0.58,1,6.3,1.3,7.0,das,Lied,"Konzentriert sang der Sänger, der das Mikrofon umklammerte, das",0.5591439,SE,jinaai/jina-embeddings-v5-text-small
+245,246,Lied,62,B,über die Vergangenheit.,1,0.58,1,1.9,1.5,7.0,das,Lied,"Konzentriert sang der Sänger, der den Hut abnahm, das",0.4757355,SE,jinaai/jina-embeddings-v5-text-small
+246,247,Lied,62,C,über die Vergangenheit.,1,0.0,1,6.3,1.3,1.1,das,Lied,"Konzentriert reparierte der Sänger, der das Mikrofon umklammerte, das",0.5009639,SE,jinaai/jina-embeddings-v5-text-small
+247,248,Lied,62,D,über die Vergangenheit.,1,0.0,1,1.9,1.5,1.1,das,Lied,"Konzentriert reparierte der Sänger, der den Hut abnahm, das",0.4919781,SE,jinaai/jina-embeddings-v5-text-small
+248,249,Farbe,63,A,für den nächsten Auftrag.,0,0.92,1,6.9,3.5,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Pinsel gewaschen hatte, die",0.4919822,SE,jinaai/jina-embeddings-v5-text-small
+249,250,Farbe,63,B,für den nächsten Auftrag.,0,1.0,1,3.5,1.8,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Plätzchen gegessen hatte, die",0.45446616,SE,jinaai/jina-embeddings-v5-text-small
+250,251,Farbe,63,C,für den nächsten Auftrag.,0,0.0,1,6.9,3.5,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Pinsel gewaschen hatte, die",0.5078315,SE,jinaai/jina-embeddings-v5-text-small
+251,252,Farbe,63,D,für den nächsten Auftrag.,0,0.0,1,3.5,1.8,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Plätzchen gegessen hatte, die",0.42989504,SE,jinaai/jina-embeddings-v5-text-small
+252,253,Blumen,64,A,im Blumenkasten.,0,0.58,1,6.2,5.8,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der den Dünger verteilt hat, die",0.53049016,SE,jinaai/jina-embeddings-v5-text-small
+253,254,Blumen,64,B,im Blumenkasten.,0,0.5,1,2.0,1.4,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der die Opernmusik angestellt hat, die",0.4804747,SE,jinaai/jina-embeddings-v5-text-small
+254,255,Blumen,64,C,im Blumenkasten.,0,0.0,1,6.2,5.8,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der den Dünger verteilt hat, die",0.5123681,SE,jinaai/jina-embeddings-v5-text-small
+255,256,Blumen,64,D,im Blumenkasten.,0,0.0,1,2.0,1.4,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der die Opernmusik angestellt hat, die",0.49899396,SE,jinaai/jina-embeddings-v5-text-small
+256,257,Hecke,65,A,um das Grundstück.,2,0.5,1,6.6,1.9,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.4010817,SE,jinaai/jina-embeddings-v5-text-small
+257,258,Hecke,65,B,um das Grundstück.,2,0.58,1,1.4,1.8,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.42914563,SE,jinaai/jina-embeddings-v5-text-small
+258,259,Hecke,65,C,um das Grundstück.,2,0.0,1,6.6,1.9,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.4468877,SE,jinaai/jina-embeddings-v5-text-small
+259,260,Hecke,65,D,um das Grundstück.,2,0.0,1,1.4,1.8,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.42675912,SE,jinaai/jina-embeddings-v5-text-small
+260,261,Feld,66,A,mit einem Gaul.,2,0.92,0,6.8,2.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Traktor gestartet hatte, das",0.5179183,SE,jinaai/jina-embeddings-v5-text-small
+261,262,Feld,66,B,mit einem Gaul.,2,0.67,0,3.9,1.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.49170947,SE,jinaai/jina-embeddings-v5-text-small
+262,263,Feld,66,C,mit einem Gaul.,2,0.0,0,6.8,2.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Traktor gestartet hatte, das",0.51657045,SE,jinaai/jina-embeddings-v5-text-small
+263,264,Feld,66,D,mit einem Gaul.,2,0.0,0,3.9,1.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.4821768,SE,jinaai/jina-embeddings-v5-text-small
+264,265,Schuh,67,A,und polierte ihn.,1,0.5,0,6.4,4.1,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der den Absatz ausgetauscht hatte, den",0.57679343,SE,jinaai/jina-embeddings-v5-text-small
+265,266,Schuh,67,B,und polierte ihn.,1,0.75,0,1.2,1.0,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der die Sirene gehört hatte, den",0.46969005,SE,jinaai/jina-embeddings-v5-text-small
+266,267,Schuh,67,C,und polierte ihn.,1,0.0,0,6.4,4.1,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der den Absatz ausgetauscht hatte, den",0.55821556,SE,jinaai/jina-embeddings-v5-text-small
+267,268,Schuh,67,D,und polierte ihn.,1,0.0,0,1.2,1.0,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der die Sirene gehört hatte, den",0.47274202,SE,jinaai/jina-embeddings-v5-text-small
+268,269,Koffer,68,A,für die Kreuzfahrt.,1,0.83,0,6.6,3.5,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Klamotten gefaltet hatte, den",0.5292914,SE,jinaai/jina-embeddings-v5-text-small
+269,270,Koffer,68,B,für die Kreuzfahrt.,1,0.5,0,1.2,1.9,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.50613534,SE,jinaai/jina-embeddings-v5-text-small
+270,271,Koffer,68,C,für die Kreuzfahrt.,1,0.0,0,6.6,3.5,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Klamotten gefaltet hatte, den",0.5153853,SE,jinaai/jina-embeddings-v5-text-small
+271,272,Koffer,68,D,für die Kreuzfahrt.,1,0.0,0,1.2,1.9,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.47639415,SE,jinaai/jina-embeddings-v5-text-small
+272,273,Honig,69,A,aus den Waben.,0,1.0,1,6.9,1.0,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er den Bienenstock erreicht hat, den",0.6252752,SE,jinaai/jina-embeddings-v5-text-small
+273,274,Honig,69,B,aus den Waben.,0,0.92,1,2.8,1.1,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er das Haus verlassen hat, den",0.5659349,SE,jinaai/jina-embeddings-v5-text-small
+274,275,Honig,69,C,aus den Waben.,0,0.0,1,6.9,1.0,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er den Bienenstock erreicht hat, den",0.5766322,SE,jinaai/jina-embeddings-v5-text-small
+275,276,Honig,69,D,aus den Waben.,0,0.0,1,2.8,1.1,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er das Haus verlassen hat, den",0.54109913,SE,jinaai/jina-embeddings-v5-text-small
+276,277,Gewehr,70,A,und zielt erneut.,0,0.42,1,6.4,6.1,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der die Munition verschossen hat, das",0.69000274,SE,jinaai/jina-embeddings-v5-text-small
+277,278,Gewehr,70,B,und zielt erneut.,0,0.5,1,1.4,1.3,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der den Campingplatz verlassen hat, das",0.56444186,SE,jinaai/jina-embeddings-v5-text-small
+278,279,Gewehr,70,C,und zielt erneut.,0,0.0,1,6.4,6.1,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der die Munition verschossen hat, das",0.6890088,SE,jinaai/jina-embeddings-v5-text-small
+279,280,Gewehr,70,D,und zielt erneut.,0,0.0,1,1.4,1.3,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der den Campingplatz verlassen hat, das",0.58422554,SE,jinaai/jina-embeddings-v5-text-small
+280,281,Mörtel,71,A,für die Mauer.,0,0.42,0,6.1,4.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Backsteine aufeinanderlegte, den",0.656955,SE,jinaai/jina-embeddings-v5-text-small
+281,282,Mörtel,71,B,für die Mauer.,0,0.25,0,1.4,1.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Nachbarn belauschte, den",0.5907686,SE,jinaai/jina-embeddings-v5-text-small
+282,283,Mörtel,71,C,für die Mauer.,0,0.0,0,6.1,4.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Backsteine aufeinanderlegte, den",0.6168389,SE,jinaai/jina-embeddings-v5-text-small
+283,284,Mörtel,71,D,für die Mauer.,0,0.0,0,1.4,1.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Nachbarn belauschte, den",0.5194078,SE,jinaai/jina-embeddings-v5-text-small
+284,285,Mehl,72,A,aus dem Korn.,2,0.67,0,6.9,1.4,5.9,das,Mehl,"Vorgestern mahlte der Müller, der die Mühle betrieb, das",0.64265966,SE,jinaai/jina-embeddings-v5-text-small
+285,286,Mehl,72,B,aus dem Korn.,2,0.5,0,1.0,1.1,5.9,das,Mehl,"Vorgestern mahlte der Müller, der das Lied pfiff, das",0.55345803,SE,jinaai/jina-embeddings-v5-text-small
+286,287,Mehl,72,C,aus dem Korn.,2,0.0,0,6.9,1.4,2.4,das,Mehl,"Vorgestern verzierte der Müller, der die Mühle betrieb, das",0.5830518,SE,jinaai/jina-embeddings-v5-text-small
+287,288,Mehl,72,D,aus dem Korn.,2,0.17,0,1.0,1.1,2.4,das,Mehl,"Vorgestern verzierte der Müller, der das Lied pfiff, das",0.5164597,SE,jinaai/jina-embeddings-v5-text-small
+288,289,Kuh,73,A,und brachte ihr frisches Heu.,0,1.0,0,7.0,4.5,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.431634,SE,jinaai/jina-embeddings-v5-text-small
+289,290,Kuh,73,B,und brachte ihr frisches Heu.,0,0.75,0,3.1,1.0,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.42769697,SE,jinaai/jina-embeddings-v5-text-small
+290,291,Kuh,73,C,und brachte ihr frisches Heu.,0,0.0,0,7.0,4.5,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.35959104,SE,jinaai/jina-embeddings-v5-text-small
+291,292,Kuh,73,D,und brachte ihr frisches Heu.,0,0.08,0,3.1,1.0,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.39626795,SE,jinaai/jina-embeddings-v5-text-small
+292,293,Bett,74,A,und das Kissen.,0,0.92,0,6.9,4.7,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.4178044,SE,jinaai/jina-embeddings-v5-text-small
+293,294,Bett,74,B,und das Kissen.,0,0.67,0,1.1,1.8,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.3559752,SE,jinaai/jina-embeddings-v5-text-small
+294,295,Bett,74,C,und das Kissen.,0,0.08,0,6.9,4.7,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.4115231,SE,jinaai/jina-embeddings-v5-text-small
+295,296,Bett,74,D,und das Kissen.,0,0.0,0,1.1,1.8,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.3769766,SE,jinaai/jina-embeddings-v5-text-small
+296,297,Ziel,75,A,und durchtrennt die Ziellinie.,1,0.92,0,6.0,5.8,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der das Rennen gewinnt, das",0.5114394,SE,jinaai/jina-embeddings-v5-text-small
+297,298,Ziel,75,B,und durchtrennt die Ziellinie.,1,0.75,0,1.9,2.7,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der den Wind genießt, das",0.534165,SE,jinaai/jina-embeddings-v5-text-small
+298,299,Ziel,75,C,und durchtrennt die Ziellinie.,1,0.0,0,6.0,5.8,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der das Rennen gewinnt, das",0.5415642,SE,jinaai/jina-embeddings-v5-text-small
+299,300,Ziel,75,D,und durchtrennt die Ziellinie.,1,0.0,0,1.9,2.7,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der den Wind genießt, das",0.5218764,SE,jinaai/jina-embeddings-v5-text-small
+300,301,Welle,76,A,bis zum Strand.,0,0.58,0,5.1,1.3,7.0,die,Welle,"Direkt surft der Surfer, der die Badehose angezogen hat, die",0.47419095,SE,jinaai/jina-embeddings-v5-text-small
+301,302,Welle,76,B,bis zum Strand.,0,0.42,0,3.2,1.3,7.0,die,Welle,"Direkt surft der Surfer, der den Tagesausflug unternommen hat, die",0.53680515,SE,jinaai/jina-embeddings-v5-text-small
+302,303,Welle,76,C,bis zum Strand.,0,0.0,0,5.1,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der die Badehose angezogen hat, die",0.48220268,SE,jinaai/jina-embeddings-v5-text-small
+303,304,Welle,76,D,bis zum Strand.,0,0.0,0,3.2,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der den Tagesausflug unternommen hat, die",0.48890552,SE,jinaai/jina-embeddings-v5-text-small
+304,305,Fahrkarten,77,A,der Pendler.,0,0.5,1,6.7,3.3,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der das Zugabteil betreten hatte, die",0.4812232,SE,jinaai/jina-embeddings-v5-text-small
+305,306,Fahrkarten,77,B,der Pendler.,0,0.42,1,2.8,2.4,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der die Mittagspause beendet hatte, die",0.414855,SE,jinaai/jina-embeddings-v5-text-small
+306,307,Fahrkarten,77,C,der Pendler.,0,0.0,1,6.7,3.3,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der das Zugabteil betreten hatte, die",0.52854115,SE,jinaai/jina-embeddings-v5-text-small
+307,308,Fahrkarten,77,D,der Pendler.,0,0.0,1,2.8,2.4,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der die Mittagspause beendet hatte, die",0.42434987,SE,jinaai/jina-embeddings-v5-text-small
+308,309,Leitung,78,A,im Gebäude.,0,0.5,1,6.8,4.5,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.4379805,SE,jinaai/jina-embeddings-v5-text-small
+309,310,Leitung,78,B,im Gebäude.,0,0.41,1,2.2,3.4,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Anwohner informiert hatte, die",0.45437884,SE,jinaai/jina-embeddings-v5-text-small
+310,311,Leitung,78,C,im Gebäude.,0,0.0,1,6.8,4.5,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.43149534,SE,jinaai/jina-embeddings-v5-text-small
+311,312,Leitung,78,D,im Gebäude.,0,0.0,1,2.2,3.4,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Anwohner informiert hatte, die",0.50315535,SE,jinaai/jina-embeddings-v5-text-small
+312,313,Segel,79,A,des großen Bootes.,3,0.42,1,5.5,4.4,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Taue gekappt hat, die",0.47899118,SE,jinaai/jina-embeddings-v5-text-small
+313,314,Segel,79,B,des großen Bootes.,3,0.42,1,2.2,2.7,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Handschuhe angezogen hat, die",0.42658383,SE,jinaai/jina-embeddings-v5-text-small
+314,315,Segel,79,C,des großen Bootes.,3,0.0,1,5.5,4.4,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Taue gekappt hat, die",0.47814217,SE,jinaai/jina-embeddings-v5-text-small
+315,316,Segel,79,D,des großen Bootes.,3,0.0,1,2.2,2.7,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Handschuhe angezogen hat, die",0.46406817,SE,jinaai/jina-embeddings-v5-text-small
+316,317,Gläser,80,A,und spricht mit dem Kollegen.,0,0.67,1,5.2,1.4,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.52615327,SE,jinaai/jina-embeddings-v5-text-small
+317,318,Gläser,80,B,und spricht mit dem Kollegen.,0,0.67,1,1.5,5.0,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.53221977,SE,jinaai/jina-embeddings-v5-text-small
+318,319,Gläser,80,C,und spricht mit dem Kollegen.,0,0.0,1,5.2,1.4,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.46025965,SE,jinaai/jina-embeddings-v5-text-small
+319,320,Gläser,80,D,und spricht mit dem Kollegen.,0,0.0,1,1.5,5.0,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.45769465,SE,jinaai/jina-embeddings-v5-text-small
+320,321,Korb,81,A,und holt einen Punkt.,0,0.83,0,6.0,4.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der den Ball gedribbelt hat, den",0.5602197,SE,jinaai/jina-embeddings-v5-text-small
+321,322,Korb,81,B,und holt einen Punkt.,0,0.5,0,2.9,1.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der die Sitzbank verlassen hat, den",0.51805097,SE,jinaai/jina-embeddings-v5-text-small
+322,323,Korb,81,C,und holt einen Punkt.,0,0.0,0,6.0,4.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der den Ball gedribbelt hat, den",0.57585293,SE,jinaai/jina-embeddings-v5-text-small
+323,324,Korb,81,D,und holt einen Punkt.,0,0.0,0,2.9,1.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der die Sitzbank verlassen hat, den",0.5022312,SE,jinaai/jina-embeddings-v5-text-small
+324,325,Muschel,82,A,und holt die Perle.,0,0.92,0,6.2,1.5,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der den Meeresgrund erreicht hat, die",0.47135592,SE,jinaai/jina-embeddings-v5-text-small
+325,326,Muschel,82,B,und holt die Perle.,0,0.75,0,1.0,1.2,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der die Taschenlampe angemacht hat, die",0.42470148,SE,jinaai/jina-embeddings-v5-text-small
+326,327,Muschel,82,C,und holt die Perle.,0,0.0,0,6.2,1.5,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, die den Meeresgrund erreicht hat, die",0.5196771,SE,jinaai/jina-embeddings-v5-text-small
+327,328,Muschel,82,D,und holt die Perle.,0,0.0,0,1.0,1.2,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, der die Taschenlampe angemacht hat, die",0.47011465,SE,jinaai/jina-embeddings-v5-text-small
+328,329,Bogen,83,A,und feuert den Pfeil ab.,0,1.0,0,7.0,2.1,6.7,den,Bogen,"Umsichtig spannt der Schütze, der den Pfeil gespitzt hat, den",0.5462348,SE,jinaai/jina-embeddings-v5-text-small
+329,330,Bogen,83,B,und feuert den Pfeil ab.,0,0.67,0,1.5,1.2,6.7,den,Bogen,"Umsichtig spannt der Schütze, der das Laub zusammengekehrt hat, den",0.5581619,SE,jinaai/jina-embeddings-v5-text-small
+330,331,Bogen,83,C,und feuert den Pfeil ab.,0,0.08,0,7.0,2.1,1.2,den,Bogen,"Umsichtig tippt der Schütze, der den Pfeil gespitzt hat, den",0.57723236,SE,jinaai/jina-embeddings-v5-text-small
+331,332,Bogen,83,D,und feuert den Pfeil ab.,0,0.0,0,1.5,1.2,1.2,den,Bogen,"Umsichtig tippt der Schütze, der das Laub zusammengekehrt hat, den",0.5811696,SE,jinaai/jina-embeddings-v5-text-small
+332,333,Ziegel,84,A,und beendete den Arbeitstag.,0,0.58,1,7.0,4.8,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der das Dach abdeckte, die",0.39996323,SE,jinaai/jina-embeddings-v5-text-small
+333,334,Ziegel,84,B,und beendete den Arbeitstag.,0,0.5,1,1.2,1.6,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der den Ehering auszog, die",0.419435,SE,jinaai/jina-embeddings-v5-text-small
+334,335,Ziegel,84,C,und beendete den Arbeitstag.,0,0.0,1,7.0,4.8,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der das Dach abdeckte, die",0.4141868,SE,jinaai/jina-embeddings-v5-text-small
+335,336,Ziegel,84,D,und beendete den Arbeitstag.,0,0.0,1,1.2,1.6,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der den Ehering auszog, die",0.4350092,SE,jinaai/jina-embeddings-v5-text-small
+336,337,Kartons,85,A,und die Kisten.,0,0.58,1,6.5,1.9,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.51400137,SE,jinaai/jina-embeddings-v5-text-small
+337,338,Kartons,85,B,und die Kisten.,0,0.67,1,4.4,1.1,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der die Firma gegründet hat, die",0.50789356,SE,jinaai/jina-embeddings-v5-text-small
+338,339,Kartons,85,C,und die Kisten.,0,0.0,1,6.5,1.9,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.49088562,SE,jinaai/jina-embeddings-v5-text-small
+339,340,Kartons,85,D,und die Kisten.,0,0.0,1,4.4,1.1,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der die Firma gegründet hat, die",0.48763913,SE,jinaai/jina-embeddings-v5-text-small
+340,341,Unterricht,86,A,und wurde erwischt.,2,0.5,0,7.0,5.9,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der die Klasse wiederholt hatte, den",0.5108745,SE,jinaai/jina-embeddings-v5-text-small
+341,342,Unterricht,86,B,und wurde erwischt.,2,0.33,0,3.8,1.8,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der das Handy verloren hatte, den",0.46648538,SE,jinaai/jina-embeddings-v5-text-small
+342,343,Unterricht,86,C,und wurde erwischt.,2,0.0,0,7.0,5.9,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der die Klasse wiederholt hatte, den",0.5681636,SE,jinaai/jina-embeddings-v5-text-small
+343,344,Unterricht,86,D,und wurde erwischt.,2,0.0,0,3.8,1.8,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der das Handy verloren hatte, den",0.5023194,SE,jinaai/jina-embeddings-v5-text-small
+344,345,Ausweis,87,A,und ließ die Frau in den Club.,0,0.33,1,6.4,3.3,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der den Geldbeutel durchsuchte, den",0.539777,SE,jinaai/jina-embeddings-v5-text-small
+345,346,Ausweis,87,B,und ließ die Frau in den Club.,0,0.25,1,2.0,1.2,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der die Nachtluft genoss, den",0.49160835,SE,jinaai/jina-embeddings-v5-text-small
+346,347,Ausweis,87,C,und ließ die Frau in den Club.,0,0.0,1,6.4,3.3,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der den Geldbeutel durchsuchte, den",0.55796736,SE,jinaai/jina-embeddings-v5-text-small
+347,348,Ausweis,87,D,und ließ die Frau in den Club.,0,0.0,1,2.0,1.2,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der die Nachtluft genoss, den",0.4920112,SE,jinaai/jina-embeddings-v5-text-small
+348,349,Windel,88,A,und warf sie in den Abfall.,0,0.92,1,6.7,2.4,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der das Baby geweckt hatte, die",0.3702918,SE,jinaai/jina-embeddings-v5-text-small
+349,350,Windel,88,B,und warf sie in den Abfall.,0,0.83,1,1.0,1.1,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der den Obstsalat zubereitet hatte, die",0.38682884,SE,jinaai/jina-embeddings-v5-text-small
+350,351,Windel,88,C,und warf sie in den Abfall.,0,0.08,1,6.7,2.4,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der das Baby geweckt hatte, die",0.37786958,SE,jinaai/jina-embeddings-v5-text-small
+351,352,Windel,88,D,und warf sie in den Abfall.,0,0.0,1,1.0,1.1,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der den Obstsalat zubereitet hatte, die",0.3725409,SE,jinaai/jina-embeddings-v5-text-small
+352,353,Gewichte,89,A,in die Höhe.,0,0.5,1,6.7,1.6,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.5058702,SE,jinaai/jina-embeddings-v5-text-small
+353,354,Gewichte,89,B,in die Höhe.,0,0.42,1,1.7,2.0,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Licht angemacht hatte, die",0.5167838,SE,jinaai/jina-embeddings-v5-text-small
+354,355,Gewichte,89,C,in die Höhe.,0,0.0,1,6.7,1.6,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.47295013,SE,jinaai/jina-embeddings-v5-text-small
+355,356,Gewichte,89,D,in die Höhe.,0,0.0,1,1.7,2.0,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Licht angemacht hatte, die",0.48533472,SE,jinaai/jina-embeddings-v5-text-small
+356,357,Rohr,90,A,im Badezimmer.,0,0.17,1,6.4,1.5,5.5,das,Rohr,"Umsichtig repariert der Klempner, der das Wasser ausgestellt hat, das",0.5027784,SE,jinaai/jina-embeddings-v5-text-small
+357,358,Rohr,90,B,im Badezimmer.,0,0.25,1,1.3,4.6,5.5,das,Rohr,"Umsichtig repariert der Klempner, der den Kirchenchor geleitet hat, das",0.5022401,SE,jinaai/jina-embeddings-v5-text-small
+358,359,Rohr,90,C,im Badezimmer.,0,0.0,1,6.4,1.5,1.1,das,Rohr,"Umsichtig nascht der Klempner, der das Wasser ausgestellt hat, das",0.5354688,SE,jinaai/jina-embeddings-v5-text-small
+359,360,Rohr,90,D,im Badezimmer.,0,0.0,1,1.3,4.6,1.1,das,Rohr,"Umsichtig nascht der Klempner, der den Kirchenchor geleitet hat, das",0.55321646,SE,jinaai/jina-embeddings-v5-text-small
+360,361,Artikel,91,A,für die nächste Ausgabe.,0,0.5,0,6.4,1.5,6.1,den,Artikel,"Schnell schreibt der Journalist, der die Recherche durchgeführt hat, den",0.52309084,SE,jinaai/jina-embeddings-v5-text-small
+361,362,Artikel,91,B,für die nächste Ausgabe.,0,0.25,0,2.5,5.4,6.1,den,Artikel,"Schnell schreibt der Journalist, der das Portemonnaie gefunden hat, den",0.55315775,SE,jinaai/jina-embeddings-v5-text-small
+362,363,Artikel,91,C,für die nächste Ausgabe.,0,0.0,0,6.4,1.5,2.3,den,Artikel,"Schnell lenkt der Journalist, der die Recherche durchgeführt hat, den",0.51531255,SE,jinaai/jina-embeddings-v5-text-small
+363,364,Artikel,91,D,für die nächste Ausgabe.,0,0.0,0,2.5,5.4,2.3,den,Artikel,"Schnell lenkt der Journalist, der das Portemonnaie gefunden hat, den",0.51306325,SE,jinaai/jina-embeddings-v5-text-small
+364,365,Reifen,92,A,an seinem Rad.,0,0.67,1,6.8,4.1,6.7,den,Reifen,"Heute Morgen flickte der Radler, der die Luftpumpe benutzt hatte, den",0.5984831,SE,jinaai/jina-embeddings-v5-text-small
+365,366,Reifen,92,B,an seinem Rad.,0,0.67,1,1.2,1.8,6.7,den,Reifen,"Heute Morgen flickte der Radler, der den Schrank abgeschlossen hatte, den",0.48139492,SE,jinaai/jina-embeddings-v5-text-small
+366,367,Reifen,92,C,an seinem Rad.,0,0.0,1,6.8,4.1,1.1,den,Reifen,"Heute Morgen trank der Radler, der die Luftpumpe benutzt hatte, den",0.50229895,SE,jinaai/jina-embeddings-v5-text-small
+367,368,Reifen,92,D,an seinem Rad.,0,0.0,1,1.2,1.8,1.1,den,Reifen,"Heute Morgen trank der Radler, der den Schrank abgeschlossen hatte, den",0.42085168,SE,jinaai/jina-embeddings-v5-text-small
+368,369,Briefkasten,93,A,und fährt weiter.,2,0.58,1,6.2,1.3,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der das Postauto geparkt hat, den",0.60868543,SE,jinaai/jina-embeddings-v5-text-small
+369,370,Briefkasten,93,B,und fährt weiter.,2,0.58,1,2.5,2.0,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der den Kugelschreiber verloren hat, den",0.6430912,SE,jinaai/jina-embeddings-v5-text-small
+370,371,Briefkasten,93,C,und fährt weiter.,2,0.0,1,6.2,1.3,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der das Postauto geparkt hat, den",0.63404834,SE,jinaai/jina-embeddings-v5-text-small
+371,372,Briefkasten,93,D,und fährt weiter.,2,0.0,1,2.5,2.0,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der den Kugelschreiber verloren hat, den",0.6605006,SE,jinaai/jina-embeddings-v5-text-small
+372,373,Drogen,94,A,für die nächste Woche.,0,0.5,1,6.8,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der den Dealer angerufen hat, die",0.54148656,SE,jinaai/jina-embeddings-v5-text-small
+373,374,Drogen,94,B,für die nächste Woche.,0,0.5,1,2.1,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der die Kapuze aufgezogen hat, die",0.43684942,SE,jinaai/jina-embeddings-v5-text-small
+374,375,Drogen,94,C,für die nächste Woche.,0,0.0,1,6.8,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der den Dealer angerufen hat, die",0.53381944,SE,jinaai/jina-embeddings-v5-text-small
+375,376,Drogen,94,D,für die nächste Woche.,0,0.08,1,2.1,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der die Kapuze aufgezogen hat, die",0.44666347,SE,jinaai/jina-embeddings-v5-text-small
+376,377,Tonne,95,A,und sprang auf den Müllwagen.,0,0.75,1,6.4,1.8,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Müllwagen geparkt hatte, die",0.45054305,SE,jinaai/jina-embeddings-v5-text-small
+377,378,Tonne,95,B,und sprang auf den Müllwagen.,0,0.75,1,4.2,1.1,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.4313801,SE,jinaai/jina-embeddings-v5-text-small
+378,379,Tonne,95,C,und sprang auf den Müllwagen.,0,0.0,1,6.4,1.8,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Müllwagen geparkt hatte, die",0.45544338,SE,jinaai/jina-embeddings-v5-text-small
+379,380,Tonne,95,D,und sprang auf den Müllwagen.,0,0.0,1,4.2,1.1,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.45112383,SE,jinaai/jina-embeddings-v5-text-small
+380,381,Peitsche,96,A,und gab die Sporen.,2,0.58,1,6.0,5.6,5.8,die,Peitsche,"Hektisch knallte der Reiter, der das Pferd ritt, die",0.5392699,SE,jinaai/jina-embeddings-v5-text-small
+381,382,Peitsche,96,B,und gab die Sporen.,2,0.5,1,1.2,1.2,5.8,die,Peitsche,"Hektisch knallte der Reiter, der die Landschaft durchquerte, die",0.45205733,SE,jinaai/jina-embeddings-v5-text-small
+382,383,Peitsche,96,C,und gab die Sporen.,2,0.0,1,6.0,5.6,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der das Pferd ritt, die",0.48486495,SE,jinaai/jina-embeddings-v5-text-small
+383,384,Peitsche,96,D,und gab die Sporen.,2,0.0,1,1.2,1.2,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der die Landschaft durchquerte, die",0.43994585,SE,jinaai/jina-embeddings-v5-text-small
+384,385,Waffe,97,A,und verlangte das Geld.,0,0.58,1,3.9,6.5,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der die Bank überfiel, die",0.48309818,SE,jinaai/jina-embeddings-v5-text-small
+385,386,Waffe,97,B,und verlangte das Geld.,0,0.58,1,1.3,1.1,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der den Bus betrat, die",0.44954544,SE,jinaai/jina-embeddings-v5-text-small
+386,387,Waffe,97,C,und verlangte das Geld.,0,0.0,1,3.9,6.5,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der die Bank überfiel, die",0.4682334,SE,jinaai/jina-embeddings-v5-text-small
+387,388,Waffe,97,D,und verlangte das Geld.,0,0.0,1,1.3,1.1,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der den Bus betrat, die",0.4442112,SE,jinaai/jina-embeddings-v5-text-small
+388,389,Schiff,98,A,und übernahm das Kommando.,0,0.92,1,6.2,5.1,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Flagge hisste, das",0.47248927,SE,jinaai/jina-embeddings-v5-text-small
+389,390,Schiff,98,B,und übernahm das Kommando.,0,0.92,1,2.3,1.4,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Fehde austrug, das",0.4424249,SE,jinaai/jina-embeddings-v5-text-small
+390,391,Schiff,98,C,und übernahm das Kommando.,0,0.0,1,6.2,5.1,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Flagge hisste, das",0.51025265,SE,jinaai/jina-embeddings-v5-text-small
+391,392,Schiff,98,D,und übernahm das Kommando.,0,0.0,1,2.3,1.4,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Fehde austrug, das",0.4805624,SE,jinaai/jina-embeddings-v5-text-small
+392,393,Aktie,99,A,und berichtet seinem Auftraggeber.,0,0.75,1,6.9,1.1,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der die Börse betreten hat, die",0.53456956,SE,jinaai/jina-embeddings-v5-text-small
+393,394,Aktie,99,B,und berichtet seinem Auftraggeber.,0,0.83,1,1.4,1.6,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.5448096,SE,jinaai/jina-embeddings-v5-text-small
+394,395,Aktie,99,C,und berichtet seinem Auftraggeber.,0,0.0,1,6.9,1.1,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der die Börse betreten hat, die",0.54487216,SE,jinaai/jina-embeddings-v5-text-small
+395,396,Aktie,99,D,und berichtet seinem Auftraggeber.,0,0.0,1,1.4,1.6,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.5139795,SE,jinaai/jina-embeddings-v5-text-small
+396,397,Loch,100,A,in die Decke.,0,1.0,0,6.5,2.0,6.9,das,Loch,"Gestern bohrte der Handwerker, der die Bohrmaschine hielt, das",0.31623125,SE,jinaai/jina-embeddings-v5-text-small
+397,398,Loch,100,B,in die Decke.,0,0.75,0,1.4,1.7,6.9,das,Loch,"Gestern bohrte der Handwerker, der das Kaugummi kaute, das",0.3750289,SE,jinaai/jina-embeddings-v5-text-small
+398,399,Loch,100,C,in die Decke.,0,0.0,0,6.5,2.0,3.9,das,Loch,"Gestern warf der Handwerker, der die Bohrmaschine hielt, das",0.30538988,SE,jinaai/jina-embeddings-v5-text-small
+399,400,Loch,100,D,in die Decke.,0,0.0,0,1.4,1.7,3.9,das,Loch,"Gestern warf der Handwerker, der das Kaugummi kaute, das",0.3158458,SE,jinaai/jina-embeddings-v5-text-small
+400,401,Blutdruck,101,A,und den Blutzucker.,3,0.58,1,6.8,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der das Messgerät hält, den",0.51452893,SE,jinaai/jina-embeddings-v5-text-small
+401,402,Blutdruck,101,B,und den Blutzucker.,3,0.58,1,2.3,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der den Bildschirm anstellt, den",0.5268322,SE,jinaai/jina-embeddings-v5-text-small
+402,403,Blutdruck,101,C,und den Blutzucker.,3,0.0,1,6.8,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der das Messgerät hält, den",0.48800954,SE,jinaai/jina-embeddings-v5-text-small
+403,404,Blutdruck,101,D,und den Blutzucker.,3,0.0,1,2.3,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der den Bildschirm anstellt, den",0.5010985,SE,jinaai/jina-embeddings-v5-text-small
+404,405,Tuch,102,A,und machte sich bereit.,0,0.67,0,6.3,3.5,2.7,das,Tuch,"Konzentriert schwang der Torero, der den Stier verwundet hatte, das",0.4948397,SE,jinaai/jina-embeddings-v5-text-small
+405,406,Tuch,102,B,und machte sich bereit.,0,0.83,0,4.1,1.8,2.7,das,Tuch,"Konzentriert schwang der Torero, der das Gebet aufgesagt hatte, das",0.5165689,SE,jinaai/jina-embeddings-v5-text-small
+406,407,Tuch,102,C,und machte sich bereit.,0,0.0,0,6.3,3.5,2.6,das,Tuch,"Konzentriert befüllte der Torero, der den Stier verwundet hatte, das",0.4673381,SE,jinaai/jina-embeddings-v5-text-small
+407,408,Tuch,102,D,und machte sich bereit.,0,0.0,0,4.1,1.8,2.6,das,Tuch,"Konzentriert befüllte der Torero, der das Gebet aufgesagt hatte, das",0.49574336,SE,jinaai/jina-embeddings-v5-text-small
+408,409,Schwert,103,A,und griff den Gegner an.,0,0.92,1,6.2,1.5,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er den Kampf begonnen hatte, das",0.57483274,SE,jinaai/jina-embeddings-v5-text-small
+409,410,Schwert,103,B,und griff den Gegner an.,0,0.92,1,1.1,1.0,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er die Brücke überquert hatte, das",0.5416369,SE,jinaai/jina-embeddings-v5-text-small
+410,411,Schwert,103,C,und griff den Gegner an.,0,0.0,1,6.2,1.5,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er den Kampf begonnen hatte, das",0.59295136,SE,jinaai/jina-embeddings-v5-text-small
+411,412,Schwert,103,D,und griff den Gegner an.,0,0.08,1,1.1,1.0,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er die Brücke überquert hatte, das",0.5757424,SE,jinaai/jina-embeddings-v5-text-small
+412,413,Rettungswagen,104,A,in Richtung des Krankenhauses.,0,0.75,0,6.8,2.6,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.5895421,SE,jinaai/jina-embeddings-v5-text-small
+413,414,Rettungswagen,104,B,in Richtung des Krankenhauses.,0,0.58,0,1.3,1.2,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der den Notizblock weggelegt hat, den",0.55026305,SE,jinaai/jina-embeddings-v5-text-small
+414,415,Rettungswagen,104,C,in Richtung des Krankenhauses.,0,0.0,0,6.8,2.6,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.59164596,SE,jinaai/jina-embeddings-v5-text-small
+415,416,Rettungswagen,104,D,in Richtung des Krankenhauses.,0,0.0,0,1.3,1.2,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der den Notizblock weggelegt hat, den",0.5014664,SE,jinaai/jina-embeddings-v5-text-small
+416,417,Aussage,105,A,und wendete sich an seinen Anwalt.,0,1.0,0,6.4,3.5,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Angeklagten wiedererkannte, die",0.48749235,SE,jinaai/jina-embeddings-v5-text-small
+417,418,Aussage,105,B,und wendete sich an seinen Anwalt.,0,0.83,0,1.1,1.6,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Gehstock umklammerte, die",0.46812963,SE,jinaai/jina-embeddings-v5-text-small
+418,419,Aussage,105,C,und wendete sich an seinen Anwalt.,0,0.0,0,6.4,3.5,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Angeklagten wiedererkannte, die",0.5266068,SE,jinaai/jina-embeddings-v5-text-small
+419,420,Aussage,105,D,und wendete sich an seinen Anwalt.,0,0.0,0,1.1,1.6,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Gehstock umklammerte, die",0.5281154,SE,jinaai/jina-embeddings-v5-text-small
+420,421,Schlittschuhe,106,A,und begibt sich auf die Eisfläche.,2,1.0,0,6.7,2.0,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der die Eishalle erreicht hat, die",0.6841434,SE,jinaai/jina-embeddings-v5-text-small
+421,422,Schlittschuhe,106,B,und begibt sich auf die Eisfläche.,2,0.75,0,1.5,1.1,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.6633357,SE,jinaai/jina-embeddings-v5-text-small
+422,423,Schlittschuhe,106,C,und begibt sich auf die Eisfläche.,2,0.0,0,6.7,2.0,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der die Eishalle erreicht hat, die",0.6388158,SE,jinaai/jina-embeddings-v5-text-small
+423,424,Schlittschuhe,106,D,und begibt sich auf die Eisfläche.,2,0.08,0,1.5,1.1,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.5919689,SE,jinaai/jina-embeddings-v5-text-small
+424,425,Lasso,107,A,und fängt das Tier ein.,0,0.33,0,5.4,4.5,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.45919457,SE,jinaai/jina-embeddings-v5-text-small
+425,426,Lasso,107,B,und fängt das Tier ein.,0,0.75,0,1.3,1.6,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.47652757,SE,jinaai/jina-embeddings-v5-text-small
+426,427,Lasso,107,C,und fängt das Tier ein.,0,0.0,0,5.4,4.5,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.46263802,SE,jinaai/jina-embeddings-v5-text-small
+427,428,Lasso,107,D,und fängt das Tier ein.,0,0.0,0,1.3,1.6,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.46238142,SE,jinaai/jina-embeddings-v5-text-small
+428,429,Drehbuch,108,A,für die Serie.,2,0.33,0,6.6,4.4,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Plot konstruiert hatte, das",0.68379074,SE,jinaai/jina-embeddings-v5-text-small
+429,430,Drehbuch,108,B,für die Serie.,2,0.75,0,1.1,1.3,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Kamin angemacht hatte, das",0.6237266,SE,jinaai/jina-embeddings-v5-text-small
+430,431,Drehbuch,108,C,für die Serie.,2,0.0,0,6.6,4.4,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Plot konstruiert hatte, das",0.6521916,SE,jinaai/jina-embeddings-v5-text-small
+431,432,Drehbuch,108,D,für die Serie.,2,0.0,0,1.1,1.3,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Kamin angemacht hatte, das",0.5473421,SE,jinaai/jina-embeddings-v5-text-small
+432,433,Stern,109,A,am Firmament.,0,0.58,1,5.7,2.4,4.9,den,Stern,"Sofort entdeckt der Astronom, der das Teleskop aufgestellt hat, den",0.4206714,SE,jinaai/jina-embeddings-v5-text-small
+433,434,Stern,109,B,am Firmament.,0,0.58,1,3.0,1.9,4.9,den,Stern,"Sofort entdeckt der Astronom, der die Uhrzeit notiert hat, den",0.42628393,SE,jinaai/jina-embeddings-v5-text-small
+434,435,Stern,109,C,am Firmament.,0,0.0,1,5.7,2.4,1.4,den,Stern,"Sofort serviert der Astronom, der das Teleskop aufgestellt hat, den",0.46082076,SE,jinaai/jina-embeddings-v5-text-small
+435,436,Stern,109,D,am Firmament.,0,0.0,1,3.0,1.9,1.4,den,Stern,"Sofort serviert der Astronom, der die Uhrzeit notiert hat, den",0.46356955,SE,jinaai/jina-embeddings-v5-text-small
+436,437,Anker,110,A,und verließ den Hafen.,0,0.5,1,6.4,2.0,6.9,den,Anker,"Gestern lichtete der Seemann, der das Boot kommandierte, den",0.48436308,SE,jinaai/jina-embeddings-v5-text-small
+437,438,Anker,110,B,und verließ den Hafen.,0,0.58,1,1.0,4.1,6.9,den,Anker,"Gestern lichtete der Seemann, der den Atem anhielt, den",0.4912661,SE,jinaai/jina-embeddings-v5-text-small
+438,439,Anker,110,C,und verließ den Hafen.,0,0.0,1,6.4,2.0,1.0,den,Anker,"Gestern kochte der Seemann, der das Boot kommandierte, den",0.4867316,SE,jinaai/jina-embeddings-v5-text-small
+439,440,Anker,110,D,und verließ den Hafen.,0,0.0,1,1.0,4.1,1.0,den,Anker,"Gestern kochte der Seemann, der den Atem anhielt, den",0.46878818,SE,jinaai/jina-embeddings-v5-text-small
+440,441,Seil,111,A,um den Aufstieg abzusichern.,2,0.58,0,4.6,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.45443198,SE,jinaai/jina-embeddings-v5-text-small
+441,442,Seil,111,B,um den Aufstieg abzusichern.,2,0.75,0,1.4,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.51348335,SE,jinaai/jina-embeddings-v5-text-small
+442,443,Seil,111,C,um den Aufstieg abzusichern.,2,0.0,0,4.6,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.45233667,SE,jinaai/jina-embeddings-v5-text-small
+443,444,Seil,111,D,um den Aufstieg abzusichern.,2,0.0,0,1.4,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.45064428,SE,jinaai/jina-embeddings-v5-text-small
+444,445,Rouletterad,112,A,und verrät die nächste Zahl.,0,0.67,0,6.3,2.1,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der den Spieltisch vorbereitet hat, das",0.5738371,SE,jinaai/jina-embeddings-v5-text-small
+445,446,Rouletterad,112,B,und verrät die nächste Zahl.,0,0.33,0,2.0,1.3,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der die Frau beeindruckt hat, das",0.5062725,SE,jinaai/jina-embeddings-v5-text-small
+446,447,Rouletterad,112,C,und verrät die nächste Zahl.,0,0.0,0,6.3,2.1,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der den Spieltisch vorbereitet hat, das",0.51352394,SE,jinaai/jina-embeddings-v5-text-small
+447,448,Rouletterad,112,D,und verrät die nächste Zahl.,0,0.0,0,2.0,1.3,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der die Frau beeindruckt hat, das",0.45641452,SE,jinaai/jina-embeddings-v5-text-small
+448,449,Nägel,113,A,und lackierte sie.,0,0.75,0,6.9,1.7,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie die Maniküre durchführte, die",0.5508249,SE,jinaai/jina-embeddings-v5-text-small
+449,450,Nägel,113,B,und lackierte sie.,0,1.0,0,1.3,1.0,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie das Gespräch belauschte, die",0.4143786,SE,jinaai/jina-embeddings-v5-text-small
+450,451,Nägel,113,C,und lackierte sie.,0,0.08,0,6.9,1.7,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie die Maniküre durchführte, die",0.6273373,SE,jinaai/jina-embeddings-v5-text-small
+451,452,Nägel,113,D,und lackierte sie.,0,0.0,0,1.3,1.0,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie das Gespräch belauschte, die",0.45249528,SE,jinaai/jina-embeddings-v5-text-small
+452,453,Zukunft,114,A,der Familie.,0,0.58,1,6.7,3.9,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kristallkugel befragt hatte, die",0.5194752,SE,jinaai/jina-embeddings-v5-text-small
+453,454,Zukunft,114,B,der Familie.,0,0.58,1,1.4,1.1,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kerze angezündet hatte, die",0.49879614,SE,jinaai/jina-embeddings-v5-text-small
+454,455,Zukunft,114,C,der Familie.,0,0.0,1,6.7,3.9,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kristallkugel befragt hatte, die",0.46596372,SE,jinaai/jina-embeddings-v5-text-small
+455,456,Zukunft,114,D,der Familie.,0,0.0,1,1.4,1.1,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kerze angezündet hatte, die",0.45645788,SE,jinaai/jina-embeddings-v5-text-small
+456,457,Ausgrabung,115,A,in der Ruine.,0,0.92,0,6.6,5.3,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der die Schaufel hervorgeholt hat, die",0.72935915,SE,jinaai/jina-embeddings-v5-text-small
+457,458,Ausgrabung,115,B,in der Ruine.,0,0.5,0,1.3,2.5,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der das Taxi genommen hat, die",0.60070926,SE,jinaai/jina-embeddings-v5-text-small
+458,459,Ausgrabung,115,C,in der Ruine.,0,0.0,0,6.6,5.3,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der die Schaufel hervorgeholt hat, die",0.7606981,SE,jinaai/jina-embeddings-v5-text-small
+459,460,Ausgrabung,115,D,in der Ruine.,0,0.0,0,1.3,2.5,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der das Taxi genommen hat, die",0.69263273,SE,jinaai/jina-embeddings-v5-text-small
+460,461,Strauß,116,A,für die Hochzeit.,0,0.92,1,6.8,3.9,6.5,den,Strauß,"Zügig bindet der Florist, der die Rosen gezüchtet hat, den",0.535408,SE,jinaai/jina-embeddings-v5-text-small
+461,462,Strauß,116,B,für die Hochzeit.,0,0.92,1,2.6,1.6,6.5,den,Strauß,"Zügig bindet der Florist, der die Fenster geschlossen hat, den",0.4784615,SE,jinaai/jina-embeddings-v5-text-small
+462,463,Strauß,116,C,für die Hochzeit.,0,0.0,1,6.8,3.9,1.0,den,Strauß,"Zügig ölt der Florist, der die Rosen gezüchtet hat, den",0.44037354,SE,jinaai/jina-embeddings-v5-text-small
+463,464,Strauß,116,D,für die Hochzeit.,0,0.0,1,2.6,1.6,1.0,den,Strauß,"Zügig ölt der Florist, der die Fenster geschlossen hat, den",0.40494585,SE,jinaai/jina-embeddings-v5-text-small
+464,465,Rolle,117,A,für das Theaterstück.,0,0.75,1,6.1,3.8,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der das Skript auswendig gelernt hat, die",0.4977536,SE,jinaai/jina-embeddings-v5-text-small
+465,466,Rolle,117,B,für das Theaterstück.,0,0.67,1,2.3,4.6,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der die Torte gebacken hat, die",0.53049487,SE,jinaai/jina-embeddings-v5-text-small
+466,467,Rolle,117,C,für das Theaterstück.,0,0.0,1,6.1,3.8,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der das Skript auswendig gelernt hat, die",0.48137164,SE,jinaai/jina-embeddings-v5-text-small
+467,468,Rolle,117,D,für das Theaterstück.,0,0.0,1,2.3,4.6,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der die Torte gebacken hat, die",0.47661385,SE,jinaai/jina-embeddings-v5-text-small
+468,469,Sendung,118,A,für den Fernsehkanal.,0,0.42,0,6.4,6.3,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Zuschauer unterhält, die",0.5988505,SE,jinaai/jina-embeddings-v5-text-small
+469,470,Sendung,118,B,für den Fernsehkanal.,0,0.17,0,2.0,1.5,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Weltmeere bereist, die",0.616173,SE,jinaai/jina-embeddings-v5-text-small
+470,471,Sendung,118,C,für den Fernsehkanal.,0,0.0,0,6.4,6.3,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Zuschauer unterhält, die",0.59536624,SE,jinaai/jina-embeddings-v5-text-small
+471,472,Sendung,118,D,für den Fernsehkanal.,0,0.0,0,2.0,1.5,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Weltmeere bereist, die",0.5544037,SE,jinaai/jina-embeddings-v5-text-small
+472,473,Stück,119,A,für seine nächste Sonate.,0,0.25,0,4.8,4.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Noten aufschrieb, das",0.43687063,SE,jinaai/jina-embeddings-v5-text-small
+473,474,Stück,119,B,für seine nächste Sonate.,0,0.42,0,1.7,2.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Fragen beantwortete, das",0.43313974,SE,jinaai/jina-embeddings-v5-text-small
+474,475,Stück,119,C,für seine nächste Sonate.,0,0.0,0,4.8,4.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Noten aufschrieb, das",0.47958192,SE,jinaai/jina-embeddings-v5-text-small
+475,476,Stück,119,D,für seine nächste Sonate.,0,0.08,0,1.7,2.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Fragen beantwortete, das",0.44465262,SE,jinaai/jina-embeddings-v5-text-small
+476,477,Bild,120,A,in seinem Atelier.,2,0.58,1,6.6,2.3,7.0,das,Bild,"Fröhlich malte der Künstler, der die Leinwand aufgespannt hatte, das",0.4951976,SE,jinaai/jina-embeddings-v5-text-small
+477,478,Bild,120,B,in seinem Atelier.,2,0.58,1,1.5,1.7,7.0,das,Bild,"Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",0.48579887,SE,jinaai/jina-embeddings-v5-text-small
+478,479,Bild,120,C,in seinem Atelier.,2,0.0,1,6.6,2.3,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",0.45911357,SE,jinaai/jina-embeddings-v5-text-small
+479,480,Bild,120,D,in seinem Atelier.,2,0.0,1,1.5,1.7,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",0.4206321,SE,jinaai/jina-embeddings-v5-text-small
+0,1,Axt,1,A,und hackte die Holzscheite.,0,0.75,1,6.9,3.1,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er das Holz stapelte, die",0.37460822,SE,jinaai/jina-embeddings-v5-text-nano
+1,2,Axt,1,B,und hackte die Holzscheite.,0,0.67,1,3.1,1.2,6.0,die,Axt,"Gestern schärfte der Holzfäller, bevor er den Film schaute, die",0.3764001,SE,jinaai/jina-embeddings-v5-text-nano
+2,3,Axt,1,C,und hackte die Holzscheite.,0,0.0,1,6.9,3.1,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er das Holz stapelte, die",0.3816996,SE,jinaai/jina-embeddings-v5-text-nano
+3,4,Axt,1,D,und hackte die Holzscheite.,0,0.0,1,3.1,1.2,1.4,die,Axt,"Gestern aß der Holzfäller, bevor er den Film schaute, die",0.3724129,SE,jinaai/jina-embeddings-v5-text-nano
+4,5,Messer,2,A,und rasiert den Kunden.,0,0.67,1,5.0,5.1,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.51198184,SE,jinaai/jina-embeddings-v5-text-nano
+5,6,Messer,2,B,und rasiert den Kunden.,0,0.75,1,1.2,1.4,6.4,das,Messer,"Nachdenklich schärft der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.5266303,SE,jinaai/jina-embeddings-v5-text-nano
+6,7,Messer,2,C,und rasiert den Kunden.,0,0.0,1,5.0,5.1,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er den Rasierschaum aufgetragen hat, das",0.48727086,SE,jinaai/jina-embeddings-v5-text-nano
+7,8,Messer,2,D,und rasiert den Kunden.,0,0.0,1,1.2,1.4,1.4,das,Messer,"Nachdenklich trinkt der Barbier, nachdem er die Topfpflanze gegossen hat, das",0.501235,SE,jinaai/jina-embeddings-v5-text-nano
+8,9,Kaffee,3,A,und gießt die Milch dazu.,0,0.58,0,5.8,2.3,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.4720896,SE,jinaai/jina-embeddings-v5-text-nano
+9,10,Kaffee,3,B,und gießt die Milch dazu.,0,0.25,0,3.5,3.5,5.8,den,Kaffee,"Sogleich süßt der Kellner, nachdem er das Radio angemacht hat, den",0.5013465,SE,jinaai/jina-embeddings-v5-text-nano
+10,11,Kaffee,3,C,und gießt die Milch dazu.,0,0.0,0,5.8,2.3,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er die Bestellung aufgenommen hat, den",0.43626493,SE,jinaai/jina-embeddings-v5-text-nano
+11,12,Kaffee,3,D,und gießt die Milch dazu.,0,0.0,0,3.5,3.5,3.0,den,Kaffee,"Sogleich putzt der Kellner, nachdem er das Radio angemacht hat, den",0.43987522,SE,jinaai/jina-embeddings-v5-text-nano
+12,13,Ofen,4,A,auf 180 Grad.,0,1.0,0,6.0,2.7,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.61430556,SE,jinaai/jina-embeddings-v5-text-nano
+13,14,Ofen,4,B,auf 180 Grad.,0,0.75,0,2.4,1.3,6.6,den,Ofen,"Vorsichtig erhitzt der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.61974955,SE,jinaai/jina-embeddings-v5-text-nano
+14,15,Ofen,4,C,auf 180 Grad.,0,0.0,0,6.0,2.7,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Brötchen geformt hat, den",0.5280199,SE,jinaai/jina-embeddings-v5-text-nano
+15,16,Ofen,4,D,auf 180 Grad.,0,0.08,0,2.4,1.3,1.3,den,Ofen,"Vorsichtig schlürft der Bäckerlehrling, nachdem er die Fenster gekippt hat, den",0.523758,SE,jinaai/jina-embeddings-v5-text-nano
+16,17,Weinflasche,5,A,für die Weinprobe.,0,1.0,1,5.9,1.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Reben geschnitten hat, die",0.61771953,SE,jinaai/jina-embeddings-v5-text-nano
+17,18,Weinflasche,5,B,für die Weinprobe.,0,1.0,1,2.0,2.7,6.8,die,Weinflasche,"Zufrieden entkorkt der Winzer, der die Lohnabrechnungen beendet hat, die",0.4829545,SE,jinaai/jina-embeddings-v5-text-nano
+18,19,Weinflasche,5,C,für die Weinprobe.,0,0.08,1,5.9,1.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Reben geschnitten hat, die",0.6035638,SE,jinaai/jina-embeddings-v5-text-nano
+19,20,Weinflasche,5,D,für die Weinprobe.,0,0.0,1,2.0,2.7,1.0,die,Weinflasche,"Zufrieden glättet der Winzer, der die Lohnabrechnungen beendet hat, die",0.48123565,SE,jinaai/jina-embeddings-v5-text-nano
+20,21,Ticket,6,A,für die Fahrt.,0,0.33,1,6.7,2.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der den Automaten bedient, das",0.4563652,SE,jinaai/jina-embeddings-v5-text-nano
+21,22,Ticket,6,B,für die Fahrt.,0,0.33,1,1.3,1.3,6.3,das,Ticket,"Umgehend löst der Fahrgast, der die Einkaufstasche abstellt, das",0.43810296,SE,jinaai/jina-embeddings-v5-text-nano
+22,23,Ticket,6,C,für die Fahrt.,0,0.0,1,6.7,2.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der den Automaten bedient, das",0.44687802,SE,jinaai/jina-embeddings-v5-text-nano
+23,24,Ticket,6,D,für die Fahrt.,0,0.0,1,1.3,1.3,1.2,das,Ticket,"Umgehend knotet der Fahrgast, der die Einkaufstasche abstellt, das",0.44002178,SE,jinaai/jina-embeddings-v5-text-nano
+24,25,Sieg,7,A,mit einer Party.,0,0.5,0,6.8,4.4,6.2,den,Sieg,"Am Abend feiert der Gewinner, der den Pokal erhält, den",0.554825,SE,jinaai/jina-embeddings-v5-text-nano
+25,26,Sieg,7,B,mit einer Party.,0,0.75,0,1.8,2.0,6.2,den,Sieg,"Am Abend feiert der Gewinner, der das Eis isst, den",0.49773315,SE,jinaai/jina-embeddings-v5-text-nano
+26,27,Sieg,7,C,mit einer Party.,0,0.0,0,6.8,4.4,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der den Pokal erhält, den",0.5368966,SE,jinaai/jina-embeddings-v5-text-nano
+27,28,Sieg,7,D,mit einer Party.,0,0.0,0,1.8,2.0,1.8,den,Sieg,"Am Abend knabbert der Gewinner, der das Eis isst, den",0.47928962,SE,jinaai/jina-embeddings-v5-text-nano
+28,29,Fisch,8,A,für das Abendessen.,1,0.83,1,7.0,4.9,6.9,den,Fisch,"Endlich fängt der Angler, der den Köder auswarf, den",0.63479125,SE,jinaai/jina-embeddings-v5-text-nano
+29,30,Fisch,8,B,für das Abendessen.,1,0.83,1,2.0,1.2,6.9,den,Fisch,"Endlich fängt der Angler, der die Zeitung las, den",0.55312663,SE,jinaai/jina-embeddings-v5-text-nano
+30,31,Fisch,8,C,für das Abendessen.,1,0.0,1,7.0,4.9,1.3,den,Fisch,"Endlich baut der Angler, der den Köder auswarf, den",0.6387115,SE,jinaai/jina-embeddings-v5-text-nano
+31,32,Fisch,8,D,für das Abendessen.,1,0.0,1,2.0,1.2,1.3,den,Fisch,"Endlich baut der Angler, der die Zeitung las, den",0.5183952,SE,jinaai/jina-embeddings-v5-text-nano
+32,33,Unkraut,9,A,und leerte den Kompost.,0,0.83,0,6.7,3.3,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der das Beet pflegte, das",0.48630407,SE,jinaai/jina-embeddings-v5-text-nano
+33,34,Unkraut,9,B,und leerte den Kompost.,0,0.67,0,3.3,1.4,6.9,das,Unkraut,"Am Nachmittag jätete der Schrebergärtner, der die Sonne genoss, das",0.43089154,SE,jinaai/jina-embeddings-v5-text-nano
+34,35,Unkraut,9,C,und leerte den Kompost.,0,0.0,0,6.7,3.3,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der das Beet pflegte, das",0.5144435,SE,jinaai/jina-embeddings-v5-text-nano
+35,36,Unkraut,9,D,und leerte den Kompost.,0,0.0,0,3.3,1.4,1.2,das,Unkraut,"Am Nachmittag polierte der Schrebergärtner, der die Sonne genoss, das",0.4654357,SE,jinaai/jina-embeddings-v5-text-nano
+36,37,Klassenzimmer,10,A,und nimmt ein Stück Kreide.,1,0.75,1,6.8,3.7,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er die Tafel beschreibt, das",0.62213993,SE,jinaai/jina-embeddings-v5-text-nano
+37,38,Klassenzimmer,10,B,und nimmt ein Stück Kreide.,1,0.75,1,1.9,2.6,5.5,das,Klassenzimmer,"Eine Weile lüftet der Lehrer, bevor er den Mantel aufhängt, das",0.5954873,SE,jinaai/jina-embeddings-v5-text-nano
+38,39,Klassenzimmer,10,C,und nimmt ein Stück Kreide.,1,0.0,1,6.8,3.7,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er die Tafel beschreibt, das",0.5917917,SE,jinaai/jina-embeddings-v5-text-nano
+39,40,Klassenzimmer,10,D,und nimmt ein Stück Kreide.,1,0.0,1,1.9,2.6,4.7,das,Klassenzimmer,"Eine Weile bastelt der Lehrer, bevor er den Mantel aufhängt, das",0.5623881,SE,jinaai/jina-embeddings-v5-text-nano
+40,41,Käse,11,A,und gibt Öl in die Pfanne.,0,0.5,1,5.2,4.6,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nudeln kocht, den",0.36185765,SE,jinaai/jina-embeddings-v5-text-nano
+41,42,Käse,11,B,und gibt Öl in die Pfanne.,0,0.58,1,1.7,1.2,6.4,den,Käse,"Schnell reibt der Chefkoch, während er die Nachrichten hört, den",0.44327337,SE,jinaai/jina-embeddings-v5-text-nano
+42,43,Käse,11,C,und gibt Öl in die Pfanne.,0,0.0,1,5.2,4.6,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nudeln kocht, den",0.36968055,SE,jinaai/jina-embeddings-v5-text-nano
+43,44,Käse,11,D,und gibt Öl in die Pfanne.,0,0.0,1,1.7,1.2,1.1,den,Käse,"Schnell flickt der Chefkoch, während er die Nachrichten hört, den",0.45253643,SE,jinaai/jina-embeddings-v5-text-nano
+44,45,Bier,12,A,das zuvor gebraut wurde.,0,0.67,1,3.9,1.2,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.5511366,SE,jinaai/jina-embeddings-v5-text-nano
+45,46,Bier,12,B,das zuvor gebraut wurde.,0,0.58,1,1.8,2.3,5.0,das,Bier,"Vorgestern probierte der Braumeister, nachdem er den Boden gewischt hatte, das",0.5106182,SE,jinaai/jina-embeddings-v5-text-nano
+46,47,Bier,12,C,das zuvor gebraut wurde.,0,0.0,1,3.9,1.2,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Kessel ausgeschaltet hatte, das",0.51150686,SE,jinaai/jina-embeddings-v5-text-nano
+47,48,Bier,12,D,das zuvor gebraut wurde.,0,0.0,1,1.8,2.3,1.1,das,Bier,"Vorgestern bemalte der Braumeister, nachdem er den Boden gewischt hatte, das",0.4706984,SE,jinaai/jina-embeddings-v5-text-nano
+48,49,Rasen,13,A,hinter der Villa.,0,0.92,1,7.0,5.6,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.6266789,SE,jinaai/jina-embeddings-v5-text-nano
+49,50,Rasen,13,B,hinter der Villa.,0,0.92,1,2.2,1.9,6.8,den,Rasen,"Eine Zeit lang mähte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.57765085,SE,jinaai/jina-embeddings-v5-text-nano
+50,51,Rasen,13,C,hinter der Villa.,0,0.0,1,7.0,5.6,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er den Garten umgegraben hatte, den",0.5913617,SE,jinaai/jina-embeddings-v5-text-nano
+51,52,Rasen,13,D,hinter der Villa.,0,0.0,1,2.2,1.9,1.4,den,Rasen,"Eine Zeit lang räucherte der Gartenhelfer, nachdem er die Garage aufgeräumt hatte, den",0.5484597,SE,jinaai/jina-embeddings-v5-text-nano
+52,53,Straße,14,A,und den Bürgersteig.,1,0.42,1,6.5,5.1,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Absperrungen umging, die",0.3866316,SE,jinaai/jina-embeddings-v5-text-nano
+53,54,Straße,14,B,und den Bürgersteig.,1,0.42,1,5.7,2.0,6.8,die,Straße,"Achtsam pflasterte der Bauarbeiter, der die Steine schleppte, die",0.39483538,SE,jinaai/jina-embeddings-v5-text-nano
+54,55,Straße,14,C,und den Bürgersteig.,1,0.08,1,6.5,5.1,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Absperrungen umging, die",0.40633428,SE,jinaai/jina-embeddings-v5-text-nano
+55,56,Straße,14,D,und den Bürgersteig.,1,0.0,1,5.7,2.0,2.0,die,Straße,"Achtsam salzte der Bauarbeiter, der die Steine schleppte, die",0.40429914,SE,jinaai/jina-embeddings-v5-text-nano
+56,57,Glocken,15,A,und freute sich.,0,1.0,1,6.7,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.5101065,SE,jinaai/jina-embeddings-v5-text-nano
+57,58,Glocken,15,B,und freute sich.,0,0.92,1,2.2,1.1,7.0,die,Glocken,"Gestern läutete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.5348049,SE,jinaai/jina-embeddings-v5-text-nano
+58,59,Glocken,15,C,und freute sich.,0,0.0,1,6.7,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er den Kirchturm erklommen hatte, die",0.43952402,SE,jinaai/jina-embeddings-v5-text-nano
+59,60,Glocken,15,D,und freute sich.,0,0.0,1,2.2,1.1,1.0,die,Glocken,"Gestern faltete der Priester, nachdem er die Armbanduhr ausgezogen hatte, die",0.4745555,SE,jinaai/jina-embeddings-v5-text-nano
+60,61,Wunde,16,A,mit fünf Stichen.,0,0.92,1,6.7,3.3,5.8,die,Wunde,"Rasch näht der Notarzt, der den Verletzten betreut, die",0.54932046,SE,jinaai/jina-embeddings-v5-text-nano
+61,62,Wunde,16,B,mit fünf Stichen.,0,0.92,1,3.2,1.8,5.8,die,Wunde,"Rasch näht der Notarzt, der den Ohrring trägt, die",0.5234806,SE,jinaai/jina-embeddings-v5-text-nano
+62,63,Wunde,16,C,mit fünf Stichen.,0,0.0,1,6.7,3.3,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Verletzten betreut, die",0.48537666,SE,jinaai/jina-embeddings-v5-text-nano
+63,64,Wunde,16,D,mit fünf Stichen.,0,0.0,1,3.2,1.8,2.0,die,Wunde,"Rasch versteckt der Notarzt, der den Ohrring trägt, die",0.42744723,SE,jinaai/jina-embeddings-v5-text-nano
+64,65,Hemd,17,A,und die Hose.,0,0.75,1,6.4,1.5,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.49889785,SE,jinaai/jina-embeddings-v5-text-nano
+65,66,Hemd,17,B,und die Hose.,0,0.67,1,1.4,1.2,6.9,das,Hemd,"Eilig bügelt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.48069206,SE,jinaai/jina-embeddings-v5-text-nano
+66,67,Hemd,17,C,und die Hose.,0,0.0,1,6.4,1.5,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er das Bügelbrett aufgestellt hat, das",0.49753863,SE,jinaai/jina-embeddings-v5-text-nano
+67,68,Hemd,17,D,und die Hose.,0,0.0,1,1.4,1.2,1.0,das,Hemd,"Eilig salzt der Geschäftsmann, nachdem er den Eistee ausgetrunken hat, das",0.41285083,SE,jinaai/jina-embeddings-v5-text-nano
+68,69,Auto,18,A,und übergibt es an den Kunden.,1,0.58,0,7.0,3.5,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.5491311,SE,jinaai/jina-embeddings-v5-text-nano
+69,70,Auto,18,B,und übergibt es an den Kunden.,1,0.75,0,5.0,3.1,6.3,das,Auto,"Schnell repariert der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.55305314,SE,jinaai/jina-embeddings-v5-text-nano
+70,71,Auto,18,C,und übergibt es an den Kunden.,1,0.0,0,7.0,3.5,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Motor ausgetauscht hat, das",0.5980513,SE,jinaai/jina-embeddings-v5-text-nano
+71,72,Auto,18,D,und übergibt es an den Kunden.,1,0.0,0,5.0,3.1,1.1,das,Auto,"Schnell brät der KFZ-Mechatroniker, der den Urlaub gebucht hat, das",0.61732113,SE,jinaai/jina-embeddings-v5-text-nano
+72,73,Teig,19,A,für das Brot.,2,1.0,1,6.9,6.9,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Kuchen backt, den",0.47529697,SE,jinaai/jina-embeddings-v5-text-nano
+73,74,Teig,19,B,für das Brot.,2,1.0,1,1.5,1.0,6.6,den,Teig,"Am Morgen knetet die Bäckerin, die den Stammgast begrüßt, den",0.48862103,SE,jinaai/jina-embeddings-v5-text-nano
+74,75,Teig,19,C,für das Brot.,2,0.0,1,6.9,6.9,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Kuchen backt, den",0.45247665,SE,jinaai/jina-embeddings-v5-text-nano
+75,76,Teig,19,D,für das Brot.,2,0.0,1,1.5,1.0,1.2,den,Teig,"Am Morgen hört die Bäckerin, die den Stammgast begrüßt, den",0.46567482,SE,jinaai/jina-embeddings-v5-text-nano
+76,77,Steak,20,A,und die Beilagen.,0,0.67,0,4.7,2.4,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Kohle anzündet, das",0.55712384,SE,jinaai/jina-embeddings-v5-text-nano
+77,78,Steak,20,B,und die Beilagen.,0,0.83,0,1.4,1.1,6.5,das,Steak,"Am Nachmittag pfeffert der Grillmeister, bevor er die Mücke verscheucht, das",0.576597,SE,jinaai/jina-embeddings-v5-text-nano
+78,79,Steak,20,C,und die Beilagen.,0,0.0,0,4.7,2.4,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Kohle anzündet, das",0.5482525,SE,jinaai/jina-embeddings-v5-text-nano
+79,80,Steak,20,D,und die Beilagen.,0,0.0,0,1.4,1.1,1.4,das,Steak,"Am Nachmittag druckt der Grillmeister, bevor er die Mücke verscheucht, das",0.562518,SE,jinaai/jina-embeddings-v5-text-nano
+80,81,Feuer,21,A,und rennt weg.,0,0.58,0,6.6,1.5,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der das Streichholz fallengelassen hat, das",0.6942805,SE,jinaai/jina-embeddings-v5-text-nano
+81,82,Feuer,21,B,und rennt weg.,0,1.0,0,3.3,3.0,6.8,das,Feuer,"Schnell entfacht der Brandstifter, der die Treppe hochgeklettert ist, das",0.625009,SE,jinaai/jina-embeddings-v5-text-nano
+82,83,Feuer,21,C,und rennt weg.,0,0.0,0,6.6,1.5,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der das Streichholz fallengelassen hat, das",0.68155736,SE,jinaai/jina-embeddings-v5-text-nano
+83,84,Feuer,21,D,und rennt weg.,0,0.0,0,3.3,3.0,1.6,das,Feuer,"Schnell entstaubt der Brandstifter, der die Treppe hochgeklettert ist, das",0.6228135,SE,jinaai/jina-embeddings-v5-text-nano
+84,85,Haare,22,A,und holt den Föhn.,0,0.92,1,6.5,3.9,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er die Kopfhaut massiert hat, die",0.6669003,SE,jinaai/jina-embeddings-v5-text-nano
+85,86,Haare,22,B,und holt den Föhn.,0,1.0,1,1.0,1.0,6.8,die,Haare,"Nun kämmt der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.5449043,SE,jinaai/jina-embeddings-v5-text-nano
+86,87,Haare,22,C,und holt den Föhn.,0,0.17,1,6.5,3.9,1.2,die,Haare,"Nun speichert der Friseur, nachdem er die Kopfhaut massiert hat, die",0.65098226,SE,jinaai/jina-embeddings-v5-text-nano
+87,88,Haare,22,D,und holt den Föhn.,0,0.0,1,1.0,1.0,1.2,die,Haare,"Nun speichert der Friseur, nachdem er den Cappuccino ausgetrunken hat, die",0.506293,SE,jinaai/jina-embeddings-v5-text-nano
+88,89,Bleistift,23,A,und machte sich wieder an die Arbeit.,0,1.0,1,6.0,3.3,6.7,den,Bleistift,"Flink spitzte der Zeichner, der die Karikatur entwarf, den",0.56368333,SE,jinaai/jina-embeddings-v5-text-nano
+89,90,Bleistift,23,B,und machte sich wieder an die Arbeit.,0,1.0,1,2.3,1.6,6.7,den,Bleistift,"Flink spitzte der Zeichner, der den Atlas öffnete, den",0.49684352,SE,jinaai/jina-embeddings-v5-text-nano
+90,91,Bleistift,23,C,und machte sich wieder an die Arbeit.,0,0.0,1,6.0,3.3,1.3,den,Bleistift,"Flink knotete der Zeichner, der die Karikatur entwarf, den",0.561206,SE,jinaai/jina-embeddings-v5-text-nano
+91,92,Bleistift,23,D,und machte sich wieder an die Arbeit.,0,0.0,1,2.3,1.6,1.3,den,Bleistift,"Flink knotete der Zeichner, der den Atlas öffnete, den",0.50430155,SE,jinaai/jina-embeddings-v5-text-nano
+92,93,Patienten,24,A,gegen Tetanus.,0,0.25,0,6.7,2.0,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Spritze befüllt hat, den",0.49951562,SE,jinaai/jina-embeddings-v5-text-nano
+93,94,Patienten,24,B,gegen Tetanus.,0,0.42,0,2.1,1.3,6.5,den,Patienten,"Heute impft der Arzt, nachdem er die Schublade geschlossen hat, den",0.5439086,SE,jinaai/jina-embeddings-v5-text-nano
+94,95,Patienten,24,C,gegen Tetanus.,0,0.0,0,6.7,2.0,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Spritze befüllt hat, den",0.5431432,SE,jinaai/jina-embeddings-v5-text-nano
+95,96,Patienten,24,D,gegen Tetanus.,0,0.0,0,2.1,1.3,1.5,den,Patienten,"Heute feuert der Arzt, nachdem er die Schublade geschlossen hat, den",0.5459635,SE,jinaai/jina-embeddings-v5-text-nano
+96,97,Leiche,25,A,in der Leichenhalle.,0,0.75,1,6.6,1.5,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.59744877,SE,jinaai/jina-embeddings-v5-text-nano
+97,98,Leiche,25,B,in der Leichenhalle.,0,0.75,1,2.6,1.2,7.0,die,Leiche,"Unverzüglich obduziert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.50931805,SE,jinaai/jina-embeddings-v5-text-nano
+98,99,Leiche,25,C,in der Leichenhalle.,0,0.0,1,6.6,1.5,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er die Mordakte gelesen hat, die",0.6200431,SE,jinaai/jina-embeddings-v5-text-nano
+99,100,Leiche,25,D,in der Leichenhalle.,0,0.0,1,2.6,1.2,1.2,die,Leiche,"Unverzüglich pfeffert der Pathologe, nachdem er das Dokument unterschrieben hat, die",0.5337301,SE,jinaai/jina-embeddings-v5-text-nano
+100,101,Buch,26,A,für den Fan.,1,1.0,1,6.7,3.3,6.7,das,Buch,"Am Nachmittag signiert der Autor, der die Geschichte erfunden hat, das",0.5128757,SE,jinaai/jina-embeddings-v5-text-nano
+101,102,Buch,26,B,für den Fan.,1,0.92,1,1.8,1.5,6.7,das,Buch,"Am Nachmittag signiert der Autor, der den Vorhang zugezogen hat, das",0.4858844,SE,jinaai/jina-embeddings-v5-text-nano
+102,103,Buch,26,C,für den Fan.,1,0.0,1,6.7,3.3,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der die Geschichte erfunden hat, das",0.5193538,SE,jinaai/jina-embeddings-v5-text-nano
+103,104,Buch,26,D,für den Fan.,1,0.0,1,1.8,1.5,1.3,das,Buch,"Am Nachmittag schluckt der Autor, der den Vorhang zugezogen hat, das",0.50729334,SE,jinaai/jina-embeddings-v5-text-nano
+104,105,Gäste,27,A,und überreichte ihnen die Schlüssel.,2,1.0,1,4.7,1.4,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Koffer stapelte, die",0.5076133,SE,jinaai/jina-embeddings-v5-text-nano
+105,106,Gäste,27,B,und überreichte ihnen die Schlüssel.,2,0.92,1,1.4,1.6,6.5,die,Gäste,"Sofort begrüßte der Hotelier, der die Fische räucherte, die",0.45442626,SE,jinaai/jina-embeddings-v5-text-nano
+106,107,Gäste,27,C,und überreichte ihnen die Schlüssel.,2,0.0,1,4.7,1.4,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Koffer stapelte, die",0.41641706,SE,jinaai/jina-embeddings-v5-text-nano
+107,108,Gäste,27,D,und überreichte ihnen die Schlüssel.,2,0.0,1,1.4,1.6,1.9,die,Gäste,"Sofort feuerte der Hotelier, der die Fische räucherte, die",0.39097902,SE,jinaai/jina-embeddings-v5-text-nano
+108,109,Baum,28,A,neben der Schule.,0,0.92,1,5.9,1.3,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der die Säge gestartet hat, den",0.4823584,SE,jinaai/jina-embeddings-v5-text-nano
+109,110,Baum,28,B,neben der Schule.,0,0.83,1,2.8,1.9,7.0,den,Baum,"Vorsichtig fällt der Holzarbeiter, der den Transporter geparkt hat, den",0.4698701,SE,jinaai/jina-embeddings-v5-text-nano
+110,111,Baum,28,C,neben der Schule.,0,0.0,1,5.9,1.3,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der die Säge gestartet hat, den",0.4904536,SE,jinaai/jina-embeddings-v5-text-nano
+111,112,Baum,28,D,neben der Schule.,0,0.0,1,2.8,1.9,1.3,den,Baum,"Vorsichtig durchwühlt der Holzarbeiter, der den Transporter geparkt hat, den",0.5086635,SE,jinaai/jina-embeddings-v5-text-nano
+112,113,Zigarre,29,A,und schlenderte über den Marktplatz.,2,1.0,1,6.2,3.2,6.9,die,Zigarre,"Langsam paffte der Kubaner, der den Rauchring blies, die",0.7081651,SE,jinaai/jina-embeddings-v5-text-nano
+113,114,Zigarre,29,B,und schlenderte über den Marktplatz.,2,1.0,1,2.0,1.3,6.9,die,Zigarre,"Langsam paffte der Kubaner, der die Straßenbahn verpasste, die",0.44518656,SE,jinaai/jina-embeddings-v5-text-nano
+114,115,Zigarre,29,C,und schlenderte über den Marktplatz.,2,0.08,1,6.2,3.2,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der den Rauchring blies, die",0.6720521,SE,jinaai/jina-embeddings-v5-text-nano
+115,116,Zigarre,29,D,und schlenderte über den Marktplatz.,2,0.08,1,2.0,1.3,1.5,die,Zigarre,"Langsam öffnete der Kubaner, der die Straßenbahn verpasste, die",0.43201765,SE,jinaai/jina-embeddings-v5-text-nano
+116,117,Schnitzel,30,A,für das Gericht.,0,0.58,0,6.0,1.2,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.65164214,SE,jinaai/jina-embeddings-v5-text-nano
+117,118,Schnitzel,30,B,für das Gericht.,0,0.83,0,1.3,1.5,6.5,das,Schnitzel,"Fröhlich paniert der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.6168125,SE,jinaai/jina-embeddings-v5-text-nano
+118,119,Schnitzel,30,C,für das Gericht.,0,0.0,0,6.0,1.2,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Bratkartoffeln geschält hat, das",0.64752483,SE,jinaai/jina-embeddings-v5-text-nano
+119,120,Schnitzel,30,D,für das Gericht.,0,0.0,0,1.3,1.5,1.0,das,Schnitzel,"Fröhlich baut der Koch, nachdem er die Ärmel hochgekrempelt hat, das",0.6077445,SE,jinaai/jina-embeddings-v5-text-nano
+120,121,Kuchen,31,A,für die Geburtstagsfeier.,1,0.92,0,6.9,5.3,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der die Backform eingefettet hat, den",0.62260246,SE,jinaai/jina-embeddings-v5-text-nano
+121,122,Kuchen,31,B,für die Geburtstagsfeier.,1,0.42,0,5.4,1.6,5.9,den,Kuchen,"Umsichtig glasiert der Konditor, der den Tisch abgewischt hat, den",0.60596824,SE,jinaai/jina-embeddings-v5-text-nano
+122,123,Kuchen,31,C,für die Geburtstagsfeier.,1,0.0,0,6.9,5.3,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der die Backform eingefettet hat, den",0.64844096,SE,jinaai/jina-embeddings-v5-text-nano
+123,124,Kuchen,31,D,für die Geburtstagsfeier.,1,0.0,0,5.4,1.6,1.2,den,Kuchen,"Umsichtig durchsucht der Konditor, der den Tisch abgewischt hat, den",0.6230374,SE,jinaai/jina-embeddings-v5-text-nano
+124,125,Kette,32,A,und die Bremsen.,0,0.83,0,4.9,2.0,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.40680984,SE,jinaai/jina-embeddings-v5-text-nano
+125,126,Kette,32,B,und die Bremsen.,0,0.58,0,1.2,1.1,6.8,die,Kette,"Gestern ölte der Fahrradfahrer, bevor er die Limonade trank, die",0.34326562,SE,jinaai/jina-embeddings-v5-text-nano
+126,127,Kette,32,C,und die Bremsen.,0,0.0,0,4.9,2.0,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor er die Bremse einstellte, die",0.38635793,SE,jinaai/jina-embeddings-v5-text-nano
+127,128,Kette,32,D,und die Bremsen.,0,0.0,0,1.2,1.1,1.4,die,Kette,"Gestern beheizte der Fahrradfahrer, bevor die Limonade trank, die",0.36207315,SE,jinaai/jina-embeddings-v5-text-nano
+128,129,Brief,33,A,an die Agentur.,0,0.92,1,6.8,1.3,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Postamt aufgeschlossen hat, den",0.52656245,SE,jinaai/jina-embeddings-v5-text-nano
+129,130,Brief,33,B,an die Agentur.,0,1.0,1,1.5,3.7,6.6,den,Brief,"Hastig frankiert der Postbeamte, der das Mittagessen bestellt hat, den",0.5318541,SE,jinaai/jina-embeddings-v5-text-nano
+130,131,Brief,33,C,an die Agentur.,0,0.0,1,6.8,1.3,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Postamt aufgeschlossen hat, den",0.47685382,SE,jinaai/jina-embeddings-v5-text-nano
+131,132,Brief,33,D,an die Agentur.,0,0.0,1,1.5,3.7,2.2,den,Brief,"Hastig umgeht der Postbeamte, der das Mittagessen bestellt hat, den",0.4974054,SE,jinaai/jina-embeddings-v5-text-nano
+132,133,Berg,34,A,und stellt sein Zelt auf.,1,0.75,0,6.4,3.2,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er das Tal durchquert hat, den",0.4435386,SE,jinaai/jina-embeddings-v5-text-nano
+133,134,Berg,34,B,und stellt sein Zelt auf.,1,0.92,0,1.4,1.5,6.8,den,Berg,"Fröhlich erklimmt der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.45612314,SE,jinaai/jina-embeddings-v5-text-nano
+134,135,Berg,34,C,und stellt sein Zelt auf.,1,0.0,0,6.4,3.2,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er das Tal durchquert hat, den",0.4383648,SE,jinaai/jina-embeddings-v5-text-nano
+135,136,Berg,34,D,und stellt sein Zelt auf.,1,0.0,0,1.4,1.5,1.5,den,Berg,"Fröhlich kauft der Wanderer, nachdem er die Stoppuhr gestartet hat, den",0.4184695,SE,jinaai/jina-embeddings-v5-text-nano
+136,137,Befehl,35,A,zum Abmarsch.,0,0.92,0,6.0,7.0,6.6,den,Befehl,"Bedächtig erteilt der General, der die Rekruten kommandiert, den",0.6631347,SE,jinaai/jina-embeddings-v5-text-nano
+137,138,Befehl,35,B,zum Abmarsch.,0,0.75,0,1.7,2.4,6.6,den,Befehl,"Bedächtig erteilt der General, der die Getränke einschenkt, den",0.5396652,SE,jinaai/jina-embeddings-v5-text-nano
+138,139,Befehl,35,C,zum Abmarsch.,0,0.0,0,6.0,7.0,1.4,den,Befehl,"Bedächtig biegt der General, der die Rekruten kommandiert, den",0.64002556,SE,jinaai/jina-embeddings-v5-text-nano
+139,140,Befehl,35,D,zum Abmarsch.,0,0.0,0,1.7,2.4,1.4,den,Befehl,"Bedächtig biegt der General, der die Getränke einschenkt, den",0.51058125,SE,jinaai/jina-embeddings-v5-text-nano
+140,141,Wand,36,A,des Büros.,0,0.5,0,7.0,5.5,6.4,die,Wand,"Sofort streicht der Maler, nachdem er die Tapete angebracht hat, die",0.35546538,SE,jinaai/jina-embeddings-v5-text-nano
+141,142,Wand,36,B,des Büros.,0,0.67,0,1.5,1.3,6.4,die,Wand,"Sofort streicht der Maler, nachdem er den Hund gefüttert hat, die",0.30648437,SE,jinaai/jina-embeddings-v5-text-nano
+142,143,Wand,36,C,des Büros.,0,0.08,0,7.0,5.5,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er die Tapete angebracht hat, die",0.41028574,SE,jinaai/jina-embeddings-v5-text-nano
+143,144,Wand,36,D,des Büros.,0,0.0,0,1.5,1.3,1.1,die,Wand,"Sofort lenkt der Maler, nachdem er den Hund gefüttert hat, die",0.33627486,SE,jinaai/jina-embeddings-v5-text-nano
+144,145,Hammer,37,A,auf das Metall.,0,1.0,0,6.5,1.9,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Amboss aufgestellt hat, den",0.6457783,SE,jinaai/jina-embeddings-v5-text-nano
+145,146,Hammer,37,B,auf das Metall.,0,0.83,0,2.9,3.8,5.6,den,Hammer,"Direkt schwingt der Schmied, der den Stuhl weggestellt hat, den",0.5209108,SE,jinaai/jina-embeddings-v5-text-nano
+146,147,Hammer,37,C,auf das Metall.,0,0.0,0,6.5,1.9,1.2,den,Hammer,"Direkt speichert der Schmied, der den Amboss aufgestellt hat, den",0.5565779,SE,jinaai/jina-embeddings-v5-text-nano
+147,148,Hammer,37,D,auf das Metall.,0,0.0,0,2.9,3.8,1.2,den,Hammer,"Direkt speichert der Schmied, der den Stuhl weggestellt hat, den",0.46035933,SE,jinaai/jina-embeddings-v5-text-nano
+148,149,Land,38,A,im Norden.,1,0.33,0,6.6,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der die Reise unternahm, das",0.45746246,SE,jinaai/jina-embeddings-v5-text-nano
+149,150,Land,38,B,im Norden.,1,0.5,0,2.4,2.5,7.0,das,Land,"Vor langer Zeit regierte der König, der den Gesang vernahm, das",0.45373565,SE,jinaai/jina-embeddings-v5-text-nano
+150,151,Land,38,C,im Norden.,1,0.0,0,6.6,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der die Reise unternahm, das",0.47670823,SE,jinaai/jina-embeddings-v5-text-nano
+151,152,Land,38,D,im Norden.,1,0.0,0,2.4,2.5,1.2,das,Land,"Vor langer Zeit briet der König, der den Gesang vernahm, das",0.45554385,SE,jinaai/jina-embeddings-v5-text-nano
+152,153,Stab,39,A,und gab den Takt an.,0,0.42,1,1.9,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Tempo wechselte, den",0.41498843,SE,jinaai/jina-embeddings-v5-text-nano
+153,154,Stab,39,B,und gab den Takt an.,0,0.5,1,1.0,1.6,3.0,den,Stab,"Zügig hob der Dirigent, der das Gähnen unterdrückte, den",0.45878494,SE,jinaai/jina-embeddings-v5-text-nano
+154,155,Stab,39,C,und gab den Takt an.,0,0.0,1,1.9,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Tempo wechselte, den",0.40628585,SE,jinaai/jina-embeddings-v5-text-nano
+155,156,Stab,39,D,und gab den Takt an.,0,0.0,1,1.0,1.6,1.3,den,Stab,"Zügig verdrückte der Dirigent, der das Gähnen unterdrückte, den",0.4417327,SE,jinaai/jina-embeddings-v5-text-nano
+156,157,Bart,40,A,des Mannes.,2,0.58,0,5.4,1.3,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.32089365,SE,jinaai/jina-embeddings-v5-text-nano
+157,158,Bart,40,B,des Mannes.,2,0.25,0,1.2,1.0,6.8,den,Bart,"Direkt trimmt der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.3001658,SE,jinaai/jina-embeddings-v5-text-nano
+158,159,Bart,40,C,des Mannes.,2,0.0,0,5.4,1.3,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er die Klinge ausgepackt hat, den",0.3488884,SE,jinaai/jina-embeddings-v5-text-nano
+159,160,Bart,40,D,des Mannes.,2,0.0,0,1.2,1.0,1.7,den,Bart,"Direkt hört der Herrenfriseur, nachdem er das Wasserglas abgestellt hat, den",0.33284816,SE,jinaai/jina-embeddings-v5-text-nano
+160,161,Geschirr,41,A,und die Brettchen.,0,0.5,1,6.7,4.7,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er den Tisch wischte, das",0.5938796,SE,jinaai/jina-embeddings-v5-text-nano
+161,162,Geschirr,41,B,und die Brettchen.,0,0.42,1,1.2,1.2,6.9,das,Geschirr,"Gestern spülte der Tellerwäscher, bevor er das Taxi rief, das",0.5181787,SE,jinaai/jina-embeddings-v5-text-nano
+162,163,Geschirr,41,C,und die Brettchen.,0,0.0,1,6.7,4.7,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er den Tisch wischte, das",0.5990646,SE,jinaai/jina-embeddings-v5-text-nano
+163,164,Geschirr,41,D,und die Brettchen.,0,0.0,1,1.2,1.2,1.1,das,Geschirr,"Gestern glättete der Tellerwäscher, bevor er das Taxi rief, das",0.52688164,SE,jinaai/jina-embeddings-v5-text-nano
+164,165,Schloss,42,A,und stiehlt die Wertsachen.,0,0.25,0,7.0,1.8,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der den Zahlencode erraten hat, das",0.4020241,SE,jinaai/jina-embeddings-v5-text-nano
+165,166,Schloss,42,B,und stiehlt die Wertsachen.,0,0.5,0,2.6,1.5,6.4,das,Schloss,"Im Handumdrehen knackt der Einbrecher, der die Akte durchblättert hat, das",0.41920665,SE,jinaai/jina-embeddings-v5-text-nano
+166,167,Schloss,42,C,und stiehlt die Wertsachen.,0,0.0,0,7.0,1.8,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der den Zahlencode erraten hat, das",0.37378594,SE,jinaai/jina-embeddings-v5-text-nano
+167,168,Schloss,42,D,und stiehlt die Wertsachen.,0,0.0,0,2.6,1.5,1.6,das,Schloss,"Im Handumdrehen kopiert der Einbrecher, der die Akte durchblättert hat, das",0.3979072,SE,jinaai/jina-embeddings-v5-text-nano
+168,169,Zwiebeln,43,A,und den Knoblauch.,0,0.25,1,5.7,2.3,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er die Suppe umrührte, die",0.42835668,SE,jinaai/jina-embeddings-v5-text-nano
+169,170,Zwiebeln,43,B,und den Knoblauch.,0,0.33,1,1.3,1.1,6.2,die,Zwiebeln,"Routiniert hackte der Küchengehilfe, bevor er das Radio einschaltete, die",0.4225915,SE,jinaai/jina-embeddings-v5-text-nano
+170,171,Zwiebeln,43,C,und den Knoblauch.,0,0.0,1,5.7,2.3,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er die Suppe umrührte, die",0.42106357,SE,jinaai/jina-embeddings-v5-text-nano
+171,172,Zwiebeln,43,D,und den Knoblauch.,0,0.0,1,1.3,1.1,1.3,die,Zwiebeln,"Routiniert schraubte der Küchengehilfe, bevor er das Radio einschaltete, die",0.41649783,SE,jinaai/jina-embeddings-v5-text-nano
+172,173,Wachs,44,A,und fuhr mit der Arbeit fort.,0,0.83,1,6.7,2.3,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.59873635,SE,jinaai/jina-embeddings-v5-text-nano
+173,174,Wachs,44,B,und fuhr mit der Arbeit fort.,0,0.83,1,1.5,1.4,6.3,das,Wachs,"Umsichtig schmolz der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.5720434,SE,jinaai/jina-embeddings-v5-text-nano
+174,175,Wachs,44,C,und fuhr mit der Arbeit fort.,0,0.0,1,6.7,2.3,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er den Docht gekürzt hatte, das",0.596162,SE,jinaai/jina-embeddings-v5-text-nano
+175,176,Wachs,44,D,und fuhr mit der Arbeit fort.,0,0.0,1,1.5,1.4,1.0,das,Wachs,"Umsichtig würzte der Kerzenzieher, nachdem er das Nähkästchen zugeklappt hatte, das",0.5673128,SE,jinaai/jina-embeddings-v5-text-nano
+176,177,Cocktail,45,A,für den Touristen.,0,0.5,0,6.2,1.4,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Wodka geöffnet hatte, den",0.73589617,SE,jinaai/jina-embeddings-v5-text-nano
+177,178,Cocktail,45,B,für den Touristen.,0,0.83,0,1.3,1.0,6.9,den,Cocktail,"Gestern mixte der Barkeeper, der den Boden gefegt hatte, den",0.6122801,SE,jinaai/jina-embeddings-v5-text-nano
+178,179,Cocktail,45,C,für den Touristen.,0,0.0,0,6.2,1.4,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Wodka geöffnet hatte, den",0.66281116,SE,jinaai/jina-embeddings-v5-text-nano
+179,180,Cocktail,45,D,für den Touristen.,0,0.08,0,1.3,1.0,1.6,den,Cocktail,"Gestern gründete der Barkeeper, der den Boden gefegt hatte, den",0.5379585,SE,jinaai/jina-embeddings-v5-text-nano
+180,181,Orchester,46,A,und das Streichquartett.,0,0.25,1,6.8,3.6,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der das Konzert eröffnet hat, das",0.6456598,SE,jinaai/jina-embeddings-v5-text-nano
+181,182,Orchester,46,B,und das Streichquartett.,0,0.25,1,1.6,1.4,6.8,das,Orchester,"Am Abend dirigiert der Kapellmeister, der die Unterschriften gesammelt hat, das",0.591583,SE,jinaai/jina-embeddings-v5-text-nano
+182,183,Orchester,46,C,und das Streichquartett.,0,0.0,1,6.8,3.6,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der das Konzert eröffnet hat, das",0.53725344,SE,jinaai/jina-embeddings-v5-text-nano
+183,184,Orchester,46,D,und das Streichquartett.,0,0.0,1,1.6,1.4,1.3,das,Orchester,"Am Abend vernichtet der Kapellmeister, der die Unterschriften gesammelt hat, das",0.47290528,SE,jinaai/jina-embeddings-v5-text-nano
+184,185,Wort,47,A,und notiert es.,3,0.83,0,6.3,3.6,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.5142351,SE,jinaai/jina-embeddings-v5-text-nano
+185,186,Wort,47,B,und notiert es.,3,0.67,0,3.0,2.7,6.8,das,Wort,"Direkt buchstabiert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.45209512,SE,jinaai/jina-embeddings-v5-text-nano
+186,187,Wort,47,C,und notiert es.,3,0.0,0,6.3,3.6,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er das Buch aufgeschlagen hat, das",0.4763551,SE,jinaai/jina-embeddings-v5-text-nano
+187,188,Wort,47,D,und notiert es.,3,0.0,0,3.0,2.7,1.7,das,Wort,"Direkt dekoriert der Sprachschüler, nachdem er den Pausenhof verlassen hat, das",0.42731744,SE,jinaai/jina-embeddings-v5-text-nano
+188,189,Weide,48,A,mit einem Draht.,0,0.67,0,6.7,5.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der die Schafe gehütet hat, die",0.4128711,SE,jinaai/jina-embeddings-v5-text-nano
+189,190,Weide,48,B,mit einem Draht.,0,0.42,0,1.4,1.4,6.0,die,Weide,"Vorsichtig umzäunt der Schäfer, der das Mittagessen vergessen hat, die",0.4141183,SE,jinaai/jina-embeddings-v5-text-nano
+190,191,Weide,48,C,mit einem Draht.,0,0.0,0,6.7,5.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der die Schafe gehütet hat, die",0.41723913,SE,jinaai/jina-embeddings-v5-text-nano
+191,192,Weide,48,D,mit einem Draht.,0,0.0,0,1.4,1.4,1.0,die,Weide,"Vorsichtig fälscht der Schäfer, der das Mittagessen vergessen hat, die",0.4188049,SE,jinaai/jina-embeddings-v5-text-nano
+192,193,Predigt,49,A,für die Gemeinde.,0,0.25,0,6.2,2.1,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.62825525,SE,jinaai/jina-embeddings-v5-text-nano
+193,194,Predigt,49,B,für die Gemeinde.,0,0.5,0,1.6,2.9,6.2,die,Predigt,"Nachdenklich hält der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.5685637,SE,jinaai/jina-embeddings-v5-text-nano
+194,195,Predigt,49,C,für die Gemeinde.,0,0.0,0,6.2,2.1,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Bibel aufgeschlagen hat, die",0.63727814,SE,jinaai/jina-embeddings-v5-text-nano
+195,196,Predigt,49,D,für die Gemeinde.,0,0.0,0,1.6,2.9,1.3,die,Predigt,"Nachdenklich leert der Pfarrer, nachdem er die Brille aufgesetzt hat, die",0.5833985,SE,jinaai/jina-embeddings-v5-text-nano
+196,197,Wohnung,50,A,mit neuen Möbeln.,0,0.5,0,7.0,2.7,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der den Mieter aufgenommen hatte, die",0.56844074,SE,jinaai/jina-embeddings-v5-text-nano
+197,198,Wohnung,50,B,mit neuen Möbeln.,0,0.75,0,4.7,3.6,6.8,die,Wohnung,"Unverzüglich möblierte der Vermieter, der die Überweisung erhalten hatte, die",0.5636033,SE,jinaai/jina-embeddings-v5-text-nano
+198,199,Wohnung,50,C,mit neuen Möbeln.,0,0.0,0,7.0,2.7,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der den Mieter aufgenommen hatte, die",0.5299322,SE,jinaai/jina-embeddings-v5-text-nano
+199,200,Wohnung,50,D,mit neuen Möbeln.,0,0.0,0,4.7,3.6,1.4,die,Wohnung,"Unverzüglich erntete der Vermieter, der die Überweisung erhalten hatte, die",0.505195,SE,jinaai/jina-embeddings-v5-text-nano
+200,201,Abzug,51,A,und trifft das Opfer.,2,0.5,0,3.2,4.4,5.9,den,Abzug,"Sofort betätigt der Killer, der das Ziel anvisiert hat, den",0.3528808,SE,jinaai/jina-embeddings-v5-text-nano
+201,202,Abzug,51,B,und trifft das Opfer.,2,0.33,0,1.4,3.0,5.9,den,Abzug,"Sofort betätigt der Killer, der den Tee abgestellt hat, den",0.41147965,SE,jinaai/jina-embeddings-v5-text-nano
+202,203,Abzug,51,C,und trifft das Opfer.,2,0.0,0,3.2,4.4,1.6,den,Abzug,"Sofort knickt der Killer, der das Ziel anvisiert hat, den",0.3919983,SE,jinaai/jina-embeddings-v5-text-nano
+203,204,Abzug,51,D,und trifft das Opfer.,2,0.0,0,1.4,3.0,1.6,den,Abzug,"Sofort knickt der Killer, der den Tee abgestellt hat, den",0.4416102,SE,jinaai/jina-embeddings-v5-text-nano
+204,205,Paket,52,A,mit der Arbeitskleidung.,0,0.42,1,6.7,4.4,6.5,das,Paket,"Heute überbringt der Bote, als er den Empfänger angetroffen hat, das",0.55178887,SE,jinaai/jina-embeddings-v5-text-nano
+205,206,Paket,52,B,mit der Arbeitskleidung.,0,0.33,1,3.6,1.2,6.5,das,Paket,"Heute überbringt der Bote, als er das Foyer durchquert hat, das",0.47476453,SE,jinaai/jina-embeddings-v5-text-nano
+206,207,Paket,52,C,mit der Arbeitskleidung.,0,0.0,1,6.7,4.4,1.3,das,Paket,"Heute erntet der Bote, als er den Empfänger angetroffen hat, das",0.48488852,SE,jinaai/jina-embeddings-v5-text-nano
+207,208,Paket,52,D,mit der Arbeitskleidung.,0,0.0,1,3.6,1.2,1.3,das,Paket,"Heute erntet der Bote, als er das Foyer durchquert hat, das",0.4238175,SE,jinaai/jina-embeddings-v5-text-nano
+208,209,Tor,53,A,und jubelte über seinen Erfolg.,3,0.92,0,6.8,3.4,6.9,das,Tor,"Schnell schoss der Fußballspieler, der das Fußballfeld überquert hatte, das",0.3806332,SE,jinaai/jina-embeddings-v5-text-nano
+209,210,Tor,53,B,und jubelte über seinen Erfolg.,3,0.67,0,1.6,2.7,6.9,das,Tor,"Schnell schoss der Fußballspieler, der die Jacke ausgezogen hatte, das",0.42731586,SE,jinaai/jina-embeddings-v5-text-nano
+210,211,Tor,53,C,und jubelte über seinen Erfolg.,3,0.0,0,6.8,3.4,1.5,das,Tor,"Schnell spürte der Fußballspieler, der das Fußballfeld überquert hatte, das",0.35368103,SE,jinaai/jina-embeddings-v5-text-nano
+211,212,Tor,53,D,und jubelte über seinen Erfolg.,3,0.0,0,1.6,2.7,1.5,das,Tor,"Schnell spürte der Fußballspieler, der die Jacke ausgezogen hatte, das",0.39070353,SE,jinaai/jina-embeddings-v5-text-nano
+212,213,Flugzeug,54,A,durch die Wolken.,0,1.0,1,7.0,1.8,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der die Stewardess gerufen hatte, das",0.5168932,SE,jinaai/jina-embeddings-v5-text-nano
+213,214,Flugzeug,54,B,durch die Wolken.,0,0.92,1,1.6,3.4,5.8,das,Flugzeug,"Konzentriert steuerte der Pilot, der den Krimi gelesen hatte, das",0.51471835,SE,jinaai/jina-embeddings-v5-text-nano
+214,215,Flugzeug,54,C,durch die Wolken.,0,0.0,1,7.0,1.8,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der die Stewardess gerufen hatte, das",0.547224,SE,jinaai/jina-embeddings-v5-text-nano
+215,216,Flugzeug,54,D,durch die Wolken.,0,0.08,1,1.6,3.4,3.1,das,Flugzeug,"Konzentriert faltete der Pilot, der den Krimi gelesen hatte, das",0.5323318,SE,jinaai/jina-embeddings-v5-text-nano
+216,217,Skizze,55,A,für den Bauherrn.,0,0.42,0,6.4,6.5,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Bauplan erstellte, die",0.52164036,SE,jinaai/jina-embeddings-v5-text-nano
+217,218,Skizze,55,B,für den Bauherrn.,0,0.25,0,4.3,4.7,6.7,die,Skizze,"Rasch entwarf der Architekt, bevor er den Vortrag schrieb, die",0.512808,SE,jinaai/jina-embeddings-v5-text-nano
+218,219,Skizze,55,C,für den Bauherrn.,0,0.0,0,6.4,6.5,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Bauplan erstellte, die",0.5357871,SE,jinaai/jina-embeddings-v5-text-nano
+219,220,Skizze,55,D,für den Bauherrn.,0,0.0,0,4.3,4.7,1.2,die,Skizze,"Rasch schüttelte der Architekt, bevor er den Vortrag schrieb, die",0.5155677,SE,jinaai/jina-embeddings-v5-text-nano
+220,221,Kamin,56,A,und verlässt das Grundstück.,1,0.42,0,6.8,3.0,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der den Rauch einatmet, den",0.6090515,SE,jinaai/jina-embeddings-v5-text-nano
+221,222,Kamin,56,B,und verlässt das Grundstück.,1,0.17,0,3.0,1.3,6.4,den,Kamin,"Geschwind kehrt der Schornsteinfeger, der die Katze verscheucht, den",0.5426006,SE,jinaai/jina-embeddings-v5-text-nano
+222,223,Kamin,56,C,und verlässt das Grundstück.,1,0.0,0,6.8,3.0,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der den Rauch einatmet, den",0.5779435,SE,jinaai/jina-embeddings-v5-text-nano
+223,224,Kamin,56,D,und verlässt das Grundstück.,1,0.08,0,3.0,1.3,1.1,den,Kamin,"Geschwind wirft der Schornsteinfeger, der die Katze verscheucht, den",0.5183162,SE,jinaai/jina-embeddings-v5-text-nano
+224,225,Wahl,57,A,zum Minister.,0,1.0,0,6.5,5.3,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Stimmen zählte, die",0.67219454,SE,jinaai/jina-embeddings-v5-text-nano
+225,226,Wahl,57,B,zum Minister.,0,0.58,0,2.8,1.6,6.7,die,Wahl,"Vorgestern gewann der Politiker, der die Hände schüttelte, die",0.5899623,SE,jinaai/jina-embeddings-v5-text-nano
+226,227,Wahl,57,C,zum Minister.,0,0.08,0,6.5,5.3,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Stimmen zählte, die",0.58210576,SE,jinaai/jina-embeddings-v5-text-nano
+227,228,Wahl,57,D,zum Minister.,0,0.0,0,2.8,1.6,1.6,die,Wahl,"Vorgestern reparierte der Politiker, der die Hände schüttelte, die",0.4779212,SE,jinaai/jina-embeddings-v5-text-nano
+228,229,Foto,58,A,von der Unfallstelle.,0,0.67,0,6.7,2.1,6.7,das,Foto,"Sofort schoss der Reporter, der die Kamera bediente, das",0.48604804,SE,jinaai/jina-embeddings-v5-text-nano
+229,230,Foto,58,B,von der Unfallstelle.,0,0.5,0,1.6,1.6,6.7,das,Foto,"Sofort schoss der Reporter, der die Zigarette rauchte, das",0.43319088,SE,jinaai/jina-embeddings-v5-text-nano
+230,231,Foto,58,C,von der Unfallstelle.,0,0.0,0,6.7,2.1,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Kamera bediente, das",0.48756933,SE,jinaai/jina-embeddings-v5-text-nano
+231,232,Foto,58,D,von der Unfallstelle.,0,0.0,0,1.6,1.6,1.7,das,Foto,"Sofort verspeiste der Reporter, der die Zigarette rauchte, das",0.43290204,SE,jinaai/jina-embeddings-v5-text-nano
+232,233,Programm,59,A,für seinen Boss.,0,0.5,0,6.9,5.8,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Computer hochfuhr, das",0.5061327,SE,jinaai/jina-embeddings-v5-text-nano
+233,234,Programm,59,B,für seinen Boss.,0,0.75,0,1.8,2.0,6.7,das,Programm,"Unverzüglich entwickelte der Informatiker, der den Energydrink trank, das",0.5218718,SE,jinaai/jina-embeddings-v5-text-nano
+234,235,Programm,59,C,für seinen Boss.,0,0.0,0,6.9,5.8,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Computer hochfuhr, das",0.46559635,SE,jinaai/jina-embeddings-v5-text-nano
+235,236,Programm,59,D,für seinen Boss.,0,0.0,0,1.8,2.0,4.5,das,Programm,"Unverzüglich trocknete der Informatiker, der den Energydrink trank, das",0.4629772,SE,jinaai/jina-embeddings-v5-text-nano
+236,237,Urteil,60,A,und schloss die Verhandlung.,0,1.0,1,7.0,4.5,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.6654506,SE,jinaai/jina-embeddings-v5-text-nano
+237,238,Urteil,60,B,und schloss die Verhandlung.,0,1.0,1,1.9,2.8,6.7,das,Urteil,"Nun verkündete der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.6561207,SE,jinaai/jina-embeddings-v5-text-nano
+238,239,Urteil,60,C,und schloss die Verhandlung.,0,0.0,1,7.0,4.5,1.7,das,Urteil,"Nun roch der Richter, nachdem er den Angeklagten hereingerufen hatte, das",0.66005427,SE,jinaai/jina-embeddings-v5-text-nano
+239,240,Urteil,60,D,und schloss die Verhandlung.,0,0.0,1,1.9,2.8,1.7,das,Urteil,"Nun roch der Richter, nachdem er die Lesebrille aufgesetzt hatte, das",0.61668533,SE,jinaai/jina-embeddings-v5-text-nano
+240,241,Prüfung,61,A,in Mathematik.,0,0.58,0,6.6,5.0,5.8,die,Prüfung,"Zunächst bestand der Student, der das Studium wiederaufnahm, die",0.56742585,SE,jinaai/jina-embeddings-v5-text-nano
+241,242,Prüfung,61,B,in Mathematik.,0,0.25,0,2.0,1.3,5.8,die,Prüfung,"Zunächst bestand der Student, der das Jackett auszog, die",0.54726994,SE,jinaai/jina-embeddings-v5-text-nano
+242,243,Prüfung,61,C,in Mathematik.,0,0.0,0,6.6,5.0,3.4,die,Prüfung,"Zunächst kochte der Student, der das Studium wiederaufnahm, die",0.4991201,SE,jinaai/jina-embeddings-v5-text-nano
+243,244,Prüfung,61,D,in Mathematik.,0,0.0,0,2.0,1.3,3.4,die,Prüfung,"Zunächst kochte der Student, der das Jackett auszog, die",0.47703975,SE,jinaai/jina-embeddings-v5-text-nano
+244,245,Lied,62,A,über die Vergangenheit.,1,0.58,1,6.3,1.3,7.0,das,Lied,"Konzentriert sang der Sänger, der das Mikrofon umklammerte, das",0.5110329,SE,jinaai/jina-embeddings-v5-text-nano
+245,246,Lied,62,B,über die Vergangenheit.,1,0.58,1,1.9,1.5,7.0,das,Lied,"Konzentriert sang der Sänger, der den Hut abnahm, das",0.5151087,SE,jinaai/jina-embeddings-v5-text-nano
+246,247,Lied,62,C,über die Vergangenheit.,1,0.0,1,6.3,1.3,1.1,das,Lied,"Konzentriert reparierte der Sänger, der das Mikrofon umklammerte, das",0.4368119,SE,jinaai/jina-embeddings-v5-text-nano
+247,248,Lied,62,D,über die Vergangenheit.,1,0.0,1,1.9,1.5,1.1,das,Lied,"Konzentriert reparierte der Sänger, der den Hut abnahm, das",0.45073155,SE,jinaai/jina-embeddings-v5-text-nano
+248,249,Farbe,63,A,für den nächsten Auftrag.,0,0.92,1,6.9,3.5,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Pinsel gewaschen hatte, die",0.50424707,SE,jinaai/jina-embeddings-v5-text-nano
+249,250,Farbe,63,B,für den nächsten Auftrag.,0,1.0,1,3.5,1.8,6.3,die,Farbe,"Zufrieden mischte der Anstreicher, der die Plätzchen gegessen hatte, die",0.482683,SE,jinaai/jina-embeddings-v5-text-nano
+250,251,Farbe,63,C,für den nächsten Auftrag.,0,0.0,1,6.9,3.5,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Pinsel gewaschen hatte, die",0.51117176,SE,jinaai/jina-embeddings-v5-text-nano
+251,252,Farbe,63,D,für den nächsten Auftrag.,0,0.0,1,3.5,1.8,1.4,die,Farbe,"Zufrieden würzte der Anstreicher, der die Plätzchen gegessen hatte, die",0.47629267,SE,jinaai/jina-embeddings-v5-text-nano
+252,253,Blumen,64,A,im Blumenkasten.,0,0.58,1,6.2,5.8,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der den Dünger verteilt hat, die",0.5200253,SE,jinaai/jina-embeddings-v5-text-nano
+253,254,Blumen,64,B,im Blumenkasten.,0,0.5,1,2.0,1.4,7.0,die,Blumen,"Einen Moment lang gießt der Gärtner, der die Opernmusik angestellt hat, die",0.51437837,SE,jinaai/jina-embeddings-v5-text-nano
+254,255,Blumen,64,C,im Blumenkasten.,0,0.0,1,6.2,5.8,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der den Dünger verteilt hat, die",0.51668537,SE,jinaai/jina-embeddings-v5-text-nano
+255,256,Blumen,64,D,im Blumenkasten.,0,0.0,1,2.0,1.4,1.7,die,Blumen,"Einen Moment lang ölt der Gärtner, der die Opernmusik angestellt hat, die",0.49133897,SE,jinaai/jina-embeddings-v5-text-nano
+256,257,Hecke,65,A,um das Grundstück.,2,0.5,1,6.6,1.9,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.38328075,SE,jinaai/jina-embeddings-v5-text-nano
+257,258,Hecke,65,B,um das Grundstück.,2,0.58,1,1.4,1.8,6.5,die,Hecke,"Gestern Nachmittag stutzte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.37423533,SE,jinaai/jina-embeddings-v5-text-nano
+258,259,Hecke,65,C,um das Grundstück.,2,0.0,1,6.6,1.9,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Gartenschere geschärft hatte, die",0.38999563,SE,jinaai/jina-embeddings-v5-text-nano
+259,260,Hecke,65,D,um das Grundstück.,2,0.0,1,1.4,1.8,1.3,die,Hecke,"Gestern Nachmittag bezahlte der Landschaftsgärtner, der die Sonnenbrille aufgesetzt hatte, die",0.40343034,SE,jinaai/jina-embeddings-v5-text-nano
+260,261,Feld,66,A,mit einem Gaul.,2,0.92,0,6.8,2.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Traktor gestartet hatte, das",0.4826204,SE,jinaai/jina-embeddings-v5-text-nano
+261,262,Feld,66,B,mit einem Gaul.,2,0.67,0,3.9,1.1,6.2,das,Feld,"Früher beackerte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.45613256,SE,jinaai/jina-embeddings-v5-text-nano
+262,263,Feld,66,C,mit einem Gaul.,2,0.0,0,6.8,2.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Traktor gestartet hatte, das",0.46960348,SE,jinaai/jina-embeddings-v5-text-nano
+263,264,Feld,66,D,mit einem Gaul.,2,0.0,0,3.9,1.1,2.5,das,Feld,"Früher kopierte der Landwirt, der den Sonnenhut aufgesetzt hatte, das",0.43256974,SE,jinaai/jina-embeddings-v5-text-nano
+264,265,Schuh,67,A,und polierte ihn.,1,0.5,0,6.4,4.1,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der den Absatz ausgetauscht hatte, den",0.4866478,SE,jinaai/jina-embeddings-v5-text-nano
+265,266,Schuh,67,B,und polierte ihn.,1,0.75,0,1.2,1.0,4.9,den,Schuh,"Heute Morgen flickte der Schuster, der die Sirene gehört hatte, den",0.3791083,SE,jinaai/jina-embeddings-v5-text-nano
+266,267,Schuh,67,C,und polierte ihn.,1,0.0,0,6.4,4.1,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der den Absatz ausgetauscht hatte, den",0.48782858,SE,jinaai/jina-embeddings-v5-text-nano
+267,268,Schuh,67,D,und polierte ihn.,1,0.0,0,1.2,1.0,1.0,den,Schuh,"Heute Morgen schmeckte der Schuster, der die Sirene gehört hatte, den",0.38610855,SE,jinaai/jina-embeddings-v5-text-nano
+268,269,Koffer,68,A,für die Kreuzfahrt.,1,0.83,0,6.6,3.5,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Klamotten gefaltet hatte, den",0.57737654,SE,jinaai/jina-embeddings-v5-text-nano
+269,270,Koffer,68,B,für die Kreuzfahrt.,1,0.5,0,1.2,1.9,6.9,den,Koffer,"Schnell packte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.53315026,SE,jinaai/jina-embeddings-v5-text-nano
+270,271,Koffer,68,C,für die Kreuzfahrt.,1,0.0,0,6.6,3.5,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Klamotten gefaltet hatte, den",0.53940445,SE,jinaai/jina-embeddings-v5-text-nano
+271,272,Koffer,68,D,für die Kreuzfahrt.,1,0.0,0,1.2,1.9,1.2,den,Koffer,"Schnell rührte der Urlauber, als er die Gardinen aufgezogen hatte, den",0.49148193,SE,jinaai/jina-embeddings-v5-text-nano
+272,273,Honig,69,A,aus den Waben.,0,1.0,1,6.9,1.0,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er den Bienenstock erreicht hat, den",0.61604077,SE,jinaai/jina-embeddings-v5-text-nano
+273,274,Honig,69,B,aus den Waben.,0,0.92,1,2.8,1.1,5.5,den,Honig,"Sorgfältig erntet der Imker, nachdem er das Haus verlassen hat, den",0.5463381,SE,jinaai/jina-embeddings-v5-text-nano
+274,275,Honig,69,C,aus den Waben.,0,0.0,1,6.9,1.0,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er den Bienenstock erreicht hat, den",0.5648216,SE,jinaai/jina-embeddings-v5-text-nano
+275,276,Honig,69,D,aus den Waben.,0,0.0,1,2.8,1.1,1.2,den,Honig,"Sorgfältig näht der Imker, nachdem er das Haus verlassen hat, den",0.49514896,SE,jinaai/jina-embeddings-v5-text-nano
+276,277,Gewehr,70,A,und zielt erneut.,0,0.42,1,6.4,6.1,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der die Munition verschossen hat, das",0.68466836,SE,jinaai/jina-embeddings-v5-text-nano
+277,278,Gewehr,70,B,und zielt erneut.,0,0.5,1,1.4,1.3,6.0,das,Gewehr,"Vorsichtig lädt der Jäger, der den Campingplatz verlassen hat, das",0.46108183,SE,jinaai/jina-embeddings-v5-text-nano
+278,279,Gewehr,70,C,und zielt erneut.,0,0.0,1,6.4,6.1,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der die Munition verschossen hat, das",0.7228497,SE,jinaai/jina-embeddings-v5-text-nano
+279,280,Gewehr,70,D,und zielt erneut.,0,0.0,1,1.4,1.3,1.3,das,Gewehr,"Vorsichtig schneidet der Jäger, der den Campingplatz verlassen hat, das",0.5085258,SE,jinaai/jina-embeddings-v5-text-nano
+280,281,Mörtel,71,A,für die Mauer.,0,0.42,0,6.1,4.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Backsteine aufeinanderlegte, den",0.6747886,SE,jinaai/jina-embeddings-v5-text-nano
+281,282,Mörtel,71,B,für die Mauer.,0,0.25,0,1.4,1.0,6.0,den,Mörtel,"Vorsichtig mischte der Maurer, der die Nachbarn belauschte, den",0.58197206,SE,jinaai/jina-embeddings-v5-text-nano
+282,283,Mörtel,71,C,für die Mauer.,0,0.0,0,6.1,4.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Backsteine aufeinanderlegte, den",0.6655621,SE,jinaai/jina-embeddings-v5-text-nano
+283,284,Mörtel,71,D,für die Mauer.,0,0.0,0,1.4,1.0,1.3,den,Mörtel,"Vorsichtig schrieb der Maurer, der die Nachbarn belauschte, den",0.563928,SE,jinaai/jina-embeddings-v5-text-nano
+284,285,Mehl,72,A,aus dem Korn.,2,0.67,0,6.9,1.4,5.9,das,Mehl,"Vorgestern mahlte der Müller, der die Mühle betrieb, das",0.65273315,SE,jinaai/jina-embeddings-v5-text-nano
+285,286,Mehl,72,B,aus dem Korn.,2,0.5,0,1.0,1.1,5.9,das,Mehl,"Vorgestern mahlte der Müller, der das Lied pfiff, das",0.63456845,SE,jinaai/jina-embeddings-v5-text-nano
+286,287,Mehl,72,C,aus dem Korn.,2,0.0,0,6.9,1.4,2.4,das,Mehl,"Vorgestern verzierte der Müller, der die Mühle betrieb, das",0.6618516,SE,jinaai/jina-embeddings-v5-text-nano
+287,288,Mehl,72,D,aus dem Korn.,2,0.17,0,1.0,1.1,2.4,das,Mehl,"Vorgestern verzierte der Müller, der das Lied pfiff, das",0.6290679,SE,jinaai/jina-embeddings-v5-text-nano
+288,289,Kuh,73,A,und brachte ihr frisches Heu.,0,1.0,0,7.0,4.5,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.46507162,SE,jinaai/jina-embeddings-v5-text-nano
+289,290,Kuh,73,B,und brachte ihr frisches Heu.,0,0.75,0,3.1,1.0,6.8,die,Kuh,"Vorsichtig melkte der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.52400005,SE,jinaai/jina-embeddings-v5-text-nano
+290,291,Kuh,73,C,und brachte ihr frisches Heu.,0,0.0,0,7.0,4.5,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er den Stall ausgemistet hatte, die",0.41949514,SE,jinaai/jina-embeddings-v5-text-nano
+291,292,Kuh,73,D,und brachte ihr frisches Heu.,0,0.08,0,3.1,1.0,1.4,die,Kuh,"Vorsichtig kleidete der Viehzüchter, nachdem er das Gemüse sortiert hatte, die",0.4695031,SE,jinaai/jina-embeddings-v5-text-nano
+292,293,Bett,74,A,und das Kissen.,0,0.92,0,6.9,4.7,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.44145235,SE,jinaai/jina-embeddings-v5-text-nano
+293,294,Bett,74,B,und das Kissen.,0,0.67,0,1.1,1.8,6.9,das,Bett,"Zuerst bezog der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.39470294,SE,jinaai/jina-embeddings-v5-text-nano
+294,295,Bett,74,C,und das Kissen.,0,0.08,0,6.9,4.7,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Bezug entfaltet hatte, das",0.43450806,SE,jinaai/jina-embeddings-v5-text-nano
+295,296,Bett,74,D,und das Kissen.,0,0.0,0,1.1,1.8,1.2,das,Bett,"Zuerst fälschte der Hotelangestellte, nachdem er den Hamburger verspeist hatte, das",0.38892362,SE,jinaai/jina-embeddings-v5-text-nano
+296,297,Ziel,75,A,und durchtrennt die Ziellinie.,1,0.92,0,6.0,5.8,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der das Rennen gewinnt, das",0.48382294,SE,jinaai/jina-embeddings-v5-text-nano
+297,298,Ziel,75,B,und durchtrennt die Ziellinie.,1,0.75,0,1.9,2.7,6.6,das,Ziel,"Augenblicklich erreicht der Sprinter, der den Wind genießt, das",0.47067875,SE,jinaai/jina-embeddings-v5-text-nano
+298,299,Ziel,75,C,und durchtrennt die Ziellinie.,1,0.0,0,6.0,5.8,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der das Rennen gewinnt, das",0.4479063,SE,jinaai/jina-embeddings-v5-text-nano
+299,300,Ziel,75,D,und durchtrennt die Ziellinie.,1,0.0,0,1.9,2.7,1.9,das,Ziel,"Augenblicklich reinigt der Sprinter, der den Wind genießt, das",0.44992572,SE,jinaai/jina-embeddings-v5-text-nano
+300,301,Welle,76,A,bis zum Strand.,0,0.58,0,5.1,1.3,7.0,die,Welle,"Direkt surft der Surfer, der die Badehose angezogen hat, die",0.40713826,SE,jinaai/jina-embeddings-v5-text-nano
+301,302,Welle,76,B,bis zum Strand.,0,0.42,0,3.2,1.3,7.0,die,Welle,"Direkt surft der Surfer, der den Tagesausflug unternommen hat, die",0.4322653,SE,jinaai/jina-embeddings-v5-text-nano
+302,303,Welle,76,C,bis zum Strand.,0,0.0,0,5.1,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der die Badehose angezogen hat, die",0.3982909,SE,jinaai/jina-embeddings-v5-text-nano
+303,304,Welle,76,D,bis zum Strand.,0,0.0,0,3.2,1.3,1.5,die,Welle,"Direkt reserviert der Surfer, der den Tagesausflug unternommen hat, die",0.44118252,SE,jinaai/jina-embeddings-v5-text-nano
+304,305,Fahrkarten,77,A,der Pendler.,0,0.5,1,6.7,3.3,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der das Zugabteil betreten hatte, die",0.49616367,SE,jinaai/jina-embeddings-v5-text-nano
+305,306,Fahrkarten,77,B,der Pendler.,0,0.42,1,2.8,2.4,6.6,die,Fahrkarten,"Gut gelaunt kontrollierte der Schaffner, der die Mittagspause beendet hatte, die",0.38533226,SE,jinaai/jina-embeddings-v5-text-nano
+306,307,Fahrkarten,77,C,der Pendler.,0,0.0,1,6.7,3.3,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der das Zugabteil betreten hatte, die",0.51151824,SE,jinaai/jina-embeddings-v5-text-nano
+307,308,Fahrkarten,77,D,der Pendler.,0,0.0,1,2.8,2.4,1.3,die,Fahrkarten,"Gut gelaunt zitierte der Schaffner, der die Mittagspause beendet hatte, die",0.3898497,SE,jinaai/jina-embeddings-v5-text-nano
+308,309,Leitung,78,A,im Gebäude.,0,0.5,1,6.8,4.5,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.48666954,SE,jinaai/jina-embeddings-v5-text-nano
+309,310,Leitung,78,B,im Gebäude.,0,0.41,1,2.2,3.4,6.2,die,Leitung,"Am Mittag verlegte der Elektriker, nachdem er den Anwohner informiert hatte, die",0.44524288,SE,jinaai/jina-embeddings-v5-text-nano
+310,311,Leitung,78,C,im Gebäude.,0,0.0,1,6.8,4.5,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Strom abgeschaltet hatte, die",0.4799769,SE,jinaai/jina-embeddings-v5-text-nano
+311,312,Leitung,78,D,im Gebäude.,0,0.0,1,2.2,3.4,1.5,die,Leitung,"Am Mittag verfasste der Elektriker, nachdem er den Anwohner informiert hatte, die",0.4507186,SE,jinaai/jina-embeddings-v5-text-nano
+312,313,Segel,79,A,des großen Bootes.,3,0.42,1,5.5,4.4,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Taue gekappt hat, die",0.5755394,SE,jinaai/jina-embeddings-v5-text-nano
+313,314,Segel,79,B,des großen Bootes.,3,0.42,1,2.2,2.7,5.8,die,Segel,"Langsam hisst der Matrose, nachdem er die Handschuhe angezogen hat, die",0.51774514,SE,jinaai/jina-embeddings-v5-text-nano
+314,315,Segel,79,C,des großen Bootes.,3,0.0,1,5.5,4.4,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Taue gekappt hat, die",0.5179887,SE,jinaai/jina-embeddings-v5-text-nano
+315,316,Segel,79,D,des großen Bootes.,3,0.0,1,2.2,2.7,1.9,die,Segel,"Langsam verzehrt der Matrose, nachdem er die Handschuhe angezogen hat, die",0.4745349,SE,jinaai/jina-embeddings-v5-text-nano
+316,317,Gläser,80,A,und spricht mit dem Kollegen.,0,0.67,1,5.2,1.4,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.50804156,SE,jinaai/jina-embeddings-v5-text-nano
+317,318,Gläser,80,B,und spricht mit dem Kollegen.,0,0.67,1,1.5,5.0,5.8,die,Gläser,"Direkt entspiegelt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.5144826,SE,jinaai/jina-embeddings-v5-text-nano
+318,319,Gläser,80,C,und spricht mit dem Kollegen.,0,0.0,1,5.2,1.4,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er den Sehtest durchgeführt hat, die",0.47412798,SE,jinaai/jina-embeddings-v5-text-nano
+319,320,Gläser,80,D,und spricht mit dem Kollegen.,0,0.0,1,1.5,5.0,4.3,die,Gläser,"Direkt verschließt der Optiker, nachdem er die Jahresabrechnung aufgestellt hat, die",0.4743961,SE,jinaai/jina-embeddings-v5-text-nano
+320,321,Korb,81,A,und holt einen Punkt.,0,0.83,0,6.0,4.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der den Ball gedribbelt hat, den",0.37385967,SE,jinaai/jina-embeddings-v5-text-nano
+321,322,Korb,81,B,und holt einen Punkt.,0,0.5,0,2.9,1.8,4.8,den,Korb,"Auf der Stelle wirft der Basketballer, der die Sitzbank verlassen hat, den",0.35275945,SE,jinaai/jina-embeddings-v5-text-nano
+322,323,Korb,81,C,und holt einen Punkt.,0,0.0,0,6.0,4.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der den Ball gedribbelt hat, den",0.38340062,SE,jinaai/jina-embeddings-v5-text-nano
+323,324,Korb,81,D,und holt einen Punkt.,0,0.0,0,2.9,1.8,1.8,den,Korb,"Auf der Stelle bucht der Basketballer, der die Sitzbank verlassen hat, den",0.34971786,SE,jinaai/jina-embeddings-v5-text-nano
+324,325,Muschel,82,A,und holt die Perle.,0,0.92,0,6.2,1.5,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der den Meeresgrund erreicht hat, die",0.5280953,SE,jinaai/jina-embeddings-v5-text-nano
+325,326,Muschel,82,B,und holt die Perle.,0,0.75,0,1.0,1.2,4.2,die,Muschel,"Ohne zu zögern knackt der Perlentaucher, der die Taschenlampe angemacht hat, die",0.49783462,SE,jinaai/jina-embeddings-v5-text-nano
+326,327,Muschel,82,C,und holt die Perle.,0,0.0,0,6.2,1.5,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, die den Meeresgrund erreicht hat, die",0.52813774,SE,jinaai/jina-embeddings-v5-text-nano
+327,328,Muschel,82,D,und holt die Perle.,0,0.0,0,1.0,1.2,1.4,die,Muschel,"Ohne zu zögern verknotet der Perlentaucher, der die Taschenlampe angemacht hat, die",0.5086888,SE,jinaai/jina-embeddings-v5-text-nano
+328,329,Bogen,83,A,und feuert den Pfeil ab.,0,1.0,0,7.0,2.1,6.7,den,Bogen,"Umsichtig spannt der Schütze, der den Pfeil gespitzt hat, den",0.5363773,SE,jinaai/jina-embeddings-v5-text-nano
+329,330,Bogen,83,B,und feuert den Pfeil ab.,0,0.67,0,1.5,1.2,6.7,den,Bogen,"Umsichtig spannt der Schütze, der das Laub zusammengekehrt hat, den",0.56354153,SE,jinaai/jina-embeddings-v5-text-nano
+330,331,Bogen,83,C,und feuert den Pfeil ab.,0,0.08,0,7.0,2.1,1.2,den,Bogen,"Umsichtig tippt der Schütze, der den Pfeil gespitzt hat, den",0.5158448,SE,jinaai/jina-embeddings-v5-text-nano
+331,332,Bogen,83,D,und feuert den Pfeil ab.,0,0.0,0,1.5,1.2,1.2,den,Bogen,"Umsichtig tippt der Schütze, der das Laub zusammengekehrt hat, den",0.5440082,SE,jinaai/jina-embeddings-v5-text-nano
+332,333,Ziegel,84,A,und beendete den Arbeitstag.,0,0.58,1,7.0,4.8,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der das Dach abdeckte, die",0.4704984,SE,jinaai/jina-embeddings-v5-text-nano
+333,334,Ziegel,84,B,und beendete den Arbeitstag.,0,0.5,1,1.2,1.6,4.2,die,Ziegel,"Schnell verlegte der Dachdecker, der den Ehering auszog, die",0.5178993,SE,jinaai/jina-embeddings-v5-text-nano
+334,335,Ziegel,84,C,und beendete den Arbeitstag.,0,0.0,1,7.0,4.8,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der das Dach abdeckte, die",0.4873943,SE,jinaai/jina-embeddings-v5-text-nano
+335,336,Ziegel,84,D,und beendete den Arbeitstag.,0,0.0,1,1.2,1.6,1.0,die,Ziegel,"Schnell naschte der Dachdecker, der den Ehering auszog, die",0.539175,SE,jinaai/jina-embeddings-v5-text-nano
+336,337,Kartons,85,A,und die Kisten.,0,0.58,1,6.5,1.9,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.5422922,SE,jinaai/jina-embeddings-v5-text-nano
+337,338,Kartons,85,B,und die Kisten.,0,0.67,1,4.4,1.1,5.5,die,Kartons,"Zuerst stapelt der Umzugshelfer, der die Firma gegründet hat, die",0.5162588,SE,jinaai/jina-embeddings-v5-text-nano
+338,339,Kartons,85,C,und die Kisten.,0,0.0,1,6.5,1.9,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der den Umzugswagen gefahren hat, die",0.49370974,SE,jinaai/jina-embeddings-v5-text-nano
+339,340,Kartons,85,D,und die Kisten.,0,0.0,1,4.4,1.1,2.0,die,Kartons,"Zuerst serviert der Umzugshelfer, der die Firma gegründet hat, die",0.47278103,SE,jinaai/jina-embeddings-v5-text-nano
+340,341,Unterricht,86,A,und wurde erwischt.,2,0.5,0,7.0,5.9,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der die Klasse wiederholt hatte, den",0.55539024,SE,jinaai/jina-embeddings-v5-text-nano
+341,342,Unterricht,86,B,und wurde erwischt.,2,0.33,0,3.8,1.8,6.7,den,Unterricht,"Heute früh schwänzte der Schüler, der das Handy verloren hatte, den",0.46042117,SE,jinaai/jina-embeddings-v5-text-nano
+342,343,Unterricht,86,C,und wurde erwischt.,2,0.0,0,7.0,5.9,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der die Klasse wiederholt hatte, den",0.61492103,SE,jinaai/jina-embeddings-v5-text-nano
+343,344,Unterricht,86,D,und wurde erwischt.,2,0.0,0,3.8,1.8,1.7,den,Unterricht,"Heute früh dekorierte der Schüler, der das Handy verloren hatte, den",0.5082747,SE,jinaai/jina-embeddings-v5-text-nano
+344,345,Ausweis,87,A,und ließ die Frau in den Club.,0,0.33,1,6.4,3.3,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der den Geldbeutel durchsuchte, den",0.48079386,SE,jinaai/jina-embeddings-v5-text-nano
+345,346,Ausweis,87,B,und ließ die Frau in den Club.,0,0.25,1,2.0,1.2,6.6,den,Ausweis,"Am Abend kontrollierte der Türsteher, der die Nachtluft genoss, den",0.42307675,SE,jinaai/jina-embeddings-v5-text-nano
+346,347,Ausweis,87,C,und ließ die Frau in den Club.,0,0.0,1,6.4,3.3,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der den Geldbeutel durchsuchte, den",0.49101323,SE,jinaai/jina-embeddings-v5-text-nano
+347,348,Ausweis,87,D,und ließ die Frau in den Club.,0,0.0,1,2.0,1.2,1.5,den,Ausweis,"Am Abend probierte der Türsteher, der die Nachtluft genoss, den",0.42530695,SE,jinaai/jina-embeddings-v5-text-nano
+348,349,Windel,88,A,und warf sie in den Abfall.,0,0.92,1,6.7,2.4,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der das Baby geweckt hatte, die",0.5460204,SE,jinaai/jina-embeddings-v5-text-nano
+349,350,Windel,88,B,und warf sie in den Abfall.,0,0.83,1,1.0,1.1,6.5,die,Windel,"Umsichtig wechselte der Babysitter, der den Obstsalat zubereitet hatte, die",0.45237148,SE,jinaai/jina-embeddings-v5-text-nano
+350,351,Windel,88,C,und warf sie in den Abfall.,0,0.08,1,6.7,2.4,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der das Baby geweckt hatte, die",0.5569516,SE,jinaai/jina-embeddings-v5-text-nano
+351,352,Windel,88,D,und warf sie in den Abfall.,0,0.0,1,1.0,1.1,1.5,die,Windel,"Umsichtig bastelte der Babysitter, der den Obstsalat zubereitet hatte, die",0.46536455,SE,jinaai/jina-embeddings-v5-text-nano
+352,353,Gewichte,89,A,in die Höhe.,0,0.5,1,6.7,1.6,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.54564166,SE,jinaai/jina-embeddings-v5-text-nano
+353,354,Gewichte,89,B,in die Höhe.,0,0.42,1,1.7,2.0,6.7,die,Gewichte,"Langsam stemmte der Bodybuilder, der das Licht angemacht hatte, die",0.59294516,SE,jinaai/jina-embeddings-v5-text-nano
+354,355,Gewichte,89,C,in die Höhe.,0,0.0,1,6.7,1.6,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Fitnessstudio betreten hatte, die",0.58037275,SE,jinaai/jina-embeddings-v5-text-nano
+355,356,Gewichte,89,D,in die Höhe.,0,0.0,1,1.7,2.0,2.0,die,Gewichte,"Langsam verdaute der Bodybuilder, der das Licht angemacht hatte, die",0.60608834,SE,jinaai/jina-embeddings-v5-text-nano
+356,357,Rohr,90,A,im Badezimmer.,0,0.17,1,6.4,1.5,5.5,das,Rohr,"Umsichtig repariert der Klempner, der das Wasser ausgestellt hat, das",0.43948084,SE,jinaai/jina-embeddings-v5-text-nano
+357,358,Rohr,90,B,im Badezimmer.,0,0.25,1,1.3,4.6,5.5,das,Rohr,"Umsichtig repariert der Klempner, der den Kirchenchor geleitet hat, das",0.45320252,SE,jinaai/jina-embeddings-v5-text-nano
+358,359,Rohr,90,C,im Badezimmer.,0,0.0,1,6.4,1.5,1.1,das,Rohr,"Umsichtig nascht der Klempner, der das Wasser ausgestellt hat, das",0.51671857,SE,jinaai/jina-embeddings-v5-text-nano
+359,360,Rohr,90,D,im Badezimmer.,0,0.0,1,1.3,4.6,1.1,das,Rohr,"Umsichtig nascht der Klempner, der den Kirchenchor geleitet hat, das",0.51691973,SE,jinaai/jina-embeddings-v5-text-nano
+360,361,Artikel,91,A,für die nächste Ausgabe.,0,0.5,0,6.4,1.5,6.1,den,Artikel,"Schnell schreibt der Journalist, der die Recherche durchgeführt hat, den",0.60461354,SE,jinaai/jina-embeddings-v5-text-nano
+361,362,Artikel,91,B,für die nächste Ausgabe.,0,0.25,0,2.5,5.4,6.1,den,Artikel,"Schnell schreibt der Journalist, der das Portemonnaie gefunden hat, den",0.5634316,SE,jinaai/jina-embeddings-v5-text-nano
+362,363,Artikel,91,C,für die nächste Ausgabe.,0,0.0,0,6.4,1.5,2.3,den,Artikel,"Schnell lenkt der Journalist, der die Recherche durchgeführt hat, den",0.5610689,SE,jinaai/jina-embeddings-v5-text-nano
+363,364,Artikel,91,D,für die nächste Ausgabe.,0,0.0,0,2.5,5.4,2.3,den,Artikel,"Schnell lenkt der Journalist, der das Portemonnaie gefunden hat, den",0.5353932,SE,jinaai/jina-embeddings-v5-text-nano
+364,365,Reifen,92,A,an seinem Rad.,0,0.67,1,6.8,4.1,6.7,den,Reifen,"Heute Morgen flickte der Radler, der die Luftpumpe benutzt hatte, den",0.5227027,SE,jinaai/jina-embeddings-v5-text-nano
+365,366,Reifen,92,B,an seinem Rad.,0,0.67,1,1.2,1.8,6.7,den,Reifen,"Heute Morgen flickte der Radler, der den Schrank abgeschlossen hatte, den",0.47980866,SE,jinaai/jina-embeddings-v5-text-nano
+366,367,Reifen,92,C,an seinem Rad.,0,0.0,1,6.8,4.1,1.1,den,Reifen,"Heute Morgen trank der Radler, der die Luftpumpe benutzt hatte, den",0.5153928,SE,jinaai/jina-embeddings-v5-text-nano
+367,368,Reifen,92,D,an seinem Rad.,0,0.0,1,1.2,1.8,1.1,den,Reifen,"Heute Morgen trank der Radler, der den Schrank abgeschlossen hatte, den",0.47337607,SE,jinaai/jina-embeddings-v5-text-nano
+368,369,Briefkasten,93,A,und fährt weiter.,2,0.58,1,6.2,1.3,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der das Postauto geparkt hat, den",0.66519326,SE,jinaai/jina-embeddings-v5-text-nano
+369,370,Briefkasten,93,B,und fährt weiter.,2,0.58,1,2.5,2.0,6.3,den,Briefkasten,"Umgehend entleert der Postbote, der den Kugelschreiber verloren hat, den",0.6885333,SE,jinaai/jina-embeddings-v5-text-nano
+370,371,Briefkasten,93,C,und fährt weiter.,2,0.0,1,6.2,1.3,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der das Postauto geparkt hat, den",0.6589094,SE,jinaai/jina-embeddings-v5-text-nano
+371,372,Briefkasten,93,D,und fährt weiter.,2,0.0,1,2.5,2.0,1.1,den,Briefkasten,"Umgehend verdrückt der Postbote, der den Kugelschreiber verloren hat, den",0.69030493,SE,jinaai/jina-embeddings-v5-text-nano
+372,373,Drogen,94,A,für die nächste Woche.,0,0.5,1,6.8,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der den Dealer angerufen hat, die",0.5605735,SE,jinaai/jina-embeddings-v5-text-nano
+373,374,Drogen,94,B,für die nächste Woche.,0,0.5,1,2.1,2.2,4.7,die,Drogen,"Hektisch kauft der Junkie, der die Kapuze aufgezogen hat, die",0.5233062,SE,jinaai/jina-embeddings-v5-text-nano
+374,375,Drogen,94,C,für die nächste Woche.,0,0.0,1,6.8,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der den Dealer angerufen hat, die",0.5553601,SE,jinaai/jina-embeddings-v5-text-nano
+375,376,Drogen,94,D,für die nächste Woche.,0,0.08,1,2.1,2.2,1.1,die,Drogen,"Hektisch näht der Junkie, der die Kapuze aufgezogen hat, die",0.44416967,SE,jinaai/jina-embeddings-v5-text-nano
+376,377,Tonne,95,A,und sprang auf den Müllwagen.,0,0.75,1,6.4,1.8,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Müllwagen geparkt hatte, die",0.49649104,SE,jinaai/jina-embeddings-v5-text-nano
+377,378,Tonne,95,B,und sprang auf den Müllwagen.,0,0.75,1,4.2,1.1,5.8,die,Tonne,"Zügig leerte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.4676992,SE,jinaai/jina-embeddings-v5-text-nano
+378,379,Tonne,95,C,und sprang auf den Müllwagen.,0,0.0,1,6.4,1.8,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Müllwagen geparkt hatte, die",0.49315548,SE,jinaai/jina-embeddings-v5-text-nano
+379,380,Tonne,95,D,und sprang auf den Müllwagen.,0,0.0,1,4.2,1.1,1.8,die,Tonne,"Zügig bastelte der Müllmann, der den Hausbesitzer gegrüßt hatte, die",0.46687493,SE,jinaai/jina-embeddings-v5-text-nano
+380,381,Peitsche,96,A,und gab die Sporen.,2,0.58,1,6.0,5.6,5.8,die,Peitsche,"Hektisch knallte der Reiter, der das Pferd ritt, die",0.46412945,SE,jinaai/jina-embeddings-v5-text-nano
+381,382,Peitsche,96,B,und gab die Sporen.,2,0.5,1,1.2,1.2,5.8,die,Peitsche,"Hektisch knallte der Reiter, der die Landschaft durchquerte, die",0.46185932,SE,jinaai/jina-embeddings-v5-text-nano
+382,383,Peitsche,96,C,und gab die Sporen.,2,0.0,1,6.0,5.6,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der das Pferd ritt, die",0.4645196,SE,jinaai/jina-embeddings-v5-text-nano
+383,384,Peitsche,96,D,und gab die Sporen.,2,0.0,1,1.2,1.2,1.1,die,Peitsche,"Hektisch verfasste der Reiter, der die Landschaft durchquerte, die",0.47096774,SE,jinaai/jina-embeddings-v5-text-nano
+384,385,Waffe,97,A,und verlangte das Geld.,0,0.58,1,3.9,6.5,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der die Bank überfiel, die",0.45846146,SE,jinaai/jina-embeddings-v5-text-nano
+385,386,Waffe,97,B,und verlangte das Geld.,0,0.58,1,1.3,1.1,6.1,die,Waffe,"Nach kurzem Überlegen zückte der Gangster, der den Bus betrat, die",0.40801474,SE,jinaai/jina-embeddings-v5-text-nano
+386,387,Waffe,97,C,und verlangte das Geld.,0,0.0,1,3.9,6.5,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der die Bank überfiel, die",0.4561181,SE,jinaai/jina-embeddings-v5-text-nano
+387,388,Waffe,97,D,und verlangte das Geld.,0,0.0,1,1.3,1.1,1.4,die,Waffe,"Nach kurzem Überlegen gründete der Gangster, der den Bus betrat, die",0.42199668,SE,jinaai/jina-embeddings-v5-text-nano
+388,389,Schiff,98,A,und übernahm das Kommando.,0,0.92,1,6.2,5.1,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Flagge hisste, das",0.5627503,SE,jinaai/jina-embeddings-v5-text-nano
+389,390,Schiff,98,B,und übernahm das Kommando.,0,0.92,1,2.3,1.4,6.8,das,Schiff,"Zufrieden kaperte der Pirat, der die Fehde austrug, das",0.50771046,SE,jinaai/jina-embeddings-v5-text-nano
+390,391,Schiff,98,C,und übernahm das Kommando.,0,0.0,1,6.2,5.1,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Flagge hisste, das",0.5446647,SE,jinaai/jina-embeddings-v5-text-nano
+391,392,Schiff,98,D,und übernahm das Kommando.,0,0.0,1,2.3,1.4,1.1,das,Schiff,"Zufrieden verrührte der Pirat, der die Fehde austrug, das",0.49197274,SE,jinaai/jina-embeddings-v5-text-nano
+392,393,Aktie,99,A,und berichtet seinem Auftraggeber.,0,0.75,1,6.9,1.1,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der die Börse betreten hat, die",0.55313456,SE,jinaai/jina-embeddings-v5-text-nano
+393,394,Aktie,99,B,und berichtet seinem Auftraggeber.,0,0.83,1,1.4,1.6,6.5,die,Aktie,"Sofort kauft der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.5694094,SE,jinaai/jina-embeddings-v5-text-nano
+394,395,Aktie,99,C,und berichtet seinem Auftraggeber.,0,0.0,1,6.9,1.1,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der die Börse betreten hat, die",0.54782736,SE,jinaai/jina-embeddings-v5-text-nano
+395,396,Aktie,99,D,und berichtet seinem Auftraggeber.,0,0.0,1,1.4,1.6,1.4,die,Aktie,"Sofort knabbert der Börsenmakler, der den Whiskey eingeschenkt hat, die",0.5737929,SE,jinaai/jina-embeddings-v5-text-nano
+396,397,Loch,100,A,in die Decke.,0,1.0,0,6.5,2.0,6.9,das,Loch,"Gestern bohrte der Handwerker, der die Bohrmaschine hielt, das",0.35850182,SE,jinaai/jina-embeddings-v5-text-nano
+397,398,Loch,100,B,in die Decke.,0,0.75,0,1.4,1.7,6.9,das,Loch,"Gestern bohrte der Handwerker, der das Kaugummi kaute, das",0.37374815,SE,jinaai/jina-embeddings-v5-text-nano
+398,399,Loch,100,C,in die Decke.,0,0.0,0,6.5,2.0,3.9,das,Loch,"Gestern warf der Handwerker, der die Bohrmaschine hielt, das",0.33915237,SE,jinaai/jina-embeddings-v5-text-nano
+399,400,Loch,100,D,in die Decke.,0,0.0,0,1.4,1.7,3.9,das,Loch,"Gestern warf der Handwerker, der das Kaugummi kaute, das",0.3412328,SE,jinaai/jina-embeddings-v5-text-nano
+400,401,Blutdruck,101,A,und den Blutzucker.,3,0.58,1,6.8,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der das Messgerät hält, den",0.4938363,SE,jinaai/jina-embeddings-v5-text-nano
+401,402,Blutdruck,101,B,und den Blutzucker.,3,0.58,1,2.3,1.6,6.7,den,Blutdruck,"Am Morgen misst der Arzthelfer, der den Bildschirm anstellt, den",0.472983,SE,jinaai/jina-embeddings-v5-text-nano
+402,403,Blutdruck,101,C,und den Blutzucker.,3,0.0,1,6.8,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der das Messgerät hält, den",0.40724793,SE,jinaai/jina-embeddings-v5-text-nano
+403,404,Blutdruck,101,D,und den Blutzucker.,3,0.0,1,2.3,1.6,1.4,den,Blutdruck,"Am Morgen kauft der Arzthelfer, der den Bildschirm anstellt, den",0.412354,SE,jinaai/jina-embeddings-v5-text-nano
+404,405,Tuch,102,A,und machte sich bereit.,0,0.67,0,6.3,3.5,2.7,das,Tuch,"Konzentriert schwang der Torero, der den Stier verwundet hatte, das",0.36490956,SE,jinaai/jina-embeddings-v5-text-nano
+405,406,Tuch,102,B,und machte sich bereit.,0,0.83,0,4.1,1.8,2.7,das,Tuch,"Konzentriert schwang der Torero, der das Gebet aufgesagt hatte, das",0.40005904,SE,jinaai/jina-embeddings-v5-text-nano
+406,407,Tuch,102,C,und machte sich bereit.,0,0.0,0,6.3,3.5,2.6,das,Tuch,"Konzentriert befüllte der Torero, der den Stier verwundet hatte, das",0.35603842,SE,jinaai/jina-embeddings-v5-text-nano
+407,408,Tuch,102,D,und machte sich bereit.,0,0.0,0,4.1,1.8,2.6,das,Tuch,"Konzentriert befüllte der Torero, der das Gebet aufgesagt hatte, das",0.39526492,SE,jinaai/jina-embeddings-v5-text-nano
+408,409,Schwert,103,A,und griff den Gegner an.,0,0.92,1,6.2,1.5,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er den Kampf begonnen hatte, das",0.5384998,SE,jinaai/jina-embeddings-v5-text-nano
+409,410,Schwert,103,B,und griff den Gegner an.,0,0.92,1,1.1,1.0,5.9,das,Schwert,"Angespannt zückte der Ritter, nachdem er die Brücke überquert hatte, das",0.5103938,SE,jinaai/jina-embeddings-v5-text-nano
+410,411,Schwert,103,C,und griff den Gegner an.,0,0.0,1,6.2,1.5,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er den Kampf begonnen hatte, das",0.54943395,SE,jinaai/jina-embeddings-v5-text-nano
+411,412,Schwert,103,D,und griff den Gegner an.,0,0.08,1,1.1,1.0,1.1,das,Schwert,"Angespannt kaute der Ritter, nachdem er die Brücke überquert hatte, das",0.52364755,SE,jinaai/jina-embeddings-v5-text-nano
+412,413,Rettungswagen,104,A,in Richtung des Krankenhauses.,0,0.75,0,6.8,2.6,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.53505117,SE,jinaai/jina-embeddings-v5-text-nano
+413,414,Rettungswagen,104,B,in Richtung des Krankenhauses.,0,0.58,0,1.3,1.2,4.7,den,Rettungswagen,"Wachsam steuert der Sanitäter, der den Notizblock weggelegt hat, den",0.5052713,SE,jinaai/jina-embeddings-v5-text-nano
+414,415,Rettungswagen,104,C,in Richtung des Krankenhauses.,0,0.0,0,6.8,2.6,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der das Blaulicht eingeschaltet hat, den",0.46843654,SE,jinaai/jina-embeddings-v5-text-nano
+415,416,Rettungswagen,104,D,in Richtung des Krankenhauses.,0,0.0,0,1.3,1.2,1.0,den,Rettungswagen,"Wachsam kopiert der Sanitäter, der den Notizblock weggelegt hat, den",0.41045,SE,jinaai/jina-embeddings-v5-text-nano
+416,417,Aussage,105,A,und wendete sich an seinen Anwalt.,0,1.0,0,6.4,3.5,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Angeklagten wiedererkannte, die",0.44570553,SE,jinaai/jina-embeddings-v5-text-nano
+417,418,Aussage,105,B,und wendete sich an seinen Anwalt.,0,0.83,0,1.1,1.6,6.3,die,Aussage,"Ohne zu zögern verweigerte der Zeuge, der den Gehstock umklammerte, die",0.46318057,SE,jinaai/jina-embeddings-v5-text-nano
+418,419,Aussage,105,C,und wendete sich an seinen Anwalt.,0,0.0,0,6.4,3.5,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Angeklagten wiedererkannte, die",0.5158068,SE,jinaai/jina-embeddings-v5-text-nano
+419,420,Aussage,105,D,und wendete sich an seinen Anwalt.,0,0.0,0,1.1,1.6,2.6,die,Aussage,"Ohne zu zögern bestellte der Zeuge, der den Gehstock umklammerte, die",0.5121122,SE,jinaai/jina-embeddings-v5-text-nano
+420,421,Schlittschuhe,106,A,und begibt sich auf die Eisfläche.,2,1.0,0,6.7,2.0,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der die Eishalle erreicht hat, die",0.7200598,SE,jinaai/jina-embeddings-v5-text-nano
+421,422,Schlittschuhe,106,B,und begibt sich auf die Eisfläche.,2,0.75,0,1.5,1.1,6.1,die,Schlittschuhe,"Sogleich schnürt der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.684289,SE,jinaai/jina-embeddings-v5-text-nano
+422,423,Schlittschuhe,106,C,und begibt sich auf die Eisfläche.,2,0.0,0,6.7,2.0,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der die Eishalle erreicht hat, die",0.6291118,SE,jinaai/jina-embeddings-v5-text-nano
+423,424,Schlittschuhe,106,D,und begibt sich auf die Eisfläche.,2,0.08,0,1.5,1.1,1.6,die,Schlittschuhe,"Sogleich zerbricht der Eiskunstläufer, der das Bonbon gelutscht hat, die",0.62300456,SE,jinaai/jina-embeddings-v5-text-nano
+424,425,Lasso,107,A,und fängt das Tier ein.,0,0.33,0,5.4,4.5,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.44582617,SE,jinaai/jina-embeddings-v5-text-nano
+425,426,Lasso,107,B,und fängt das Tier ein.,0,0.75,0,1.3,1.6,6.5,das,Lasso,"Gut gelaunt schwingt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.43127072,SE,jinaai/jina-embeddings-v5-text-nano
+426,427,Lasso,107,C,und fängt das Tier ein.,0,0.0,0,5.4,4.5,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er das Pferd gesattelt hatte, das",0.44520968,SE,jinaai/jina-embeddings-v5-text-nano
+427,428,Lasso,107,D,und fängt das Tier ein.,0,0.0,0,1.3,1.6,1.1,das,Lasso,"Gut gelaunt zerhackt der Cowboy, nachdem er den Kameraden gerufen hat, das",0.4266111,SE,jinaai/jina-embeddings-v5-text-nano
+428,429,Drehbuch,108,A,für die Serie.,2,0.33,0,6.6,4.4,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Plot konstruiert hatte, das",0.6972051,SE,jinaai/jina-embeddings-v5-text-nano
+429,430,Drehbuch,108,B,für die Serie.,2,0.75,0,1.1,1.3,6.0,das,Drehbuch,"Entspannt schrieb der Regisseur, der den Kamin angemacht hatte, das",0.641237,SE,jinaai/jina-embeddings-v5-text-nano
+430,431,Drehbuch,108,C,für die Serie.,2,0.0,0,6.6,4.4,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Plot konstruiert hatte, das",0.6383062,SE,jinaai/jina-embeddings-v5-text-nano
+431,432,Drehbuch,108,D,für die Serie.,2,0.0,0,1.1,1.3,1.1,das,Drehbuch,"Entspannt verzehrte der Regisseur, der den Kamin angemacht hatte, das",0.5375956,SE,jinaai/jina-embeddings-v5-text-nano
+432,433,Stern,109,A,am Firmament.,0,0.58,1,5.7,2.4,4.9,den,Stern,"Sofort entdeckt der Astronom, der das Teleskop aufgestellt hat, den",0.45340294,SE,jinaai/jina-embeddings-v5-text-nano
+433,434,Stern,109,B,am Firmament.,0,0.58,1,3.0,1.9,4.9,den,Stern,"Sofort entdeckt der Astronom, der die Uhrzeit notiert hat, den",0.47033355,SE,jinaai/jina-embeddings-v5-text-nano
+434,435,Stern,109,C,am Firmament.,0,0.0,1,5.7,2.4,1.4,den,Stern,"Sofort serviert der Astronom, der das Teleskop aufgestellt hat, den",0.4783764,SE,jinaai/jina-embeddings-v5-text-nano
+435,436,Stern,109,D,am Firmament.,0,0.0,1,3.0,1.9,1.4,den,Stern,"Sofort serviert der Astronom, der die Uhrzeit notiert hat, den",0.4822242,SE,jinaai/jina-embeddings-v5-text-nano
+436,437,Anker,110,A,und verließ den Hafen.,0,0.5,1,6.4,2.0,6.9,den,Anker,"Gestern lichtete der Seemann, der das Boot kommandierte, den",0.4087693,SE,jinaai/jina-embeddings-v5-text-nano
+437,438,Anker,110,B,und verließ den Hafen.,0,0.58,1,1.0,4.1,6.9,den,Anker,"Gestern lichtete der Seemann, der den Atem anhielt, den",0.41268224,SE,jinaai/jina-embeddings-v5-text-nano
+438,439,Anker,110,C,und verließ den Hafen.,0,0.0,1,6.4,2.0,1.0,den,Anker,"Gestern kochte der Seemann, der das Boot kommandierte, den",0.36790544,SE,jinaai/jina-embeddings-v5-text-nano
+439,440,Anker,110,D,und verließ den Hafen.,0,0.0,1,1.0,4.1,1.0,den,Anker,"Gestern kochte der Seemann, der den Atem anhielt, den",0.37385657,SE,jinaai/jina-embeddings-v5-text-nano
+440,441,Seil,111,A,um den Aufstieg abzusichern.,2,0.58,0,4.6,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.48528612,SE,jinaai/jina-embeddings-v5-text-nano
+441,442,Seil,111,B,um den Aufstieg abzusichern.,2,0.75,0,1.4,1.6,6.1,das,Seil,"Am Vormittag knotete der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.43876308,SE,jinaai/jina-embeddings-v5-text-nano
+442,443,Seil,111,C,um den Aufstieg abzusichern.,2,0.0,0,4.6,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er den Haken festgebohrt hatte, das",0.4890005,SE,jinaai/jina-embeddings-v5-text-nano
+443,444,Seil,111,D,um den Aufstieg abzusichern.,2,0.0,0,1.4,1.6,1.2,das,Seil,"Am Vormittag roch der Bergsteiger, nachdem er die Krähe verscheucht hatte, das",0.43158263,SE,jinaai/jina-embeddings-v5-text-nano
+444,445,Rouletterad,112,A,und verrät die nächste Zahl.,0,0.67,0,6.3,2.1,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der den Spieltisch vorbereitet hat, das",0.64005387,SE,jinaai/jina-embeddings-v5-text-nano
+445,446,Rouletterad,112,B,und verrät die nächste Zahl.,0,0.33,0,2.0,1.3,6.1,das,Rouletterad,"Entspannt dreht der Croupier, der die Frau beeindruckt hat, das",0.5913453,SE,jinaai/jina-embeddings-v5-text-nano
+446,447,Rouletterad,112,C,und verrät die nächste Zahl.,0,0.0,0,6.3,2.1,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der den Spieltisch vorbereitet hat, das",0.58874583,SE,jinaai/jina-embeddings-v5-text-nano
+447,448,Rouletterad,112,D,und verrät die nächste Zahl.,0,0.0,0,2.0,1.3,1.1,das,Rouletterad,"Entspannt schlürft der Croupier, der die Frau beeindruckt hat, das",0.5442022,SE,jinaai/jina-embeddings-v5-text-nano
+448,449,Nägel,113,A,und lackierte sie.,0,0.75,0,6.9,1.7,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie die Maniküre durchführte, die",0.57335246,SE,jinaai/jina-embeddings-v5-text-nano
+449,450,Nägel,113,B,und lackierte sie.,0,1.0,0,1.3,1.0,6.8,die,Nägel,"Neulich feilte die Kosmetikerin, während sie das Gespräch belauschte, die",0.48659497,SE,jinaai/jina-embeddings-v5-text-nano
+450,451,Nägel,113,C,und lackierte sie.,0,0.08,0,6.9,1.7,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie die Maniküre durchführte, die",0.5713096,SE,jinaai/jina-embeddings-v5-text-nano
+451,452,Nägel,113,D,und lackierte sie.,0,0.0,0,1.3,1.0,5.5,die,Nägel,"Neulich baute die Kosmetikerin, während sie das Gespräch belauschte, die",0.49081367,SE,jinaai/jina-embeddings-v5-text-nano
+452,453,Zukunft,114,A,der Familie.,0,0.58,1,6.7,3.9,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kristallkugel befragt hatte, die",0.54540265,SE,jinaai/jina-embeddings-v5-text-nano
+453,454,Zukunft,114,B,der Familie.,0,0.58,1,1.4,1.1,6.8,die,Zukunft,"Sogleich prophezeite der Wahrsager, der die Kerze angezündet hatte, die",0.53766894,SE,jinaai/jina-embeddings-v5-text-nano
+454,455,Zukunft,114,C,der Familie.,0,0.0,1,6.7,3.9,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kristallkugel befragt hatte, die",0.46979538,SE,jinaai/jina-embeddings-v5-text-nano
+455,456,Zukunft,114,D,der Familie.,0,0.0,1,1.4,1.1,1.5,die,Zukunft,"Sogleich würzte der Wahrsager, der die Kerze angezündet hatte, die",0.45606697,SE,jinaai/jina-embeddings-v5-text-nano
+456,457,Ausgrabung,115,A,in der Ruine.,0,0.92,0,6.6,5.3,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der die Schaufel hervorgeholt hat, die",0.70093197,SE,jinaai/jina-embeddings-v5-text-nano
+457,458,Ausgrabung,115,B,in der Ruine.,0,0.5,0,1.3,2.5,3.0,die,Ausgrabung,"Heute beginnt der Archäologe, der das Taxi genommen hat, die",0.6190323,SE,jinaai/jina-embeddings-v5-text-nano
+458,459,Ausgrabung,115,C,in der Ruine.,0,0.0,0,6.6,5.3,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der die Schaufel hervorgeholt hat, die",0.70913416,SE,jinaai/jina-embeddings-v5-text-nano
+459,460,Ausgrabung,115,D,in der Ruine.,0,0.0,0,1.3,2.5,1.5,die,Ausgrabung,"Heute raspelt der Archäologe, der das Taxi genommen hat, die",0.6123849,SE,jinaai/jina-embeddings-v5-text-nano
+460,461,Strauß,116,A,für die Hochzeit.,0,0.92,1,6.8,3.9,6.5,den,Strauß,"Zügig bindet der Florist, der die Rosen gezüchtet hat, den",0.60371995,SE,jinaai/jina-embeddings-v5-text-nano
+461,462,Strauß,116,B,für die Hochzeit.,0,0.92,1,2.6,1.6,6.5,den,Strauß,"Zügig bindet der Florist, der die Fenster geschlossen hat, den",0.5227452,SE,jinaai/jina-embeddings-v5-text-nano
+462,463,Strauß,116,C,für die Hochzeit.,0,0.0,1,6.8,3.9,1.0,den,Strauß,"Zügig ölt der Florist, der die Rosen gezüchtet hat, den",0.60463834,SE,jinaai/jina-embeddings-v5-text-nano
+463,464,Strauß,116,D,für die Hochzeit.,0,0.0,1,2.6,1.6,1.0,den,Strauß,"Zügig ölt der Florist, der die Fenster geschlossen hat, den",0.5343316,SE,jinaai/jina-embeddings-v5-text-nano
+464,465,Rolle,117,A,für das Theaterstück.,0,0.75,1,6.1,3.8,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der das Skript auswendig gelernt hat, die",0.52098054,SE,jinaai/jina-embeddings-v5-text-nano
+465,466,Rolle,117,B,für das Theaterstück.,0,0.67,1,2.3,4.6,5.8,die,Rolle,"Umgehend spielt der Schauspieler, der die Torte gebacken hat, die",0.47456086,SE,jinaai/jina-embeddings-v5-text-nano
+466,467,Rolle,117,C,für das Theaterstück.,0,0.0,1,6.1,3.8,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der das Skript auswendig gelernt hat, die",0.4996321,SE,jinaai/jina-embeddings-v5-text-nano
+467,468,Rolle,117,D,für das Theaterstück.,0,0.0,1,2.3,4.6,2.5,die,Rolle,"Umgehend schnibbelt der Schauspieler, der die Torte gebacken hat, die",0.45800325,SE,jinaai/jina-embeddings-v5-text-nano
+468,469,Sendung,118,A,für den Fernsehkanal.,0,0.42,0,6.4,6.3,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Zuschauer unterhält, die",0.49988675,SE,jinaai/jina-embeddings-v5-text-nano
+469,470,Sendung,118,B,für den Fernsehkanal.,0,0.17,0,2.0,1.5,6.7,die,Sendung,"Am Abend moderiert der Moderator, der die Weltmeere bereist, die",0.48320454,SE,jinaai/jina-embeddings-v5-text-nano
+470,471,Sendung,118,C,für den Fernsehkanal.,0,0.0,0,6.4,6.3,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Zuschauer unterhält, die",0.5078544,SE,jinaai/jina-embeddings-v5-text-nano
+471,472,Sendung,118,D,für den Fernsehkanal.,0,0.0,0,2.0,1.5,3.7,die,Sendung,"Am Abend wiegt der Moderator, der die Weltmeere bereist, die",0.50565815,SE,jinaai/jina-embeddings-v5-text-nano
+472,473,Stück,119,A,für seine nächste Sonate.,0,0.25,0,4.8,4.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Noten aufschrieb, das",0.46659166,SE,jinaai/jina-embeddings-v5-text-nano
+473,474,Stück,119,B,für seine nächste Sonate.,0,0.42,0,1.7,2.1,6.9,das,Stück,"Ohne zu zögern komponierte der Musiker, der die Fragen beantwortete, das",0.43826115,SE,jinaai/jina-embeddings-v5-text-nano
+474,475,Stück,119,C,für seine nächste Sonate.,0,0.0,0,4.8,4.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Noten aufschrieb, das",0.4626079,SE,jinaai/jina-embeddings-v5-text-nano
+475,476,Stück,119,D,für seine nächste Sonate.,0,0.08,0,1.7,2.1,4.2,das,Stück,"Ohne zu zögern grillte der Musiker, der die Fragen beantwortete, das",0.4171306,SE,jinaai/jina-embeddings-v5-text-nano
+476,477,Bild,120,A,in seinem Atelier.,2,0.58,1,6.6,2.3,7.0,das,Bild,"Fröhlich malte der Künstler, der die Leinwand aufgespannt hatte, das",0.43781427,SE,jinaai/jina-embeddings-v5-text-nano
+477,478,Bild,120,B,in seinem Atelier.,2,0.58,1,1.5,1.7,7.0,das,Bild,"Fröhlich malte der Künstler, der den Nachtisch zubereitet hatte, das",0.42362893,SE,jinaai/jina-embeddings-v5-text-nano
+478,479,Bild,120,C,in seinem Atelier.,2,0.0,1,6.6,2.3,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der die Leinwand aufgespannt hatte, das",0.4743067,SE,jinaai/jina-embeddings-v5-text-nano
+479,480,Bild,120,D,in seinem Atelier.,2,0.0,1,1.5,1.7,2.2,das,Bild,"Fröhlich bewohnte der Künstler, der den Nachtisch zubereitet hatte, das",0.42140728,SE,jinaai/jina-embeddings-v5-text-nano

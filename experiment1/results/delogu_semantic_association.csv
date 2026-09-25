@@ -3239,3 +3239,543 @@
 267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.57799417,SE,aari1995/German_Semantic_V3b
 268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.5974617,SE,aari1995/German_Semantic_V3b
 269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.4537882,SE,aari1995/German_Semantic_V3b
+0,1,control,Johann betrat das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.4552729,SE,jinaai/jina-embeddings-v5-text-small
+1,1,script-related,Johann verließ das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.41940832,SE,jinaai/jina-embeddings-v5-text-small
+2,1,script-unrelated,Johann betrat die Wohnung. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.3148692,SE,jinaai/jina-embeddings-v5-text-small
+3,2,control,Sabine betrat das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.40041047,SE,jinaai/jina-embeddings-v5-text-small
+4,2,script-related,Sabine verließ das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.38015816,SE,jinaai/jina-embeddings-v5-text-small
+5,2,script-unrelated,Sabine betrat die Schule. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.3664627,SE,jinaai/jina-embeddings-v5-text-small
+6,3,control,Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.38492385,SE,jinaai/jina-embeddings-v5-text-small
+7,3,script-related,Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.35379964,SE,jinaai/jina-embeddings-v5-text-small
+8,3,script-unrelated,Kevin betrat die Kirche. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.34910402,SE,jinaai/jina-embeddings-v5-text-small
+9,4,control,Susi betrat die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.706194,SE,jinaai/jina-embeddings-v5-text-small
+10,4,script-related,Susi verließ die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.59875804,SE,jinaai/jina-embeddings-v5-text-small
+11,4,script-unrelated,Susi betrat das Gehege. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.60446036,SE,jinaai/jina-embeddings-v5-text-small
+12,5,control,Roman betrat die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.41708684,SE,jinaai/jina-embeddings-v5-text-small
+13,5,script-related,Roman verließ die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.3709845,SE,jinaai/jina-embeddings-v5-text-small
+14,5,script-unrelated,Roman betrat die Kneipe. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.388389,SE,jinaai/jina-embeddings-v5-text-small
+15,6,control,Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.5319128,SE,jinaai/jina-embeddings-v5-text-small
+16,6,script-related,Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.5338308,SE,jinaai/jina-embeddings-v5-text-small
+17,6,script-unrelated,Lea begann die Wände zu streichen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.38941085,SE,jinaai/jina-embeddings-v5-text-small
+18,7,control,Peter erreichte das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.44969428,SE,jinaai/jina-embeddings-v5-text-small
+19,7,script-related,Peter verließ das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.3898837,SE,jinaai/jina-embeddings-v5-text-small
+20,7,script-unrelated,Peter erreichte den Supermarkt. Wenig später ging er zur,Loge,und setzte sich.,0.43037063,SE,jinaai/jina-embeddings-v5-text-small
+21,8,control,Lisa betrat den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.52881455,SE,jinaai/jina-embeddings-v5-text-small
+22,8,script-related,Lisa verließ den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.52140266,SE,jinaai/jina-embeddings-v5-text-small
+23,8,script-unrelated,Lisa betrat das Haus. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.42404103,SE,jinaai/jina-embeddings-v5-text-small
+24,9,control,Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.50845814,SE,jinaai/jina-embeddings-v5-text-small
+25,9,script-related,Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.49535763,SE,jinaai/jina-embeddings-v5-text-small
+26,9,script-unrelated,Tim begann seine Fahrstunde. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.48591948,SE,jinaai/jina-embeddings-v5-text-small
+27,10,control,Maria erreichte den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.4746435,SE,jinaai/jina-embeddings-v5-text-small
+28,10,script-related,Maria verließ den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.40902075,SE,jinaai/jina-embeddings-v5-text-small
+29,10,script-unrelated,Maria erreichte das Einkaufszentrum. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.4796556,SE,jinaai/jina-embeddings-v5-text-small
+30,11,control,Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.43855056,SE,jinaai/jina-embeddings-v5-text-small
+31,11,script-related,Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.36720827,SE,jinaai/jina-embeddings-v5-text-small
+32,11,script-unrelated,Lukas kam zum Unterricht. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.32313704,SE,jinaai/jina-embeddings-v5-text-small
+33,12,control,Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.52153337,SE,jinaai/jina-embeddings-v5-text-small
+34,12,script-related,Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.49370757,SE,jinaai/jina-embeddings-v5-text-small
+35,12,script-unrelated,Marie ging zur Uni. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.4654056,SE,jinaai/jina-embeddings-v5-text-small
+36,13,control,Thorsten begann zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.55446374,SE,jinaai/jina-embeddings-v5-text-small
+37,13,script-related,Thorsten hörte auf zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.4919135,SE,jinaai/jina-embeddings-v5-text-small
+38,13,script-unrelated,Thorsten begann zu grillen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.4327029,SE,jinaai/jina-embeddings-v5-text-small
+39,14,control,Claudia betrat den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.4908582,SE,jinaai/jina-embeddings-v5-text-small
+40,14,script-related,Claudia verließ den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.45543018,SE,jinaai/jina-embeddings-v5-text-small
+41,14,script-unrelated,Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.42851147,SE,jinaai/jina-embeddings-v5-text-small
+42,15,control,Jonathan ging zum Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.5350591,SE,jinaai/jina-embeddings-v5-text-small
+43,15,script-related,Jonathan verließ den Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.51515377,SE,jinaai/jina-embeddings-v5-text-small
+44,15,script-unrelated,Jonathan ging in die Küche. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.3237385,SE,jinaai/jina-embeddings-v5-text-small
+45,16,control,Lara ging in den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.40540496,SE,jinaai/jina-embeddings-v5-text-small
+46,16,script-related,Lara verließ den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.34701663,SE,jinaai/jina-embeddings-v5-text-small
+47,16,script-unrelated,Lara ging zum Herd. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.3991445,SE,jinaai/jina-embeddings-v5-text-small
+48,17,control,Roman ging ins Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.4872292,SE,jinaai/jina-embeddings-v5-text-small
+49,17,script-related,Roman verließ das Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.4653801,SE,jinaai/jina-embeddings-v5-text-small
+50,17,script-unrelated,Roman ging in die Buchhandlung. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.40694943,SE,jinaai/jina-embeddings-v5-text-small
+51,18,control,Annika ging zum Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.59047747,SE,jinaai/jina-embeddings-v5-text-small
+52,18,script-related,Annika verließ den Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.49356005,SE,jinaai/jina-embeddings-v5-text-small
+53,18,script-unrelated,Annika ging in die Boutique. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.3838779,SE,jinaai/jina-embeddings-v5-text-small
+54,19,control,Emil betrat das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.48416477,SE,jinaai/jina-embeddings-v5-text-small
+55,19,script-related,Emil verließ das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.43267816,SE,jinaai/jina-embeddings-v5-text-small
+56,19,script-unrelated,Emil betrat die Apotheke. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.4412281,SE,jinaai/jina-embeddings-v5-text-small
+57,20,control,Susanne betrat die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.52478456,SE,jinaai/jina-embeddings-v5-text-small
+58,20,script-related,Susanne verließ die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.47801492,SE,jinaai/jina-embeddings-v5-text-small
+59,20,script-unrelated,Susanne betrat das Bad. Schnell setzte sie den,Sattel,auf und ritt los.,0.43256488,SE,jinaai/jina-embeddings-v5-text-small
+60,21,control,Martin kam zur Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.49137595,SE,jinaai/jina-embeddings-v5-text-small
+61,21,script-related,Martin verließ die Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.41978008,SE,jinaai/jina-embeddings-v5-text-small
+62,21,script-unrelated,Martin kam zur Autowerkstatt. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.45150974,SE,jinaai/jina-embeddings-v5-text-small
+63,22,control,Jutta ging zur Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.4441975,SE,jinaai/jina-embeddings-v5-text-small
+64,22,script-related,Jutta verließ die Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.39962843,SE,jinaai/jina-embeddings-v5-text-small
+65,22,script-unrelated,Jutta ging zur Post. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.3859002,SE,jinaai/jina-embeddings-v5-text-small
+66,23,control,Jens ging zum Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.38442597,SE,jinaai/jina-embeddings-v5-text-small
+67,23,script-related,Jens verließ den Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.32971764,SE,jinaai/jina-embeddings-v5-text-small
+68,23,script-unrelated,Jens ging zur Zollstelle. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.3764698,SE,jinaai/jina-embeddings-v5-text-small
+69,24,control,Elena begann Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.46210876,SE,jinaai/jina-embeddings-v5-text-small
+70,24,script-related,Elena hörte auf Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.424741,SE,jinaai/jina-embeddings-v5-text-small
+71,24,script-unrelated,Elena begann zu zeichnen. Schnell setzte sie ihr,Geld,und gewann.,0.40443468,SE,jinaai/jina-embeddings-v5-text-small
+72,25,control,Bruno begann seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.4249571,SE,jinaai/jina-embeddings-v5-text-small
+73,25,script-related,Bruno beendete seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.38225433,SE,jinaai/jina-embeddings-v5-text-small
+74,25,script-unrelated,Bruno begann seinen Filmabend. Endlich kam er am,Meer,an und genoss das Wetter.,0.41257817,SE,jinaai/jina-embeddings-v5-text-small
+75,26,control,Jana betrat das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.4609914,SE,jinaai/jina-embeddings-v5-text-small
+76,26,script-related,Jana verließ das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.40645564,SE,jinaai/jina-embeddings-v5-text-small
+77,26,script-unrelated,Jana betrat das Gartencenter. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.3521849,SE,jinaai/jina-embeddings-v5-text-small
+78,27,control,Nico fuhr auf die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.48830372,SE,jinaai/jina-embeddings-v5-text-small
+79,27,script-related,Nico verließ die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.42102805,SE,jinaai/jina-embeddings-v5-text-small
+80,27,script-unrelated,Nico fuhr zur Pizzeria. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.46066672,SE,jinaai/jina-embeddings-v5-text-small
+81,28,control,Beate ging Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.54190063,SE,jinaai/jina-embeddings-v5-text-small
+82,28,script-related,Beate kam zurück vom Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.5379563,SE,jinaai/jina-embeddings-v5-text-small
+83,28,script-unrelated,Beate ging schwimmen. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.42852306,SE,jinaai/jina-embeddings-v5-text-small
+84,29,control,Hubert nahm ein Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.5397012,SE,jinaai/jina-embeddings-v5-text-small
+85,29,script-related,Hubert verließ das Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.5215904,SE,jinaai/jina-embeddings-v5-text-small
+86,29,script-unrelated,Hubert nahm ein Flugzeug. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.47436827,SE,jinaai/jina-embeddings-v5-text-small
+87,30,control,Jenni begann zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.49320966,SE,jinaai/jina-embeddings-v5-text-small
+88,30,script-related,Jenni hörte auf zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.43879083,SE,jinaai/jina-embeddings-v5-text-small
+89,30,script-unrelated,Jenni begann die Vorlesung. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.4222946,SE,jinaai/jina-embeddings-v5-text-small
+90,31,control,Hans betrat die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.4970642,SE,jinaai/jina-embeddings-v5-text-small
+91,31,script-related,Hans verließ die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.51431555,SE,jinaai/jina-embeddings-v5-text-small
+92,31,script-unrelated,Hans betrat die Kletterhalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.38624993,SE,jinaai/jina-embeddings-v5-text-small
+93,32,control,Clara begann zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.4907565,SE,jinaai/jina-embeddings-v5-text-small
+94,32,script-related,Clara hörte auf zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.46273756,SE,jinaai/jina-embeddings-v5-text-small
+95,32,script-unrelated,Clara ging zum Schießstand. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.4600537,SE,jinaai/jina-embeddings-v5-text-small
+96,33,control,Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.46725848,SE,jinaai/jina-embeddings-v5-text-small
+97,33,script-related,Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.4389965,SE,jinaai/jina-embeddings-v5-text-small
+98,33,script-unrelated,Georg nahm teil an Yoga. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.3601986,SE,jinaai/jina-embeddings-v5-text-small
+99,34,control,Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.39865616,SE,jinaai/jina-embeddings-v5-text-small
+100,34,script-related,Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.34130457,SE,jinaai/jina-embeddings-v5-text-small
+101,34,script-unrelated,Johanna begann die Jagd. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.39511588,SE,jinaai/jina-embeddings-v5-text-small
+102,35,control,Jürgen betrat die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.42258766,SE,jinaai/jina-embeddings-v5-text-small
+103,35,script-related,Jürgen verließ die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.37156528,SE,jinaai/jina-embeddings-v5-text-small
+104,35,script-unrelated,Jürgen betrat die Bäckerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.30810037,SE,jinaai/jina-embeddings-v5-text-small
+105,36,control,Frauke betrat den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.48268327,SE,jinaai/jina-embeddings-v5-text-small
+106,36,script-related,Frauke verließ den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.41680202,SE,jinaai/jina-embeddings-v5-text-small
+107,36,script-unrelated,Frauke ging ins Stadion. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.37064737,SE,jinaai/jina-embeddings-v5-text-small
+108,37,control,Bernd betrat den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.5924884,SE,jinaai/jina-embeddings-v5-text-small
+109,37,script-related,Bernd verließ den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.5224662,SE,jinaai/jina-embeddings-v5-text-small
+110,37,script-unrelated,Bernd betrat den Kiosk. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.42130038,SE,jinaai/jina-embeddings-v5-text-small
+111,38,control,Nicole ging in den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.46239412,SE,jinaai/jina-embeddings-v5-text-small
+112,38,script-related,Nicole verließ den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.3961771,SE,jinaai/jina-embeddings-v5-text-small
+113,38,script-unrelated,Nicole ging ins Büro. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.3667652,SE,jinaai/jina-embeddings-v5-text-small
+114,39,control,Viktor ging in die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.48372835,SE,jinaai/jina-embeddings-v5-text-small
+115,39,script-related,Viktor verließ die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.46977085,SE,jinaai/jina-embeddings-v5-text-small
+116,39,script-unrelated,Viktor ging ins Labor. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.49741772,SE,jinaai/jina-embeddings-v5-text-small
+117,40,control,Gabi ging zum Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.5659102,SE,jinaai/jina-embeddings-v5-text-small
+118,40,script-related,Gabi verließ den Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.51075995,SE,jinaai/jina-embeddings-v5-text-small
+119,40,script-unrelated,Gabi ging in die Umkleide. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.4787864,SE,jinaai/jina-embeddings-v5-text-small
+120,41,control,Jakob betrat den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.4622424,SE,jinaai/jina-embeddings-v5-text-small
+121,41,script-related,Jakob verließ den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.43223035,SE,jinaai/jina-embeddings-v5-text-small
+122,41,script-unrelated,Jakob betrat die Tankstelle. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.45810893,SE,jinaai/jina-embeddings-v5-text-small
+123,42,control,Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.5001587,SE,jinaai/jina-embeddings-v5-text-small
+124,42,script-related,Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.45872024,SE,jinaai/jina-embeddings-v5-text-small
+125,42,script-unrelated,Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.45126143,SE,jinaai/jina-embeddings-v5-text-small
+126,43,control,Tom begann ein Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.42190087,SE,jinaai/jina-embeddings-v5-text-small
+127,43,script-related,Tom beendete das Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.37347043,SE,jinaai/jina-embeddings-v5-text-small
+128,43,script-unrelated,Tom begann Frühstück zu machen. Sofort stapelte er das,Holz,und zündete es an.,0.3797468,SE,jinaai/jina-embeddings-v5-text-small
+129,44,control,Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.6994615,SE,jinaai/jina-embeddings-v5-text-small
+130,44,script-related,Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.6500428,SE,jinaai/jina-embeddings-v5-text-small
+131,44,script-unrelated,Kim ging ins Krankenhaus. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.39882588,SE,jinaai/jina-embeddings-v5-text-small
+132,45,control,Michael begann sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.47691774,SE,jinaai/jina-embeddings-v5-text-small
+133,45,script-related,Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.44913155,SE,jinaai/jina-embeddings-v5-text-small
+134,45,script-unrelated,Michael begann einen Kuchen zu backen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.41836855,SE,jinaai/jina-embeddings-v5-text-small
+135,46,control,Johann betrat die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.3679181,SE,jinaai/jina-embeddings-v5-text-small
+136,46,script-related,Johann verließ die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.3435473,SE,jinaai/jina-embeddings-v5-text-small
+137,46,script-unrelated,Johann betrat das Kino. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.31227154,SE,jinaai/jina-embeddings-v5-text-small
+138,47,control,Sabine betrat die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.4780461,SE,jinaai/jina-embeddings-v5-text-small
+139,47,script-related,Sabine verließ die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.39707503,SE,jinaai/jina-embeddings-v5-text-small
+140,47,script-unrelated,Sabine betrat den Bauernhof. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.40043375,SE,jinaai/jina-embeddings-v5-text-small
+141,48,control,Kevin betrat die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.5246808,SE,jinaai/jina-embeddings-v5-text-small
+142,48,script-related,Kevin verließ die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.46715364,SE,jinaai/jina-embeddings-v5-text-small
+143,48,script-unrelated,Kevin betrat die Arztpraxis. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.46179983,SE,jinaai/jina-embeddings-v5-text-small
+144,49,control,Susi betrat das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.46509728,SE,jinaai/jina-embeddings-v5-text-small
+145,49,script-related,Susi verließ das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.41897106,SE,jinaai/jina-embeddings-v5-text-small
+146,49,script-unrelated,Susi betrat die Bücherei. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.4467838,SE,jinaai/jina-embeddings-v5-text-small
+147,50,control,Thomas betrat die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.50881124,SE,jinaai/jina-embeddings-v5-text-small
+148,50,script-related,Thomas verließ die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.45060366,SE,jinaai/jina-embeddings-v5-text-small
+149,50,script-unrelated,Thomas begann Spaghetti zu kochen. In Eile rief er den,Kellner,und bestellte ein Bier.,0.49748945,SE,jinaai/jina-embeddings-v5-text-small
+150,51,control,Lea begann die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.5002177,SE,jinaai/jina-embeddings-v5-text-small
+151,51,script-related,Lea war fertig die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.48867944,SE,jinaai/jina-embeddings-v5-text-small
+152,51,script-unrelated,Lea erreichte das Theater. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.45021078,SE,jinaai/jina-embeddings-v5-text-small
+153,52,control,Peter erreichte den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.49657407,SE,jinaai/jina-embeddings-v5-text-small
+154,52,script-related,Peter verließ den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.43142167,SE,jinaai/jina-embeddings-v5-text-small
+155,52,script-unrelated,Peter erreichte den Bahnhof. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.3854933,SE,jinaai/jina-embeddings-v5-text-small
+156,53,control,Lisa betrat das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.32683557,SE,jinaai/jina-embeddings-v5-text-small
+157,53,script-related,Lisa verließ das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.263248,SE,jinaai/jina-embeddings-v5-text-small
+158,53,script-unrelated,Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.3047362,SE,jinaai/jina-embeddings-v5-text-small
+159,54,control,Tim begann seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.5098909,SE,jinaai/jina-embeddings-v5-text-small
+160,54,script-related,Tim beendete seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.5098938,SE,jinaai/jina-embeddings-v5-text-small
+161,54,script-unrelated,Tim ging zum Flughafen. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.41746634,SE,jinaai/jina-embeddings-v5-text-small
+162,55,control,Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.4943459,SE,jinaai/jina-embeddings-v5-text-small
+163,55,script-related,Maria verließ das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.48655117,SE,jinaai/jina-embeddings-v5-text-small
+164,55,script-unrelated,Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.42168847,SE,jinaai/jina-embeddings-v5-text-small
+165,56,control,Lukas begann die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.49473068,SE,jinaai/jina-embeddings-v5-text-small
+166,56,script-related,Lukas beendete die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.46709803,SE,jinaai/jina-embeddings-v5-text-small
+167,56,script-unrelated,Lukas ging zum Friseur. Eilig begrüßte er seine,Studenten,und fing an.,0.37090942,SE,jinaai/jina-embeddings-v5-text-small
+168,57,control,Marie ging zur Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.41721323,SE,jinaai/jina-embeddings-v5-text-small
+169,57,script-related,Marie verließ die Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.36044586,SE,jinaai/jina-embeddings-v5-text-small
+170,57,script-unrelated,Marie ging duschen. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.37068668,SE,jinaai/jina-embeddings-v5-text-small
+171,58,control,Thorsten begann zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.6635782,SE,jinaai/jina-embeddings-v5-text-small
+172,58,script-related,Thorsten hörte auf zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.54473007,SE,jinaai/jina-embeddings-v5-text-small
+173,58,script-unrelated,Thorsten betrat den Blumenladen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.42506102,SE,jinaai/jina-embeddings-v5-text-small
+174,59,control,Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.5321981,SE,jinaai/jina-embeddings-v5-text-small
+175,59,script-related,Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.46965668,SE,jinaai/jina-embeddings-v5-text-small
+176,59,script-unrelated,Claudia betrat den Friedhof. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.38539663,SE,jinaai/jina-embeddings-v5-text-small
+177,60,control,Jonathan ging in die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.5122608,SE,jinaai/jina-embeddings-v5-text-small
+178,60,script-related,Jonathan verließ die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.5061426,SE,jinaai/jina-embeddings-v5-text-small
+179,60,script-unrelated,Jonathan ging in den Garten. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.3777675,SE,jinaai/jina-embeddings-v5-text-small
+180,61,control,Lara ging zum Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.4876352,SE,jinaai/jina-embeddings-v5-text-small
+181,61,script-related,Lara ging weg vom Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.40630275,SE,jinaai/jina-embeddings-v5-text-small
+182,61,script-unrelated,Lara ging ins Museum. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.43863976,SE,jinaai/jina-embeddings-v5-text-small
+183,62,control,Roman ging in die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.598419,SE,jinaai/jina-embeddings-v5-text-small
+184,62,script-related,Roman verließ die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.5836784,SE,jinaai/jina-embeddings-v5-text-small
+185,62,script-unrelated,Roman ging zum Konditor. Schnell suchte er einen,Roman,für seine Frau.,0.5808371,SE,jinaai/jina-embeddings-v5-text-small
+186,63,control,Annika ging in die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.457778,SE,jinaai/jina-embeddings-v5-text-small
+187,63,script-related,Annika verließ die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.41174766,SE,jinaai/jina-embeddings-v5-text-small
+188,63,script-unrelated,Annika ging ins Spa. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.4442661,SE,jinaai/jina-embeddings-v5-text-small
+189,64,control,Emil betrat die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.5708676,SE,jinaai/jina-embeddings-v5-text-small
+190,64,script-related,Emil verließ die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.5103274,SE,jinaai/jina-embeddings-v5-text-small
+191,64,script-unrelated,Emil betrat die Reitschule. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.40025237,SE,jinaai/jina-embeddings-v5-text-small
+192,65,control,Susanne betrat das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.39950466,SE,jinaai/jina-embeddings-v5-text-small
+193,65,script-related,Susanne verließ das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.39211288,SE,jinaai/jina-embeddings-v5-text-small
+194,65,script-unrelated,Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.4353917,SE,jinaai/jina-embeddings-v5-text-small
+195,66,control,Martin kam zur Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.45780107,SE,jinaai/jina-embeddings-v5-text-small
+196,66,script-related,Martin verließ die Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.43516442,SE,jinaai/jina-embeddings-v5-text-small
+197,66,script-unrelated,Martin kam zur Hotelrezeption. Umgehend fragte er nach den,Reifen,für den Winter.,0.40488413,SE,jinaai/jina-embeddings-v5-text-small
+198,67,control,Jutta ging zur Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.51649165,SE,jinaai/jina-embeddings-v5-text-small
+199,67,script-related,Jutta verließ die Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.47542152,SE,jinaai/jina-embeddings-v5-text-small
+200,67,script-unrelated,Jutta ging zum Zahnarzt. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.41631794,SE,jinaai/jina-embeddings-v5-text-small
+201,68,control,Jens ging zur Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.43523097,SE,jinaai/jina-embeddings-v5-text-small
+202,68,script-related,Jens verließ die Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.40143204,SE,jinaai/jina-embeddings-v5-text-small
+203,68,script-unrelated,Jens begann Poker zu spielen. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.4008108,SE,jinaai/jina-embeddings-v5-text-small
+204,69,control,Elena begann zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.45784146,SE,jinaai/jina-embeddings-v5-text-small
+205,69,script-related,Elena hörte auf zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.42172065,SE,jinaai/jina-embeddings-v5-text-small
+206,69,script-unrelated,Elena begann den Urlaub. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.4332285,SE,jinaai/jina-embeddings-v5-text-small
+207,70,control,Bruno begann seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.45542884,SE,jinaai/jina-embeddings-v5-text-small
+208,70,script-related,Bruno beendete seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.4289454,SE,jinaai/jina-embeddings-v5-text-small
+209,70,script-unrelated,Bruno betrat das Bürgeramt. Schnell besorgte er das,Popcorn,aus der Küche.,0.32827973,SE,jinaai/jina-embeddings-v5-text-small
+210,71,control,Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.41476595,SE,jinaai/jina-embeddings-v5-text-small
+211,71,script-related,Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.39235952,SE,jinaai/jina-embeddings-v5-text-small
+212,71,script-unrelated,Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.4393996,SE,jinaai/jina-embeddings-v5-text-small
+213,72,control,Nico fuhr zur Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.44232866,SE,jinaai/jina-embeddings-v5-text-small
+214,72,script-related,Nico verließ die Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.39752063,SE,jinaai/jina-embeddings-v5-text-small
+215,72,script-unrelated,Nico fuhr wandern. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.38557783,SE,jinaai/jina-embeddings-v5-text-small
+216,73,control,Beate ging Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.50805575,SE,jinaai/jina-embeddings-v5-text-small
+217,73,script-related,Beate kam zurück vom Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.5051181,SE,jinaai/jina-embeddings-v5-text-small
+218,73,script-unrelated,Beate fuhr mit dem Taxi. Schnell prüfte sie das,Becken,und schwamm los.,0.46751782,SE,jinaai/jina-embeddings-v5-text-small
+219,74,control,Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.4283256,SE,jinaai/jina-embeddings-v5-text-small
+220,74,script-related,Hubert verließ das Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.44091296,SE,jinaai/jina-embeddings-v5-text-small
+221,74,script-unrelated,Hubert begann zu baden. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.41813117,SE,jinaai/jina-embeddings-v5-text-small
+222,75,control,Jenni begann den Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4596314,SE,jinaai/jina-embeddings-v5-text-small
+223,75,script-related,Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4131305,SE,jinaai/jina-embeddings-v5-text-small
+224,75,script-unrelated,Jenni betrat die Eishalle. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.45351574,SE,jinaai/jina-embeddings-v5-text-small
+225,76,control,Hans betrat die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.47670847,SE,jinaai/jina-embeddings-v5-text-small
+226,76,script-related,Hans verließ die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.4711794,SE,jinaai/jina-embeddings-v5-text-small
+227,76,script-unrelated,Hans begann zu bowlen. Wenig später griff er das,Seil,und spannte es ein.,0.45614868,SE,jinaai/jina-embeddings-v5-text-small
+228,77,control,Clara ging zum Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.53652686,SE,jinaai/jina-embeddings-v5-text-small
+229,77,script-related,Clara verließ den Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.48369026,SE,jinaai/jina-embeddings-v5-text-small
+230,77,script-unrelated,Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.45192325,SE,jinaai/jina-embeddings-v5-text-small
+231,78,control,Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.5637111,SE,jinaai/jina-embeddings-v5-text-small
+232,78,script-related,Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.547913,SE,jinaai/jina-embeddings-v5-text-small
+233,78,script-unrelated,Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.39733654,SE,jinaai/jina-embeddings-v5-text-small
+234,79,control,Johanna begann die Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.40674606,SE,jinaai/jina-embeddings-v5-text-small
+235,79,script-related,Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.39060137,SE,jinaai/jina-embeddings-v5-text-small
+236,79,script-unrelated,Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.40496737,SE,jinaai/jina-embeddings-v5-text-small
+237,80,control,Jürgen betrat die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.4847448,SE,jinaai/jina-embeddings-v5-text-small
+238,80,script-related,Jürgen verließ die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.430998,SE,jinaai/jina-embeddings-v5-text-small
+239,80,script-unrelated,Jürgen betrat den Zoo. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.31206304,SE,jinaai/jina-embeddings-v5-text-small
+240,81,control,Frauke ging ins Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.5081776,SE,jinaai/jina-embeddings-v5-text-small
+241,81,script-related,Frauke verließ das Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.44259182,SE,jinaai/jina-embeddings-v5-text-small
+242,81,script-unrelated,Frauke ging zum Waschsalon. Schnell wählte sie eine,Tribüne,und setzte sich.,0.40127715,SE,jinaai/jina-embeddings-v5-text-small
+243,82,control,Bernd betrat den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.42368248,SE,jinaai/jina-embeddings-v5-text-small
+244,82,script-related,Bernd verließ den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.4080334,SE,jinaai/jina-embeddings-v5-text-small
+245,82,script-unrelated,Bernd betrat den Zirkus. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.37636274,SE,jinaai/jina-embeddings-v5-text-small
+246,83,control,Nicole betrat das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.45619553,SE,jinaai/jina-embeddings-v5-text-small
+247,83,script-related,Nicole verließ das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.35221195,SE,jinaai/jina-embeddings-v5-text-small
+248,83,script-unrelated,Nicole betrat die Sauna. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.287374,SE,jinaai/jina-embeddings-v5-text-small
+249,84,control,Viktor ging ins Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.54173315,SE,jinaai/jina-embeddings-v5-text-small
+250,84,script-related,Viktor verließ das Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.4728653,SE,jinaai/jina-embeddings-v5-text-small
+251,84,script-unrelated,Viktor ging zum Tierarzt. Schnell begann er das,Experiment,und machte sich Notizen.,0.39632437,SE,jinaai/jina-embeddings-v5-text-small
+252,85,control,Gabi ging in die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.4968674,SE,jinaai/jina-embeddings-v5-text-small
+253,85,script-related,Gabi verließ die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.46242768,SE,jinaai/jina-embeddings-v5-text-small
+254,85,script-unrelated,Gabi betrat den Tatort. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.4000803,SE,jinaai/jina-embeddings-v5-text-small
+255,86,control,Jakob betrat die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.4021152,SE,jinaai/jina-embeddings-v5-text-small
+256,86,script-related,Jakob verließ die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.38340923,SE,jinaai/jina-embeddings-v5-text-small
+257,86,script-unrelated,Jakob begann Bäume zu fällen. Sofort sagte er seine,Nummer,und bezahlte.,0.3817874,SE,jinaai/jina-embeddings-v5-text-small
+258,87,control,Hilde begann die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.42138967,SE,jinaai/jina-embeddings-v5-text-small
+259,87,script-related,Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.40889108,SE,jinaai/jina-embeddings-v5-text-small
+260,87,script-unrelated,Hilde begann ein Lagerfeuer. Schnell bestieg sie den,Kutschbock,und los ging es.,0.32122076,SE,jinaai/jina-embeddings-v5-text-small
+261,88,control,Tom begann Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.41207936,SE,jinaai/jina-embeddings-v5-text-small
+262,88,script-related,Tom hörte auf Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.3694721,SE,jinaai/jina-embeddings-v5-text-small
+263,88,script-unrelated,Tom ging zum Weihnachtsmarkt. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.39096794,SE,jinaai/jina-embeddings-v5-text-small
+264,89,control,Kim ging ins Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.40022337,SE,jinaai/jina-embeddings-v5-text-small
+265,89,script-related,Kim verließ das Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.35048708,SE,jinaai/jina-embeddings-v5-text-small
+266,89,script-unrelated,Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.34439903,SE,jinaai/jina-embeddings-v5-text-small
+267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.4421771,SE,jinaai/jina-embeddings-v5-text-small
+268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.36826357,SE,jinaai/jina-embeddings-v5-text-small
+269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.34261033,SE,jinaai/jina-embeddings-v5-text-small
+0,1,control,Johann betrat das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.52971876,SE,jinaai/jina-embeddings-v5-text-nano
+1,1,script-related,Johann verließ das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.47843996,SE,jinaai/jina-embeddings-v5-text-nano
+2,1,script-unrelated,Johann betrat die Wohnung. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,0.3598037,SE,jinaai/jina-embeddings-v5-text-nano
+3,2,control,Sabine betrat das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.47919264,SE,jinaai/jina-embeddings-v5-text-nano
+4,2,script-related,Sabine verließ das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.42500404,SE,jinaai/jina-embeddings-v5-text-nano
+5,2,script-unrelated,Sabine betrat die Schule. Schnell ging sie zur,Kasse,und kaufte eine Karte.,0.45838156,SE,jinaai/jina-embeddings-v5-text-nano
+6,3,control,Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.38671964,SE,jinaai/jina-embeddings-v5-text-nano
+7,3,script-related,Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.3522923,SE,jinaai/jina-embeddings-v5-text-nano
+8,3,script-unrelated,Kevin betrat die Kirche. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,0.32067904,SE,jinaai/jina-embeddings-v5-text-nano
+9,4,control,Susi betrat die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.66524965,SE,jinaai/jina-embeddings-v5-text-nano
+10,4,script-related,Susi verließ die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.5936212,SE,jinaai/jina-embeddings-v5-text-nano
+11,4,script-unrelated,Susi betrat das Gehege. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,0.5336243,SE,jinaai/jina-embeddings-v5-text-nano
+12,5,control,Roman betrat die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.43892857,SE,jinaai/jina-embeddings-v5-text-nano
+13,5,script-related,Roman verließ die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.38225612,SE,jinaai/jina-embeddings-v5-text-nano
+14,5,script-unrelated,Roman betrat die Kneipe. Kurz danach ging er zum,Regal,und suchte einen Krimi.,0.43742928,SE,jinaai/jina-embeddings-v5-text-nano
+15,6,control,Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.55836886,SE,jinaai/jina-embeddings-v5-text-nano
+16,6,script-related,Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.5491641,SE,jinaai/jina-embeddings-v5-text-nano
+17,6,script-unrelated,Lea begann die Wände zu streichen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,0.42358604,SE,jinaai/jina-embeddings-v5-text-nano
+18,7,control,Peter erreichte das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.48495263,SE,jinaai/jina-embeddings-v5-text-nano
+19,7,script-related,Peter verließ das Theater. Wenig später ging er zur,Loge,und setzte sich.,0.44947982,SE,jinaai/jina-embeddings-v5-text-nano
+20,7,script-unrelated,Peter erreichte den Supermarkt. Wenig später ging er zur,Loge,und setzte sich.,0.419521,SE,jinaai/jina-embeddings-v5-text-nano
+21,8,control,Lisa betrat den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.5650355,SE,jinaai/jina-embeddings-v5-text-nano
+22,8,script-related,Lisa verließ den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.5308671,SE,jinaai/jina-embeddings-v5-text-nano
+23,8,script-unrelated,Lisa betrat das Haus. Wenig später war sie am,Gleis,und wartete auf den Zug.,0.51347667,SE,jinaai/jina-embeddings-v5-text-nano
+24,9,control,Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.55587995,SE,jinaai/jina-embeddings-v5-text-nano
+25,9,script-related,Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.58220524,SE,jinaai/jina-embeddings-v5-text-nano
+26,9,script-unrelated,Tim begann seine Fahrstunde. Umgehend war er auf dem,Laufband,und rann wie verrückt.,0.43410563,SE,jinaai/jina-embeddings-v5-text-nano
+27,10,control,Maria erreichte den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.48909134,SE,jinaai/jina-embeddings-v5-text-nano
+28,10,script-related,Maria verließ den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.41467044,SE,jinaai/jina-embeddings-v5-text-nano
+29,10,script-unrelated,Maria erreichte das Einkaufszentrum. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,0.4629156,SE,jinaai/jina-embeddings-v5-text-nano
+30,11,control,Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.55122375,SE,jinaai/jina-embeddings-v5-text-nano
+31,11,script-related,Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.50581396,SE,jinaai/jina-embeddings-v5-text-nano
+32,11,script-unrelated,Lukas kam zum Unterricht. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,0.43148756,SE,jinaai/jina-embeddings-v5-text-nano
+33,12,control,Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.55804,SE,jinaai/jina-embeddings-v5-text-nano
+34,12,script-related,Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.53681725,SE,jinaai/jina-embeddings-v5-text-nano
+35,12,script-unrelated,Marie ging zur Uni. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,0.47418177,SE,jinaai/jina-embeddings-v5-text-nano
+36,13,control,Thorsten begann zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.53175753,SE,jinaai/jina-embeddings-v5-text-nano
+37,13,script-related,Thorsten hörte auf zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.48988912,SE,jinaai/jina-embeddings-v5-text-nano
+38,13,script-unrelated,Thorsten begann zu grillen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,0.34345353,SE,jinaai/jina-embeddings-v5-text-nano
+39,14,control,Claudia betrat den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.5502146,SE,jinaai/jina-embeddings-v5-text-nano
+40,14,script-related,Claudia verließ den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.5264331,SE,jinaai/jina-embeddings-v5-text-nano
+41,14,script-unrelated,Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer,Rose,für eine Freundin.,0.47917104,SE,jinaai/jina-embeddings-v5-text-nano
+42,15,control,Jonathan ging zum Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.6214253,SE,jinaai/jina-embeddings-v5-text-nano
+43,15,script-related,Jonathan verließ den Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.5859641,SE,jinaai/jina-embeddings-v5-text-nano
+44,15,script-unrelated,Jonathan ging in die Küche. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,0.36505356,SE,jinaai/jina-embeddings-v5-text-nano
+45,16,control,Lara ging in den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.44672096,SE,jinaai/jina-embeddings-v5-text-nano
+46,16,script-related,Lara verließ den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.41642007,SE,jinaai/jina-embeddings-v5-text-nano
+47,16,script-unrelated,Lara ging zum Herd. Genau prüfte sie die,Erde,und goss dann die Blumen.,0.4284108,SE,jinaai/jina-embeddings-v5-text-nano
+48,17,control,Roman ging ins Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.5318615,SE,jinaai/jina-embeddings-v5-text-nano
+49,17,script-related,Roman verließ das Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.5149665,SE,jinaai/jina-embeddings-v5-text-nano
+50,17,script-unrelated,Roman ging in die Buchhandlung. Akribisch betrachtete er die,Skulpturen,und war begeistert.,0.4310002,SE,jinaai/jina-embeddings-v5-text-nano
+51,18,control,Annika ging zum Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.62876576,SE,jinaai/jina-embeddings-v5-text-nano
+52,18,script-related,Annika verließ den Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.5792559,SE,jinaai/jina-embeddings-v5-text-nano
+53,18,script-unrelated,Annika ging in die Boutique. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,0.4426734,SE,jinaai/jina-embeddings-v5-text-nano
+54,19,control,Emil betrat das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.63020086,SE,jinaai/jina-embeddings-v5-text-nano
+55,19,script-related,Emil verließ das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.55438334,SE,jinaai/jina-embeddings-v5-text-nano
+56,19,script-unrelated,Emil betrat die Apotheke. Nach einer Weile bekam er eine,Massage,und genoss sie.,0.47653395,SE,jinaai/jina-embeddings-v5-text-nano
+57,20,control,Susanne betrat die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.51412725,SE,jinaai/jina-embeddings-v5-text-nano
+58,20,script-related,Susanne verließ die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,0.5170291,SE,jinaai/jina-embeddings-v5-text-nano
+59,20,script-unrelated,Susanne betrat das Bad. Schnell setzte sie den,Sattel,auf und ritt los.,0.47241145,SE,jinaai/jina-embeddings-v5-text-nano
+60,21,control,Martin kam zur Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.5008299,SE,jinaai/jina-embeddings-v5-text-nano
+61,21,script-related,Martin verließ die Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.45728552,SE,jinaai/jina-embeddings-v5-text-nano
+62,21,script-unrelated,Martin kam zur Autowerkstatt. Zügig öffnete er den,Koffer,und wurde durchgewunken.,0.3893885,SE,jinaai/jina-embeddings-v5-text-nano
+63,22,control,Jutta ging zur Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.47824728,SE,jinaai/jina-embeddings-v5-text-nano
+64,22,script-related,Jutta verließ die Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.44767606,SE,jinaai/jina-embeddings-v5-text-nano
+65,22,script-unrelated,Jutta ging zur Post. Sofort bekam sie ein,Zimmer,und dankte freundlich.,0.3949566,SE,jinaai/jina-embeddings-v5-text-nano
+66,23,control,Jens ging zum Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.40177572,SE,jinaai/jina-embeddings-v5-text-nano
+67,23,script-related,Jens verließ den Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.36822414,SE,jinaai/jina-embeddings-v5-text-nano
+68,23,script-unrelated,Jens ging zur Zollstelle. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,0.39223254,SE,jinaai/jina-embeddings-v5-text-nano
+69,24,control,Elena begann Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.46097475,SE,jinaai/jina-embeddings-v5-text-nano
+70,24,script-related,Elena hörte auf Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,0.468135,SE,jinaai/jina-embeddings-v5-text-nano
+71,24,script-unrelated,Elena begann zu zeichnen. Schnell setzte sie ihr,Geld,und gewann.,0.40404153,SE,jinaai/jina-embeddings-v5-text-nano
+72,25,control,Bruno begann seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.4511162,SE,jinaai/jina-embeddings-v5-text-nano
+73,25,script-related,Bruno beendete seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,0.42909712,SE,jinaai/jina-embeddings-v5-text-nano
+74,25,script-unrelated,Bruno begann seinen Filmabend. Endlich kam er am,Meer,an und genoss das Wetter.,0.4509094,SE,jinaai/jina-embeddings-v5-text-nano
+75,26,control,Jana betrat das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.50825435,SE,jinaai/jina-embeddings-v5-text-nano
+76,26,script-related,Jana verließ das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.4562013,SE,jinaai/jina-embeddings-v5-text-nano
+77,26,script-unrelated,Jana betrat das Gartencenter. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,0.37392184,SE,jinaai/jina-embeddings-v5-text-nano
+78,27,control,Nico fuhr auf die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.50613225,SE,jinaai/jina-embeddings-v5-text-nano
+79,27,script-related,Nico verließ die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.42006144,SE,jinaai/jina-embeddings-v5-text-nano
+80,27,script-unrelated,Nico fuhr zur Pizzeria. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,0.4450059,SE,jinaai/jina-embeddings-v5-text-nano
+81,28,control,Beate ging Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.523835,SE,jinaai/jina-embeddings-v5-text-nano
+82,28,script-related,Beate kam zurück vom Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.5104843,SE,jinaai/jina-embeddings-v5-text-nano
+83,28,script-unrelated,Beate ging schwimmen. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,0.45556632,SE,jinaai/jina-embeddings-v5-text-nano
+84,29,control,Hubert nahm ein Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.5315585,SE,jinaai/jina-embeddings-v5-text-nano
+85,29,script-related,Hubert verließ das Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.4985994,SE,jinaai/jina-embeddings-v5-text-nano
+86,29,script-unrelated,Hubert nahm ein Flugzeug. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,0.4639004,SE,jinaai/jina-embeddings-v5-text-nano
+87,30,control,Jenni begann zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.4371315,SE,jinaai/jina-embeddings-v5-text-nano
+88,30,script-related,Jenni hörte auf zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.39995506,SE,jinaai/jina-embeddings-v5-text-nano
+89,30,script-unrelated,Jenni begann die Vorlesung. Sofort verteilte sie den,Schaum,auf ihrem Körper.,0.3604651,SE,jinaai/jina-embeddings-v5-text-nano
+90,31,control,Hans betrat die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.5764033,SE,jinaai/jina-embeddings-v5-text-nano
+91,31,script-related,Hans verließ die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.5333921,SE,jinaai/jina-embeddings-v5-text-nano
+92,31,script-unrelated,Hans betrat die Kletterhalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,0.43537408,SE,jinaai/jina-embeddings-v5-text-nano
+93,32,control,Clara begann zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.50914747,SE,jinaai/jina-embeddings-v5-text-nano
+94,32,script-related,Clara hörte auf zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.48509568,SE,jinaai/jina-embeddings-v5-text-nano
+95,32,script-unrelated,Clara ging zum Schießstand. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,0.4667956,SE,jinaai/jina-embeddings-v5-text-nano
+96,33,control,Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.3895195,SE,jinaai/jina-embeddings-v5-text-nano
+97,33,script-related,Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.37760568,SE,jinaai/jina-embeddings-v5-text-nano
+98,33,script-unrelated,Georg nahm teil an Yoga. Sofort benutzte er den,Schlauch,und löschte das Feuer.,0.32216558,SE,jinaai/jina-embeddings-v5-text-nano
+99,34,control,Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.43728554,SE,jinaai/jina-embeddings-v5-text-nano
+100,34,script-related,Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.43298507,SE,jinaai/jina-embeddings-v5-text-nano
+101,34,script-unrelated,Johanna begann die Jagd. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,0.4394853,SE,jinaai/jina-embeddings-v5-text-nano
+102,35,control,Jürgen betrat die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.54840356,SE,jinaai/jina-embeddings-v5-text-nano
+103,35,script-related,Jürgen verließ die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.5062285,SE,jinaai/jina-embeddings-v5-text-nano
+104,35,script-unrelated,Jürgen betrat die Bäckerei. Sofort fragte er nach einem,Steak,und bezahlte.,0.43234748,SE,jinaai/jina-embeddings-v5-text-nano
+105,36,control,Frauke betrat den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.4828455,SE,jinaai/jina-embeddings-v5-text-nano
+106,36,script-related,Frauke verließ den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.46728066,SE,jinaai/jina-embeddings-v5-text-nano
+107,36,script-unrelated,Frauke ging ins Stadion. Wenig später fotografierte sie ein,Zebra,beim Trinken.,0.36544776,SE,jinaai/jina-embeddings-v5-text-nano
+108,37,control,Bernd betrat den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.5620124,SE,jinaai/jina-embeddings-v5-text-nano
+109,37,script-related,Bernd verließ den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.49743629,SE,jinaai/jina-embeddings-v5-text-nano
+110,37,script-unrelated,Bernd betrat den Kiosk. Schnell wählte er das,Waschprogramm,und lies es laufen.,0.38255328,SE,jinaai/jina-embeddings-v5-text-nano
+111,38,control,Nicole ging in den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.5061036,SE,jinaai/jina-embeddings-v5-text-nano
+112,38,script-related,Nicole verließ den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.47163457,SE,jinaai/jina-embeddings-v5-text-nano
+113,38,script-unrelated,Nicole ging ins Büro. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,0.44241253,SE,jinaai/jina-embeddings-v5-text-nano
+114,39,control,Viktor ging in die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.46585864,SE,jinaai/jina-embeddings-v5-text-nano
+115,39,script-related,Viktor verließ die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.42925107,SE,jinaai/jina-embeddings-v5-text-nano
+116,39,script-unrelated,Viktor ging ins Labor. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,0.51177865,SE,jinaai/jina-embeddings-v5-text-nano
+117,40,control,Gabi ging zum Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.49594456,SE,jinaai/jina-embeddings-v5-text-nano
+118,40,script-related,Gabi verließ den Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.4396918,SE,jinaai/jina-embeddings-v5-text-nano
+119,40,script-unrelated,Gabi ging in die Umkleide. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,0.4255695,SE,jinaai/jina-embeddings-v5-text-nano
+120,41,control,Jakob betrat den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.41119325,SE,jinaai/jina-embeddings-v5-text-nano
+121,41,script-related,Jakob verließ den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.35430127,SE,jinaai/jina-embeddings-v5-text-nano
+122,41,script-unrelated,Jakob betrat die Tankstelle. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,0.3692865,SE,jinaai/jina-embeddings-v5-text-nano
+123,42,control,Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.41907096,SE,jinaai/jina-embeddings-v5-text-nano
+124,42,script-related,Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.44122204,SE,jinaai/jina-embeddings-v5-text-nano
+125,42,script-unrelated,Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,0.4173515,SE,jinaai/jina-embeddings-v5-text-nano
+126,43,control,Tom begann ein Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.47485882,SE,jinaai/jina-embeddings-v5-text-nano
+127,43,script-related,Tom beendete das Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,0.45318645,SE,jinaai/jina-embeddings-v5-text-nano
+128,43,script-unrelated,Tom begann Frühstück zu machen. Sofort stapelte er das,Holz,und zündete es an.,0.38466287,SE,jinaai/jina-embeddings-v5-text-nano
+129,44,control,Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.71682745,SE,jinaai/jina-embeddings-v5-text-nano
+130,44,script-related,Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.6742275,SE,jinaai/jina-embeddings-v5-text-nano
+131,44,script-unrelated,Kim ging ins Krankenhaus. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,0.44314158,SE,jinaai/jina-embeddings-v5-text-nano
+132,45,control,Michael begann sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.5189294,SE,jinaai/jina-embeddings-v5-text-nano
+133,45,script-related,Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.48302367,SE,jinaai/jina-embeddings-v5-text-nano
+134,45,script-unrelated,Michael begann einen Kuchen zu backen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,0.47322392,SE,jinaai/jina-embeddings-v5-text-nano
+135,46,control,Johann betrat die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.43063757,SE,jinaai/jina-embeddings-v5-text-nano
+136,46,script-related,Johann verließ die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.36308977,SE,jinaai/jina-embeddings-v5-text-nano
+137,46,script-unrelated,Johann betrat das Kino. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,0.37881643,SE,jinaai/jina-embeddings-v5-text-nano
+138,47,control,Sabine betrat die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.5351436,SE,jinaai/jina-embeddings-v5-text-nano
+139,47,script-related,Sabine verließ die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.44886994,SE,jinaai/jina-embeddings-v5-text-nano
+140,47,script-unrelated,Sabine betrat den Bauernhof. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,0.38797316,SE,jinaai/jina-embeddings-v5-text-nano
+141,48,control,Kevin betrat die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.5470333,SE,jinaai/jina-embeddings-v5-text-nano
+142,48,script-related,Kevin verließ die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.49332908,SE,jinaai/jina-embeddings-v5-text-nano
+143,48,script-unrelated,Kevin betrat die Arztpraxis. Vorsichtig nahm er eine,Kerze,und zündete sie an.,0.45304894,SE,jinaai/jina-embeddings-v5-text-nano
+144,49,control,Susi betrat das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.42235994,SE,jinaai/jina-embeddings-v5-text-nano
+145,49,script-related,Susi verließ das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.39393693,SE,jinaai/jina-embeddings-v5-text-nano
+146,49,script-unrelated,Susi betrat die Bücherei. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,0.42692018,SE,jinaai/jina-embeddings-v5-text-nano
+147,50,control,Thomas betrat die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.459193,SE,jinaai/jina-embeddings-v5-text-nano
+148,50,script-related,Thomas verließ die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,0.43168962,SE,jinaai/jina-embeddings-v5-text-nano
+149,50,script-unrelated,Thomas begann Spaghetti zu kochen. In Eile rief er den,Kellner,und bestellte ein Bier.,0.40704173,SE,jinaai/jina-embeddings-v5-text-nano
+150,51,control,Lea begann die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.56288666,SE,jinaai/jina-embeddings-v5-text-nano
+151,51,script-related,Lea war fertig die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.5317752,SE,jinaai/jina-embeddings-v5-text-nano
+152,51,script-unrelated,Lea erreichte das Theater. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,0.46515,SE,jinaai/jina-embeddings-v5-text-nano
+153,52,control,Peter erreichte den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.47485492,SE,jinaai/jina-embeddings-v5-text-nano
+154,52,script-related,Peter verließ den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.44888273,SE,jinaai/jina-embeddings-v5-text-nano
+155,52,script-unrelated,Peter erreichte den Bahnhof. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,0.3906829,SE,jinaai/jina-embeddings-v5-text-nano
+156,53,control,Lisa betrat das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.35280797,SE,jinaai/jina-embeddings-v5-text-nano
+157,53,script-related,Lisa verließ das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.32194215,SE,jinaai/jina-embeddings-v5-text-nano
+158,53,script-unrelated,Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,0.32632327,SE,jinaai/jina-embeddings-v5-text-nano
+159,54,control,Tim begann seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.38715488,SE,jinaai/jina-embeddings-v5-text-nano
+160,54,script-related,Tim beendete seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.3917636,SE,jinaai/jina-embeddings-v5-text-nano
+161,54,script-unrelated,Tim ging zum Flughafen. Hektisch drückte er aufs,Gaspedal,und fuhr los.,0.33032313,SE,jinaai/jina-embeddings-v5-text-nano
+162,55,control,Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.47788748,SE,jinaai/jina-embeddings-v5-text-nano
+163,55,script-related,Maria verließ das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.47774178,SE,jinaai/jina-embeddings-v5-text-nano
+164,55,script-unrelated,Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,0.39206046,SE,jinaai/jina-embeddings-v5-text-nano
+165,56,control,Lukas begann die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.5388943,SE,jinaai/jina-embeddings-v5-text-nano
+166,56,script-related,Lukas beendete die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,0.5223367,SE,jinaai/jina-embeddings-v5-text-nano
+167,56,script-unrelated,Lukas ging zum Friseur. Eilig begrüßte er seine,Studenten,und fing an.,0.41499537,SE,jinaai/jina-embeddings-v5-text-nano
+168,57,control,Marie ging zur Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.43440393,SE,jinaai/jina-embeddings-v5-text-nano
+169,57,script-related,Marie verließ die Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.39478156,SE,jinaai/jina-embeddings-v5-text-nano
+170,57,script-unrelated,Marie ging duschen. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,0.40734828,SE,jinaai/jina-embeddings-v5-text-nano
+171,58,control,Thorsten begann zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.71930206,SE,jinaai/jina-embeddings-v5-text-nano
+172,58,script-related,Thorsten hörte auf zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.56959987,SE,jinaai/jina-embeddings-v5-text-nano
+173,58,script-unrelated,Thorsten betrat den Blumenladen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,0.38765195,SE,jinaai/jina-embeddings-v5-text-nano
+174,59,control,Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.52469116,SE,jinaai/jina-embeddings-v5-text-nano
+175,59,script-related,Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.47775897,SE,jinaai/jina-embeddings-v5-text-nano
+176,59,script-unrelated,Claudia betrat den Friedhof. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,0.4576731,SE,jinaai/jina-embeddings-v5-text-nano
+177,60,control,Jonathan ging in die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.558177,SE,jinaai/jina-embeddings-v5-text-nano
+178,60,script-related,Jonathan verließ die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.51852053,SE,jinaai/jina-embeddings-v5-text-nano
+179,60,script-unrelated,Jonathan ging in den Garten. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,0.37768137,SE,jinaai/jina-embeddings-v5-text-nano
+180,61,control,Lara ging zum Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.50936747,SE,jinaai/jina-embeddings-v5-text-nano
+181,61,script-related,Lara ging weg vom Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.43898928,SE,jinaai/jina-embeddings-v5-text-nano
+182,61,script-unrelated,Lara ging ins Museum. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,0.42060423,SE,jinaai/jina-embeddings-v5-text-nano
+183,62,control,Roman ging in die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.5954119,SE,jinaai/jina-embeddings-v5-text-nano
+184,62,script-related,Roman verließ die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,0.564791,SE,jinaai/jina-embeddings-v5-text-nano
+185,62,script-unrelated,Roman ging zum Konditor. Schnell suchte er einen,Roman,für seine Frau.,0.64601374,SE,jinaai/jina-embeddings-v5-text-nano
+186,63,control,Annika ging in die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.44865254,SE,jinaai/jina-embeddings-v5-text-nano
+187,63,script-related,Annika verließ die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.439575,SE,jinaai/jina-embeddings-v5-text-nano
+188,63,script-unrelated,Annika ging ins Spa. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,0.37816766,SE,jinaai/jina-embeddings-v5-text-nano
+189,64,control,Emil betrat die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.5964923,SE,jinaai/jina-embeddings-v5-text-nano
+190,64,script-related,Emil verließ die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.5671663,SE,jinaai/jina-embeddings-v5-text-nano
+191,64,script-unrelated,Emil betrat die Reitschule. Schnell kaufte er das,Medikament,und ging dann nach Hause.,0.3471275,SE,jinaai/jina-embeddings-v5-text-nano
+192,65,control,Susanne betrat das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.3476413,SE,jinaai/jina-embeddings-v5-text-nano
+193,65,script-related,Susanne verließ das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.3218833,SE,jinaai/jina-embeddings-v5-text-nano
+194,65,script-unrelated,Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,0.34142372,SE,jinaai/jina-embeddings-v5-text-nano
+195,66,control,Martin kam zur Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.4492498,SE,jinaai/jina-embeddings-v5-text-nano
+196,66,script-related,Martin verließ die Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,0.44268337,SE,jinaai/jina-embeddings-v5-text-nano
+197,66,script-unrelated,Martin kam zur Hotelrezeption. Umgehend fragte er nach den,Reifen,für den Winter.,0.34256542,SE,jinaai/jina-embeddings-v5-text-nano
+198,67,control,Jutta ging zur Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.5275886,SE,jinaai/jina-embeddings-v5-text-nano
+199,67,script-related,Jutta verließ die Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.5317697,SE,jinaai/jina-embeddings-v5-text-nano
+200,67,script-unrelated,Jutta ging zum Zahnarzt. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,0.44625688,SE,jinaai/jina-embeddings-v5-text-nano
+201,68,control,Jens ging zur Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.45112708,SE,jinaai/jina-embeddings-v5-text-nano
+202,68,script-related,Jens verließ die Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.43943918,SE,jinaai/jina-embeddings-v5-text-nano
+203,68,script-unrelated,Jens begann Poker zu spielen. Schnell zeigte er sein,Formular,und schaute den Beamten an.,0.4239515,SE,jinaai/jina-embeddings-v5-text-nano
+204,69,control,Elena begann zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.4464941,SE,jinaai/jina-embeddings-v5-text-nano
+205,69,script-related,Elena hörte auf zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.4569857,SE,jinaai/jina-embeddings-v5-text-nano
+206,69,script-unrelated,Elena begann den Urlaub. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,0.4112591,SE,jinaai/jina-embeddings-v5-text-nano
+207,70,control,Bruno begann seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.5113925,SE,jinaai/jina-embeddings-v5-text-nano
+208,70,script-related,Bruno beendete seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,0.48605934,SE,jinaai/jina-embeddings-v5-text-nano
+209,70,script-unrelated,Bruno betrat das Bürgeramt. Schnell besorgte er das,Popcorn,aus der Küche.,0.2944635,SE,jinaai/jina-embeddings-v5-text-nano
+210,71,control,Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.47582927,SE,jinaai/jina-embeddings-v5-text-nano
+211,71,script-related,Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.44776627,SE,jinaai/jina-embeddings-v5-text-nano
+212,71,script-unrelated,Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,0.4813708,SE,jinaai/jina-embeddings-v5-text-nano
+213,72,control,Nico fuhr zur Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.48396236,SE,jinaai/jina-embeddings-v5-text-nano
+214,72,script-related,Nico verließ die Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.4647939,SE,jinaai/jina-embeddings-v5-text-nano
+215,72,script-unrelated,Nico fuhr wandern. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,0.42329422,SE,jinaai/jina-embeddings-v5-text-nano
+216,73,control,Beate ging Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.58942264,SE,jinaai/jina-embeddings-v5-text-nano
+217,73,script-related,Beate kam zurück vom Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,0.5838628,SE,jinaai/jina-embeddings-v5-text-nano
+218,73,script-unrelated,Beate fuhr mit dem Taxi. Schnell prüfte sie das,Becken,und schwamm los.,0.52822673,SE,jinaai/jina-embeddings-v5-text-nano
+219,74,control,Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.49895883,SE,jinaai/jina-embeddings-v5-text-nano
+220,74,script-related,Hubert verließ das Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.49283162,SE,jinaai/jina-embeddings-v5-text-nano
+221,74,script-unrelated,Hubert begann zu baden. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,0.4434655,SE,jinaai/jina-embeddings-v5-text-nano
+222,75,control,Jenni begann den Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4200023,SE,jinaai/jina-embeddings-v5-text-nano
+223,75,script-related,Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4268734,SE,jinaai/jina-embeddings-v5-text-nano
+224,75,script-unrelated,Jenni betrat die Eishalle. Sofort öffnete sie die,Tafel,und begann zu schreiben.,0.4370812,SE,jinaai/jina-embeddings-v5-text-nano
+225,76,control,Hans betrat die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.44393796,SE,jinaai/jina-embeddings-v5-text-nano
+226,76,script-related,Hans verließ die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,0.42260826,SE,jinaai/jina-embeddings-v5-text-nano
+227,76,script-unrelated,Hans begann zu bowlen. Wenig später griff er das,Seil,und spannte es ein.,0.42972377,SE,jinaai/jina-embeddings-v5-text-nano
+228,77,control,Clara ging zum Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.512512,SE,jinaai/jina-embeddings-v5-text-nano
+229,77,script-related,Clara verließ den Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.49371862,SE,jinaai/jina-embeddings-v5-text-nano
+230,77,script-unrelated,Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,0.3940194,SE,jinaai/jina-embeddings-v5-text-nano
+231,78,control,Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.6370831,SE,jinaai/jina-embeddings-v5-text-nano
+232,78,script-related,Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.6149543,SE,jinaai/jina-embeddings-v5-text-nano
+233,78,script-unrelated,Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,0.45755553,SE,jinaai/jina-embeddings-v5-text-nano
+234,79,control,Johanna begann die Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.41481796,SE,jinaai/jina-embeddings-v5-text-nano
+235,79,script-related,Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.41280663,SE,jinaai/jina-embeddings-v5-text-nano
+236,79,script-unrelated,Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,0.42207924,SE,jinaai/jina-embeddings-v5-text-nano
+237,80,control,Jürgen betrat die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.54144824,SE,jinaai/jina-embeddings-v5-text-nano
+238,80,script-related,Jürgen verließ die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.4709458,SE,jinaai/jina-embeddings-v5-text-nano
+239,80,script-unrelated,Jürgen betrat den Zoo. Wenig später zeigte er auf das,Croissant,und wählte aus.,0.37673447,SE,jinaai/jina-embeddings-v5-text-nano
+240,81,control,Frauke ging ins Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.5128244,SE,jinaai/jina-embeddings-v5-text-nano
+241,81,script-related,Frauke verließ das Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,0.4624626,SE,jinaai/jina-embeddings-v5-text-nano
+242,81,script-unrelated,Frauke ging zum Waschsalon. Schnell wählte sie eine,Tribüne,und setzte sich.,0.34535214,SE,jinaai/jina-embeddings-v5-text-nano
+243,82,control,Bernd betrat den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.4981027,SE,jinaai/jina-embeddings-v5-text-nano
+244,82,script-related,Bernd verließ den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.45983228,SE,jinaai/jina-embeddings-v5-text-nano
+245,82,script-unrelated,Bernd betrat den Zirkus. Sofort kaufte er eine,Zeitung,und ging wieder heim.,0.39474872,SE,jinaai/jina-embeddings-v5-text-nano
+246,83,control,Nicole betrat das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.5395455,SE,jinaai/jina-embeddings-v5-text-nano
+247,83,script-related,Nicole verließ das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.44647795,SE,jinaai/jina-embeddings-v5-text-nano
+248,83,script-unrelated,Nicole betrat die Sauna. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,0.31916517,SE,jinaai/jina-embeddings-v5-text-nano
+249,84,control,Viktor ging ins Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.47804493,SE,jinaai/jina-embeddings-v5-text-nano
+250,84,script-related,Viktor verließ das Labor. Schnell begann er das,Experiment,und machte sich Notizen.,0.49626854,SE,jinaai/jina-embeddings-v5-text-nano
+251,84,script-unrelated,Viktor ging zum Tierarzt. Schnell begann er das,Experiment,und machte sich Notizen.,0.38159516,SE,jinaai/jina-embeddings-v5-text-nano
+252,85,control,Gabi ging in die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.54911816,SE,jinaai/jina-embeddings-v5-text-nano
+253,85,script-related,Gabi verließ die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.5100231,SE,jinaai/jina-embeddings-v5-text-nano
+254,85,script-unrelated,Gabi betrat den Tatort. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,0.39530823,SE,jinaai/jina-embeddings-v5-text-nano
+255,86,control,Jakob betrat die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.4552096,SE,jinaai/jina-embeddings-v5-text-nano
+256,86,script-related,Jakob verließ die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,0.40717444,SE,jinaai/jina-embeddings-v5-text-nano
+257,86,script-unrelated,Jakob begann Bäume zu fällen. Sofort sagte er seine,Nummer,und bezahlte.,0.41548902,SE,jinaai/jina-embeddings-v5-text-nano
+258,87,control,Hilde begann die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.40216652,SE,jinaai/jina-embeddings-v5-text-nano
+259,87,script-related,Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,0.38055682,SE,jinaai/jina-embeddings-v5-text-nano
+260,87,script-unrelated,Hilde begann ein Lagerfeuer. Schnell bestieg sie den,Kutschbock,und los ging es.,0.40609875,SE,jinaai/jina-embeddings-v5-text-nano
+261,88,control,Tom begann Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.4043754,SE,jinaai/jina-embeddings-v5-text-nano
+262,88,script-related,Tom hörte auf Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.40573314,SE,jinaai/jina-embeddings-v5-text-nano
+263,88,script-unrelated,Tom ging zum Weihnachtsmarkt. Sofort öffnete er die,Butter,und machte sich ein Brot.,0.41582912,SE,jinaai/jina-embeddings-v5-text-nano
+264,89,control,Kim ging ins Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.40952125,SE,jinaai/jina-embeddings-v5-text-nano
+265,89,script-related,Kim verließ das Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.36339042,SE,jinaai/jina-embeddings-v5-text-nano
+266,89,script-unrelated,Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,0.3568134,SE,jinaai/jina-embeddings-v5-text-nano
+267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.40173292,SE,jinaai/jina-embeddings-v5-text-nano
+268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.386138,SE,jinaai/jina-embeddings-v5-text-nano
+269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.37229475,SE,jinaai/jina-embeddings-v5-text-nano

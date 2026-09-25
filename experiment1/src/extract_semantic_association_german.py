@@ -75,6 +75,20 @@ if __name__ == "__main__":
             "model_name": "sentence-transformers/stsb-xlm-r-multilingual",
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-small",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-nano",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "dewiki_20180420_100d",
