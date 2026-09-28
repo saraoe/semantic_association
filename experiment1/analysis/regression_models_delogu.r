@@ -167,3 +167,37 @@ fit_assoc_lp <- brm(assoc_lp_formula,
     seed = 246,
     file = file.path(out_folder, "delogu_assoc_lp")
 )
+
+# extra priors for Savage-Dickey BF
+print("Models with extra priors")
+prior_sem_sd <- c(1, 2)
+for (impl in all_implementations) {
+    data <- delogu_df |>
+        filter(
+            full_implementation == impl
+        ) |>
+        mutate(
+            s_sem = scale(semantic_association)
+        )
+    for (prior_sd in prior_sem_sd) {
+        prior_sem <- set_prior(
+            sprintf("normal(0, %s)", prior_sd),
+            class = "b",
+            coef = "s_sem"
+        )
+        priors <- c(erp_priors, prior_sem)
+
+        prior_suffix <- paste0("_bsemprior", prior_sd)
+        print(paste0(impl, prior_suffix))
+
+        fit_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("delogu_lp_", impl, prior_suffix))
+        )
+    }
+}
