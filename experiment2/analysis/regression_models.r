@@ -144,7 +144,7 @@ if ("tanner" %in% dataset) {
     # extra priors for Savage-Dickey BF
     print("Models with extra priors")
     prior_sem_sd <- c(1, 2)
-    for (imp_id in all_implementations) {
+    for (imp_id in implementations) {
         data <- tanner_df |>
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
@@ -241,7 +241,7 @@ if ("ucl" %in% dataset) {
     # extra priors for Savage-Dickey BF
     print("Models with extra priors")
     prior_sem_sd <- c(1, 2)
-    for (imp_id in all_implementations) {
+    for (imp_id in implementations) {
         data <- ucl_df |>
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
