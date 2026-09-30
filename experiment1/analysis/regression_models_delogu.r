@@ -201,3 +201,44 @@ for (impl in all_implementations) {
         )
     }
 }
+
+print("Human-rated association")
+data <- delogu_df |>
+    select(Assoc, Plaus, s_lp, Subject, ItemNum, n400) |>
+    distinct() |>
+    mutate(
+        s_plaus = scale(Plaus),
+        s_assoc = scale(Assoc)
+    )
+
+fit_assoc_lp <- brm(assoc_lp_formula,
+    family = gaussian(),
+    prior = erp_priors,
+    data = data,
+    chains = 4,
+    control = list(adapt_delta = 0.9999),
+    seed = 246,
+    file = file.path(out_folder, "delogu_assoc_lp")
+)
+
+for (prior_sd in prior_sem_sd) {
+        prior_sem <- set_prior(
+            sprintf("normal(0, %s)", prior_sd),
+            class = "b",
+            coef = "s_assoc"
+        )
+        priors <- c(erp_priors, prior_sem)
+
+        prior_suffix <- paste0("_bsemprior", prior_sd)
+        print(paste0("assoc_lp", prior_suffix))
+
+        fit_assoc_lp <- brm(assoc_lp_formula,
+            family = gaussian(),
+            prior = priors,
+            data = data,
+            chains = 4,
+            control = list(adapt_delta = 0.9999),
+            seed = 246,
+            file = file.path(out_folder, paste0("delogu_assoc_lp", prior_suffix))
+        )
+    }
