@@ -69,37 +69,41 @@ aurnhammer_df <- read.csv(file.path("results", "aurnhammer_log_probability.csv")
     ))
 ```
 
+```{r}
+se <- function(x) {
+    sd(x, na.rm = TRUE) / sqrt(sum(!is.na(x)))
+}
+```
+
 ## Kuperberg et al. (2003, 2007)
 ```{r}
 kuperberg_df |>
     group_by(cond) |>
     summarize(
         "mean" = mean(s_lp, na.rm = TRUE),
-        "sd" = sd(s_lp, na.rm = TRUE)
+        "se" = se(s_lp)
     ) |>
-    ggplot(aes(x = cond, color = cond)) +
+    ggplot(aes(x = cond, shape = cond)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
     geom_errorbar(
-        aes(ymin = mean - sd, ymax = mean + sd),
+        aes(ymin = mean - se, ymax = mean + se),
         width = 0.15,
         position = position_dodge(width = 0.3)
     ) +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized log probability", shape = "Condition") +
     theme_bw() +
+    scale_shape_manual(values = c(15, 16, 17, 4)) +
     theme(
         legend.position = "bottom",
         axis.text.x = element_blank()
     ) +
-    guides(color = guide_legend(nrow = 2))
+    guides(shape = guide_legend(nrow = 2))
 
-ggsave(file.path("figs", "log_probability_kuperberg.png"), width = 7, height = 7)
+ggsave(file.path("figs", "log_probability_kuperberg.png"), width = 6.3, height = 4)
 ```
 
 ## Kim and Osterhout (2005)
@@ -108,30 +112,29 @@ kim_osterhout_df |>
     group_by(cond) |>
     summarize(
         "mean" = mean(s_lp, na.rm = TRUE),
-        "sd" = sd(s_lp, na.rm = TRUE)
+        "se" = se(s_lp)
     ) |>
-    ggplot(aes(x = cond, color = cond)) +
+    ggplot(aes(x = cond, shape = cond)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
     geom_errorbar(
-        aes(ymin = mean - sd, ymax = mean + sd),
+        aes(ymin = mean - se, ymax = mean + se),
         width = 0.15,
         position = position_dodge(width = 0.3)
     ) +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized log probability", shape = "Condition") +
     theme_bw() +
+    scale_shape_manual(values = c(15, 16, 17, 4)) +
     theme(
         legend.position = "bottom",
         axis.text.x = element_blank()
-    )
+    ) +
+    guides(shape = guide_legend(nrow = 2))
 
-ggsave(file.path("figs", "log_probability_kim_osterhout.png"), width = 7, height = 7)
+ggsave(file.path("figs", "log_probability_kim_osterhout.png"), width = 6.3, height = 4)
 ```
 
 ## Delogu et al. (2019)
@@ -140,30 +143,28 @@ delogu_df |>
     group_by(cond) |>
     summarize(
         "mean" = mean(s_lp, na.rm = TRUE),
-        "sd" = sd(s_lp, na.rm = TRUE)
+        "se" = se(s_lp)
     ) |>
-    ggplot(aes(x = cond, color = cond)) +
+    ggplot(aes(x = cond, shape = cond)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
     geom_errorbar(
-        aes(ymin = mean - sd, ymax = mean + sd),
+        aes(ymin = mean - se, ymax = mean + se),
         width = 0.15,
         position = position_dodge(width = 0.3)
     ) +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized log probability", shape = "Condition") +
     theme_bw() +
+    scale_shape_manual(values = c(15, 16, 17)) +
     theme(
         legend.position = "bottom",
         axis.text.x = element_blank()
     )
 
-ggsave(file.path("figs", "log_probability_delogu.png"), width = 7, height = 7)
+ggsave(file.path("figs", "log_probability_delogu.png"), width = 6.3, height = 4)
 ```
 
 ```{r}

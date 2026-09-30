@@ -80,7 +80,32 @@ exclude_imp <- c("BERTWE", "Mamba") # implementations excluded from plots
 exclude_models <- c( # models excluded from plots
     "Gameselo/STS-multilingual-mpnet-base-v2",
     "bigscience/sgpt-bloom-7b1-msmarco",
-    "jinaai/jina-embeddings-v2-base-de"
+    "jinaai/jina-embeddings-v2-base-de",
+    "sentence-transformers/stsb-xlm-r-multilingual",
+    "aari1995/German_Semantic_V3b"
+)
+```
+
+```{r}
+color_palette <- c(
+    # WE
+    "steelblue2",
+    "steelblue3",
+    "steelblue4",
+    # CWE
+    "mediumpurple2",
+    "mediumpurple3",
+    "mediumpurple4",
+    # SE
+    "chocolate2",
+    "chocolate3",
+    "chocolate4",
+    "firebrick2",
+    "firebrick3",
+    "firebrick4",
+    "palevioletred2",
+    "palevioletred3",
+    "palevioletred4"
 )
 ```
 
@@ -128,19 +153,17 @@ data.frame(
         )
     ) |>
     ggplot(aes(x = cond, y = sem)) +
-    geom_point(aes(color = cond), size = 4) +
+    geom_point(aes(shape = cond), size = 4) +
     theme_bw() +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", y = "", color = "Condition", title = "Expected semantic association") +
+    labs(y = "", x = "", shape = "Condition") +
+    ylim(c(-0.05, 1.05)) +
     theme(
         legend.position = "bottom",
-        axis.text = element_blank(),
+        axis.text = element_blank()
     ) +
-    guides(color = guide_legend(nrow = 2))
+    guides(shape = guide_legend(nrow = 2))
 
-ggsave(file.path("figs", "semantic_expectations_kuperberg.png"), width = 7, height = 5)
+ggsave(file.path("figs", "semantic_expectations_kuperberg.png"), width = 6, height = 3)
 ```
 
 ```{r}
@@ -157,7 +180,18 @@ kuperberg_df |>
     ) |>
     mutate(model = remove_organization(model)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
-    ggplot(aes(x = imp, color = cond, group = cond)) +
+    ungroup() |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = c("WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(implementation, model) |>
+    mutate(
+        imp = factor(imp, levels = unique(imp))
+    ) |>
+    ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
@@ -169,18 +203,20 @@ kuperberg_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
+        values = color_palette
     ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized semantic association", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
     theme_bw() +
     theme(
-        legend.position = "bottom",
+        legend.position = "none",
         axis.text.x = element_text(angle = 90, hjust = 1)
+        # legend.position = "bottom",
+        # axis.text.x = element_blank()
     ) +
-    guides(color = guide_legend(nrow = 2))
+    guides(color = guide_legend(nrow = 3))
 
-ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 7, height = 7)
+ggsave(file.path("figs", "semantic_association_kuperberg.png"), width = 10, height = 5)
 ```
 
 ```{r}
@@ -459,6 +495,15 @@ kim_osterhout_df |>
 ```
 
 ```{r}
+# what are the sentence with NAs?
+kim_osterhout_df |>
+    filter(is.na(semantic_association)) |>
+    select(condition, context, target, implementation)
+
+# only active control for CWE!
+```
+
+```{r}
 # hypothesis
 data.frame(
     cond = unique(kim_osterhout_df$cond)
@@ -472,19 +517,17 @@ data.frame(
         )
     ) |>
     ggplot(aes(x = cond, y = sem)) +
-    geom_point(aes(color = cond), size = 4) +
+    geom_point(aes(shape = cond), size = 4) +
     theme_bw() +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", y = "", color = "Condition", title = "Expected semantic association") +
+    labs(y = "", x = "", shape = "Condition") +
+    ylim(c(-0.05, 1.05)) +
     theme(
         legend.position = "bottom",
-        axis.text = element_blank(),
+        axis.text = element_blank()
     ) +
-    guides(color = guide_legend(nrow = 2))
+    guides(shape = guide_legend(nrow = 2))
 
-ggsave(file.path("figs", "semantic_expectations_kim_osterhout.png"), width = 7, height = 5)
+ggsave(file.path("figs", "semantic_expectations_kim_osterhout.png"), width = 6, height = 3)
 ```
 
 ```{r}
@@ -501,7 +544,18 @@ kim_osterhout_df |>
     ) |>
     mutate(model = remove_organization(model)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
-    ggplot(aes(x = imp, color = cond, group = cond)) +
+    ungroup() |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = c("WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(implementation, model) |>
+    mutate(
+        imp = factor(imp, levels = unique(imp))
+    ) |>
+    ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
@@ -513,27 +567,18 @@ kim_osterhout_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
+        values = color_palette
     ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized semantic association", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
     theme_bw() +
     theme(
-        legend.position = "bottom",
+        legend.position = "none",
         axis.text.x = element_text(angle = 90, hjust = 1)
     ) +
-    guides(color = guide_legend(nrow = 2))
+    guides(color = guide_legend(nrow = 3))
 
-ggsave(file.path("figs", "semantic_association_kim_osterhout.png"), width = 7, height = 7)
-```
-
-```{r}
-# what are the sentence with NAs?
-kim_osterhout_df |>
-    filter(is.na(semantic_association)) |>
-    select(condition, context, target, implementation)
-
-# only active control for CWE!
+ggsave(file.path("figs", "semantic_association_kim_osterhout.png"), width = 10, height = 5)
 ```
 
 ```{r}
@@ -789,7 +834,7 @@ delogu_df |>
 
 ```{r}
 # hypothesis
-data.frame(
+hyp_p <- data.frame(
     cond = unique(delogu_df$cond)
 ) |>
     mutate(
@@ -800,18 +845,49 @@ data.frame(
         )
     ) |>
     ggplot(aes(x = cond, y = sem)) +
-    geom_point(aes(color = cond), size = 4) +
+    geom_point(aes(shape = cond), size = 2) +
     theme_bw() +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", y = "", color = "Condition", title = "Expected semantic association") +
+    labs(y = "", x = "", shape = "Condition") +
+    ylim(c(-0.05, 1.05)) +
     theme(
         legend.position = "bottom",
-        axis.text = element_blank(),
+        axis.text = element_blank()
     )
 
-ggsave(file.path("figs", "semantic_expectations_delogu.png"), width = 7, height = 5)
+
+# human-rated association
+if (!exists("assoc_df")) { # only load once
+    assoc_df <- read.csv(file.path("data", "Delogu", "dbc_data.csv")) |>
+        select(ItemNum, Condition, Assoc, Plaus) |>
+        distinct()
+}
+
+human_p <- assoc_df |>
+    mutate("cond" = factor(Condition,
+        levels = c("control", "script-related", "script-unrelated")
+    )) |>
+    group_by(cond) |>
+    summarize(
+        "mean" = mean(Assoc, na.rm = TRUE),
+        "se" = se(Assoc)
+    ) |>
+    ggplot(aes(x = cond)) +
+    geom_point(
+        aes(y = mean),
+        position = position_dodge(width = 0.3),
+        size = 2
+    ) +
+    geom_errorbar(
+        aes(ymin = mean - se, ymax = mean + se),
+        width = 0.1,
+        position = position_dodge(width = 0.3)
+    ) +
+    theme_bw() +
+    labs(x = "Condition", y = "Human-rated association")
+
+# hyp_p + human_p + plot_layout(guides = "collect") & theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "semantic_expectations_delogu.png"), human_p, width = 6, height = 3)
 ```
 
 ```{r}
@@ -828,7 +904,18 @@ delogu_df |>
     ) |>
     mutate(model = remove_organization(model)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
-    ggplot(aes(x = imp, color = cond, group = cond)) +
+    ungroup() |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = c("WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(implementation, model) |>
+    mutate(
+        imp = factor(imp, levels = unique(imp))
+    ) |>
+    ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
         aes(y = mean),
         position = position_dodge(width = 0.3),
@@ -840,56 +927,18 @@ delogu_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
+        values = c(color_palette[1:2], color_palette[4:5], color_palette[7:12])
     ) +
-    labs(x = "", color = "Condition") +
+    labs(x = "", y = "Standardized Semantic Assocaiation", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
     theme_bw() +
     theme(
-        legend.position = "bottom",
+        legend.position = "none",
         axis.text.x = element_text(angle = 90, hjust = 1)
-    )
-
-ggsave(file.path("figs", "semantic_association_delogu.png"), width = 7, height = 7)
-```
-
-```{r}
-# human-rated association
-assoc_df <- read.csv(file.path("data", "Delogu", "dbc_data.csv")) |>
-    select(ItemNum, Condition, Assoc, Plaus) |>
-    distinct()
-
-assoc_df |>
-    mutate("cond" = factor(Condition,
-        levels = c("control", "script-related", "script-unrelated")
-    )) |>
-    group_by(cond) |>
-    summarize(
-        "mean" = mean(Assoc, na.rm = TRUE),
-        "se" = se(Assoc)
-    ) |>
-    ggplot(aes(x = cond, color = cond, group = cond)) +
-    geom_point(
-        aes(y = mean),
-        position = position_dodge(width = 0.3),
-        size = 2
     ) +
-    geom_errorbar(
-        aes(ymin = mean - se, ymax = mean + se),
-        width = 0.15,
-        position = position_dodge(width = 0.3)
-    ) +
-    theme_bw() +
-    scale_colour_manual(
-        values = c("blue", "firebrick2", "purple", "orange")
-    ) +
-    labs(x = "", y = "", color = "Condition", title = "Human-rated semantic association") +
-    theme(
-        legend.position = "bottom",
-        axis.text = element_blank(),
-    )
+    guides(color = guide_legend(nrow = 3))
 
-ggsave(file.path("figs", "human_semantic_association_delogu.png"), width = 7, height = 5)
+ggsave(file.path("figs", "semantic_association_delogu.png"), width = 8, height = 5)
 ```
 
 ```{r}
