@@ -16,6 +16,8 @@ dependencies:
   - r-png=0.1
   - r-reticulate=1.46.0
   - r-tidyverse=2.0.0
+  - r-polspline=1.1.25
+  - r-bridgesampling=1.2
 
   # ---- Toolchain (REQUIRED for CmdStan) ----
   - make=4.4.1
