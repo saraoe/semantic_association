@@ -106,7 +106,6 @@ for (reg_model_name in sem_model_names) {
     "posterior" = posterior,
     "prior" = prior,
     "BF01" = BF01,
-    "dataset" = dataset,
     "prior_sd" = prior_sd,
     "reg_model_name" = reg_model_name,
     "implementation" = get_implementation(reg_model_name),
@@ -167,5 +166,5 @@ sd_df |>
   labs(y = "", color = "", shape = "SD of prior") +
   theme(legend.position = "bottom", legend.box = "vertical")
 
-ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 4)
+ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 3.5)
 ```

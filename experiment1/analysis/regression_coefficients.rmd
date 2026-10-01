@@ -313,7 +313,7 @@ dataset_plot(coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
     plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3, width = 7)
+ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3.5, width = 7)
 ```
 
 Models with plaus (Delogu)
