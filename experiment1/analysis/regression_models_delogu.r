@@ -211,16 +211,6 @@ data <- delogu_df |>
         s_assoc = scale(Assoc)
     )
 
-fit_assoc_lp <- brm(assoc_lp_formula,
-    family = gaussian(),
-    prior = erp_priors,
-    data = data,
-    chains = 4,
-    control = list(adapt_delta = 0.9999),
-    seed = 246,
-    file = file.path(out_folder, "delogu_assoc_lp")
-)
-
 for (prior_sd in prior_sem_sd) {
         prior_sem <- set_prior(
             sprintf("normal(0, %s)", prior_sd),
@@ -242,3 +232,54 @@ for (prior_sd in prior_sem_sd) {
             file = file.path(out_folder, paste0("delogu_assoc_lp", prior_suffix))
         )
     }
+
+# extra samples for bridge sampling
+print("Models with extra iterations (for bridge sampling)")
+n_samples <- 20000
+for (impl in all_implementations) {
+    data <- delogu_df |>
+        filter(
+            full_implementation == impl
+        ) |>
+        mutate(
+            s_sem = scale(semantic_association)
+        )
+    print(paste0(impl, "_samples", n_samples))
+
+    fit_sem_lp <- brm(sem_lp_formula,
+        family = gaussian(),
+        prior = erp_priors,
+        data = data,
+        chains = 4,
+        warmup = 2000,
+        iter = n_samples,
+        control = list(adapt_delta = 0.9999),
+        save_pars = save_pars(all = TRUE),
+        seed = 246,
+        file = file.path(out_folder, paste0("delogu_lp_", impl, "_samples", n_samples))
+    )
+}
+
+print("Human-rated association")
+data <- delogu_df |>
+    select(Assoc, Plaus, s_lp, Subject, ItemNum, n400) |>
+    distinct() |>
+    mutate(
+        s_plaus = scale(Plaus),
+        s_assoc = scale(Assoc)
+    )
+
+print(paste0("assoc_lp_samples", n_samples))
+
+fit_assoc_lp <- brm(assoc_lp_formula,
+    family = gaussian(),
+    prior = erp_priors,
+    data = data,
+    chains = 4,
+    warmup = 2000,
+    iter = n_samples,
+    control = list(adapt_delta = 0.9999),
+    save_pars = save_pars(all = TRUE),
+    seed = 246,
+    file = file.path(out_folder, paste0("delogu_assoc_lp_samples", n_samples))
+)
