@@ -172,13 +172,49 @@ ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 3.5)
 
 ## Bridge sampling: human association vs embedding-based association
 ```{r}
-fit_human <- readRDS(file.path(models_path, "delogu_assoc_lp_samples20000.rds"))
-fit_embed <- readRDS(file.path(models_path, "delogu_lp_SE_aari1995_German_Semantic_STS_V2_samples20000.rds"))
+embedding_implementation <- "SE_aari1995_German_Semantic_STS_V2"
 
-margLogLik_human <- bridge_sampler(fit_human, silent = TRUE)
-margLogLik_embed <- bridge_sampler(fit_embed, silent = TRUE)
+emb_model_names <- list.files(
+  models_path,
+  full.names = FALSE,
+  pattern = paste0("delogu_lp_", embedding_implementation, "_samples20000.*\\.rds$")
+)
 
-(BF_ln <- bayes_factor(margLogLik_human, margLogLik_embed))
+for (emb_model_name in emb_model_names) {
+  prior_suffix <- str_remove(
+    emb_model_name,
+    paste0("delogu_lp_", embedding_implementation, "_samples20000")
+  )
+  human_model_name <- paste0("delogu_assoc_lp_samples20000", prior_suffix)
+
+  fit_human <- readRDS(file.path(models_path, human_model_name))
+  fit_embed <- readRDS(file.path(models_path, emb_model_name))
+
+  margLogLik_human <- bridge_sampler(fit_human, silent = TRUE)
+  margLogLik_embed <- bridge_sampler(fit_embed, silent = TRUE)
+
+  BF <- bayes_factor(margLogLik_human, margLogLik_embed)
+
+  prior <- str_remove(prior_suffix, ".rds")
+  prior <- str_remove(prior, "_bsemprior")
+  if (prior == "") {
+    print("SD of Prior = 10")
+  } else {
+    print(paste("Sd of prior =", prior))
+  }
+  print(paste("x1 = human, x2 =", embedding_implementation))
+  print(BF)
+}
 ```
-Estimated Bayes factor in favor of x1 over x2: 67.77066
+[1] "SD of Prior = 10"
+[1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
+Estimated Bayes factor in favor of x1 over x2: 66.15537
+[1] "Sd of prior = 1"
+[1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
+Estimated Bayes factor in favor of x1 over x2: 58.01710
+[1] "Sd of prior = 2"
+[1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
+Estimated Bayes factor in favor of x1 over x2: 62.37021
+
+
 
