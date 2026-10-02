@@ -235,8 +235,9 @@ for (prior_sd in prior_sem_sd) {
 
 # extra samples for bridge sampling
 print("Models with extra iterations (for bridge sampling)")
+implementations <- c("SE_aari1995_German_Semantic_STS_V2") # embedding-based implementations
 n_samples <- 20000
-for (impl in all_implementations) {
+for (impl in implementations) {
     data <- delogu_df |>
         filter(
             full_implementation == impl
@@ -258,6 +259,31 @@ for (impl in all_implementations) {
         seed = 246,
         file = file.path(out_folder, paste0("delogu_lp_", impl, "_samples", n_samples))
     )
+
+    for (prior_sd in prior_sem_sd) {
+        prior_sem <- set_prior(
+            sprintf("normal(0, %s)", prior_sd),
+            class = "b",
+            coef = "s_sem"
+        )
+        priors <- c(erp_priors, prior_sem)
+
+        prior_suffix <- paste0("_bsemprior", prior_sd)
+        print(paste0(impl, "_samples", n_samples, prior_suffix))
+
+        fit_sem_lp <- brm(sem_lp_formula,
+            family = gaussian(),
+            prior = priors,
+            data = data,
+            chains = 4,
+            warmup = 2000,
+            iter = n_samples,
+            control = list(adapt_delta = 0.9999),
+            save_pars = save_pars(all = TRUE),
+            seed = 246,
+            file = file.path(out_folder, paste0("delogu_lp_", impl, "_samples", n_samples, prior_suffix))
+        )
+    }
 }
 
 print("Human-rated association")
@@ -283,3 +309,28 @@ fit_assoc_lp <- brm(assoc_lp_formula,
     seed = 246,
     file = file.path(out_folder, paste0("delogu_assoc_lp_samples", n_samples))
 )
+
+for (prior_sd in prior_sem_sd) {
+    prior_sem <- set_prior(
+        sprintf("normal(0, %s)", prior_sd),
+        class = "b",
+        coef = "s_assoc"
+    )
+    priors <- c(erp_priors, prior_sem)
+
+    prior_suffix <- paste0("_bsemprior", prior_sd)
+    print(paste0("assoc_lp_samples", n_samples, prior_suffix))
+
+    fit_sem_lp <- brm(assoc_lp_formula,
+        family = gaussian(),
+        prior = priors,
+        data = data,
+        chains = 4,
+        warmup = 2000,
+        iter = n_samples,
+        control = list(adapt_delta = 0.9999),
+        save_pars = save_pars(all = TRUE),
+        seed = 246,
+        file = file.path(out_folder, paste0("delogu_assoc_lp_samples", n_samples, prior_suffix))
+    )
+}
