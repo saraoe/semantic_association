@@ -21,6 +21,9 @@ The folder ``Hoeks`` contains the linguistic stimuli from the paper [5]. The fil
 ## Michaelov et al. (2024)
 The file ``michaelov_2024.csv`` is from the study "Strong Prediction: Language Model Surprisal  Explains Multiple N400 Effects" by Michaelov et al. [6]. The file contains linguistic stimuli (125 sentence frames with each four conditions, i.e., 500 unique sentences) along with the N400 (in different channels) for 50 participants. The file was downloaded from the [OSF repository](https://osf.io/pysbc/files/osfstorage) on 15-04-2026 and was called ``data/N400_data.csv``.
 
+## Kim & Osterhout (2005)
+The file ``kim_osterhout_2005_stim.csv`` contains the linguistic stimuli for Kim & Osterhout [7]. The stimuli was transcribed from the appendix of the paper and the columns "context" and "target" were added in the script ``src/prepare_kim_osterhout_stimuli.r``.
+
 ## SUBTLEX-US
 
 SUBTLEX-US was downloaded from https://www.ugent.be/pp/experimentele-psychologie/en/research/documents/subtlexus on 08-04-2026. The downloaded file is the one under "Zipf values added to the SUBTLEX-US frequencies". When downloaded, the file is named "SUBTLEX-US frequency list with PoS and Zipf information.xlsx", but was manually renamed to "SUBTLEX-US.xlsx".
@@ -37,3 +40,6 @@ SUBTLEX-US was downloaded from https://www.ugent.be/pp/experimentele-psychologie
 [5] Hoeks, J. C. J., Stowe, L. A., & Doedens, G. (2004). Seeing words in context: The interaction of lexical and sentence level information during reading. Cognitive Brain Research, 19(1), 59–73. https://doi.org/10.1016/j.cogbrainres.2003.10.022
 
 [6] Michaelov, J. A., Bardolph, M. D., Van Petten, C. K., Bergen, B. K., & Coulson, S. (2024). Strong Prediction: Language Model Surprisal Explains Multiple N400 Effects. Neurobiology of Language, 5(1), 107–135. https://doi.org/10.1162/nol_a_00105
+
+[7] Kim, A., & Osterhout, L. (2005). The independence of combinatory semantic processing: Evidence from event-related potentials. Journal of Memory and Language, 52(2), 205–225. https://doi.org/10.1016/j.jml.2004.10.002
+
