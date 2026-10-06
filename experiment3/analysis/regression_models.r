@@ -152,6 +152,36 @@ if ("derco" %in% dataset) {
             file = file.path(out_folder, paste0("derco_interaction_", imp_id))
         )
     }
+
+    # extra priors for Savage-Dickey BF
+    print("Models with extra priors")
+    prior_sem_sd <- c(1, 2)
+    for (imp_id in implementations) {
+        data <- derco_df |>
+            filter(implementation_id == imp_id) |>
+            mutate(s_sem = scale(semantic_association))
+        for (prior_sd in prior_sem_sd) {
+            prior_sem <- set_prior(
+                sprintf("normal(0, %s)", prior_sd),
+                class = "b",
+                coef = "s_sem"
+            )
+            priors <- c(erp_priors, prior_sem)
+
+            prior_suffix <- paste0("_bsemprior", prior_sd)
+            print(paste0(imp_id, prior_suffix))
+
+            fit_sem_lp <- brm(sem_lp_formula,
+                family = gaussian(),
+                prior = priors,
+                data = data,
+                chains = 4,
+                control = list(adapt_delta = 0.9999),
+                seed = 246,
+                file = file.path(out_folder, paste0("derco_lp_", imp_id, prior_suffix))
+            )
+        }
+    }
 }
 
 if ("tint" %in% dataset) {
@@ -240,5 +270,35 @@ if ("tint" %in% dataset) {
             seed = 246,
             file = file.path(out_folder, paste0("tint_interaction_", imp_id))
         )
+    }
+
+    # extra priors for Savage-Dickey BF
+    print("Models with extra priors")
+    prior_sem_sd <- c(1, 2)
+    for (imp_id in implementations) {
+        data <- tint_df |>
+            filter(implementation_id == imp_id) |>
+            mutate(s_sem = scale(semantic_association))
+        for (prior_sd in prior_sem_sd) {
+            prior_sem <- set_prior(
+                sprintf("normal(0, %s)", prior_sd),
+                class = "b",
+                coef = "s_sem"
+            )
+            priors <- c(erp_priors, prior_sem)
+
+            prior_suffix <- paste0("_bsemprior", prior_sd)
+            print(paste0(imp_id, prior_suffix))
+
+            fit_sem_lp <- brm(sem_lp_formula,
+                family = gaussian(),
+                prior = priors,
+                data = data,
+                chains = 4,
+                control = list(adapt_delta = 0.9999),
+                seed = 246,
+                file = file.path(out_folder, paste0("tint_lp_", imp_id, prior_suffix))
+            )
+        }
     }
 }
