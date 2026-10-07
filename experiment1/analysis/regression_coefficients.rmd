@@ -395,7 +395,7 @@ ggsave(file.path("figs", "delogu_regression_coefficients_plaus.png"), height = 3
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("aurnhammer"), model_prefix = "lp") |>
+fixef_df <- get_fixef_models(c("michaelov"), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
 ```
 
@@ -409,11 +409,7 @@ fixef_df |>
         implementation == "Human rating" ~ "Human rating",
     )) |>
     mutate(
-        implementation = ifelse(
-            implementation == "Human rating",
-            "Human rating",
-            paste(model_type, model, sep = ", ")
-        ),
+        implementation = paste(model_type, model, sep = ", "),
         coefficient = case_when(
             coefficient == "s_lp" ~ "Log probability",
             coefficient == "s_sem" ~ "Semantic assocaition",
@@ -423,7 +419,7 @@ fixef_df |>
     mutate(
         model_type = factor(
             model_type,
-            levels = c("Human rating", "WE", "CWE", "SE")
+            levels = c("WE", "CWE", "SE")
         ),
     ) |>
     arrange(model_type, model) |>
