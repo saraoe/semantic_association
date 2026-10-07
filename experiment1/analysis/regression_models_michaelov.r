@@ -42,7 +42,28 @@ michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.cs
     mutate(model = str_replace(model, "/", "_")) |>
     mutate(
         full_implementation = paste(implementation, model, sep = "_")
-    )
+    ) |>
+    # only use complete cases across implementations of sem
+    group_by(ContextCode, Condition) |>
+    filter(all(!is.na(semantic_association))) |>
+    ungroup() |>
+    arrange(Subject, ContextCode, Condition)
+
+# test df
+if (any(is.na(michaelov_df$semantic_association))) {
+    print("NAs in data frame!")
+    quit()
+}
+
+n_obs_per_implementation <- michaelov_df |>
+    group_by(full_implementation) |>
+    summarize("N" = n()) |>
+    pull(N)
+
+if (!length(unique(n_obs_per_implementation)) == 1) {
+    print("Some implementations have more observations!")
+    quit()
+}
 
 # model formula
 # sem

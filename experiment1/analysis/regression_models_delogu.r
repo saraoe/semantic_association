@@ -56,7 +56,28 @@ delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |
         levels = c("control", "script-related", "script-unrelated")
     )) |>
     mutate(model = str_replace(model, "/", "_")) |>
-    mutate(full_implementation = paste(implementation, model, sep = "_"))
+    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
+    # only use complete cases across implementations of sem
+    group_by(ItemNum, cond) |>
+    filter(all(!is.na(semantic_association))) |>
+    ungroup() |>
+    arrange(Subject, ItemNum, cond)
+
+# test df
+if (any(is.na(delogu_df$semantic_association))) {
+    print("NAs in data frame!")
+    quit()
+}
+
+n_obs_per_implementation <- delogu_df |>
+    group_by(full_implementation) |>
+    summarize("N" = n()) |>
+    pull(N)
+
+if (!length(unique(n_obs_per_implementation)) == 1) {
+    print("Some implementations have more observations!")
+    quit()
+}
 
 # model formula
 # sem
@@ -212,26 +233,26 @@ data <- delogu_df |>
     )
 
 for (prior_sd in prior_sem_sd) {
-        prior_sem <- set_prior(
-            sprintf("normal(0, %s)", prior_sd),
-            class = "b",
-            coef = "s_assoc"
-        )
-        priors <- c(erp_priors, prior_sem)
+    prior_sem <- set_prior(
+        sprintf("normal(0, %s)", prior_sd),
+        class = "b",
+        coef = "s_assoc"
+    )
+    priors <- c(erp_priors, prior_sem)
 
-        prior_suffix <- paste0("_bsemprior", prior_sd)
-        print(paste0("assoc_lp", prior_suffix))
+    prior_suffix <- paste0("_bsemprior", prior_sd)
+    print(paste0("assoc_lp", prior_suffix))
 
-        fit_assoc_lp <- brm(assoc_lp_formula,
-            family = gaussian(),
-            prior = priors,
-            data = data,
-            chains = 4,
-            control = list(adapt_delta = 0.9999),
-            seed = 246,
-            file = file.path(out_folder, paste0("delogu_assoc_lp", prior_suffix))
-        )
-    }
+    fit_assoc_lp <- brm(assoc_lp_formula,
+        family = gaussian(),
+        prior = priors,
+        data = data,
+        chains = 4,
+        control = list(adapt_delta = 0.9999),
+        seed = 246,
+        file = file.path(out_folder, paste0("delogu_assoc_lp", prior_suffix))
+    )
+}
 
 # extra samples for bridge sampling
 print("Models with extra iterations (for bridge sampling)")
