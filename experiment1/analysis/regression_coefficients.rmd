@@ -131,7 +131,7 @@ get_fixef_models <- function(
         )
 
         for (model_name in model_names) {
-            if (str_detect(model_name, "bsemprior")) {
+            if (str_detect(model_name, "bsemprior") | str_detect(model_name, "samples")) {
                 next
             }
             implementation <- str_remove(model_name, paste0(prefix))
@@ -395,7 +395,7 @@ ggsave(file.path("figs", "delogu_regression_coefficients_plaus.png"), height = 3
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("michaelov"), model_prefix = "lp") |>
+fixef_df <- get_fixef_models(c("aurnhammer"), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
 ```
 

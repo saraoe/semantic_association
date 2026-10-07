@@ -78,7 +78,7 @@ rm(sd_df)
 sem_model_names <- list.files(
   models_path,
   full.names = FALSE,
-  pattern = "delogu_(lp|assoc_lp)_.*\\.rds$"
+  pattern = "delogu_(lp|assoc_lp).*\\.rds$"
 )
 
 for (reg_model_name in sem_model_names) {
@@ -157,7 +157,7 @@ sd_df |>
   scale_x_log10(
     breaks = custom_breaks,
     labels = custom_labels,
-    limits = c(1 / 300, 30)
+    limits = c(1 / 300, 50)
   ) +
   theme_minimal() +
   scale_shape_manual(values = c(17, 4, 16)) +
@@ -213,13 +213,13 @@ for (emb_model_name in emb_model_names) {
 ```
 [1] "SD of Prior = 10"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 66.15537
+Estimated Bayes factor in favor of x1 over x2: 48.99644
 [1] "Sd of prior = 1"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 58.01710
+Estimated Bayes factor in favor of x1 over x2: 43.34643
 [1] "Sd of prior = 2"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 62.37021
+Estimated Bayes factor in favor of x1 over x2: 45.88192
 
 
 
