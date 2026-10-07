@@ -7,6 +7,7 @@ library(brms)
 library(polspline)
 library(bridgesampling)
 library(ggplot2)
+library(latex2exp)
 
 setwd("experiment1")
 
@@ -81,6 +82,9 @@ sem_model_names <- list.files(
 )
 
 for (reg_model_name in sem_model_names) {
+  if (str_detect(reg_model_name, "samples")) {
+    next # skip models with more samples (for bridgesampling below)
+  }
   print(reg_model_name)
   sem_m <- readRDS(file.path(models_path, reg_model_name))
 
@@ -147,6 +151,7 @@ sd_df |>
     color = implementation,
     shape = as.factor(prior_sd)
   )) +
+  geom_line(aes(x = BF01, group = full_imp), linetype = "dashed", color = "grey") +
   geom_point(aes(x = BF01), size = 2) +
   geom_vline(aes(xintercept = 1), linetype = "dotted") +
   scale_x_log10(
@@ -164,7 +169,7 @@ sd_df |>
       "firebrick"
     )
   ) +
-  labs(y = "", color = "", shape = "SD of prior") +
+  labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
   theme(legend.position = "bottom", legend.box = "vertical")
 
 ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 3.5)

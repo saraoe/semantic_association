@@ -5,8 +5,8 @@ library(tidytable)
 library(stringr)
 library(brms)
 library(polspline)
-library(bridgesampling)
 library(ggplot2)
+library(latex2exp)
 
 setwd("experiment2")
 
@@ -163,7 +163,7 @@ sd_df |>
     )
   ) +
   facet_wrap(. ~ dataset, ncol = 1) +
-  labs(y = "", color = "", shape = "SD of prior") +
+  labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
   theme(legend.position = "bottom", legend.box = "vertical")
 
 ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 7)

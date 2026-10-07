@@ -136,6 +136,9 @@ get_fixef_models <- function(
         )
 
         for (model_name in model_names) {
+            if (str_detect(model_name, "bsemprior")) {
+                next # skip extra priors for BF
+            }
             implementation <- str_remove(model_name, paste0(prefix))
             implementation <- str_remove(implementation, ".rds")
             if (!str_starts(implementation, "SE|WE|CWE")) {
