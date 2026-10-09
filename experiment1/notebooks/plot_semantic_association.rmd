@@ -12,6 +12,16 @@ setwd("experiment1")
 ## Read data
 ```{r}
 kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.csv")) |>
+    select(-X, -edited) |>
+    rbind( # add lp
+        read.csv(file.path("results", "kuperberg_log_probability.csv")) |>
+            rename("semantic_association" = "lp_pythia") |>
+            select(-s_lp, -X) |>
+            mutate(
+                "model" = "Pythia",
+                "implementation" = "Log probability"
+            )
+    ) |>
     # mutate(cond = case_when(
     #     cond == 1 ~ "a",
     #     cond == 2 ~ "b",
@@ -38,6 +48,17 @@ kuperberg_df <- read.csv(file.path("results", "kuperberg_semantic_association.cs
     filter(!(scenario == 230 & cond == 4)) # duplicate cond3 and cond4
 
 kim_osterhout_df <- read.csv(file.path("results", "kim_osterhout_semantic_association.csv")) |>
+    select(-X) |>
+    rbind( # add lp
+        read.csv(file.path("results", "kim_osterhout_log_probability.csv")) |>
+            rename("semantic_association" = "lp_pythia") |>
+            select(-s_lp, -X) |>
+            mutate(
+                "model" = "Pythia",
+                "implementation" = "Log probability"
+            )
+    ) |>
+    left_join(read.csv(file.path("results", "kim_osterhout_log_probability.csv"))) |>
     mutate("cond" = factor(condition,
         levels = c(
             "Attraction Violation",
@@ -48,21 +69,34 @@ kim_osterhout_df <- read.csv(file.path("results", "kim_osterhout_semantic_associ
     ))
 
 michaelov_df <- read.csv(file.path("results", "michaelov_semantic_association.csv")) |>
+    select(-X) |>
     mutate("cond" = factor(Condition,
         levels = c("BC", "Rel", "Unrel", "Implaus")
     ))
 
 delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |>
+    select(-X) |>
+    rbind( # add lp
+        read.csv(file.path("results", "delogu_log_probability.csv")) |>
+            rename("semantic_association" = "lp_benjamin_gerpt2") |>
+            select(-s_lp, -X) |>
+            mutate(
+                "model" = "GerPT2",
+                "implementation" = "Log probability"
+            )
+    ) |>
     mutate("cond" = factor(Condition,
         levels = c("control", "script-related", "script-unrelated")
     ))
 
 delogu_nl_df <- read.csv(file.path("results", "delogu_nl_semantic_association.csv")) |>
+    select(-X) |>
     mutate("cond" = factor(Condition,
         levels = c("control", "script-related", "script-unrelated")
     ))
 
 aurnhammer_df <- read.csv(file.path("results", "aurnhammer_semantic_association.csv")) |>
+    select(-X) |>
     mutate(cond = case_when(
         Condition == "A" ~ "A+E+",
         Condition == "B" ~ "A-E+",
@@ -184,7 +218,7 @@ kuperberg_df |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE")
+            levels = c("WE", "CWE", "SE", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -193,7 +227,7 @@ kuperberg_df |>
     ) |>
     ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
-        aes(y = mean),
+        aes(y = mean, shape = implementation),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
@@ -203,7 +237,19 @@ kuperberg_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = color_palette
+        values = c(color_palette, "grey40")
+    ) +
+    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_x_discrete(
+        limits = function(x) {
+            append(
+                x,
+                " ",
+                after = max(grep("^SE,", x))
+            )
+        },
+        drop = FALSE,
+        labels = function(x) ifelse(x == " ", "", x)
     ) +
     labs(x = "", y = "Standardized semantic association", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
@@ -548,7 +594,7 @@ kim_osterhout_df |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE")
+            levels = c("WE", "CWE", "SE", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -557,7 +603,7 @@ kim_osterhout_df |>
     ) |>
     ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
-        aes(y = mean),
+        aes(y = mean, shape = implementation),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
@@ -567,7 +613,19 @@ kim_osterhout_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = color_palette
+        values = c(color_palette, "grey40")
+    ) +
+    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_x_discrete(
+        limits = function(x) {
+            append(
+                x,
+                " ",
+                after = max(grep("^SE,", x))
+            )
+        },
+        drop = FALSE,
+        labels = function(x) ifelse(x == " ", "", x)
     ) +
     labs(x = "", y = "Standardized semantic association", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
@@ -908,7 +966,7 @@ delogu_df |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE")
+            levels = c("WE", "CWE", "SE", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -917,7 +975,7 @@ delogu_df |>
     ) |>
     ggplot(aes(x = imp, color = imp, group = imp)) +
     geom_point(
-        aes(y = mean),
+        aes(y = mean, shape = implementation),
         position = position_dodge(width = 0.3),
         size = 2
     ) +
@@ -927,7 +985,19 @@ delogu_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = c(color_palette[1:2], color_palette[4:5], color_palette[7:12])
+        values = c(color_palette[1:2], color_palette[4:5], color_palette[7:12], "grey40")
+    ) +
+    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_x_discrete(
+        limits = function(x) {
+            append(
+                x,
+                " ",
+                after = max(grep("^SE,", x))
+            )
+        },
+        drop = FALSE,
+        labels = function(x) ifelse(x == " ", "", x)
     ) +
     labs(x = "", y = "Standardized Semantic Assocaiation", color = "") +
     facet_wrap(. ~ cond, ncol = 4) +
