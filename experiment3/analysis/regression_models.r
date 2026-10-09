@@ -74,10 +74,6 @@ if ("derco" %in% dataset) {
         left_join(derco_sem) |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(target)) |>
-        # only use complete cases across implementations of sem
-        group_by(article_n, word_n) |>
-        filter(all(!is.na(semantic_association))) |>
-        ungroup() |>
         arrange(subject, article_n, word_n)
 
     # model formula
@@ -200,10 +196,6 @@ if ("tint" %in% dataset) {
         left_join(tint_sem) |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(target)) |>
-        # only use complete cases across implementations of sem
-        group_by(document_id, word_n) |>
-        filter(all(!is.na(semantic_association))) |>
-        ungroup() |>
         arrange(participant_number, document_id, word_n)
 
     # model formula

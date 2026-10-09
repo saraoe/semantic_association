@@ -91,9 +91,6 @@ if ("tanner" %in% dataset) {
         filter(Acceptability == "Gram") |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
-        # only use complete cases across implementations of sem
-        group_by(id, word_n) |>
-        filter(all(!is.na(semantic_association))) |>
         ungroup() |>
         arrange(subject, id, word_n)
 
@@ -188,10 +185,6 @@ if ("ucl" %in% dataset) {
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
         rename("n400" = "N400") |>
-        # only use complete cases across implementations of sem
-        group_by(id, word_n) |>
-        filter(all(!is.na(semantic_association))) |>
-        ungroup() |>
         arrange(subject, id, word_n)
 
     # run models
