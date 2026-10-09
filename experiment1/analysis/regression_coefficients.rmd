@@ -251,9 +251,69 @@ fixef_df |>
 ```
 
 ```{r}
+pd <- position_dodge(.4)
+
+fixef_df |>
+    filter(coefficient != "Intercept") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE",
+        implementation == "Human rating" ~ "Human rating",
+    )) |>
+    mutate(
+        implementation = ifelse(
+            implementation == "Human rating",
+            "Human-rated association",
+            paste(model_type, model, sep = ", ")
+        ),
+        coefficient = case_when(
+            coefficient == "s_lp" ~ "Log probability",
+            coefficient == "s_sem" ~ "Semantic assocaition",
+            .default = coefficient
+        )
+    ) |>
+    mutate(
+        model_type = factor(
+            model_type,
+            levels = c("Human rating", "WE", "CWE", "SE")
+        ),
+    ) |>
+    arrange(model_type, model) |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = unique(implementation)
+        )
+    ) |>
+    ggplot(aes(x = implementation, color = model_type, group = coefficient)) +
+    geom_point(aes(y = Estimate, shape = coefficient), position = pd) +
+    geom_linerange(aes(ymin = Q2.5, ymax = Q97.5), position = pd) +
+    geom_hline(aes(yintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "darkorange",
+            "steelblue1",
+            "steelblue4",
+            "firebrick"
+        )
+    ) +
+    labs(
+        y = TeX("$\\beta$"), x = "",
+        color = "", shape = ""
+    ) +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 60, hjust = 1),
+        legend.box = "vertical"
+    )
+```
+
+```{r}
 library(patchwork)
 
-dataset_plot <- function(coefficient_name, x_lab) {
+dataset_plot <- function(coefficient_name, y_lab, y_lim) {
     fixef_df |>
         filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
@@ -284,13 +344,13 @@ dataset_plot <- function(coefficient_name, x_lab) {
         mutate(
             implementation = factor(
                 implementation,
-                levels = rev(unique(implementation))
+                levels = unique(implementation)
             )
         ) |>
-        ggplot(aes(y = implementation, color = model_type)) +
-        geom_point(aes(x = Estimate)) +
-        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
-        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        ggplot(aes(x = implementation, color = model_type)) +
+        geom_point(aes(y = Estimate)) +
+        geom_linerange(aes(ymin = Q2.5, ymax = Q97.5)) +
+        geom_hline(aes(yintercept = 0), linetype = "dashed") +
         scale_color_manual(
             values = c(
                 "darkorange",
@@ -299,21 +359,37 @@ dataset_plot <- function(coefficient_name, x_lab) {
                 "firebrick"
             )
         ) +
-        facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
+        ylim(y_lim) +
+        facet_wrap(. ~ coefficient, ncol = 2) +
         labs(
-            x = x_lab, y = "",
+            y = y_lab, x = "",
             color = "",
         ) +
         theme_minimal() +
-        theme(plot.title = element_text(size = 11))
+        theme(
+            plot.title = element_text(size = 11),
+            axis.text.x = element_text(angle = 90, hjust = 1)
+        )
 }
 
-dataset_plot(coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
-    dataset_plot(coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+y_lim <- fixef_df |>
+    filter(coefficient != "Intercept") |>
+    summarize("min" = min(Q2.5), "max" = max(Q97.5))
+
+dataset_plot(
+    coefficient_name = "s_lp",
+    y_lab = TeX("$\\beta_1$"),
+    y_lim = c(y_lim$min, y_lim$max)
+) +
+    dataset_plot(
+        coefficient_name = "s_sem",
+        y_lab = TeX("$\\beta_2$"),
+        y_lim = c(y_lim$min, y_lim$max)
+    ) +
     plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 3.5, width = 7)
+ggsave(file.path("figs", "delogu_regression_coefficients.png"), height = 5.5, width = 8)
 ```
 
 Models with plaus (Delogu)

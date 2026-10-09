@@ -59,8 +59,8 @@ cor_matrix <- delogu_df |>
     ) |>
     select(starts_with("semantic_association"), "Assoc", , "lp_benjamin_gerpt2") |>
     rename(
-        "Human rated association" = "Assoc",
-        "Log-probability, GerPT2" = "lp_benjamin_gerpt2"
+        "Human-rated association" = "Assoc",
+        "Log probability, GerPT2" = "lp_benjamin_gerpt2"
     ) |>
     cor(method = "pearson", use = "pairwise.complete.obs")
 
@@ -73,10 +73,11 @@ matrix_names <- colnames(cor_matrix)
 matrix_names <- colnames(cor_matrix)
 name_order <- order(
     case_when(
-        str_starts(matrix_names, "WE") ~ 1L,
-        str_starts(matrix_names, "CWE") ~ 2L,
-        str_starts(matrix_names, "SE") ~ 3L,
-        TRUE ~ 4L
+        str_starts(matrix_names, "Human") ~ 1L,
+        str_starts(matrix_names, "Log probability") ~ 2L,
+        str_starts(matrix_names, "WE") ~ 3L,
+        str_starts(matrix_names, "CWE") ~ 4L,
+        str_starts(matrix_names, "SE") ~ 5L,
     ),
     matrix_names
 )
@@ -84,7 +85,9 @@ name_order <- order(
 cor_matrix <- cor_matrix[name_order, name_order]
 melted <- melt(cor_matrix)
 
-ggplot(melted, aes(Var1, Var2, fill = value)) +
+melted |>
+    filter(as.integer(Var1) > as.integer(Var2)) |>
+    ggplot(aes(Var1, Var2, fill = value)) +
     geom_tile() +
     geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
     scale_fill_gradient2(
@@ -92,7 +95,10 @@ ggplot(melted, aes(Var1, Var2, fill = value)) +
         midpoint = 0, limit = c(-1, 1)
     ) +
     theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+    theme(
+        panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    ) +
     labs(x = "", y = "", fill = "Pearson's r") +
     theme(aspect.ratio = 1)
 
