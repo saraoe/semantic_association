@@ -56,28 +56,7 @@ delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |
         levels = c("control", "script-related", "script-unrelated")
     )) |>
     mutate(model = str_replace(model, "/", "_")) |>
-    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
-    # only use complete cases across implementations of sem
-    group_by(ItemNum, cond) |>
-    filter(all(!is.na(semantic_association))) |>
-    ungroup() |>
-    arrange(Subject, ItemNum, cond)
-
-# test df
-if (any(is.na(delogu_df$semantic_association))) {
-    print("NAs in data frame!")
-    quit()
-}
-
-n_obs_per_implementation <- delogu_df |>
-    group_by(full_implementation) |>
-    summarize("N" = n()) |>
-    pull(N)
-
-if (!length(unique(n_obs_per_implementation)) == 1) {
-    print("Some implementations have more observations!")
-    quit()
-}
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
 
 # model formula
 # sem

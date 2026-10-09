@@ -57,28 +57,7 @@ aurnhammer_df <- read.csv(file.path("results", "aurnhammer_semantic_association.
     left_join(lp_df) |>
     left_join(mean_amplitude_df) |>
     mutate(model = str_replace(model, "/", "_")) |>
-    mutate(full_implementation = paste(implementation, model, sep = "_")) |>
-    # only use complete cases across implementations of sem
-    group_by(ItemNum, Condition) |>
-    filter(all(!is.na(semantic_association))) |>
-    ungroup() |>
-    arrange(Subject, ItemNum, Condition)
-
-# test df
-if (any(is.na(aurnhammer_df$semantic_association))) {
-    print("NAs in data frame!")
-    quit()
-}
-
-n_obs_per_implementation <- aurnhammer_df |>
-    group_by(full_implementation) |>
-    summarize("N" = n()) |>
-    pull(N)
-
-if (!length(unique(n_obs_per_implementation)) == 1) {
-    print("Some implementations have more observations!")
-    quit()
-}
+    mutate(full_implementation = paste(implementation, model, sep = "_"))
 
 # model formula
 # sem
