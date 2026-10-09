@@ -76,7 +76,7 @@ for (dataset in c("delogu")) {
 
 ```{r}
 diagnostics_df |>
-    filter(!str_detect(model, "Gameselo")) |>
+    filter(!str_detect(model, str_c(exclude_models, collapse = "|"))) |>
     # group_by(dataset) |>
     # filter(!str_detect(model, "bsemprior")) |>
     summarize(

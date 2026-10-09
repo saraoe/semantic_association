@@ -213,13 +213,13 @@ for (emb_model_name in emb_model_names) {
 ```
 [1] "SD of Prior = 10"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 48.99644
+Estimated Bayes factor in favor of x1 over x2: 66.52447
 [1] "Sd of prior = 1"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 43.34643
+Estimated Bayes factor in favor of x1 over x2: 58.75929
 [1] "Sd of prior = 2"
 [1] "x1 = human, x2 = SE_aari1995_German_Semantic_STS_V2"
-Estimated Bayes factor in favor of x1 over x2: 45.88192
+Estimated Bayes factor in favor of x1 over x2: 61.98005
 
 
 
