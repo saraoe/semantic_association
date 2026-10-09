@@ -277,10 +277,6 @@ if ("raccoons" %in% dataset) {
         left_join(raccoons_sem) |>
         filter(pos %in% content_pos) |>
         mutate(word = clean_word(word)) |>
-        # only use complete cases across implementations of sem
-        group_by(id, word_n) |>
-        filter(all(!is.na(semantic_association))) |>
-        ungroup() |>
         arrange(subject, id, word_n)
 
     # run models
