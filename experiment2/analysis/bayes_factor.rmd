@@ -10,6 +10,8 @@ library(latex2exp)
 
 setwd("experiment2")
 
+source(file.path("..", "src", "model_diagnostics.r"))
+
 options(mc.cores = parallel::detectCores())
 
 models_path <- file.path("analysis", "brms_models")
@@ -85,6 +87,10 @@ for (dataset in datasets) {
   for (reg_model_name in sem_model_names) {
     print(reg_model_name)
     sem_m <- readRDS(file.path(models_path, reg_model_name))
+    if (number_divergent_transitions(sem_m) > 0) {
+      print("Divergent transitions - skips this model")
+      next
+    }
 
     prior_sd <- get_sem_prior_sd(sem_m)
     posterior_sem <- sem_m |>
