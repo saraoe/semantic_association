@@ -187,6 +187,12 @@ if ("ucl" %in% dataset) {
         rename("n400" = "N400") |>
         arrange(subject, id, word_n)
 
+    # models needing extra iterations (3000 iterations)
+    ## NB: Only for lp models!
+    extra_iter <- c(
+        "SE_BAAI_bge-m3"
+    )
+
     # run models
     implementations <- ucl_df |>
         pull(implementation_id) |>
@@ -209,11 +215,18 @@ if ("ucl" %in% dataset) {
         )
 
         # n400 ~ sem + lp
+        if (imp_id %in% extra_iter) {
+            print("Fitting lp model with 3000 iterations!")
+            iter <- 3000
+        } else {
+            iter <- 2000
+        }
         m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
             chains = 4,
+            iter = iter,
             control = list(adapt_delta = 0.9999),
             seed = 246,
             file = file.path(out_folder, paste0("ucl_lp_", imp_id))
