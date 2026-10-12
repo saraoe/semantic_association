@@ -16,7 +16,8 @@ models_path <- file.path("analysis", "brms_models")
 exclude_models <- c(
     "STS-multilingual-mpnet-base-v2",
     "sgpt-bloom-7b1-msmarco",
-    "stsb-xlm-r-multilingual"
+    "stsb-xlm-r-multilingual",
+    "stsb-roberta-base-v2"
 )
 ```
 
@@ -50,7 +51,7 @@ mcmc_plot(m, variable = "^b_[^Intercept]", regex = TRUE) +
 ```{r}
 diagnostics_df <- data.frame()
 
-for (dataset in c("tanner", "ucl")) {
+for (dataset in c("ucl")) {
     print(dataset)
     model_names <- list.files(models_path,
         full.names = FALSE,
@@ -176,7 +177,7 @@ get_fixef_models <- function(
 ```{r}
 rm(fixef_df)
 
-fixef_df <- get_fixef_models(c("tanner", "ucl"), model_prefix = "lp") |>
+fixef_df <- get_fixef_models(c("ucl"), model_prefix = "lp") |>
     filter(!(model %in% exclude_models))
 ```
 
@@ -219,7 +220,7 @@ fixef_df |>
     theme_minimal() +
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 6, width = 7)
+ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width = 7)
 ```
 
 ```{r}
@@ -299,7 +300,7 @@ fixef_df |>
     theme_minimal() +
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 6, width = 7)
+ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 7)
 ```
 
 ## Plot for paper
@@ -308,6 +309,7 @@ library(patchwork)
 
 dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
     fixef_df |>
+        filter(!model %in% exclude_models) |>
         filter(dataset == dataset_name) |>
         filter(model != coefficient_name) |>
         filter(coefficient == coefficient_name) |>
@@ -339,8 +341,8 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
         geom_vline(aes(xintercept = 0), linetype = "dashed") +
         scale_color_manual(
             values = c(
-                "steelblue4",
                 "steelblue1",
+                "steelblue4",
                 "firebrick"
             )
         ) +
@@ -353,20 +355,12 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
         theme(plot.title = element_text(size = 11))
 }
 
-p_tanner <- dataset_plot("tanner", coefficient_name = "s_lp", x_lab = "") +
-    labs(title = "Tanner (2019)") +
-    dataset_plot("tanner", coefficient_name = "s_sem", x_lab = "") +
-    plot_layout(axes = "collect")
-p_ucl <- dataset_plot("ucl", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
-    labs(title = "UCL") +
+dataset_plot("ucl", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
     dataset_plot("ucl", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
-    plot_layout(axes = "collect")
-
-p_tanner / p_ucl +
-    plot_layout(guides = "collect") &
+    plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
+ggsave(file.path("figs", "regression_coefficients.png"), height = 4, width = 8)
 ```
 
 ### interaction

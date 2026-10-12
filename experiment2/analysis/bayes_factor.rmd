@@ -17,7 +17,8 @@ models_path <- file.path("analysis", "brms_models")
 exclude_models <- c(
   "STS-multilingual-mpnet-base-v2",
   "sgpt-bloom-7b1-msmarco",
-  "stsb-xlm-r-multilingual"
+  "stsb-xlm-r-multilingual",
+  "stsb-roberta-base-v2"
 )
 ```
 
@@ -72,7 +73,7 @@ get_modelname <- function(text) {
 ```{r}
 rm(sd_df)
 
-datasets <- c("tanner", "ucl")
+datasets <- c("ucl")
 
 for (dataset in datasets) {
   sem_model_names <- list.files(
@@ -151,7 +152,7 @@ sd_df |>
   scale_x_log10(
     breaks = custom_breaks,
     labels = custom_labels,
-    limits = c(1 / 1500, 200)
+    limits = c(1 / 150, 200)
   ) +
   theme_minimal() +
   scale_shape_manual(values = c(17, 4, 16)) +
@@ -162,10 +163,9 @@ sd_df |>
       "firebrick"
     )
   ) +
-  facet_wrap(. ~ dataset, ncol = 1) +
   labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
   theme(legend.position = "bottom", legend.box = "vertical")
 
-ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 7)
+ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 4)
 ```
 
