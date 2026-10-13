@@ -116,6 +116,7 @@ exclude_models <- c( # models excluded from plots
     "bigscience/sgpt-bloom-7b1-msmarco",
     "jinaai/jina-embeddings-v2-base-de",
     "sentence-transformers/stsb-xlm-r-multilingual",
+    "sentence-transformers/stsb-roberta-base-v2",
     "aari1995/German_Semantic_V3b"
 )
 ```
@@ -138,8 +139,8 @@ color_palette <- c(
     "firebrick3",
     "firebrick4",
     "palevioletred2",
-    "palevioletred3",
-    "palevioletred4"
+    "palevioletred3"
+    # "palevioletred4"
 )
 ```
 
