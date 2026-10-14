@@ -67,9 +67,16 @@ for (dataset in c("ucl")) {
                 "Divergent transistions! Number:",
                 number_divergent_transitions(fit)
             ))
+            divergent_trans <- TRUE
+        } else {
+            divergent_trans <- FALSE
         }
         diag <- diagnostics_rhat_ess(fit) |>
-            mutate("dataset" = dataset, "model" = model)
+            mutate(
+                "divergent_transitions" = divergent_trans,
+                "dataset" = dataset,
+                "model" = model
+            )
 
         diagnostics_df <- rbind(diagnostics_df, diag)
     }
@@ -100,6 +107,7 @@ diagnostics_df |>
     select(model, max_rhat)
 
 diagnostics_df |>
+    # filter(divergent_transitions)
     filter(max_rhat >= 1.035 | min_ess_bulk < 180 | min_ess_tail < 180)
 ```
 
