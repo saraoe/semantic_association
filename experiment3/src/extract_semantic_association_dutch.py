@@ -80,7 +80,7 @@ if __name__ == "__main__":
             "spacy_model_name": "nl_core_news_sm",
         },
     ]
-    # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models
+    # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models and jina-small
     config = (
         [
             {
@@ -98,18 +98,25 @@ if __name__ == "__main__":
             }
             for entry in config
         ]
-        # + [
-        #     {
-        #         "implementation": "SE_all",
-        #         "model_type": "SentenceEmbedding",
-        #         "model_name": "Qwen/Qwen3-Embedding-8B",
-        #     },
-        #     {
-        #         "implementation": "SE_all",
-        #         "model_type": "SentenceEmbedding",
-        #         "model_name": "Qwen/Qwen3-Embedding-0.6B",
-        #     },
-        # ]
+        + [
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "Qwen/Qwen3-Embedding-8B",
+            },
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "Qwen/Qwen3-Embedding-0.6B",
+            },
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "jinaai/jina-embeddings-v5-text-small",
+                "trust_remote_code": True,
+                "task": "text-matching",
+            },
+        ]
     )
 
     print("Extracting semantic association")
