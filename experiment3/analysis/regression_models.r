@@ -58,6 +58,20 @@ increase_adapt_delta <- list(
     "tint" = c()
 )
 
+# models needing extra iterations (3000 iterations)
+extra_iter <- list(
+    "derco" = c(
+        "CWE_enwiki_20180420_300d",
+        "SE_BAAI_bge-m3_bsemprior1",
+        "SE_intfloat_multilingual-e5-large_bsemprior2",
+        "SE_Qwen_Qwen3-Embedding-0.6B_bsemprior1",
+        "CWE_sentences1_enwiki_20180420_300d_bsemprior2",
+        "CWE_sentences1_word2vec-google-news-300_bsemprior2",
+        "SE_sentences1_intfloat_multilingual-e5-large"
+    ),
+    "tint" = c()
+)
+
 if ("derco" %in% dataset) {
     # load data
     derco_sem <- read.csv(
@@ -108,12 +122,6 @@ if ("derco" %in% dataset) {
             filter(implementation_id == imp_id) |>
             mutate(s_sem = scale(semantic_association))
 
-        # only word for lp models
-        if (imp_id %in% increase_adapt_delta$derco) {
-            ad <- 0.99999
-        } else {
-            ad <- 0.9999
-        }
 
         # n400 ~ sem
         m_sem <- brm(sem_formula,
@@ -127,11 +135,26 @@ if ("derco" %in% dataset) {
         )
 
         # n400 ~ sem + lp
+        if (imp_id %in% increase_adapt_delta$derco) {
+            print("Fitting lp model with adapt_delta = 0.99999!")
+            ad <- 0.99999
+        } else {
+            ad <- 0.9999
+        }
+
+        if (imp_id %in% extra_iter$derco) {
+            print("Fitting lp model with 3000 iterations!")
+            iter <- 3000
+        } else {
+            iter <- 2000
+        }
+
         m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
             chains = 4,
+            iter = iter,
             control = list(adapt_delta = ad),
             seed = 246,
             file = file.path(out_folder, paste0("derco_lp_", imp_id))
@@ -152,6 +175,7 @@ if ("derco" %in% dataset) {
     # extra priors for Savage-Dickey BF
     print("Models with extra priors")
     prior_sem_sd <- c(1, 2)
+
     for (imp_id in implementations) {
         data <- derco_df |>
             filter(implementation_id == imp_id) |>
@@ -167,11 +191,19 @@ if ("derco" %in% dataset) {
             prior_suffix <- paste0("_bsemprior", prior_sd)
             print(paste0(imp_id, prior_suffix))
 
+            if (paste0(imp_id, prior_suffix) %in% extra_iter$derco) {
+                print("Fitting lp model with 3000 iterations!")
+                iter <- 3000
+            } else {
+                iter <- 2000
+            }
+
             fit_sem_lp <- brm(sem_lp_formula,
                 family = gaussian(),
                 prior = priors,
                 data = data,
                 chains = 4,
+                iter = iter,
                 control = list(adapt_delta = 0.9999),
                 seed = 246,
                 file = file.path(out_folder, paste0("derco_lp_", imp_id, prior_suffix))
@@ -242,12 +274,27 @@ if ("tint" %in% dataset) {
         )
 
         # n400 ~ sem + lp
+        if (imp_id %in% increase_adapt_delta$tint) {
+            print("Fitting lp model with adapt_delta = 0.99999!")
+            ad <- 0.99999
+        } else {
+            ad <- 0.9999
+        }
+
+        if (imp_id %in% extra_iter$tint) {
+            print("Fitting lp model with 3000 iterations!")
+            iter <- 3000
+        } else {
+            iter <- 2000
+        }
+
         m_sem_lp <- brm(sem_lp_formula,
             family = gaussian(),
             prior = erp_priors,
             data = data,
+            iter = iter,
             chains = 4,
-            control = list(adapt_delta = 0.9999),
+            control = list(adapt_delta = ad),
             seed = 246,
             file = file.path(out_folder, paste0("tint_lp_", imp_id))
         )
@@ -282,10 +329,18 @@ if ("tint" %in% dataset) {
             prior_suffix <- paste0("_bsemprior", prior_sd)
             print(paste0(imp_id, prior_suffix))
 
+            if (paste0(imp_id, prior_suffix) %in% extra_iter$tint) {
+                print("Fitting lp model with 3000 iterations!")
+                iter <- 3000
+            } else {
+                iter <- 2000
+            }
+
             fit_sem_lp <- brm(sem_lp_formula,
                 family = gaussian(),
                 prior = priors,
                 data = data,
+                iter = iter,
                 chains = 4,
                 control = list(adapt_delta = 0.9999),
                 seed = 246,
