@@ -54,7 +54,12 @@ content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
 
 # models that need larger adapt_delta
 increase_adapt_delta <- list(
-    "derco" = c("WE_sentences1_word2vec-google-news-300"),
+    "derco" = c(
+        "WE_sentences1_word2vec-google-news-300",
+        "SE_BAAI_bge-m3_bsemprior1",
+        "CWE_sentences1_word2vec-google-news-300_bsemprior2",
+        "SE_sentences1_intfloat_multilingual-e5-large"
+    ),
     "tint" = c()
 )
 
@@ -62,14 +67,17 @@ increase_adapt_delta <- list(
 extra_iter <- list(
     "derco" = c(
         "CWE_enwiki_20180420_300d",
-        "SE_BAAI_bge-m3_bsemprior1",
+        # "SE_BAAI_bge-m3_bsemprior1", # !
         "SE_intfloat_multilingual-e5-large_bsemprior2",
         "SE_Qwen_Qwen3-Embedding-0.6B_bsemprior1",
-        "CWE_sentences1_enwiki_20180420_300d_bsemprior2",
-        "CWE_sentences1_word2vec-google-news-300_bsemprior2",
-        "SE_sentences1_intfloat_multilingual-e5-large"
+        "CWE_sentences1_enwiki_20180420_300d_bsemprior2"
+        # "CWE_sentences1_word2vec-google-news-300_bsemprior2", #
+        # "SE_sentences1_intfloat_multilingual-e5-large" #
     ),
-    "tint" = c()
+    "tint" = c(
+        "CWE_nlwiki_20180420_300d",
+        "CWE_nlwiki_20180420_300d_bsemprior2"
+    )
 )
 
 if ("derco" %in% dataset) {
@@ -191,6 +199,13 @@ if ("derco" %in% dataset) {
             prior_suffix <- paste0("_bsemprior", prior_sd)
             print(paste0(imp_id, prior_suffix))
 
+            if (paste0(imp_id, prior_suffix) %in% increase_adapt_delta$derco) {
+                print("Fitting lp model with adapt_delta = 0.99999!")
+                ad <- 0.99999
+            } else {
+                ad <- 0.9999
+            }
+
             if (paste0(imp_id, prior_suffix) %in% extra_iter$derco) {
                 print("Fitting lp model with 3000 iterations!")
                 iter <- 3000
@@ -204,7 +219,7 @@ if ("derco" %in% dataset) {
                 data = data,
                 chains = 4,
                 iter = iter,
-                control = list(adapt_delta = 0.9999),
+                control = list(adapt_delta = ad),
                 seed = 246,
                 file = file.path(out_folder, paste0("derco_lp_", imp_id, prior_suffix))
             )
@@ -221,7 +236,11 @@ if ("tint" %in% dataset) {
         mutate(
             implementation_id = paste(implementation, model, sep = "_")
         ) |>
-        mutate(implementation_id = str_replace(implementation_id, "/", "_"))
+        mutate(implementation_id = str_replace(implementation_id, "/", "_")) |>
+        select(-s_lp) |>
+        group_by(implementation_id) |>
+        mutate(s_lp = scale(lp_GroNLP_gpt2.small.dutch)) |>
+        ungroup()
     tint_df <- read.csv(
         file.path("..", "cmcl26", "data", "tint.csv")
     ) |>
@@ -329,6 +348,13 @@ if ("tint" %in% dataset) {
             prior_suffix <- paste0("_bsemprior", prior_sd)
             print(paste0(imp_id, prior_suffix))
 
+            if (paste0(imp_id, prior_suffix) %in% increase_adapt_delta$derco) {
+                print("Fitting lp model with adapt_delta = 0.99999!")
+                ad <- 0.99999
+            } else {
+                ad <- 0.9999
+            }
+
             if (paste0(imp_id, prior_suffix) %in% extra_iter$tint) {
                 print("Fitting lp model with 3000 iterations!")
                 iter <- 3000
@@ -342,7 +368,7 @@ if ("tint" %in% dataset) {
                 data = data,
                 iter = iter,
                 chains = 4,
-                control = list(adapt_delta = 0.9999),
+                control = list(adapt_delta = ad),
                 seed = 246,
                 file = file.path(out_folder, paste0("tint_lp_", imp_id, prior_suffix))
             )
