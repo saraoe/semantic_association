@@ -134,6 +134,11 @@ if __name__ == "__main__":
                 "trust_remote_code": True,
                 "task": "text-matching",
             },
+            {
+                "implementation": "SE_all",
+                "model_type": "SentenceEmbedding",
+                "model_name": "BAAI/bge-m3",
+            },
         ]
     )
 
