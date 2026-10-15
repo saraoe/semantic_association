@@ -67,12 +67,13 @@ increase_adapt_delta <- list(
 extra_iter <- list(
     "derco" = c(
         "CWE_enwiki_20180420_300d",
-        # "SE_BAAI_bge-m3_bsemprior1", # !
+        "SE_BAAI_bge-m3_bsemprior1", # !
         "SE_intfloat_multilingual-e5-large_bsemprior2",
         "SE_Qwen_Qwen3-Embedding-0.6B_bsemprior1",
-        "CWE_sentences1_enwiki_20180420_300d_bsemprior2"
-        # "CWE_sentences1_word2vec-google-news-300_bsemprior2", #
-        # "SE_sentences1_intfloat_multilingual-e5-large" #
+        "CWE_sentences1_enwiki_20180420_300d_bsemprior2",
+        "CWE_sentences1_word2vec-google-news-300_bsemprior2", #
+        "SE_sentences1_intfloat_multilingual-e5-large", #
+        "SE_all_BAAI_bge-m3",
     ),
     "tint" = c(
         "CWE_nlwiki_20180420_300d",
