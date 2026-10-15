@@ -73,12 +73,9 @@ extra_iter <- list(
         "CWE_sentences1_enwiki_20180420_300d_bsemprior2",
         "CWE_sentences1_word2vec-google-news-300_bsemprior2", #
         "SE_sentences1_intfloat_multilingual-e5-large", #
-        "SE_all_BAAI_bge-m3",
+        "SE_all_BAAI_bge-m3"
     ),
-    "tint" = c(
-        "CWE_nlwiki_20180420_300d",
-        "CWE_nlwiki_20180420_300d_bsemprior2"
-    )
+    "tint" = c()
 )
 
 if ("derco" %in% dataset) {
