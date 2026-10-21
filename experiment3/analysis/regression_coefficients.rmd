@@ -12,6 +12,13 @@ setwd("experiment3")
 source(file.path("..", "src", "model_diagnostics.r"))
 
 models_path <- file.path("analysis", "brms_models")
+
+exclude_models <- c(
+    "STS-multilingual-mpnet-base-v2",
+    "sgpt-bloom-7b1-msmarco",
+    "stsb-xlm-r-multilingual",
+    "stsb-roberta-base-v2"
+)
 ```
 
 ```{r}
@@ -189,7 +196,7 @@ fixef_df <- get_fixef_models(c("derco", "tint"), model_prefix = "lp")
 coefficient for semantic association
 ```{r}
 fixef_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
+    filter(!model %in% exclude_models) |>
     filter(context == "Sentence(N=10)") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
@@ -232,6 +239,7 @@ ggsave(file.path("figs", "regression_coefficients_sem.png"), height = 5, width =
 
 ```{r}
 fixef_df |>
+    filter(!model %in% exclude_models) |>
     filter(context == "Sentence(N=1)") |>
     filter(coefficient == "s_sem") |>
     mutate(model_type = case_when(
@@ -243,7 +251,8 @@ fixef_df |>
         dataset = case_when(
             dataset == "derco" ~ "DERCo",
             dataset == "tint" ~ "TiNT"
-        )
+        ),
+        implementation = paste(model_type, model, sep = ", ")
     ) |>
     filter(model_type %in% c("SE", "WE", "CWE")) |>
     mutate(
@@ -277,21 +286,32 @@ ggsave(
 
 ```{r}
 pd <- position_dodge(0.6)
+context_all_models <- c(
+    "Qwen3-Embedding-8B",
+    "Qwen3-Embedding-0.6B",
+    "jina-embeddings-v5-text-small",
+    "bge-m3"
+)
 
 fixef_df |>
-    filter(str_detect(model, "Qwen")) |>
+    filter(model %in% context_all_models) |>
     filter(coefficient == "s_sem") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
     mutate(
         dataset = case_when(
             dataset == "derco" ~ "DERCo",
             dataset == "tint" ~ "TiNT"
         ),
-        implementation = paste(context, model, sep = ":")
+        implementation = paste(model_type, model, sep = ", ")
     ) |>
-    ggplot(aes(y = model, color = context)) +
-    geom_point(aes(x = Estimate), position = pd) +
-    geom_linerange(aes(xmin = Q2.5, xmax = Q97.5), position = pd) +
-    geom_vline(aes(xintercept = 0), linetype = "dashed") +
+    ggplot(aes(x = implementation, color = context)) +
+    geom_point(aes(y = Estimate), position = pd) +
+    geom_linerange(aes(ymin = Q2.5, ymax = Q97.5), position = pd) +
+    geom_hline(aes(yintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
             "firebrick",
@@ -299,24 +319,27 @@ fixef_df |>
             "steelblue4"
         )
     ) +
-    facet_wrap(. ~ dataset, ncol = 1, scale = "free_x") +
+    facet_wrap(. ~ dataset, ncol = 2, scale = "free") +
     labs(
-        x = TeX("$\\beta_2$"), y = "",
-        color = "Context length"
+        y = TeX("$\\beta_2$"), x = "",
+        color = "Context window"
     ) +
     theme_minimal() +
-    theme(legend.position = "bottom")
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 90, hjust = 1)
+    )
 
 ggsave(
     file.path("figs", "regression_coefficients_sem_context_all.png"),
-    height = 3, width = 7
+    height = 5, width = 7
 )
 ```
 
 coefficient for lp
 ```{r}
 fixef_df |>
-    filter(model != "STS-multilingual-mpnet-base-v2") |>
+    filter(!model %in% exclude_models) |>
     filter(context == "Sentence(N=10)") |>
     filter(coefficient == "s_lp") |>
     mutate(model_type = case_when(
@@ -356,15 +379,95 @@ fixef_df |>
 ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 3, width = 7)
 ```
 
+Comparison of Sentence(N=10) and Sentence(N=1)
+```{r}
+# Difference between context windows
+corpus <- "tint"
+
+fixef_df |>
+    filter(!model %in% exclude_models) |>
+    filter(coefficient == "s_sem") |>
+    filter(dataset == corpus) |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+    ) |>
+    select(model_type, model, context, Estimate, Q2.5, Q97.5) |>
+    arrange(model_type, model, context)
+```
+
+```{r}
+corpus <- "tint"
+pd <- position_dodge(0.6)
+
+fixef_df |>
+    filter(!model %in% exclude_models) |>
+    filter(coefficient == "s_sem") |>
+    filter(dataset == corpus) |>
+    filter(context != "All") |>
+    mutate(model_type = case_when(
+        str_detect(implementation, "SE") ~ "SE",
+        str_detect(implementation, "CWE") ~ "CWE",
+        str_detect(implementation, "WE") ~ "WE"
+    )) |>
+    mutate(
+        implementation = paste(model_type, model, sep = ", ")
+    ) |>
+    mutate(
+        model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+    ) |>
+    arrange(model_type, model) |>
+    mutate(
+        implementation = factor(
+            implementation,
+            levels = unique(implementation)
+        )
+    ) |>
+    ggplot(aes(x = implementation, color = context)) +
+    geom_point(aes(y = Estimate), position = pd) +
+    geom_linerange(aes(ymin = Q2.5, ymax = Q97.5), position = pd) +
+    geom_hline(aes(yintercept = 0), linetype = "dashed") +
+    scale_color_manual(
+        values = c(
+            "steelblue1",
+            "steelblue4"
+        )
+    ) +
+    labs(
+        y = TeX("$\\beta_2$"), x = "",
+        color = "Context window"
+    ) +
+    theme_minimal() +
+    theme(
+        legend.position = "bottom",
+        axis.text.x = element_text(angle = 90, hjust = 1)
+    )
+
+ggsave(
+    file.path("figs", paste0(corpus, "_regression_coefficients_sem_sentences_comparison.png")),
+    height = 6, width = 8
+)
+```
+
 Plot for paper
 ```{r}
 library(patchwork)
 
-dataset_plot <- function(dataset_name, coefficient_name, x_lab, context_length = "Sentence(N=10)") {
+dataset_plot <- function(dataset_name, coefficient_name, y_lab, context_length = "Sentence(N=10)") {
+    y_lim <- fixef_df |>
+        filter(dataset == dataset_name) |>
+        filter(context == context_length) |>
+        filter(coefficient != "Intercept") |>
+        summarize("min" = min(Q2.5), "max" = max(Q97.5))
+
     fixef_df |>
         filter(dataset == dataset_name) |>
         filter(context == context_length) |>
-        filter(model != "STS-multilingual-mpnet-base-v2") |>
+        filter(!model %in% exclude_models) |>
         filter(model != coefficient_name) |>
         filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
@@ -386,63 +489,89 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab, context_length =
         mutate(
             implementation = factor(
                 implementation,
-                levels = rev(unique(implementation))
+                levels = unique(implementation)
             )
         ) |>
-        ggplot(aes(y = implementation, color = model_type)) +
-        geom_point(aes(x = Estimate)) +
-        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
-        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        ggplot(aes(x = implementation, color = model_type)) +
+        geom_point(aes(y = Estimate)) +
+        geom_linerange(aes(ymin = Q2.5, ymax = Q97.5)) +
+        geom_hline(aes(yintercept = 0), linetype = "dashed") +
         scale_color_manual(
             values = c(
-                "steelblue4",
                 "steelblue1",
+                "steelblue4",
                 "firebrick"
             )
         ) +
+        ylim(c(y_lim$min, y_lim$max)) +
         facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
         labs(
-            x = x_lab, y = "",
+            y = y_lab, x = "",
             color = "Embeddings",
         ) +
         theme_minimal() +
-        theme(plot.title = element_text(size = 11))
+        theme(
+            plot.title = element_text(size = 11),
+            axis.text.x = element_text(angle = 90, hjust = 1)
+        )
 }
 
-p_derco <- dataset_plot("derco", coefficient_name = "s_lp", x_lab = "") +
+p_derco <- dataset_plot("derco", coefficient_name = "s_lp", y_lab = "") +
     labs(title = "DERCo") +
-    dataset_plot("derco", coefficient_name = "s_sem", x_lab = "") +
+    dataset_plot("derco", coefficient_name = "s_sem", y_lab = "") +
     plot_layout(axes = "collect")
 
-p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
+p_tint <- dataset_plot(
+    "tint",
+    coefficient_name = "s_lp", y_lab = TeX("$\\beta_1$")
+) +
     labs(title = "TiNT") +
-    dataset_plot("tint", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+    dataset_plot(
+        "tint",
+        coefficient_name = "s_sem", y_lab = TeX("$\\beta_2$")
+    ) +
     plot_layout(axes = "collect")
 
 p_derco / p_tint +
     plot_layout(guides = "collect", heights = c(9, 6)) &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients.png"), height = 6, width = 8)
+ggsave(file.path("figs", "regression_coefficients.png"), height = 10, width = 8)
 ```
 
+Seperate plots for datasets
 ```{r}
-p_derco <- dataset_plot("derco", coefficient_name = "s_lp", x_lab = "", context_length = "Sentence(N=1)") +
-    labs(title = "DERCo") +
-    dataset_plot("derco", coefficient_name = "s_sem", x_lab = "", context_length = "Sentence(N=1)") +
-    plot_layout(axes = "collect")
-
-p_tint <- dataset_plot("tint", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$"), context_length = "Sentence(N=1)") +
-    labs(title = "TiNT") +
-    dataset_plot("tint", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$"), context_length = "Sentence(N=1)") +
-    plot_layout(axes = "collect")
-
-p_derco / (p_tint +
-    labs(caption = "Sentence(N=1)")) +
-    plot_layout(guides = "collect", heights = c(9, 6)) &
+p_derco <- dataset_plot("derco", coefficient_name = "s_lp", y_lab = TeX("$\\beta_1$")) +
+    dataset_plot("derco", coefficient_name = "s_sem", y_lab = TeX("$\\beta_2$")) +
+    plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients_sentences1.png"), height = 6, width = 8)
+ggsave(
+    file.path("figs", "derco_regression_coefficients.png"),
+    plot = p_derco,
+    height = 6, width = 8
+)
+
+p_tint <- dataset_plot("tint", coefficient_name = "s_lp", y_lab = TeX("$\\beta_1$")) +
+    dataset_plot("tint", coefficient_name = "s_sem", y_lab = TeX("$\\beta_2$")) +
+    plot_layout(axes = "collect", guides = "collect") &
+    theme(legend.position = "bottom")
+
+ggsave(
+    file.path("figs", "tint_regression_coefficients.png"),
+    plot = p_tint,
+    height = 6, width = 8
+)
+```
+
+TiNT, context window = Sentence(N=1)
+```{r}
+dataset_plot("tint", coefficient_name = "s_lp", y_lab = TeX("$\\beta_1$"), context_length = "Sentence(N=1)") +
+    dataset_plot("tint", coefficient_name = "s_sem", y_lab = TeX("$\\beta_2$"), context_length = "Sentence(N=1)") +
+    plot_layout(axes = "collect", guides = "collect") &
+    theme(legend.position = "bottom")
+
+ggsave(file.path("figs", "tint_regression_coefficients_Sentence(N=1).png"), height = 6, width = 8)
 ```
 
 ### n400 ~ s_lp * s_sem

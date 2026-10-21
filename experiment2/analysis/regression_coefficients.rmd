@@ -315,10 +315,15 @@ ggsave(file.path("figs", "regression_coefficients_lp.png"), height = 5, width = 
 ```{r}
 library(patchwork)
 
-dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
-    fixef_df |>
-        filter(!model %in% exclude_models) |>
+dataset_plot <- function(dataset_name, coefficient_name, y_lab) {
+    y_lim <- fixef_df |>
         filter(dataset == dataset_name) |>
+        filter(coefficient != "Intercept") |>
+        summarize("min" = min(Q2.5), "max" = max(Q97.5))
+
+    fixef_df |>
+        filter(dataset == dataset_name) |>
+        filter(!model %in% exclude_models) |>
         filter(model != coefficient_name) |>
         filter(coefficient == coefficient_name) |>
         mutate(model_type = case_when(
@@ -340,13 +345,13 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
         mutate(
             implementation = factor(
                 implementation,
-                levels = rev(unique(implementation))
+                levels = unique(implementation)
             )
         ) |>
-        ggplot(aes(y = implementation, color = model_type)) +
-        geom_point(aes(x = Estimate)) +
-        geom_linerange(aes(xmin = Q2.5, xmax = Q97.5)) +
-        geom_vline(aes(xintercept = 0), linetype = "dashed") +
+        ggplot(aes(x = implementation, color = model_type)) +
+        geom_point(aes(y = Estimate)) +
+        geom_linerange(aes(ymin = Q2.5, ymax = Q97.5)) +
+        geom_hline(aes(yintercept = 0), linetype = "dashed") +
         scale_color_manual(
             values = c(
                 "steelblue1",
@@ -354,21 +359,25 @@ dataset_plot <- function(dataset_name, coefficient_name, x_lab) {
                 "firebrick"
             )
         ) +
+        ylim(c(y_lim$min, y_lim$max)) +
         facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
         labs(
-            x = x_lab, y = "",
+            y = y_lab, x = "",
             color = "Embeddings",
         ) +
         theme_minimal() +
-        theme(plot.title = element_text(size = 11))
+        theme(
+            plot.title = element_text(size = 11),
+            axis.text.x = element_text(angle = 90, hjust = 1)
+        )
 }
 
-dataset_plot("ucl", coefficient_name = "s_lp", x_lab = TeX("$\\beta_1$")) +
-    dataset_plot("ucl", coefficient_name = "s_sem", x_lab = TeX("$\\beta_2$")) +
+dataset_plot("ucl", coefficient_name = "s_lp", y_lab = TeX("$\\beta_1$")) +
+    dataset_plot("ucl", coefficient_name = "s_sem", y_lab = TeX("$\\beta_2$")) +
     plot_layout(axes = "collect", guides = "collect") &
     theme(legend.position = "bottom")
 
-ggsave(file.path("figs", "regression_coefficients.png"), height = 4, width = 8)
+ggsave(file.path("figs", "ucl_regression_coefficients.png"), height = 6, width = 8)
 ```
 
 ### interaction
