@@ -1,29 +1,24 @@
 # Experiment 2: Natural sentences
 
-Semantic association is defined as the semantic relation between a word and its preceding context. When using embeddings to define this measure, one must calculate an embedding of the context and the word such that, $$\text{Semantic Associator} = \text{Similarity}(e_{context}, e_{word})$$
+In experiment 1, we applied embedding-based semantic association to stimuli from semantic illusions, which were hand-crafted sentences with targets in predefined conditions (semantically related or unrelated to the preceding context). In this experiment, we want to apply the metric to natural sentences (i.e. sentences with no experimental manipulation). This type of experimental data represents a key use case for embedding-based semantic association, as the metric allows semantic relationships to be quantified in natural stimuli without requiring predefined target words or experimentally manipulated conditions. Semantic association was extracted for all content words in the sentences and used as a predictor for the N400. 
 
-where $e_i$ refers to the embedding of element $i$. The results of experiment 1 shows that this method can capture known patterns from semantic illusions - both when applying word embeddings (WE), content word embeddings (CWE), and sentence embeddings (SE). In this experiment, we want to test the method when applied to natural sentences (i.e. sentences with no experimental manipulation). Semantic association is extracted for all content words in the sentences and used as a predictor for the N400. 
-
-We use two datasets: 1) Tanner et al. [1] and 2) The UCL corpus [2] which both consist of English sentences.
+For this experiment we used the UCL corpus [1] which consist of natural English sentences.
 
 ## Models
-| Embeddings | Hugging Face model                          |
-| -------------- | --------------------------------------- |
-| SE             | intfloat/multilingual-e5-large          |
-| SE             | intfloat/e5-large-v2                    |
-| SE             | whaleloops/phrase-bert                  |
-| SE             | BAAI/bge-m3                             |
-| SE             | bigscience/sgpt-bloom-7b1-msmarco       |
-| SE             | Qwen/Qwen3-Embedding-0.6B               |
-| SE             | Qwen/Qwen3-Embedding-8B                 |
-| WE             | enwiki_20180420_300d                    |
-| WE             | word2vec-google-news-300                |
-| CWE            | enwiki_20180420_300d                    |
-| CWE            | word2vec-google-news-300                |
+| Hugging Face reference | Embeddings | Language | Architecture |
+|---|---|---|---|
+| Word2vec/enwiki_20180420_300d | WE, CWE | English | Skip-gram |
+| Word2vec/word2vec-google-news-300 | WE, CWE | English | Skip-gram |
+| Qwen/Qwen3-Embedding-0.6B | SE | Multilingual | Decoder |
+| Qwen/Qwen3-Embedding-8B | SE | Multilingual | Decoder |
+| jinaai/jina-embeddings-v5-text-small | SE | Multilingual | Decoder |
+| jinaai/jina-embeddings-v5-text-nano | SE | Multilingual | Encoder |
+| intfloat/multilingual-e5-large | SE | Multilingual | Encoder |
+| BAAI/bge-m3 | SE | English | Encoder |
+| intfloat/e5-large-v2 | SE | English | Encoder |
+| whaleloops/phrase-bert | SE | English | Encoder |
 
 
 ## References
 
-[1] Tanner, D. (2019). Robust neurocognitive individual differences in grammatical agreement processing: A latent variable approach. Cortex, 111, 210–237. https://doi.org/10.1016/j.cortex.2018.10.011
-
-[2] Frank, S. L., Otten, L. J., Galli, G., & Vigliocco, G. (2015). The ERP response to the amount of information conveyed by words in sentences. Brain and Language, 140, 1–11. https://doi.org/10.1016/j.bandl.2014.10.006
+[1] Frank, S. L., Otten, L. J., Galli, G., & Vigliocco, G. (2015). The ERP response to the amount of information conveyed by words in sentences. Brain and Language, 140, 1–11. https://doi.org/10.1016/j.bandl.2014.10.006
