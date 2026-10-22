@@ -1,6 +1,7 @@
 # Semantic association
 
 This repository contains code for estimating semantic association using language model (LM) embeddings. The semantic association between a target word and its preceding context is implemented as as the cosine similarity between the embedding of the context, $E_{context}$, and the embedding of the target, $E_{target}$. 
+
 $$
     \text{Semantic Association} = \cos(E_{context}, E_{target})
 $$
