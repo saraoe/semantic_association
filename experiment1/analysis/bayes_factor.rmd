@@ -181,6 +181,71 @@ sd_df |>
 ggsave(file.path("figs", "Savage-Dickey.png"), width = 7, height = 3.5)
 ```
 
+```{r}
+x_min <- min(custom_breaks)
+x_max <- max(custom_breaks)
+
+sd_df |>
+  filter(!embedding_model %in% exclude_models) |>
+  mutate("implementation" = factor(implementation, levels = c("Human rating", "WE", "CWE", "SE"))) |>
+  mutate("full_imp" = ifelse(
+    implementation == "Human rating",
+    "Human-rated association",
+    paste(implementation, embedding_model, sep = ", ")
+  )) |>
+  arrange(implementation, embedding_model) |>
+  mutate(
+    full_imp = factor(
+      full_imp,
+      levels = rev(unique(full_imp))
+    )
+  ) |>
+  ggplot(aes(
+    y = full_imp,
+    color = implementation,
+    shape = as.factor(prior_sd)
+  )) +
+  geom_line(aes(x = BF01, group = full_imp), linetype = "dashed", color = "grey") +
+  geom_point(aes(x = BF01), size = 2) +
+  geom_vline(aes(xintercept = 1), linetype = "dotted") +
+  scale_x_log10(
+    breaks = custom_breaks,
+    labels = custom_labels,
+    limits = c(1 / 300, 50)
+  ) +
+  # Labels on each side of the dotted line
+  annotate(
+    "text",
+    x = sqrt(x_min * 1), y = Inf,
+    label = TeX("In favor of $H_{1}$"),
+    hjust = 0.5, vjust = 0,
+    size = 3
+  ) +
+  annotate(
+    "text",
+    x = sqrt(x_max * 1), y = Inf,
+    label = TeX("In favor of $H_{0}$"),
+    hjust = 0.5, vjust = 0,
+    size = 3
+  ) +
+  coord_cartesian(clip = "off") +
+  theme_minimal() +
+  scale_shape_manual(values = c(17, 4, 16)) +
+  scale_color_manual(
+    values = c("darkorange", "steelblue1", "steelblue4", "firebrick")
+  ) +
+  labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
+  theme(
+    legend.position = "bottom",
+    legend.box = "vertical",
+    legend.spacing.y = unit(0, "pt"), # gap between the two legends
+    legend.margin = margin(t = 0, b = 0), # padding around each legend
+    plot.margin = margin(t = 25, r = 5, b = 5, l = 5)
+  )
+
+ggsave(file.path("figs", "Savage-Dickey_w_annotation.png"), width = 7, height = 3.5)
+```
+
 ## Bridge sampling: human association vs embedding-based association
 ```{r}
 embedding_implementation <- "SE_aari1995_German_Semantic_STS_V2"
