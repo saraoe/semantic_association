@@ -7,7 +7,7 @@ import sys
 import pandas as pd
 import numpy as np
 from heapq import nlargest, nsmallest
-import json
+import json, ndjson
 
 if __name__ == "__main__":
     project_root = Path(__file__).parent.parent.parent
@@ -26,8 +26,34 @@ MODEL_REGISTRY = {
 }
 
 
-def stream_models(config):
+def ndjson_gen(json_path: Path):
+    with open(json_path) as f:
+        reader = ndjson.reader(f)
+        yield from reader
+
+
+def get_existing_entries(json_path):
+    existing_entries = []
+    for row in ndjson_gen(json_path):
+        existing_entries.append((row["model"], row["implementation"]))
+    return existing_entries
+
+
+def stream_models(config, out_path: Path):
+    existing_models = get_existing_entries(out_path)
+
     for model_config in config:
+        if any(
+            existing_model == model_config["model_name"]
+            and existing_imp == model_config["implementation"]
+            for existing_model, existing_imp in existing_models
+        ):
+            yield (
+                f"{model_config['implementation']}, {model_config['model_name']}",
+                None,
+            )
+            continue
+
         model_type = model_config.pop("model_type")
         implementation = model_config.pop("implementation")
 
@@ -203,6 +229,20 @@ if __name__ == "__main__":
             "model_name": "Qwen/Qwen3-Embedding-0.6B",
         },
         {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-small",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
+        {
+            "implementation": "SE",
+            "model_type": "SentenceEmbedding",
+            "model_name": "jinaai/jina-embeddings-v5-text-nano",
+            "trust_remote_code": True,
+            "task": "text-matching",
+        },
+        {
             "implementation": "WE",
             "model_type": "WordEmbedding",
             "model_name": "enwiki_20180420_300d",
@@ -227,20 +267,20 @@ if __name__ == "__main__":
     ]
 
     config = [
-            {
-                **entry,
-                "implementation": entry["implementation"],
-                "n_sentences": 10,
-            }
-            for entry in config
-        ] + [
-            {
-                **entry,
-                "implementation": entry["implementation"] + "_sentences1",
-                "n_sentences": 1,
-            }
-            for entry in config
-        ] 
+        {
+            **entry,
+            "implementation": entry["implementation"],
+            "n_sentences": 10,
+        }
+        for entry in config
+    ] + [
+        {
+            **entry,
+            "implementation": entry["implementation"] + "_sentences1",
+            "n_sentences": 1,
+        }
+        for entry in config
+    ]
 
     # creating out path
     out_path = Path(
@@ -255,7 +295,10 @@ if __name__ == "__main__":
     else:
         print(f"Appending to {out_path}")
 
-    for name, model in stream_models(config):
+    for name, model in stream_models(config, out_path=out_path):
+        if not model:
+            print(f"{name} already in existing entries!")
+            continue
         print(f"{name}: {model.model_name}")
         extract_words_similar_to_context_embeddings(
             model=model,
