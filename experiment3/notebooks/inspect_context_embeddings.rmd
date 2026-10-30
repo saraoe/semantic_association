@@ -50,7 +50,7 @@ df <- read.csv(file.path("results", "top_n_context_embedding_similarities.csv"))
     ungroup() |>
     mutate(
         model = factor(model, levels = models_order),
-        context = case_when(
+        context_length = case_when(
             str_detect(implementation, "sentences0") ~ "Sentence(N=0)",
             str_detect(implementation, "sentences1") ~ "Sentence(N=1)",
             .default = "Sentence(N=10)"
@@ -171,7 +171,7 @@ df |>
 line plot all models but one article id colored by rank
 ```{r}
 df |>
-    filter(context == "Sentence(N=0)") |>
+    filter(context_length == "Sentence(N=0)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
     filter(word_n %% 100 == 0) |>
@@ -195,7 +195,7 @@ line plot all models but one article id colored by rank (specified where in the 
 ```{r}
 df |>
     # filter(model %in% include_models) |>
-    # filter(context == "Sentence(N=10)") |>
+    # filter(context_length == "Sentence(N=10)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
     filter(word_n > 20) |>
@@ -220,7 +220,7 @@ df |>
 df |>
     filter(model %in% include_models) |>
     mutate(model = remove_organization(model)) |>
-    filter(context == "Sentence(N=10)") |>
+    filter(context_length == "Sentence(N=10)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
     filter(word_n %% 100 == 0) |>
@@ -241,17 +241,16 @@ df |>
 ```
 
 ```{r}
-model_ <- include_models[2]
+word_numbers <- c(10, 20, 50, 100, 200, 500, 775)
 
-print(model_)
 df |>
-    filter(model == model_) |>
+    filter(model %in% include_models) |>
     mutate(model = remove_organization(model)) |>
-    filter(context == "Sentence(N=10)") |>
+    filter(context_length == "Sentence(N=10)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
-    filter(word_n %% 100 == 0) |>
-    select(implementation, word_n, similarity_rank, word) |>
+    filter(word_n %in% word_numbers) |>
+    select(implementation, model, word_n, similarity_rank, word) |>
     pivot_wider(names_from = word_n, values_from = word) |>
     unite("row", everything(), sep = " & ") |>
     pull(row)
@@ -259,6 +258,8 @@ df |>
 
 plot for paper
 ```{r}
+word_numbers <- c(10, 20, 50, 100, 200, 500, 775)
+
 colors <- c(
     "1" = "firebrick4",
     "2" = "firebrick3",
@@ -270,10 +271,10 @@ colors <- c(
 df |>
     filter(model %in% include_models) |>
     mutate(model = remove_organization(model)) |>
-    filter(context == "Sentence(N=10)") |>
+    filter(context_length == "Sentence(N=10)") |>
     filter(similarity_level == "high") |>
     filter(id == 4) |>
-    filter(word_n %% 100 == 0) |>
+    filter(word_n %in% word_numbers) |>
     mutate(imp = paste(implementation, model, sep = ", ")) |>
     mutate(
         implementation = factor(implementation, levels = c("WE", "CWE", "SE")),
