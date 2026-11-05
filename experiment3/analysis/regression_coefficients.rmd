@@ -401,7 +401,7 @@ fixef_df |>
 ```
 
 ```{r}
-corpus <- "tint"
+corpus <- "derco"
 pd <- position_dodge(0.6)
 
 fixef_df |>
@@ -443,13 +443,13 @@ fixef_df |>
     ) +
     theme_minimal() +
     theme(
-        legend.position = "bottom",
+        legend.position = "right",
         axis.text.x = element_text(angle = 90, hjust = 1)
     )
 
 ggsave(
     file.path("figs", paste0(corpus, "_regression_coefficients_sem_sentences_comparison.png")),
-    height = 6, width = 8
+    height = 5, width = 8
 )
 ```
 
