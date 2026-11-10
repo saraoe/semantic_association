@@ -326,13 +326,13 @@ fixef_df |>
     ) +
     theme_minimal() +
     theme(
-        legend.position = "bottom",
+        legend.position = "right",
         axis.text.x = element_text(angle = 90, hjust = 1)
     )
 
 ggsave(
     file.path("figs", "regression_coefficients_sem_context_all.png"),
-    height = 5, width = 7
+    height = 5, width = 8
 )
 ```
 
