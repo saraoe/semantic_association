@@ -17,6 +17,7 @@ from src.embedding_model import EmbeddingModel
 from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelContentWord
 from src.sentence_embedding_models import SentenceEmbeddingModel
 from src.mamba_embedding_models import MambaEmbeddingModel
+from src.llm_prompting import OpenAIModel
 from src.append_to_csv import append_df_to_csv
 
 MODEL_REGISTRY = {
@@ -24,6 +25,7 @@ MODEL_REGISTRY = {
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
     "MambaEmbedding": MambaEmbeddingModel,
+    "Prompting": OpenAIModel,
 }
 
 

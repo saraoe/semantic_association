@@ -3779,3 +3779,273 @@
 267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.40173292,SE,jinaai/jina-embeddings-v5-text-nano
 268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.386138,SE,jinaai/jina-embeddings-v5-text-nano
 269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,0.37229475,SE,jinaai/jina-embeddings-v5-text-nano
+0,1,control,Johann betrat das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,7.000001778944321,prompt,gpt-4.1
+1,1,script-related,Johann verließ das Restaurant. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,2.0055524901806403,prompt,gpt-4.1
+2,1,script-unrelated,Johann betrat die Wohnung. Wenig später öffnete er die,Speisekarte,und verschaffte sich einen Überblick.,1.980914504659587,prompt,gpt-4.1
+3,2,control,Sabine betrat das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,7.000000043164798,prompt,gpt-4.1
+4,2,script-related,Sabine verließ das Kino. Schnell ging sie zur,Kasse,und kaufte eine Karte.,6.250808556370409,prompt,gpt-4.1
+5,2,script-unrelated,Sabine betrat die Schule. Schnell ging sie zur,Kasse,und kaufte eine Karte.,2.5347087874172702,prompt,gpt-4.1
+6,3,control,Kevin betrat den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,6.999909046224534,prompt,gpt-4.1
+7,3,script-related,Kevin verließ den Bauernhof. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,6.392061853119956,prompt,gpt-4.1
+8,3,script-unrelated,Kevin betrat die Kirche. Ohne zu zögern nahm er eine,Mistgabel,und fing an zu schaufeln.,1.9826267852670445,prompt,gpt-4.1
+9,4,control,Susi betrat die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,7.000000007270158,prompt,gpt-4.1
+10,4,script-related,Susi verließ die Arztpraxis. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,7.000000525855088,prompt,gpt-4.1
+11,4,script-unrelated,Susi betrat das Gehege. Freundlich sprach sie mit der,Arzthelferin,über die Problematik.,1.998472996770364,prompt,gpt-4.1
+12,5,control,Roman betrat die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,7.000000614786663,prompt,gpt-4.1
+13,5,script-related,Roman verließ die Bücherei. Kurz danach ging er zum,Regal,und suchte einen Krimi.,5.8903340281144585,prompt,gpt-4.1
+14,5,script-unrelated,Roman betrat die Kneipe. Kurz danach ging er zum,Regal,und suchte einen Krimi.,5.002571155108755,prompt,gpt-4.1
+15,6,control,Lea begann damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,7.000000000334757,prompt,gpt-4.1
+16,6,script-related,Lea war fertig damit Spaghetti zu kochen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,6.887175472921405,prompt,gpt-4.1
+17,6,script-unrelated,Lea begann die Wände zu streichen. Vorsichtig öffnete sie die,Nudelpackung,mit einem Handgriff.,1.0116866824542938,prompt,gpt-4.1
+18,7,control,Peter erreichte das Theater. Wenig später ging er zur,Loge,und setzte sich.,6.173050315607564,prompt,gpt-4.1
+19,7,script-related,Peter verließ das Theater. Wenig später ging er zur,Loge,und setzte sich.,4.07362955044675,prompt,gpt-4.1
+20,7,script-unrelated,Peter erreichte den Supermarkt. Wenig später ging er zur,Loge,und setzte sich.,1.0000432961628543,prompt,gpt-4.1
+21,8,control,Lisa betrat den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,7.000006018096924,prompt,gpt-4.1
+22,8,script-related,Lisa verließ den Bahnhof. Wenig später war sie am,Gleis,und wartete auf den Zug.,6.970672823016633,prompt,gpt-4.1
+23,8,script-unrelated,Lisa betrat das Haus. Wenig später war sie am,Gleis,und wartete auf den Zug.,1.1824289925070444,prompt,gpt-4.1
+24,9,control,Tim begann im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,7.000002015813109,prompt,gpt-4.1
+25,9,script-related,Tim hörte auf im Fitnessstudio zu trainieren. Umgehend war er auf dem,Laufband,und rann wie verrückt.,6.998592274952333,prompt,gpt-4.1
+26,9,script-unrelated,Tim begann seine Fahrstunde. Umgehend war er auf dem,Laufband,und rann wie verrückt.,1.0001629431582764,prompt,gpt-4.1
+27,10,control,Maria erreichte den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,7.000000047407257,prompt,gpt-4.1
+28,10,script-related,Maria verließ den Flughafen. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,2.12310425175383,prompt,gpt-4.1
+29,10,script-unrelated,Maria erreichte das Einkaufszentrum. Sofort ging sie zum,Check-in,um den Koffer aufzugeben.,2.006674751026853,prompt,gpt-4.1
+30,11,control,Lukas kam zur Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,6.826569677072237,prompt,gpt-4.1
+31,11,script-related,Lukas verließ die Geburtstagsfeier. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,5.7990305552731245,prompt,gpt-4.1
+32,11,script-unrelated,Lukas kam zum Unterricht. Nach einer Weile überreichte er den,Kuchen,und gratulierte.,4.326701466248896,prompt,gpt-4.1
+33,12,control,Marie ging zum Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,7.000002842752486,prompt,gpt-4.1
+34,12,script-related,Marie verließ den Friseur. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,6.999980713976888,prompt,gpt-4.1
+35,12,script-unrelated,Marie ging zur Uni. Nach einem kurzen Moment fragte sie die,Stylistin,nach einem neuen Schnitt.,1.320826527620131,prompt,gpt-4.1
+36,13,control,Thorsten begann zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,7.000000026180785,prompt,gpt-4.1
+37,13,script-related,Thorsten hörte auf zu duschen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,4.069848853555562,prompt,gpt-4.1
+38,13,script-unrelated,Thorsten begann zu grillen. Als erstes benutzte er das,Shampoo,und dann das Duschgel.,1.0000000013808,prompt,gpt-4.1
+39,14,control,Claudia betrat den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,6.999983600188478,prompt,gpt-4.1
+40,14,script-related,Claudia verließ den Blumenladen. Schnell fragte sie nach einer,Rose,für eine Freundin.,6.9433465921028565,prompt,gpt-4.1
+41,14,script-unrelated,Claudia betrat das Tiergeschäft. Schnell fragte sie nach einer,Rose,für eine Freundin.,1.0000126863633472,prompt,gpt-4.1
+42,15,control,Jonathan ging zum Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,7.000000000139548,prompt,gpt-4.1
+43,15,script-related,Jonathan verließ den Friedhof. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,7.000001622023811,prompt,gpt-4.1
+44,15,script-unrelated,Jonathan ging in die Küche. Nachdenklich betrachtete er den,Grabstein,und sprach ein Gebet.,1.0001435302896238,prompt,gpt-4.1
+45,16,control,Lara ging in den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,6.999830705909671,prompt,gpt-4.1
+46,16,script-related,Lara verließ den Garten. Genau prüfte sie die,Erde,und goss dann die Blumen.,5.952015348919059,prompt,gpt-4.1
+47,16,script-unrelated,Lara ging zum Herd. Genau prüfte sie die,Erde,und goss dann die Blumen.,1.0000559976332413,prompt,gpt-4.1
+48,17,control,Roman ging ins Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,7.000000741574297,prompt,gpt-4.1
+49,17,script-related,Roman verließ das Museum. Akribisch betrachtete er die,Skulpturen,und war begeistert.,6.946579682169214,prompt,gpt-4.1
+50,17,script-unrelated,Roman ging in die Buchhandlung. Akribisch betrachtete er die,Skulpturen,und war begeistert.,2.8119685225827737,prompt,gpt-4.1
+51,18,control,Annika ging zum Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,7.0000000000770655,prompt,gpt-4.1
+52,18,script-related,Annika verließ den Konditor. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,6.863351087988866,prompt,gpt-4.1
+53,18,script-unrelated,Annika ging in die Boutique. Schnell fragte sie nach einem,Kuchen,und bezahlte sofort.,1.2942133394886217,prompt,gpt-4.1
+54,19,control,Emil betrat das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,7.000002213936097,prompt,gpt-4.1
+55,19,script-related,Emil verließ das Spa. Nach einer Weile bekam er eine,Massage,und genoss sie.,6.2166851195976935,prompt,gpt-4.1
+56,19,script-unrelated,Emil betrat die Apotheke. Nach einer Weile bekam er eine,Massage,und genoss sie.,2.0006989783291225,prompt,gpt-4.1
+57,20,control,Susanne betrat die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,7.000002562381691,prompt,gpt-4.1
+58,20,script-related,Susanne verließ die Reitschule. Schnell setzte sie den,Sattel,auf und ritt los.,6.9481087820357565,prompt,gpt-4.1
+59,20,script-unrelated,Susanne betrat das Bad. Schnell setzte sie den,Sattel,auf und ritt los.,1.004198494903338,prompt,gpt-4.1
+60,21,control,Martin kam zur Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,7.000003323516247,prompt,gpt-4.1
+61,21,script-related,Martin verließ die Sicherheitskontrolle. Zügig öffnete er den,Koffer,und wurde durchgewunken.,6.961523898708358,prompt,gpt-4.1
+62,21,script-unrelated,Martin kam zur Autowerkstatt. Zügig öffnete er den,Koffer,und wurde durchgewunken.,5.141968725551849,prompt,gpt-4.1
+63,22,control,Jutta ging zur Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,7.000000240754844,prompt,gpt-4.1
+64,22,script-related,Jutta verließ die Hotelrezeption. Sofort bekam sie ein,Zimmer,und dankte freundlich.,6.999997638981617,prompt,gpt-4.1
+65,22,script-unrelated,Jutta ging zur Post. Sofort bekam sie ein,Zimmer,und dankte freundlich.,1.0000671071730838,prompt,gpt-4.1
+66,23,control,Jens ging zum Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,6.038206152361053,prompt,gpt-4.1
+67,23,script-related,Jens verließ den Zahnarzt. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,4.795361094139943,prompt,gpt-4.1
+68,23,script-unrelated,Jens ging zur Zollstelle. Ängstlich ging er zum,Röntgen,und ließ sich behandeln.,3.8075529033742104,prompt,gpt-4.1
+69,24,control,Elena begann Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,7.000000840316462,prompt,gpt-4.1
+70,24,script-related,Elena hörte auf Poker zu spielen. Schnell setzte sie ihr,Geld,und gewann.,6.999765679693645,prompt,gpt-4.1
+71,24,script-unrelated,Elena begann zu zeichnen. Schnell setzte sie ihr,Geld,und gewann.,1.0002161137295507,prompt,gpt-4.1
+72,25,control,Bruno begann seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,6.9999453170198125,prompt,gpt-4.1
+73,25,script-related,Bruno beendete seinen Urlaub. Endlich kam er am,Meer,an und genoss das Wetter.,6.07033906044345,prompt,gpt-4.1
+74,25,script-unrelated,Bruno begann seinen Filmabend. Endlich kam er am,Meer,an und genoss das Wetter.,1.9945776528112888,prompt,gpt-4.1
+75,26,control,Jana betrat das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,5.427835590210111,prompt,gpt-4.1
+76,26,script-related,Jana verließ das Bürgeramt. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,6.090093155027118,prompt,gpt-4.1
+77,26,script-unrelated,Jana betrat das Gartencenter. Umgehend zeigte sie ihr,Visum,und stellte einen Antrag.,1.1732878668790823,prompt,gpt-4.1
+78,27,control,Nico fuhr auf die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,7.000002562483441,prompt,gpt-4.1
+79,27,script-related,Nico verließ die Kirmes. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,6.960355858050062,prompt,gpt-4.1
+80,27,script-unrelated,Nico fuhr zur Pizzeria. Sofort ging er zum,Auto-Scooter,und fuhr eine Runde.,1.044678659916035,prompt,gpt-4.1
+81,28,control,Beate ging Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,6.992416517585527,prompt,gpt-4.1
+82,28,script-related,Beate kam zurück vom Wandern. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,6.99593302431376,prompt,gpt-4.1
+83,28,script-unrelated,Beate ging schwimmen. Nach einer Weile sah sie ein,Edelweiß,das sie gleich mitnahm.,1.0000592849098149,prompt,gpt-4.1
+84,29,control,Hubert nahm ein Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,7.000000010252538,prompt,gpt-4.1
+85,29,script-related,Hubert verließ das Taxi. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,7.000001078988353,prompt,gpt-4.1
+86,29,script-unrelated,Hubert nahm ein Flugzeug. Freundlich begrüßte er den,Fahrer,und nannte sein Ziel.,1.9994228717579674,prompt,gpt-4.1
+87,30,control,Jenni begann zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,6.999987367769935,prompt,gpt-4.1
+88,30,script-related,Jenni hörte auf zu baden. Sofort verteilte sie den,Schaum,auf ihrem Körper.,6.998660363677827,prompt,gpt-4.1
+89,30,script-unrelated,Jenni begann die Vorlesung. Sofort verteilte sie den,Schaum,auf ihrem Körper.,1.0780789479443753,prompt,gpt-4.1
+90,31,control,Hans betrat die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,7.000000000000561,prompt,gpt-4.1
+91,31,script-related,Hans verließ die Eishalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,7.000000000314476,prompt,gpt-4.1
+92,31,script-unrelated,Hans betrat die Kletterhalle. Flott schnürte er seine,Schlittschuhe,und ging auf die Bahn.,1.0236890756784514,prompt,gpt-4.1
+93,32,control,Clara begann zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,7.000000068977473,prompt,gpt-4.1
+94,32,script-related,Clara hörte auf zu bowlen. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,7.000000264417421,prompt,gpt-4.1
+95,32,script-unrelated,Clara ging zum Schießstand. Gekonnt erzielte sie einen,Strike,und gewann das Spiel.,3.273412358795188,prompt,gpt-4.1
+96,33,control,Georg nahm teil an einem Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,7.00000000011213,prompt,gpt-4.1
+97,33,script-related,Georg beendete einen Feuerwehreinsatz. Sofort benutzte er den,Schlauch,und löschte das Feuer.,7.0000000238378846,prompt,gpt-4.1
+98,33,script-unrelated,Georg nahm teil an Yoga. Sofort benutzte er den,Schlauch,und löschte das Feuer.,1.0002097882616494,prompt,gpt-4.1
+99,34,control,Johanna begann das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,7.000000000082036,prompt,gpt-4.1
+100,34,script-related,Johanna beendete das Fußballspiel. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,4.878474776653921,prompt,gpt-4.1
+101,34,script-unrelated,Johanna begann die Jagd. Nach kurzer Zeit machte sie ein,Tor,und jubelte laut.,1.78325955636514,prompt,gpt-4.1
+102,35,control,Jürgen betrat die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,6.99927096448588,prompt,gpt-4.1
+103,35,script-related,Jürgen verließ die Metzgerei. Sofort fragte er nach einem,Steak,und bezahlte.,6.005251948262971,prompt,gpt-4.1
+104,35,script-unrelated,Jürgen betrat die Bäckerei. Sofort fragte er nach einem,Steak,und bezahlte.,1.9399164663289754,prompt,gpt-4.1
+105,36,control,Frauke betrat den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,6.999974143805083,prompt,gpt-4.1
+106,36,script-related,Frauke verließ den Zoo. Wenig später fotografierte sie ein,Zebra,beim Trinken.,6.311445562601219,prompt,gpt-4.1
+107,36,script-unrelated,Frauke ging ins Stadion. Wenig später fotografierte sie ein,Zebra,beim Trinken.,1.539004793155191,prompt,gpt-4.1
+108,37,control,Bernd betrat den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,7.0000020158103675,prompt,gpt-4.1
+109,37,script-related,Bernd verließ den Waschsalon. Schnell wählte er das,Waschprogramm,und lies es laufen.,6.522764537110326,prompt,gpt-4.1
+110,37,script-unrelated,Bernd betrat den Kiosk. Schnell wählte er das,Waschprogramm,und lies es laufen.,1.0023220260994448,prompt,gpt-4.1
+111,38,control,Nicole ging in den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,6.9991919571561825,prompt,gpt-4.1
+112,38,script-related,Nicole verließ den Zirkus. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,6.907211656543405,prompt,gpt-4.1
+113,38,script-unrelated,Nicole ging ins Büro. Bald setzte sie sich auf die,Tribüne,und schaute sich das Spektakel an.,1.2120674346615214,prompt,gpt-4.1
+114,39,control,Viktor ging in die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,7.000000015879459,prompt,gpt-4.1
+115,39,script-related,Viktor verließ die Sauna. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,6.989663052499704,prompt,gpt-4.1
+116,39,script-unrelated,Viktor ging ins Labor. Nach einer Weile machte er einen,Aufguss,und legte sich hin.,2.0143129399744613,prompt,gpt-4.1
+117,40,control,Gabi ging zum Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,6.999565057889771,prompt,gpt-4.1
+118,40,script-related,Gabi verließ den Tierarzt. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,6.437505777967348,prompt,gpt-4.1
+119,40,script-unrelated,Gabi ging in die Umkleide. Einen Moment später fragte sie die,Arzthelferin,nach Medikamenten.,4.328243398846786,prompt,gpt-4.1
+120,41,control,Jakob betrat den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,6.999983434664308,prompt,gpt-4.1
+121,41,script-related,Jakob verließ den Tatort. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,6.963782116247016,prompt,gpt-4.1
+122,41,script-unrelated,Jakob betrat die Tankstelle. Kurz darauf fotografierte er die,Blutspritzer,und war erstaunt.,2.559614754699703,prompt,gpt-4.1
+123,42,control,Peter begann Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,7.0000000099372,prompt,gpt-4.1
+124,42,script-related,Peter hörte auf Bäume zu fällen. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,6.999989138167025,prompt,gpt-4.1
+125,42,script-unrelated,Peter begann die Kutsche zu fahren. Nach einer Weile benutzte sie die,Axt,und traf gezielt den Stamm.,1.0001016055439509,prompt,gpt-4.1
+126,43,control,Tom begann ein Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,7.00000000009742,prompt,gpt-4.1
+127,43,script-related,Tom beendete das Lagerfeuer. Sofort stapelte er das,Holz,und zündete es an.,6.999232351192686,prompt,gpt-4.1
+128,43,script-unrelated,Tom begann Frühstück zu machen. Sofort stapelte er das,Holz,und zündete es an.,2.0356512997933143,prompt,gpt-4.1
+129,44,control,Kim ging zum Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,6.999966993813275,prompt,gpt-4.1
+130,44,script-related,Kim verließ den Weihnachtsmarkt. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,6.245842867460735,prompt,gpt-4.1
+131,44,script-unrelated,Kim ging ins Krankenhaus. Kurz darauf erreichte er die,Weihnachtskiosks,und stöberte nach Geschenken.,1.0000000038725818,prompt,gpt-4.1
+132,45,control,Michael begann sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,7.000000021704624,prompt,gpt-4.1
+133,45,script-related,Michael war fertig sein Mittagessen zu kochen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,6.999978076727846,prompt,gpt-4.1
+134,45,script-unrelated,Michael begann einen Kuchen zu backen. Schnell schnitt er das,Gemüse,und warf es in den Topf.,2.0021642880190815,prompt,gpt-4.1
+135,46,control,Johann betrat die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,6.0084167150764065,prompt,gpt-4.1
+136,46,script-related,Johann verließ die Wohnung. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,6.006027381148782,prompt,gpt-4.1
+137,46,script-unrelated,Johann betrat das Kino. Sofort setzte er sich aufs,Bett,und dachte über den Tag nach.,1.0341011205913566,prompt,gpt-4.1
+138,47,control,Sabine betrat die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,7.000010562088034,prompt,gpt-4.1
+139,47,script-related,Sabine verließ die Schule. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,3.2971756413860946,prompt,gpt-4.1
+140,47,script-unrelated,Sabine betrat den Bauernhof. Schnell ging sie zum,Klassensaal,und grüßte die Schüler.,1.0000006719363481,prompt,gpt-4.1
+141,48,control,Kevin betrat die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,6.985029599111425,prompt,gpt-4.1
+142,48,script-related,Kevin verließ die Kirche. Vorsichtig nahm er eine,Kerze,und zündete sie an.,6.651246420326484,prompt,gpt-4.1
+143,48,script-unrelated,Kevin betrat die Arztpraxis. Vorsichtig nahm er eine,Kerze,und zündete sie an.,1.0060988011128635,prompt,gpt-4.1
+144,49,control,Susi betrat das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,6.492181804330288,prompt,gpt-4.1
+145,49,script-related,Susi verließ das Gehege. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,6.024702140148729,prompt,gpt-4.1
+146,49,script-unrelated,Susi betrat die Bücherei. Präzise begutachtete sie das,Kalb,und machte sich Notizen.,1.0000014529424484,prompt,gpt-4.1
+147,50,control,Thomas betrat die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,6.999983780411419,prompt,gpt-4.1
+148,50,script-related,Thomas verließ die Kneipe. In Eile rief er den,Kellner,und bestellte ein Bier.,6.71219527267839,prompt,gpt-4.1
+149,50,script-unrelated,Thomas begann Spaghetti zu kochen. In Eile rief er den,Kellner,und bestellte ein Bier.,2.037330910218144,prompt,gpt-4.1
+150,51,control,Lea begann die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,7.0000000191543235,prompt,gpt-4.1
+151,51,script-related,Lea war fertig die Wände zu streichen. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,6.999996315515188,prompt,gpt-4.1
+152,51,script-unrelated,Lea erreichte das Theater. Schnell wählte sie einen,Pinsel,und fing an zu streichen.,1.0011687202716348,prompt,gpt-4.1
+153,52,control,Peter erreichte den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,6.831133450243561,prompt,gpt-4.1
+154,52,script-related,Peter verließ den Supermarkt. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,5.980205682541283,prompt,gpt-4.1
+155,52,script-unrelated,Peter erreichte den Bahnhof. Schnell kaufte er etwas,Gemüse,zum Kochen am Abend.,2.0017420826172314,prompt,gpt-4.1
+156,53,control,Lisa betrat das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,5.999774646527531,prompt,gpt-4.1
+157,53,script-related,Lisa verließ das Haus. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,2.1646540542464217,prompt,gpt-4.1
+158,53,script-unrelated,Lisa begann im Fitnessstudio zu trainieren. Kurz danach checkte sie den,Kühlschrank,und suchte etwas zu essen.,2.0016456412801755,prompt,gpt-4.1
+159,54,control,Tim begann seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,7.000000091380056,prompt,gpt-4.1
+160,54,script-related,Tim beendete seine Fahrstunde. Hektisch drückte er aufs,Gaspedal,und fuhr los.,7.000000449787644,prompt,gpt-4.1
+161,54,script-unrelated,Tim ging zum Flughafen. Hektisch drückte er aufs,Gaspedal,und fuhr los.,6.999982035848626,prompt,gpt-4.1
+162,55,control,Maria erreichte das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,6.999620274350191,prompt,gpt-4.1
+163,55,script-related,Maria verließ das Einkaufszentrum. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,4.694339361894922,prompt,gpt-4.1
+164,55,script-unrelated,Maria erreichte die Geburtstagsfeier. Sofort begrüßte sie die,Verkäuferin,und suchte etwas aus.,1.9859381699066818,prompt,gpt-4.1
+165,56,control,Lukas begann die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,7.000000106833915,prompt,gpt-4.1
+166,56,script-related,Lukas beendete die Vorlesung. Eilig begrüßte er seine,Studenten,und fing an.,6.999995988401595,prompt,gpt-4.1
+167,56,script-unrelated,Lukas ging zum Friseur. Eilig begrüßte er seine,Studenten,und fing an.,1.0009709772469586,prompt,gpt-4.1
+168,57,control,Marie ging zur Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,7.0000000474072595,prompt,gpt-4.1
+169,57,script-related,Marie verließ die Uni. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,1.9994208288717255,prompt,gpt-4.1
+170,57,script-unrelated,Marie ging duschen. In Eile betrat sie den,Hörsaal,und öffnete ihr Buch.,1.9999168675926928,prompt,gpt-4.1
+171,58,control,Thorsten begann zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,6.105086536931317,prompt,gpt-4.1
+172,58,script-related,Thorsten hörte auf zu grillen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,2.839493445797354,prompt,gpt-4.1
+173,58,script-unrelated,Thorsten betrat den Blumenladen. Behutsam platzierte er den,Grillanzünder,und suchte die Zange.,1.0000000518141763,prompt,gpt-4.1
+174,59,control,Claudia betrat das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,6.904642253958299,prompt,gpt-4.1
+175,59,script-related,Claudia verließ das Tiergeschäft. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,5.742458781403248,prompt,gpt-4.1
+176,59,script-unrelated,Claudia betrat den Friedhof. Eine Zeit lang stand sie am,Käfig,und dachte über den Kauf nach.,1.0000092600284203,prompt,gpt-4.1
+177,60,control,Jonathan ging in die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,6.787803725939773,prompt,gpt-4.1
+178,60,script-related,Jonathan verließ die Küche. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,5.983371695059514,prompt,gpt-4.1
+179,60,script-unrelated,Jonathan ging in den Garten. Eine Weile säuberte er den,Ofen,und danach den Kühlschrank.,1.0124333523299713,prompt,gpt-4.1
+180,61,control,Lara ging zum Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,6.999931280178481,prompt,gpt-4.1
+181,61,script-related,Lara ging weg vom Herd. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,6.912437970398178,prompt,gpt-4.1
+182,61,script-unrelated,Lara ging ins Museum. Schnell reinigte sie die,Herdplatte,und dann die Abzugshaube.,1.0002386731721002,prompt,gpt-4.1
+183,62,control,Roman ging in die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,6.9974388899024085,prompt,gpt-4.1
+184,62,script-related,Roman verließ die Buchhandlung. Schnell suchte er einen,Roman,für seine Frau.,2.0810956016883524,prompt,gpt-4.1
+185,62,script-unrelated,Roman ging zum Konditor. Schnell suchte er einen,Roman,für seine Frau.,1.0012134051126196,prompt,gpt-4.1
+186,63,control,Annika ging in die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,6.9997644331734366,prompt,gpt-4.1
+187,63,script-related,Annika verließ die Boutique. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,6.87406972043253,prompt,gpt-4.1
+188,63,script-unrelated,Annika ging ins Spa. Eine Zeit lang suchte sie nach,Stiefeln,und kaufte sie dann.,1.0675451572580663,prompt,gpt-4.1
+189,64,control,Emil betrat die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,7.00000000531895,prompt,gpt-4.1
+190,64,script-related,Emil verließ die Apotheke. Schnell kaufte er das,Medikament,und ging dann nach Hause.,7.000000193452399,prompt,gpt-4.1
+191,64,script-unrelated,Emil betrat die Reitschule. Schnell kaufte er das,Medikament,und ging dann nach Hause.,1.2877698867019143,prompt,gpt-4.1
+192,65,control,Susanne betrat das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,6.99370876700817,prompt,gpt-4.1
+193,65,script-related,Susanne verließ das Bad. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,6.863367837307781,prompt,gpt-4.1
+194,65,script-unrelated,Susanne ging zur Sicherheitskontrolle. Sofort entfernte sie ihr,Makeup,und putzte sich die Zähne.,4.616077928570288,prompt,gpt-4.1
+195,66,control,Martin kam zur Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,6.996736978407935,prompt,gpt-4.1
+196,66,script-related,Martin verließ die Autowerkstatt. Umgehend fragte er nach den,Reifen,für den Winter.,6.136557209416762,prompt,gpt-4.1
+197,66,script-unrelated,Martin kam zur Hotelrezeption. Umgehend fragte er nach den,Reifen,für den Winter.,1.046034201809895,prompt,gpt-4.1
+198,67,control,Jutta ging zur Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,6.999993672006289,prompt,gpt-4.1
+199,67,script-related,Jutta verließ die Post. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,6.98457466056842,prompt,gpt-4.1
+200,67,script-unrelated,Jutta ging zum Zahnarzt. Umgehend bekam sie das,Paket,auf das sie gewartet hatte.,1.0023973435237945,prompt,gpt-4.1
+201,68,control,Jens ging zur Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,6.9998764246506715,prompt,gpt-4.1
+202,68,script-related,Jens verließ die Zollstelle. Schnell zeigte er sein,Formular,und schaute den Beamten an.,6.999599470912988,prompt,gpt-4.1
+203,68,script-unrelated,Jens begann Poker zu spielen. Schnell zeigte er sein,Formular,und schaute den Beamten an.,1.000305756344228,prompt,gpt-4.1
+204,69,control,Elena begann zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,7.0000000000795115,prompt,gpt-4.1
+205,69,script-related,Elena hörte auf zu zeichnen. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,6.99999934135856,prompt,gpt-4.1
+206,69,script-unrelated,Elena begann den Urlaub. Umgehend nahm sie den,Stift,und zeichnete eine Blume.,1.8840567501570453,prompt,gpt-4.1
+207,70,control,Bruno begann seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,7.000007972698656,prompt,gpt-4.1
+208,70,script-related,Bruno beendete seinen Filmabend. Schnell besorgte er das,Popcorn,aus der Küche.,6.994455135557369,prompt,gpt-4.1
+209,70,script-unrelated,Bruno betrat das Bürgeramt. Schnell besorgte er das,Popcorn,aus der Küche.,1.0000630421945123,prompt,gpt-4.1
+210,71,control,Jana betrat das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,6.989660395061066,prompt,gpt-4.1
+211,71,script-related,Jana verließ das Gartencenter. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,4.251870208755924,prompt,gpt-4.1
+212,71,script-unrelated,Jana ging auf die Kirmes. Nach einer Weile fragte sie nach einer,Palme,für den Balkon.,1.0113301863529829,prompt,gpt-4.1
+213,72,control,Nico fuhr zur Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,6.999765677818039,prompt,gpt-4.1
+214,72,script-related,Nico verließ die Pizzeria. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,2.0046015168678464,prompt,gpt-4.1
+215,72,script-unrelated,Nico fuhr wandern. Sofort griff er die,Speisekarte,und bestellte eine Margherita.,2.000549423517085,prompt,gpt-4.1
+216,73,control,Beate ging Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,6.999325779010932,prompt,gpt-4.1
+217,73,script-related,Beate kam zurück vom Schwimmen. Schnell prüfte sie das,Becken,und schwamm los.,6.906955038361777,prompt,gpt-4.1
+218,73,script-unrelated,Beate fuhr mit dem Taxi. Schnell prüfte sie das,Becken,und schwamm los.,1.0007326861004993,prompt,gpt-4.1
+219,74,control,Hubert nahm ein Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,6.965902589770917,prompt,gpt-4.1
+220,74,script-related,Hubert verließ das Flugzeug. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,4.854815343813985,prompt,gpt-4.1
+221,74,script-unrelated,Hubert begann zu baden. Voller Begeisterung genoss er die,Höhe,denn er liebte das Fliegen.,1.0566543983872396,prompt,gpt-4.1
+222,75,control,Jenni begann den Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,6.9763114015497845,prompt,gpt-4.1
+223,75,script-related,Jenni hörte auf mit dem Unterricht. Sofort öffnete sie die,Tafel,und begann zu schreiben.,5.576102880971201,prompt,gpt-4.1
+224,75,script-unrelated,Jenni betrat die Eishalle. Sofort öffnete sie die,Tafel,und begann zu schreiben.,1.9969905800742014,prompt,gpt-4.1
+225,76,control,Hans betrat die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,7.000001113234969,prompt,gpt-4.1
+226,76,script-related,Hans verließ die Kletterhalle. Wenig später griff er das,Seil,und spannte es ein.,6.995933506520418,prompt,gpt-4.1
+227,76,script-unrelated,Hans begann zu bowlen. Wenig später griff er das,Seil,und spannte es ein.,1.2068994800443886,prompt,gpt-4.1
+228,77,control,Clara ging zum Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,7.000001013615459,prompt,gpt-4.1
+229,77,script-related,Clara verließ den Schießstand. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,6.999850636856869,prompt,gpt-4.1
+230,77,script-unrelated,Clara ging auf einen Feuerwehreinsatz. Sofort bekam sie einen,Revolver,und begann auf das Ziel zu schießen.,1.98802404669753,prompt,gpt-4.1
+231,78,control,Georg nahm teil an Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,7.000000000472084,prompt,gpt-4.1
+232,78,script-related,Georg kam zurück vom Yoga. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,6.999989966796536,prompt,gpt-4.1
+233,78,script-unrelated,Georg nahm teil am Fußballspiel. Nach einer Weile setzte er sich auf seine,Yogamatte,und machte eine Übung.,1.9997694047650691,prompt,gpt-4.1
+234,79,control,Johanna begann die Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,6.92840388167464,prompt,gpt-4.1
+235,79,script-related,Johanna kam zurück von der Jagd. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,6.949660221825129,prompt,gpt-4.1
+236,79,script-unrelated,Johanna betrat die Metzgerei. Nach einer Weile erblickte sie den,Hochsitz,und ging darauf zu.,1.0001067996368187,prompt,gpt-4.1
+237,80,control,Jürgen betrat die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,7.000010897364376,prompt,gpt-4.1
+238,80,script-related,Jürgen verließ die Bäckerei. Wenig später zeigte er auf das,Croissant,und wählte aus.,6.022889052955085,prompt,gpt-4.1
+239,80,script-unrelated,Jürgen betrat den Zoo. Wenig später zeigte er auf das,Croissant,und wählte aus.,1.1192055921381325,prompt,gpt-4.1
+240,81,control,Frauke ging ins Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,6.997008396477032,prompt,gpt-4.1
+241,81,script-related,Frauke verließ das Stadion. Schnell wählte sie eine,Tribüne,und setzte sich.,2.1500018397793603,prompt,gpt-4.1
+242,81,script-unrelated,Frauke ging zum Waschsalon. Schnell wählte sie eine,Tribüne,und setzte sich.,1.000000006587458,prompt,gpt-4.1
+243,82,control,Bernd betrat den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,7.000003122152046,prompt,gpt-4.1
+244,82,script-related,Bernd verließ den Kiosk. Sofort kaufte er eine,Zeitung,und ging wieder heim.,7.000005566397861,prompt,gpt-4.1
+245,82,script-unrelated,Bernd betrat den Zirkus. Sofort kaufte er eine,Zeitung,und ging wieder heim.,1.5621803431506043,prompt,gpt-4.1
+246,83,control,Nicole betrat das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,7.000003026089274,prompt,gpt-4.1
+247,83,script-related,Nicole verließ das Büro. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,5.624951116408148,prompt,gpt-4.1
+248,83,script-unrelated,Nicole betrat die Sauna. Zuerst ging sie zum,Schreibtisch,und schaltete dann den Computer ein.,1.000552710860112,prompt,gpt-4.1
+249,84,control,Viktor ging ins Labor. Schnell begann er das,Experiment,und machte sich Notizen.,7.00000001091377,prompt,gpt-4.1
+250,84,script-related,Viktor verließ das Labor. Schnell begann er das,Experiment,und machte sich Notizen.,6.159273099580393,prompt,gpt-4.1
+251,84,script-unrelated,Viktor ging zum Tierarzt. Schnell begann er das,Experiment,und machte sich Notizen.,1.9990492610878097,prompt,gpt-4.1
+252,85,control,Gabi ging in die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,7.000000205927966,prompt,gpt-4.1
+253,85,script-related,Gabi verließ die Umkleide. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,6.999961432130901,prompt,gpt-4.1
+254,85,script-unrelated,Gabi betrat den Tatort. Schnell probierte sie die,Kleidung,an und ging zur Kasse.,5.9291454041857525,prompt,gpt-4.1
+255,86,control,Jakob betrat die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,5.478431753242369,prompt,gpt-4.1
+256,86,script-related,Jakob verließ die Tankstelle. Sofort sagte er seine,Nummer,und bezahlte.,3.334738069852056,prompt,gpt-4.1
+257,86,script-unrelated,Jakob begann Bäume zu fällen. Sofort sagte er seine,Nummer,und bezahlte.,1.0000560013038002,prompt,gpt-4.1
+258,87,control,Hilde begann die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,7.000000023837879,prompt,gpt-4.1
+259,87,script-related,Hilde war fertig die Kutsche zu fahren. Schnell bestieg sie den,Kutschbock,und los ging es.,7.000000840319608,prompt,gpt-4.1
+260,87,script-unrelated,Hilde begann ein Lagerfeuer. Schnell bestieg sie den,Kutschbock,und los ging es.,1.9996530468679667,prompt,gpt-4.1
+261,88,control,Tom begann Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,6.996400009654699,prompt,gpt-4.1
+262,88,script-related,Tom hörte auf Frühstück zu machen. Sofort öffnete er die,Butter,und machte sich ein Brot.,6.196792590596893,prompt,gpt-4.1
+263,88,script-unrelated,Tom ging zum Weihnachtsmarkt. Sofort öffnete er die,Butter,und machte sich ein Brot.,1.998159786118484,prompt,gpt-4.1
+264,89,control,Kim ging ins Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,6.99983288245248,prompt,gpt-4.1
+265,89,script-related,Kim verließ das Krankenhaus. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,6.926280236287302,prompt,gpt-4.1
+266,89,script-unrelated,Kim fing an sein Mittagessen zu kochen. Gleich ging sie zur,Rezeption,und fragte nach dem Weg.,1.2942210263177965,prompt,gpt-4.1
+267,90,control,Michael fing an damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,6.999832885996903,prompt,gpt-4.1
+268,90,script-related,Michael war fertig damit einen Kuchen zu backen. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,5.874548249851044,prompt,gpt-4.1
+269,90,script-unrelated,Michael betrat das Restaurant. Als erstes nahm er einen,Schneebesen,und schlug Eiweiß steif.,1.0197182591528386,prompt,gpt-4.1

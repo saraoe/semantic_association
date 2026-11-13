@@ -25,90 +25,99 @@ if __name__ == "__main__":
                 "experiment1", "results", "delogu_semantic_association.csv"
             ),
         },
-        {
-            "df": pd.read_csv(Path("experiment1", "data", "aurnhammer_2021_stim.csv")),
-            "out_path": Path(
-                "experiment1", "results", "aurnhammer_semantic_association.csv"
-            ),
-        },
+        # {
+        #     "df": pd.read_csv(Path("experiment1", "data", "aurnhammer_2021_stim.csv")),
+        #     "out_path": Path(
+        #         "experiment1", "results", "aurnhammer_semantic_association.csv"
+        #     ),
+        # },
     ]
 
+    with open("openai_api_key.txt") as f:
+        api_key = f.read()
+
     config = [
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "jinaai/jina-embeddings-v2-base-de",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "aari1995/German_Semantic_STS_V2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "aari1995/German_Semantic_V3b",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "intfloat/multilingual-e5-large",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Qwen/Qwen3-Embedding-8B",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "Qwen/Qwen3-Embedding-0.6B",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "sentence-transformers/stsb-xlm-r-multilingual",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "jinaai/jina-embeddings-v5-text-small",
+        #     "trust_remote_code": True,
+        #     "task": "text-matching",
+        # },
+        # {
+        #     "implementation": "SE",
+        #     "model_type": "SentenceEmbedding",
+        #     "model_name": "jinaai/jina-embeddings-v5-text-nano",
+        #     "trust_remote_code": True,
+        #     "task": "text-matching",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "dewiki_20180420_100d",
+        # },
+        # {
+        #     "implementation": "WE",
+        #     "model_type": "WordEmbedding",
+        #     "model_name": "dewiki_20180420_300d",
+        # },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "dewiki_20180420_100d",
+        #     "spacy_model_name": "de_core_news_sm",
+        # },
+        # {
+        #     "implementation": "CWE",
+        #     "model_type": "WordEmbeddingContentWord",
+        #     "model_name": "dewiki_20180420_300d",
+        #     "spacy_model_name": "de_core_news_sm",
+        # },
         {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "jinaai/jina-embeddings-v2-base-de",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "aari1995/German_Semantic_STS_V2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "aari1995/German_Semantic_V3b",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "intfloat/multilingual-e5-large",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Gameselo/STS-multilingual-mpnet-base-v2",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Qwen/Qwen3-Embedding-8B",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "Qwen/Qwen3-Embedding-0.6B",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "sentence-transformers/stsb-xlm-r-multilingual",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "jinaai/jina-embeddings-v5-text-small",
-            "trust_remote_code": True,
-            "task": "text-matching",
-        },
-        {
-            "implementation": "SE",
-            "model_type": "SentenceEmbedding",
-            "model_name": "jinaai/jina-embeddings-v5-text-nano",
-            "trust_remote_code": True,
-            "task": "text-matching",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "dewiki_20180420_100d",
-        },
-        {
-            "implementation": "WE",
-            "model_type": "WordEmbedding",
-            "model_name": "dewiki_20180420_300d",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "dewiki_20180420_100d",
-            "spacy_model_name": "de_core_news_sm",
-        },
-        {
-            "implementation": "CWE",
-            "model_type": "WordEmbeddingContentWord",
-            "model_name": "dewiki_20180420_300d",
-            "spacy_model_name": "de_core_news_sm",
+            "implementation": "prompt",
+            "model_type": "Prompting",
+            "model_name": "gpt-4.1",
+            "api_key": api_key,
         },
     ]
 
