@@ -139,8 +139,10 @@ color_palette <- c(
     "firebrick3",
     "firebrick4",
     "palevioletred2",
-    "palevioletred3"
+    "palevioletred3",
     # "palevioletred4"
+    # Prompt
+    "goldenrod3"
 )
 ```
 
@@ -214,12 +216,13 @@ kuperberg_df |>
         "se" = se(semantic_association)
     ) |>
     mutate(model = remove_organization(model)) |>
+    mutate("implementation" = ifelse(implementation == "prompt", "Prompt", implementation)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
     ungroup() |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE", "Log probability")
+            levels = c("WE", "CWE", "SE", "Prompt", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -240,13 +243,13 @@ kuperberg_df |>
     scale_colour_manual(
         values = c(color_palette, "grey40")
     ) +
-    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_shape_manual(values = c(19, 19, 19, 19, 8)) +
     scale_x_discrete(
         limits = function(x) {
             append(
                 x,
                 " ",
-                after = max(grep("^SE,", x))
+                after = max(grep("^Prompt,", x))
             )
         },
         drop = FALSE,
@@ -590,12 +593,13 @@ kim_osterhout_df |>
         "se" = se(semantic_association)
     ) |>
     mutate(model = remove_organization(model)) |>
+    mutate("implementation" = ifelse(implementation == "prompt", "Prompt", implementation)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
     ungroup() |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE", "Log probability")
+            levels = c("WE", "CWE", "SE", "Prompt", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -616,13 +620,13 @@ kim_osterhout_df |>
     scale_colour_manual(
         values = c(color_palette, "grey40")
     ) +
-    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_shape_manual(values = c(19, 19, 19, 19, 8)) +
     scale_x_discrete(
         limits = function(x) {
             append(
                 x,
                 " ",
-                after = max(grep("^SE,", x))
+                after = max(grep("^Prompt,", x))
             )
         },
         drop = FALSE,
@@ -962,12 +966,13 @@ delogu_df |>
         "se" = se(semantic_association)
     ) |>
     mutate(model = remove_organization(model)) |>
+    mutate("implementation" = ifelse(implementation == "prompt", "Prompt", implementation)) |>
     mutate("imp" = paste(implementation, model, sep = ", ")) |>
     ungroup() |>
     mutate(
         implementation = factor(
             implementation,
-            levels = c("WE", "CWE", "SE", "Log probability")
+            levels = c("WE", "CWE", "SE", "Prompt", "Log probability")
         ),
     ) |>
     arrange(implementation, model) |>
@@ -986,15 +991,15 @@ delogu_df |>
         position = position_dodge(width = 0.3)
     ) +
     scale_colour_manual(
-        values = c(color_palette[1:2], color_palette[4:5], color_palette[7:12], "grey40")
+        values = c(color_palette[1:2], color_palette[4:5], color_palette[7:12], color_palette[15], "grey40")
     ) +
-    scale_shape_manual(values = c(19, 19, 19, 8)) +
+    scale_shape_manual(values = c(19, 19, 19, 19, 8)) +
     scale_x_discrete(
         limits = function(x) {
             append(
                 x,
                 " ",
-                after = max(grep("^SE,", x))
+                after = max(grep("^Prompt,", x))
             )
         },
         drop = FALSE,

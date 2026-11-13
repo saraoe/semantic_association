@@ -146,6 +146,9 @@ if __name__ == "__main__":
         },
     ]
 
+    with open("openai_api_key.txt") as f:
+        api_key = f.read()
+
     config = [
         {
             "implementation": "SE",
@@ -253,6 +256,12 @@ if __name__ == "__main__":
             "implementation": "Mamba",
             "model_type": "MambaEmbedding",
             "model_name": "state-spaces/mamba-130m-hf",
+        },
+        {
+            "implementation": "prompt",
+            "model_type": "Prompting",
+            "model_name": "gpt-4.1",
+            "api_key": api_key,
         },
     ]
 
