@@ -104,6 +104,7 @@ get_modelname <- function(text) {
     text <- str_remove(text, "CWE_")
     text <- str_remove(text, "WE_")
     text <- str_remove(text, "SE_")
+    text <- str_remove(text, "prompt_")
     text <- str_remove(text, "sentences1_")
     text <- str_remove(text, "all_")
     # remove organization
@@ -136,7 +137,7 @@ get_fixef_models <- function(
             }
             implementation <- str_remove(model_name, paste0(prefix))
             implementation <- str_remove(implementation, ".rds")
-            if (!str_starts(implementation, "SE|WE|CWE")) {
+            if (!str_starts(implementation, "SE|WE|CWE|prompt")) {
                 next
             }
 
@@ -202,6 +203,7 @@ fixef_df |>
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
         str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt",
         implementation == "Human rating" ~ "Human rating",
     )) |>
     mutate(
@@ -219,7 +221,7 @@ fixef_df |>
     mutate(
         model_type = factor(
             model_type,
-            levels = c("Human rating", "WE", "CWE", "SE")
+            levels = c("Human rating", "WE", "CWE", "SE", "Prompt")
         ),
     ) |>
     arrange(model_type, model) |>
@@ -238,7 +240,8 @@ fixef_df |>
             "darkorange",
             "steelblue1",
             "steelblue4",
-            "firebrick"
+            "firebrick",
+            "darkorchid4"
         )
     ) +
     facet_wrap(. ~ coefficient, ncol = 2, scale = "free_x") +
@@ -259,6 +262,7 @@ fixef_df |>
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
         str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt",
         implementation == "Human rating" ~ "Human rating",
     )) |>
     mutate(
@@ -276,7 +280,7 @@ fixef_df |>
     mutate(
         model_type = factor(
             model_type,
-            levels = c("Human rating", "WE", "CWE", "SE")
+            levels = c("Human rating", "WE", "CWE", "SE", "Prompt")
         ),
     ) |>
     arrange(model_type, model) |>
@@ -295,7 +299,8 @@ fixef_df |>
             "darkorange",
             "steelblue1",
             "steelblue4",
-            "firebrick"
+            "firebrick",
+            "darkorchid4"
         )
     ) +
     labs(
@@ -320,6 +325,7 @@ dataset_plot <- function(coefficient_name, y_lab, y_lim) {
             str_detect(implementation, "SE") ~ "SE",
             str_detect(implementation, "CWE") ~ "CWE",
             str_detect(implementation, "WE") ~ "WE",
+            str_detect(implementation, "prompt") ~ "Prompt",
             implementation == "Human rating" ~ "Human rating",
         )) |>
         mutate(
@@ -337,7 +343,7 @@ dataset_plot <- function(coefficient_name, y_lab, y_lim) {
         mutate(
             model_type = factor(
                 model_type,
-                levels = c("Human rating", "WE", "CWE", "SE")
+                levels = c("Human rating", "WE", "CWE", "SE", "Prompt")
             ),
         ) |>
         arrange(model_type, model) |>
@@ -356,7 +362,8 @@ dataset_plot <- function(coefficient_name, y_lab, y_lim) {
                 "darkorange",
                 "steelblue1",
                 "steelblue4",
-                "firebrick"
+                "firebrick",
+                "darkorchid4"
             )
         ) +
         ylim(y_lim) +
