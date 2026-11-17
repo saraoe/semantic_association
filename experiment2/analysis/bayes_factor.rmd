@@ -45,7 +45,8 @@ get_implementation <- function(model_name) {
   case_when(
     str_detect(model_name, "_SE_") ~ "SE",
     str_detect(model_name, "_CWE_") ~ "CWE",
-    str_detect(model_name, "_WE_") ~ "WE"
+    str_detect(model_name, "_WE_") ~ "WE",
+    str_detect(model_name, "_prompt_") ~ "Prompt"
   )
 }
 
@@ -57,6 +58,7 @@ get_modelname <- function(text) {
   text <- str_remove(text, "CWE_")
   text <- str_remove(text, "WE_")
   text <- str_remove(text, "SE_")
+  text <- str_remove(text, "prompt_")
   text <- str_remove(text, "sentences1_")
   text <- str_remove(text, "all_")
   # remove organization
@@ -139,7 +141,7 @@ limits <- sd_df |>
 
 sd_df |>
   filter(!embedding_model %in% exclude_models) |>
-  mutate("implementation" = factor(implementation, levels = c("WE", "CWE", "SE"))) |>
+  mutate("implementation" = factor(implementation, levels = c("WE", "CWE", "SE", "Prompt"))) |>
   mutate(
     "full_imp" = paste(implementation, embedding_model, sep = ", "),
     dataset = case_when(
@@ -173,7 +175,8 @@ sd_df |>
     values = c(
       "steelblue1",
       "steelblue4",
-      "firebrick"
+      "firebrick",
+      "darkorchid4"
     )
   ) +
   labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
@@ -185,12 +188,8 @@ ggsave(file.path("figs", "ucl_Savage-Dickey.png"), width = 8, height = 4)
 ```{r}
 sd_df |>
   filter(!embedding_model %in% exclude_models) |>
-  mutate("implementation" = factor(implementation, levels = c("Human rating", "WE", "CWE", "SE"))) |>
-  mutate("full_imp" = ifelse(
-    implementation == "Human rating",
-    "Human-rated association",
-    paste(implementation, embedding_model, sep = ", ")
-  )) |>
+  mutate("implementation" = factor(implementation, levels = c("WE", "CWE", "SE", "Prompt"))) |>
+  mutate("full_imp" = paste(implementation, embedding_model, sep = ", ")) |>
   arrange(implementation, embedding_model) |>
   mutate(
     full_imp = factor(
@@ -230,7 +229,7 @@ sd_df |>
   theme_minimal() +
   scale_shape_manual(values = c(17, 4, 16)) +
   scale_color_manual(
-    values = c("steelblue1", "steelblue4", "firebrick")
+    values = c("steelblue1", "steelblue4", "firebrick", "darkorchid4")
   ) +
   labs(x = TeX("$\\BF_{01}$"), y = "", color = "", shape = "SD of prior") +
   theme(
