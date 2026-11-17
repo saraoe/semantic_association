@@ -117,6 +117,7 @@ get_modelname <- function(text) {
     text <- str_remove(text, "CWE_")
     text <- str_remove(text, "WE_")
     text <- str_remove(text, "SE_")
+    text <- str_remove(text, "prompt_")
     text <- str_remove(text, "sentences1_")
     text <- str_remove(text, "all_")
     # remove organization
@@ -147,7 +148,7 @@ get_fixef_models <- function(
             }
             implementation <- str_remove(model_name, paste0(prefix))
             implementation <- str_remove(implementation, ".rds")
-            if (!str_starts(implementation, "SE|WE|CWE")) {
+            if (!str_starts(implementation, "SE|WE|CWE|prompt")) {
                 if (!str_detect(model_prefix, "local")) {
                     next
                 }
@@ -202,7 +203,8 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
         dataset = case_when(
@@ -211,9 +213,9 @@ fixef_df |>
         ),
         implementation = paste(model_type, model, sep = ", ")
     ) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    filter(model_type %in% c("Prompt", "SE", "WE", "CWE")) |>
     mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        model_type = factor(model_type, levels = c("Prompt", "SE", "WE", "CWE")),
     ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
@@ -221,6 +223,7 @@ fixef_df |>
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
+            "darkorchid4",
             "firebrick",
             "steelblue1",
             "steelblue4"
@@ -245,7 +248,8 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
         dataset = case_when(
@@ -254,9 +258,9 @@ fixef_df |>
         ),
         implementation = paste(model_type, model, sep = ", ")
     ) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    filter(model_type %in% c("Prompt", "SE", "WE", "CWE")) |>
     mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        model_type = factor(model_type, levels = c("Prompt", "SE", "WE", "CWE")),
     ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
@@ -264,6 +268,7 @@ fixef_df |>
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
+            "darkorchid4",
             "firebrick",
             "steelblue1",
             "steelblue4"
@@ -290,7 +295,8 @@ context_all_models <- c(
     "Qwen3-Embedding-8B",
     "Qwen3-Embedding-0.6B",
     "jina-embeddings-v5-text-small",
-    "bge-m3"
+    "bge-m3",
+    "gpt-4.1"
 )
 
 fixef_df |>
@@ -299,7 +305,8 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
         dataset = case_when(
@@ -345,7 +352,8 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
         dataset = case_when(
@@ -353,9 +361,9 @@ fixef_df |>
             dataset == "tint" ~ "TiNT"
         )
     ) |>
-    filter(model_type %in% c("SE", "WE", "CWE")) |>
+    filter(model_type %in% c("Prompt", "SE", "WE", "CWE")) |>
     mutate(
-        model_type = factor(model_type, levels = c("SE", "WE", "CWE")),
+        model_type = factor(model_type, levels = c("Prompt", "SE", "WE", "CWE")),
     ) |>
     ggplot(aes(y = implementation, color = model_type)) +
     geom_point(aes(x = Estimate)) +
@@ -363,6 +371,7 @@ fixef_df |>
     geom_vline(aes(xintercept = 0), linetype = "dashed") +
     scale_color_manual(
         values = c(
+            "darkorchid4",
             "firebrick",
             "steelblue1",
             "steelblue4"
@@ -391,10 +400,11 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
-        model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+        model_type = factor(model_type, levels = c("WE", "CWE", "SE", "Prompt")),
     ) |>
     select(model_type, model, context, Estimate, Q2.5, Q97.5) |>
     arrange(model_type, model, context)
@@ -412,13 +422,14 @@ fixef_df |>
     mutate(model_type = case_when(
         str_detect(implementation, "SE") ~ "SE",
         str_detect(implementation, "CWE") ~ "CWE",
-        str_detect(implementation, "WE") ~ "WE"
+        str_detect(implementation, "WE") ~ "WE",
+        str_detect(implementation, "prompt") ~ "Prompt"
     )) |>
     mutate(
         implementation = paste(model_type, model, sep = ", ")
     ) |>
     mutate(
-        model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+        model_type = factor(model_type, levels = c("WE", "CWE", "SE", "Prompt")),
     ) |>
     arrange(model_type, model) |>
     mutate(
@@ -473,10 +484,11 @@ dataset_plot <- function(dataset_name, coefficient_name, y_lab, context_length =
         mutate(model_type = case_when(
             str_detect(implementation, "SE") ~ "SE",
             str_detect(implementation, "CWE") ~ "CWE",
-            str_detect(implementation, "WE") ~ "WE"
+            str_detect(implementation, "WE") ~ "WE",
+            str_detect(implementation, "prompt") ~ "Prompt"
         )) |>
         mutate(
-            model_type = factor(model_type, levels = c("WE", "CWE", "SE")),
+            model_type = factor(model_type, levels = c("WE", "CWE", "SE", "Prompt")),
         ) |>
         mutate(
             implementation = paste(model_type, model, sep = ", "),
@@ -500,7 +512,8 @@ dataset_plot <- function(dataset_name, coefficient_name, y_lab, context_length =
             values = c(
                 "steelblue1",
                 "steelblue4",
-                "firebrick"
+                "firebrick",
+                "darkorchid4"
             )
         ) +
         ylim(c(y_lim$min, y_lim$max)) +
