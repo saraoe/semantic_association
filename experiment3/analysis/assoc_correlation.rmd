@@ -1,0 +1,152 @@
+# Correlation between semantic association implementations and log probability
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(reshape2)
+
+setwd("experiment3")
+
+exclude_models <- c(
+    "Gameselo/STS-multilingual-mpnet-base-v2",
+    "bigscience/sgpt-bloom-7b1-msmarco",
+    "sentence-transformers/stsb-xlm-r-multilingual"
+)
+
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+```
+
+```{r}
+remove_organization <- function(text) {
+    text <- str_remove(text, "Qwen/")
+    text <- str_remove(text, "BAAI/")
+    text <- str_remove(text, "intfloat/")
+    text <- str_remove(text, "bigscience/")
+    text <- str_remove(text, "Gameselo/")
+    text <- str_remove(text, "jinaai/")
+    text <- str_remove(text, "clips/")
+    text <- str_remove(text, "sentence-transformers/")
+    return(text)
+}
+
+# context window of the implementation
+get_context_length <- function(implementation) {
+    case_when(
+        str_detect(implementation, "_sentences1") ~ "Sentence(N=1)",
+        str_detect(implementation, "_all") ~ "All",
+        .default = "Sentence(N=10)"
+    )
+}
+
+prepare_df <- function(df) {
+    df |>
+        filter(pos %in% content_pos) |>
+        filter(!model %in% exclude_models) |>
+        mutate(context_length = get_context_length(implementation)) |>
+        mutate(implementation = str_remove(implementation, "_sentences1|_all")) |>
+        mutate(implementation = ifelse(implementation == "prompt", "Prompt", implementation)) |>
+        mutate(
+            full_implementation = paste(implementation, remove_organization(model), sep = ", ")
+        )
+}
+
+plot_correlations <- function(df, id_cols, lp_cols) {
+    cor_matrix <- df |>
+        select(all_of(id_cols), semantic_association, all_of(unname(lp_cols)), full_implementation) |>
+        pivot_wider(
+            names_from = full_implementation,
+            values_from = semantic_association,
+            names_prefix = "semantic_association_",
+            values_fn = mean # some implementations have duplicated rows
+        ) |>
+        select(starts_with("semantic_association"), all_of(unname(lp_cols))) |>
+        rename(all_of(lp_cols)) |>
+        cor(method = "pearson", use = "pairwise.complete.obs")
+
+    # Remove prefix
+    prefix <- "^semantic_association_"
+    colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+    rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+    matrix_names <- colnames(cor_matrix)
+    name_order <- order(
+        case_when(
+            str_starts(matrix_names, "Log probability") ~ 1L,
+            str_starts(matrix_names, "WE") ~ 2L,
+            str_starts(matrix_names, "CWE") ~ 3L,
+            str_starts(matrix_names, "SE") ~ 4L,
+            str_starts(matrix_names, "Prompt") ~ 5L,
+        ),
+        matrix_names
+    )
+
+    cor_matrix <- cor_matrix[name_order, name_order]
+    melted <- melt(cor_matrix)
+
+    melted |>
+        filter(as.integer(Var1) > as.integer(Var2)) |>
+        ggplot(aes(Var1, Var2, fill = value)) +
+        geom_tile() +
+        geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+        scale_fill_gradient2(
+            low = "blue", high = "red", mid = "white",
+            midpoint = 0, limit = c(-1, 1)
+        ) +
+        theme_minimal() +
+        theme(
+            panel.grid = element_blank(),
+            axis.text.x = element_text(angle = 45, hjust = 1)
+        ) +
+        labs(x = "", y = "", fill = "Pearson's r") +
+        theme(aspect.ratio = 1)
+}
+```
+
+## DERCo
+```{r}
+derco_df <- read.csv(file.path("results", "derco_semantic_association_wprompt.csv")) |>
+    select(-X) |>
+    prepare_df()
+```
+
+```{r}
+context_window <- "Sentence(N=10)" # "Sentence(N=1)" or "All"
+
+derco_df |>
+    filter(context_length == context_window) |>
+    plot_correlations(
+        id_cols = c("article_n", "word_n"),
+        lp_cols = c("Log probability, Pythia" = "lp_pythia")
+    ) +
+    labs(caption = context_window)
+
+ggsave(
+    file.path("figs", paste0("derco_correlations_", context_window, ".png")),
+    width = 9, height = 7
+)
+```
+
+## TiNT
+```{r}
+tint_df <- read.csv(file.path("results", "tint_semantic_association_wprompt.csv")) |>
+    select(-X) |>
+    prepare_df()
+```
+
+```{r}
+context_window <- "Sentence(N=10)" # "Sentence(N=1)" or "All"
+
+tint_df |>
+    filter(context_length == context_window) |>
+    plot_correlations(
+        id_cols = c("document_id", "number_word"),
+        lp_cols = c("Log probability, gpt2.small.dutch" = "lp_GroNLP_gpt2.small.dutch")
+    ) +
+    labs(caption = context_window)
+
+ggsave(
+    file.path("figs", paste0("tint_correlations_", context_window, ".png")),
+    width = 9, height = 7
+)
+```

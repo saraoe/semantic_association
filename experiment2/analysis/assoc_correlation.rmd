@@ -1,0 +1,98 @@
+# Correlation between semantic association implementations and log probability
+
+```{r}
+library(tidytable)
+library(stringr)
+library(ggplot2)
+library(reshape2)
+
+setwd("experiment2")
+
+exclude_models <- c(
+    "Gameselo/STS-multilingual-mpnet-base-v2",
+    "bigscience/sgpt-bloom-7b1-msmarco",
+    "sentence-transformers/stsb-xlm-r-multilingual",
+    "sentence-transformers/stsb-roberta-base-v2"
+)
+
+content_pos <- c("NOUN", "VERB", "ADJ", "ADV")
+
+remove_organization <- function(text) {
+    text <- str_remove(text, "Qwen/")
+    text <- str_remove(text, "BAAI/")
+    text <- str_remove(text, "intfloat/")
+    text <- str_remove(text, "bigscience/")
+    text <- str_remove(text, "Gameselo/")
+    text <- str_remove(text, "jinaai/")
+    text <- str_remove(text, "whaleloops/")
+    text <- str_remove(text, "sentence-transformers/")
+    return(text)
+}
+```
+
+## UCL
+```{r}
+ucl_df <- read.csv(file.path("results", "ucl_semantic_association_wprompt.csv")) |>
+    select(-X) |>
+    filter(pos %in% content_pos) |>
+    filter(!model %in% exclude_models) |>
+    mutate(implementation = ifelse(implementation == "prompt", "Prompt", implementation)) |>
+    mutate(
+        full_implementation = paste(implementation, remove_organization(model), sep = ", ")
+    )
+```
+
+```{r}
+cor_matrix <- ucl_df |>
+    select(id, word_n, semantic_association, lp_gpt2, lp_pythia, full_implementation) |>
+    pivot_wider(
+        names_from = full_implementation,
+        values_from = semantic_association,
+        names_prefix = "semantic_association_"
+    ) |>
+    select(starts_with("semantic_association"), "lp_gpt2", "lp_pythia") |>
+    rename(
+        "Log probability, GPT-2" = "lp_gpt2",
+        "Log probability, Pythia" = "lp_pythia"
+    ) |>
+    cor(method = "pearson", use = "pairwise.complete.obs")
+
+# Remove prefix
+prefix <- "^semantic_association_"
+colnames(cor_matrix) <- str_remove(colnames(cor_matrix), prefix)
+rownames(cor_matrix) <- str_remove(rownames(cor_matrix), prefix)
+
+matrix_names <- colnames(cor_matrix)
+name_order <- order(
+    case_when(
+        str_starts(matrix_names, "Log probability") ~ 1L,
+        str_starts(matrix_names, "WE") ~ 2L,
+        str_starts(matrix_names, "CWE") ~ 3L,
+        str_starts(matrix_names, "SE") ~ 4L,
+        str_starts(matrix_names, "Prompt") ~ 5L,
+    ),
+    matrix_names
+)
+
+cor_matrix <- cor_matrix[name_order, name_order]
+melted <- melt(cor_matrix)
+
+melted |>
+    filter(as.integer(Var1) > as.integer(Var2)) |>
+    ggplot(aes(Var1, Var2, fill = value)) +
+    geom_tile() +
+    geom_text(aes(label = round(value, 2)), color = "black", size = 3) +
+    scale_fill_gradient2(
+        low = "blue", high = "red", mid = "white",
+        midpoint = 0, limit = c(-1, 1)
+    ) +
+    theme_minimal() +
+    theme(
+        panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 45, hjust = 1)
+    ) +
+    labs(x = "", y = "", fill = "Pearson's r") +
+    theme(aspect.ratio = 1)
+
+ggsave(file.path("figs", "ucl_correlations.png"), width = 9, height = 7)
+```
