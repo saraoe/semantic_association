@@ -16,12 +16,14 @@ if __name__ == "__main__":
 from src.embedding_model import EmbeddingModel
 from src.word_embedding_models import WordEmbeddingModel, WordEmbeddingModelContentWord
 from src.sentence_embedding_models import SentenceEmbeddingModel
+from src.llm_prompting import OpenAIModel
 from src.append_to_csv import append_df_to_csv
 
 MODEL_REGISTRY = {
     "SentenceEmbedding": SentenceEmbeddingModel,
     "WordEmbedding": WordEmbeddingModel,
     "WordEmbeddingContentWord": WordEmbeddingModelContentWord,
+    "Prompting": OpenAIModel,
 }
 
 
@@ -112,6 +114,9 @@ if __name__ == "__main__":
         },
     ]
 
+    with open("openai_api_key.txt") as f:
+            api_key = f.read()
+
     config = [
         {
             "implementation": "SE",
@@ -198,6 +203,12 @@ if __name__ == "__main__":
             "model_type": "WordEmbeddingContentWord",
             "model_name": "word2vec-google-news-300",
             "spacy_model_name": "en_core_web_sm",
+        },
+        {
+            "implementation": "prompt",
+            "model_type": "Prompting",
+            "model_name": "gpt-4.1",
+            "api_key": api_key,
         },
     ]
 

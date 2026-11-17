@@ -8,11 +8,20 @@ import math
 
 
 class LLMPrompting(ABC):
-    def __init__(self, association_prompt: str | None = None):
+    def __init__(self, association_prompt: str | None = None, n_sentences: int | None = None):
         if not association_prompt:
             self.prompt = "Semantic association is a measure of how semantically associated or semantic related a context and a word is. For example, the words 'egg' and 'breakfast' are very semantically associated, and similarly are the context 'For breakfast the eggs would' and the word 'eat' semantically associated. Please indicate how semantically associated you think the following pair of context and word are on a scale from 1 (completely unassociated) to 7 (strongly associated). Only answer a number from 1 to 7. Please limit your answer to numbers."
         else:
             self.prompt = association_prompt
+
+        self.n_sentences = (
+            n_sentences + 1 if isinstance(n_sentences, int) else n_sentences
+        )  # plus one as we also want the current
+
+    def get_n_sentences(self, text: str):
+            """Returns n_sentences from the text."""
+            sentences = text.split(".")
+            return ".".join(sentences[-(self.n_sentences) :]).lstrip(" ")
 
     @abstractmethod
     def get_probabilities(self, prompt: str):
@@ -29,6 +38,9 @@ class LLMPrompting(ABC):
             context: context the word should be compared to.
             method: methods for extracting semantic association. Either 'weighted_mean' (default) or 'most_likely'. Based on methods described in Brysbaert et al. (2024).
         """
+        if self.n_sentences:
+            context = self.get_n_sentences(context)
+        
         full_prompt = (
             self.prompt
             + f"\n\nThe context is: '{context}'"
@@ -50,8 +62,9 @@ class OpenAIModel(LLMPrompting):
         api_key: str,
         model_name: str,
         association_prompt=None,
+        n_sentences=None,
     ):
-        super().__init__(association_prompt)
+        super().__init__(association_prompt, n_sentences)
         self.client = OpenAI(api_key=api_key)
         self.model_name = model_name
 

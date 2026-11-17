@@ -35,6 +35,9 @@ if __name__ == "__main__":
         },
     ]
 
+    with open("openai_api_key.txt") as f:
+                api_key = f.read()
+
     config = [
         {
             "implementation": "SE",
@@ -97,6 +100,12 @@ if __name__ == "__main__":
             "model_name": "word2vec-google-news-300",
             "spacy_model_name": "en_core_web_sm",
         },
+        {
+            "implementation": "prompt",
+            "model_type": "Prompting",
+            "model_name": "gpt-4.1",
+            "api_key": api_key,
+        },
     ]
     # add Sentence(N=10), Sentence(N=1) and entire context for Qwen models and jina-small
     config = (
@@ -138,6 +147,12 @@ if __name__ == "__main__":
                 "implementation": "SE_all",
                 "model_type": "SentenceEmbedding",
                 "model_name": "BAAI/bge-m3",
+            },
+            {
+                "implementation": "prompt_all",
+                "model_type": "Prompting",
+                "model_name": "gpt-4.1",
+                "api_key": api_key,
             },
         ]
     )
