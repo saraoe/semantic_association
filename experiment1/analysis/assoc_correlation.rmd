@@ -44,6 +44,7 @@ delogu_df <- read.csv(file.path("results", "delogu_semantic_association.csv")) |
     mutate("cond" = factor(Condition,
         levels = c("control", "script-related", "script-unrelated")
     )) |>
+    mutate(implementation = ifelse(implementation == "prompt", "Prompt", implementation)) |>
     mutate(
         full_implementation = paste(implementation, remove_organization(model), sep = ", ")
     )
@@ -78,6 +79,7 @@ name_order <- order(
         str_starts(matrix_names, "WE") ~ 3L,
         str_starts(matrix_names, "CWE") ~ 4L,
         str_starts(matrix_names, "SE") ~ 5L,
+        str_starts(matrix_names, "Prompt") ~ 6L,
     ),
     matrix_names
 )
